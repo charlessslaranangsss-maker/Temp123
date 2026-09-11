@@ -6,6 +6,22 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(page.locator("h1")).toContainText("Keep your");
     await expect(page).toHaveTitle(/Temporary 123/);
     await expect(page.locator(".brand")).toContainText("Temporary123");
+    const brandMark = page.locator(".brand img");
+    const brandText = page.locator(".brand > span");
+    expect(
+      await brandMark.evaluate(
+        (mark, text) => {
+          const image = mark as HTMLImageElement;
+          const word = text as HTMLElement;
+          const visibleMarkHeight =
+            image.clientWidth / (image.naturalWidth / image.naturalHeight);
+          return (
+            visibleMarkHeight / parseFloat(getComputedStyle(word).fontSize)
+          );
+        },
+        await brandText.elementHandle(),
+      ),
+    ).toBeGreaterThanOrEqual(0.85);
     const supportBar = page.locator(".utility");
     await expect(supportBar).toBeVisible();
     await expect(supportBar).toContainText("Live agents available 24/7");
@@ -167,7 +183,7 @@ for (const width of [390, 1440])
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);
     await expect(page.locator(".coverage-map")).toContainText(
-      "Top 50 States in USA States",
+      "Top 50 States in USA Organic States",
     );
     await expect(page.locator("#catalog-search")).toBeVisible();
     expect(

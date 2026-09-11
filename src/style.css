@@ -230,8 +230,8 @@ p {
   margin-top: 0.2rem;
 }
 .brand img {
-  width: 2.85rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 2.75rem;
   object-fit: contain;
 }
 .header > nav {
@@ -2344,7 +2344,7 @@ body:has(.state-services-dialog[open]) {
     font-size: 0.38rem;
   }
   .brand img {
-    width: 2.25rem;
+    width: 3rem;
   }
   .header-contact {
     padding-inline: var(--space-3);
@@ -2932,7 +2932,7 @@ body:has(.state-services-dialog[open]) {
     font-size: 1.3rem;
   }
   .brand img {
-    width: 1.8rem;
+    width: 2.4rem;
   }
   .card-copy {
     padding: var(--space-3);

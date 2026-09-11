@@ -47,7 +47,7 @@ function Geography({ id }: { id: string }) {
         ))}
       </g>
       <g className="map-labels">
-        {.map((s) => {
+        {states.map((s) => {
           const index = callouts.indexOf(s.name),
             external = index >= 0;
           const x = external ? 1015 : s.name === "Mississippi" ? s.x - 4 : s.x;
@@ -100,7 +100,7 @@ export function CoverageMap() {
   return (
     <figure className="coverage-map" aria-labelledby="coverage-map-title">
       <div className="coverage-map-topline">
-        <span id="coverage-map-title">Top 50 States in USA States </span>
+        <span id="coverage-map-title">Top 50 States in USA Organic States</span>
       </div>
       <div className="coverage-map-stage">
         <Geography id="map-surface" />
