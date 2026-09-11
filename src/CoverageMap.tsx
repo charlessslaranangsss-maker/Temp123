@@ -1,4 +1,6 @@
 import states from "./usStates.json" with { type: "json" };
+import { serviceCategories } from "./serviceMenu";
+import site from "../site.json" with { type: "json" };
 const callouts = [
   "Vermont",
   "New Hampshire",
@@ -14,7 +16,7 @@ function Geography({ id }: { id: string }) {
     <svg
       className="usa-geography"
       viewBox="-25 -15 1190 690"
-      role="img"
+      role="group"
       aria-label="Geographic map of all 50 US states, each labeled with its full name"
     >
       <defs>
@@ -30,7 +32,16 @@ function Geography({ id }: { id: string }) {
       </g>
       <g className="map-land" fill={`url(#${id})`}>
         {states.map((s) => (
-          <path key={s.id} d={s.d}>
+          <path
+            key={s.id}
+            d={s.d}
+            role="button"
+            tabIndex={0}
+            data-state={s.name}
+            aria-label={`Explore services in ${s.name}`}
+            aria-haspopup="dialog"
+            aria-controls="state-services-dialog"
+          >
             <title>{s.name}</title>
           </path>
         ))}
@@ -107,6 +118,21 @@ export function CoverageMap() {
           Open Google Maps ↗
         </a>
       </div>
+      <label className="map-state-picker">
+        Select a state to explore services
+        <select data-state-picker defaultValue="">
+          <option value="" disabled>
+            Choose your state
+          </option>
+          {[...states]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((s) => (
+              <option key={s.id} value={s.name}>
+                {s.name}
+              </option>
+            ))}
+        </select>
+      </label>
       <figcaption>
         Nationwide coverage includes Alaska and Hawaii. Availability and
         delivery timing depend on your project. Geographic boundaries: U.S.
@@ -130,6 +156,58 @@ export function CoverageMap() {
         >
           <Geography id="large-map-surface" />
         </div>
+      </dialog>
+      <dialog
+        id="state-services-dialog"
+        className="state-services-dialog"
+        aria-labelledby="state-services-title"
+        aria-describedby="state-services-intro"
+      >
+        <div className="state-services-heading">
+          <p className="eyebrow">Temporary facilities. Nationwide support.</p>
+          <button
+            type="button"
+            data-close-state
+            aria-label="Close state services"
+          >
+            ×
+          </button>
+        </div>
+        <h2 id="state-services-title">
+          Services in <span data-state-name>your state</span>
+        </h2>
+        <p id="state-services-intro">
+          Explore rental options for your project in{" "}
+          <span data-state-name>your state</span>. Our team can confirm
+          availability, delivery and the right configuration for your site.
+        </p>
+        <ul className="state-service-list">
+          {serviceCategories.map((service, index) => (
+            <li key={service.href}>
+              <a href={service.href}>
+                <span className="state-service-number" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span>{service.name}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="state-services-cta">
+          <div>
+            <h3>Plan your rental with us.</h3>
+            <p>Share your location, dates and facility needs.</p>
+          </div>
+          <a className="button" href="/contact-us/" data-state-contact>
+            Contact Us <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p className="state-services-call">
+          Prefer to call?{" "}
+          <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+          <span>Available 24/7</span>
+        </p>
       </dialog>
     </figure>
   );

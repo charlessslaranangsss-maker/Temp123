@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import site from "../site.json" with { type: "json" };
 import { services } from "./content";
 import { leadSchema } from "../server/schema";
@@ -35,6 +35,16 @@ async function appCheckToken() {
   }
 }
 export function QuoteForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  useEffect(() => {
+    const form = formRef.current;
+    const location =
+      form?.closest<HTMLElement>("#quote-island")?.dataset.selectedLocation;
+    const field = form?.querySelector<HTMLInputElement>(
+      'input[name="location"]',
+    );
+    if (field && location) field.value = location;
+  }, []);
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
   );
@@ -61,6 +71,7 @@ export function QuoteForm() {
   );
   return (
     <form
+      ref={formRef}
       className="quote-form"
       noValidate
       aria-busy={state === "loading"}
@@ -86,7 +97,7 @@ export function QuoteForm() {
                     ? "Choose a rental duration."
                     : field === "industry"
                       ? "Choose an industry."
-                  : issue.message;
+                      : issue.message;
           }
           setErrors(fields);
           setState("error");

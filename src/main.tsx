@@ -32,7 +32,7 @@ mobileNav?.addEventListener("focusout", () => {
 
 const contactDrawer =
   document.querySelector<HTMLDialogElement>("#contact-drawer");
-let contactTrigger: HTMLAnchorElement | null = null;
+let contactTrigger: HTMLElement | SVGElement | null = null;
 let contactScroll = 0;
 if (
   contactDrawer &&
@@ -60,6 +60,18 @@ if (
     event.preventDefault();
     if (contactDrawer.open) return;
     contactTrigger = anchor;
+    if (anchor.hasAttribute("data-state-contact")) {
+      const island = contactDrawer.querySelector<HTMLElement>("#quote-island");
+      if (island)
+        island.dataset.selectedLocation = anchor.dataset.selectedState || "";
+      const location = contactDrawer.querySelector<HTMLInputElement>(
+        'input[name="location"]',
+      );
+      if (location) location.value = anchor.dataset.selectedState || "";
+      contactTrigger = mapDialog?.open ? mapTrigger || null : stateTrigger;
+      stateDialog?.close();
+      mapDialog?.close();
+    }
     contactScroll = window.scrollY;
     mobileNav?.removeAttribute("open");
     contactDrawer.showModal();
@@ -305,4 +317,54 @@ mapDialog?.addEventListener("click", (event) => {
     )
       mapDialog.close();
   }
+});
+
+const stateDialog = document.querySelector<HTMLDialogElement>(
+  "#state-services-dialog",
+);
+let stateTrigger: HTMLElement | SVGElement | null = null;
+const openState = (name: string, trigger: HTMLElement | SVGElement) => {
+  if (!stateDialog) return;
+  stateTrigger = trigger;
+  stateDialog.querySelectorAll("[data-state-name]").forEach((node) => {
+    node.textContent = name;
+  });
+  const contact = stateDialog.querySelector<HTMLAnchorElement>(
+    "[data-state-contact]",
+  );
+  if (contact) contact.dataset.selectedState = name;
+  stateDialog.showModal();
+};
+document.querySelectorAll<SVGElement>("[data-state]").forEach((state) => {
+  state.addEventListener("click", () => openState(state.dataset.state!, state));
+  state.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openState(state.dataset.state!, state);
+    }
+  });
+});
+const statePicker = document.querySelector<HTMLSelectElement>(
+  "[data-state-picker]",
+);
+statePicker?.addEventListener("change", () => {
+  openState(statePicker.value, statePicker);
+  statePicker.value = "";
+});
+stateDialog
+  ?.querySelector("[data-close-state]")
+  ?.addEventListener("click", () => stateDialog.close());
+stateDialog?.addEventListener("close", () => {
+  if (!contactDrawer?.open) stateTrigger?.focus({ preventScroll: true });
+});
+stateDialog?.addEventListener("click", (event) => {
+  if (event.target !== stateDialog) return;
+  const box = stateDialog.getBoundingClientRect();
+  if (
+    event.clientX < box.left ||
+    event.clientX > box.right ||
+    event.clientY < box.top ||
+    event.clientY > box.bottom
+  )
+    stateDialog.close();
 });

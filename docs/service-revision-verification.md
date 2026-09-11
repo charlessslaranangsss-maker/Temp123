@@ -25,10 +25,10 @@ The Contact Us tab and navbar phone button have a gentle repeating outline glow,
 ## Verification
 
 - Build and TypeScript checks pass.
-- 42 Playwright browser tests pass, including actual menu navigation, all model destinations, responsive layouts, image loading, outside/Escape close, map enlargement and reduced motion.
+- 44 Playwright browser tests pass, including actual menu navigation, all model destinations, responsive layouts, image loading, outside/Escape close, map enlargement, state service modals and reduced motion.
 - 21 unit/route/import tests pass.
-- Static SEO audit: 666 HTML documents including 404; 76,280 local links; 1,247 image references; 666 unique titles and descriptions; zero reported problems.
-- Pattern secret scan: 822 files, no findings.
+- Static SEO audit: 666 HTML documents including 404; 76,290 local links; 1,247 image references; 666 unique titles and descriptions; zero reported problems.
+- Pattern secret scan: 823 files, no findings.
 - Local static preview now applies Vercel's global response headers, including CSP, so rendering checks reproduce deployment restrictions.
 - Desktop and mobile screenshots visually reviewed. Live verification follows the GitHub main deployment.
 
@@ -43,3 +43,9 @@ Navigation now reads Home, Services, Service Areas, About Us, Articles and Conta
 The final service order is Mobile Kitchens, Dishwashing, Refrigeration, Shower, Restroom, Shower and Restroom Combination Trailers, Sleeper, Laundry, Handwashing Trailers. All nine appear in the desktop menu, mobile menu and homepage cards. On wide screens the cards form a balanced three-column layout. Service Areas hero line-height and paragraph spacing were adjusted. The contact attention glow is now green.
 
 Live testing exposed an early-click race in the first disclosure enhancement. Native details/summary elements now open the menu and select categories before JavaScript loads. The regression test checks this with JavaScript disabled, while the enhanced version retains outside-click and Escape handling.
+
+## State service inquiry flow
+
+Each of the 50 state shapes in both map views now opens a native modal with the state name, nine approved service categories, linked category pages, Contact Us and a telephone fallback. A state selector provides an easier target for small states on mobile. Keyboard activation, Escape, outside dismissal and focus return are supported.
+
+Contact Us opens the existing contact drawer without leaving Service Areas, prefills the selected state in Project location, and closes both map dialogs. The selection survives delayed React hydration. Browser tests cover desktop pointer activation, mobile state selection, keyboard use in the enlarged map, state changes and contact focus restoration. Online submission remains disabled; this UI change does not activate backend intake.
