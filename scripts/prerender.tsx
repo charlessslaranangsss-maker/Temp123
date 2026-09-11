@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { App } from "../src/App";
 import { routes, pageInfo } from "../src/content";
-import site from "../site.json";
+import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 // Vercel preview builds must never inherit production indexing settings.
 const release =
@@ -35,7 +35,7 @@ for (const path of [...routes, "/404/"]) {
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
     `<meta property="og:site_name" content="${esc(site.brand)}"><meta name="twitter:card" content="summary_large_image">` +
     (canonical
-      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, '') + '/social-card.png')}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(site.brand)} temporary facility planning">`
+      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(site.brand)} temporary facility planning">`
       : "");
   const html = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)

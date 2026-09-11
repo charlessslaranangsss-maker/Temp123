@@ -1,5 +1,31 @@
 import { test, expect } from "@playwright/test";
 import { routes } from "../../src/content";
+test("facility tabs support keyboard selection", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("tab", { name: "Kitchen", exact: true }).focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(
+    page.getByRole("tab", { name: "Welfare", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tabpanel")).toContainText("Comfort belongs");
+});
+test("planning checklist updates its accessible progress", async ({ page }) => {
+  await page.goto("/planning/");
+  await page.getByRole("checkbox", { name: /People & purpose/ }).check();
+  await page.getByRole("checkbox", { name: /Location & access/ }).check();
+  await expect(page.getByRole("status")).toHaveText(
+    "2 of 4 planning areas ready",
+  );
+});
+test("reduced motion disables hero animation", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  expect(
+    await page
+      .locator("h1")
+      .evaluate((el) => getComputedStyle(el).animationName),
+  ).toBe("none");
+});
 for (const width of [320, 390, 768, 1280])
   test(`home at ${width}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });

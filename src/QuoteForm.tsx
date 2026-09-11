@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import site from "../site.json";
+import site from "../site.json" with { type: "json" };
 import { services } from "./content";
 import { leadSchema } from "../server/schema";
 let check: import("firebase/app-check").AppCheck | undefined;

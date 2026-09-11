@@ -3,7 +3,7 @@ import { Timestamp, type Firestore } from "firebase-admin/firestore";
 import { Resend } from "resend";
 import { firebase, required, requiredSecret } from "./firebase";
 import { processDelivery } from "./delivery";
-import site from "../site.json";
+import site from "../site.json" with { type: "json" };
 import { HttpError } from "./contact";
 import type { Lead } from "./schema";
 export const digest = (text: string) =>

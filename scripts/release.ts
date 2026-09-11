@@ -1,4 +1,4 @@
-import site from "../site.json";
+import site from "../site.json" with { type: "json" };
 import { readFileSync } from "node:fs";
 export function releaseErrors() {
   const errors: string[] = [];

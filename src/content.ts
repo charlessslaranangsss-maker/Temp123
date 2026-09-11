@@ -1,4 +1,4 @@
-import site from "../site.json";
+import site from "../site.json" with { type: "json" };
 export const services = [
   {
     slug: "mobile-kitchens",
