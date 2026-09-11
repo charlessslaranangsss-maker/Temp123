@@ -17,6 +17,13 @@ test("state click opens service choices and carries the state into the contact d
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/service-areas/");
+  expect(
+    await page
+      .locator("#services-panel .service-category-link")
+      .evaluateAll((items) =>
+        items.map((item) => item.firstChild?.textContent?.trim()),
+      ),
+  ).toEqual(names);
   const state = page.locator('.coverage-map-stage [data-state="California"]');
   await state.click();
   const modal = page.getByRole("dialog", { name: "Services in California" });

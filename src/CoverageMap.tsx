@@ -100,8 +100,7 @@ export function CoverageMap() {
   return (
     <figure className="coverage-map" aria-labelledby="coverage-map-title">
       <div className="coverage-map-topline">
-        <span id="coverage-map-title">USA service coverage</span>
-        <strong>50 states</strong>
+        <span id="coverage-map-title">Top 50 States in USA States</span>
       </div>
       <div className="coverage-map-stage">
         <Geography id="map-surface" />
@@ -119,10 +118,10 @@ export function CoverageMap() {
         </a>
       </div>
       <label className="map-state-picker">
-        Select a state to explore services
+        Search your state
         <select data-state-picker defaultValue="">
           <option value="" disabled>
-            Choose your state
+            Search your state
           </option>
           {[...states]
             .sort((a, b) => a.name.localeCompare(b.name))

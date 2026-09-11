@@ -166,7 +166,9 @@ for (const width of [390, 1440])
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);
-    await expect(page.locator(".coverage-map")).toContainText("50 states");
+    await expect(page.locator(".coverage-map")).toContainText(
+      "Top 50 States in USA States",
+    );
     await expect(page.locator("#catalog-search")).toBeVisible();
     expect(
       await page.evaluate(
