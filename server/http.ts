@@ -1,5 +1,5 @@
-import type { VercelRequest, VercelResponse } from "./types";
-import { HttpError } from "./contact";
+import type { VercelRequest, VercelResponse } from "./types.js";
+import { HttpError } from "./contact.js";
 export function headers(req: VercelRequest) {
   return Object.fromEntries(
     Object.entries(req.headers).map(([k, v]) => [

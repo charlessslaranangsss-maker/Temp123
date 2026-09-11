@@ -35,3 +35,7 @@ The Vercel revision host remains noindex. Full migration still stands at 625 rec
 No backend access policies changed in this revision. Customer inquiry collection stays disabled, and the current security evidence still has provider configuration and operational release dependencies. Passing local rules and handler tests does not certify production App Check, email delivery, IAM, recovery or monitoring. The public call action is the active contact path.
 
 Next checkpoints: verify the new deployment and its security headers; review the design with the owner; complete source recovery and content reconciliation before enabling indexing or changing the primary domain; configure and verify inquiry intake separately before enabling it.
+
+## Deployment runtime correction
+
+The deployed contact endpoint initially returned a platform 500 before reaching the handler. Vercel logs identified ERR_MODULE_NOT_FOUND for an extensionless server import. Relative imports in the API/server modules now name their emitted .js files. A native Node runtime check compiles and imports the actual server modules, then asserts four safe rejection paths and private/no-store responses. This regression check is also in GitHub CI. The handler suite and seven database emulator tests passed again after the correction. A new secret scan covered 760 files with zero findings.

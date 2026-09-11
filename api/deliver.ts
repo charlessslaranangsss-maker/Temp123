@@ -1,9 +1,9 @@
 import { timingSafeEqual } from "node:crypto";
-import type { VercelRequest, VercelResponse } from "../server/types";
-import { firebase, requiredSecret } from "../server/firebase";
-import { deliverLead } from "../server/store";
-import { HttpError } from "../server/contact";
-import { secure, fail } from "../server/http";
+import type { VercelRequest, VercelResponse } from "../server/types.js";
+import { firebase, requiredSecret } from "../server/firebase.js";
+import { deliverLead } from "../server/store.js";
+import { HttpError } from "../server/contact.js";
+import { secure, fail } from "../server/http.js";
 export const config = { maxDuration: 60 };
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   secure(res);

@@ -1,11 +1,11 @@
 import { createHmac } from "node:crypto";
 import type { Database } from "firebase-admin/database";
 import { Resend } from "resend";
-import { firebase, required, requiredSecret } from "./firebase";
-import { processDelivery } from "./delivery";
+import { firebase, required, requiredSecret } from "./firebase.js";
+import { processDelivery } from "./delivery.js";
 import site from "../site.json" with { type: "json" };
-import { HttpError } from "./contact";
-import type { Lead } from "./schema";
+import { HttpError } from "./contact.js";
+import type { Lead } from "./schema.js";
 export const digest = (text: string) =>
   createHmac("sha256", requiredSecret("RATE_LIMIT_SECRET"))
     .update(text)
@@ -47,18 +47,16 @@ export async function saveLead(db: Database, key: string, data: Lead) {
   const id = digest("inquiry:" + key),
     payloadHash = digest(JSON.stringify(data)),
     now = Date.now();
-  const result = await db
-    .ref("inquiries/" + id)
-    .transaction(
-      (current) =>
-        current || {
-          data,
-          payloadHash,
-          createdAt: now,
-          expiresAt: now + 90 * 86400000,
-          status: "queued",
-        },
-    );
+  const result = await db.ref("inquiries/" + id).transaction(
+    (current) =>
+      current || {
+        data,
+        payloadHash,
+        createdAt: now,
+        expiresAt: now + 90 * 86400000,
+        status: "queued",
+      },
+  );
   if (result.snapshot.val()?.payloadHash !== payloadHash)
     throw new HttpError(
       409,

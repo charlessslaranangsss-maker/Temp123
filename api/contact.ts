@@ -1,7 +1,7 @@
-import type { VercelRequest, VercelResponse } from "../server/types";
-import { submit, HttpError } from "../server/contact";
-import { dependencies } from "../server/store";
-import { body, headers, secure, fail } from "../server/http";
+import type { VercelRequest, VercelResponse } from "../server/types.js";
+import { submit, HttpError } from "../server/contact.js";
+import { dependencies } from "../server/store.js";
+import { body, headers, secure, fail } from "../server/http.js";
 export const config = { maxDuration: 30 };
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   secure(res);
