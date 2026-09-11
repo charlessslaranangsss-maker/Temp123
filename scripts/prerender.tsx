@@ -6,6 +6,7 @@ import { gunzipSync } from "node:zlib";
 import { routes, pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
+import { load } from "cheerio";
 // Vercel preview builds must never inherit production indexing settings.
 const release =
   site.mode === "production" &&
@@ -69,25 +70,33 @@ const esc = (s: string) =>
   );
 for (const path of [...allRoutes, "/404/"]) {
   const page = pages.find((p) => p.path === path);
-  const info = page
-    ? { title: page.title + " | Temporary 123", description: page.description }
-    : path === "/contact-us/"
+  const info = coreRoutes.includes(path)
+    ? pageInfo(path)
+    : page
       ? {
-          title: "Contact Temporary 123 | Talk to a Specialist",
-          description:
-            "Call Temporary 123 at (800) 443-5212 for mobile kitchens, temporary facilities and project support.",
+          title: page.title + " | Temporary 123",
+          description: page.description,
         }
-      : path === "/equipment-rental/"
+      : path === "/contact-us/"
         ? {
-            title: "Equipment Rental | Temporary 123",
+            title: "Contact Temporary 123 | Talk to a Specialist",
             description:
-              "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+              "Call Temporary 123 at (800) 443-5212 for mobile kitchens, temporary facilities and project support.",
           }
-        : pageInfo(path);
+        : path === "/equipment-rental/"
+          ? {
+              title: "Equipment Rental | Temporary 123",
+              description:
+                "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+            }
+          : pageInfo(path);
   const canonical =
     release && path !== "/404/"
       ? `${site.origin.replace(/\/$/, "")}${path}`
       : "";
+  if (!info.description.trim()) {
+    info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at 800-443-5212 to discuss your site, rental dates and equipment requirements.`;
+  }
   const structured = canonical
     ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.brand, url: site.origin, telephone: site.phoneE164 }).replace(/</g, "\\u003c")}</script>`
     : "";
@@ -98,7 +107,7 @@ for (const path of [...allRoutes, "/404/"]) {
     (canonical
       ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(site.brand)} temporary facility planning">`
       : "");
-  const html = source
+  const rawHtml = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)
     .replace(
       /<meta name="robots" content="[^"]*"\s*\/?\s*>/,
@@ -115,6 +124,35 @@ for (const path of [...allRoutes, "/404/"]) {
         />,
       ),
     );
+  // Editorial punctuation preference applies to rendered copy, never URLs,
+  // script contents or the archived source records.
+  const $ = load(rawHtml);
+  const cleanCopy = (value: string) =>
+    value.replace(/\s*—\s*/g, ", ").replace(/\*/g, "");
+  $("body, title")
+    .find("*")
+    .addBack()
+    .contents()
+    .each((_, node) => {
+      if (
+        node.type === "text" &&
+        node.parent?.type !== "script" &&
+        node.parent?.type !== "style"
+      )
+        node.data = cleanCopy(node.data);
+    });
+  $("[alt], [title], [aria-label]").each((_, element) => {
+    for (const name of ["alt", "title", "aria-label"]) {
+      const value = $(element).attr(name);
+      if (value) $(element).attr(name, cleanCopy(value));
+    }
+  });
+  $(
+    "meta[name='description'], meta[property='og:title'], meta[property='og:description']",
+  ).each((_, element) => {
+    $(element).attr("content", cleanCopy($(element).attr("content") || ""));
+  });
+  const html = $.html();
   const file = path === "/404/" ? "dist/404.html" : `dist${path}index.html`;
   await mkdir(file.substring(0, file.lastIndexOf("/")), { recursive: true });
   await writeFile(file, html);

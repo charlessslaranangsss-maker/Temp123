@@ -1,0 +1,37 @@
+# Homepage revision verification
+
+The homepage now puts 800-443-5212 in the main hero action, sticky desktop navigation and a fixed mobile call bar. Equipment cards include larger source images, facility uses, normal detail links and keyboard-accessible quick-view dialogs. Planning, industry links and practical FAQs provide a clearer route from browsing to a call.
+
+The design takes inspiration from the product presentation at https://www.medvillediabetes.com/ while retaining Temporary 123 typography, photography and business content. Motion includes an entry sequence, a site-plan line graphic, a scroll progress indicator where supported, card hover feedback and once-only planning-step entrances. Reduced-motion preferences apply in CSS and JavaScript. No animation library or tracking script was added.
+
+## Verification on 12 September 2026, Singapore time
+
+| Check | Result |
+| --- | --- |
+| TypeScript and production build | Passed; 631 static routes plus real 404 |
+| Handler/import tests | 21 passed |
+| Realtime Database emulator tests | 7 passed; private direct client access denied |
+| Playwright browser tests | 17 passed |
+| Homepage widths | 320, 390, 768, 1024, 1280, 1440 pixels; phone stays visible after scrolling |
+| Shared page templates | Contact, equipment directory, equipment article, location directory and planning at 320, 768, 1024, 1440 pixels |
+| Interactions | Quick-view focus containment, Escape and close-button restoration; mobile menu; native FAQs and equipment links without JavaScript |
+| Generated HTML audit | 632 documents; 13,375 local links and 1,319 local image references; no missing local targets, missing descriptions, extra H1s or prohibited text punctuation |
+| Secret pattern scan | 758 source/build files, zero findings; this does not prove cloud IAM configuration |
+| Homepage entry script | 4.78 KB raw, 2.04 KB gzip; quote/React bundles remain deferred |
+| Styles | 28.69 KB raw, 6.65 KB gzip |
+
+Browser viewport checks are Chromium lab checks, not a claim of testing every physical device. No field Core Web Vitals or Search Console indexation measurements were available.
+
+## SEO and copy
+
+Core routes have specific descriptions. Four empty source descriptions now receive a descriptive fallback. Mobile source images have 480-pixel alternatives. Main content and navigation are rendered as HTML. Asterisks and em dashes are removed from rendered visitor-facing text without changing archived originals or link destinations.
+
+Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is descriptive advice, not a detector or a guarantee of authorship. The copy uses concrete planning information and avoids unsupported numbers or claims. Google's [helpful content guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) informs the content review.
+
+## Remaining project work
+
+The Vercel revision host remains noindex. Full migration still stands at 625 recovered source pages out of the previously reported 98,253. The existing backlink reconciliation and original content archive are preserved. Unrecovered external destinations and source duplicates remain migration work; this check only proves the local targets in the generated version.
+
+No backend access policies changed in this revision. Customer inquiry collection stays disabled, and the current security evidence still has provider configuration and operational release dependencies. Passing local rules and handler tests does not certify production App Check, email delivery, IAM, recovery or monitoring. The public call action is the active contact path.
+
+Next checkpoints: verify the new deployment and its security headers; review the design with the owner; complete source recovery and content reconciliation before enabling indexing or changing the primary domain; configure and verify inquiry intake separately before enabling it.

@@ -1,15 +1,31 @@
 import { test, expect } from "@playwright/test";
-for (const width of [320, 390, 768, 1280])
+for (const width of [320, 390, 768, 1024, 1280, 1440])
   test(`homepage layout and photos at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/");
     await expect(page.locator("h1")).toContainText("Keep your");
     await expect(page).toHaveTitle(/Temporary 123/);
+    await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
+    const phone = page.locator(
+      width < 1024 ? ".mobile-call" : ".header-contact",
+    );
+    await expect(phone).toHaveAttribute("href", "tel:+18004435212");
+    await expect(phone).toBeInViewport({ ratio: 1 });
+    await page.locator(".faq-section").scrollIntoViewIfNeeded();
+    await expect(phone).toBeInViewport({ ratio: 1 });
+    for (const photo of await page.locator(".image-box img").all()) {
+      await photo.scrollIntoViewIfNeeded();
+      await expect(photo).toHaveJSProperty("complete", true);
+      expect(
+        await photo.evaluate((i: HTMLImageElement) => i.naturalWidth),
+      ).toBeGreaterThan(0);
+    }
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
     expect(
       await page
         .locator(".hero-visual img")
@@ -33,6 +49,81 @@ test("mobile menu supports keyboard and Escape", async ({ page }) => {
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).not.toBeVisible();
 });
+
+test("equipment quick view contains focus and restores its trigger", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const trigger = page.getByRole("button", {
+    name: "Quick view: Mobile kitchens",
+    exact: true,
+  });
+  await trigger.click();
+  const dialog = page.getByRole("dialog", {
+    name: "Mobile kitchens",
+    exact: true,
+  });
+  await expect(dialog).toBeVisible();
+  await expect(
+    dialog.getByRole("button", { name: "Close quick view" }),
+  ).toBeFocused();
+  for (let i = 0; i < 5; i++) {
+    await page.keyboard.press("Tab");
+    expect(
+      await dialog.evaluate((e) => e.contains(document.activeElement)),
+    ).toBe(true);
+  }
+  await page.keyboard.press("Escape");
+  await expect(dialog).not.toBeVisible();
+  await expect(trigger).toBeFocused();
+  await expect(page.locator(".mobile-call")).toBeInViewport({ ratio: 1 });
+  await trigger.click();
+  await dialog.getByRole("button", { name: "Close quick view" }).click();
+  await expect(trigger).toBeFocused();
+});
+
+test("FAQ and equipment navigation work without JavaScript", async ({
+  browser,
+}) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  });
+  const page = await context.newPage();
+  await page.goto("http://localhost:4173/");
+  await page.locator(".faq-item summary").first().click();
+  await expect(page.locator(".faq-item p").first()).toBeVisible();
+  await expect(page.locator(".quick-view:visible")).toHaveCount(0);
+  await page.locator(".card-actions a").first().click();
+  await expect(page).toHaveURL(/mobile-kitchen-trailers/);
+  await context.close();
+});
+
+for (const width of [320, 768, 1024, 1440]) {
+  test(`shared templates stay within viewport at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    for (const path of [
+      "/contact-us/",
+      "/equipment-rental/",
+      "/equipment-rental/mobile-kitchen-trailers/",
+      "/service-areas/",
+      "/planning/",
+    ]) {
+      await page.goto(path);
+      await page.evaluate(() => document.fonts.ready);
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+        path,
+      ).toBe(true);
+      await expect(page.locator("h1")).toHaveCount(1);
+    }
+  });
+}
 test("reduced motion removes entry animations", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");

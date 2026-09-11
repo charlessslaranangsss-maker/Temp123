@@ -1,5 +1,7 @@
 import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
+import { Home } from "./Home";
+import { Cards } from "./Equipment";
 export type SourcePage = {
   id: number;
   path: string;
@@ -8,32 +10,6 @@ export type SourcePage = {
   description: string;
   images: { src: string; alt: string }[];
 };
-export const equipment = [
-  {
-    name: "Mobile kitchens",
-    path: "/equipment-rental/mobile-kitchen-trailers/",
-    image: "kitchen",
-    text: "Commercial cooking, preparation and food service facilities.",
-  },
-  {
-    name: "Restroom & shower trailers",
-    path: "/equipment-rental/restroom-trailers/",
-    image: "facility",
-    text: "Comfortable, private facilities for your people on site.",
-  },
-  {
-    name: "Workforce & base camps",
-    path: "/man-camps-for-rent/",
-    image: "housing",
-    text: "Coordinate accommodation and the facilities that support it.",
-  },
-  {
-    name: "Temporary facilities",
-    path: "/equipment-rental/",
-    image: "kitchen-wide",
-    text: "Equipment and support spaces for changing project needs.",
-  },
-];
 const nav = [
   ["Equipment", "/equipment-rental/"],
   ["Solutions", "/services/"],
@@ -56,7 +32,7 @@ function Button({
     </a>
   );
 }
-export function Header() {
+export function Header({ path }: { path: string }) {
   return (
     <>
       <a href="#main" className="skip">
@@ -73,37 +49,55 @@ export function Header() {
           </a>
         </div>
       </div>
-      <header className="header wrap">
-        <a className="brand" href="/" aria-label="Temporary 123 home">
-          <img src="/images/logo.webp" width="53" height="44" alt="" />
-          <span>
-            temporary<span className="brand-number">123</span>
-            <small>TEMPORARY FACILITIES · PERMANENT COMMITMENT</small>
-          </span>
-        </a>
-        <nav aria-label="Main navigation">
-          {nav.map(([n, p]) => (
-            <a href={p} key={p}>
-              {n}
-            </a>
-          ))}
-        </nav>
-        <a className="header-contact" href="/contact-us/">
-          Let’s talk <span aria-hidden="true">↗</span>
-        </a>
-        <details className="mobile-nav">
-          <summary>
-            Menu <span aria-hidden="true">☰</span>
-          </summary>
-          <nav aria-label="Mobile navigation">
-            {[...nav, ["Contact", "/contact-us/"]].map(([n, p]) => (
-              <a href={p} key={p}>
+      <div className="header-sticky">
+        <header className="header wrap">
+          <a className="brand" href="/" aria-label="Temporary 123 home">
+            <img src="/images/logo.webp" width="53" height="44" alt="" />
+            <span>
+              temporary<span className="brand-number">123</span>
+              <small>TEMPORARY FACILITIES · PERMANENT COMMITMENT</small>
+            </span>
+          </a>
+          <nav aria-label="Main navigation">
+            {nav.map(([n, p]) => (
+              <a
+                href={p}
+                key={p}
+                aria-current={path === p ? "page" : undefined}
+              >
                 {n}
               </a>
             ))}
           </nav>
-        </details>
-      </header>
+          <a className="header-contact" href={"tel:" + site.phoneE164}>
+            <span>Call our team, 24/7</span>
+            <strong>{site.phoneDisplay}</strong>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <details className="mobile-nav">
+            <summary>
+              Menu <span aria-hidden="true">☰</span>
+            </summary>
+            <nav aria-label="Mobile navigation">
+              {[...nav, ["Contact", "/contact-us/"]].map(([n, p]) => (
+                <a
+                  href={p}
+                  key={p}
+                  aria-current={path === p ? "page" : undefined}
+                >
+                  {n}
+                </a>
+              ))}
+            </nav>
+          </details>
+        </header>
+        <div className="scroll-progress" aria-hidden="true" />
+      </div>
+      <a className="mobile-call" href={"tel:" + site.phoneE164}>
+        <span>Call our team, 24/7</span>
+        <strong>{site.phoneDisplay}</strong>
+        <b aria-hidden="true">↗</b>
+      </a>
     </>
   );
 }
@@ -158,183 +152,6 @@ export function Footer() {
     </>
   );
 }
-function Cards() {
-  return (
-    <div className="equipment-grid">
-      {equipment.map((e, i) => (
-        <a className="equipment-card" href={e.path} key={e.path}>
-          <div className="image-box">
-            <img
-              src={`/images/${e.image}.webp`}
-              alt={e.name + " equipment from Temporary 123"}
-              width="850"
-              height="650"
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="card-number">0{i + 1}</span>
-          </div>
-          <h3>
-            {e.name}
-            <span aria-hidden="true">↗</span>
-          </h3>
-          <p>{e.text}</p>
-        </a>
-      ))}
-    </div>
-  );
-}
-function Home() {
-  return (
-    <>
-      <section className="hero wrap">
-        <div className="hero-copy">
-          <span className="eyebrow">
-            <i />
-            READY FOR WHAT’S NEXT
-          </span>
-          <h1>
-            Keep your
-            <br />
-            operations
-            <br />
-            <em>moving.</em>
-          </h1>
-          <p>
-            Mobile kitchens, workforce facilities, and restroom & shower
-            trailers. The spaces you need, when your project needs them.
-          </p>
-          <div className="hero-actions">
-            <Button />
-            <a className="text-link" href="/equipment-rental/">
-              Explore equipment ↓
-            </a>
-          </div>
-          <div className="hero-foot">
-            <span>PLANNED PROJECTS</span>
-            <span>EMERGENCY RESPONSE</span>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <img
-            src="/images/kitchen-wide.webp"
-            width="850"
-            height="650"
-            alt="Temporary 123 mobile kitchen equipment"
-            fetchPriority="high"
-          />
-          <div className="photo-label">
-            <span>BUILT AROUND YOUR OPERATION</span>
-            <strong>
-              Real facilities.
-              <br />
-              Practical solutions.
-            </strong>
-            <a
-              href="/equipment-rental/mobile-kitchen-trailers/"
-              aria-label="Explore mobile kitchens"
-            >
-              ↗
-            </a>
-          </div>
-        </div>
-      </section>
-      <div className="service-strip">
-        <div className="wrap">
-          <span>FOOD SERVICE</span>
-          <b>+</b>
-          <span>WORKFORCE SUPPORT</span>
-          <b>+</b>
-          <span>SITE FACILITIES</span>
-          <b>+</b>
-          <span>TURNKEY SOLUTIONS</span>
-        </div>
-      </div>
-      <section className="wrap section">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">01 / THE RIGHT SPACE FOR THE JOB</span>
-            <h2>
-              Temporary by design.
-              <br />
-              Essential to your operation.
-            </h2>
-          </div>
-          <p>
-            From keeping a kitchen running to supporting people in the field,
-            start with the facilities your team needs.
-          </p>
-        </div>
-        <Cards />
-      </section>
-      <section className="process section">
-        <div className="wrap process-grid">
-          <div>
-            <span className="eyebrow">02 / FROM REQUIREMENT TO READY</span>
-            <h2>
-              Make room
-              <br />
-              for a better plan.
-            </h2>
-            <p>
-              Every site is different. Bring your equipment, access, utilities
-              and schedule into one conversation.
-            </p>
-            <Button href="/planning/" secondary>
-              Start with the essentials
-            </Button>
-          </div>
-          <ol>
-            {[
-              [
-                "Tell us what you need",
-                "Share your location, dates, number of people and the operation you need to support.",
-              ],
-              [
-                "Build the facility brief",
-                "Explore equipment and supporting services around your space, access and utility requirements.",
-              ],
-              [
-                "Coordinate the next step",
-                "Confirm availability, delivery, installation and servicing in your project proposal.",
-              ],
-            ].map(([t, d], i) => (
-              <li key={t}>
-                <span>0{i + 1}</span>
-                <div>
-                  <h3>{t}</h3>
-                  <p>{d}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-      <section className="wrap section industry-section">
-        <span className="eyebrow">03 / WHERE WORK HAPPENS</span>
-        <h2>
-          Different projects.
-          <br />
-          The same commitment.
-        </h2>
-        <div className="industry-links">
-          {[
-            ["Construction & workforce", "/man-camps-for-rent/"],
-            ["Government & public services", "/government/"],
-            ["Food service & hospitality", "/food-services-2/"],
-              ["Emergency & disaster response", "/disaster-relief-man-camp-workforce-rentals/"],
-          ].map(([n, p], i) => (
-            <a href={p} key={p}>
-              <span>0{i + 1}</span>
-              <h3>{n}</h3>
-              <b>↗</b>
-            </a>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-}
 export function Site({
   path,
   page,
@@ -347,8 +164,8 @@ export function Site({
   const contact = ["/contact/", "/contact-us/"].includes(path);
   return (
     <div id="top">
-      <Header />
-      <main id="main">
+      <Header path={path} />
+      <main id="main" tabIndex={-1}>
         {path === "/" ? (
           <Home />
         ) : contact ? (
@@ -505,9 +322,9 @@ export function Site({
               the business.
             </p>
             <p>
-              This version does not load advertising or analytics scripts.
-              Online inquiry collection is disabled until its backend and
-              privacy details are configured.
+              This version does not load advertising or analytics scripts. To
+              discuss a project or ask about your information, please call our
+              team.
             </p>
             <p>
               For questions about your information, contact Temporary 123 at{" "}

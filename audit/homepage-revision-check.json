@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-11T17:25:08.018Z",
+  "htmlPages": 632,
+  "localLinks": 13375,
+  "localImages": 1319,
+  "problems": [],
+  "migration": {
+    "expected": 98253,
+    "recovered": 625
+  },
+  "indexing": "Revision host remains noindex. Production origin migration is incomplete."
+}
