@@ -322,7 +322,7 @@ function Home() {
             ["Construction & workforce", "/man-camps-for-rent/"],
             ["Government & public services", "/government/"],
             ["Food service & hospitality", "/food-services-2/"],
-            ["Emergency & disaster response", "/emergency-response/"],
+              ["Emergency & disaster response", "/disaster-relief-man-camp-workforce-rentals/"],
           ].map(([n, p], i) => (
             <a href={p} key={p}>
               <span>0{i + 1}</span>

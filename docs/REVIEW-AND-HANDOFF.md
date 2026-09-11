@@ -12,7 +12,7 @@
 
 ## Verification
 
-Build and TypeScript checks pass. Twenty contact/API tests and seven Realtime Database emulator tests pass. Tests cover anonymous/authenticated access denial, concurrent quotas, idempotency conflicts, competing notification workers, failed delivery retry and provider deduplication deadlines. The mail provider in tests is synthetic; no external test email was sent.
+Build and TypeScript checks pass. Twenty-one contact/API/import tests and seven Realtime Database emulator tests pass. Tests cover anonymous/authenticated access denial, concurrent quotas, idempotency conflicts, competing notification workers, failed delivery retry and provider deduplication deadlines. The mail provider in tests is synthetic; no external test email was sent.
 
 The recovered-content scan found no executable scripts, inline handlers, embedded forms or iframes. Empty and duplicate source records are listed in `audit/content-review.json`; this does not validate every old business claim.
 
@@ -20,7 +20,7 @@ The recovered-content scan found no executable scripts, inline handlers, embedde
 
 1. **Full source recovery:** WordPress reported 98,253 pages; 625 have been recovered. Public export requests later returned HTTP 500. A WordPress export or hosting backup, with media, is needed to complete the requested migration. Direct HTML fallback results are separately logged.
 2. **Backlinks:** all 148 workbook rows are accounted for. Initially 21 matched recovered content and four were homepage variants; 123 still needed source recovery. No blanket homepage redirects were created. The machine-readable reconciliation is authoritative if totals change.
-3. **Media:** working images are downloaded to `public/media`. Failed images are omitted from rendered articles, not replaced with unrelated equipment photos. Original references and failure statuses remain recorded. Full media recovery is incomplete.
+3. **Media:** 186 working source images are downloaded to `public/media`. Failed images are omitted from rendered articles, not replaced with unrelated equipment photos. Original references and failure statuses remain recorded. Full media recovery is incomplete.
 4. **Vercel:** browser and CLI deny project creation in Temporary 123 (`temporary-124`). A team owner must grant the signed-in account project-creation access. No unrelated team was used and no domain settings were changed.
 5. **Online intake:** rules are live, but server credentials, App Check, notification sender/recipient and authenticated job scheduling are not verified in Vercel. Public contact uses the published telephone number; online inquiry collection is disabled.
 
