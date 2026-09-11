@@ -1,0 +1,10 @@
+Release blocked:
+- identityApproved is not approved
+- servicesApproved is not approved
+- privacyApproved is not approved
+- migrationApproved is not approved
+- contentApproved is not approved
+- production origin missing
+- approved phone missing
+- migration map contains pending decisions
+- security evidence contains unresolved release controls

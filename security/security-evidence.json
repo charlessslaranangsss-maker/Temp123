@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "project": "April / Temporary 123",
+  "source_revision": "2e19d74ed3aef00c18dc940a9a96809403bce4ee",
+  "environment": "Node 24 local, demo-april emulator, Chrome localhost; deployment blocked",
+  "generated_at": "2026-09-11T16:08:56.478345+00:00",
+  "controls": [
+    {
+      "id": "ARCH",
+      "status": "pass",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "Reviewed all entry points and access paths",
+      "expected": "Explicit public inquiry and private datastore/operator boundaries",
+      "observed": "Explicit public inquiry and private datastore/operator boundaries",
+      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "AUTH",
+      "status": "not_applicable",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": "No customer login, recovery or MFA feature."
+    },
+    {
+      "id": "RULES",
+      "status": "pass",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "npm run test:rules",
+      "expected": "10 emulator tests passed, including all-client private access denials and queue tests",
+      "observed": "10 emulator tests passed, including all-client private access denials and queue tests",
+      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "evidence": [
+        "rules-tests-current.log"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "AUTHZ",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Local boundaries pass; cloud IAM and valid deployed caller operations are not verified."
+    },
+    {
+      "id": "TENANT",
+      "status": "not_applicable",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": "No tenant model or membership feature."
+    },
+    {
+      "id": "SESSION",
+      "status": "not_applicable",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": "No browser authentication sessions or session cookies."
+    },
+    {
+      "id": "CSRF",
+      "status": "not_applicable",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": "No cookie-authenticated mutations; public submission uses exact origin and App Check, scheduler uses bearer authentication."
+    },
+    {
+      "id": "CORS_HEADERS",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Local code headers reviewed; no Vercel deployment exists to verify actual browser enforcement."
+    },
+    {
+      "id": "COOKIE_CONSENT",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Essential-only code inventoried; configured App Check provider behavior and final privacy policy remain unverified."
+    },
+    {
+      "id": "RATE",
+      "status": "pass",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "npm run test:rules",
+      "expected": "Shared concurrent rate budget, window reset and key separation passed",
+      "observed": "Shared concurrent rate budget, window reset and key separation passed",
+      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "evidence": [
+        "rules-tests-current.log"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "APP_CHECK",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Web app registered but reCAPTCHA provider and real token acceptance/rejection are not configured."
+    },
+    {
+      "id": "INPUT",
+      "status": "pass",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "npm test",
+      "expected": "20 API/application tests passed, including malformed, oversized, forged and failed-dependency cases",
+      "observed": "20 API/application tests passed, including malformed, oversized, forged and failed-dependency cases",
+      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "evidence": [
+        "handler-tests-current.log"
+      ],
+      "reason": ""
+    },
+    {
+      "id": "STORAGE",
+      "status": "not_applicable",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "access-inventory.md"
+      ],
+      "reason": "No uploads, download endpoints or configured cloud Storage bucket."
+    },
+    {
+      "id": "INTEGRATIONS",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Five local delivery worker tests pass; Resend sender/inbox, real delivery and scheduler configuration are unavailable."
+    },
+    {
+      "id": "SECRETS",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Source/build pattern scan passes; server identity, least-privilege IAM and preview/production isolation are not deployed."
+    },
+    {
+      "id": "DEPLOY",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Vercel project creation and Firestore database creation are denied by the connected account permissions."
+    },
+    {
+      "id": "OBSERVE",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "Redacted local events exist; cloud log access/retention, queue/cost alerts and alert delivery are unverified."
+    },
+    {
+      "id": "RECOVERY",
+      "status": "blocked",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "",
+      "expected": "",
+      "observed": "",
+      "executed_at": "",
+      "evidence": [
+        "deployment-observations.json",
+        "access-inventory.md"
+      ],
+      "reason": "No live database exists; retention, backup policy and restore drill cannot yet be verified."
+    },
+    {
+      "id": "SUPPLY",
+      "status": "pass",
+      "implementation": [
+        "server/",
+        "api/",
+        "src/",
+        "firestore.rules"
+      ],
+      "verification": "npm run build; npm test; npm run test:rules; npm audit; npm run check:secrets",
+      "expected": "Build passes; 30 local tests pass; no high/critical advisories; moderate residuals triaged in handoff",
+      "observed": "Build passes; 30 local tests pass; no high/critical advisories; moderate residuals triaged in handoff",
+      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "evidence": [
+        "build-current.log",
+        "handler-tests-current.log",
+        "rules-tests-current.log",
+        "dependency-audit-current.json",
+        "secret-scan-current.json"
+      ],
+      "reason": ""
+    }
+  ],
+  "findings": []
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Service main title, intro, headings, section bodies, CTA labels, FAQs and related links. Excludes shared nav/footer, closing CTA panel and repeated sidebar headings.",
+  "pages": [
+    {
+      "route": "/services/mobile-kitchens/",
+      "words": 367,
+      "hash": "0d3ccf70e1ac48648b63355a92ab36c10e4097cb9fa6db3fe2aa59e1ae35abeb"
+    },
+    {
+      "route": "/services/restroom-shower-trailers/",
+      "words": 347,
+      "hash": "c98ea376f10a6c5188d79fd34d1027eb0cd2195e659e792fa0f849b811b3b9b0"
+    },
+    {
+      "route": "/services/workforce-housing/",
+      "words": 355,
+      "hash": "e6bba678a05b7634007ca0f19ea46e3376ce8a269fb162b4c3fda2ffa1f37ffd"
+    },
+    {
+      "route": "/services/temporary-facilities/",
+      "words": 366,
+      "hash": "b4ec87f6107ef26c39cbefa068a4c4cf083b1062f47996ec42d8b88ddc75c50c"
+    }
+  ],
+  "exactDuplicateBodies": 0,
+  "limitations": "Only four new draft bodies compared. Original main content unavailable; semantic/source-site comparison remains open."
+}
