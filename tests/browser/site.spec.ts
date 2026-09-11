@@ -6,6 +6,10 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(page.locator("h1")).toContainText("Keep your");
     await expect(page).toHaveTitle(/Temporary 123/);
     await expect(page.locator(".brand")).toContainText("Temporary123");
+    await expect(page.locator(".visual-note, .equipment-jumps")).toHaveCount(0);
+    await expect(
+      page.getByRole("link", { name: "Prepare for your project" }),
+    ).toHaveCount(0);
     const brandMark = page.locator(".brand img");
     const brandText = page.locator(".brand > span");
     expect(

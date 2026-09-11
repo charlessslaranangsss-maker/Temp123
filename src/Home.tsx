@@ -49,14 +49,6 @@ export function Home() {
                 ↗
               </a>
             </div>
-            <div className="visual-note">
-              <span aria-hidden="true">+</span>
-              <p>
-                A working kitchen.
-                <br />
-                <strong>Where your team needs it.</strong>
-              </p>
-            </div>
           </div>
         </div>
         <svg
@@ -73,22 +65,6 @@ export function Home() {
           />
         </svg>
       </section>
-      <nav className="equipment-jumps" aria-label="Equipment categories">
-        <div className="wrap">
-          <a href="/equipment-rental/mobile-kitchen-trailers/">
-            Mobile kitchens <span>↗</span>
-          </a>
-          <a href="/equipment-rental/restroom-trailers/">
-            Restrooms & showers <span>↗</span>
-          </a>
-          <a href="/man-camps-for-rent/">
-            Workforce facilities <span>↗</span>
-          </a>
-          <a href="/equipment-rental/">
-            All equipment <span>↗</span>
-          </a>
-        </div>
-      </nav>
       <section className="wrap section equipment-section" id="equipment">
         <div className="section-heading">
           <div>
@@ -119,9 +95,6 @@ export function Home() {
               You know your operation. We help you work out the facilities,
               access and utilities it needs.
             </p>
-            <a className="button secondary" href="/planning/">
-              Prepare for your project <span aria-hidden="true">↗</span>
-            </a>
             <div className="process-note">
               <span>START WITH A CONVERSATION</span>
               <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
