@@ -1,12 +1,34 @@
-import React from "react";
-import { createRoot, hydrateRoot } from "react-dom/client";
-import { App } from "./App";
 import "./style.css";
-import "./motion.css";
+import "./mobile-fixes.css";
 import "@fontsource/barlow/latin-400.css";
 import "@fontsource/barlow/latin-600.css";
 import "@fontsource/barlow-condensed/latin-600.css";
-const path = window.location.pathname;
-const root = document.getElementById("root")!;
-if (root.querySelector("header")) hydrateRoot(root, <App path={path} />);
-else createRoot(root).render(<App path={path} />);
+const search = document.querySelector<HTMLInputElement>("#catalog-search");
+search?.addEventListener("input", () => {
+  const term = search.value.trim().toLowerCase();
+  let count = 0;
+  document.querySelectorAll<HTMLElement>(".catalog-list a").forEach((a) => {
+    a.hidden = !a.textContent?.toLowerCase().includes(term);
+    if (!a.hidden) count++;
+  });
+  document.querySelector("#catalog-status")!.textContent =
+    `${count} matching pages`;
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape")
+    document
+      .querySelector<HTMLDetailsElement>(".mobile-nav")
+      ?.removeAttribute("open");
+});
+if (document.querySelector("#quote-island")) {
+  Promise.all([
+    import("react-dom/client"),
+    import("react"),
+    import("./QuoteForm"),
+  ]).then(([{ hydrateRoot }, React, { QuoteForm }]) =>
+    hydrateRoot(
+      document.querySelector("#quote-island")!,
+      React.createElement(QuoteForm),
+    ),
+  );
+}

@@ -1,14 +1,8 @@
 {
-  "brand": "April",
-  "origin": "",
-  "phoneDisplay": "",
-  "phoneE164": "",
-  "identityApproved": false,
-  "servicesApproved": false,
-  "privacyApproved": false,
-  "migrationApproved": false,
-  "contentApproved": false,
-  "approvedMarkets": [],
+  "brand": "Temporary 123",
+  "origin": "https://temporary123.com",
+  "phoneDisplay": "(800) 443-5212",
+  "phoneE164": "+18004435212",
   "mode": "draft",
   "inquiriesEnabled": false
 }

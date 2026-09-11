@@ -1,22 +1,23 @@
 {
-  "checked_at": "2026-09-11T16:08:56.478345+00:00",
-  "vercel": {
-    "team": "Temporary 123",
-    "scope": "temporary-124",
-    "requested_project": "temp123",
-    "status": "blocked",
-    "evidence": "vercel project add and vercel link both returned 403: You don't have permission to create the project. Browser Add New > Project is disabled."
-  },
+  "checkedAt": "2026-09-11T16:49:57.473Z",
   "firebase": {
     "project": "temporary-123-87345",
-    "app_id": "1:66308204140:web:ec828a478691818e3e1a49",
-    "app_registered": true,
-    "firestore_api_enabled": true,
-    "database_created": false,
-    "rules_deployed": false,
-    "evidence": "firestore:databases:list returned an empty list after API enablement. firestore:databases:create (default) returned 403: The caller does not have permission."
+    "database": "temporary-123-87345-default-rtdb",
+    "rulesDeployed": true,
+    "unauthenticatedInquiryRead": 401
   },
-  "production_domain_changed": false,
-  "contact_enabled": false,
-  "live_email_sent": false
+  "vercel": {
+    "team": "temporary-124",
+    "project": "temp123",
+    "created": false,
+    "reason": "Account lacks permission to create a project in this team; UI Create Project/Deploy disabled"
+  },
+  "wordpress": {
+    "origin": "https://temporary123.com",
+    "adminStatus": "Error establishing a database connection",
+    "recoveredPages": 625,
+    "expectedPages": 98253
+  },
+  "liveDomainChanged": false,
+  "onlineInquiriesEnabled": false
 }

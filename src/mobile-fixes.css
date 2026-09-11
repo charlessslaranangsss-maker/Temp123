@@ -1,0 +1,20 @@
+@media (max-width: 760px) {
+  .hero h1 br:first-child {
+    display: initial;
+  }
+  .hero-copy,
+  .hero-visual {
+    min-width: 0;
+  }
+  .hero-visual {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 400px;
+    min-height: 0;
+  }
+}
+@media (max-width: 380px) {
+  .hero-visual {
+    height: 330px;
+  }
+}

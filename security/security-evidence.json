@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "project": "April / Temporary 123",
-  "source_revision": "2e19d74ed3aef00c18dc940a9a96809403bce4ee",
-  "environment": "Node 24 local, demo-april emulator, Chrome localhost; deployment blocked",
-  "generated_at": "2026-09-11T16:08:56.478345+00:00",
+  "project": "Temporary 123",
+  "source_revision": "working-tree-before-review-commit",
+  "environment": "Node 24; demo-temporary123 Realtime Database emulator; Chrome local preview; live locked database rules; Vercel project creation denied",
+  "generated_at": "2026-09-11T16:49:57.473Z",
   "controls": [
     {
       "id": "ARCH",
@@ -12,14 +12,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "Reviewed all entry points and access paths",
-      "expected": "Explicit public inquiry and private datastore/operator boundaries",
-      "observed": "Explicit public inquiry and private datastore/operator boundaries",
-      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "verification": "Reviewed server/API and static frontend boundaries",
+      "expected": "Realtime Database implementation and private data access documented",
+      "observed": "Realtime Database implementation and private data access documented",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": ""
     },
@@ -30,14 +31,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "",
       "expected": "",
       "observed": "",
-      "executed_at": "",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": "No customer login, recovery or MFA feature."
     },
@@ -48,14 +50,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "npm run test:rules",
-      "expected": "10 emulator tests passed, including all-client private access denials and queue tests",
-      "observed": "10 emulator tests passed, including all-client private access denials and queue tests",
-      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "verification": "npm run test:rules; firebase deploy --only database; unauthenticated HTTPS GET",
+      "expected": "Seven emulator tests passed; locked rules deployed; public inquiry read returned HTTP 401 Permission denied",
+      "observed": "Seven emulator tests passed; locked rules deployed; public inquiry read returned HTTP 401 Permission denied",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "rules-tests-current.log"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": ""
     },
@@ -66,17 +69,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Local boundaries pass; cloud IAM and valid deployed caller operations are not verified."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "TENANT",
@@ -85,14 +88,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "",
       "expected": "",
       "observed": "",
-      "executed_at": "",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": "No tenant model or membership feature."
     },
@@ -103,14 +107,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "",
       "expected": "",
       "observed": "",
-      "executed_at": "",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": "No browser authentication sessions or session cookies."
     },
@@ -121,14 +126,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "",
       "expected": "",
       "observed": "",
-      "executed_at": "",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": "No cookie-authenticated mutations; public submission uses exact origin and App Check, scheduler uses bearer authentication."
     },
@@ -139,36 +145,36 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Local code headers reviewed; no Vercel deployment exists to verify actual browser enforcement."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "COOKIE_CONSENT",
-      "status": "blocked",
+      "status": "pass",
       "implementation": [
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Source and browser inspection",
+      "expected": "No optional tracking scripts; online form disabled",
+      "observed": "No optional tracking scripts; online form disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Essential-only code inventoried; configured App Check provider behavior and final privacy policy remain unverified."
+      "reason": ""
     },
     {
       "id": "RATE",
@@ -177,14 +183,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "npm run test:rules",
-      "expected": "Shared concurrent rate budget, window reset and key separation passed",
-      "observed": "Shared concurrent rate budget, window reset and key separation passed",
-      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "expected": "Concurrent IP quota test passed; shared atomic store",
+      "observed": "Concurrent IP quota test passed; shared atomic store",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "rules-tests-current.log"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": ""
     },
@@ -195,17 +202,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Web app registered but reCAPTCHA provider and real token acceptance/rejection are not configured."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "INPUT",
@@ -214,14 +221,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "npm test",
-      "expected": "20 API/application tests passed, including malformed, oversized, forged and failed-dependency cases",
-      "observed": "20 API/application tests passed, including malformed, oversized, forged and failed-dependency cases",
-      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "verification": "npm test; scripts/content-check.ts",
+      "expected": "21 API/import tests; imported markup scan has no active content",
+      "observed": "21 API/import tests; imported markup scan has no active content",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "handler-tests-current.log"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": ""
     },
@@ -232,14 +240,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
       "verification": "",
       "expected": "",
       "observed": "",
-      "executed_at": "",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": "No uploads, download endpoints or configured cloud Storage bucket."
     },
@@ -250,17 +259,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Five local delivery worker tests pass; Resend sender/inbox, real delivery and scheduler configuration are unavailable."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "SECRETS",
@@ -269,17 +278,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Source/build pattern scan passes; server identity, least-privilege IAM and preview/production isolation are not deployed."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "DEPLOY",
@@ -288,17 +297,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Vercel project creation and Firestore database creation are denied by the connected account permissions."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "OBSERVE",
@@ -307,17 +316,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "Redacted local events exist; cloud log access/retention, queue/cost alerts and alert delivery are unverified."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "RECOVERY",
@@ -326,17 +335,17 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "",
-      "expected": "",
-      "observed": "",
-      "executed_at": "",
+      "verification": "Local implementation reviewed; deployed verification unavailable",
+      "expected": "Actual Vercel backend configuration and production evidence",
+      "observed": "Vercel team denies project creation; online intake disabled",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "deployment-observations.json",
-        "access-inventory.md"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
-      "reason": "No live database exists; retention, backup policy and restore drill cannot yet be verified."
+      "reason": "Requires hosting access and deployment configuration"
     },
     {
       "id": "SUPPLY",
@@ -345,18 +354,15 @@
         "server/",
         "api/",
         "src/",
-        "firestore.rules"
+        "database.rules.json"
       ],
-      "verification": "npm run build; npm test; npm run test:rules; npm audit; npm run check:secrets",
-      "expected": "Build passes; 30 local tests pass; no high/critical advisories; moderate residuals triaged in handoff",
-      "observed": "Build passes; 30 local tests pass; no high/critical advisories; moderate residuals triaged in handoff",
-      "executed_at": "2026-09-11T16:08:56.478345+00:00",
+      "verification": "npm audit --omit=dev --audit-level=high",
+      "expected": "No high/critical production findings; two moderate transitive gaxios/uuid findings remain",
+      "observed": "No high/critical production findings; two moderate transitive gaxios/uuid findings remain",
+      "executed_at": "2026-09-11T16:49:57.473Z",
       "evidence": [
-        "build-current.log",
-        "handler-tests-current.log",
-        "rules-tests-current.log",
-        "dependency-audit-current.json",
-        "secret-scan-current.json"
+        "access-inventory.md",
+        "../docs/REVIEW-AND-HANDOFF.md"
       ],
       "reason": ""
     }

@@ -53,6 +53,10 @@ http
         ".txt": "text/plain",
         ".woff2": "font/woff2",
         ".woff": "font/woff",
+        ".webp": "image/webp",
+        ".png": "image/png",
+        ".jpg": "image/jpeg",
+        ".gif": "image/gif",
       };
       res
         .writeHead(200, {

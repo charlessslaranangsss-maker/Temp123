@@ -1,22 +1,22 @@
-import { services } from "../src/content";
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
+import { gunzipSync } from "node:zlib";
 import { createHash } from "node:crypto";
-const pages = services.map((s) => {
-  const text = [
-    s.tag,
-    s.name,
-    s.intro,
-    "Discuss this requirement",
-    ...s.sections.flat(),
-    "Share your site details",
-    "Useful questions",
-    ...s.faq.flat(),
-    "Related planning: prepare your site brief or explore other facilities.",
-  ].join(" ");
+const index = JSON.parse(readFileSync("content/route-index.json", "utf8")) as {
+  path: string;
+  file: string;
+}[];
+const pages = index.map((p) => {
+  const body = JSON.parse(
+    gunzipSync(readFileSync("content/pages/" + p.file)).toString(),
+  ).html as string;
   return {
-    route: `/services/${s.slug}/`,
-    words: text.match(/\b[\w]+(?:[-’'][\w]+)*\b/g)!.length,
-    hash: createHash("sha256").update(text).digest("hex"),
+    path: p.path,
+    bytes: Buffer.byteLength(body),
+    hash: createHash("sha256").update(body).digest("hex"),
+    empty: !body.trim(),
+    unsafe: /<(script|iframe|form|style)\b|\son\w+=|href="javascript:/i.test(
+      body,
+    ),
   };
 });
 writeFileSync(
@@ -24,15 +24,21 @@ writeFileSync(
   JSON.stringify(
     {
       scope:
-        "Service main title, intro, headings, section bodies, CTA labels, FAQs and related links. Excludes shared nav/footer, closing CTA panel and repeated sidebar headings.",
-      pages,
+        "Recovered public WordPress page bodies after HTML sanitization. Original source facts require editorial verification; recovery is not full migration approval.",
+      count: pages.length,
+      empty: pages.filter((p) => p.empty).length,
+      unsafe: pages.filter((p) => p.unsafe),
       exactDuplicateBodies:
         pages.length - new Set(pages.map((p) => p.hash)).size,
-      limitations:
-        "Only four new draft bodies compared. Original main content unavailable; semantic/source-site comparison remains open.",
+      pages,
     },
     null,
     2,
   ),
 );
-console.log(pages);
+if (pages.some((p) => p.unsafe)) throw Error("Unsafe imported markup");
+console.log(
+  "Reviewed",
+  pages.length,
+  "source bodies; empty and duplicate records are documented.",
+);

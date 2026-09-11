@@ -1,6 +1,8 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
-import { App } from "../src/App";
+import { Site, type SourcePage } from "../src/Site";
+import { readdir } from "node:fs/promises";
+import { gunzipSync } from "node:zlib";
 import { routes, pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
@@ -13,6 +15,50 @@ if (release) {
   if (errors.length) throw new Error(errors.join("; "));
 }
 const source = await readFile("dist/index.html", "utf8");
+const pages: SourcePage[] = [];
+const index = JSON.parse(
+  await readFile("content/route-index.json", "utf8"),
+) as { path: string; file: string; title: string }[];
+let media: Record<string, { local?: string }> = {};
+try {
+  media = JSON.parse(await readFile("content/media-map.json", "utf8"));
+} catch {}
+for (const entry of index) {
+  const page = JSON.parse(
+    gunzipSync(await readFile("content/pages/" + entry.file)).toString(),
+  ) as SourcePage;
+  page.path = entry.path;
+  pages.push(page);
+}
+const coreRoutes = [
+  "/",
+  "/services/",
+  "/industries/",
+  "/service-areas/",
+  "/planning/",
+  "/contact-us/",
+  "/privacy/",
+  "/equipment-rental/",
+];
+const allRoutes = [...new Set([...coreRoutes, ...pages.map((p) => p.path)])];
+const renderContent = (page: SourcePage) => {
+  let html = page.html.replace(
+    /<h2>Complete List of States and Cities of United States[\s\S]*/,
+    '<p><a href="/service-areas/">Explore our location directory →</a></p>',
+  );
+  html = html.replace(/<img\b[^>]*src="([^"]+)"[^>]*>/g, (tag, url) =>
+    media[url]?.local ? tag.replace(url, media[url].local!) : "",
+  );
+  html = html.replace(/href="(\/[^"#?]*)([^\"]*)"/g, (match, p, suffix) =>
+    allRoutes.includes(p)
+      ? match
+      : `href="https://temporary123.com${p}${suffix}"`,
+  );
+  return (
+    html ||
+    "<p>Explore Temporary 123 equipment and project services, or call (800) 443-5212 to speak with our team.</p>"
+  );
+};
 const esc = (s: string) =>
   s.replace(
     /[&<>"']/g,
@@ -21,8 +67,23 @@ const esc = (s: string) =>
         c
       ]!,
   );
-for (const path of [...routes, "/404/"]) {
-  const info = pageInfo(path);
+for (const path of [...allRoutes, "/404/"]) {
+  const page = pages.find((p) => p.path === path);
+  const info = page
+    ? { title: page.title + " | Temporary 123", description: page.description }
+    : path === "/contact-us/"
+      ? {
+          title: "Contact Temporary 123 | Talk to a Specialist",
+          description:
+            "Call Temporary 123 at (800) 443-5212 for mobile kitchens, temporary facilities and project support.",
+        }
+      : path === "/equipment-rental/"
+        ? {
+            title: "Equipment Rental | Temporary 123",
+            description:
+              "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+          }
+        : pageInfo(path);
   const canonical =
     release && path !== "/404/"
       ? `${site.origin.replace(/\/$/, "")}${path}`
@@ -44,7 +105,16 @@ for (const path of [...routes, "/404/"]) {
       `<meta name="robots" content="${canonical ? "index,follow" : "noindex,nofollow"}"/>`,
     )
     .replace("<!--page-head-->", head)
-    .replace("<!--app-html-->", renderToString(<App path={path} />));
+    .replace(
+      "<!--app-html-->",
+      renderToString(
+        <Site
+          path={path}
+          page={page ? { ...page, html: renderContent(page) } : undefined}
+          catalog={pages.map((p) => ({ path: p.path, title: p.title }))}
+        />,
+      ),
+    );
   const file = path === "/404/" ? "dist/404.html" : `dist${path}index.html`;
   await mkdir(file.substring(0, file.lastIndexOf("/")), { recursive: true });
   await writeFile(file, html);
@@ -60,5 +130,5 @@ await writeFile(
   `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? routes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
 );
 console.log(
-  `Static HTML generated for ${routes.length} pages + 404 (${release ? "production" : "draft/noindex"}).`,
+  `Static HTML generated for ${allRoutes.length} pages + 404 (${release ? "production" : "draft/noindex"}).`,
 );

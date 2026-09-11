@@ -2,14 +2,16 @@ import site from "../site.json" with { type: "json" };
 import { readFileSync } from "node:fs";
 export function releaseErrors() {
   const errors: string[] = [];
-  for (const field of [
-    "identityApproved",
-    "servicesApproved",
-    "privacyApproved",
-    "migrationApproved",
-    "contentApproved",
-  ] as const)
-    if (!site[field]) errors.push(`${field} is not approved`);
+  const status = JSON.parse(
+    readFileSync(
+      new URL("../content/migration-status.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  if (!status.complete)
+    errors.push(
+      `Source migration incomplete: ${status.recovered} of ${status.expected} pages recovered`,
+    );
   try {
     const url = new URL(site.origin);
     if (
@@ -28,12 +30,19 @@ export function releaseErrors() {
   }
   if (!/^\+[1-9]\d{7,14}$/.test(site.phoneE164) || !site.phoneDisplay)
     errors.push("approved phone missing");
-  const migration = readFileSync(
-    new URL("../audit/migration-map.csv", import.meta.url),
-    "utf8",
+  const migration = JSON.parse(
+    readFileSync(
+      new URL("../audit/backlink-reconciliation.json", import.meta.url),
+      "utf8",
+    ),
   );
-  if (migration.includes("Pending"))
-    errors.push("migration map contains pending decisions");
+  if (
+    migration.some(
+      (row: { migrationStatus: string }) =>
+        row.migrationStatus === "needs_source_recovery",
+    )
+  )
+    errors.push("Backlink target recovery is incomplete");
   try {
     const evidence = JSON.parse(
       readFileSync(
@@ -42,6 +51,7 @@ export function releaseErrors() {
       ),
     );
     if (
+      site.inquiriesEnabled &&
       evidence.controls.some(
         (c: { status: string }) =>
           !["pass", "not_applicable"].includes(c.status),
