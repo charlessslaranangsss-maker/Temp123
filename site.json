@@ -1,0 +1,14 @@
+{
+  "brand": "April",
+  "origin": "",
+  "phoneDisplay": "",
+  "phoneE164": "",
+  "identityApproved": false,
+  "servicesApproved": false,
+  "privacyApproved": false,
+  "migrationApproved": false,
+  "contentApproved": false,
+  "approvedMarkets": [],
+  "mode": "draft",
+  "inquiriesEnabled": false
+}

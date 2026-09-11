@@ -1,0 +1,12 @@
+import React from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { App } from "./App";
+import "./style.css";
+import "./motion.css";
+import "@fontsource/barlow/latin-400.css";
+import "@fontsource/barlow/latin-600.css";
+import "@fontsource/barlow-condensed/latin-600.css";
+const path = window.location.pathname;
+const root = document.getElementById("root")!;
+if (root.querySelector("header")) hydrateRoot(root, <App path={path} />);
+else createRoot(root).render(<App path={path} />);
