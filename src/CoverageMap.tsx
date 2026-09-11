@@ -100,7 +100,7 @@ export function CoverageMap() {
   return (
     <figure className="coverage-map" aria-labelledby="coverage-map-title">
       <div className="coverage-map-topline">
-        <span id="coverage-map-title">Top 50 States in USA </span>
+        <span id="coverage-map-title">Top 50 States in USA</span>
       </div>
       <div className="coverage-map-stage">
         <Geography id="map-surface" />
