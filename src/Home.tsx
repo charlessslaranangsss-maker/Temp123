@@ -228,7 +228,7 @@ export function Home() {
               ],
               [
                 "Can you help with an urgent requirement?",
-                "Call our team on 800-443-5212 and explain what is happening at your site. We can discuss current availability and the delivery arrangements your project needs.",
+                `Call our team on ${site.phoneDisplay} and explain what is happening at your site. We can discuss current availability and the delivery arrangements your project needs.`,
               ],
               [
                 "What should I check at the site?",

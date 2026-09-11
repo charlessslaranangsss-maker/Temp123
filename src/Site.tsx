@@ -83,7 +83,6 @@ const serviceGroups = [
     ],
   },
 ];
-const navPhoneDisplay = "+1 (800) 443 - 5212";
 const locationPrefix = "/equipment-rental/mobile-kitchen-trailers/";
 export const isLocationPagePath = (path: string) =>
   path.startsWith(locationPrefix) && path !== locationPrefix;
@@ -131,7 +130,7 @@ export function Header({ path }: { path: string }) {
           </svg>
           <p>
             <strong>Live agents available 24/7.</strong> <span>Call us at</span>{" "}
-            <a href={"tel:" + site.phoneE164}>+1 {site.phoneDisplay}</a>{" "}
+            <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>{" "}
             <span>to speak with a kitchen specialist.</span>
           </p>
         </div>
@@ -197,7 +196,7 @@ export function Header({ path }: { path: string }) {
           </nav>
           <a className="header-contact" href={"tel:" + site.phoneE164}>
             <span>Call our team, 24/7</span>
-            <strong>{navPhoneDisplay}</strong>
+            <strong>{site.phoneDisplay}</strong>
             <b aria-hidden="true">↗</b>
           </a>
           <details className="mobile-nav">

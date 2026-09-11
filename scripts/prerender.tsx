@@ -83,7 +83,7 @@ const sourceDescription = (page: SourcePage) => {
     (inherited.length >= 155 && !/[.!?]$/.test(inherited));
   if (!unusable) return inherited;
   const subject = compact(page.title.split("|")[0], 65);
-  return `Explore ${subject} from Temporary 123. Call 800-443-5212 to discuss site requirements, equipment availability and delivery.`;
+  return `Explore ${subject} from Temporary 123. Call ${site.phoneDisplay} to discuss site requirements, equipment availability and delivery.`;
 };
 const renderContent = (page: SourcePage) => {
   let html = page.html.replace(
@@ -104,7 +104,7 @@ const renderContent = (page: SourcePage) => {
   );
   return (
     html ||
-    "<p>Explore Temporary 123 equipment and project services, or call (800) 443-5212 to speak with our team.</p>"
+    `<p>Explore Temporary 123 equipment and project services, or call ${site.phoneDisplay} to speak with our team.</p>`
   );
 };
 const esc = (s: string) =>
@@ -129,7 +129,7 @@ for (const path of [...allRoutes, "/404/"]) {
         ? {
             title: "Contact Temporary 123 | Talk to a Specialist",
             description:
-              "Call Temporary 123 at (800) 443-5212 for mobile kitchens, temporary facilities and project support.",
+              `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
           }
         : path === "/equipment-rental/"
           ? {
@@ -148,7 +148,7 @@ for (const path of [...allRoutes, "/404/"]) {
       ? `${site.origin.replace(/\/$/, "")}${path}`
       : "";
   if (!info.description.trim()) {
-    info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at 800-443-5212 to discuss your site, rental dates and equipment requirements.`;
+    info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
   const schema = canonical
     ? path === "/"
@@ -246,7 +246,10 @@ for (const path of [...allRoutes, "/404/"]) {
   // script contents or the archived source records.
   const $ = load(rawHtml);
   const cleanCopy = (value: string) =>
-    value.replace(/\s*—\s*/g, ", ").replace(/\*/g, "");
+    value
+      .replace(/\s*—\s*/g, ", ")
+      .replace(/\*/g, "")
+      .replace(/(?:\+?1[\s.-]*)?\(?800\)?[\s.-]*443[\s.-]*5212/g, site.phoneDisplay);
   $("body, title")
     .find("*")
     .addBack()

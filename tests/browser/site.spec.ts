@@ -45,8 +45,12 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
       "color",
       "rgb(179, 13, 27)",
     );
-    if (width >= 1024)
-      await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
+    await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
+    const displayedPhoneNumbers = await page
+      .locator('a[href="tel:+18004435212"]')
+      .allTextContents();
+    for (const text of displayedPhoneNumbers)
+      expect(text.replace(/\s+/g, " ")).toContain("+1 (800) 443 - 5212");
     await expect(phone).toBeInViewport({ ratio: 1 });
     await page.locator(".faq-section").scrollIntoViewIfNeeded();
     await expect(phone).toBeInViewport({ ratio: 1 });
@@ -260,7 +264,10 @@ test("contact provides a working phone action while online intake is disabled", 
   await page.goto("/contact-us/");
   await expect(
     page
-      .getByRole("link", { name: "Call (800) 443-5212", exact: false })
+      .getByRole("link", {
+        name: "Call +1 (800) 443 - 5212",
+        exact: false,
+      })
       .first(),
   ).toHaveAttribute("href", "tel:+18004435212");
   await expect(page.locator("form")).toHaveCount(0);
