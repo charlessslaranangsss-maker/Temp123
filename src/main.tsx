@@ -134,3 +134,44 @@ if (document.querySelector("#quote-island")) {
     ),
   );
 }
+
+// The equipment directory is fully linked in HTML; filtering is an enhancement.
+const equipmentSearch =
+  document.querySelector<HTMLInputElement>("#equipment-search");
+if (equipmentSearch) {
+  document.querySelector<HTMLElement>(".equipment-filter")!.hidden = false;
+  const applyFilter = () => {
+    const term = equipmentSearch.value.trim().toLowerCase();
+    let count = 0;
+    document
+      .querySelectorAll<HTMLElement>("[data-catalog-card]")
+      .forEach((card) => {
+        card.hidden = !card.dataset.search?.toLowerCase().includes(term);
+        if (!card.hidden) count++;
+      });
+    document
+      .querySelectorAll<HTMLElement>("[data-catalog-group]")
+      .forEach((group) => {
+        group.hidden = !group.querySelector(
+          "[data-catalog-card]:not([hidden])",
+        );
+      });
+    document.querySelector("#equipment-search-status")!.textContent =
+      `${count} equipment ${count === 1 ? "entry" : "entries"}`;
+    document.querySelector<HTMLElement>(".catalog-empty")!.hidden = count > 0;
+  };
+  equipmentSearch.addEventListener("input", applyFilter);
+  document
+    .querySelector("#clear-equipment-search")
+    ?.addEventListener("click", () => {
+      equipmentSearch.value = "";
+      applyFilter();
+      equipmentSearch.focus();
+    });
+  document.querySelectorAll("[data-catalog-jump]").forEach((link) =>
+    link.addEventListener("click", () => {
+      equipmentSearch.value = "";
+      applyFilter();
+    }),
+  );
+}

@@ -2,6 +2,7 @@ import http from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, relative, isAbsolute } from "node:path";
 const root = resolve("dist");
+const { redirects = [] } = JSON.parse(await readFile("vercel.json", "utf8"));
 http
   .createServer(async (req, res) => {
     let path;
@@ -9,6 +10,16 @@ http
       path = decodeURIComponent(new URL(req.url, "http://localhost").pathname);
     } catch {
       res.writeHead(400).end();
+      return;
+    }
+    const redirect = redirects.find((rule) => rule.source === path);
+    if (redirect) {
+      res
+        .writeHead(308, {
+          Location:
+            redirect.destination + new URL(req.url, "http://localhost").search,
+        })
+        .end();
       return;
     }
     if (path.startsWith("/api/")) {

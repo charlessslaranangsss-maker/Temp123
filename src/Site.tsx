@@ -2,6 +2,11 @@ import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
 import { Home } from "./Home";
 import { Cards } from "./Equipment";
+import {
+  EquipmentCatalog,
+  EquipmentBrief,
+  catalog as equipmentCatalogData,
+} from "./EquipmentCatalog";
 export type SourcePage = {
   id: number;
   path: string;
@@ -162,6 +167,8 @@ export function Site({
   catalog?: { path: string; title: string }[];
 }) {
   const contact = ["/contact/", "/contact-us/"].includes(path);
+  const equipmentBrief =
+    !page && equipmentCatalogData.items.find((item) => item.path === path);
   return (
     <div id="top">
       <Header path={path} />
@@ -237,6 +244,8 @@ export function Site({
             </div>
             <p id="catalog-status" role="status" />
           </section>
+        ) : equipmentBrief ? (
+          <EquipmentBrief item={equipmentBrief} />
         ) : ["/services/", "/equipment-rental/", "/industries/"].includes(
             path,
           ) ? (
@@ -249,11 +258,15 @@ export function Site({
             </h1>
             <p>Explore Temporary 123 equipment and project support.</p>
             <Cards />
-            {page && (
-              <article
-                className="source-content"
-                dangerouslySetInnerHTML={{ __html: page.html }}
-              />
+            {path === "/equipment-rental/" ? (
+              <EquipmentCatalog />
+            ) : (
+              page && (
+                <article
+                  className="source-content"
+                  dangerouslySetInnerHTML={{ __html: page.html }}
+                />
+              )
             )}
           </section>
         ) : path === "/planning/" ? (

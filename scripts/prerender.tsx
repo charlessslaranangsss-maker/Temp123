@@ -3,10 +3,11 @@ import { renderToString } from "react-dom/server";
 import { Site, type SourcePage } from "../src/Site";
 import { readdir } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
-import { routes, pageInfo } from "../src/content";
+import { pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 import { load } from "cheerio";
+import { catalog } from "../src/EquipmentCatalog";
 // Vercel preview builds must never inherit production indexing settings.
 const release =
   site.mode === "production" &&
@@ -41,7 +42,13 @@ const coreRoutes = [
   "/privacy/",
   "/equipment-rental/",
 ];
-const allRoutes = [...new Set([...coreRoutes, ...pages.map((p) => p.path)])];
+const allRoutes = [
+  ...new Set([
+    ...coreRoutes,
+    ...pages.map((p) => p.path),
+    ...catalog.items.map((item) => item.path),
+  ]),
+];
 const renderContent = (page: SourcePage) => {
   let html = page.html.replace(
     /<h2>Complete List of States and Cities of United States[\s\S]*/,
@@ -51,9 +58,11 @@ const renderContent = (page: SourcePage) => {
     media[url]?.local ? tag.replace(url, media[url].local!) : "",
   );
   html = html.replace(/href="(\/[^"#?]*)([^\"]*)"/g, (match, p, suffix) =>
-    allRoutes.includes(p)
-      ? match
-      : `href="https://temporary123.com${p}${suffix}"`,
+    catalog.items.some((item) => item.legacyPath === p)
+      ? `href="${catalog.items.find((item) => item.legacyPath === p)!.path}${suffix}"`
+      : allRoutes.includes(p)
+        ? match
+        : `href="https://temporary123.com${p}${suffix}"`,
   );
   return (
     html ||
@@ -70,6 +79,7 @@ const esc = (s: string) =>
   );
 for (const path of [...allRoutes, "/404/"]) {
   const page = pages.find((p) => p.path === path);
+  const catalogItem = catalog.items.find((item) => item.path === path);
   const info = coreRoutes.includes(path)
     ? pageInfo(path)
     : page
@@ -89,7 +99,12 @@ for (const path of [...allRoutes, "/404/"]) {
               description:
                 "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
             }
-          : pageInfo(path);
+          : catalogItem
+            ? {
+                title: `${catalogItem.name} | Temporary 123`,
+                description: catalogItem.summary,
+              }
+            : pageInfo(path);
   const canonical =
     release && path !== "/404/"
       ? `${site.origin.replace(/\/$/, "")}${path}`
@@ -165,7 +180,7 @@ await writeFile(
 );
 await writeFile(
   "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? routes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
+  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? allRoutes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
 );
 console.log(
   `Static HTML generated for ${allRoutes.length} pages + 404 (${release ? "production" : "draft/noindex"}).`,

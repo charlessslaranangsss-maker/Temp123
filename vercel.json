@@ -7,7 +7,10 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
@@ -21,6 +24,133 @@
           "value": "default-src 'self'; script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://firebaseappcheck.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.google.com/recaptcha/; frame-src https://www.google.com/recaptcha/; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/inventory/laundry-trailers/",
+      "destination": "/equipment-rental/laundry-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/handwashing-stations/",
+      "destination": "/equipment-rental/handwashing-stations/",
+      "permanent": true
+    },
+    {
+      "source": "/classroom-trailers/",
+      "destination": "/equipment-rental/classroom-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/restroom-trailers/",
+      "destination": "/equipment-rental/restroom-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-shower-trailers/",
+      "destination": "/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-sleep-trailers/",
+      "destination": "/equipment-rental/mobile-sleep-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-office-trailers/",
+      "destination": "/equipment-rental/mobile-office-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/shower-trailer/",
+      "destination": "/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/military-command-center-trailers/",
+      "destination": "/equipment-rental/modular-command-center-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-command-trailers/",
+      "destination": "/equipment-rental/modular-command-center-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-crew-camps/",
+      "destination": "/equipment-rental/mobile-crew-camps/",
+      "permanent": true
+    },
+    {
+      "source": "/stair-rentals/",
+      "destination": "/equipment-rental/stair-rentals/",
+      "permanent": true
+    },
+    {
+      "source": "/refrigeration-trailers/",
+      "destination": "/equipment-rental/refrigeration/",
+      "permanent": true
+    },
+    {
+      "source": "/mobile-kitchen-trailers/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/security-camera-trailers/",
+      "destination": "/equipment-rental/security-camera-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/refrigerated-containers/",
+      "destination": "/equipment-rental/refrigerated-containers/",
+      "permanent": true
+    },
+    {
+      "source": "/tent-rentals/",
+      "destination": "/equipment-rental/tent-structures/",
+      "permanent": true
+    },
+    {
+      "source": "/ramp-rentals/",
+      "destination": "/equipment-rental/ramp-rentals/",
+      "permanent": true
+    },
+    {
+      "source": "/wastewater-freshwater-container/",
+      "destination": "/equipment-rental/wastewater-and-freshwater-container/",
+      "permanent": true
+    },
+    {
+      "source": "/modular-buildings/",
+      "destination": "/equipment-rental/modular-buildings/",
+      "permanent": true
+    },
+    {
+      "source": "/bunkhouse-trailers/",
+      "destination": "/equipment-rental/bunkhouse-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/fencing-barricades-trash-receptacles/",
+      "destination": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "permanent": true
+    },
+    {
+      "source": "/generator-trailers/",
+      "destination": "/equipment-rental/generator-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/dining-structure-rental/",
+      "destination": "/equipment-rental/dining-structure-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/breakroom-trailer/",
+      "destination": "/equipment-rental/breakroom-trailer/",
+      "permanent": true
     }
   ]
 }

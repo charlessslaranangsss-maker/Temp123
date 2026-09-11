@@ -1555,3 +1555,314 @@ body.dialog-open .mobile-call {
     transform: none;
   }
 }
+/* Equipment directory: grouped, readable source views and clear destinations. */
+.catalog-section {
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-7);
+}
+.catalog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-6);
+}
+.catalog-heading > p {
+  max-width: 25rem;
+}
+.equipment-filter {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: var(--pale);
+  border-radius: var(--radius-card);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-4);
+}
+.equipment-filter label {
+  font-weight: 600;
+}
+.equipment-filter input {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  background: var(--white);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+}
+.equipment-filter p {
+  font-size: 0.9rem;
+}
+.catalog-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+.catalog-groups a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.85rem;
+  padding: var(--space-2) var(--space-3);
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.catalog-groups a:hover {
+  background: var(--pale);
+}
+.catalog-groups span {
+  color: var(--blue);
+  font-weight: 600;
+}
+.catalog-group {
+  padding-top: var(--space-6);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.catalog-group-heading {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--blue);
+}
+.catalog-group-heading h3 {
+  font-size: clamp(1.55rem, 2.3vw, 2.1rem);
+}
+.catalog-group-heading p {
+  margin-top: var(--space-1);
+  font-size: 1rem;
+}
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.catalog-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+}
+.catalog-media {
+  height: 15rem;
+  background: var(--pale);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  overflow: hidden;
+}
+.catalog-media img {
+  width: 100%;
+  height: calc(100% - 2.3rem);
+  object-fit: cover;
+}
+.catalog-media.is-plan img {
+  object-fit: contain;
+  background: var(--white);
+}
+.catalog-media.small-original img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100% - 2.3rem);
+  object-fit: contain;
+  margin-block: auto;
+}
+.catalog-media > span {
+  min-height: 2.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline: var(--space-3);
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--blue);
+  background: var(--pale);
+  font-weight: 600;
+}
+.catalog-media:hover > span {
+  text-decoration: underline;
+}
+.catalog-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-4);
+}
+.catalog-card-copy h4 {
+  font-size: 1.3rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0;
+}
+.catalog-card-copy h4 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.catalog-card-copy p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-block: var(--space-2) var(--space-4);
+}
+.catalog-detail-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--blue);
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+  padding-top: var(--space-2);
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.catalog-detail-link:hover {
+  text-decoration: underline;
+}
+.catalog-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  background: var(--pale);
+  border-radius: var(--radius-card);
+}
+.catalog-help p {
+  margin-top: var(--space-2);
+  max-width: 40rem;
+}
+.catalog-help .button {
+  flex-shrink: 0;
+}
+.catalog-empty {
+  padding-block: var(--space-6);
+}
+.catalog-empty p {
+  margin-block: var(--space-3) var(--space-4);
+}
+.brief-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+.brief-intro h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+}
+.brief-intro p {
+  margin-block: var(--space-4);
+}
+.brief-image {
+  margin: 0;
+  background: var(--pale);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.brief-image img {
+  width: 100%;
+  max-height: 28rem;
+  object-fit: contain;
+}
+.brief-image figcaption {
+  font-size: 0.8rem;
+  padding: var(--space-3);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.brief-image a {
+  text-decoration: underline;
+  color: var(--blue);
+  display: inline-block;
+  padding-block: var(--space-1);
+}
+.brief-planning {
+  margin-block: var(--space-7) var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+.brief-planning p {
+  margin-top: var(--space-4);
+  max-width: 30rem;
+}
+.brief-planning dl {
+  margin: 0;
+}
+.brief-planning dl > div {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+.brief-planning dt {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.brief-planning dd {
+  margin: var(--space-2) 0 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+@media (max-width: 1023px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .equipment-filter {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  .catalog-heading {
+    align-items: start;
+  }
+  .catalog-help {
+    display: block;
+  }
+  .catalog-help .button {
+    margin-top: var(--space-4);
+  }
+}
+@media (max-width: 600px) {
+  .catalog-section {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+  }
+  .catalog-heading {
+    display: block;
+  }
+  .catalog-heading > p {
+    margin-top: var(--space-4);
+  }
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .catalog-groups {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .catalog-groups a {
+    min-height: 48px;
+  }
+  .catalog-media {
+    height: 14rem;
+  }
+  .catalog-help {
+    padding: var(--space-4);
+  }
+  .catalog-help .button {
+    font-size: 0.85rem;
+    gap: var(--space-2);
+  }
+  .brief-intro,
+  .brief-planning {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
