@@ -53,6 +53,12 @@ export function QuoteForm() {
     "aria-invalid": !!errors[name],
     "aria-describedby": errors[name] ? `${name}-error` : undefined,
   });
+  const FieldLabel = ({ children }: { children: React.ReactNode }) => (
+    <span className="field-label">
+      <span>{children}</span>
+      <small>Required</small>
+    </span>
+  );
   return (
     <form
       className="quote-form"
@@ -76,6 +82,10 @@ export function QuoteForm() {
                 ? "Please agree to the use of your details to receive a response."
                 : field === "service"
                   ? "Choose a service."
+                  : field === "duration"
+                    ? "Choose a rental duration."
+                    : field === "industry"
+                      ? "Choose an industry."
                   : issue.message;
           }
           setErrors(fields);
@@ -146,22 +156,16 @@ export function QuoteForm() {
     >
       {!site.inquiriesEnabled && (
         <p className="form-intro">
-          Online inquiries are being prepared. You can explore the form, but
-          details cannot be sent yet.
-          {site.phoneE164 && (
-            <>
-              {" "}
-              Call <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a> to
-              discuss your project.
-            </>
-          )}
+          Online submission is being prepared. Complete the project brief, or
+          call <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a> for
+          immediate assistance.
         </p>
       )}
       <fieldset disabled={state === "loading"}>
         <legend className="sr-only">Project inquiry</legend>
         <div className="form-grid">
           <label>
-            Your name
+            <FieldLabel>Name</FieldLabel>
             <input
               name="name"
               autoComplete="name"
@@ -172,7 +176,19 @@ export function QuoteForm() {
             {error("name")}
           </label>
           <label>
-            Email address
+            <FieldLabel>Phone</FieldLabel>
+            <input
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              required
+              maxLength={30}
+              {...attrs("phone")}
+            />
+            {error("phone")}
+          </label>
+          <label>
+            <FieldLabel>Email</FieldLabel>
             <input
               name="email"
               type="email"
@@ -184,18 +200,17 @@ export function QuoteForm() {
             {error("email")}
           </label>
           <label>
-            Phone <span>(optional)</span>
+            <FieldLabel>Rental date</FieldLabel>
             <input
-              name="phone"
-              type="tel"
-              autoComplete="tel"
-              maxLength={30}
-              {...attrs("phone")}
+              name="startDate"
+              type="date"
+              required
+              {...attrs("startDate")}
             />
-            {error("phone")}
+            {error("startDate")}
           </label>
           <label>
-            Project location
+            <FieldLabel>Project location</FieldLabel>
             <input
               name="location"
               autoComplete="address-level2"
@@ -208,7 +223,7 @@ export function QuoteForm() {
           </label>
         </div>
         <label>
-          What are you planning?
+          <FieldLabel>What facilities do you need?</FieldLabel>
           <select name="service" required defaultValue="" {...attrs("service")}>
             <option value="" disabled>
               Select a service
@@ -223,7 +238,47 @@ export function QuoteForm() {
           {error("service")}
         </label>
         <label>
-          Project details
+          <FieldLabel>Rental duration</FieldLabel>
+          <select
+            name="duration"
+            required
+            defaultValue=""
+            {...attrs("duration")}
+          >
+            <option value="" disabled>
+              Choose a rental duration
+            </option>
+            <option value="under-1-month">Less than one month</option>
+            <option value="1-3-months">One to three months</option>
+            <option value="3-6-months">Three to six months</option>
+            <option value="6-plus-months">Six months or longer</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+          {error("duration")}
+        </label>
+        <label>
+          <FieldLabel>Select your industry</FieldLabel>
+          <select
+            name="industry"
+            required
+            defaultValue=""
+            {...attrs("industry")}
+          >
+            <option value="" disabled>
+              Choose an industry
+            </option>
+            <option value="construction">Construction and workforce</option>
+            <option value="government">Government and public services</option>
+            <option value="food-service">Food service and hospitality</option>
+            <option value="emergency-response">
+              Emergency and disaster response
+            </option>
+            <option value="other">Other</option>
+          </select>
+          {error("industry")}
+        </label>
+        <label>
+          <FieldLabel>Project details</FieldLabel>
           <textarea
             name="message"
             rows={4}
@@ -255,7 +310,11 @@ export function QuoteForm() {
             {error("consent")}
           </span>
         </label>
-        <button className="button" type="submit">
+        <button
+          className="button"
+          type="submit"
+          disabled={!site.inquiriesEnabled || state === "loading"}
+        >
           {state === "loading" ? "Saving inquiry…" : "Send project inquiry"}{" "}
           <span aria-hidden="true">↗</span>
         </button>

@@ -8,6 +8,7 @@ import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 import { load } from "cheerio";
 import { catalog } from "../src/EquipmentCatalog";
+import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
 const release =
@@ -54,6 +55,8 @@ const allRoutes = [
     ...coreRoutes,
     ...pages.map((p) => p.path),
     ...catalog.items.map((item) => item.path),
+    ...serviceCategories.map((item) => item.href),
+    ...serviceOptions.map((item) => item.href),
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
 const editorialNoindex = new Set([
@@ -118,6 +121,8 @@ const esc = (s: string) =>
 for (const path of [...allRoutes, "/404/"]) {
   const page = pages.find((p) => p.path === path);
   const catalogItem = catalog.items.find((item) => item.path === path);
+  const serviceOption = serviceOptions.find((item) => item.href === path);
+  const serviceCategory = serviceCategories.find((item) => item.href === path);
   const info = coreRoutes.includes(path)
     ? pageInfo(path)
     : page
@@ -128,8 +133,7 @@ for (const path of [...allRoutes, "/404/"]) {
       : path === "/contact-us/"
         ? {
             title: "Contact Temporary 123 | Talk to a Specialist",
-            description:
-              `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
+            description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
           }
         : path === "/equipment-rental/"
           ? {
@@ -142,7 +146,17 @@ for (const path of [...allRoutes, "/404/"]) {
                 title: `${catalogItem.name} | Temporary 123`,
                 description: catalogItem.summary,
               }
-            : pageInfo(path);
+            : serviceOption
+              ? {
+                  title: `${serviceOption.name} Rental | Temporary 123`,
+                  description: serviceOption.description,
+                }
+              : serviceCategory
+                ? {
+                    title: `${serviceCategory.name} Rental | Temporary 123`,
+                    description: serviceCategory.description,
+                  }
+                : pageInfo(path);
   const canonical =
     release && path !== "/404/" && indexableRoutes.includes(path)
       ? `${site.origin.replace(/\/$/, "")}${path}`
@@ -182,20 +196,25 @@ for (const path of [...allRoutes, "/404/"]) {
               name: "Home",
               item: site.origin,
             },
-            ...(catalogItem
+            ...(catalogItem || serviceOption || serviceCategory
               ? [
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Equipment rental",
+                    name: "Services",
                     item: `${site.origin.replace(/\/$/, "")}/equipment-rental/`,
                   },
                 ]
               : []),
             {
               "@type": "ListItem",
-              position: catalogItem ? 3 : 2,
-              name: page?.title || catalogItem?.name || info.title,
+              position: catalogItem || serviceOption || serviceCategory ? 3 : 2,
+              name:
+                page?.title ||
+                catalogItem?.name ||
+                serviceOption?.name ||
+                serviceCategory?.name ||
+                info.title,
               item: canonical,
             },
           ],
@@ -249,7 +268,10 @@ for (const path of [...allRoutes, "/404/"]) {
     value
       .replace(/\s*—\s*/g, ", ")
       .replace(/\*/g, "")
-      .replace(/(?:\+?1[\s.-]*)?\(?800\)?[\s.-]*443[\s.-]*5212/g, site.phoneDisplay);
+      .replace(
+        /(?:\+?1[\s.-]*)?\(?800\)?[\s.-]*443[\s.-]*5212/g,
+        site.phoneDisplay,
+      );
   $("body, title")
     .find("*")
     .addBack()

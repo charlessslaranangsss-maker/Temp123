@@ -1,61 +1,131 @@
 import site from "../site.json" with { type: "json" };
 
-export const equipment = [
+type EquipmentCard = {
+  name: string;
+  path: string;
+  image: string;
+  smallImage?: string;
+  category: string;
+  text: string;
+  detail: string;
+  tags: string[];
+  secondaryName?: string;
+  secondaryPath?: string;
+};
+
+export const equipment: EquipmentCard[] = [
   {
-    name: "Mobile kitchens",
+    name: "Mobile Kitchen Trailers",
     path: "/equipment-rental/mobile-kitchen-trailers/",
-    image: "kitchen",
+    image: "/images/catalog/mobile-kitchen-trailers-960.webp",
+    smallImage: "/images/catalog/mobile-kitchen-trailers-480.webp",
     category: "Food service",
-    text: "Keep cooking during a renovation, at an event or on a remote site.",
+    text: "Commercial kitchen space for renovations, planned projects and emergency food service.",
     detail:
       "Tell us how many meals you serve, your menu and the equipment your team uses. We can discuss kitchen space, preparation areas and utility requirements.",
-    tags: ["Cooking", "Preparation", "Food service"],
+    tags: ["Meal production", "Commercial kitchens", "24/7 support"],
   },
   {
-    name: "Restroom & shower trailers",
+    name: "Dishwashing Trailers",
+    path: "/portable-dishwashing-trailer-rental/",
+    image: "/media/4723f18940a45f69bd1c8483.webp",
+    category: "Food sanitation",
+    text: "Portable dishwashing capacity for temporary kitchens and high-volume operations.",
+    detail:
+      "Share your service volume, operating schedule and sanitation workflow. We can discuss wash capacity, utilities, wastewater and placement requirements.",
+    tags: ["Warewashing", "Sanitation", "Food service"],
+  },
+  {
+    name: "Refrigeration Trailers",
+    path: "/equipment-rental/refrigeration/",
+    image: "/images/catalog/refrigeration-trailers-960.webp",
+    smallImage: "/images/catalog/refrigeration-trailers-480.webp",
+    category: "Cold storage",
+    text: "Temporary refrigerated storage for ingredients, prepared food and critical supplies.",
+    detail:
+      "Tell us what you need to store, the required temperature range and your delivery schedule. We can review unit size, power and site access.",
+    tags: ["Cold storage", "Food safety", "Temperature control"],
+  },
+  {
+    name: "Handwashing Trailers",
+    path: "/equipment-rental/handwashing-stations/",
+    image: "/images/catalog/handwashing-stations-960.webp",
+    smallImage: "/images/catalog/handwashing-stations-480.webp",
+    category: "Hygiene facilities",
+    text: "Portable handwashing access for food service, events and active work sites.",
+    detail:
+      "Share your expected occupancy and work zones. We can discuss station placement, water supply, drainage and service frequency.",
+    tags: ["Hand hygiene", "Site safety", "Portable facilities"],
+  },
+  {
+    name: "Mobile Sleeper Trailer and Container",
+    path: "/equipment-rental/mobile-sleep-trailers/",
+    image: "/images/catalog/mobile-sleep-trailers-960.webp",
+    smallImage: "/images/catalog/mobile-sleep-trailers-480.webp",
+    category: "Workforce housing",
+    text: "Temporary sleeping accommodations for remote crews and extended operations.",
+    detail:
+      "Start with crew size, shift patterns, privacy needs and rental duration. We can help coordinate sleeping units with the support facilities your site requires.",
+    tags: ["Crew lodging", "Remote sites", "Base camps"],
+  },
+  {
+    name: "Restroom Trailers",
     path: "/equipment-rental/restroom-trailers/",
-    image: "facility",
+    image: "/images/catalog/restroom-trailers-960.webp",
+    smallImage: "/images/catalog/restroom-trailers-480.webp",
     category: "Site amenities",
-    text: "Give your crew or guests a comfortable place to freshen up.",
+    text: "Clean temporary restroom facilities for crews, guests and field operations.",
     detail:
-      "Share the number of people on site and how long you need the facilities. Ask our team about restroom and shower options, water connections and servicing.",
-    tags: ["Restrooms", "Showers", "Site support"],
+      "Share the number of people on site, accessibility needs and rental duration. We can review restroom capacity, water connections and servicing.",
+    tags: ["Restrooms", "Accessibility", "Site support"],
   },
   {
-    name: "Workforce & base camps",
-    path: "/man-camps-for-rent/",
-    image: "housing",
-    category: "Crew accommodation",
-    text: "Plan sleeping, dining and support facilities around your workforce.",
+    name: "Shower Trailers",
+    path: "/equipment-rental/shower-trailer/",
+    image: "/images/catalog/temporary-shower-trailers-960.webp",
+    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
+    category: "Hygiene facilities",
+    text: "Private mobile shower facilities planned around occupancy and daily servicing.",
     detail:
-      "Start with your crew size, location and project schedule. We can work through accommodation and the supporting facilities your site needs.",
-    tags: ["Accommodation", "Dining", "Crew facilities"],
+      "Tell us how many people need showers and when shifts change. We can review shower capacity, hot water, wastewater and placement requirements.",
+    tags: ["Showers", "Crew welfare", "Daily servicing"],
+    secondaryName: "Shower and Restroom Combination Trailers",
+    secondaryPath: "/services/shower-restroom-combination-trailers/",
   },
   {
-    name: "Temporary facilities",
-    path: "/equipment-rental/",
-    image: "interior",
-    category: "Project support",
-    text: "Bring the right combination of spaces together for your project.",
+    name: "Laundry Trailers",
+    path: "/equipment-rental/laundry-trailers/",
+    image: "/images/catalog/laundry-trailers-960.webp",
+    smallImage: "/images/catalog/laundry-trailers-480.webp",
+    category: "Workforce support",
+    text: "Mobile laundry capacity for base camps, response teams and long-term projects.",
     detail:
-      "Talk through your operation with our team. Confirm equipment availability, site access, delivery and utility arrangements as part of your proposal.",
-    tags: ["Equipment", "Site planning", "Coordination"],
+      "Share your crew size, laundry volume and operating schedule. We can discuss machine capacity, water, power, drainage and service access.",
+    tags: ["Laundry", "Base camps", "Long-term rentals"],
   },
 ];
 
 export function EquipmentImage({
   image,
+  smallImage,
   alt,
   priority = false,
 }: {
   image: string;
+  smallImage?: string;
   alt: string;
   priority?: boolean;
 }) {
+  const source = image.startsWith("/") ? image : `/images/${image}.webp`;
+  const sourceSet = smallImage
+    ? `${smallImage} 480w, ${source} 960w`
+    : image.startsWith("/")
+      ? undefined
+      : `/images/${image}-480.webp 480w, ${source} 850w`;
   return (
     <img
-      src={`/images/${image}.webp`}
-      srcSet={`/images/${image}-480.webp 480w, /images/${image}.webp 850w`}
+      src={source}
+      srcSet={sourceSet}
       sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 1023px) calc(50vw - 36px), 620px"
       alt={alt}
       width="850"
@@ -80,6 +150,7 @@ export function Cards() {
           >
             <EquipmentImage
               image={e.image}
+              smallImage={e.smallImage}
               alt={`${e.name} equipment from Temporary 123`}
             />
             <span className="category-label">{e.category}</span>
@@ -92,6 +163,11 @@ export function Cards() {
               <a href={e.path}>{e.name}</a>
             </h3>
             <p>{e.text}</p>
+            {e.secondaryName && e.secondaryPath && (
+              <a className="related-card-service" href={e.secondaryPath}>
+                {e.secondaryName} <span aria-hidden="true">↗</span>
+              </a>
+            )}
             <ul className="equipment-tags" aria-label="Facility uses">
               {e.tags.map((t) => (
                 <li key={t}>{t}</li>
@@ -128,11 +204,20 @@ export function Cards() {
               Close <span aria-hidden="true">×</span>
             </button>
             <div className="dialog-grid">
-              <EquipmentImage image={e.image} alt={e.name} />
+              <EquipmentImage
+                image={e.image}
+                smallImage={e.smallImage}
+                alt={e.name}
+              />
               <div className="dialog-copy">
                 <span className="eyebrow">{e.category}</span>
                 <h2 id={`equipment-title-${i}`}>{e.name}</h2>
                 <p>{e.detail}</p>
+                {e.secondaryName && e.secondaryPath && (
+                  <a className="text-link" href={e.secondaryPath}>
+                    {e.secondaryName} →
+                  </a>
+                )}
                 <p className="small">
                   Availability and configurations are confirmed with your
                   project proposal.

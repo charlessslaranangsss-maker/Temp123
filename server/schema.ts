@@ -6,9 +6,12 @@ export const leadSchema = z
     phone: z
       .string()
       .trim()
+      .min(7, "Enter a phone number.")
       .max(30)
-      .regex(/^[+()\d\s.-]*$/, "Enter a valid phone number.")
-      .default(""),
+      .regex(/^[+()\d\s.-]*$/, "Enter a valid phone number."),
+    startDate: z
+      .string()
+      .regex(/^\d{4}-\d{2}-\d{2}$/, "Choose a rental date."),
     location: z.string().trim().min(2, "Enter your project location.").max(160),
     service: z.enum([
       "mobile-kitchens",
@@ -16,6 +19,20 @@ export const leadSchema = z
       "workforce-housing",
       "temporary-facilities",
       "multiple",
+    ]),
+    duration: z.enum([
+      "under-1-month",
+      "1-3-months",
+      "3-6-months",
+      "6-plus-months",
+      "not-sure",
+    ]),
+    industry: z.enum([
+      "construction",
+      "government",
+      "food-service",
+      "emergency-response",
+      "other",
     ]),
     message: z
       .string()

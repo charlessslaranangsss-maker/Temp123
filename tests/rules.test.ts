@@ -58,9 +58,12 @@ it("atomically caps concurrent IP requests", async () => {
 const data = {
   name: "Test User",
   email: "test@example.invalid",
-  phone: "",
+  phone: "+1 555 010 2000",
+  startDate: "2026-10-01",
   location: "Test site",
   service: "mobile-kitchens" as const,
+  duration: "1-3-months" as const,
+  industry: "construction" as const,
   message: "Synthetic test inquiry only.",
   consent: true as const,
   website: "",

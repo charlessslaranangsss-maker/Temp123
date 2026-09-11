@@ -30,6 +30,71 @@ mobileNav?.addEventListener("focusout", () => {
   });
 });
 
+const contactDrawer = document.querySelector<HTMLDialogElement>(
+  "#contact-drawer",
+);
+let contactTrigger: HTMLAnchorElement | null = null;
+let contactScroll = 0;
+if (
+  contactDrawer &&
+  typeof HTMLDialogElement !== "undefined" &&
+  "showModal" in HTMLDialogElement.prototype
+) {
+  document.addEventListener("click", (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    const anchor = (event.target as Element).closest<HTMLAnchorElement>("a");
+    if (!anchor || anchor.target === "_blank") return;
+    const destination = new URL(anchor.href, window.location.href);
+    if (
+      destination.origin !== window.location.origin ||
+      !["/contact/", "/contact-us/"].includes(destination.pathname)
+    )
+      return;
+    event.preventDefault();
+    if (contactDrawer.open) return;
+    contactTrigger = anchor;
+    contactScroll = window.scrollY;
+    mobileNav?.removeAttribute("open");
+    contactDrawer.showModal();
+    document.body.classList.add("dialog-open", "contact-drawer-open");
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${contactScroll}px`;
+    document.body.style.width = "100%";
+    contactDrawer.querySelector<HTMLButtonElement>("[data-close-contact]")?.focus();
+  });
+  contactDrawer
+    .querySelector("[data-close-contact]")
+    ?.addEventListener("click", () => contactDrawer.close());
+  contactDrawer.addEventListener("click", (event) => {
+    if (event.target !== contactDrawer) return;
+    const box = contactDrawer.getBoundingClientRect();
+    if (
+      event.clientX < box.left ||
+      event.clientX > box.right ||
+      event.clientY < box.top ||
+      event.clientY > box.bottom
+    )
+      contactDrawer.close();
+  });
+  contactDrawer.addEventListener("close", () => {
+    document.body.classList.remove("dialog-open", "contact-drawer-open");
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    window.scrollTo({ top: contactScroll, behavior: "instant" });
+    contactTrigger?.focus({ preventScroll: true });
+    contactTrigger = null;
+  });
+}
+
 // Native dialogs supply keyboard focus containment and Escape handling.
 // With JavaScript unavailable, ordinary equipment links remain the primary path.
 if (

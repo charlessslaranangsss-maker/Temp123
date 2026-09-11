@@ -3,9 +3,12 @@ import { submit, type Deps } from "../server/contact";
 const lead = {
   name: "Test Person",
   email: "test@example.com",
-  phone: "",
+  phone: "+1 555 010 2000",
+  startDate: "2026-10-01",
   location: "Test site",
   service: "mobile-kitchens",
+  duration: "1-3-months",
+  industry: "construction",
   message: "A synthetic project inquiry for tests.",
   consent: true,
   website: "",

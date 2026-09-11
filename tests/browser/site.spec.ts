@@ -80,10 +80,13 @@ test("mobile menu supports keyboard and Escape", async ({ page }) => {
   await expect(
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).toBeVisible();
-  await page.locator(".mobile-services summary").click();
+  await page.locator(".mobile-services > summary").click();
+  const kitchenCategory = page.locator(".mobile-service-category").first();
+  await kitchenCategory.locator("> summary").click();
   await expect(
-    page.getByRole("link", { name: "Mobile kitchen trailer rentals" }),
+    kitchenCategory.getByRole("link", { name: "24ft Mobile Kitchen Trailer" }),
   ).toBeVisible();
+  await page.screenshot({ path: "test-results/services-menu-mobile.png" });
   await page.keyboard.press("Escape");
   await expect(
     page.getByRole("navigation", { name: "Mobile navigation" }),
@@ -100,14 +103,81 @@ test("desktop services menu exposes clear rental categories", async ({
   await trigger.focus();
   const menu = page.getByRole("group", { name: "Services menu" });
   await expect(menu).toBeVisible();
-  await expect(menu.locator("section")).toHaveCount(4);
+  await expect(menu.locator(".service-category")).toHaveCount(9);
   await expect(
-    menu.getByRole("link", { name: "Restroom trailer rentals" }),
+    menu.getByRole("link", { name: "Restroom Trailers", exact: true }),
   ).toHaveAttribute("href", "/equipment-rental/restroom-trailers/");
+  await menu
+    .getByRole("link", { name: "Restroom Trailers", exact: true })
+    .hover();
   await expect(
-    menu.getByRole("link", { name: "Generator trailer rentals" }),
-  ).toHaveAttribute("href", "/equipment-rental/generator-trailers/");
+    menu.getByRole("link", { name: "30ft Restroom Trailer" }),
+  ).toBeVisible();
+  await expect(
+    menu.getByRole("link", {
+      name: "Mobile Sleeper Trailers and Containers",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page.screenshot({ path: "test-results/services-menu-desktop.png" });
 });
+
+test("every service model in the desktop menu resolves locally", async ({
+  page,
+  request,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto("/");
+  await page.locator(".services-trigger").focus();
+  const hrefs = await page
+    .locator(".service-category-link, .service-submenu-links a")
+    .evaluateAll((links) => [
+      ...new Set(
+        links.map((link) => link.getAttribute("href")).filter(Boolean),
+      ),
+    ]);
+  expect(hrefs.length).toBeGreaterThan(30);
+  for (const href of hrefs) {
+    const response = await request.get(href as string);
+    expect(response.status(), href as string).toBe(200);
+  }
+});
+
+test("service model pages provide unique planning content", async ({
+  page,
+}) => {
+  await page.goto("/services/shower-restroom-combination-trailers/20ft/");
+  await expect(page.locator("h1")).toHaveText(
+    "20ft Restroom and Shower Trailer",
+  );
+  await expect(page).toHaveTitle(
+    "20ft Restroom and Shower Trailer Rental | Temporary 123",
+  );
+  await expect(page.getByText("Plan before delivery")).toBeVisible();
+});
+
+for (const width of [390, 1440])
+  test(`location hero presents nationwide coverage at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/service-areas/");
+    await expect(page.locator(".location-hero h1")).toContainText(
+      "across the USA",
+    );
+    await expect(page.locator(".coverage-map li")).toHaveCount(50);
+    await expect(page.locator(".coverage-map")).toContainText("50 states");
+    await expect(page.locator("#catalog-search")).toBeVisible();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= window.innerWidth,
+      ),
+    ).toBe(true);
+    await page.screenshot({
+      path: `test-results/location-coverage-${width}.png`,
+      fullPage: false,
+    });
+  });
 
 test("desktop navigation follows the requested order", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -126,18 +196,59 @@ test("desktop navigation follows the requested order", async ({ page }) => {
   ]);
 });
 
+test("Contact Us opens an in-page project drawer", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto("/");
+  const trigger = page.locator('.header > nav a[href="/contact-us/"]');
+  await trigger.click();
+  await expect(page).toHaveURL(/\/$/);
+  const drawer = page.getByRole("dialog", { name: "Contact Us" });
+  await expect(drawer).toBeVisible();
+  await expect(drawer.locator('input[name="name"]')).toBeVisible();
+  await expect(drawer.locator('input[name="startDate"]')).toBeVisible();
+  await expect(drawer.locator('select[name="service"]')).toBeVisible();
+  await page.waitForTimeout(350);
+  await page.screenshot({ path: "test-results/contact-drawer-desktop.png" });
+  await drawer.getByRole("button", { name: "Close contact form" }).click();
+  await expect(drawer).not.toBeVisible();
+  await expect(trigger).toBeFocused();
+});
+
+test("mobile Contact Us tab opens the drawer without navigating", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/equipment-rental/");
+  await page.locator(".contact-rail").click();
+  await expect(page).toHaveURL(/\/equipment-rental\/$/);
+  const drawer = page.getByRole("dialog", { name: "Contact Us" });
+  await expect(drawer).toBeVisible();
+  await expect(drawer.getByRole("link", { name: /Call:/ })).toContainText(
+    "+1 (800) 443 - 5212",
+  );
+  expect(
+    await drawer.evaluate(
+      (element) => element.scrollWidth <= document.documentElement.clientWidth,
+    ),
+  ).toBe(true);
+  await page.waitForTimeout(350);
+  await page.screenshot({ path: "test-results/contact-drawer-mobile.png" });
+  await page.keyboard.press("Escape");
+  await expect(drawer).not.toBeVisible();
+});
+
 test("equipment quick view contains focus and restores its trigger", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   const trigger = page.getByRole("button", {
-    name: "Quick view: Mobile kitchens",
+    name: "Quick view: Mobile Kitchen Trailers",
     exact: true,
   });
   await trigger.click();
   const dialog = page.getByRole("dialog", {
-    name: "Mobile kitchens",
+    name: "Mobile Kitchen Trailers",
     exact: true,
   });
   await expect(dialog).toBeVisible();
@@ -157,6 +268,27 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await trigger.click();
   await dialog.getByRole("button", { name: "Close quick view" }).click();
   await expect(trigger).toBeFocused();
+});
+
+test("homepage shows all eight requested service cards", async ({ page }) => {
+  await page.goto("/");
+  const cards = page.locator(".equipment-card");
+  await expect(cards).toHaveCount(8);
+  await expect(cards.locator("h3")).toHaveText([
+    "Mobile Kitchen Trailers",
+    "Dishwashing Trailers",
+    "Refrigeration Trailers",
+    "Handwashing Trailers",
+    "Mobile Sleeper Trailer and Container",
+    "Restroom Trailers",
+    "Shower Trailers",
+    "Laundry Trailers",
+  ]);
+  await expect(
+    cards.getByRole("link", {
+      name: "Shower and Restroom Combination Trailers",
+    }),
+  ).toBeVisible();
 });
 
 test("FAQ and equipment navigation work without JavaScript", async ({
@@ -258,7 +390,7 @@ test("Services keeps recovered service resources organized and reachable", async
   await expect(library.locator(".service-library-links a")).toHaveCount(44);
   await expect(library).toContainText("Base Camps for Rent");
 });
-test("contact provides a working phone action while online intake is disabled", async ({
+test("contact keeps the phone fallback while online intake is disabled", async ({
   page,
 }) => {
   await page.goto("/contact-us/");
@@ -270,7 +402,11 @@ test("contact provides a working phone action while online intake is disabled", 
       })
       .first(),
   ).toHaveAttribute("href", "tel:+18004435212");
-  await expect(page.locator("form")).toHaveCount(0);
+  await expect(page.locator("#contact-drawer form")).toHaveCount(1);
+  await expect(
+    page.locator('#contact-drawer button[type="submit"]'),
+  ).toBeDisabled();
+  await expect(page.locator("#contact-drawer")).not.toBeVisible();
 });
 test("initial HTML and unknown-route status work without JavaScript", async ({
   request,

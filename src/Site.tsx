@@ -7,6 +7,8 @@ import {
   EquipmentBrief,
   catalog as equipmentCatalogData,
 } from "./EquipmentCatalog";
+import { serviceCategories, serviceOptions } from "./serviceMenu";
+import { CoverageMap } from "./CoverageMap";
 export type SourcePage = {
   id: number;
   path: string;
@@ -20,68 +22,6 @@ const nav = [
   ["About Us", "/about-us/"],
   ["Blog", "/blog/"],
   ["Contact Us", "/contact-us/"],
-];
-const serviceGroups = [
-  {
-    name: "Kitchen and food service",
-    links: [
-      [
-        "Mobile kitchen trailer rentals",
-        "/equipment-rental/mobile-kitchen-trailers/",
-      ],
-      ["Refrigeration trailer rentals", "/equipment-rental/refrigeration/"],
-      [
-        "Refrigerated container rentals",
-        "/equipment-rental/refrigerated-containers/",
-      ],
-      [
-        "Temporary dining structure rentals",
-        "/equipment-rental/dining-structure-rental/",
-      ],
-    ],
-  },
-  {
-    name: "Restrooms, showers and laundry",
-    links: [
-      ["Restroom trailer rentals", "/equipment-rental/restroom-trailers/"],
-      ["Shower trailer rentals", "/equipment-rental/shower-trailer/"],
-      ["Mobile laundry trailer rentals", "/equipment-rental/laundry-trailers/"],
-      [
-        "Portable handwashing stations",
-        "/equipment-rental/handwashing-stations/",
-      ],
-    ],
-  },
-  {
-    name: "Workforce facilities",
-    links: [
-      [
-        "Mobile office trailer rentals",
-        "/equipment-rental/mobile-office-trailers/",
-      ],
-      [
-        "Sleeper and bunkhouse trailers",
-        "/equipment-rental/bunkhouse-trailers/",
-      ],
-      ["Breakroom trailer rentals", "/equipment-rental/breakroom-trailer/"],
-      ["Mobile crew camp rentals", "/equipment-rental/mobile-crew-camps/"],
-    ],
-  },
-  {
-    name: "Site and operations support",
-    links: [
-      ["Generator trailer rentals", "/equipment-rental/generator-trailers/"],
-      [
-        "Temporary tent structure rentals",
-        "/equipment-rental/tent-structures/",
-      ],
-      ["Stair and ramp rentals", "/equipment-rental/stair-rentals/"],
-      [
-        "Modular command center trailers",
-        "/equipment-rental/modular-command-center-trailers/",
-      ],
-    ],
-  },
 ];
 const locationPrefix = "/equipment-rental/mobile-kitchen-trailers/";
 export const isLocationPagePath = (path: string) =>
@@ -170,17 +110,39 @@ export function Header({ path }: { path: string }) {
                   </div>
                   <a href="/equipment-rental/">View all services ↗</a>
                 </div>
-                <div className="services-panel-grid">
-                  {serviceGroups.map((group) => (
-                    <section key={group.name}>
-                      <strong>{group.name}</strong>
-                      {group.links.map(([name, href]) => (
-                        <a href={href} key={href}>
-                          {name} <span aria-hidden="true">›</span>
+                <div className="services-panel-body">
+                  <div className="service-category-list">
+                    {serviceCategories.map((category) => (
+                      <div className="service-category" key={category.name}>
+                        <a
+                          className="service-category-link"
+                          href={category.href}
+                        >
+                          {category.name} <span aria-hidden="true">›</span>
                         </a>
-                      ))}
-                    </section>
-                  ))}
+                        <section
+                          className="service-submenu"
+                          aria-label={`${category.name} models`}
+                        >
+                          <div className="service-submenu-heading">
+                            <div>
+                              <span>Available configurations</span>
+                              <strong>{category.name}</strong>
+                            </div>
+                            <a href={category.href}>Category overview ↗</a>
+                          </div>
+                          <p>{category.description}</p>
+                          <div className="service-submenu-links">
+                            {category.links.map((link) => (
+                              <a href={link.href} key={link.href}>
+                                {link.name} <span aria-hidden="true">↗</span>
+                              </a>
+                            ))}
+                          </div>
+                        </section>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -213,13 +175,24 @@ export function Header({ path }: { path: string }) {
                 </summary>
                 <div>
                   <a href="/equipment-rental/">View all rental services</a>
-                  {serviceGroups.flatMap((group) =>
-                    group.links.map(([name, href]) => (
-                      <a href={href} key={href}>
-                        {name}
-                      </a>
-                    )),
-                  )}
+                  {serviceCategories.map((category) => (
+                    <details
+                      className="mobile-service-category"
+                      key={category.name}
+                    >
+                      <summary>
+                        {category.name} <span aria-hidden="true">+</span>
+                      </summary>
+                      <div>
+                        <a href={category.href}>View category</a>
+                        {category.links.map((link) => (
+                          <a href={link.href} key={link.href}>
+                            {link.name}
+                          </a>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
                 </div>
               </details>
               {nav.map(([n, p]) => (
@@ -261,6 +234,44 @@ export function Header({ path }: { path: string }) {
     </>
   );
 }
+
+function ContactDrawer() {
+  return (
+    <dialog
+      id="contact-drawer"
+      className="contact-drawer"
+      aria-labelledby="contact-drawer-title"
+    >
+      <div className="contact-drawer-shell">
+        <div className="contact-drawer-call">
+          <a href={"tel:" + site.phoneE164}>Call: {site.phoneDisplay}</a>
+          <button
+            type="button"
+            data-close-contact
+            aria-label="Close contact form"
+          >
+            ×
+          </button>
+        </div>
+        <header className="contact-drawer-header">
+          <span aria-hidden="true">☰</span>
+          <h2 id="contact-drawer-title">Contact Us</h2>
+          <span aria-hidden="true" />
+        </header>
+        <div className="contact-drawer-scroll">
+          <p className="contact-drawer-intro">
+            Tell us about your project. Our team is available 24 hours a day,
+            seven days a week.
+          </p>
+          <div id="quote-island">
+            <QuoteForm />
+          </div>
+        </div>
+      </div>
+    </dialog>
+  );
+}
+
 export function Footer() {
   return (
     <>
@@ -328,9 +339,12 @@ export function Site({
   const equipmentBrief = equipmentCatalogData.items.find(
     (item) => item.path === path,
   );
+  const serviceOption = serviceOptions.find((item) => item.href === path);
+  const serviceCategory = serviceCategories.find((item) => item.href === path);
   return (
     <div id="top">
       <Header path={path} />
+      <ContactDrawer />
       <main id="main" tabIndex={-1}>
         {path === "/" ? (
           <Home />
@@ -350,66 +364,155 @@ export function Site({
               <p>Specialist support available 24/7.</p>
             </div>
             <div>
-              {site.inquiriesEnabled ? (
-                <div id="quote-island">
-                  <QuoteForm />
-                </div>
-              ) : (
-                <div className="contact-call">
-                  <span className="eyebrow">SPEAK WITH A SPECIALIST</span>
-                  <h2>
-                    Let’s work through
-                    <br />
-                    the details.
-                  </h2>
-                  <p>
-                    For equipment availability, delivery arrangements and a
-                    project quote, call our team.
-                  </p>
-                  <Button href={"tel:" + site.phoneE164}>
-                    Call {site.phoneDisplay}
-                  </Button>
-                  <p className="small">
-                    Have your project location and preferred dates ready.
-                  </p>
-                </div>
-              )}
+              <div className="contact-call">
+                <span className="eyebrow">SPEAK WITH A SPECIALIST</span>
+                <h2>
+                  Let’s work through
+                  <br />
+                  the details.
+                </h2>
+                <p>
+                  For equipment availability, delivery arrangements and a
+                  project quote, call our team.
+                </p>
+                <Button href={"tel:" + site.phoneE164}>
+                  Call {site.phoneDisplay}
+                </Button>
+                <p className="small">
+                  Have your project location and preferred dates ready.
+                </p>
+              </div>
             </div>
           </section>
         ) : path === "/service-areas/" ? (
-          <section className="wrap section">
-            <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
-            <h1>
-              Mobile kitchen rentals
-              <br />
-              by location.
-            </h1>
-            <p>
-              Search Temporary 123 mobile kitchen trailer rental locations
-              across the United States.
-            </p>
-            <label className="search-label">
-              Find a city or state
-              <input
-                id="catalog-search"
-                type="search"
-                placeholder="Search mobile kitchen rental locations"
-              />
-            </label>
-            <div className="catalog-list">
-              {catalog.map((p) => (
-                <a key={p.path} href={p.path}>
-                  {p.title}
-                  <span>↗</span>
-                </a>
-              ))}
-            </div>
-            <p id="catalog-status" role="status">
-              {catalog.length} service locations
-            </p>
-          </section>
+          <>
+            <section className="location-hero">
+              <div className="wrap section location-hero-grid">
+                <div className="location-hero-copy">
+                  <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
+                  <h1>
+                    Temporary facility rentals
+                    <br />
+                    across the USA.
+                  </h1>
+                  <p>
+                    Temporary 123 coordinates mobile kitchens, hygiene
+                    facilities and workforce support in all 50 states.
+                  </p>
+                  <div className="location-stats" aria-label="Coverage summary">
+                    <div>
+                      <strong>50</strong>
+                      <span>states served</span>
+                    </div>
+                    <div>
+                      <strong>24/7</strong>
+                      <span>project support</span>
+                    </div>
+                  </div>
+                </div>
+                <CoverageMap />
+              </div>
+            </section>
+            <section className="wrap section location-directory">
+              <div className="location-directory-heading">
+                <div>
+                  <span className="eyebrow">FIND A SERVICE AREA</span>
+                  <h2>Search available location pages.</h2>
+                </div>
+                <p>
+                  Find Temporary 123 mobile kitchen trailer rental information
+                  for cities and states in our current directory.
+                </p>
+              </div>
+              <label className="search-label">
+                Find a city or state
+                <input
+                  id="catalog-search"
+                  type="search"
+                  placeholder="Search mobile kitchen rental locations"
+                />
+              </label>
+              <div className="catalog-list">
+                {catalog.map((p) => (
+                  <a key={p.path} href={p.path}>
+                    {p.title}
+                    <span>↗</span>
+                  </a>
+                ))}
+              </div>
+              <p id="catalog-status" role="status">
+                {catalog.length} service locations
+              </p>
+            </section>
+          </>
         ) : equipmentBrief ? (
           <EquipmentBrief item={equipmentBrief} />
+        ) : serviceOption ? (
+          <section className="service-option-page">
+            <div className="wrap section service-option-grid">
+              <div>
+                <nav className="breadcrumb" aria-label="Breadcrumb">
+                  <a href="/">Home</a>
+                  <span>/</span>
+                  <a href="/equipment-rental/">Services</a>
+                  <span>/</span>
+                  <a href={serviceOption.categoryHref}>
+                    {serviceOption.category}
+                  </a>
+                </nav>
+                <span className="eyebrow">TEMPORARY FACILITY RENTALS</span>
+                <h1>{serviceOption.name}</h1>
+                <p className="service-option-lead">
+                  {serviceOption.description} Our team helps match the unit to
+                  your site, schedule, utilities and operating requirements.
+                </p>
+                <div className="service-option-actions">
+                  <Button>Check availability</Button>
+                  <a href={serviceOption.categoryHref}>
+                    Compare {serviceOption.category.toLowerCase()} ↗
+                  </a>
+                </div>
+              </div>
+              <aside className="service-option-card">
+                <span>Plan before delivery</span>
+                <h2>Share the details that shape your rental.</h2>
+                <ul>
+                  <li>Project location and site access</li>
+                  <li>Preferred delivery and removal dates</li>
+                  <li>Expected users, shifts or meal volume</li>
+                  <li>Available power, water and wastewater service</li>
+                </ul>
+                <a href={"tel:" + site.phoneE164}>Call {site.phoneDisplay} ↗</a>
+              </aside>
+            </div>
+          </section>
+        ) : serviceCategory ? (
+          <section className="service-option-page">
+            <div className="wrap section">
+              <nav className="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span>/</span>
+                <a href="/equipment-rental/">Services</a>
+              </nav>
+              <span className="eyebrow">TEMPORARY FACILITY RENTALS</span>
+              <div className="service-category-heading">
+                <div>
+                  <h1>{serviceCategory.name}</h1>
+                  <p>{serviceCategory.description}</p>
+                </div>
+                <Button>Check availability</Button>
+              </div>
+              <div className="service-category-cards">
+                {serviceCategory.links.map((link, index) => (
+                  <a href={link.href} key={link.href}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{link.name}</strong>
+                    <b aria-hidden="true">↗</b>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
         ) : ["/services/", "/equipment-rental/", "/industries/"].includes(
             path,
           ) ? (
