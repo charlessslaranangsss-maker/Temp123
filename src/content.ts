@@ -12,6 +12,8 @@ export const routes = [
   "/industries/",
   "/service-areas/",
   "/planning/",
+  "/about-us/",
+  "/blog/",
   "/contact-us/",
   "/privacy/",
 ];
@@ -20,8 +22,10 @@ const titles: Record<string, string> = {
   "/services/": "Temporary Facility Solutions",
   "/equipment-rental/": "Equipment Rental",
   "/industries/": "Industries & Project Solutions",
-  "/service-areas/": "Service & Location Directory",
+  "/service-areas/": "Mobile Kitchen Rental Locations",
   "/planning/": "Plan Your Temporary Facilities",
+  "/about-us/": "About Temporary 123",
+  "/blog/": "Temporary Facility Planning Resources",
   "/contact-us/": "Contact Our Team",
   "/privacy/": "Privacy",
 };
@@ -34,9 +38,13 @@ const descriptions: Record<string, string> = {
   "/industries/":
     "Explore temporary facility support for construction, government, food service and emergency response projects. Find equipment for your operation.",
   "/service-areas/":
-    "Find Temporary 123 service and location pages. Filter the directory by equipment or location to explore facilities for your project.",
+    "Find mobile kitchen trailer rentals by city and state. Search Temporary 123 service locations across the United States for temporary food service support.",
   "/planning/":
     "Prepare your temporary facility brief with site access, utilities, occupancy and rental dates. Use the Temporary 123 project planning guide before you call.",
+  "/about-us/":
+    "Learn how Temporary 123 coordinates mobile kitchens, restroom and shower trailers, workforce housing and temporary facility rentals nationwide.",
+  "/blog/":
+    "Read practical guides for mobile kitchen trailer rentals, restroom and shower facilities, temporary base camps, utilities, delivery and site planning.",
   "/contact-us/":
     "Call Temporary 123 at 800-443-5212, available 24/7. Discuss equipment availability, your project location, rental dates and delivery requirements.",
   "/privacy/":

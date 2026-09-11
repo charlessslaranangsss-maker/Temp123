@@ -10,6 +10,8 @@ const core = [
   "/industries/",
   "/service-areas/",
   "/planning/",
+  "/about-us/",
+  "/blog/",
   "/contact-us/",
   "/privacy/",
   "/equipment-rental/",

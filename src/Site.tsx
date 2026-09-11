@@ -16,11 +16,77 @@ export type SourcePage = {
   images: { src: string; alt: string }[];
 };
 const nav = [
-  ["Equipment", "/equipment-rental/"],
-  ["Solutions", "/services/"],
-  ["Locations", "/service-areas/"],
-  ["About us", "/about-us/"],
+  ["Location", "/service-areas/"],
+  ["About Us", "/about-us/"],
+  ["Blog", "/blog/"],
+  ["Contact Us", "/contact-us/"],
 ];
+const serviceGroups = [
+  {
+    name: "Kitchen and food service",
+    links: [
+      [
+        "Mobile kitchen trailer rentals",
+        "/equipment-rental/mobile-kitchen-trailers/",
+      ],
+      ["Refrigeration trailer rentals", "/equipment-rental/refrigeration/"],
+      [
+        "Refrigerated container rentals",
+        "/equipment-rental/refrigerated-containers/",
+      ],
+      [
+        "Temporary dining structure rentals",
+        "/equipment-rental/dining-structure-rental/",
+      ],
+    ],
+  },
+  {
+    name: "Restrooms, showers and laundry",
+    links: [
+      ["Restroom trailer rentals", "/equipment-rental/restroom-trailers/"],
+      ["Shower trailer rentals", "/equipment-rental/shower-trailer/"],
+      ["Mobile laundry trailer rentals", "/equipment-rental/laundry-trailers/"],
+      [
+        "Portable handwashing stations",
+        "/equipment-rental/handwashing-stations/",
+      ],
+    ],
+  },
+  {
+    name: "Workforce facilities",
+    links: [
+      [
+        "Mobile office trailer rentals",
+        "/equipment-rental/mobile-office-trailers/",
+      ],
+      [
+        "Sleeper and bunkhouse trailers",
+        "/equipment-rental/bunkhouse-trailers/",
+      ],
+      ["Breakroom trailer rentals", "/equipment-rental/breakroom-trailer/"],
+      ["Mobile crew camp rentals", "/equipment-rental/mobile-crew-camps/"],
+    ],
+  },
+  {
+    name: "Site and operations support",
+    links: [
+      ["Generator trailer rentals", "/equipment-rental/generator-trailers/"],
+      [
+        "Temporary tent structure rentals",
+        "/equipment-rental/tent-structures/",
+      ],
+      ["Stair and ramp rentals", "/equipment-rental/stair-rentals/"],
+      [
+        "Modular command center trailers",
+        "/equipment-rental/modular-command-center-trailers/",
+      ],
+    ],
+  },
+];
+const navPhoneDisplay = "+1 (800) 443 - 5212";
+const locationPrefix = "/equipment-rental/mobile-kitchen-trailers/";
+export const isLocationPagePath = (path: string) =>
+  path.startsWith(locationPrefix) && path !== locationPrefix;
 function Button({
   children = "Plan your project",
   href = "/contact-us/",
@@ -80,6 +146,45 @@ export function Header({ path }: { path: string }) {
             </span>
           </a>
           <nav aria-label="Main navigation">
+            <a href="/" aria-current={path === "/" ? "page" : undefined}>
+              Home
+            </a>
+            <div className="services-nav">
+              <a
+                className="services-trigger"
+                href="/equipment-rental/"
+                aria-current={
+                  path.startsWith("/equipment-rental/") ? "page" : undefined
+                }
+              >
+                Services <span aria-hidden="true">⌄</span>
+              </a>
+              <div
+                className="services-panel"
+                role="group"
+                aria-label="Services menu"
+              >
+                <div className="services-panel-heading">
+                  <div>
+                    <span>Temporary facility rentals</span>
+                    <strong>Services for every stage of your project</strong>
+                  </div>
+                  <a href="/equipment-rental/">View all services ↗</a>
+                </div>
+                <div className="services-panel-grid">
+                  {serviceGroups.map((group) => (
+                    <section key={group.name}>
+                      <strong>{group.name}</strong>
+                      {group.links.map(([name, href]) => (
+                        <a href={href} key={href}>
+                          {name} <span aria-hidden="true">›</span>
+                        </a>
+                      ))}
+                    </section>
+                  ))}
+                </div>
+              </div>
+            </div>
             {nav.map(([n, p]) => (
               <a
                 href={p}
@@ -92,7 +197,7 @@ export function Header({ path }: { path: string }) {
           </nav>
           <a className="header-contact" href={"tel:" + site.phoneE164}>
             <span>Call our team, 24/7</span>
-            <strong>{site.phoneDisplay}</strong>
+            <strong>{navPhoneDisplay}</strong>
             <b aria-hidden="true">↗</b>
           </a>
           <details className="mobile-nav">
@@ -100,7 +205,25 @@ export function Header({ path }: { path: string }) {
               Menu <span aria-hidden="true">☰</span>
             </summary>
             <nav aria-label="Mobile navigation">
-              {[...nav, ["Contact", "/contact-us/"]].map(([n, p]) => (
+              <a href="/" aria-current={path === "/" ? "page" : undefined}>
+                Home
+              </a>
+              <details className="mobile-services">
+                <summary>
+                  Services <span aria-hidden="true">+</span>
+                </summary>
+                <div>
+                  <a href="/equipment-rental/">View all rental services</a>
+                  {serviceGroups.flatMap((group) =>
+                    group.links.map(([name, href]) => (
+                      <a href={href} key={href}>
+                        {name}
+                      </a>
+                    )),
+                  )}
+                </div>
+              </details>
+              {nav.map(([n, p]) => (
                 <a
                   href={p}
                   key={p}
@@ -195,10 +318,12 @@ export function Site({
   path,
   page,
   catalog = [],
+  serviceCatalog = [],
 }: {
   path: string;
   page?: SourcePage;
   catalog?: { path: string; title: string }[];
+  serviceCatalog?: { path: string; title: string }[];
 }) {
   const contact = ["/contact/", "/contact-us/"].includes(path);
   const equipmentBrief = equipmentCatalogData.items.find(
@@ -254,19 +379,22 @@ export function Site({
           </section>
         ) : path === "/service-areas/" ? (
           <section className="wrap section">
-            <span className="eyebrow">THE TEMPORARY 123 DIRECTORY</span>
+            <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
             <h1>
-              Find your location
+              Mobile kitchen rentals
               <br />
-              and service.
+              by location.
             </h1>
-            <p>Explore our existing service and location pages.</p>
+            <p>
+              Search Temporary 123 mobile kitchen trailer rental locations
+              across the United States.
+            </p>
             <label className="search-label">
-              Filter this page
+              Find a city or state
               <input
                 id="catalog-search"
                 type="search"
-                placeholder="Search by location or equipment"
+                placeholder="Search mobile kitchen rental locations"
               />
             </label>
             <div className="catalog-list">
@@ -277,7 +405,9 @@ export function Site({
                 </a>
               ))}
             </div>
-            <p id="catalog-status" role="status" />
+            <p id="catalog-status" role="status">
+              {catalog.length} service locations
+            </p>
           </section>
         ) : equipmentBrief ? (
           <EquipmentBrief item={equipmentBrief} />
@@ -302,6 +432,38 @@ export function Site({
                   dangerouslySetInnerHTML={{ __html: page.html }}
                 />
               )
+            )}
+            {path === "/services/" && serviceCatalog.length > 0 && (
+              <section
+                className="service-library"
+                aria-labelledby="service-library-heading"
+              >
+                <div className="service-library-heading">
+                  <span className="eyebrow">SERVICE RESOURCE LIBRARY</span>
+                  <h2 id="service-library-heading">
+                    More ways to support
+                    <br />
+                    your operation.
+                  </h2>
+                  <p>
+                    Browse specialized temporary facility, workforce, government
+                    and emergency support pages from Temporary 123.
+                  </p>
+                </div>
+                <details>
+                  <summary>
+                    Browse {serviceCatalog.length} additional services and
+                    resources <span aria-hidden="true">+</span>
+                  </summary>
+                  <div className="service-library-links">
+                    {serviceCatalog.map((item) => (
+                      <a href={item.path} key={item.path}>
+                        {item.title} <span aria-hidden="true">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </details>
+              </section>
             )}
           </section>
         ) : path === "/planning/" ? (
@@ -334,35 +496,223 @@ export function Site({
             <Button />
           </section>
         ) : path === "/about-us/" ? (
-          <section className="wrap section narrow">
-            <span className="eyebrow">ABOUT TEMPORARY 123</span>
-            <h1>
-              Facilities planned
-              <br />
-              around real work.
-            </h1>
-            <p>
-              Temporary 123 helps organizations plan mobile kitchens, restrooms,
-              showers, workforce accommodation and supporting site facilities.
-            </p>
-            <p>
-              Start with your location, schedule, crew size and utility
-              requirements. Our team can help you review equipment options, site
-              access and delivery arrangements for your project.
-            </p>
-            <p>
-              Call <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a> to
-              speak with a specialist, 24 hours a day.
-            </p>
-            <Button href="/equipment-rental/">Explore equipment</Button>
-          </section>
+          <>
+            <section className="about-hero">
+              <div className="wrap section about-hero-grid">
+                <div>
+                  <span className="eyebrow">ABOUT TEMPORARY 123</span>
+                  <h1>
+                    Temporary facilities
+                    <br />
+                    built around the work.
+                  </h1>
+                  <p>
+                    Temporary 123 supports construction, emergency response,
+                    government, food service and remote workforce operations
+                    with coordinated temporary facility rentals.
+                  </p>
+                  <Button href="/contact-us/">Plan your project</Button>
+                </div>
+                <aside className="about-summary" aria-label="Company approach">
+                  <span>What we coordinate</span>
+                  <strong>Facilities, logistics and site requirements</strong>
+                  <p>
+                    Start with the project location, schedule, occupancy and
+                    utilities. Our team helps identify the equipment and support
+                    services needed for a workable deployment plan.
+                  </p>
+                </aside>
+              </div>
+            </section>
+            <section className="wrap section about-capabilities">
+              <div className="section-heading">
+                <div>
+                  <span className="eyebrow">TEMPORARY FACILITY SERVICES</span>
+                  <h2>
+                    One source for
+                    <br />
+                    essential site support.
+                  </h2>
+                </div>
+                <p>
+                  Choose individual rental units or coordinate several
+                  facilities for one job site, base camp or emergency operation.
+                </p>
+              </div>
+              <div className="about-service-grid">
+                {[
+                  [
+                    "Mobile kitchen and food service",
+                    "Mobile kitchen trailer rentals, refrigeration trailers and temporary dining structures for planned or urgent food service operations.",
+                    "/equipment-rental/mobile-kitchen-trailers/",
+                  ],
+                  [
+                    "Restroom, shower and laundry facilities",
+                    "Portable restroom trailers, shower trailers, handwashing stations and mobile laundry facilities for crews and guests.",
+                    "/equipment-rental/restroom-trailers/",
+                  ],
+                  [
+                    "Workforce housing and base camps",
+                    "Sleeper trailers, bunkhouses, mobile offices, breakrooms and crew camp facilities for remote and extended projects.",
+                    "/man-camps-for-rent/",
+                  ],
+                  [
+                    "Site infrastructure and operations",
+                    "Temporary power, tents, modular buildings, command centers, water storage and site access equipment.",
+                    "/equipment-rental/",
+                  ],
+                ].map(([title, description, href]) => (
+                  <article key={title}>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                    <a href={href}>Explore services ↗</a>
+                  </article>
+                ))}
+              </div>
+            </section>
+            <section className="about-commitment">
+              <div className="wrap section about-commitment-grid">
+                <div>
+                  <span className="eyebrow">A PRACTICAL PROJECT PROCESS</span>
+                  <h2>
+                    Plan the site before
+                    <br />
+                    equipment arrives.
+                  </h2>
+                </div>
+                <div>
+                  <p>
+                    A reliable temporary facility starts with clear information.
+                    We review access, available power, water and wastewater,
+                    expected occupancy, operating hours and rental dates before
+                    arrangements are finalized.
+                  </p>
+                  <p>
+                    Temporary 123 is listed as a GSA Schedule contract holder.
+                    Call our team at{" "}
+                    <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a> to
+                    discuss commercial, government or emergency project needs.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </>
+        ) : path === "/blog/" ? (
+          <>
+            <section className="blog-hero">
+              <div className="wrap section">
+                <span className="eyebrow">TEMPORARY FACILITY RESOURCES</span>
+                <h1>
+                  Field notes for
+                  <br />
+                  better site planning.
+                </h1>
+                <p>
+                  Practical guidance for mobile kitchen rentals, restroom and
+                  shower trailers, workforce housing and temporary site support.
+                </p>
+              </div>
+            </section>
+            <section className="wrap section blog-content">
+              <div className="section-heading">
+                <div>
+                  <span className="eyebrow">PLANNING GUIDES</span>
+                  <h2>
+                    Start with the questions
+                    <br />
+                    that shape the site.
+                  </h2>
+                </div>
+                <p>
+                  These guides help project teams prepare useful details before
+                  discussing availability, delivery and installation.
+                </p>
+              </div>
+              <div className="blog-grid">
+                <article>
+                  <span>Mobile kitchens</span>
+                  <h3>How to plan a mobile kitchen trailer rental</h3>
+                  <p>
+                    Estimate meal volume, service periods, menu requirements and
+                    staffing. Then confirm power, potable water, wastewater,
+                    ventilation clearance and delivery access at the site.
+                  </p>
+                  <a href="/equipment-rental/mobile-kitchen-trailers/">
+                    Explore mobile kitchen trailers ↗
+                  </a>
+                </article>
+                <article>
+                  <span>Hygiene facilities</span>
+                  <h3>Choosing restroom and shower trailers for a job site</h3>
+                  <p>
+                    Start with occupancy, shift schedules and accessibility
+                    needs. Servicing frequency, water connections, wastewater
+                    storage and placement affect the right restroom or shower
+                    configuration.
+                  </p>
+                  <a href="/equipment-rental/restroom-trailers/">
+                    Compare restroom trailers ↗
+                  </a>
+                </article>
+                <article>
+                  <span>Remote workforce support</span>
+                  <h3>What a temporary base camp needs to operate well</h3>
+                  <p>
+                    Sleeping, dining, hygiene, office and recreation facilities
+                    should follow crew size, shift patterns and site conditions.
+                    A coordinated layout also improves access and daily
+                    servicing.
+                  </p>
+                  <a href="/man-camps-for-rent/">
+                    Explore base camp services ↗
+                  </a>
+                </article>
+              </div>
+            </section>
+            <section className="blog-checklist">
+              <div className="wrap section blog-checklist-grid">
+                <div>
+                  <span className="eyebrow">BEFORE YOU REQUEST A QUOTE</span>
+                  <h2>Prepare a stronger project brief.</h2>
+                </div>
+                <ol>
+                  <li>
+                    <strong>Confirm the location</strong>
+                    <span>
+                      Share the delivery address and site access limits.
+                    </span>
+                  </li>
+                  <li>
+                    <strong>Define capacity</strong>
+                    <span>
+                      Include crew size, meal counts or expected users.
+                    </span>
+                  </li>
+                  <li>
+                    <strong>List available utilities</strong>
+                    <span>Note power, water and wastewater connections.</span>
+                  </li>
+                  <li>
+                    <strong>Set the schedule</strong>
+                    <span>Provide delivery, operating and removal dates.</span>
+                  </li>
+                </ol>
+              </div>
+            </section>
+          </>
         ) : page ? (
           <section className="wrap section source-layout">
             <div>
               <nav className="breadcrumb" aria-label="Breadcrumb">
                 <a href="/">Home</a>
                 <span>/</span>
-                <a href="/service-areas/">Services & locations</a>
+                <a
+                  href={
+                    isLocationPagePath(path) ? "/service-areas/" : "/services/"
+                  }
+                >
+                  {isLocationPagePath(path) ? "Locations" : "Services"}
+                </a>
               </nav>
               <h1 className="page-title">{page.title}</h1>
               <article

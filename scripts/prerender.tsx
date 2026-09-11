@@ -1,6 +1,6 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
-import { Site, type SourcePage } from "../src/Site";
+import { Site, isLocationPagePath, type SourcePage } from "../src/Site";
 import { readdir } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
 import { pageInfo } from "../src/content";
@@ -39,6 +39,8 @@ const coreRoutes = [
   "/industries/",
   "/service-areas/",
   "/planning/",
+  "/about-us/",
+  "/blog/",
   "/contact-us/",
   "/privacy/",
   "/equipment-rental/",
@@ -57,7 +59,6 @@ const allRoutes = [
 const editorialNoindex = new Set([
   "/26ft-military-bulk-kitchen/",
   "/4000-correctional-facilities-series/",
-  "/blog/",
   "/government/hospitals/",
   "/modular-kitchen-facilities/",
   "/video/",
@@ -224,7 +225,19 @@ for (const path of [...allRoutes, "/404/"]) {
           path={path}
           page={page ? { ...page, html: renderContent(page) } : undefined}
           catalog={pages
-            .filter((p) => !redirectedRoutes.has(p.path))
+            .filter(
+              (p) =>
+                !redirectedRoutes.has(p.path) && isLocationPagePath(p.path),
+            )
+            .map((p) => ({ path: p.path, title: p.title }))}
+          serviceCatalog={pages
+            .filter(
+              (p) =>
+                !redirectedRoutes.has(p.path) &&
+                !isLocationPagePath(p.path) &&
+                !coreRoutes.includes(p.path) &&
+                !catalog.items.some((item) => item.path === p.path),
+            )
             .map((p) => ({ path: p.path, title: p.title }))}
         />,
       ),
