@@ -5,6 +5,17 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.goto("/");
     await expect(page.locator("h1")).toContainText("Keep your");
     await expect(page).toHaveTitle(/Temporary 123/);
+    await expect(page.locator(".brand")).toContainText("Temporary123");
+    const supportBar = page.locator(".utility");
+    await expect(supportBar).toBeVisible();
+    await expect(supportBar).toContainText("Live agents available 24/7");
+    await expect(supportBar.locator("a")).toHaveAttribute(
+      "href",
+      "tel:+18004435212",
+    );
+    const contactRail = page.locator(".contact-rail");
+    await expect(contactRail).toBeVisible();
+    await expect(contactRail).toHaveAttribute("href", "/contact-us/");
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(

@@ -44,14 +44,30 @@ export function Header({ path }: { path: string }) {
         Skip to content
       </a>
       <div className="utility">
-        <div className="wrap">
-          <span>
+        <div className="wrap utility-inner">
+          <span className="utility-status" aria-hidden="true">
             <i />
-            Temporary facilities. Nationwide support.
           </span>
-          <a href={"tel:" + site.phoneE164}>
-            24/7 specialist support <strong>{site.phoneDisplay}</strong>
-          </a>
+          <svg
+            className="utility-agent-icon"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          <p>
+            <strong>Live agents available 24/7.</strong> <span>Call us at</span>{" "}
+            <a href={"tel:" + site.phoneE164}>+1 {site.phoneDisplay}</a>{" "}
+            <span>to speak with a kitchen specialist.</span>
+          </p>
         </div>
       </div>
       <div className="header-sticky">
@@ -59,7 +75,7 @@ export function Header({ path }: { path: string }) {
           <a className="brand" href="/" aria-label="Temporary 123 home">
             <img src="/images/logo.webp" width="53" height="44" alt="" />
             <span>
-              temporary<span className="brand-number">123</span>
+              Temporary<span className="brand-number">123</span>
               <small>TEMPORARY FACILITIES · PERMANENT COMMITMENT</small>
             </span>
           </a>
@@ -102,6 +118,23 @@ export function Header({ path }: { path: string }) {
         <span>Call our team, 24/7</span>
         <strong>{site.phoneDisplay}</strong>
         <b aria-hidden="true">↗</b>
+      </a>
+      <a
+        className="contact-rail"
+        href="/contact-us/"
+        aria-label="Contact Temporary 123"
+        aria-current={path === "/contact-us/" ? "page" : undefined}
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path
+            d="M5 5h14v11H9l-4 3V5Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <span>Contact us</span>
       </a>
     </>
   );
