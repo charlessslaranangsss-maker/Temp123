@@ -8,6 +8,7 @@ import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 import { load } from "cheerio";
 import { catalog } from "../src/EquipmentCatalog";
+import modelDetails from "../content/service-details.json" with { type: "json" };
 import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
@@ -123,40 +124,46 @@ for (const path of [...allRoutes, "/404/"]) {
   const catalogItem = catalog.items.find((item) => item.path === path);
   const serviceOption = serviceOptions.find((item) => item.href === path);
   const serviceCategory = serviceCategories.find((item) => item.href === path);
-  const info = coreRoutes.includes(path)
-    ? pageInfo(path)
-    : page
-      ? {
-          title: page.title + " | Temporary 123",
-          description: sourceDescription(page),
-        }
-      : path === "/contact-us/"
+  const detail = modelDetails[path as keyof typeof modelDetails];
+  const info = detail
+    ? {
+        title: detail.name + " Rental | Temporary 123",
+        description: detail.intro.split(". ")[0] + ".",
+      }
+    : coreRoutes.includes(path)
+      ? pageInfo(path)
+      : page
         ? {
-            title: "Contact Temporary 123 | Talk to a Specialist",
-            description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
+            title: page.title + " | Temporary 123",
+            description: sourceDescription(page),
           }
-        : path === "/equipment-rental/"
+        : path === "/contact-us/"
           ? {
-              title: "Equipment Rental | Temporary 123",
-              description:
-                "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+              title: "Contact Temporary 123 | Talk to a Specialist",
+              description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
             }
-          : catalogItem
+          : path === "/equipment-rental/"
             ? {
-                title: `${catalogItem.name} | Temporary 123`,
-                description: catalogItem.summary,
+                title: "Equipment Rental | Temporary 123",
+                description:
+                  "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
               }
-            : serviceOption
+            : catalogItem
               ? {
-                  title: `${serviceOption.name} Rental | Temporary 123`,
-                  description: serviceOption.description,
+                  title: `${catalogItem.name} | Temporary 123`,
+                  description: catalogItem.summary,
                 }
-              : serviceCategory
+              : serviceOption
                 ? {
-                    title: `${serviceCategory.name} Rental | Temporary 123`,
-                    description: serviceCategory.description,
+                    title: `${serviceOption.name} Rental | Temporary 123`,
+                    description: serviceOption.description,
                   }
-                : pageInfo(path);
+                : serviceCategory
+                  ? {
+                      title: `${serviceCategory.name} Rental | Temporary 123`,
+                      description: serviceCategory.description,
+                    }
+                  : pageInfo(path);
   const canonical =
     release && path !== "/404/" && indexableRoutes.includes(path)
       ? `${site.origin.replace(/\/$/, "")}${path}`

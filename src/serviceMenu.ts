@@ -1,3 +1,4 @@
+import modelDetails from "../content/service-details.json" with { type: "json" };
 export type ServiceLink = {
   name: string;
   href: string;
@@ -206,7 +207,9 @@ export const serviceOptions = serviceCategories.flatMap((category) =>
       category: category.name,
       categoryHref: category.href,
       categoryDescription: category.description,
-      description: `${link.name} rental planning from Temporary 123 for commercial, government, emergency and remote site operations.`,
+      description:
+        modelDetails[link.href as keyof typeof modelDetails]?.intro ||
+        `${link.name} rental planning from Temporary 123.`,
     })),
 );
 

@@ -7,8 +7,9 @@ import {
   EquipmentBrief,
   catalog as equipmentCatalogData,
 } from "./EquipmentCatalog";
-import { serviceCategories, serviceOptions } from "./serviceMenu";
+import { serviceCategories } from "./serviceMenu";
 import { CoverageMap } from "./CoverageMap";
+import { ServiceDetail, modelDetails } from "./ServiceDetail";
 export type SourcePage = {
   id: number;
   path: string;
@@ -91,6 +92,8 @@ export function Header({ path }: { path: string }) {
             <div className="services-nav">
               <a
                 className="services-trigger"
+                aria-expanded="false"
+                aria-controls="services-panel"
                 href="/equipment-rental/"
                 aria-current={
                   path.startsWith("/equipment-rental/") ? "page" : undefined
@@ -99,6 +102,7 @@ export function Header({ path }: { path: string }) {
                 Services <span aria-hidden="true">⌄</span>
               </a>
               <div
+                id="services-panel"
                 className="services-panel"
                 role="group"
                 aria-label="Services menu"
@@ -112,8 +116,14 @@ export function Header({ path }: { path: string }) {
                 </div>
                 <div className="services-panel-body">
                   <div className="service-category-list">
-                    {serviceCategories.map((category) => (
-                      <div className="service-category" key={category.name}>
+                    {serviceCategories.map((category, index) => (
+                      <div
+                        className={
+                          "service-category" +
+                          (index === 0 ? " is-selected" : "")
+                        }
+                        key={category.name}
+                      >
                         <a
                           className="service-category-link"
                           href={category.href}
@@ -339,7 +349,6 @@ export function Site({
   const equipmentBrief = equipmentCatalogData.items.find(
     (item) => item.path === path,
   );
-  const serviceOption = serviceOptions.find((item) => item.href === path);
   const serviceCategory = serviceCategories.find((item) => item.href === path);
   return (
     <div id="top">
@@ -445,47 +454,8 @@ export function Site({
               </p>
             </section>
           </>
-        ) : equipmentBrief ? (
-          <EquipmentBrief item={equipmentBrief} />
-        ) : serviceOption ? (
-          <section className="service-option-page">
-            <div className="wrap section service-option-grid">
-              <div>
-                <nav className="breadcrumb" aria-label="Breadcrumb">
-                  <a href="/">Home</a>
-                  <span>/</span>
-                  <a href="/equipment-rental/">Services</a>
-                  <span>/</span>
-                  <a href={serviceOption.categoryHref}>
-                    {serviceOption.category}
-                  </a>
-                </nav>
-                <span className="eyebrow">TEMPORARY FACILITY RENTALS</span>
-                <h1>{serviceOption.name}</h1>
-                <p className="service-option-lead">
-                  {serviceOption.description} Our team helps match the unit to
-                  your site, schedule, utilities and operating requirements.
-                </p>
-                <div className="service-option-actions">
-                  <Button>Check availability</Button>
-                  <a href={serviceOption.categoryHref}>
-                    Compare {serviceOption.category.toLowerCase()} ↗
-                  </a>
-                </div>
-              </div>
-              <aside className="service-option-card">
-                <span>Plan before delivery</span>
-                <h2>Share the details that shape your rental.</h2>
-                <ul>
-                  <li>Project location and site access</li>
-                  <li>Preferred delivery and removal dates</li>
-                  <li>Expected users, shifts or meal volume</li>
-                  <li>Available power, water and wastewater service</li>
-                </ul>
-                <a href={"tel:" + site.phoneE164}>Call {site.phoneDisplay} ↗</a>
-              </aside>
-            </div>
-          </section>
+        ) : path in modelDetails ? (
+          <ServiceDetail path={path as keyof typeof modelDetails} />
         ) : serviceCategory ? (
           <section className="service-option-page">
             <div className="wrap section">
@@ -499,20 +469,40 @@ export function Site({
                 <div>
                   <h1>{serviceCategory.name}</h1>
                   <p>{serviceCategory.description}</p>
+                  <p>
+                    {
+                      Object.values(modelDetails).find(
+                        (item) => item.category === serviceCategory.name,
+                      )?.use
+                    }
+                  </p>
                 </div>
-                <Button>Check availability</Button>
+                <div className="service-category-actions">
+                  <Button>Check availability</Button>
+                  <a className="model-call" href={"tel:" + site.phoneE164}>
+                    {site.phoneDisplay}
+                  </a>
+                </div>
               </div>
               <div className="service-category-cards">
                 {serviceCategory.links.map((link, index) => (
                   <a href={link.href} key={link.href}>
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <strong>{link.name}</strong>
+                    <p>
+                      {
+                        modelDetails[link.href as keyof typeof modelDetails]
+                          ?.intro
+                      }
+                    </p>
                     <b aria-hidden="true">↗</b>
                   </a>
                 ))}
               </div>
             </div>
           </section>
+        ) : equipmentBrief ? (
+          <EquipmentBrief item={equipmentBrief} />
         ) : ["/services/", "/equipment-rental/", "/industries/"].includes(
             path,
           ) ? (

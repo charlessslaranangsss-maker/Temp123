@@ -2,9 +2,15 @@ import http from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, relative, isAbsolute } from "node:path";
 const root = resolve("dist");
-const { redirects = [] } = JSON.parse(await readFile("vercel.json", "utf8"));
+const { redirects = [], headers = [] } = JSON.parse(
+  await readFile("vercel.json", "utf8"),
+);
 http
   .createServer(async (req, res) => {
+    for (const rule of headers.filter((rule) => rule.source === "/(.*)")) {
+      for (const header of rule.headers)
+        res.setHeader(header.key, header.value);
+    }
     let path;
     try {
       path = decodeURIComponent(new URL(req.url, "http://localhost").pathname);

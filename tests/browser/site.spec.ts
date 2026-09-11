@@ -100,21 +100,21 @@ test("desktop services menu exposes clear rental categories", async ({
   await page.goto("/");
   const trigger = page.locator(".services-trigger");
   await expect(trigger).toContainText("Services");
-  await trigger.focus();
+  await trigger.click();
   const menu = page.getByRole("group", { name: "Services menu" });
   await expect(menu).toBeVisible();
   await expect(menu.locator(".service-category")).toHaveCount(9);
   await expect(
-    menu.getByRole("link", { name: "Restroom Trailers", exact: true }),
+    menu.getByRole("button", { name: "Restroom Trailers", exact: true }),
   ).toHaveAttribute("href", "/equipment-rental/restroom-trailers/");
   await menu
-    .getByRole("link", { name: "Restroom Trailers", exact: true })
-    .hover();
+    .getByRole("button", { name: "Restroom Trailers", exact: true })
+    .click();
   await expect(
     menu.getByRole("link", { name: "30ft Restroom Trailer" }),
   ).toBeVisible();
   await expect(
-    menu.getByRole("link", {
+    menu.getByRole("button", {
       name: "Mobile Sleeper Trailers and Containers",
       exact: true,
     }),
@@ -153,7 +153,7 @@ test("service model pages provide unique planning content", async ({
   await expect(page).toHaveTitle(
     "20ft Restroom and Shower Trailer Rental | Temporary 123",
   );
-  await expect(page.getByText("Plan before delivery")).toBeVisible();
+  await expect(page.getByText("PLAN BEFORE DELIVERY")).toBeVisible();
 });
 
 for (const width of [390, 1440])
@@ -165,7 +165,9 @@ for (const width of [390, 1440])
     await expect(page.locator(".location-hero h1")).toContainText(
       "across the USA",
     );
-    await expect(page.locator(".coverage-map li")).toHaveCount(50);
+    await expect(
+      page.locator(".coverage-map-stage .map-land path"),
+    ).toHaveCount(50);
     await expect(page.locator(".coverage-map")).toContainText("50 states");
     await expect(page.locator("#catalog-search")).toBeVisible();
     expect(

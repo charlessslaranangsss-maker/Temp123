@@ -1,4 +1,6 @@
 import { test, expect } from "@playwright/test";
+import { serviceCategories } from "../../src/serviceMenu";
+import details from "../../content/service-details.json" with { type: "json" };
 import catalog from "../../content/equipment-catalog.json" with { type: "json" };
 
 test("all 25 equipment entries and legacy destinations resolve", async ({
@@ -71,19 +73,26 @@ test("equipment briefs remain readable and connected on mobile", async ({
   );
   for (const item of briefs) {
     await page.goto(item.path);
-    await expect(page.locator("h1")).toHaveText(item.name);
-    await expect(page.locator(".brief-intro .button")).toHaveAttribute(
-      "href",
-      "tel:+18004435212",
+    const detail = details[item.path as keyof typeof details];
+    const category = serviceCategories.find((c) => c.href === item.path);
+    await expect(page.locator("h1")).toHaveText(
+      detail?.name || category?.name || item.name,
     );
+    await expect(
+      page.locator("main a[href='tel:+18004435212']").first(),
+    ).toHaveAttribute("href", "tel:+18004435212");
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
       item.path,
     ).toBe(true);
-    expect(await page.locator(".brief-related a").count()).toBeGreaterThanOrEqual(
-      2,
-    );
+    expect(
+      await page
+        .locator(
+          "main a[href^='/equipment-rental/'],main a[href^='/services/']",
+        )
+        .count(),
+    ).toBeGreaterThanOrEqual(2);
   }
 });

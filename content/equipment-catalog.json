@@ -52,16 +52,16 @@
       "path": "/equipment-rental/handwashing-stations/",
       "group": "hygiene",
       "summary": "Handwashing points for temporary work areas. Plan their location, water supply and servicing.",
-      "image": "/media/228d372cd0f2d3c6f0c00728.jpg",
-      "source": "https://temporary123.com/wp-content/uploads/2021/11/HAND-WASHING-STATION.jpg",
+      "image": "/images/catalog/handwashing-station-original.jpg",
+      "source": "https://temporary123.com/wp-content/uploads/2021/11/HAND-WASHING-STATION-1-web.jpg",
       "kind": "plan",
       "small": "/images/catalog/handwashing-stations-480.webp",
       "large": "/images/catalog/handwashing-stations-960.webp",
-      "smallWidth": 300,
-      "largeWidth": 300,
-      "width": 300,
-      "height": 157,
-      "recovered": false
+      "smallWidth": 480,
+      "largeWidth": 960,
+      "width": 1900,
+      "height": 950,
+      "recovered": true
     },
     {
       "id": "classroom-trailers",

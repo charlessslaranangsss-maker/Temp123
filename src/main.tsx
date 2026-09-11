@@ -30,9 +30,8 @@ mobileNav?.addEventListener("focusout", () => {
   });
 });
 
-const contactDrawer = document.querySelector<HTMLDialogElement>(
-  "#contact-drawer",
-);
+const contactDrawer =
+  document.querySelector<HTMLDialogElement>("#contact-drawer");
 let contactTrigger: HTMLAnchorElement | null = null;
 let contactScroll = 0;
 if (
@@ -68,7 +67,9 @@ if (
     document.body.style.position = "fixed";
     document.body.style.top = `-${contactScroll}px`;
     document.body.style.width = "100%";
-    contactDrawer.querySelector<HTMLButtonElement>("[data-close-contact]")?.focus();
+    contactDrawer
+      .querySelector<HTMLButtonElement>("[data-close-contact]")
+      ?.focus();
   });
   contactDrawer
     .querySelector("[data-close-contact]")
@@ -240,3 +241,86 @@ if (equipmentSearch) {
     }),
   );
 }
+
+// Click-controlled disclosure keeps category selection stable across pointer gaps.
+const servicesNav = document.querySelector<HTMLElement>(".services-nav");
+const servicesTrigger =
+  servicesNav?.querySelector<HTMLAnchorElement>(".services-trigger");
+if (servicesNav && servicesTrigger) {
+  servicesTrigger.setAttribute("role", "button");
+  const setOpen = (open: boolean) => {
+    servicesNav.classList.toggle("is-open", open);
+    servicesTrigger.setAttribute("aria-expanded", String(open));
+  };
+  servicesTrigger.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+      return;
+    event.preventDefault();
+    setOpen(true);
+  });
+  servicesTrigger.addEventListener("keydown", (event) => {
+    if (event.key === " ") {
+      event.preventDefault();
+      setOpen(true);
+    }
+  });
+  servicesNav
+    .querySelectorAll<HTMLAnchorElement>(".service-category-link")
+    .forEach((link, index) => {
+      link.setAttribute("role", "button");
+      link.setAttribute("aria-expanded", String(index === 0));
+      link.setAttribute("aria-controls", "service-submenu-" + index);
+      link.nextElementSibling?.setAttribute("id", "service-submenu-" + index);
+      const select = () => {
+        servicesNav
+          .querySelectorAll(".service-category")
+          .forEach((category) => category.classList.remove("is-selected"));
+        servicesNav
+          .querySelectorAll(".service-category-link")
+          .forEach((item) => item.setAttribute("aria-expanded", "false"));
+        link.parentElement?.classList.add("is-selected");
+        link.setAttribute("aria-expanded", "true");
+      };
+      link.addEventListener("click", (event) => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+          return;
+        event.preventDefault();
+        select();
+      });
+      link.addEventListener("keydown", (event) => {
+        if (event.key === " ") {
+          event.preventDefault();
+          select();
+        }
+      });
+    });
+  document.addEventListener("click", (event) => {
+    if (!servicesNav.contains(event.target as Node)) setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && servicesNav.classList.contains("is-open")) {
+      setOpen(false);
+      servicesTrigger.focus();
+    }
+  });
+}
+
+const mapDialog = document.querySelector<HTMLDialogElement>(".map-dialog");
+const mapTrigger =
+  document.querySelector<HTMLButtonElement>("[data-expand-map]");
+mapTrigger?.addEventListener("click", () => mapDialog?.showModal());
+mapDialog
+  ?.querySelector("[data-close-map]")
+  ?.addEventListener("click", () => mapDialog.close());
+mapDialog?.addEventListener("click", (event) => {
+  if (event.target === mapDialog) {
+    const r = mapDialog.getBoundingClientRect();
+    if (
+      event.clientX < r.left ||
+      event.clientX > r.right ||
+      event.clientY < r.top ||
+      event.clientY > r.bottom
+    )
+      mapDialog.close();
+  }
+});
