@@ -84,4 +84,3 @@ At permission/configuration completion: create preview deployment, deploy rules,
 - [Vercel request headers](https://vercel.com/docs/headers/request-headers)
 - [Google migration guidance](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes)
 - [Observed old homepage](https://temporary123.com/)
-

@@ -3,7 +3,7 @@
 > vitest run tests/contact.test.ts tests/routes.test.ts
 
 
- RUN  v3.2.7 C:/Users/Lee/Documents/Codex/2026-09-11/https-github-com-markravencanete50-source-temp123/work/Temp123
+ RUN  v3.2.7 <workspace>
 
 stderr | tests/contact.test.ts > contact application boundary > preserves stored success when email fails
 {"event":"delivery_pending","id":"test-id"}
@@ -27,4 +27,3 @@ stderr | tests/routes.test.ts > actual Vercel entry points > outbox rejects an i
       Tests  20 passed (20)
    Start at  23:59:19
    Duration  1.17s (transform 115ms, setup 0ms, collect 838ms, tests 23ms, environment 0ms, prepare 285ms)
-

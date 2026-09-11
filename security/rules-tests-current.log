@@ -8,102 +8,102 @@ i  firestore: Firestore Emulator logging to firestore-debug.log
 +  firestore: Firestore Emulator UI websocket is running on 9150.
 i  Running script: vitest run --no-file-parallelism tests/rules.test.ts tests/delivery.test.ts
 
- RUN  v3.2.7 C:/Users/Lee/Documents/Codex/2026-09-11/https-github-com-markravencanete50-source-temp123/work/Temp123
+ RUN  v3.2.7 <workspace>
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.030Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a2 error. Code: 7 Message: 7 PERMISSION_DENIED: 
-false for 'create' @ L4, false for 'update' @ L4
-
-stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.048Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a3 error. Code: 7 Message: 7 PERMISSION_DENIED: 
-false for 'delete' @ L4
-
-stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.145Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a4 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.030Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a2 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.160Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a5 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.048Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a3 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.209Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a6 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.145Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a4 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.217Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a7 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.160Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a5 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.269Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a8 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.209Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a6 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for anonymous
-[2026-09-11T16:00:30.287Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a9 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.217Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a7 error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'delete' @ L4
+
+stderr | tests/rules.test.ts > denies all private operations for anonymous
+[2026-09-11T16:00:30.269Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a8 error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'create' @ L4, false for 'update' @ L4
+
+stderr | tests/rules.test.ts > denies all private operations for anonymous
+[2026-09-11T16:00:30.287Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956a9 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.364Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ab error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.364Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ab error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.378Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ac error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.378Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ac error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.441Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ad error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.441Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ad error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.454Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ae error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.454Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ae error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.502Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956af error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.502Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956af error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.509Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b0 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.509Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b0 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.563Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b1 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.563Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b1 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for owner
-[2026-09-11T16:00:30.572Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b2 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.572Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b2 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.644Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b4 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.644Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b4 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.655Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b5 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.655Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b5 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.706Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b6 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.706Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b6 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.720Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b7 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.720Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b7 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.754Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b8 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.754Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b8 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.767Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b9 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.767Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956b9 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.815Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ba error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.815Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956ba error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L4, false for 'update' @ L4
 
 stderr | tests/rules.test.ts > denies all private operations for other
-[2026-09-11T16:00:30.829Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956bb error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-09-11T16:00:30.829Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x8cf956bb error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'delete' @ L4
 
  ✓ tests/rules.test.ts (5 tests) 9138ms

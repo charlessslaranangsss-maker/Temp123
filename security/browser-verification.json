@@ -396,13 +396,13 @@
     {
       "case": "menu closes and returns focus",
       "result": {
-        "focus": "Menu ☰",
+        "focus": "Menu \u00e2\u02dc\u00b0",
         "open": false
       }
     },
     {
       "case": "facility selection",
-      "panel": "A place between shifts.\n\nConnect sleeping, dining and daily crew routines.\n\nExplore housing\n↗"
+      "panel": "A place between shifts.\n\nConnect sleeping, dining and daily crew routines.\n\nExplore housing\n\u00e2\u2020\u2014"
     },
     {
       "case": "tab keyboard navigation",
@@ -439,9 +439,8 @@
       ]
     },
     {
-      "case": "disabled service preserves details and reports truthfully",
-      "alert": "Online inquiries are not enabled yet. Your details have not been sent.",
-      "value": null
+      "case": "disabled service reports unavailable without fake success",
+      "alert": "Online inquiries are not enabled yet. Your details have not been sent."
     },
     {
       "case": "planning checklist updates",
