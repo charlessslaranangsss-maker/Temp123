@@ -25,10 +25,10 @@ The Contact Us tab and navbar phone button have a gentle repeating outline glow,
 ## Verification
 
 - Build and TypeScript checks pass.
-- 41 Playwright browser tests pass, including actual menu navigation, all model destinations, responsive layouts, image loading, outside/Escape close, map enlargement and reduced motion.
+- 42 Playwright browser tests pass, including actual menu navigation, all model destinations, responsive layouts, image loading, outside/Escape close, map enlargement and reduced motion.
 - 21 unit/route/import tests pass.
-- Static SEO audit: 666 HTML documents including 404; 82,932 local links; 1,239 image references; 666 unique titles and descriptions; zero reported problems.
-- Pattern secret scan: 816 files, no findings.
+- Static SEO audit: 666 HTML documents including 404; 76,280 local links; 1,247 image references; 666 unique titles and descriptions; zero reported problems.
+- Pattern secret scan: 822 files, no findings.
 - Local static preview now applies Vercel's global response headers, including CSP, so rendering checks reproduce deployment restrictions.
 - Desktop and mobile screenshots visually reviewed. Live verification follows the GitHub main deployment.
 
@@ -36,3 +36,10 @@ The Contact Us tab and navbar phone button have a gentle repeating outline glow,
 
 The revision hostname stays noindex. Migration remains 625 recovered source pages out of the previously reported 98,253, and this revision does not establish full-site migration or Google indexing. Online inquiry intake remains disabled pending the separate backend activation checks.
 
+## Final client naming and interaction follow-up
+
+Navigation now reads Home, Services, Service Areas, About Us, Articles and Contact Us. Existing /service-areas/ and /blog/ URLs remain available.
+
+The final service order is Mobile Kitchens, Dishwashing, Refrigeration, Shower, Restroom, Shower and Restroom Combination Trailers, Sleeper, Laundry, Handwashing Trailers. All nine appear in the desktop menu, mobile menu and homepage cards. On wide screens the cards form a balanced three-column layout. Service Areas hero line-height and paragraph spacing were adjusted. The contact attention glow is now green.
+
+Live testing exposed an early-click race in the first disclosure enhancement. Native details/summary elements now open the menu and select categories before JavaScript loads. The regression test checks this with JavaScript disabled, while the enhanced version retains outside-click and Escape handling.

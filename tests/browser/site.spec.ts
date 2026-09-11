@@ -105,17 +105,15 @@ test("desktop services menu exposes clear rental categories", async ({
   await expect(menu).toBeVisible();
   await expect(menu.locator(".service-category")).toHaveCount(9);
   await expect(
-    menu.getByRole("button", { name: "Restroom Trailers", exact: true }),
-  ).toHaveAttribute("href", "/equipment-rental/restroom-trailers/");
-  await menu
-    .getByRole("button", { name: "Restroom Trailers", exact: true })
-    .click();
+    menu.getByRole("button", { name: "Restroom", exact: true }),
+  ).toBeVisible();
+  await menu.getByRole("button", { name: "Restroom", exact: true }).click();
   await expect(
     menu.getByRole("link", { name: "30ft Restroom Trailer" }),
   ).toBeVisible();
   await expect(
     menu.getByRole("button", {
-      name: "Mobile Sleeper Trailers and Containers",
+      name: "Sleeper",
       exact: true,
     }),
   ).toBeVisible();
@@ -191,9 +189,9 @@ test("desktop navigation follows the requested order", async ({ page }) => {
   ).toHaveText([
     "Home",
     "Services ⌄",
-    "Location",
+    "Service Areas",
     "About Us",
-    "Blog",
+    "Articles",
     "Contact Us",
   ]);
 });
@@ -245,12 +243,12 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   const trigger = page.getByRole("button", {
-    name: "Quick view: Mobile Kitchen Trailers",
+    name: "Quick view: Mobile Kitchens",
     exact: true,
   });
   await trigger.click();
   const dialog = page.getByRole("dialog", {
-    name: "Mobile Kitchen Trailers",
+    name: "Mobile Kitchens",
     exact: true,
   });
   await expect(dialog).toBeVisible();
@@ -272,19 +270,22 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await expect(trigger).toBeFocused();
 });
 
-test("homepage shows all eight requested service cards", async ({ page }) => {
+test("homepage shows the nine services in the final approved order", async ({
+  page,
+}) => {
   await page.goto("/");
   const cards = page.locator(".equipment-card");
-  await expect(cards).toHaveCount(8);
+  await expect(cards).toHaveCount(9);
   await expect(cards.locator("h3")).toHaveText([
-    "Mobile Kitchen Trailers",
-    "Dishwashing Trailers",
-    "Refrigeration Trailers",
+    "Mobile Kitchens",
+    "Dishwashing",
+    "Refrigeration",
+    "Shower",
+    "Restroom",
+    "Shower and Restroom Combination Trailers",
+    "Sleeper",
+    "Laundry",
     "Handwashing Trailers",
-    "Mobile Sleeper Trailer and Container",
-    "Restroom Trailers",
-    "Shower Trailers",
-    "Laundry Trailers",
   ]);
   await expect(
     cards.getByRole("link", {

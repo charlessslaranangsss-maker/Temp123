@@ -12,27 +12,23 @@ test("Services stays selected across pointer gaps and closes only on outside cli
   await expect(menu).not.toBeVisible();
   await trigger.click();
   await expect(menu).toBeVisible();
-  await menu
-    .getByRole("button", { name: "Dishwashing Trailers", exact: true })
-    .click();
+  await menu.getByRole("button", { name: "Dishwashing", exact: true }).click();
   await page.mouse.move(500, 1000);
   await expect(menu).toBeVisible();
   const model = menu.getByRole("link", { name: "22ft Dishwashing Trailer" });
   await model.hover();
-  await expect(menu.locator(".is-selected")).toContainText(
-    "Dishwashing Trailers",
+  await expect(menu.locator(".service-category[open]")).toContainText(
+    "Dishwashing",
   );
   await model.click();
   await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
   await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer");
   await trigger.click();
-  await menu
-    .getByRole("button", { name: "Dishwashing Trailers", exact: true })
-    .click();
+  await menu.getByRole("button", { name: "Dishwashing", exact: true }).click();
   await menu.getByRole("link", { name: "26ft Dishwashing Trailer" }).click();
   await expect(page).toHaveURL(/dishwashing-trailers\/26ft\/$/);
   await trigger.click();
-  await page.locator("main h1").click();
+  await page.mouse.click(20, 250);
   await expect(menu).not.toBeVisible();
   await trigger.focus();
   await page.keyboard.press("Space");
@@ -139,4 +135,27 @@ test("contact attention animates the outline while reduced motion remains steady
         .locator(selector)
         .evaluate((e) => getComputedStyle(e).animationName),
     ).toBe("none");
+});
+
+test("Services and category selection work before JavaScript loads", async ({
+  browser,
+}) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 1440, height: 900 },
+  });
+  const page = await context.newPage();
+  await page.goto("/");
+  await page.locator(".services-trigger").click();
+  await page
+    .locator("#services-panel")
+    .getByRole("button", { name: "Dishwashing", exact: true })
+    .click();
+  await page
+    .locator("#services-panel")
+    .getByRole("link", { name: "22ft Dishwashing Trailer" })
+    .click();
+  await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
+  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer");
+  await context.close();
 });

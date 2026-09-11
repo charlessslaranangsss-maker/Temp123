@@ -15,7 +15,7 @@ type EquipmentCard = {
 
 export const equipment: EquipmentCard[] = [
   {
-    name: "Mobile Kitchen Trailers",
+    name: "Mobile Kitchens",
     path: "/equipment-rental/mobile-kitchen-trailers/",
     image: "/images/catalog/mobile-kitchen-trailers-960.webp",
     smallImage: "/images/catalog/mobile-kitchen-trailers-480.webp",
@@ -26,7 +26,7 @@ export const equipment: EquipmentCard[] = [
     tags: ["Meal production", "Commercial kitchens", "24/7 support"],
   },
   {
-    name: "Dishwashing Trailers",
+    name: "Dishwashing",
     path: "/portable-dishwashing-trailer-rental/",
     image: "/media/4723f18940a45f69bd1c8483.webp",
     category: "Food sanitation",
@@ -36,7 +36,7 @@ export const equipment: EquipmentCard[] = [
     tags: ["Warewashing", "Sanitation", "Food service"],
   },
   {
-    name: "Refrigeration Trailers",
+    name: "Refrigeration",
     path: "/equipment-rental/refrigeration/",
     image: "/images/catalog/refrigeration-trailers-960.webp",
     smallImage: "/images/catalog/refrigeration-trailers-480.webp",
@@ -45,6 +45,61 @@ export const equipment: EquipmentCard[] = [
     detail:
       "Tell us what you need to store, the required temperature range and your delivery schedule. We can review unit size, power and site access.",
     tags: ["Cold storage", "Food safety", "Temperature control"],
+  },
+  {
+    name: "Shower",
+    path: "/equipment-rental/shower-trailer/",
+    image: "/images/catalog/temporary-shower-trailers-960.webp",
+    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
+    category: "Hygiene facilities",
+    text: "Private mobile shower facilities planned around occupancy and daily servicing.",
+    detail:
+      "Tell us how many people need showers and when shifts change. We can review shower capacity, hot water, wastewater and placement requirements.",
+    tags: ["Showers", "Crew welfare", "Daily servicing"],
+  },
+  {
+    name: "Restroom",
+    path: "/equipment-rental/restroom-trailers/",
+    image: "/images/catalog/restroom-trailers-960.webp",
+    smallImage: "/images/catalog/restroom-trailers-480.webp",
+    category: "Site amenities",
+    text: "Clean temporary restroom facilities for crews, guests and field operations.",
+    detail:
+      "Share the number of people on site, accessibility needs and rental duration. We can review restroom capacity, water connections and servicing.",
+    tags: ["Restrooms", "Accessibility", "Site support"],
+  },
+  {
+    name: "Shower and Restroom Combination Trailers",
+    path: "/services/shower-restroom-combination-trailers/",
+    image: "/images/catalog/temporary-shower-trailers-960.webp",
+    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
+    category: "Combined hygiene facilities",
+    text: "Restroom and shower facilities together for temporary sites and crew accommodation.",
+    detail:
+      "Compare the number of toilets and showers, privacy needs and peak use periods. Confirm the floor plan, water heating, drainage and servicing before delivery.",
+    tags: ["Combined facilities", "Private showers", "Site support"],
+  },
+  {
+    name: "Sleeper",
+    path: "/equipment-rental/mobile-sleep-trailers/",
+    image: "/images/catalog/mobile-sleep-trailers-960.webp",
+    smallImage: "/images/catalog/mobile-sleep-trailers-480.webp",
+    category: "Workforce housing",
+    text: "Temporary sleeping accommodations for remote crews and extended operations.",
+    detail:
+      "Start with crew size, shift patterns, privacy needs and rental duration. We can help coordinate sleeping units with the support facilities your site requires.",
+    tags: ["Crew lodging", "Remote sites", "Base camps"],
+  },
+  {
+    name: "Laundry",
+    path: "/equipment-rental/laundry-trailers/",
+    image: "/images/catalog/laundry-trailers-960.webp",
+    smallImage: "/images/catalog/laundry-trailers-480.webp",
+    category: "Workforce support",
+    text: "Mobile laundry capacity for base camps, response teams and long-term projects.",
+    detail:
+      "Share your crew size, laundry volume and operating schedule. We can discuss machine capacity, water, power, drainage and service access.",
+    tags: ["Laundry", "Base camps", "Long-term rentals"],
   },
   {
     name: "Handwashing Trailers",
@@ -56,52 +111,6 @@ export const equipment: EquipmentCard[] = [
     detail:
       "Share your expected occupancy and work zones. We can discuss station placement, water supply, drainage and service frequency.",
     tags: ["Hand hygiene", "Site safety", "Portable facilities"],
-  },
-  {
-    name: "Mobile Sleeper Trailer and Container",
-    path: "/equipment-rental/mobile-sleep-trailers/",
-    image: "/images/catalog/mobile-sleep-trailers-960.webp",
-    smallImage: "/images/catalog/mobile-sleep-trailers-480.webp",
-    category: "Workforce housing",
-    text: "Temporary sleeping accommodations for remote crews and extended operations.",
-    detail:
-      "Start with crew size, shift patterns, privacy needs and rental duration. We can help coordinate sleeping units with the support facilities your site requires.",
-    tags: ["Crew lodging", "Remote sites", "Base camps"],
-  },
-  {
-    name: "Restroom Trailers",
-    path: "/equipment-rental/restroom-trailers/",
-    image: "/images/catalog/restroom-trailers-960.webp",
-    smallImage: "/images/catalog/restroom-trailers-480.webp",
-    category: "Site amenities",
-    text: "Clean temporary restroom facilities for crews, guests and field operations.",
-    detail:
-      "Share the number of people on site, accessibility needs and rental duration. We can review restroom capacity, water connections and servicing.",
-    tags: ["Restrooms", "Accessibility", "Site support"],
-  },
-  {
-    name: "Shower Trailers",
-    path: "/equipment-rental/shower-trailer/",
-    image: "/images/catalog/temporary-shower-trailers-960.webp",
-    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
-    category: "Hygiene facilities",
-    text: "Private mobile shower facilities planned around occupancy and daily servicing.",
-    detail:
-      "Tell us how many people need showers and when shifts change. We can review shower capacity, hot water, wastewater and placement requirements.",
-    tags: ["Showers", "Crew welfare", "Daily servicing"],
-    secondaryName: "Shower and Restroom Combination Trailers",
-    secondaryPath: "/services/shower-restroom-combination-trailers/",
-  },
-  {
-    name: "Laundry Trailers",
-    path: "/equipment-rental/laundry-trailers/",
-    image: "/images/catalog/laundry-trailers-960.webp",
-    smallImage: "/images/catalog/laundry-trailers-480.webp",
-    category: "Workforce support",
-    text: "Mobile laundry capacity for base camps, response teams and long-term projects.",
-    detail:
-      "Share your crew size, laundry volume and operating schedule. We can discuss machine capacity, water, power, drainage and service access.",
-    tags: ["Laundry", "Base camps", "Long-term rentals"],
   },
 ];
 

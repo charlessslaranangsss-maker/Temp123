@@ -19,9 +19,9 @@ export type SourcePage = {
   images: { src: string; alt: string }[];
 };
 const nav = [
-  ["Location", "/service-areas/"],
+  ["Service Areas", "/service-areas/"],
   ["About Us", "/about-us/"],
-  ["Blog", "/blog/"],
+  ["Articles", "/blog/"],
   ["Contact Us", "/contact-us/"],
 ];
 const locationPrefix = "/equipment-rental/mobile-kitchen-trailers/";
@@ -89,18 +89,17 @@ export function Header({ path }: { path: string }) {
             <a href="/" aria-current={path === "/" ? "page" : undefined}>
               Home
             </a>
-            <div className="services-nav">
-              <a
+            <details className="services-nav">
+              <summary
                 className="services-trigger"
-                aria-expanded="false"
+                role="button"
                 aria-controls="services-panel"
-                href="/equipment-rental/"
                 aria-current={
                   path.startsWith("/equipment-rental/") ? "page" : undefined
                 }
               >
                 Services <span aria-hidden="true">⌄</span>
-              </a>
+              </summary>
               <div
                 id="services-panel"
                 className="services-panel"
@@ -117,19 +116,18 @@ export function Header({ path }: { path: string }) {
                 <div className="services-panel-body">
                   <div className="service-category-list">
                     {serviceCategories.map((category, index) => (
-                      <div
-                        className={
-                          "service-category" +
-                          (index === 0 ? " is-selected" : "")
-                        }
+                      <details
+                        className="service-category"
+                        name="service-category"
+                        open={index === 0}
                         key={category.name}
                       >
-                        <a
+                        <summary
                           className="service-category-link"
-                          href={category.href}
+                          role="button"
                         >
                           {category.name} <span aria-hidden="true">›</span>
-                        </a>
+                        </summary>
                         <section
                           className="service-submenu"
                           aria-label={`${category.name} models`}
@@ -150,12 +148,12 @@ export function Header({ path }: { path: string }) {
                             ))}
                           </div>
                         </section>
-                      </div>
+                      </details>
                     ))}
                   </div>
                 </div>
               </div>
-            </div>
+            </details>
             {nav.map(([n, p]) => (
               <a
                 href={p}
@@ -309,17 +307,17 @@ export function Footer() {
       <footer className="wrap footer">
         <div>
           <a className="wordmark" href="/">
-            temporary<span>123</span>
+            Temporary<span>123</span>
           </a>
           <p>Temporary facilities for the work ahead.</p>
           <small>© {new Date().getFullYear()} Temporary 123</small>
         </div>
         <div>
           <strong>Explore</strong>
-          <a href="/equipment-rental/">Equipment rental</a>
+          <a href="/equipment-rental/">Services</a>
           <a href="/services/">Project solutions</a>
           <a href="/industries/">Industries served</a>
-          <a href="/service-areas/">Locations directory</a>
+          <a href="/service-areas/">Service Areas</a>
         </div>
         <div>
           <strong>Get in touch</strong>
@@ -693,7 +691,7 @@ export function Site({
           <>
             <section className="blog-hero">
               <div className="wrap section">
-                <span className="eyebrow">TEMPORARY FACILITY RESOURCES</span>
+                <span className="eyebrow">ARTICLES & PLANNING GUIDES</span>
                 <h1>
                   Field notes for
                   <br />
@@ -803,7 +801,7 @@ export function Site({
                     isLocationPagePath(path) ? "/service-areas/" : "/services/"
                   }
                 >
-                  {isLocationPagePath(path) ? "Locations" : "Services"}
+                  {isLocationPagePath(path) ? "Service Areas" : "Services"}
                 </a>
               </nav>
               <h1 className="page-title">{page.title}</h1>

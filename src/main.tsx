@@ -242,69 +242,51 @@ if (equipmentSearch) {
   );
 }
 
-// Click-controlled disclosure keeps category selection stable across pointer gaps.
-const servicesNav = document.querySelector<HTMLElement>(".services-nav");
+// Native disclosures work before the enhancement bundle arrives.
+const servicesNav = document.querySelector<HTMLDetailsElement>(".services-nav");
 const servicesTrigger =
-  servicesNav?.querySelector<HTMLAnchorElement>(".services-trigger");
+  servicesNav?.querySelector<HTMLElement>(".services-trigger");
 if (servicesNav && servicesTrigger) {
-  servicesTrigger.setAttribute("role", "button");
   const setOpen = (open: boolean) => {
-    servicesNav.classList.toggle("is-open", open);
+    servicesNav.open = open;
     servicesTrigger.setAttribute("aria-expanded", String(open));
   };
+  servicesNav.addEventListener("toggle", () => {
+    servicesTrigger.setAttribute("aria-expanded", String(servicesNav.open));
+  });
   servicesTrigger.addEventListener("click", (event) => {
-    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
-      return;
     event.preventDefault();
     setOpen(true);
   });
-  servicesTrigger.addEventListener("keydown", (event) => {
-    if (event.key === " ") {
+  const categories =
+    servicesNav.querySelectorAll<HTMLDetailsElement>(".service-category");
+  categories.forEach((category, index) => {
+    const trigger = category.querySelector<HTMLElement>(
+      ".service-category-link",
+    )!;
+    trigger.setAttribute("aria-controls", "service-submenu-" + index);
+    trigger.nextElementSibling?.setAttribute("id", "service-submenu-" + index);
+    const sync = () =>
+      trigger.setAttribute("aria-expanded", String(category.open));
+    sync();
+    category.addEventListener("toggle", sync);
+    trigger.addEventListener("click", (event) => {
       event.preventDefault();
-      setOpen(true);
-    }
-  });
-  servicesNav
-    .querySelectorAll<HTMLAnchorElement>(".service-category-link")
-    .forEach((link, index) => {
-      link.setAttribute("role", "button");
-      link.setAttribute("aria-expanded", String(index === 0));
-      link.setAttribute("aria-controls", "service-submenu-" + index);
-      link.nextElementSibling?.setAttribute("id", "service-submenu-" + index);
-      const select = () => {
-        servicesNav
-          .querySelectorAll(".service-category")
-          .forEach((category) => category.classList.remove("is-selected"));
-        servicesNav
-          .querySelectorAll(".service-category-link")
-          .forEach((item) => item.setAttribute("aria-expanded", "false"));
-        link.parentElement?.classList.add("is-selected");
-        link.setAttribute("aria-expanded", "true");
-      };
-      link.addEventListener("click", (event) => {
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
-          return;
-        event.preventDefault();
-        select();
-      });
-      link.addEventListener("keydown", (event) => {
-        if (event.key === " ") {
-          event.preventDefault();
-          select();
-        }
+      categories.forEach((item) => {
+        item.open = item === category;
       });
     });
+  });
   document.addEventListener("click", (event) => {
     if (!servicesNav.contains(event.target as Node)) setOpen(false);
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && servicesNav.classList.contains("is-open")) {
+    if (event.key === "Escape" && servicesNav.open) {
       setOpen(false);
       servicesTrigger.focus();
     }
   });
 }
-
 const mapDialog = document.querySelector<HTMLDialogElement>(".map-dialog");
 const mapTrigger =
   document.querySelector<HTMLButtonElement>("[data-expand-map]");
