@@ -142,6 +142,7 @@ export function Footer() {
           <strong>Explore</strong>
           <a href="/equipment-rental/">Equipment rental</a>
           <a href="/services/">Project solutions</a>
+          <a href="/industries/">Industries served</a>
           <a href="/service-areas/">Locations directory</a>
         </div>
         <div>
@@ -167,8 +168,9 @@ export function Site({
   catalog?: { path: string; title: string }[];
 }) {
   const contact = ["/contact/", "/contact-us/"].includes(path);
-  const equipmentBrief =
-    !page && equipmentCatalogData.items.find((item) => item.path === path);
+  const equipmentBrief = equipmentCatalogData.items.find(
+    (item) => item.path === path,
+  );
   return (
     <div id="top">
       <Header path={path} />
@@ -297,6 +299,29 @@ export function Site({
               </details>
             ))}
             <Button />
+          </section>
+        ) : path === "/about-us/" ? (
+          <section className="wrap section narrow">
+            <span className="eyebrow">ABOUT TEMPORARY 123</span>
+            <h1>
+              Facilities planned
+              <br />
+              around real work.
+            </h1>
+            <p>
+              Temporary 123 helps organizations plan mobile kitchens, restrooms,
+              showers, workforce accommodation and supporting site facilities.
+            </p>
+            <p>
+              Start with your location, schedule, crew size and utility
+              requirements. Our team can help you review equipment options, site
+              access and delivery arrangements for your project.
+            </p>
+            <p>
+              Call <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a> to
+              speak with a specialist, 24 hours a day.
+            </p>
+            <Button href="/equipment-rental/">Explore equipment</Button>
           </section>
         ) : page ? (
           <section className="wrap section source-layout">

@@ -60,9 +60,16 @@ for (const width of [320, 390, 768, 1440]) {
   });
 }
 
-test("new equipment briefs remain readable on mobile", async ({ page }) => {
+test("equipment briefs remain readable and connected on mobile", async ({
+  page,
+}) => {
   await page.setViewportSize({ width: 320, height: 844 });
-  for (const item of catalog.items.filter((i) => !i.recovered)) {
+  const briefs = catalog.items.filter(
+    (item, index) =>
+      catalog.items.findIndex((candidate) => candidate.path === item.path) ===
+      index,
+  );
+  for (const item of briefs) {
     await page.goto(item.path);
     await expect(page.locator("h1")).toHaveText(item.name);
     await expect(page.locator(".brief-intro .button")).toHaveAttribute(
@@ -75,5 +82,8 @@ test("new equipment briefs remain readable on mobile", async ({ page }) => {
       ),
       item.path,
     ).toBe(true);
+    expect(await page.locator(".brief-related a").count()).toBeGreaterThanOrEqual(
+      2,
+    );
   }
 });

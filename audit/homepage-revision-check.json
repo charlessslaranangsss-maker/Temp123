@@ -1,8 +1,11 @@
 {
-  "checkedAt": "2026-09-11T17:45:56.695Z",
-  "htmlPages": 638,
-  "localLinks": 13576,
-  "localImages": 1336,
+  "checkedAt": "2026-09-11T18:28:13.870Z",
+  "htmlPages": 636,
+  "localLinks": 14802,
+  "localImages": 1236,
+  "uniqueTitles": 636,
+  "uniqueDescriptions": 636,
+  "linkedRoutes": 659,
   "problems": [],
   "migration": {
     "expected": 98253,

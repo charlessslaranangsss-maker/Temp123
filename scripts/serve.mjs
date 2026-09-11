@@ -12,7 +12,17 @@ http
       res.writeHead(400).end();
       return;
     }
-    const redirect = redirects.find((rule) => rule.source === path);
+    const redirect = redirects.find((rule) => {
+      const pattern = rule.source
+        .split("/")
+        .map((segment) =>
+          segment
+            .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            .replace(/:[A-Za-z0-9_]+/g, "[^/]+"),
+        )
+        .join("/");
+      return new RegExp(`^${pattern}$`).test(path);
+    });
     if (redirect) {
       res
         .writeHead(308, {

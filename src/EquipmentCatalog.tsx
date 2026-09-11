@@ -132,6 +132,11 @@ export function EquipmentCatalog() {
 }
 
 export function EquipmentBrief({ item }: { item: CatalogItem }) {
+  const related = catalog.items
+    .filter(
+      (candidate) => candidate.group === item.group && candidate.id !== item.id,
+    )
+    .slice(0, 3);
   return (
     <section className="wrap section equipment-brief">
       <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -197,6 +202,20 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
           </div>
         </dl>
       </div>
+      {related.length > 0 && (
+        <section className="brief-related" aria-labelledby="related-equipment">
+          <span className="eyebrow">RELATED EQUIPMENT</span>
+          <h2 id="related-equipment">Continue planning your site.</h2>
+          <div>
+            {related.map((candidate) => (
+              <a href={candidate.path} key={candidate.id}>
+                {candidate.name}
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
       <a className="text-link" href="/equipment-rental/#all-equipment">
         ← Browse all equipment
       </a>

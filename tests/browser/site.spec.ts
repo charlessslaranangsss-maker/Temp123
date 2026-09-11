@@ -111,6 +111,7 @@ for (const width of [320, 768, 1024, 1440]) {
       "/equipment-rental/mobile-kitchen-trailers/",
       "/service-areas/",
       "/planning/",
+      "/about-us/",
     ]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);

@@ -28,6 +28,176 @@
   ],
   "redirects": [
     {
+      "source": "/houston-texas-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-:location/",
+      "destination": "/equipment-rental/restroom-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/shower-trailer/portable-shower-trailers-in-:location/",
+      "destination": "/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-remote-workforce-housing-services-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-services-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-rentals-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-house-company-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/workforce-housing-shelters-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-workforce-housing-in-:location/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-workforce-housing-facilities/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/containerized-shower-trailers/",
+      "destination": "/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/sleeper-trailers/",
+      "destination": "/equipment-rental/mobile-sleep-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/command-center-trailers/",
+      "destination": "/equipment-rental/modular-command-center-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/decontamination-trailers/",
+      "destination": "/equipment-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/dump-rental/",
+      "destination": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/multi-trailer/",
+      "destination": "/equipment-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/port-potties-and-port-johns/",
+      "destination": "/equipment-rental/restroom-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/ramp-rental/",
+      "destination": "/equipment-rental/ramp-rentals/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/stair-rental/",
+      "destination": "/equipment-rental/stair-rentals/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/waste-container/",
+      "destination": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "permanent": true
+    },
+    {
+      "source": "/catering/",
+      "destination": "/food-services-2/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-migrant-containerized-living-spaces/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/modular-temporary-camp-facilities/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/modular-temporary-workforce-housing-facilities/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-basecamp-housing-service-company/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-containerized-military-berthing-solution/",
+      "destination": "/remote-containerized-military-berthing-solution-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-housing-facilities/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-temporary-workforce-housing-facilities-rental/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-facilities/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/2023/04/2-Food-Service-Design.png",
+      "destination": "/food-services-2/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact-us/",
+      "permanent": true
+    },
+    {
+      "source": "/planning-tool/",
+      "destination": "/planning/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/",
+      "destination": "/equipment-rental/",
+      "permanent": true
+    },
+    {
       "source": "/inventory/laundry-trailers/",
       "destination": "/equipment-rental/laundry-trailers/",
       "permanent": true

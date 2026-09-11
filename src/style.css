@@ -1810,6 +1810,35 @@ body.dialog-open .mobile-call {
   line-height: 1.6;
   color: var(--muted);
 }
+.brief-related {
+  margin: var(--space-7) 0 var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+.brief-related h2 {
+  margin: var(--space-2) 0 var(--space-4);
+}
+.brief-related > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+.brief-related a {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.brief-related a:hover,
+.brief-related a:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue);
+}
 @media (max-width: 1023px) {
   .catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1864,5 +1893,8 @@ body.dialog-open .mobile-call {
   .brief-planning {
     grid-template-columns: 1fr;
     gap: var(--space-5);
+  }
+  .brief-related > div {
+    grid-template-columns: 1fr;
   }
 }

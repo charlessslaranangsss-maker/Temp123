@@ -8,6 +8,7 @@ import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 import { load } from "cheerio";
 import { catalog } from "../src/EquipmentCatalog";
+import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
 const release =
   site.mode === "production" &&
@@ -42,13 +43,47 @@ const coreRoutes = [
   "/privacy/",
   "/equipment-rental/",
 ];
+const redirectDestinations = new Map(
+  vercel.redirects.map((rule) => [rule.source, rule.destination]),
+);
+const redirectedRoutes = new Set(redirectDestinations.keys());
 const allRoutes = [
   ...new Set([
     ...coreRoutes,
     ...pages.map((p) => p.path),
     ...catalog.items.map((item) => item.path),
   ]),
-];
+].filter((path) => !redirectedRoutes.has(path));
+const editorialNoindex = new Set([
+  "/26ft-military-bulk-kitchen/",
+  "/4000-correctional-facilities-series/",
+  "/blog/",
+  "/government/hospitals/",
+  "/modular-kitchen-facilities/",
+  "/video/",
+]);
+const indexableRoutes = allRoutes.filter(
+  (path) => !redirectedRoutes.has(path) && !editorialNoindex.has(path),
+);
+const compact = (value: string, maximum: number) => {
+  const clean = value.replace(/\s+/g, " ").trim();
+  if (clean.length <= maximum) return clean;
+  const shortened = clean.slice(0, maximum + 1).replace(/\s+\S*$/, "");
+  return shortened || clean.slice(0, maximum);
+};
+const sourceDescription = (page: SourcePage) => {
+  const inherited = page.description.replace(/\s+/g, " ").trim();
+  const unusable =
+    inherited.length < 50 ||
+    /^(previous|next)(\s+(previous|next))?/i.test(inherited) ||
+    /complete list of states and cities|forminator_form|other related services|contact us today/i.test(
+      inherited,
+    ) ||
+    (inherited.length >= 155 && !/[.!?]$/.test(inherited));
+  if (!unusable) return inherited;
+  const subject = compact(page.title.split("|")[0], 65);
+  return `Explore ${subject} from Temporary 123. Call 800-443-5212 to discuss site requirements, equipment availability and delivery.`;
+};
 const renderContent = (page: SourcePage) => {
   let html = page.html.replace(
     /<h2>Complete List of States and Cities of United States[\s\S]*/,
@@ -60,9 +95,11 @@ const renderContent = (page: SourcePage) => {
   html = html.replace(/href="(\/[^"#?]*)([^\"]*)"/g, (match, p, suffix) =>
     catalog.items.some((item) => item.legacyPath === p)
       ? `href="${catalog.items.find((item) => item.legacyPath === p)!.path}${suffix}"`
-      : allRoutes.includes(p)
-        ? match
-        : `href="https://temporary123.com${p}${suffix}"`,
+      : redirectDestinations.has(p)
+        ? `href="${redirectDestinations.get(p)}${suffix}"`
+        : allRoutes.includes(p)
+          ? match
+          : `href="https://temporary123.com${p}${suffix}"`,
   );
   return (
     html ||
@@ -85,7 +122,7 @@ for (const path of [...allRoutes, "/404/"]) {
     : page
       ? {
           title: page.title + " | Temporary 123",
-          description: page.description,
+          description: sourceDescription(page),
         }
       : path === "/contact-us/"
         ? {
@@ -106,19 +143,70 @@ for (const path of [...allRoutes, "/404/"]) {
               }
             : pageInfo(path);
   const canonical =
-    release && path !== "/404/"
+    release && path !== "/404/" && indexableRoutes.includes(path)
       ? `${site.origin.replace(/\/$/, "")}${path}`
       : "";
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at 800-443-5212 to discuss your site, rental dates and equipment requirements.`;
   }
-  const structured = canonical
-    ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "Organization", name: site.brand, url: site.origin, telephone: site.phoneE164 }).replace(/</g, "\\u003c")}</script>`
+  const schema = canonical
+    ? path === "/"
+      ? {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${site.origin}#organization`,
+              name: site.brand,
+              url: site.origin,
+              telephone: site.phoneE164,
+              logo: `${site.origin.replace(/\/$/, "")}/images/logo.webp`,
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${site.origin}#website`,
+              name: site.brand,
+              url: site.origin,
+              publisher: { "@id": `${site.origin}#organization` },
+            },
+          ],
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: site.origin,
+            },
+            ...(catalogItem
+              ? [
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Equipment rental",
+                    item: `${site.origin.replace(/\/$/, "")}/equipment-rental/`,
+                  },
+                ]
+              : []),
+            {
+              "@type": "ListItem",
+              position: catalogItem ? 3 : 2,
+              name: page?.title || catalogItem?.name || info.title,
+              item: canonical,
+            },
+          ],
+        }
+    : null;
+  const structured = schema
+    ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>`
     : "";
   const head =
     structured +
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
-    `<meta property="og:site_name" content="${esc(site.brand)}"><meta name="twitter:card" content="summary_large_image">` +
+    `<meta property="og:site_name" content="${esc(site.brand)}"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(info.title)}"><meta name="twitter:description" content="${esc(info.description)}">` +
     (canonical
       ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(site.brand)} temporary facility planning">`
       : "");
@@ -126,7 +214,7 @@ for (const path of [...allRoutes, "/404/"]) {
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)
     .replace(
       /<meta name="robots" content="[^"]*"\s*\/?\s*>/,
-      `<meta name="robots" content="${canonical ? "index,follow" : "noindex,nofollow"}"/>`,
+      `<meta name="robots" content="${canonical ? "index,follow" : path === "/404/" ? "noindex,nofollow" : "noindex,follow"}"/>`,
     )
     .replace("<!--page-head-->", head)
     .replace(
@@ -135,7 +223,9 @@ for (const path of [...allRoutes, "/404/"]) {
         <Site
           path={path}
           page={page ? { ...page, html: renderContent(page) } : undefined}
-          catalog={pages.map((p) => ({ path: p.path, title: p.title }))}
+          catalog={pages
+            .filter((p) => !redirectedRoutes.has(p.path))
+            .map((p) => ({ path: p.path, title: p.title }))}
         />,
       ),
     );
@@ -176,11 +266,11 @@ await writeFile(
   "dist/robots.txt",
   release
     ? `User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${site.origin.replace(/\/$/, "")}/sitemap.xml\n`
-    : "User-agent: *\nAllow: /\n# Draft HTML carries noindex. Protect private previews at the host.\n",
+    : "User-agent: *\nAllow: /\nDisallow: /api/\n# Revision HTML carries noindex while the primary domain remains elsewhere.\n",
 );
 await writeFile(
   "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? allRoutes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
+  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? indexableRoutes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
 );
 console.log(
   `Static HTML generated for ${allRoutes.length} pages + 404 (${release ? "production" : "draft/noindex"}).`,

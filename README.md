@@ -34,3 +34,5 @@ Preview: `http://localhost:4173`. It serves built pages and does not execute liv
 - `scripts/import-wordpress.mjs`: resumable public API recovery. Original download batches remain outside Git.
 
 Read [the current handoff](docs/REVIEW-AND-HANDOFF.md). Earlier audit documents describe the abandoned April draft and are historical, not current release evidence.
+
+The current technical search review is in [the SEO audit](docs/seo-audit-2026-09-12.md).
