@@ -78,16 +78,15 @@ export function Home() {
               <span aria-hidden="true" /> Nationwide equipment rentals
             </span>
             <h1 id="rental-title">
-              Mobile kitchens &amp;
+              Temporary Facility Trailer
               <br />
-              temporary facilities.
-              <br />
-              <em>Made for your site.</em>
+              <em>Rentals Across the USA</em>
             </h1>
             <p>
-              Kitchens, cold storage, restrooms and crew facilities. Everything
-              your operation needs to keep moving through renovations, remote
-              projects and the unexpected.
+              Mobile shower trailers, shower and restroom combination trailers,
+              laundry trailers, sleeper and bunkhouse trailers, mobile kitchens,
+              dishwashing trailers, and refrigeration trailers for short- and
+              long-term rental.
             </p>
             <div className="rental-hero-actions">
               <a className="button home-primary" href="/contact-us/">
