@@ -113,7 +113,7 @@ for (const width of [390, 1440])
     });
   });
 
-test("contact attention animates the outline while reduced motion remains steady", async ({
+test("contact controls remain steady with both motion preferences", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
@@ -123,7 +123,7 @@ test("contact attention animates the outline while reduced motion remains steady
       await page
         .locator(selector)
         .evaluate((e) => getComputedStyle(e).animationName),
-    ).toBe("contact-attention");
+    ).toBe("none");
     expect(
       await page.locator(selector).evaluate((e) => getComputedStyle(e).opacity),
     ).toBe("1");

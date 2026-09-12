@@ -35,7 +35,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     );
     await expect(supportBar.locator("a")).toHaveCSS(
       "color",
-      "rgb(179, 13, 27)",
+      "rgb(255, 255, 255)",
     );
     await expect(page.locator(".utility-status i")).toHaveCSS(
       "background-color",
@@ -47,7 +47,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
         .evaluate(
           (element) => getComputedStyle(element, "::after").animationName,
         ),
-    ).toBe("live-status-blink");
+    ).toBe("none");
     const contactRail = page.locator(".contact-rail");
     await expect(contactRail).toBeVisible();
     await expect(contactRail).toHaveAttribute("href", "/contact-us/");
@@ -63,7 +63,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(phone).toHaveAttribute("href", "tel:+18004435212");
     await expect(phone.locator("strong")).toHaveCSS(
       "color",
-      "rgb(179, 13, 27)",
+      "rgb(182, 61, 47)",
     );
     await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
     const displayedPhoneNumbers = await page
@@ -84,7 +84,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
     expect(
       await page
-        .locator(".hero-visual img")
+        .locator(".masthead-photo img")
         .evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0),
     ).toBe(true);
     await page.screenshot({
@@ -364,7 +364,7 @@ test("reduced motion removes entry animations", async ({ page }) => {
   await page.goto("/");
   expect(
     await page
-      .locator(".hero-copy")
+      .locator(".masthead-stage")
       .evaluate((e) => getComputedStyle(e).animationName),
   ).toBe("none");
 });

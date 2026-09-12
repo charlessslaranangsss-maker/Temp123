@@ -1,4 +1,5 @@
 import "./style.css";
+import "./redesign.css";
 import "@fontsource/barlow/latin-400.css";
 import "@fontsource/barlow/latin-600.css";
 import "@fontsource/barlow-condensed/latin-600.css";
@@ -175,12 +176,17 @@ if (
 
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 let stepObserver: IntersectionObserver | undefined;
+let revealObserver: IntersectionObserver | undefined;
 function setupMotion() {
   stepObserver?.disconnect();
+  revealObserver?.disconnect();
   if (motionPreference.matches) {
     document
       .querySelectorAll(".step-seen")
       .forEach((e) => e.classList.remove("step-seen"));
+    document
+      .querySelectorAll(".reveal-observed")
+      .forEach((e) => e.classList.remove("reveal-observed"));
     return;
   }
   if (!("IntersectionObserver" in window)) return;
@@ -197,6 +203,24 @@ function setupMotion() {
   document
     .querySelectorAll("[data-step]:not(.step-seen)")
     .forEach((e) => stepObserver!.observe(e));
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("reveal-observed");
+        revealObserver?.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.12 },
+  );
+  document
+    .querySelectorAll(
+      ".equipment-card, .catalog-card, .section-heading, .industry-links > a, .industry-briefs > article, .model-planning, .about-service-grid > article, .blog-grid > article",
+    )
+    .forEach((element) => {
+      if (element.getBoundingClientRect().top >= window.innerHeight)
+        revealObserver!.observe(element);
+    });
 }
 setupMotion();
 motionPreference.addEventListener("change", setupMotion);

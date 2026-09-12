@@ -146,9 +146,9 @@ export function EquipmentImage({
   );
 }
 
-export function Cards() {
+export function Cards({ editorial = false }: { editorial?: boolean }) {
   return (
-    <div className="equipment-grid">
+    <div className={`equipment-grid${editorial ? " equipment-editorial" : ""}`}>
       {equipment.map((e, i) => (
         <article className="equipment-card" key={e.path} data-card>
           <a
@@ -168,6 +168,11 @@ export function Cards() {
             </span>
           </a>
           <div className="card-copy">
+            {editorial && (
+              <span className="service-index" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+            )}
             <h3>
               <a href={e.path}>{e.name}</a>
             </h3>

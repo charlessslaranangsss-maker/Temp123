@@ -4,66 +4,68 @@ import { Cards, EquipmentImage } from "./Equipment";
 export function Home() {
   return (
     <>
-      <section className="hero-shell">
-        <div className="hero wrap">
-          <div className="hero-copy">
-            <span className="eyebrow">
-              <i /> TEMPORARY FACILITIES. NATIONWIDE SUPPORT.
-            </span>
-            <h1>
-              Keep your
-              <br />
-              operations
-              <br />
-              <em>moving.</em>
-            </h1>
-            <p>
-              Mobile kitchens, restroom and shower trailers, and workforce
-              facilities for the people counting on you.
-            </p>
-            <a className="hero-call" href={`tel:${site.phoneE164}`}>
-              <span className="call-icon" aria-hidden="true">
-                ↗
+      <section className="home-masthead">
+        <div className="wrap">
+          <div className="masthead-top">
+            <div>
+              <span className="eyebrow">
+                TEMPORARY FACILITIES. NATIONWIDE SUPPORT.
               </span>
-              <span>
-                <small>Talk to our team, 24/7</small>
-                <strong>{site.phoneDisplay}</strong>
-              </span>
-            </a>
-            <a className="hero-explore" href="#equipment">
-              Find the facilities you need <span aria-hidden="true">↓</span>
-            </a>
-          </div>
-          <div className="hero-visual">
-            <EquipmentImage
-              image="kitchen"
-              alt="Mobile kitchen interior with commercial cooking and preparation equipment"
-              priority
-            />
-            <div className="visual-caption">
-              <span>MOBILE KITCHEN FACILITIES</span>
-              <a
-                href="/equipment-rental/mobile-kitchen-trailers/"
-                aria-label="Explore mobile kitchens"
-              >
-                ↗
+              <h1>
+                Keep your
+                <br />
+                operations <em>moving.</em>
+              </h1>
+            </div>
+            <div className="masthead-intro">
+              <p>
+                Mobile kitchens, restroom and shower trailers, and workforce
+                facilities for the people counting on you.
+              </p>
+              <a href="#equipment" className="masthead-explore">
+                Find your facilities <span aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
+          <div className="masthead-stage">
+            <figure className="masthead-photo">
+              <EquipmentImage
+                image="kitchen"
+                alt="Mobile kitchen interior with commercial cooking and preparation equipment"
+                priority
+              />
+              <figcaption>
+                <span>Mobile Kitchens</span>
+                <a
+                  href="/equipment-rental/mobile-kitchen-trailers/"
+                  aria-label="Explore mobile kitchens"
+                >
+                  Explore <span aria-hidden="true">↗</span>
+                </a>
+              </figcaption>
+            </figure>
+            <aside className="masthead-project">
+              <span className="eyebrow">THE WORK GOES ON</span>
+              <h2>
+                A renovation.
+                <br />A remote site.
+                <br />
+                <em>A way forward.</em>
+              </h2>
+              <p>
+                Tell us where, when and what your team needs. We’ll help you
+                work through the facilities and the details.
+              </p>
+              <a className="button" href="/contact-us/">
+                Plan your rental <span aria-hidden="true">↗</span>
+              </a>
+              <a className="masthead-phone" href={`tel:${site.phoneE164}`}>
+                <small>Talk to our team, 24/7</small>
+                <strong>{site.phoneDisplay}</strong>
+              </a>
+            </aside>
+          </div>
         </div>
-        <svg
-          className="site-plan"
-          viewBox="0 0 1440 90"
-          fill="none"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path d="M0 60H210L250 25H520L560 60H800L840 25H1120L1160 60H1440" />
-          <path
-            className="plan-route"
-            d="M0 60H210L250 25H520L560 60H800L840 25H1120L1160 60H1440"
-          />
-        </svg>
       </section>
       <section className="wrap section equipment-section" id="equipment">
         <div className="section-heading">
@@ -80,7 +82,7 @@ export function Home() {
             Explore the facilities that help your team carry on.
           </p>
         </div>
-        <Cards />
+        <Cards editorial />
       </section>
       <section className="process section" id="planning">
         <div className="wrap process-grid">
