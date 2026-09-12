@@ -18,7 +18,10 @@ const pages = [...globSync("dist/**/*.html")].map((file) => {
   const escaped = city.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const normalized = body
     .toLowerCase()
-    .replace(new RegExp(escaped, "gi"), "[location]")
+    .replace(
+      new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, "giu"),
+      "[location]",
+    )
     .replace(/\s+/g, " ")
     .trim();
   return {

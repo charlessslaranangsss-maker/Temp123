@@ -18,6 +18,54 @@
 body {
   background: var(--paper);
 }
+.location-planner-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+.location-planner input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  padding: 1rem;
+  background: #fff;
+  border-radius: 3px;
+  font: inherit;
+}
+.kitchen-project-guide {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.kitchen-project-guide h2 {
+  margin-block: 1rem 1.5rem;
+}
+.kitchen-planning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-block: 2rem;
+}
+.kitchen-planning-grid h3 {
+  font-size: 1.5rem;
+}
+.selected-project-location {
+  border-left: 3px solid var(--accent);
+  background: var(--pale);
+  padding: 1.25rem;
+}
+.kitchen-project-guide > p {
+  max-width: 75ch;
+}
+@media (max-width: 767px) {
+  .location-planner-controls {
+    flex-direction: column;
+  }
+  .kitchen-planning-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 .wrap {
   width: min(1280px, calc(100% - 80px));
   max-width: 1280px;

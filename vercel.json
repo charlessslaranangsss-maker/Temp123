@@ -336,6 +336,2796 @@
       "source": "/breakroom-trailer/",
       "destination": "/equipment-rental/breakroom-trailer/",
       "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/akiak-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Akiak",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/akins-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Akins",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/akron-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Akron",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/akutan-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Akutan",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alabama-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alabama",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alabaster-junction-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alabaster%20Junction",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alabaster-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alabaster",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alachua-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alachua",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aladdin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aladdin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alafaya-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alafaya",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alakanuk-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alakanuk",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamance-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamance",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alameda-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alameda",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamillo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamillo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamo-heights-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamo%20Heights",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamogordo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamogordo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamosa-east-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamosa%20East",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alamosa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alamosa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alanson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alanson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alapaha-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alapaha",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alaska-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alaska",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alatna-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alatna",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alba-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alba",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alban-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alban",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albany-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albany",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albany-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albany%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albee-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albee",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albemarle-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albemarle",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albers-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albers",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albert-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albert%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albert-lea-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albert%20Lea",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albert-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albert",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alberta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alberta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alberton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alberton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albertson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albertson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albertville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albertville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albion-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albion",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alborn-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alborn",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albright-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albright",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albrightsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albrightsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/albuquerque-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Albuquerque",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alburg-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alburg",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alburnett-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alburnett",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alburtis-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alburtis",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcalde-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcalde",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcan-border-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcan%20Border",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcan-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcan",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcester-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcester",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcoa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcoa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcolu-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcolu",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alcona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alcona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alda-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alda",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aldan-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aldan",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alden-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alden",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alder-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alder",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alderpoint-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alderpoint",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alderson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alderson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alderton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alderton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alderwood-manor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alderwood%20Manor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alderwood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alderwood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aldie-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aldie",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aldine-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aldine",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aldora-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aldora",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aldrich-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aldrich",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aledo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aledo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aleknagik-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aleknagik",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alembic-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alembic",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aleneva-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aleneva",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alert-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alert",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alex-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alex",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexander-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexander%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexander-mills-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexander%20Mills",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexander-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexander",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexandria-bay-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexandria%20Bay",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexandria-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexandria",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alexis-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alexis",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfalfa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfalfa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfarata-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfarata",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alford-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alford",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfordsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfordsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfred-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfred",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfred-south-la-paloma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfred-South%20La%20Paloma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alfred-station-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alfred%20Station",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algansee-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algansee",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alger-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alger",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algiers-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algiers",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algoa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algoa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algodones-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algodones",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algoma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algoma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algonac-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algonac",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algonquin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algonquin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/algood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Algood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alhambra-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alhambra",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ali-chuk-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ali%20Chuk",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ali-chukson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ali%20Chukson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ali-molina-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ali%20Molina",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alice-acres-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alice%20Acres",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alice-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alice",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aliceville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aliceville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alicia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alicia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alief-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alief",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aline-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aline",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aliquippa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aliquippa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aliso-viejo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aliso%20Viejo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allagash-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allagash",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allaire-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allaire",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allakaket-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allakaket",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allamuchy-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allamuchy",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allamuchy-panther-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allamuchy-Panther%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allapattah-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allapattah",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allardt-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allardt",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allegan-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allegan",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allegany-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allegany",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alleghany-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alleghany",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alleghenyville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alleghenyville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alleman-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alleman",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allen-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allen%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allen-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allen",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allen-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allen%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allendale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allendale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenhurst-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenhurst",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenport-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenport",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenspark-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenspark",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenstown-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenstown",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allensville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allensville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allensworth-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allensworth",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allentown-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allentown",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allenwood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allenwood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allerton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allerton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allgood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allgood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alliance-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alliance",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alligator-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alligator",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allingtown-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allingtown",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allison-gap-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allison%20Gap",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allison-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allison",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allison-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allison%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allisonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allisonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allouez-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allouez",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alloway-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alloway",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allport-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allport",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alluwe-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alluwe",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allyn-grapeview-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allyn-Grapeview",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/allyn-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Allyn",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alma-center-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alma%20Center",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almeda-beach-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almeda%20Beach",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almedia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almedia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almena-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almena",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almira-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almira",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almond-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almond",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almont-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almont",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/almyra-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Almyra",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alna-center-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alna%20Center",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alna-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alna",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aloha-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aloha",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alondra-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alondra%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alorton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alorton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpaugh-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpaugh",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpena-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpena",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpha-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpha",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpharetta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpine-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpine",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpine-northwest-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpine%20Northwest",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alpine-village-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alpine%20Village",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alplaus-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alplaus",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsace-manor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsace%20Manor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsea-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsea",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsen-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsen",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsey-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsey",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsip-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsip",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alstead-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alstead",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alston-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alston",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alsuma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alsuma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alta-sierra-estates-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alta%20Sierra%20Estates",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alta-sierra-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alta%20Sierra",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alta-sierra-ranches-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alta%20Sierra%20Ranches",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alta-vista-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alta%20Vista",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altadena-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altadena",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altair-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altair",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altamahaw-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altamahaw",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altamont-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altamont",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altamonte-springs-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altamonte%20Springs",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altavista-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altavista",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altenburg-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altenburg",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altha-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altha",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altheimer-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altheimer",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altmar-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altmar",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alto-bonito-colonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alto%20Bonito%20Colonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alto-bonito-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alto%20Bonito",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alto-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alto",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alto-pass-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alto%20Pass",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alton-north-historical-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alton%20North%20(historical)",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altoona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altoona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altura-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altura",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alturas-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alturas",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/altus-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Altus",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alum-bank-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alum%20Bank",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alum-creek-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alum%20Creek",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alum-rock-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alum%20Rock",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alva-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alva",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvarado-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvarado",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alviso-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alviso",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvord-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvord",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvordton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvordton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alvwood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alvwood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/alzada-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alzada",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ama-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ama",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amado-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amado",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amador-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amador%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amadore-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amadore",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amagansett-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amagansett",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amagon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amagon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amalga-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amalga",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amalia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amalia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amana-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amana",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amanda-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amanda",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amanda-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amanda%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amargosa-colonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amargosa%20Colonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amargosa-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amargosa%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amarillo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amarillo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amasa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amasa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amawalk-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amawalk",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amaya-colonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amaya%20Colonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amazonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amazonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amber-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amber",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amberg-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amberg",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amberley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amberley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ambia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ambia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amble-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amble",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ambler-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ambler",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amboy-center-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amboy%20Center",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amboy-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amboy",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ambridge-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ambridge",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ambrose-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ambrose",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amelia-court-house-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amelia%20Court%20House",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amelia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amelia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amenia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amenia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amenia-union-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amenia%20Union",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/american-canyon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=American%20Canyon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/american-falls-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=American%20Falls",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/american-fork-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=American%20Fork",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/americus-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Americus",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amery-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amery",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ames-lake-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ames%20Lake",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ames-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ames",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amesbury-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amesbury",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amesti-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amesti",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amesville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amesville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amherst-center-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amherst%20Center",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amherst-junction-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amherst%20Junction",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amherst-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amherst",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amherstdale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amherstdale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amherstdale-robinette-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amherstdale-Robinette",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amidon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amidon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amistad-acres-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amistad%20Acres",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amite-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amite",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amity-gardens-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amity%20Gardens",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amity-harbor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amity%20Harbor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amity-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amity",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amityville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amityville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ammannsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ammannsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ammon-ford-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ammon%20Ford",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ammon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ammon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amoret-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amoret",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amorita-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amorita",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amory-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amory",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ampere-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ampere",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amsterdam-churchill-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amsterdam-Churchill",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amsterdam-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amsterdam",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amston-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amston",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/amy-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Amy",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anacoco-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anacoco",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anaconda-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anaconda",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anacortes-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anacortes",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anadarko-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anadarko",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anaheim-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anaheim",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anahola-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anahola",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anahuac-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anahuac",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anaktuvuk-pass-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anaktuvuk%20Pass",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anamoose-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anamoose",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anamosa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anamosa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anawalt-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anawalt",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-bay-gardens-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor%20Bay%20Gardens",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-bay-harbor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor%20Bay%20Harbor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-bay-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor%20Bay",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-bay-shores-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor%20Bay%20Shores",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchor-point-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchor%20Point",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchorage-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchorage",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anchorville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anchorville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ancient-oaks-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ancient%20Oaks",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ancram-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ancram",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andalusia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andalusia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anderson-island-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anderson%20Island",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anderson-mill-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anderson%20Mill",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anderson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anderson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andersonville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andersonville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andes-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andes",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andice-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andice",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andover-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andover",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andres-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andres",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andrew-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andrew",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andrews-afb-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andrews%20AFB",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/andrews-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Andrews",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anegam-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anegam",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aneta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aneta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aneth-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aneth",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angel-fire-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angel%20Fire",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angel-island-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angel%20Island",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angela-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angela",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angelica-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angelica",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angelo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angelo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angels-camp-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angels%20Camp",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angelus-oaks-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angelus%20Oaks",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angie-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angie",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angier-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angier",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anglesea-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anglesea",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angleton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angleton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angola-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angola",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angola-on-the-lake-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angola%20on%20the%20Lake",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angoon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angoon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angora-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angora",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anguilla-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anguilla",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angus-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angus",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/angwin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Angwin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aniak-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aniak",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/animas-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Animas",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anita-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anita",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aniwa-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aniwa",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ankeny-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ankeny",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anmoore-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anmoore",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ann-arbor-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ann%20Arbor",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anna-maria-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anna%20Maria",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anna-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anna",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annabella-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annabella",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annada-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annada",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annandale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annandale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annapolis-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annapolis",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annawan-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annawan",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annetta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annetta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annetta-north-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annetta%20North",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annetta-south-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annetta%20South",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annex-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annex",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anniston-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anniston",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/annville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Annville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anoka-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anoka",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anselmo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anselmo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ansley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ansley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ansonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ansonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ansonville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ansonville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ansted-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ansted",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antares-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antares",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antelope-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antelope",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antelope-valley-crestview-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antelope%20Valley-Crestview",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antelope-wells-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antelope%20Wells",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anthem-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anthem",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anthon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anthon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anthony-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anthony",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anthonyville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anthonyville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anthoston-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anthoston",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antietam-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antietam",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antigo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antigo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antimony-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antimony",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antioch-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antioch",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antler-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antler",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antlers-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antlers",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antoine-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antoine",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anton-chico-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anton%20Chico",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antonito-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antonito",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antreville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antreville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antrim-center-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antrim%20Center",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antrim-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antrim",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/antwerp-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Antwerp",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anvik-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anvik",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anza-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anza",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anzac-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anzac",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/anzac-village-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Anzac%20Village",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apache-creek-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apache%20Creek",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apache-junction-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apache%20Junction",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apache-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apache",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apalachicola-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apalachicola",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apalachin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apalachin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apex-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apex",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apison-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apison",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aplin-beach-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aplin%20Beach",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aplington-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aplington",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apollo-beach-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apollo%20Beach",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apollo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apollo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apopka-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apopka",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appalachia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appalachia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-canyon-lake-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Canyon%20Lake",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-creek-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Creek",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-grove-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Grove",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-mountain-lake-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Mountain%20Lake",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-river-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20River",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-springs-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Springs",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apple-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apple%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appleby-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appleby",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/applegate-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Applegate",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appleton-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appleton%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appleton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appleton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/applewold-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Applewold",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/applewood-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Applewood",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appling-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appling",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/appomattox-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Appomattox",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aptos-hills-larkin-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aptos%20Hills-Larkin%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aptos-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aptos",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/apulia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Apulia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aqua-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aqua%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aquadale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aquadale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aquasco-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aquasco",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aquebogue-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aquebogue",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aquia-harbour-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aquia%20Harbour",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aquilla-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aquilla",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arab-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arab",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arabi-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arabi",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aragon-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aragon",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aransas-pass-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aransas%20Pass",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arapaho-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arapaho",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arapahoe-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arapahoe",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbela-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbela",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arboles-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arboles",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbon-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbon%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbor-vitae-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbor%20Vitae",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbovale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbovale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbuckle-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbuckle",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbutus-beach-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbutus%20Beach",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbutus-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbutus",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arbyrd-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arbyrd",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcade-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcade",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcadia-lakes-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcadia%20Lakes",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcadia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcadia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcanum-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcanum",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcata-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcata",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archbald-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archbald",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archbold-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archbold",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archdale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archdale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archer-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archer%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archer-lodge-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archer%20Lodge",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archer-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archer",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/archie-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Archie",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arco-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arco",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arcola-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arcola",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arctic-village-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arctic%20Village",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arden-arcade-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arden-Arcade",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arden-hills-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arden%20Hills",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arden-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arden",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arden-on-the-severn-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arden%20on%20the%20Severn",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardencroft-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardencroft",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardentown-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardentown",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardmore-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardmore",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardoch-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardoch",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardsley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardsley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ardsley-on-hudson-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ardsley-on-Hudson",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aredale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aredale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arena-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arena",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arenas-valley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arenas%20Valley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arendtsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arendtsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arenzville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arenzville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argenta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argenta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argentine-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argentine",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argillite-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argillite",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argonne-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argonne",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argos-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argos",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argusville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argusville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/argyle-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Argyle",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arial-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arial",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arietta-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arietta",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arimo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arimo",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arion-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arion",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aripeka-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aripeka",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arispe-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arispe",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aristes-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aristes",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aristocrat-ranchettes-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aristocrat%20Ranchettes",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/ariton-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Ariton",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arivaca-junction-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arivaca%20Junction",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arivaca-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arivaca",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arizona-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arizona%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arizona-village-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arizona%20Village",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arjay-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arjay",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkadelphia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkadelphia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkansas-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkansas%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkansaw-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkansaw",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkdale-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkdale",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkoe-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkoe",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkoma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkoma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkport-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkport",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arkwright-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arkwright",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arland-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arland",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arlanza-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arlanza",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arlee-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arlee",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arley-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arley",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arlington-heights-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arlington%20Heights",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arlington-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arlington",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arma-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arma",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armada-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armada",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armagh-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armagh",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armilda-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armilda",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armington-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armington",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arminto-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arminto",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armonk-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armonk",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armour-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armour",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armstrong-creek-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armstrong%20Creek",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/armstrong-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Armstrong",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arn-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arn",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnaudville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnaudville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnegard-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnegard",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnett-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnett",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnheim-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnheim",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnold-city-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnold%20City",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnold-line-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnold%20Line",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnold-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnold",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnolds-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnolds%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnoldsville-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnoldsville",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arnot-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arnot",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aroma-park-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aroma%20Park",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/aromas-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Aromas",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arona-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arona",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arp-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arp",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arpelar-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arpelar",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arpin-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arpin",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrey-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrey",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arriba-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arriba",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrington-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrington",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrochar-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrochar",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrow-point-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrow%20Point",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrow-rock-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrow%20Rock",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrowbear-lake-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrowbear%20Lake",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrowhead-springs-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrowhead%20Springs",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrowsic-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrowsic",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arrowsmith-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arrowsmith",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-alto-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Alto",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-colorado-estates-colonia-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Colorado%20Estates%20Colonia",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-gardens-la-tina-ranch-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Gardens-La%20Tina%20Ranch",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-gardens-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Gardens",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-grande-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Grande",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-hondo-mobile-kitchen-rental/",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Hondo",
+      "permanent": true
     }
   ]
 }

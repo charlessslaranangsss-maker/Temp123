@@ -47,10 +47,15 @@ http
       return new RegExp(`^${pattern}$`).test(path);
     });
     if (redirect) {
+      const destination = new URL(redirect.destination, "http://localhost");
+      for (const [key, value] of new URL(req.url, "http://localhost")
+        .searchParams) {
+        if (!destination.searchParams.has(key))
+          destination.searchParams.append(key, value);
+      }
       res
         .writeHead(308, {
-          Location:
-            redirect.destination + new URL(req.url, "http://localhost").search,
+          Location: destination.pathname + destination.search,
         })
         .end();
       return;

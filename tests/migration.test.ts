@@ -7,6 +7,49 @@ import {
 } from "../scripts/seo-policy";
 import { renderSourceContent } from "../scripts/source-content";
 import vercel from "../vercel.json";
+import consolidation from "../content/location-consolidation.json";
+import { readFileSync } from "node:fs";
+import { gunzipSync } from "node:zlib";
+import { createHash } from "node:crypto";
+import { load } from "cheerio";
+
+describe("evidence-based city consolidation", () => {
+  it("retains source archives and only consolidates identical location articles", () => {
+    const fingerprints = new Set<string>();
+    for (const row of consolidation.routes) {
+      const source = JSON.parse(
+        gunzipSync(
+          readFileSync(
+            new URL(`../content/pages/${row.sourceFile}`, import.meta.url),
+          ),
+        ).toString(),
+      );
+      expect(source.id, row.path).toBe(row.sourceId);
+      const html = renderSourceContent(source.html, {
+        origin: "https://temporary123.com",
+        routes: new Set(),
+        redirects: new Map(),
+        media: {},
+        unresolved: new Set(),
+      });
+      const escaped = row.location.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const text = load(html)
+        .text()
+        .toLowerCase()
+        .replace(
+          new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, "giu"),
+          "[location]",
+        )
+        .replace(/\s+/g, " ")
+        .trim();
+      fingerprints.add(createHash("sha256").update(text).digest("hex"));
+      expect(
+        vercel.redirects.find((rule) => rule.source === row.path),
+      ).toMatchObject({ destination: row.destination, permanent: true });
+    }
+    expect(fingerprints.size).toBe(1);
+  });
+});
 
 describe("migration indexing separation", () => {
   it("keeps preview builds excluded even when editorial production mode is selected", () => {

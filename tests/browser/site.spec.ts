@@ -189,7 +189,7 @@ for (const width of [390, 1440])
     await expect(page.locator(".coverage-map")).toContainText(
       "Top 50 States in USA Organic States",
     );
-    await expect(page.locator("#catalog-search")).toBeVisible();
+    await expect(page.locator("#project-location")).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -368,25 +368,24 @@ test("reduced motion removes entry animations", async ({ page }) => {
       .evaluate((e) => getComputedStyle(e).animationName),
   ).toBe("none");
 });
-test("catalog filters recovered locations without loading React", async ({
+test("location planner carries the selected place into the kitchen inquiry", async ({
   page,
 }) => {
   await page.goto("/service-areas/");
-  await expect(page.locator(".catalog-list a")).toHaveCount(558);
-  await expect(page.getByRole("link", { name: "About Us" })).toHaveCount(1);
-  await expect(page.locator(".catalog-list").getByText("About Us")).toHaveCount(
-    0,
+  await page
+    .getByLabel("Project city and state", { exact: true })
+    .fill("Akiak, Alaska");
+  await page.getByRole("button", { name: "Explore mobile kitchens" }).click();
+  await expect(page.locator("h1")).toHaveText("Mobile Kitchens");
+  await expect(page.locator("[data-project-location]")).toHaveText(
+    "Akiak, Alaska",
   );
-  await expect(page.locator(".catalog-list").getByText("Blog")).toHaveCount(0);
+  await page
+    .getByRole("link", { name: "Discuss your kitchen project" })
+    .click();
   await expect(
-    page.locator(".catalog-list").getByText("Equipment Rental"),
-  ).toHaveCount(0);
-  await page.getByRole("searchbox").fill("kitchen");
-  await expect(page.getByRole("status")).toContainText("matching pages");
-  const visible = page.locator(".catalog-list a:visible");
-  expect(await visible.count()).toBeGreaterThan(0);
-  for (const label of await visible.allTextContents())
-    expect(label.toLowerCase()).toContain("kitchen");
+    page.locator('#contact-drawer input[name="location"]'),
+  ).toHaveValue("Akiak, Alaska");
 });
 test("About Us and Blog provide dedicated search-focused content", async ({
   page,

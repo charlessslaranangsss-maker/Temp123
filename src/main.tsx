@@ -33,6 +33,38 @@ mobileNav?.addEventListener("focusout", () => {
 
 const contactDrawer =
   document.querySelector<HTMLDialogElement>("#contact-drawer");
+const requestedLocation =
+  new URLSearchParams(window.location.search)
+    .get("location")
+    ?.trim()
+    .slice(0, 120) || "";
+if (requestedLocation) {
+  document
+    .querySelectorAll<HTMLElement>("[data-project-location]")
+    .forEach((element) => {
+      element.textContent = requestedLocation;
+    });
+  document
+    .querySelectorAll<HTMLElement>("[data-location-context]")
+    .forEach((element) => {
+      element.hidden = false;
+    });
+  document.querySelectorAll<HTMLElement>("#quote-island").forEach((element) => {
+    element.dataset.selectedLocation = requestedLocation;
+  });
+  document
+    .querySelectorAll<HTMLAnchorElement>('a[href="/contact-us/"]')
+    .forEach((anchor) => {
+      anchor.href = `/contact-us/?location=${encodeURIComponent(requestedLocation)}`;
+    });
+  document
+    .querySelectorAll<HTMLAnchorElement>(".service-category-cards a")
+    .forEach((anchor) => {
+      const destination = new URL(anchor.href);
+      destination.searchParams.set("location", requestedLocation);
+      anchor.href = destination.href;
+    });
+}
 let contactTrigger: HTMLElement | SVGElement | null = null;
 let contactScroll = 0;
 if (
@@ -61,6 +93,17 @@ if (
     event.preventDefault();
     if (contactDrawer.open) return;
     contactTrigger = anchor;
+    const inquiryLocation =
+      destination.searchParams.get("location")?.trim().slice(0, 120) ||
+      requestedLocation;
+    if (inquiryLocation) {
+      const island = contactDrawer.querySelector<HTMLElement>("#quote-island");
+      if (island) island.dataset.selectedLocation = inquiryLocation;
+      const field = contactDrawer.querySelector<HTMLInputElement>(
+        'input[name="location"]',
+      );
+      if (field) field.value = inquiryLocation;
+    }
     if (anchor.hasAttribute("data-state-contact")) {
       const island = contactDrawer.querySelector<HTMLElement>("#quote-island");
       if (island)

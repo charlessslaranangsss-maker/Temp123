@@ -10,6 +10,7 @@ import {
 import { serviceCategories } from "./serviceMenu";
 import { CoverageMap } from "./CoverageMap";
 import { stateGuides, stateAnchor } from "./stateGuides";
+import consolidatedLocations from "../content/location-consolidation.json" with { type: "json" };
 import { ServiceDetail, modelDetails } from "./ServiceDetail";
 export type SourcePage = {
   id: number;
@@ -474,32 +475,41 @@ export function Site({
               <div className="location-directory-heading">
                 <div>
                   <span className="eyebrow">FIND A SERVICE AREA</span>
-                  <h2>Search available location pages.</h2>
+                  <h2>Plan a rental for your location.</h2>
                 </div>
                 <p>
-                  Find Temporary 123 mobile kitchen trailer rental information
-                  for cities and states in our current directory.
+                  Explore kitchen configurations with your project location in
+                  mind. Confirm the state, delivery address and transport
+                  arrangements with our team before booking.
                 </p>
               </div>
-              <label className="search-label">
-                Find a city or state
-                <input
-                  id="catalog-search"
-                  type="search"
-                  placeholder="Search mobile kitchen rental locations"
-                />
-              </label>
-              <div className="catalog-list">
-                {catalog.map((p) => (
-                  <a key={p.path} href={p.path}>
-                    {p.title}
-                    <span>↗</span>
-                  </a>
-                ))}
-              </div>
-              <p id="catalog-status" role="status">
-                {catalog.length} service locations
-              </p>
+              <form
+                className="location-planner"
+                action="/equipment-rental/mobile-kitchen-trailers/"
+                method="get"
+              >
+                <label className="search-label" htmlFor="project-location">
+                  Project city and state
+                </label>
+                <div className="location-planner-controls">
+                  <input
+                    id="project-location"
+                    name="location"
+                    list="known-project-locations"
+                    placeholder="Enter your project location"
+                    maxLength={120}
+                    required
+                  />
+                  <button className="button" type="submit">
+                    Explore mobile kitchens <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+                <datalist id="known-project-locations">
+                  {consolidatedLocations.routes.map((row) => (
+                    <option key={row.path} value={row.location} />
+                  ))}
+                </datalist>
+              </form>
             </section>
           </>
         ) : path in modelDetails ? (
@@ -516,6 +526,17 @@ export function Site({
               <div className="service-category-heading">
                 <div>
                   <h1>{serviceCategory.name}</h1>
+                  {path === consolidatedLocations.destination && (
+                    <p
+                      className="selected-project-location"
+                      data-location-context
+                      hidden
+                    >
+                      Your project location: <strong data-project-location />.
+                      Include the state and full delivery address in your
+                      inquiry so we can confirm the correct destination.
+                    </p>
+                  )}
                   <p>{serviceCategory.description}</p>
                   <p>
                     {
@@ -547,6 +568,52 @@ export function Site({
                   </a>
                 ))}
               </div>
+              {path === consolidatedLocations.destination && (
+                <section
+                  className="kitchen-project-guide"
+                  aria-labelledby="kitchen-project-heading"
+                >
+                  <span className="eyebrow">PREPARE YOUR PROJECT BRIEF</span>
+                  <h2 id="kitchen-project-heading">
+                    Match the kitchen to the operation.
+                  </h2>
+                  <div className="kitchen-planning-grid">
+                    <article>
+                      <h3>Cooking and service</h3>
+                      <p>
+                        Describe the menu, meals per service and busiest
+                        operating period. Identify which functions need
+                        temporary space: preparation, cooking, refrigeration,
+                        dishwashing or the full kitchen.
+                      </p>
+                    </article>
+                    <article>
+                      <h3>Site and connections</h3>
+                      <p>
+                        Bring site dimensions, delivery access and the available
+                        power, potable-water and wastewater arrangements.
+                        Equipment choice and placement should be reviewed
+                        against those details.
+                      </p>
+                    </article>
+                    <article>
+                      <h3>Dates and continuity</h3>
+                      <p>
+                        Separate delivery and setup time from the date food
+                        service must begin. For a renovation, explain how staff
+                        and supplies will move between the temporary kitchen and
+                        the serving area.
+                      </p>
+                    </article>
+                  </div>
+                  <p>
+                    Availability, transport feasibility, setup responsibilities
+                    and servicing are confirmed for the actual project. A
+                    location selection is a starting point for that discussion.
+                  </p>
+                  <Button>Discuss your kitchen project</Button>
+                </section>
+              )}
             </div>
           </section>
         ) : equipmentBrief ? (
