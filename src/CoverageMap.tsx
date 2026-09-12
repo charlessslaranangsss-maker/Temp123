@@ -180,6 +180,7 @@ export function CoverageMap() {
           <span data-state-name>your state</span>. Our team can confirm
           availability, delivery and the right configuration for your site.
         </p>
+        <p className="state-dialog-question" data-state-question />
         <ul className="state-service-list">
           {serviceCategories.map((service, index) => (
             <li key={service.href}>

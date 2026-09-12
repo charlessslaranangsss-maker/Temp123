@@ -329,6 +329,18 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   stateDialog.querySelectorAll("[data-state-name]").forEach((node) => {
     node.textContent = name;
   });
+  const guide = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-state-guide]"),
+  ).find((node) => node.dataset.stateGuide === name);
+  const intro = stateDialog.querySelector("#state-services-intro");
+  const question = stateDialog.querySelector("[data-state-question]");
+  if (intro)
+    intro.textContent =
+      guide?.querySelector("[data-guide-intro]")?.textContent ||
+      `Discuss rental availability and delivery arrangements for your project in ${name}.`;
+  if (question)
+    question.textContent =
+      guide?.querySelector("[data-guide-question]")?.textContent || "";
   const contact = stateDialog.querySelector<HTMLAnchorElement>(
     "[data-state-contact]",
   );

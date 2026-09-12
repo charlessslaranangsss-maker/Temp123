@@ -9,6 +9,7 @@ import {
 } from "./EquipmentCatalog";
 import { serviceCategories } from "./serviceMenu";
 import { CoverageMap } from "./CoverageMap";
+import { stateGuides, stateAnchor } from "./stateGuides";
 import { ServiceDetail, modelDetails } from "./ServiceDetail";
 export type SourcePage = {
   id: number;
@@ -423,6 +424,52 @@ export function Site({
                 <CoverageMap />
               </div>
             </section>
+            <section
+              className="wrap section state-planning"
+              aria-labelledby="state-planning-title"
+            >
+              <div className="section-heading">
+                <div>
+                  <span className="eyebrow">PLAN FOR YOUR LOCATION</span>
+                  <h2 id="state-planning-title">
+                    A useful starting point
+                    <br />
+                    for each state.
+                  </h2>
+                </div>
+                <p>
+                  Choose your state for practical questions to bring to your
+                  rental conversation. Availability and delivery arrangements
+                  depend on your exact site and dates.
+                </p>
+              </div>
+              <div className="state-planning-grid">
+                {Object.entries(stateGuides).map(([name, guide]) => (
+                  <details
+                    id={stateAnchor(name)}
+                    data-state-guide={name}
+                    key={name}
+                  >
+                    <summary>
+                      {name}
+                      <span aria-hidden="true">+</span>
+                    </summary>
+                    <div>
+                      <h3>{guide.focus}</h3>
+                      <p data-guide-intro>{guide.intro}</p>
+                      <p className="state-planning-question">
+                        <strong>Before you call</strong>
+                        <span data-guide-question>{guide.question}</span>
+                      </p>
+                      <a href="/contact-us/" data-selected-state={name}>
+                        Discuss your {name} project{" "}
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
             <section className="wrap section location-directory">
               <div className="location-directory-heading">
                 <div>
@@ -510,12 +557,63 @@ export function Site({
           <section className="wrap section">
             <span className="eyebrow">EQUIPMENT & PROJECT SOLUTIONS</span>
             <h1>
-              Facilities that
-              <br />
-              keep work moving.
+              {path === "/equipment-rental/"
+                ? "Equipment for your temporary site."
+                : path === "/industries/"
+                  ? "Facilities shaped around your industry."
+                  : "Temporary facilities for the whole project."}
             </h1>
-            <p>Explore Temporary 123 equipment and project support.</p>
-            <Cards />
+            <p className="directory-intro">
+              {path === "/equipment-rental/"
+                ? "Compare equipment layouts and explore the facilities your operation needs. Confirm availability, access and connections with our team before selecting a unit."
+                : path === "/industries/"
+                  ? "Start with the work your team needs to keep doing. Each setting brings different requirements for food service, staff welfare and site access."
+                  : "Bring food service, hygiene and crew facilities into one site plan. Explore the services below, then discuss how they need to work together."}
+            </p>
+            {path === "/industries/" ? (
+              <div className="industry-briefs">
+                {[
+                  [
+                    "Construction & workforce",
+                    "Plan around the busiest shift",
+                    "Share crew numbers, shift changes and whether workers stay on site. Meal production, washing and sleeping requirements should follow the actual working day.",
+                    "/man-camps-for-rent/",
+                  ],
+                  [
+                    "Food service & hospitality",
+                    "Keep preparation and service connected",
+                    "Identify the functions affected by the renovation: cooking, cold storage, dishwashing or the full kitchen. Map the route between temporary preparation and the existing serving area.",
+                    "/food-services-2/",
+                  ],
+                  [
+                    "Government & public services",
+                    "Prepare the project requirements",
+                    "Bring the operating brief, site access procedures and procurement requirements. Review available supplier documents and confirm which details apply to the proposed rental.",
+                    "/government/",
+                  ],
+                  [
+                    "Emergency & disaster response",
+                    "Establish the immediate priorities",
+                    "Provide the location, team size, access conditions and utilities known to be available. Separate the facilities needed first from those that can follow as the site develops.",
+                    "/disaster-relief-man-camp-workforce-rentals/",
+                  ],
+                ].map(([name, title, text, href], index) => (
+                  <article key={href}>
+                    <span className="eyebrow">
+                      {String(index + 1).padStart(2, "0")} / {name}
+                    </span>
+                    <h2>{title}</h2>
+                    <p>{text}</p>
+                    <a className="text-link" href={href}>
+                      Explore {name.toLowerCase()}{" "}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <Cards />
+            )}
             {path === "/equipment-rental/" ? (
               <EquipmentCatalog />
             ) : (
