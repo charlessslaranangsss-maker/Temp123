@@ -50,10 +50,10 @@ test("state click opens localized service choices and a direct call action", asy
     modal.getByRole("link", { name: "Dishwashing", exact: false }),
   ).toHaveAttribute("href", "/portable-dishwashing-trailer-rental/");
   await expect(modal.locator("#state-services-intro")).toContainText(
-    "temporary facility rental options",
+    "Temporary facility rental services",
   );
   await expect(modal.locator("#state-services-intro")).toContainText(
-    "Rent short-term",
+    "Customers can rent equipment",
   );
   await expect(modal.locator("#state-services-intro")).toContainText(
     "longer lease",

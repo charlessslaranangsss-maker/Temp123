@@ -354,7 +354,7 @@ const firstSentence = (copy: string) =>
   copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
 
 const rentalContext = (name: string) =>
-  `Compare temporary facility rental options in ${name}, USA. Rent short-term or ask about a longer lease across the United States.`;
+  `Temporary facility rental services are available for projects in ${name}, USA. Customers can rent equipment for short-term projects or request a longer lease for projects across the United States.`;
 
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide]) => [
