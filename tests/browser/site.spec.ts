@@ -21,9 +21,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(page.locator("h1")).toContainText(
       "Temporary Facility Trailer",
     );
-    await expect(page.locator("h1")).toContainText(
-      "Rentals Across the USA",
-    );
+    await expect(page.locator("h1")).toContainText("Rentals Across the USA");
     await expect(
       page.getByRole("link", { name: "Find your rental", exact: true }),
     ).toHaveAttribute("href", "#equipment");
@@ -337,6 +335,15 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await expect(
     dialog.getByRole("button", { name: "Close quick view" }),
   ).toBeFocused();
+  await expect(
+    dialog.getByRole("link", { name: "Call now", exact: false }),
+  ).toHaveAttribute("href", "tel:+18004435212");
+  await expect(
+    dialog.getByRole("list", { name: "Rental benefits" }),
+  ).toHaveCount(1);
+  await expect(dialog.getByRole("listitem")).toHaveCount(3);
+  await expect(dialog).toContainText("short-term rental availability");
+  await expect(dialog).toContainText("longer-term lease arrangements");
   for (let i = 0; i < 5; i++) {
     await page.keyboard.press("Tab");
     expect(
@@ -359,6 +366,9 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
   const cards = page.locator(".equipment-card");
   await expect(cards).toHaveCount(9);
   await expect(cards.locator("h3")).toHaveText(homepageServiceNames);
+  await expect(cards.locator(".card-actions > a")).toHaveCount(9);
+  for (const callLink of await cards.locator(".card-actions > a").all())
+    await expect(callLink).toHaveAttribute("href", "tel:+18004435212");
   await expect(
     cards.getByRole("link", {
       name: "Shower & restroom combinations",
@@ -449,7 +459,7 @@ test("FAQ and equipment navigation work without JavaScript", async ({
   await page.locator(".faq-item summary").first().click();
   await expect(page.locator(".faq-item p").first()).toBeVisible();
   await expect(page.locator(".quick-view:visible")).toHaveCount(0);
-  await page.locator(".card-actions a").first().click();
+  await page.locator(".equipment-card h3 a").first().click();
   await expect(page).toHaveURL(/mobile-kitchen-trailers/);
   await context.close();
 });

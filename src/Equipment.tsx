@@ -21,9 +21,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/mobile-kitchen-trailers-960.webp",
     smallImage: "/images/catalog/mobile-kitchen-trailers-480.webp",
     category: "Food service",
-    text: "Commercial kitchen space for renovations, planned projects and emergency food service.",
+    text: "Rent a commercial mobile kitchen and keep meal production moving through renovations, emergencies and remote projects.",
     detail:
-      "Tell us how many meals you serve, your menu and the equipment your team uses. We can discuss kitchen space, preparation areas and utility requirements.",
+      "Rent the kitchen capacity your team needs without waiting for a permanent build. Share your meal volume, menu and equipment requirements so our team can help match cooking space, preparation areas and utility needs.",
     tags: ["Meal production", "Commercial kitchens", "24/7 support"],
   },
   {
@@ -31,9 +31,9 @@ export const equipment: EquipmentCard[] = [
     path: "/portable-dishwashing-trailer-rental/",
     image: "/media/4723f18940a45f69bd1c8483.webp",
     category: "Food sanitation",
-    text: "Portable dishwashing capacity for temporary kitchens and high-volume operations.",
+    text: "Rent a dishwashing trailer and keep high-volume food service sanitary, organized and moving.",
     detail:
-      "Share your service volume, operating schedule and sanitation workflow. We can discuss wash capacity, utilities, wastewater and placement requirements.",
+      "Rent dedicated warewashing capacity that supports your operation from the first service to final cleanup. Share your volume and schedule so we can discuss wash capacity, utilities, wastewater and placement.",
     tags: ["Warewashing", "Sanitation", "Food service"],
   },
   {
@@ -42,9 +42,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/refrigeration-trailers-960.webp",
     smallImage: "/images/catalog/refrigeration-trailers-480.webp",
     category: "Cold storage",
-    text: "Temporary refrigerated storage for ingredients, prepared food and critical supplies.",
+    text: "Rent temperature-controlled cold storage for ingredients, prepared food and critical supplies.",
     detail:
-      "Tell us what you need to store, the required temperature range and your delivery schedule. We can review unit size, power and site access.",
+      "Rent refrigeration sized around what you store and how often supplies move. Tell us the required temperature range and delivery schedule so we can review unit size, power and site access.",
     tags: ["Cold storage", "Food safety", "Temperature control"],
   },
   {
@@ -53,9 +53,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/temporary-shower-trailers-960.webp",
     smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
     category: "Hygiene facilities",
-    text: "Private mobile shower facilities planned around occupancy and daily servicing.",
+    text: "Rent private mobile showers that help crews stay clean and comfortable on demanding sites.",
     detail:
-      "Tell us how many people need showers and when shifts change. We can review shower capacity, hot water, wastewater and placement requirements.",
+      "Rent shower capacity planned around your crew and shift changes. Share occupancy and peak-use periods so we can review privacy, hot water, wastewater and placement requirements.",
     tags: ["Showers", "Crew welfare", "Daily servicing"],
   },
   {
@@ -64,9 +64,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/restroom-trailers-960.webp",
     smallImage: "/images/catalog/restroom-trailers-480.webp",
     category: "Site amenities",
-    text: "Clean temporary restroom facilities for crews, guests and field operations.",
+    text: "Rent clean temporary restrooms for crews, guests and active field operations.",
     detail:
-      "Share the number of people on site, accessibility needs and rental duration. We can review restroom capacity, water connections and servicing.",
+      "Rent restroom facilities that fit your headcount, accessibility needs and operating schedule. We can help you review capacity, water connections, servicing access and placement.",
     tags: ["Restrooms", "Accessibility", "Site support"],
   },
   {
@@ -75,9 +75,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/temporary-shower-trailers-960.webp",
     smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
     category: "Combined hygiene facilities",
-    text: "Restroom and shower facilities together for temporary sites and crew accommodation.",
+    text: "Rent showers and restrooms in one coordinated trailer for temporary sites and crew accommodation.",
     detail:
-      "Compare the number of toilets and showers, privacy needs and peak use periods. Confirm the floor plan, water heating, drainage and servicing before delivery.",
+      "Rent one combined facility to simplify daily hygiene support on site. Compare toilet and shower capacity, privacy and peak use, then confirm water heating, drainage and servicing before delivery.",
     tags: ["Combined facilities", "Private showers", "Site support"],
   },
   {
@@ -86,9 +86,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/mobile-sleep-trailers-960.webp",
     smallImage: "/images/catalog/mobile-sleep-trailers-480.webp",
     category: "Workforce housing",
-    text: "Temporary sleeping accommodations for remote crews and extended operations.",
+    text: "Rent sleeper and bunkhouse trailers that give remote crews a practical place to rest between shifts.",
     detail:
-      "Start with crew size, shift patterns, privacy needs and rental duration. We can help coordinate sleeping units with the support facilities your site requires.",
+      "Rent sleeping capacity around crew size, shift patterns and privacy needs. We can help coordinate sleeper units with the kitchens, showers, restrooms and laundry your site requires.",
     tags: ["Crew lodging", "Remote sites", "Base camps"],
   },
   {
@@ -97,9 +97,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/laundry-trailers-960.webp",
     smallImage: "/images/catalog/laundry-trailers-480.webp",
     category: "Workforce support",
-    text: "Mobile laundry capacity for base camps, response teams and long-term projects.",
+    text: "Rent mobile laundry capacity for base camps, response teams and extended projects.",
     detail:
-      "Share your crew size, laundry volume and operating schedule. We can discuss machine capacity, water, power, drainage and service access.",
+      "Rent laundry capacity that keeps workwear and daily essentials moving through the week. Share crew size and volume so we can discuss machines, water, power, drainage and service access.",
     tags: ["Laundry", "Base camps", "Long-term rentals"],
   },
   {
@@ -108,9 +108,9 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/handwashing-stations-960.webp",
     smallImage: "/images/catalog/handwashing-stations-480.webp",
     category: "Hygiene facilities",
-    text: "Portable handwashing access for food service, events and active work sites.",
+    text: "Rent handwashing trailers that put convenient hygiene access where people need it most.",
     detail:
-      "Share your expected occupancy and work zones. We can discuss station placement, water supply, drainage and service frequency.",
+      "Rent handwashing access around your occupancy and active work zones. We can help plan station placement, water supply, drainage and service frequency for a smoother setup.",
     tags: ["Hand hygiene", "Site safety", "Portable facilities"],
   },
 ];
@@ -266,8 +266,15 @@ export function Cards({
               ))}
             </ul>
             <div className="card-actions">
-              <a href={e.path}>
-                {homepage ? "View rental" : "Explore facilities"}{" "}
+              <a
+                href={homepage ? `tel:${site.phoneE164}` : e.path}
+                aria-label={
+                  homepage
+                    ? `Call now about ${e.name} at ${site.phoneDisplay}`
+                    : undefined
+                }
+              >
+                {homepage ? "Call Now" : "Explore facilities"}{" "}
                 <span aria-hidden="true">↗</span>
               </a>
               <button
@@ -308,17 +315,28 @@ export function Cards({
                 <span className="eyebrow">{e.category}</span>
                 <h2 id={`equipment-title-${i}`}>{e.name}</h2>
                 <p>{e.detail}</p>
+                <ul className="dialog-benefits" aria-label="Rental benefits">
+                  {e.tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
                 {e.secondaryName && e.secondaryPath && (
                   <a className="text-link" href={e.secondaryPath}>
                     {e.secondaryName} →
                   </a>
                 )}
                 <p className="small">
-                  Availability and configurations are confirmed with your
-                  project proposal.
+                  Ask about short-term rental availability or longer-term lease
+                  arrangements. Final availability and configuration are
+                  confirmed with your project proposal.
                 </p>
-                <a className="button" href={`tel:${site.phoneE164}`}>
-                  Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
+                <a
+                  className="button dialog-call-now"
+                  href={`tel:${site.phoneE164}`}
+                  aria-label={`Call now ${site.phoneDisplay}`}
+                >
+                  Call Now <strong>{site.phoneDisplay}</strong>{" "}
+                  <span aria-hidden="true">↗</span>
                 </a>
                 <a className="text-link" href={e.path}>
                   View equipment details →

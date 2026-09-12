@@ -1,6 +1,6 @@
 // Editorial planning prompts, not claims of local inventory, delivery times,
 // permitting approval or completed projects. Service labels live in serviceMenu.
-export const stateGuides: Record<
+const stateGuideDetails: Record<
   string,
   { focus: string; intro: string; question: string }
 > = {
@@ -349,6 +349,16 @@ export const stateGuides: Record<
       "Who coordinates food, water and servicing deliveries during the working week?",
   },
 };
+
+const rentalContext = (name: string) =>
+  `For this ${name}, USA project, compare temporary facility rental options available across the United States. Rent trailers for a short-term need or ask about longer-term lease arrangements; availability and delivery are confirmed for the specific site and dates.`;
+
+export const stateGuides = Object.fromEntries(
+  Object.entries(stateGuideDetails).map(([name, guide]) => [
+    name,
+    { ...guide, intro: `${guide.intro} ${rentalContext(name)}` },
+  ]),
+) as typeof stateGuideDetails;
 
 export const stateAnchor = (name: string) =>
   `planning-${name.toLowerCase().replaceAll(" ", "-")}`;

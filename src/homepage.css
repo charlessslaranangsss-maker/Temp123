@@ -550,13 +550,23 @@
   min-height: 42px;
   padding: 0.6rem 0.8rem;
   border-radius: 9px;
-  background: #edf6f6;
-  color: #155560;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
   font-size: 0.74rem;
   font-weight: 800;
+  box-shadow: 0 8px 18px rgba(196, 58, 43, 0.16);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 .home-equipment .card-actions > a:hover {
-  background: #dceeed;
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  box-shadow: 0 10px 22px rgba(196, 58, 43, 0.22);
+  transform: translateY(-1px);
 }
 .home-equipment .quick-view {
   width: 42px;
@@ -571,6 +581,46 @@
 }
 .home-equipment .equipment-dialog .dialog-grid {
   display: block;
+}
+.home-equipment .equipment-dialog .dialog-copy > p:first-of-type {
+  color: #42626b;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.home-equipment .dialog-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 1rem 0 1.15rem;
+  list-style: none;
+}
+.home-equipment .dialog-benefits li {
+  padding: 0.45rem 0.68rem;
+  border: 1px solid #cfe3e5;
+  border-radius: 999px;
+  background: #eff7f6;
+  color: #155560;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.home-equipment .dialog-call-now {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 12px 24px rgba(196, 58, 43, 0.18);
+}
+.home-equipment .dialog-call-now:hover,
+.home-equipment .dialog-call-now:focus-visible {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+}
+.home-equipment .dialog-call-now strong {
+  margin-left: auto;
+  font: inherit;
+  white-space: nowrap;
 }
 .home-service-help {
   display: flex;

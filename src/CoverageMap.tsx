@@ -190,7 +190,7 @@ export function CoverageMap() {
         aria-describedby="state-services-intro"
       >
         <div className="state-services-heading">
-          <p className="eyebrow">Temporary facilities. Nationwide support.</p>
+          <p className="eyebrow">Temporary facilities across the USA.</p>
           <button
             type="button"
             data-close-state
@@ -200,12 +200,14 @@ export function CoverageMap() {
           </button>
         </div>
         <h2 id="state-services-title">
-          Services in <span data-state-name>your state</span>
+          Services in <span data-state-name>your state</span>, USA
         </h2>
         <p id="state-services-intro">
-          Explore rental options for your project in{" "}
-          <span data-state-name>your state</span>. Our team can confirm
-          availability, delivery and the right configuration for your site.
+          For your project in <span data-state-name>your state</span>, USA,
+          compare temporary facility rental options available across the United
+          States. Rent trailers for a short-term need or ask about longer-term
+          lease arrangements; availability and delivery are confirmed for the
+          specific site and dates.
         </p>
         <p className="state-dialog-question" data-state-question />
         <ul className="state-service-list">
@@ -223,11 +225,16 @@ export function CoverageMap() {
         </ul>
         <div className="state-services-cta">
           <div>
-            <h3>Plan your rental with us.</h3>
-            <p>Share your location, dates and facility needs.</p>
+            <h3>Need a trailer now?</h3>
+            <p>Speak directly with our USA rental team, available 24/7.</p>
           </div>
-          <a className="button" href="/contact-us/" data-state-contact>
-            Contact Us <span aria-hidden="true">↗</span>
+          <a
+            className="button state-call-now"
+            href={`tel:${site.phoneE164}`}
+            aria-label={`Call now ${site.phoneDisplay}`}
+          >
+            Call Now <strong>{site.phoneDisplay}</strong>{" "}
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
         <p className="state-services-call">

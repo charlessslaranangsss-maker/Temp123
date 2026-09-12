@@ -280,6 +280,9 @@
 }
 
 .coverage-map .state-services-dialog {
+  box-sizing: border-box;
+  width: min(780px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
   border: 1px solid #c4d9dd;
   border-radius: 20px;
   color: #112d36;
@@ -305,10 +308,21 @@
 }
 
 .coverage-map .state-services-cta .button {
-  border: 1px solid #087f8c;
+  border: 1px solid var(--accent);
   border-radius: 10px;
-  background: #087f8c;
+  background: var(--accent);
   color: #fff;
+}
+
+.coverage-map .state-services-cta .button:hover,
+.coverage-map .state-services-cta .button:focus-visible {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+}
+
+.coverage-map .state-services-cta .state-call-now strong {
+  font: inherit;
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {

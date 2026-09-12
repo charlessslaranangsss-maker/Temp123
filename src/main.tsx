@@ -141,18 +141,6 @@ if (
       );
       if (field) field.value = inquiryLocation;
     }
-    if (anchor.hasAttribute("data-state-contact")) {
-      const island = contactDrawer.querySelector<HTMLElement>("#quote-island");
-      if (island)
-        island.dataset.selectedLocation = anchor.dataset.selectedState || "";
-      const location = contactDrawer.querySelector<HTMLInputElement>(
-        'input[name="location"]',
-      );
-      if (location) location.value = anchor.dataset.selectedState || "";
-      contactTrigger = mapDialog?.open ? mapTrigger || null : stateTrigger;
-      stateDialog?.close();
-      mapDialog?.close();
-    }
     contactScroll = window.scrollY;
     mobileNav?.removeAttribute("open");
     contactDrawer.showModal();
@@ -445,10 +433,6 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   if (question)
     question.textContent =
       guide?.querySelector("[data-guide-question]")?.textContent || "";
-  const contact = stateDialog.querySelector<HTMLAnchorElement>(
-    "[data-state-contact]",
-  );
-  if (contact) contact.dataset.selectedState = name;
   stateDialog.showModal();
 };
 document.querySelectorAll<SVGElement>("[data-state]").forEach((state) => {
