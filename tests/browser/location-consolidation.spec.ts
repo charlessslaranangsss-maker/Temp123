@@ -47,7 +47,7 @@ test("old city link retains location and the approved service names", async ({
   ).toHaveValue("Akiak");
 });
 
-test("location planner and rental models remain usable without JavaScript", async ({
+test("location planner supports keyboard submission without JavaScript", async ({
   browser,
 }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
@@ -56,7 +56,8 @@ test("location planner and rental models remain usable without JavaScript", asyn
   await page
     .getByLabel("Project city and state", { exact: true })
     .fill("Arlington, Texas");
-  await page.getByRole("button", { name: "Explore mobile kitchens" }).click();
+  await page.getByLabel("Project city and state", { exact: true }).press("Escape");
+  await page.getByRole("button", { name: "Explore mobile kitchens" }).press("Enter");
   expect(new URL(page.url()).searchParams.get("location")).toBe(
     "Arlington, Texas",
   );
