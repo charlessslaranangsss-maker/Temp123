@@ -5,27 +5,27 @@ import { FacilityIcon } from "./FacilityIcon";
 const rentalGroups = [
   [
     "kitchen",
-    "Kitchens & dining",
-    "Cook. Serve. Keep going.",
+    "Mobile kitchen trailers",
+    "Commercial kitchen rentals.",
     "/equipment-rental/mobile-kitchen-trailers/",
   ],
   [
     "cold",
-    "Cold storage",
-    "Refrigeration that travels.",
+    "Refrigeration trailers",
+    "Temperature-controlled rentals.",
     "/equipment-rental/refrigeration/",
   ],
   [
     "shower",
-    "Restrooms & showers",
-    "Everyday essentials on site.",
+    "Shower & restroom trailers",
+    "Private hygiene facilities.",
     "/services/shower-restroom-combination-trailers/",
   ],
   [
     "living",
-    "Workforce living",
-    "Support your crew, day & night.",
-    "/man-camps-for-rent/",
+    "Sleeper & laundry trailers",
+    "Crew support facilities.",
+    "/equipment-rental/mobile-sleep-trailers/",
   ],
 ];
 const steps = [
