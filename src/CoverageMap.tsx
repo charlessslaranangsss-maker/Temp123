@@ -11,6 +11,17 @@ const callouts = [
   "Delaware",
   "Maryland",
 ];
+const basecampServiceNames = new Set([
+  "Mobile Kitchens",
+  "Shower",
+  "Shower and Restroom Combination Trailers",
+  "Sleeper",
+]);
+const stateServices = [...serviceCategories].sort((left, right) => {
+  const leftPriority = basecampServiceNames.has(left.name) ? 0 : 1;
+  const rightPriority = basecampServiceNames.has(right.name) ? 0 : 1;
+  return leftPriority - rightPriority;
+});
 // Offset labels within nearby state interiors where centered names would overlap.
 const labelOffsets: Record<string, [number, number]> = {
   Michigan: [0, 23],
@@ -219,17 +230,50 @@ export function CoverageMap() {
               equipment for short-term projects or request a longer lease for
               projects across the United States.
             </p>
+            <div className="state-local-context">
+              <p>
+                <strong>Travel areas</strong>
+                <span data-state-regions>
+                  Central, northern and southern areas
+                </span>
+              </p>
+              <p>
+                <strong>State fact</strong>
+                <span data-state-fact>Confirm the exact project location.</span>
+              </p>
+            </div>
+            <p className="state-service-summary" data-state-services-copy>
+              Basecamp rentals include mobile commercial kitchens, shower
+              trailers, shower and restroom combinations, and sleeper/bunkbed
+              trailers. Supporting temporary facilities are also available.
+            </p>
             <p className="state-dialog-question" data-state-question />
           </section>
 
           <figure className="state-dialog-visual">
-            <img
-              src="/images/catalog/mobile-kitchen-trailers-960.webp"
-              alt="Commercial equipment inside a mobile kitchen trailer"
-              width="850"
-              height="650"
-              data-state-image
-            />
+            <div className="state-dialog-photo-grid">
+              <img
+                src="/images/catalog/mobile-kitchen-trailers-960.webp"
+                alt="Commercial equipment inside a mobile kitchen trailer"
+                width="850"
+                height="650"
+                data-state-image
+              />
+              <img
+                src="/images/catalog/shower-trailer-960.webp"
+                alt="Interior of a mobile shower trailer"
+                width="850"
+                height="650"
+                data-state-gallery-image="1"
+              />
+              <img
+                src="/images/catalog/mobile-sleep-trailers-960.webp"
+                alt="Sleeper trailer prepared for a basecamp"
+                width="850"
+                height="650"
+                data-state-gallery-image="2"
+              />
+            </div>
             <span className="state-visual-monogram" data-state-initials>
               US
             </span>
@@ -244,12 +288,19 @@ export function CoverageMap() {
             aria-label="Temporary facility rental services"
           >
             <div className="state-service-heading">
-              <span>Available rental services</span>
+              <span>Basecamp and supporting rentals</span>
               <strong>9 facility types</strong>
             </div>
             <ul className="state-service-list">
-              {serviceCategories.map((service, index) => (
-                <li key={service.href}>
+              {stateServices.map((service, index) => (
+                <li
+                  className={
+                    basecampServiceNames.has(service.name)
+                      ? "basecamp-service"
+                      : undefined
+                  }
+                  key={service.href}
+                >
                   <a href={service.href}>
                     <span className="state-service-number" aria-hidden="true">
                       {String(index + 1).padStart(2, "0")}

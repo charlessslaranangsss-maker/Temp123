@@ -10,10 +10,10 @@ const rentalGroups = [
     "/equipment-rental/mobile-kitchen-trailers/",
   ],
   [
-    "cold",
-    "Refrigeration trailers",
-    "Temperature-controlled rentals.",
-    "/equipment-rental/refrigeration/",
+    "shower",
+    "Shower",
+    "Mobile shower trailer rentals.",
+    "/equipment-rental/shower-trailer/",
   ],
   [
     "shower",

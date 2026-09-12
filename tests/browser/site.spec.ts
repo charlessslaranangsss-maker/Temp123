@@ -374,7 +374,7 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
   await expect(cards).toHaveCount(9);
   await expect(page.locator(".hero-service-strip strong")).toHaveText([
     "Mobile Commercial Kitchen",
-    "Refrigeration trailers",
+    "Shower",
     "Shower & Restroom Combination",
     "Sleeper/Bunkbed Trailers",
   ]);

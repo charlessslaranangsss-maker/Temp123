@@ -4,12 +4,12 @@ import { stateGuides } from "../../src/stateGuides";
 
 const names = [
   "Mobile Kitchens",
-  "Dishwashing",
-  "Refrigeration",
   "Shower",
-  "Restroom",
   "Shower and Restroom Combination Trailers",
   "Sleeper",
+  "Dishwashing",
+  "Refrigeration",
+  "Restroom",
   "Laundry",
   "Handwashing Trailers",
 ];
@@ -21,6 +21,13 @@ test("every state guide uses natural rental, rent and lease language", () => {
   ).toBe(50);
   expect(
     new Set(Object.values(stateGuides).map((guide) => guide.image)).size,
+  ).toBe(50);
+  expect(
+    new Set(
+      Object.values(stateGuides).map((guide) =>
+        guide.gallery.map((item) => item.image).join("|"),
+      ),
+    ).size,
   ).toBe(50);
   expect(
     new Set(Object.values(stateGuides).map((guide) => guide.abbreviation)).size,
@@ -42,9 +49,24 @@ test("every state guide uses natural rental, rent and lease language", () => {
     expect(guide.intro, name).toMatch(/\blease\b/i);
     expect(guide.intro, name).toContain(`${name}, USA`);
     expect(guide.imageAlt.length, name).toBeGreaterThan(24);
+    expect(guide.gallery, name).toHaveLength(3);
+    expect(guide.regions.length, name).toBeGreaterThanOrEqual(3);
+    expect(guide.fact, name).toMatch(/state capital\.$/);
+    expect(guide.serviceSummary, name).toMatch(/basecamp/i);
+    expect(guide.serviceSummary, name).toMatch(/kitchen/i);
+    expect(guide.serviceSummary, name).toMatch(/shower/i);
+    expect(guide.serviceSummary, name).toMatch(/sleeper|bunkbed/i);
     expect(existsSync(`public${guide.image}`), `${name}: ${guide.image}`).toBe(
       true,
     );
+    for (const item of guide.gallery) {
+      expect(item.imageAlt.length, `${name}: ${item.image}`).toBeGreaterThan(
+        24,
+      );
+      expect(existsSync(`public${item.image}`), `${name}: ${item.image}`).toBe(
+        true,
+      );
+    }
   }
 });
 
@@ -80,6 +102,16 @@ test("state click opens localized service choices and a direct call action", asy
     stateGuides.California.imageAlt,
   );
   await expect(modal.locator("img[data-state-image]")).toBeVisible();
+  await expect(modal.locator("img[data-state-gallery-image]")).toHaveCount(2);
+  await expect(modal.locator("[data-state-regions]")).toContainText(
+    "Central Valley",
+  );
+  await expect(modal.locator("[data-state-fact]")).toHaveText(
+    "Sacramento is the state capital.",
+  );
+  await expect(modal.locator("[data-state-services-copy]")).toContainText(
+    "Basecamp",
+  );
   expect(
     await modal
       .locator("img[data-state-image]")

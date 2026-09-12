@@ -456,6 +456,18 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       guide?.dataset.stateImageAlt ||
       "Commercial equipment inside a mobile kitchen trailer";
   }
+  const galleryImages = stateDialog.querySelectorAll<HTMLImageElement>(
+    "img[data-state-gallery-image]",
+  );
+  const gallerySources = [
+    [guide?.dataset.stateImageTwo, guide?.dataset.stateImageAltTwo],
+    [guide?.dataset.stateImageThree, guide?.dataset.stateImageAltThree],
+  ];
+  galleryImages.forEach((image, index) => {
+    const [src, alt] = gallerySources[index] || [];
+    if (src) image.src = src;
+    if (alt) image.alt = alt;
+  });
   const initials = stateDialog.querySelector<HTMLElement>(
     "[data-state-initials]",
   );
@@ -468,6 +480,23 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   if (question)
     question.textContent =
       guide?.querySelector("[data-guide-question]")?.textContent || "";
+  const regions = stateDialog.querySelector("[data-state-regions]");
+  const fact = stateDialog.querySelector("[data-state-fact]");
+  const servicesCopy = stateDialog.querySelector("[data-state-services-copy]");
+  if (regions)
+    regions.textContent =
+      guide
+        ?.querySelector("[data-guide-regions]")
+        ?.textContent?.replace(/^Travel areas:\s*/i, "") ||
+      "Confirm the exact service area";
+  if (fact)
+    fact.textContent =
+      guide?.querySelector("[data-guide-fact]")?.textContent ||
+      "Confirm the exact project location.";
+  if (servicesCopy)
+    servicesCopy.textContent =
+      guide?.querySelector("[data-guide-services]")?.textContent ||
+      "Basecamp and supporting temporary facility rentals are available.";
   stateDialog.showModal();
 };
 document.querySelectorAll<SVGElement>("[data-state]").forEach((state) => {

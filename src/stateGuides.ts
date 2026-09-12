@@ -353,6 +353,470 @@ const stateGuideDetails: Record<
 const firstSentence = (copy: string) =>
   copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
 
+// These are plain-language travel planning areas rather than claims about
+// official sales territories. They help callers describe the part of a state
+// where a basecamp or temporary facility will be placed.
+const stateLocalDetails: Record<string, { regions: string[]; fact: string }> = {
+  Alabama: {
+    regions: ["North Alabama", "Central Alabama", "Wiregrass", "Gulf Coast"],
+    fact: "Montgomery is the state capital.",
+  },
+  Alaska: {
+    regions: ["Southcentral", "Interior", "Southeast", "Southwest", "Arctic"],
+    fact: "Juneau is the state capital.",
+  },
+  Arizona: {
+    regions: ["Northern Arizona", "Phoenix area", "Southern Arizona"],
+    fact: "Phoenix is the state capital.",
+  },
+  Arkansas: {
+    regions: ["Ozarks", "Arkansas River Valley", "Delta", "Southwest Arkansas"],
+    fact: "Little Rock is the state capital.",
+  },
+  California: {
+    regions: [
+      "North Coast",
+      "Bay Area",
+      "Central Valley",
+      "Los Angeles Basin",
+      "Inland Empire",
+      "San Diego",
+    ],
+    fact: "Sacramento is the state capital.",
+  },
+  Colorado: {
+    regions: [
+      "Front Range",
+      "Western Slope",
+      "Eastern Plains",
+      "San Luis Valley",
+    ],
+    fact: "Denver is the state capital.",
+  },
+  Connecticut: {
+    regions: [
+      "Litchfield Hills",
+      "Greater Hartford",
+      "Connecticut River Valley",
+      "Connecticut Shoreline",
+    ],
+    fact: "Hartford is the state capital.",
+  },
+  Delaware: {
+    regions: ["Northern Delaware", "Central Delaware", "Delaware Beaches"],
+    fact: "Dover is the state capital.",
+  },
+  Florida: {
+    regions: [
+      "Panhandle",
+      "North Florida",
+      "Central Florida",
+      "South Florida",
+      "Florida Keys",
+    ],
+    fact: "Tallahassee is the state capital.",
+  },
+  Georgia: {
+    regions: [
+      "North Georgia",
+      "Metro Atlanta",
+      "Central Georgia",
+      "Coastal Georgia",
+      "South Georgia",
+    ],
+    fact: "Atlanta is the state capital.",
+  },
+  Hawaii: {
+    regions: ["Oahu", "Maui County", "Hawaii Island", "Kauai"],
+    fact: "Honolulu is the state capital.",
+  },
+  Idaho: {
+    regions: [
+      "North Idaho",
+      "Southwest Idaho",
+      "Central Mountains",
+      "Eastern Idaho",
+    ],
+    fact: "Boise is the state capital.",
+  },
+  Illinois: {
+    regions: [
+      "Chicago area",
+      "Northern Illinois",
+      "Central Illinois",
+      "Southern Illinois",
+    ],
+    fact: "Springfield is the state capital.",
+  },
+  Indiana: {
+    regions: ["Northern Indiana", "Central Indiana", "Southern Indiana"],
+    fact: "Indianapolis is the state capital.",
+  },
+  Iowa: {
+    regions: [
+      "Northwest Iowa",
+      "Central Iowa",
+      "Northeast Iowa",
+      "Southern Iowa",
+    ],
+    fact: "Des Moines is the state capital.",
+  },
+  Kansas: {
+    regions: [
+      "Western Kansas",
+      "North Central Kansas",
+      "Kansas City area",
+      "South Central Kansas",
+      "Southeast Kansas",
+    ],
+    fact: "Topeka is the state capital.",
+  },
+  Kentucky: {
+    regions: [
+      "Western Coalfields",
+      "Bluegrass region",
+      "Eastern Kentucky",
+      "South Central Kentucky",
+    ],
+    fact: "Frankfort is the state capital.",
+  },
+  Louisiana: {
+    regions: [
+      "North Louisiana",
+      "Acadiana",
+      "Capital Region",
+      "Greater New Orleans",
+      "River Parishes",
+    ],
+    fact: "Baton Rouge is the state capital.",
+  },
+  Maine: {
+    regions: [
+      "Aroostook County",
+      "Highlands",
+      "Western Lakes and Mountains",
+      "Midcoast",
+      "DownEast and Acadia",
+      "Southern Coast",
+    ],
+    fact: "Augusta is the state capital.",
+  },
+  Maryland: {
+    regions: [
+      "Western Maryland",
+      "Capital Region",
+      "Central Maryland",
+      "Eastern Shore",
+      "Southern Maryland",
+    ],
+    fact: "Annapolis is the state capital.",
+  },
+  Massachusetts: {
+    regions: [
+      "Berkshires",
+      "Central Massachusetts",
+      "Greater Boston",
+      "North Shore",
+      "South Shore and Cape Cod",
+    ],
+    fact: "Boston is the state capital.",
+  },
+  Michigan: {
+    regions: [
+      "Upper Peninsula",
+      "Northern Lower Peninsula",
+      "West Michigan",
+      "Mid Michigan",
+      "Southeast Michigan",
+    ],
+    fact: "Lansing is the state capital.",
+  },
+  Minnesota: {
+    regions: [
+      "Northwest Minnesota",
+      "Northeast Minnesota",
+      "Central Minnesota",
+      "Twin Cities",
+      "Southern Minnesota",
+    ],
+    fact: "Saint Paul is the state capital.",
+  },
+  Mississippi: {
+    regions: [
+      "Delta",
+      "Hills",
+      "Central Mississippi",
+      "Pine Belt",
+      "Gulf Coast",
+    ],
+    fact: "Jackson is the state capital.",
+  },
+  Missouri: {
+    regions: [
+      "Northwest Missouri",
+      "Kansas City area",
+      "Central Missouri",
+      "Ozarks",
+      "St. Louis area",
+      "Southeast Missouri",
+    ],
+    fact: "Jefferson City is the state capital.",
+  },
+  Montana: {
+    regions: [
+      "Glacier Country",
+      "Central Montana",
+      "Yellowstone Country",
+      "Missouri River Country",
+      "Southeast Montana",
+    ],
+    fact: "Helena is the state capital.",
+  },
+  Nebraska: {
+    regions: [
+      "Panhandle",
+      "Sandhills",
+      "Central Nebraska",
+      "Northeast Nebraska",
+      "Lincoln and Omaha corridor",
+    ],
+    fact: "Lincoln is the state capital.",
+  },
+  Nevada: {
+    regions: [
+      "Northern Nevada",
+      "Reno Tahoe",
+      "Central Nevada",
+      "Las Vegas Valley",
+      "Southern Nevada",
+    ],
+    fact: "Carson City is the state capital.",
+  },
+  "New Hampshire": {
+    regions: [
+      "Great North Woods",
+      "White Mountains",
+      "Lakes Region",
+      "Dartmouth Lake Sunapee",
+      "Merrimack Valley",
+      "Seacoast",
+    ],
+    fact: "Concord is the state capital.",
+  },
+  "New Jersey": {
+    regions: [
+      "Skylands",
+      "Gateway Region",
+      "Central Jersey",
+      "Shore Region",
+      "Delaware River Region",
+      "Southern Shore",
+    ],
+    fact: "Trenton is the state capital.",
+  },
+  "New Mexico": {
+    regions: [
+      "North Central New Mexico",
+      "Northeast New Mexico",
+      "Albuquerque area",
+      "Southeast New Mexico",
+      "Southwest New Mexico",
+    ],
+    fact: "Santa Fe is the state capital.",
+  },
+  "New York": {
+    regions: [
+      "North Country",
+      "Capital Region",
+      "Central New York",
+      "Finger Lakes",
+      "Western New York",
+      "Hudson Valley",
+      "New York City and Long Island",
+    ],
+    fact: "Albany is the state capital.",
+  },
+  "North Carolina": {
+    regions: [
+      "Mountains",
+      "Piedmont Triad",
+      "Charlotte region",
+      "Research Triangle",
+      "Coastal Plain",
+      "Outer Banks",
+    ],
+    fact: "Raleigh is the state capital.",
+  },
+  "North Dakota": {
+    regions: [
+      "Western North Dakota",
+      "North Central North Dakota",
+      "Red River Valley",
+      "South Central North Dakota",
+    ],
+    fact: "Bismarck is the state capital.",
+  },
+  Ohio: {
+    regions: [
+      "Northeast Ohio",
+      "Northwest Ohio",
+      "Central Ohio",
+      "Southwest Ohio",
+      "Southeast Ohio",
+    ],
+    fact: "Columbus is the state capital.",
+  },
+  Oklahoma: {
+    regions: [
+      "Panhandle",
+      "Northwest Oklahoma",
+      "Green Country",
+      "Central Oklahoma",
+      "Kiamichi Country",
+      "Southwest Oklahoma",
+    ],
+    fact: "Oklahoma City is the state capital.",
+  },
+  Oregon: {
+    regions: [
+      "Oregon Coast",
+      "Willamette Valley",
+      "Southern Oregon",
+      "Central Oregon",
+      "Eastern Oregon",
+    ],
+    fact: "Salem is the state capital.",
+  },
+  Pennsylvania: {
+    regions: [
+      "Erie region",
+      "Pittsburgh and Southwest",
+      "Pennsylvania Wilds",
+      "Central Pennsylvania",
+      "Northeast Pennsylvania",
+      "Philadelphia and Southeast",
+    ],
+    fact: "Harrisburg is the state capital.",
+  },
+  "Rhode Island": {
+    regions: [
+      "Providence area",
+      "Blackstone Valley",
+      "Newport County",
+      "South County",
+    ],
+    fact: "Providence is the state capital.",
+  },
+  "South Carolina": {
+    regions: ["Upstate", "Midlands", "Pee Dee", "Lowcountry"],
+    fact: "Columbia is the state capital.",
+  },
+  "South Dakota": {
+    regions: [
+      "Black Hills and Badlands",
+      "Central South Dakota",
+      "Glacial Lakes and Prairies",
+      "Southeast South Dakota",
+    ],
+    fact: "Pierre is the state capital.",
+  },
+  Tennessee: {
+    regions: [
+      "West Tennessee",
+      "Middle Tennessee",
+      "Cumberland Plateau",
+      "East Tennessee",
+    ],
+    fact: "Nashville is the state capital.",
+  },
+  Texas: {
+    regions: [
+      "Panhandle",
+      "North Texas",
+      "East Texas",
+      "Central Texas",
+      "West Texas",
+      "Gulf Coast",
+      "South Texas",
+    ],
+    fact: "Austin is the state capital.",
+  },
+  Utah: {
+    regions: [
+      "Northern Utah",
+      "Wasatch Front",
+      "Central Utah",
+      "Southeastern Utah",
+      "Southwestern Utah",
+    ],
+    fact: "Salt Lake City is the state capital.",
+  },
+  Vermont: {
+    regions: [
+      "Northeast Kingdom",
+      "Champlain Valley",
+      "Central Vermont",
+      "Southern Vermont",
+    ],
+    fact: "Montpelier is the state capital.",
+  },
+  Virginia: {
+    regions: [
+      "Northern Virginia",
+      "Shenandoah Valley",
+      "Central Virginia",
+      "Hampton Roads",
+      "Eastern Shore",
+      "Southwest Virginia",
+    ],
+    fact: "Richmond is the state capital.",
+  },
+  Washington: {
+    regions: [
+      "Olympic Peninsula",
+      "Puget Sound",
+      "North Cascades",
+      "Central Washington",
+      "Eastern Washington",
+      "Southwest Washington",
+    ],
+    fact: "Olympia is the state capital.",
+  },
+  "West Virginia": {
+    regions: [
+      "Northern Panhandle",
+      "Mountaineer Country",
+      "Eastern Panhandle",
+      "Metro Valley",
+      "New River Greenbrier Valley",
+      "Southern Coalfields",
+    ],
+    fact: "Charleston is the state capital.",
+  },
+  Wisconsin: {
+    regions: [
+      "Northwoods",
+      "Lake Superior region",
+      "Central Wisconsin",
+      "Fox Valley",
+      "Madison area",
+      "Milwaukee and Southeast",
+      "Driftless Area",
+    ],
+    fact: "Madison is the state capital.",
+  },
+  Wyoming: {
+    regions: [
+      "Northwest Wyoming",
+      "Northeast Wyoming",
+      "Central Wyoming",
+      "Southwest Wyoming",
+      "Southeast Wyoming",
+    ],
+    fact: "Cheyenne is the state capital.",
+  },
+};
+
 // One owned Temporary123 photograph per state. These recovered assets came from
 // the production media library, so the service-area experience can vary without
 // relying on third-party stock imagery or repeating a photograph.
@@ -612,6 +1076,57 @@ const stateCodes = [
   "WY",
 ] as const;
 
+const basecampGalleryVisuals = [
+  [
+    "/images/catalog/mobile-kitchen-trailers-960.webp",
+    "Mobile commercial kitchen trailer prepared for temporary food service",
+  ],
+  [
+    "/images/catalog/shower-trailer-960.webp",
+    "Private fixtures inside a mobile shower trailer",
+  ],
+  [
+    "/images/catalog/mobile-sleep-trailers-960.webp",
+    "Mobile sleeper trailer ready to support a temporary basecamp",
+  ],
+  [
+    "/images/catalog/restroom-trailers-960.webp",
+    "Clean mobile restroom trailer interior for a temporary site",
+  ],
+  [
+    "/images/catalog/bunkhouse-trailers-960.webp",
+    "Bunkhouse trailer with sleeping space for a remote crew",
+  ],
+  [
+    "/images/catalog/temporary-shower-trailers-960.webp",
+    "Temporary shower trailer configured for workforce hygiene",
+  ],
+  [
+    "/images/catalog/laundry-trailers-960.webp",
+    "Commercial laundry equipment inside a mobile trailer",
+  ],
+  [
+    "/images/catalog/refrigeration-trailers-960.webp",
+    "Refrigeration trailer supporting temporary food storage",
+  ],
+  [
+    "/images/catalog/handwashing-stations-960.webp",
+    "Mobile handwashing stations for a temporary work site",
+  ],
+  [
+    "/images/catalog/dining-structure-rental-960.webp",
+    "Temporary dining structure arranged for a basecamp workforce",
+  ],
+] as const;
+
+const serviceSummaries = [
+  "Basecamp rentals include mobile commercial kitchens, shower trailers, shower and restroom combinations, and sleeper/bunkbed trailers. Dishwashing, laundry, refrigeration, restroom and handwashing facilities are also available.",
+  "Core basecamp services include kitchen trailers, mobile showers, shower and restroom combination trailers, and sleeper/bunkbed rentals. Supporting refrigeration, laundry, dishwashing, restroom and handwashing units can be added.",
+  "Temporary basecamp equipment includes mobile kitchens, showers, shower and restroom combinations, and sleeper/bunkbed trailers. Rental plans can also include dishwashing, refrigeration, laundry, restroom and handwashing facilities.",
+  "Rent mobile commercial kitchens, shower trailers, combination shower and restroom units, and sleeper/bunkbed trailers for a basecamp. Additional temporary facilities include laundry, refrigeration, dishwashing, restrooms and handwashing.",
+  "Basecamp facility leases can combine kitchen, shower, shower and restroom combination, and sleeper/bunkbed trailers. Refrigeration, dishwashing, laundry, restroom and handwashing rentals remain available for wider site needs.",
+] as const;
+
 const rentalContexts = [
   (name: string) =>
     `Temporary facility rental services can be planned for projects in ${name}, USA. Customers can rent equipment for short-term work or request a longer lease.`,
@@ -628,23 +1143,42 @@ const rentalContexts = [
 ];
 
 export const stateGuides = Object.fromEntries(
-  Object.entries(stateGuideDetails).map(([name, guide], index) => [
-    name,
-    {
-      ...guide,
-      intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
-      image: stateVisuals[index][0],
-      imageAlt: stateVisuals[index][1],
-      abbreviation: stateCodes[index],
-      layout: String(index % 5),
-      motion: String((index + Math.floor(index / 5) * 2) % 10),
-    },
-  ]),
+  Object.entries(stateGuideDetails).map(([name, guide], index) => {
+    const local = stateLocalDetails[name];
+    const secondImage =
+      basecampGalleryVisuals[index % basecampGalleryVisuals.length];
+    const thirdImage =
+      basecampGalleryVisuals[(index + 5) % basecampGalleryVisuals.length];
+    return [
+      name,
+      {
+        ...guide,
+        intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
+        image: stateVisuals[index][0],
+        imageAlt: stateVisuals[index][1],
+        gallery: [
+          { image: stateVisuals[index][0], imageAlt: stateVisuals[index][1] },
+          { image: secondImage[0], imageAlt: secondImage[1] },
+          { image: thirdImage[0], imageAlt: thirdImage[1] },
+        ],
+        regions: local.regions,
+        fact: local.fact,
+        serviceSummary: serviceSummaries[index % serviceSummaries.length],
+        abbreviation: stateCodes[index],
+        layout: String(index % 5),
+        motion: String((index + Math.floor(index / 5) * 2) % 10),
+      },
+    ];
+  }),
 ) as Record<
   string,
   (typeof stateGuideDetails)[string] & {
     image: string;
     imageAlt: string;
+    gallery: { image: string; imageAlt: string }[];
+    regions: string[];
+    fact: string;
+    serviceSummary: string;
     abbreviation: string;
     layout: string;
     motion: string;

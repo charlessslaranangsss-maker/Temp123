@@ -487,6 +487,10 @@ export function Site({
                     data-state-guide={name}
                     data-state-image={guide.image}
                     data-state-image-alt={guide.imageAlt}
+                    data-state-image-two={guide.gallery[1].image}
+                    data-state-image-alt-two={guide.gallery[1].imageAlt}
+                    data-state-image-three={guide.gallery[2].image}
+                    data-state-image-alt-three={guide.gallery[2].imageAlt}
                     data-state-abbreviation={guide.abbreviation}
                     data-state-layout={guide.layout}
                     data-state-motion={guide.motion}
@@ -499,6 +503,12 @@ export function Site({
                     <div>
                       <h3 data-guide-focus>{guide.focus}</h3>
                       <p data-guide-intro>{guide.intro}</p>
+                      <p data-guide-regions>
+                        <strong>Travel areas:</strong>{" "}
+                        {guide.regions.join(", ")}
+                      </p>
+                      <p data-guide-fact>{guide.fact}</p>
+                      <p data-guide-services>{guide.serviceSummary}</p>
                       <p className="state-planning-question">
                         <strong>Before you call</strong>
                         <span data-guide-question>{guide.question}</span>
