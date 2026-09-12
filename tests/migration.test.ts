@@ -32,7 +32,7 @@ describe("evidence-based city consolidation", () => {
         media: {},
         unresolved: new Set(),
       });
-      const escaped = row.location.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const escaped = (row.sourceLocation || row.location).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
       const text = load(html)
         .text()
         .toLowerCase()

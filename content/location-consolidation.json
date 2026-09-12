@@ -1406,10 +1406,11 @@
     },
     {
       "path": "/equipment-rental/mobile-kitchen-trailers/alton-north-historical-mobile-kitchen-rental/",
-      "location": "Alton North (historical)",
-      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alton%20North%20%28historical%29",
+      "location": "Alton North historical",
+      "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Alton%20North%20historical",
       "sourceFile": "e84924edba0a002164e9cf2dbb4ec3240b891fdbaa26466a7424be091661b6d5.json.gz",
-      "sourceId": 27318
+      "sourceId": 27318,
+      "sourceLocation": "Alton North (historical)"
     },
     {
       "path": "/equipment-rental/mobile-kitchen-trailers/altona-mobile-kitchen-rental/",
