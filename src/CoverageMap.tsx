@@ -132,9 +132,9 @@ export function CoverageMap() {
         <Geography id="map-surface" />
       </div>
       <div className="map-controls">
-        <label className="map-state-picker">
-          Choose your state
-          <select data-state-picker defaultValue="">
+        <div className="map-state-picker">
+          <label htmlFor="coverage-state-picker">Choose your state</label>
+          <select id="coverage-state-picker" data-state-picker defaultValue="">
             <option value="" disabled>
               Select a state
             </option>
@@ -146,7 +146,7 @@ export function CoverageMap() {
                 </option>
               ))}
           </select>
-        </label>
+        </div>
         <div className="map-tools">
           <button type="button" data-expand-map aria-haspopup="dialog">
             Explore full map <span aria-hidden="true">↗</span>

@@ -31,6 +31,14 @@ h1 {
   letter-spacing: -0.045em;
   font-weight: 750;
 }
+.service-category-heading > div {
+  min-width: 0;
+}
+.service-category-heading h1 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.14;
+  overflow-wrap: anywhere;
+}
 h2,
 .closing h2 {
   font-size: clamp(2rem, 3.2vw, 3rem);
