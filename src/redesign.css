@@ -1087,6 +1087,7 @@ summary:focus-visible {
   background: var(--paper);
 }
 .contact-drawer-header {
+  grid-template-columns: 1fr;
   background: var(--paper);
   color: var(--ink);
   border-bottom: 1px solid var(--line);
