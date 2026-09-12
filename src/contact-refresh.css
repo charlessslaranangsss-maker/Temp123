@@ -1,0 +1,361 @@
+/* The support banner and left contact tab restore the supplied references.
+   Keep this stylesheet after the legacy redesign overrides. */
+@media (min-width: 1024px) {
+  .wrap {
+    width: min(1280px, calc(100% - 128px));
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    width: calc(100% - 112px);
+  }
+}
+@media (max-width: 1023px) {
+  body:has(.mobile-nav[open]) .mobile-call,
+  body:has(.mobile-nav[open]) .contact-rail {
+    visibility: hidden;
+  }
+}
+.utility.utility-refresh {
+  padding-block: 0;
+  min-height: 56px;
+  background: #a70805;
+  border-bottom: 0;
+  color: #fff;
+}
+
+.utility-refresh .utility-inner {
+  min-height: 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-block: 10px;
+}
+
+.utility-refresh .utility-status,
+.utility-refresh .utility-status i {
+  width: 21px;
+  height: 21px;
+}
+
+.utility-refresh .utility-status {
+  margin: 0 5px 0 0;
+}
+
+.utility-refresh .utility-status i {
+  background: #26d477;
+  box-shadow: 0 0 0 5px rgb(38 212 119 / 28%);
+}
+
+.utility-refresh .utility-status i::after {
+  inset: -5px;
+  border: 1px solid rgb(38 212 119 / 45%);
+  animation: none;
+}
+
+.utility-refresh .utility-agent-icon {
+  display: block;
+  width: 23px;
+  height: 23px;
+  color: #3cdaef;
+}
+
+.utility-refresh .utility-message {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(0.88rem, 1.15vw, 1.1rem);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.utility-refresh .utility-message strong {
+  font-weight: 600;
+}
+
+.utility-refresh .utility-message a {
+  display: inline-block;
+  padding: 1px 7px 2px;
+  border-radius: 5px;
+  color: #a70805;
+  background: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.utility-refresh .utility-message a:is(:hover, :focus-visible) {
+  color: #810602;
+  background: #fff3e8;
+}
+
+.utility-refresh .utility-message a:focus-visible {
+  outline-color: #fff;
+}
+
+.utility-refresh .utility-message .utility-specialist {
+  display: inline;
+}
+
+.header-sticky.header-refresh {
+  background: rgb(255 255 255 / 97%);
+  border-bottom-color: #d9e3e7;
+}
+
+.header-refresh .header > nav > a[href="/contact-us/"] {
+  color: #a70805;
+  font-weight: 600;
+}
+
+.header-refresh .header-contact {
+  border-left-color: #d9e3e7;
+  animation: none;
+}
+
+.header-refresh .header-contact strong {
+  color: #a70805;
+}
+
+.header-refresh .header-contact b {
+  color: #0c3545;
+  background: #e6f7fa;
+}
+
+.contact-rail.contact-rail-refresh {
+  position: fixed;
+  z-index: 34;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  display: flex;
+  width: 54px;
+  min-width: 54px;
+  height: 190px;
+  min-height: 190px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 18px 9px;
+  border: 1px solid #00bfdc;
+  border-left: 0;
+  border-radius: 0 10px 10px 0;
+  background: #00809a;
+  color: #fff;
+  box-shadow:
+    0 0 0 3px rgb(38 212 119 / 32%),
+    0 0 22px rgb(38 212 119 / 24%);
+  transform: translateY(-50%);
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease;
+  animation: none;
+}
+
+.contact-rail-refresh svg {
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+}
+
+.contact-rail-refresh span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+.contact-rail.contact-rail-refresh:is(:hover, :focus-visible) {
+  padding: 18px 9px;
+  background: #006f85;
+  box-shadow:
+    0 0 0 4px rgb(38 212 119 / 56%),
+    0 0 26px rgb(38 212 119 / 28%);
+}
+
+.contact-rail.contact-rail-refresh:focus-visible {
+  outline: 3px solid #0c3545;
+  outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .utility-refresh .utility-status i::after {
+    animation: support-status-breathe 3.4s ease-in-out infinite;
+  }
+
+  .contact-rail.contact-rail-refresh {
+    animation: support-contact-glow 3.8s ease-in-out infinite;
+  }
+
+  .contact-rail.contact-rail-refresh:is(:hover, :focus-visible) {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes support-status-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.24);
+    opacity: 0.22;
+  }
+}
+
+@keyframes support-contact-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 3px rgb(38 212 119 / 30%),
+      0 0 16px rgb(38 212 119 / 18%);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgb(38 212 119 / 62%),
+      0 0 28px rgb(38 212 119 / 34%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .utility-refresh .utility-inner {
+    gap: 9px;
+  }
+
+  .utility-refresh .utility-message {
+    font-size: 0.86rem;
+  }
+
+  .contact-rail.contact-rail-refresh {
+    width: 46px;
+    min-width: 46px;
+    height: 170px;
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 767px) {
+  .utility-refresh .utility-inner {
+    display: grid;
+    grid-template-columns: 14px 19px minmax(0, 1fr);
+    column-gap: 9px;
+    min-height: 66px;
+    padding-block: 9px;
+  }
+
+  .utility-refresh .utility-status,
+  .utility-refresh .utility-status i {
+    width: 13px;
+    height: 13px;
+  }
+
+  .utility-refresh .utility-agent-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .utility-refresh .utility-message {
+    font-size: 0.79rem;
+    line-height: 1.65;
+  }
+
+  .utility-refresh .utility-message strong {
+    display: block;
+  }
+
+  .utility-refresh .utility-message .utility-specialist {
+    display: block;
+  }
+
+  .contact-rail.contact-rail-refresh {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 38%;
+    min-width: 0;
+    height: calc(76px + env(safe-area-inset-bottom, 0px));
+    min-height: 76px;
+    padding: 13px 10px calc(13px + env(safe-area-inset-bottom, 0px));
+    flex-direction: row;
+    gap: 7px;
+    border: 0;
+    border-top: 3px solid #26d477;
+    border-radius: 0;
+    transform: none;
+    animation: none;
+    box-shadow: 0 -3px 16px rgb(12 53 69 / 12%);
+  }
+
+  .contact-rail-refresh span {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .contact-rail-refresh svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-rail.contact-rail-refresh:is(:hover, :focus-visible) {
+    padding: 13px 10px calc(13px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -3px 16px rgb(12 53 69 / 12%);
+  }
+
+  .contact-rail.contact-rail-refresh:focus-visible {
+    outline-offset: -6px;
+  }
+
+  .mobile-call.mobile-call-refresh {
+    left: 38%;
+    right: 0;
+    bottom: 0;
+    width: 62%;
+    height: calc(76px + env(safe-area-inset-bottom, 0px));
+    min-height: 76px;
+    padding: 13px 12px calc(13px + env(safe-area-inset-bottom, 0px));
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-content: center;
+    column-gap: 5px;
+    background: #fff;
+    border-top: 3px solid #0c3545;
+    box-shadow: 0 -3px 16px rgb(12 53 69 / 12%);
+  }
+
+  .mobile-call-refresh > span {
+    font-size: 0.68rem;
+    line-height: 1.4;
+    color: #52666b;
+  }
+
+  .mobile-call-refresh strong {
+    color: #a70805;
+    font-size: clamp(0.9rem, 3.3vw, 1.2rem);
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .mobile-call-refresh b {
+    color: #0c3545;
+    font-size: 1.3rem;
+  }
+
+  .mobile-call.mobile-call-refresh:focus-visible {
+    outline-offset: -6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .utility-refresh .utility-status i::after,
+  .contact-rail.contact-rail-refresh {
+    animation: none;
+  }
+}

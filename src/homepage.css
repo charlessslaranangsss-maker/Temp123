@@ -1,0 +1,768 @@
+/* Homepage renovation: equipment first, clear rental paths, intentional motion. */
+.homepage {
+  --home-navy: #102e3a;
+  --home-cyan: #77dfed;
+  --home-line: #dce6e9;
+  background: #fff;
+}
+.homepage .wrap {
+  width: min(1280px, calc(100% - 128px));
+}
+.homepage .eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.15rem;
+}
+.homepage h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(2.65rem, 4.3vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+.homepage h2 em {
+  color: #3d6976;
+  font-style: normal;
+}
+.rental-hero {
+  background: var(--home-navy);
+  color: #fff;
+  padding-top: 3.5rem;
+  overflow: clip;
+}
+.rental-hero-grid {
+  display: grid;
+  grid-template-columns: 1.04fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  padding-bottom: 0;
+}
+.rental-hero-copy {
+  min-width: 0;
+}
+.rental-hero-copy > .eyebrow {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: #bed5dd;
+}
+.hero-rule {
+  width: 2rem;
+  height: 2px;
+  background: var(--home-cyan);
+}
+.rental-hero h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.1rem, 4.9vw, 4.7rem);
+  font-weight: 600;
+  line-height: 0.99;
+  letter-spacing: -0.018em;
+  text-wrap: initial;
+}
+.rental-hero h1 em {
+  font-style: normal;
+  color: var(--home-cyan);
+}
+.rental-hero-copy > p {
+  color: #d0dfe5;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  max-width: 32rem;
+  margin-top: 1.5rem;
+}
+.rental-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1.85rem;
+}
+.homepage .home-primary {
+  background: #b51c21;
+  border-color: #b51c21;
+  color: white;
+  font-size: 1rem;
+  padding: 0.9rem 1.35rem;
+  gap: 2rem;
+  min-height: 52px;
+  border-radius: 3px;
+}
+.homepage .home-primary:hover {
+  background: #90191d;
+  border-color: #90191d;
+}
+.home-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 52px;
+  padding: 0.7rem 0;
+  color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid #6c8994;
+}
+.home-secondary span,
+.home-inline-link span {
+  transition: transform 0.2s ease;
+}
+.home-secondary:hover span {
+  transform: translateY(3px);
+}
+.hero-support {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+}
+.hero-support > span {
+  color: var(--home-cyan);
+  font:
+    600 2rem "Barlow Condensed",
+    sans-serif;
+  padding-right: 0.9rem;
+  border-right: 1px solid #53717c;
+}
+.hero-support p {
+  color: #b9d0d9;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.hero-support a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.rental-hero-photo {
+  position: relative;
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 1.12;
+  background: #1b3b48;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.rental-hero-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.photo-corner {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #102e3ae8;
+  border-left: 2px solid var(--home-cyan);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  line-height: 1.45;
+}
+.rental-hero-photo figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3.5rem 1.5rem 1.5rem;
+  background: linear-gradient(transparent, #071f2aee);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.rental-hero-photo figcaption small {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+.rental-hero-photo figcaption > span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.rental-hero-photo figcaption a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid #b9d0d9;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.rental-hero-photo figcaption a:hover {
+  background: #ffffff22;
+}
+.hero-service-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #42616d;
+}
+.hero-service-strip a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.3rem 1rem;
+  border-right: 1px solid #42616d;
+  min-width: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.hero-service-strip a:first-child {
+  padding-left: 0;
+}
+.hero-service-strip a:last-child {
+  border-right: 0;
+}
+.hero-service-strip a:hover {
+  background: #ffffff09;
+}
+.hero-service-strip small {
+  color: #83afbf;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.hero-service-strip b {
+  margin-left: auto;
+  color: var(--home-cyan);
+  font-weight: 400;
+}
+.rental-hero :focus-visible {
+  outline-color: var(--home-cyan);
+}
+.home-services {
+  padding-block: 4.5rem;
+  scroll-margin-top: 5.5rem;
+}
+.home-section-heading {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+.home-section-heading > p {
+  max-width: 30rem;
+  justify-self: end;
+  font-size: 1.05rem;
+}
+.home-equipment {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.3rem 1.5rem;
+}
+.home-equipment .equipment-card {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  min-width: 0;
+}
+.home-equipment .image-box {
+  aspect-ratio: 1.6;
+  border-radius: 3px;
+}
+.home-equipment .image-box img {
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+.home-equipment .image-box:hover img {
+  transform: scale(1.035);
+}
+.home-equipment .category-label {
+  display: none;
+}
+.home-equipment .image-arrow {
+  display: none;
+}
+.home-equipment .card-copy {
+  padding: 1.2rem 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--home-line);
+}
+.home-equipment .service-index {
+  font-size: 0.75rem;
+  color: #56727e;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+.home-equipment .card-copy h3 {
+  font:
+    600 1.65rem/1.12 "Barlow Condensed",
+    sans-serif;
+  min-height: 0;
+}
+.home-equipment .card-copy p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.7rem 0 0.9rem;
+  min-height: 0;
+}
+.home-equipment .equipment-tags {
+  display: none;
+}
+.home-equipment .card-actions {
+  margin-top: auto;
+  padding-bottom: 0.7rem;
+  gap: 0.75rem;
+}
+.home-equipment .card-actions > a {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.home-equipment .equipment-dialog .dialog-grid {
+  display: block;
+}
+.home-equipment .equipment-dialog {
+  max-width: 640px;
+}
+.home-equipment .image-box.is-drawing {
+  background: #f0f5f7;
+}
+.home-equipment .image-box.is-drawing img {
+  object-fit: contain;
+  padding: 1rem;
+}
+.home-service-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #eff5f7;
+  border-left: 3px solid #087391;
+}
+.home-service-help p {
+  font-size: 1rem;
+}
+.home-service-help strong {
+  display: block;
+  color: var(--home-navy);
+}
+.home-service-help a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.home-process {
+  background: var(--home-navy);
+  color: #fff;
+  padding-block: 4.5rem;
+}
+.home-process .eyebrow {
+  color: #aacbd7;
+}
+.home-process h2 em {
+  color: var(--home-cyan);
+}
+.home-process .home-section-heading p {
+  color: #c1d4db;
+}
+.rental-process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 2.75rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.process-step-top {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+.process-step-top > span {
+  font:
+    600 3.7rem/1 "Barlow Condensed",
+    sans-serif;
+  color: var(--home-cyan);
+}
+.process-step-top i {
+  position: relative;
+  height: 1px;
+  background: #47646f;
+  flex: 1;
+}
+.process-step-top i::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--home-cyan);
+}
+.rental-process-steps small {
+  display: block;
+  font-size: 0.8rem;
+  color: #aacbd7;
+  margin-bottom: 0.65rem;
+}
+.rental-process-steps h3 {
+  font-size: 1.35rem;
+}
+.rental-process-steps p {
+  font-size: 1rem;
+  color: #c1d4db;
+  line-height: 1.65;
+  margin-top: 0.8rem;
+}
+.process-contact {
+  border-top: 1px solid #47646f;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1rem;
+}
+.process-contact > span {
+  color: #c1d4db;
+}
+.process-contact a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 44px;
+  font-weight: 600;
+}
+.home-process :focus-visible {
+  outline-color: var(--home-cyan);
+}
+.home-industries {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  padding-block: 4.5rem;
+  align-items: start;
+}
+.home-industry-intro > p {
+  margin-top: 1.5rem;
+  max-width: 24rem;
+}
+.home-inline-link {
+  display: inline-flex;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  min-height: 44px;
+  border-bottom: 1px solid #839ba3;
+  font-weight: 600;
+  margin-top: 1.25rem;
+}
+.home-industry-links > a {
+  display: flex;
+  align-items: start;
+  gap: 1.25rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--home-line);
+}
+.home-industry-links > a:first-child {
+  padding-top: 0;
+}
+.home-industry-links small {
+  color: #64808b;
+  font-size: 0.8rem;
+  padding-top: 0.3rem;
+}
+.home-industry-links h3 {
+  font-size: 1.4rem;
+}
+.home-industry-links p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.home-industry-links a > span {
+  font-size: 1.5rem;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+.home-industry-links a:hover > span {
+  transform: translate(3px, -3px);
+}
+.home-faq {
+  background: #f0f5f7;
+  padding-block: 4rem;
+}
+.home-faq .faq-grid {
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+}
+.home-faq .faq-grid > div > p {
+  margin-top: 1.5rem;
+}
+.home-faq .faq-item summary {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+.home-faq .faq-item > p {
+  font-size: 1rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rental-hero-copy {
+    animation: rental-enter 0.65s ease-out both;
+  }
+  .rental-hero-photo {
+    animation: rental-enter 0.75s 0.1s ease-out both;
+  }
+  .rental-process-steps .step-seen .process-step-top i::after {
+    animation: rental-route 2s ease-in-out 2;
+  }
+}
+@keyframes rental-enter {
+  from {
+    opacity: 0.6;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rental-route {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 7px);
+  }
+}
+@media (max-width: 1100px) {
+  .homepage .wrap {
+    width: calc(100% - 112px);
+  }
+  .rental-hero-grid {
+    gap: 2rem;
+  }
+  .rental-hero h1 {
+    font-size: clamp(2.9rem, 5.2vw, 3.7rem);
+  }
+  .rental-hero-photo {
+    aspect-ratio: 0.86;
+  }
+  .rental-hero-actions {
+    gap: 0.75rem;
+  }
+  .hero-service-strip a {
+    font-size: 0.9rem;
+    padding-inline: 0.65rem;
+    gap: 0.5rem;
+  }
+  .home-section-heading {
+    gap: 2rem;
+  }
+  .home-industries,
+  .home-faq .faq-grid {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .rental-hero {
+    padding-top: 2.5rem;
+  }
+  .rental-hero-grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 2.5rem;
+  }
+  .rental-hero-copy {
+    grid-row: 1;
+  }
+  .hero-service-strip {
+    grid-row: 2;
+  }
+  .rental-hero-photo {
+    grid-row: 3;
+  }
+  .rental-hero h1 {
+    font-size: clamp(3rem, 7.6vw, 4.6rem);
+  }
+  .rental-hero-copy > p {
+    max-width: 36rem;
+  }
+  .rental-hero-photo {
+    aspect-ratio: 1.6;
+    max-height: 380px;
+  }
+  .hero-support {
+    margin-top: 1.35rem;
+  }
+  .hero-service-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-service-strip a {
+    padding: 1rem 0.8rem;
+    border-bottom: 1px solid #42616d;
+    font-size: 1rem;
+  }
+  .hero-service-strip a:first-child {
+    padding-left: 0.8rem;
+  }
+  .hero-service-strip a:nth-child(2n) {
+    border-right: 0;
+  }
+  .hero-service-strip a:nth-child(n + 3) {
+    border-bottom: 0;
+  }
+  .home-services,
+  .home-process,
+  .home-industries {
+    padding-block: 3.5rem;
+  }
+  .home-section-heading {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .home-section-heading > p {
+    justify-self: start;
+    max-width: 38rem;
+  }
+  .home-equipment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.3rem;
+  }
+  .home-industries,
+  .home-faq .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .home-industry-intro > p {
+    max-width: 34rem;
+  }
+  .rental-process-steps {
+    gap: 1.5rem;
+  }
+  .rental-process-steps h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-support {
+    display: none;
+  }
+  .homepage .wrap {
+    width: calc(100% - 40px);
+  }
+  .homepage .eyebrow {
+    font-size: 0.73rem;
+    letter-spacing: 0.07em;
+  }
+  .rental-hero {
+    padding-top: 2rem;
+  }
+  .rental-hero h1 {
+    font-size: clamp(2.6rem, 9.7vw, 3.9rem);
+  }
+  .rental-hero-copy > p {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
+  .rental-hero-actions {
+    gap: 0.65rem 1rem;
+    margin-top: 1.4rem;
+  }
+  .homepage .home-primary {
+    font-size: 1rem;
+  }
+  .home-secondary {
+    font-size: 0.95rem;
+  }
+  .rental-hero-photo {
+    aspect-ratio: 1.28;
+  }
+  .rental-hero-photo figcaption {
+    padding: 3rem 1rem 1rem;
+  }
+  .rental-hero-photo figcaption > span {
+    font-size: 1.3rem;
+  }
+  .rental-hero-photo figcaption small {
+    font-size: 0.6rem;
+    max-width: 14rem;
+    line-height: 1.5;
+  }
+  .photo-corner {
+    right: 0.8rem;
+    top: 0.8rem;
+    font-size: 0.65rem;
+  }
+  .hero-service-strip a {
+    font-size: 0.87rem;
+    padding-inline: 0.65rem;
+    min-height: 65px;
+  }
+  .hero-service-strip small {
+    display: none;
+  }
+  .home-equipment {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .home-equipment .image-box {
+    aspect-ratio: 1.7;
+  }
+  .home-equipment .card-copy h3 {
+    font-size: 1.9rem;
+  }
+  .home-service-help {
+    display: block;
+    padding: 1.25rem;
+  }
+  .home-service-help a {
+    margin-top: 0.5rem;
+    justify-content: space-between;
+  }
+  .rental-process-steps {
+    grid-template-columns: 1fr;
+    margin-block: 2.2rem;
+    gap: 1.8rem;
+  }
+  .process-step-top {
+    margin-bottom: 0.9rem;
+  }
+  .process-step-top > span {
+    font-size: 3rem;
+  }
+  .rental-process-steps h3 {
+    font-size: 1.4rem;
+  }
+  .rental-process-steps p {
+    margin-top: 0.65rem;
+  }
+  .process-contact {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .home-industry-links > a {
+    gap: 0.8rem;
+  }
+  .home-industry-links h3 {
+    font-size: 1.25rem;
+  }
+  .home-faq {
+    padding-block: 3.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage *,
+  .homepage *::before,
+  .homepage *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .homepage .wrap {
+    width: calc(100% - 128px);
+  }
+}

@@ -18,7 +18,7 @@ export const routes = [
   "/privacy/",
 ];
 const titles: Record<string, string> = {
-  "/": "Mobile Kitchens & Temporary Facilities",
+  "/": "Mobile Kitchen & Temporary Facility Rentals",
   "/services/": "Temporary Facility Solutions",
   "/equipment-rental/": "Equipment Rental",
   "/industries/": "Industries & Project Solutions",
@@ -30,7 +30,7 @@ const titles: Record<string, string> = {
   "/privacy/": "Privacy",
 };
 const descriptions: Record<string, string> = {
-  "/": "Explore mobile kitchens, restroom and shower trailers, and workforce facilities. Call Temporary 123 at +1 (800) 443 - 5212 for project support, 24/7.",
+  "/": "Rent mobile kitchens, refrigeration, restroom and shower trailers, and workforce facilities nationwide. Plan your project with Temporary 123. Call our team 24/7.",
   "/equipment-rental/":
     "Browse mobile kitchens, restroom and shower trailers, workforce accommodation and temporary facility options. Discuss your site and dates with Temporary 123.",
   "/services/":

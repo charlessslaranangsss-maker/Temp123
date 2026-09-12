@@ -1,230 +1,291 @@
 import site from "../site.json" with { type: "json" };
 import { Cards, EquipmentImage } from "./Equipment";
 
+const projectSteps = [
+  [
+    "Tell us what you need",
+    "Share your location, rental dates and the number of people you need to support. For kitchens, tell us about your menu and meal volume.",
+    "01",
+    "Your project brief",
+  ],
+  [
+    "Build the right setup",
+    "Work through equipment, vehicle access, power, water and wastewater with a specialist. Plan the facilities around your operation.",
+    "02",
+    "Equipment + site planning",
+  ],
+  [
+    "Coordinate the details",
+    "Confirm availability, delivery, installation and servicing in your proposal, so you know what needs to happen before arrival.",
+    "03",
+    "Delivery + ongoing support",
+  ],
+];
+
 export function Home() {
   return (
-    <>
-      <section className="home-masthead">
-        <div className="wrap">
-          <div className="masthead-top">
-            <div>
-              <span className="eyebrow">
-                TEMPORARY FACILITIES. NATIONWIDE SUPPORT.
-              </span>
-              <h1>
-                Keep your
-                <br />
-                operations <em>moving.</em>
-              </h1>
-            </div>
-            <div className="masthead-intro">
-              <p>
-                Mobile kitchens, restroom and shower trailers, and workforce
-                facilities for the people counting on you.
-              </p>
-              <a href="#equipment" className="masthead-explore">
-                Find your facilities <span aria-hidden="true">↓</span>
+    <div className="homepage">
+      <section className="rental-hero" aria-labelledby="rental-title">
+        <div className="wrap rental-hero-grid">
+          <div className="rental-hero-copy">
+            <span className="eyebrow">
+              <span className="hero-rule" aria-hidden="true" /> NATIONWIDE
+              EQUIPMENT RENTALS
+            </span>
+            <h1 id="rental-title">
+              Mobile kitchens &amp;
+              <br />
+              temporary facilities.
+              <br />
+              <em>Keep moving.</em>
+            </h1>
+            <p>
+              Keep your team working, your kitchen serving and your project on
+              track. Rent the facilities you need for renovations, remote sites
+              and emergency response.
+            </p>
+            <div className="rental-hero-actions">
+              <a className="button home-primary" href="/contact-us/">
+                Contact us <span aria-hidden="true">↗</span>
               </a>
+              <a className="home-secondary" href="#equipment">
+                Explore rental services <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+            <div className="hero-support">
+              <span aria-hidden="true">24/7</span>
+              <p>
+                A real conversation.
+                <br />
+                <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+              </p>
             </div>
           </div>
-          <div className="masthead-stage">
-            <figure className="masthead-photo">
-              <EquipmentImage
-                image="kitchen"
-                alt="Mobile kitchen interior with commercial cooking and preparation equipment"
-                priority
-              />
-              <figcaption>
-                <span>Mobile Kitchens</span>
-                <a
-                  href="/equipment-rental/mobile-kitchen-trailers/"
-                  aria-label="Explore mobile kitchens"
-                >
-                  Explore <span aria-hidden="true">↗</span>
-                </a>
-              </figcaption>
-            </figure>
-            <aside className="masthead-project">
-              <span className="eyebrow">THE WORK GOES ON</span>
-              <h2>
-                A renovation.
-                <br />A remote site.
-                <br />
-                <em>A way forward.</em>
-              </h2>
-              <p>
-                Tell us where, when and what your team needs. We’ll help you
-                work through the facilities and the details.
-              </p>
-              <a className="button" href="/contact-us/">
-                Plan your rental <span aria-hidden="true">↗</span>
+          <figure className="rental-hero-photo">
+            <EquipmentImage
+              image="kitchen"
+              alt="Stainless steel cooking line and preparation space inside a mobile kitchen"
+              priority
+            />
+            <div className="photo-corner" aria-hidden="true">
+              BUILT FOR
+              <br />
+              THE WORK AHEAD.
+            </div>
+            <figcaption>
+              <span>
+                <small>FACILITIES THAT WORK AS HARD AS YOU DO</small>Mobile
+                kitchen rentals
+              </span>
+              <a
+                href="/equipment-rental/mobile-kitchen-trailers/"
+                aria-label="Explore mobile kitchen rentals"
+              >
+                ↗
               </a>
-              <a className="masthead-phone" href={`tel:${site.phoneE164}`}>
-                <small>Talk to our team, 24/7</small>
-                <strong>{site.phoneDisplay}</strong>
+            </figcaption>
+          </figure>
+          <div className="hero-service-strip" aria-label="Main rental services">
+            {[
+              [
+                "01",
+                "Mobile kitchens",
+                "/equipment-rental/mobile-kitchen-trailers/",
+              ],
+              [
+                "02",
+                "Restrooms & showers",
+                "/services/shower-restroom-combination-trailers/",
+              ],
+              ["03", "Refrigeration", "/equipment-rental/refrigeration/"],
+              ["04", "Workforce facilities", "/man-camps-for-rent/"],
+            ].map(([number, name, href]) => (
+              <a href={href} key={href}>
+                <small>{number}</small>
+                <span>{name}</span>
+                <b aria-hidden="true">↗</b>
               </a>
-            </aside>
+            ))}
           </div>
         </div>
       </section>
-      <section className="wrap section equipment-section" id="equipment">
-        <div className="section-heading">
+
+      <section
+        className="wrap home-services"
+        id="equipment"
+        aria-labelledby="equipment-title"
+      >
+        <div className="home-section-heading">
           <div>
-            <span className="eyebrow">FIND YOUR FACILITIES</span>
-            <h2>
-              Space for the work.
-              <br />
-              <em>Support for the people.</em>
+            <span className="eyebrow">
+              THE EQUIPMENT. THE SUPPORT. THE SOLUTION.
+            </span>
+            <h2 id="equipment-title">
+              Your site. <em>Fully supported.</em>
             </h2>
           </div>
           <p>
-            A kitchen renovation. A remote job site. An unexpected closure.
-            Explore the facilities that help your team carry on.
+            From one trailer to a complete temporary setup, find the rental
+            services that keep your people and operations moving.
           </p>
         </div>
-        <Cards editorial />
+        <Cards homepage />
+        <div className="home-service-help">
+          <p>
+            <strong>Several facilities. One conversation.</strong> Tell us what
+            your project needs.
+          </p>
+          <a href="/contact-us/">
+            Plan your rental <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
-      <section className="process section" id="planning">
-        <div className="wrap process-grid">
-          <div className="process-intro">
-            <span className="eyebrow">FROM FIRST CALL TO SITE PLAN</span>
-            <h2>
-              Let's work through
-              <br />
-              the details.
-            </h2>
-            <p>
-              You know your operation. We help you work out the facilities,
-              access and utilities it needs.
-            </p>
-            <div className="process-note">
-              <span>START WITH A CONVERSATION</span>
-              <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+
+      <section
+        className="home-process"
+        id="planning"
+        aria-labelledby="planning-title"
+      >
+        <div className="wrap">
+          <div className="home-section-heading">
+            <div>
+              <span className="eyebrow">FROM FIRST CALL TO SITE SETUP</span>
+              <h2 id="planning-title">
+                A clear plan.
+                <br />
+                <em>A smoother project.</em>
+              </h2>
             </div>
+            <p>
+              You know your operation. We help connect the equipment, site
+              requirements and delivery details.
+            </p>
           </div>
-          <ol className="process-steps">
-            {[
-              [
-                "Tell us what you need",
-                "Share your location, start date and how many people you need to support. A planned renovation and an urgent response call for different arrangements.",
-                "Location · Dates · People",
-              ],
-              [
-                "Work through your site",
-                "Discuss equipment, delivery access, power, water and wastewater. We will help you identify what needs to be in place.",
-                "Equipment · Access · Utilities",
-              ],
-              [
-                "Confirm the arrangements",
-                "Review availability, delivery, setup and servicing in your proposal. Agree on the details before the equipment arrives.",
-                "Proposal · Delivery · Setup",
-              ],
-            ].map(([t, d, n], i) => (
-              <li key={t} data-step>
-                <span className="step-number">0{i + 1}</span>
-                <div>
-                  <h3>{t}</h3>
-                  <p>{d}</p>
-                  <span className="step-note">{n}</span>
+          <ol className="rental-process-steps">
+            {projectSteps.map(([title, description, number, label]) => (
+              <li key={number} data-step>
+                <div className="process-step-top">
+                  <span>{number}</span>
+                  <i aria-hidden="true" />
                 </div>
+                <small>{label}</small>
+                <h3>{title}</h3>
+                <p>{description}</p>
               </li>
             ))}
           </ol>
+          <div className="process-contact">
+            <span>Let’s work through your requirements.</span>
+            <a href={`tel:${site.phoneE164}`}>
+              Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
-      <section className="wrap section industry-section">
-        <div className="industry-intro">
-          <span className="eyebrow">BUILT AROUND YOUR PROJECT</span>
-          <h2>
-            What brings
+
+      <section
+        className="wrap home-industries"
+        aria-labelledby="industries-title"
+      >
+        <div className="home-industry-intro">
+          <span className="eyebrow">WHEREVER THE WORK TAKES YOU</span>
+          <h2 id="industries-title">
+            Different projects.
             <br />
-            you here?
+            <em>The same commitment.</em>
           </h2>
           <p>
-            Find a starting point for your team, your site and your schedule.
+            Planned downtime or an unexpected challenge. Start with the support
+            your team needs.
           </p>
-          <a className="text-link" href="/service-areas/">
-            Explore services & locations →
+          <a className="home-inline-link" href="/service-areas/">
+            Explore our service areas <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <div className="industry-links">
+        <div className="home-industry-links">
           {[
             [
+              "01",
               "Construction & workforce",
-              "Facilities for crews working away from home.",
+              "Kitchens, sleeping accommodation and daily essentials for teams working away from home.",
               "/man-camps-for-rent/",
             ],
             [
-              "Government & public services",
-              "Temporary spaces that support ongoing operations.",
-              "/government/",
-            ],
-            [
+              "02",
               "Food service & hospitality",
-              "Keep food preparation going while your needs change.",
+              "Keep food preparation and service going during renovations, events and temporary closures.",
               "/food-services-2/",
             ],
             [
+              "03",
+              "Government & public services",
+              "Temporary facilities planned around your operational and procurement requirements.",
+              "/government/",
+            ],
+            [
+              "04",
               "Emergency & disaster response",
-              "Discuss urgent facility and workforce requirements.",
+              "Discuss urgent equipment, site and workforce needs with our team, 24 hours a day.",
               "/disaster-relief-man-camp-workforce-rentals/",
             ],
-          ].map(([n, d, p]) => (
-            <a href={p} key={p}>
+          ].map(([number, name, description, href]) => (
+            <a href={href} key={href}>
+              <small>{number}</small>
               <div>
-                <h3>{n}</h3>
-                <p>{d}</p>
+                <h3>{name}</h3>
+                <p>{description}</p>
               </div>
               <span aria-hidden="true">↗</span>
             </a>
           ))}
         </div>
       </section>
-      <section className="faq-section">
+
+      <section className="faq-section home-faq" aria-labelledby="faq-title">
         <div className="wrap faq-grid">
           <div>
-            <span className="eyebrow">BEFORE YOU CALL</span>
-            <h2>
-              A few useful
+            <span className="eyebrow">PLAN WITH CONFIDENCE</span>
+            <h2 id="faq-title">
+              Temporary facility
               <br />
-              things to know.
+              <em>rental questions.</em>
             </h2>
             <p>
-              Have a specific question?
+              Need help with your specific site?
               <br />
-              <a href={`tel:${site.phoneE164}`}>Call {site.phoneDisplay} ↗</a>
+              <a href="/contact-us/">Talk to a rental specialist ↗</a>
             </p>
           </div>
           <div className="faq-list">
             {[
               [
-                "What information do you need for a quote?",
+                "What information do you need for a rental quote?",
                 "Your project location, preferred dates, expected rental duration and the number of people using the facilities are a good start. For a kitchen, include your menu and meal volume.",
               ],
               [
+                "Can I rent several types of facility together?",
+                "Yes. Discuss your kitchen, refrigeration, restroom, shower and workforce requirements in one conversation so the facilities can be planned around your operation.",
+              ],
+              [
+                "What utilities and site access should I check?",
+                "Check vehicle access, space for the equipment and available power, water and wastewater connections. Share site restrictions with your specialist so they can be considered in your proposal.",
+              ],
+              [
                 "Can you help with an urgent requirement?",
-                `Call our team on ${site.phoneDisplay} and explain what is happening at your site. We can discuss current availability and the delivery arrangements your project needs.`,
+                `Call ${site.phoneDisplay} and explain what is happening at your site. Our team can discuss current availability and the delivery arrangements your project needs.`,
               ],
-              [
-                "What should I check at the site?",
-                "Look at vehicle access, space for the equipment and available power, water and wastewater connections. Share any restrictions so they can be considered in your proposal.",
-              ],
-              [
-                "Can I arrange several types of facility together?",
-                "Yes. Discuss your kitchen, restroom, shower and workforce requirements in the same conversation so the facilities can be planned around your operation.",
-              ],
-            ].map(([q, a]) => (
-              <details className="faq-item" key={q}>
+            ].map(([question, answer]) => (
+              <details className="faq-item" key={question}>
                 <summary>
-                  {q}
+                  {question}
                   <span aria-hidden="true">+</span>
                 </summary>
-                <p>{a}</p>
+                <p>{answer}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

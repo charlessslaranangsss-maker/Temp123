@@ -52,7 +52,7 @@ export function Header({ path }: { path: string }) {
       <a href="#main" className="skip">
         Skip to content
       </a>
-      <div className="utility">
+      <div className="utility utility-refresh">
         <div className="wrap utility-inner">
           <span className="utility-status" aria-hidden="true">
             <i />
@@ -72,14 +72,17 @@ export function Header({ path }: { path: string }) {
               strokeLinecap="round"
             />
           </svg>
-          <p>
-            <strong>Live agents available 24/7.</strong> <span>Call us at</span>{" "}
+          <p className="utility-message">
+            <strong>Live agents available 24/7.</strong>{" "}
+            <span className="utility-call-label">Call us at</span>{" "}
             <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>{" "}
-            <span>to speak with a kitchen specialist.</span>
+            <span className="utility-specialist">
+              to speak with a kitchen specialist.
+            </span>
           </p>
         </div>
       </div>
-      <div className="header-sticky">
+      <div className="header-sticky header-refresh">
         <header className="header wrap">
           <a className="brand" href="/" aria-label="Temporary 123 home">
             <img src="/images/logo.webp" width="53" height="44" alt="" />
@@ -220,13 +223,16 @@ export function Header({ path }: { path: string }) {
         </header>
         <div className="scroll-progress" aria-hidden="true" />
       </div>
-      <a className="mobile-call" href={"tel:" + site.phoneE164}>
+      <a
+        className="mobile-call mobile-call-refresh"
+        href={"tel:" + site.phoneE164}
+      >
         <span>Call our team, 24/7</span>
         <strong>{site.phoneDisplay}</strong>
         <b aria-hidden="true">↗</b>
       </a>
       <a
-        className="contact-rail"
+        className="contact-rail contact-rail-refresh"
         href="/contact-us/"
         aria-label="Contact Temporary 123"
         aria-current={path === "/contact-us/" ? "page" : undefined}

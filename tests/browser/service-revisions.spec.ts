@@ -113,29 +113,51 @@ for (const width of [390, 1440])
     });
   });
 
-test("contact controls remain steady with both motion preferences", async ({
-  page,
-}) => {
-  await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.goto("/");
-  for (const selector of [".header-contact", ".contact-rail"]) {
+for (const width of [390, 1440])
+  test(`contact emphasis respects motion preferences at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto("/");
+    const phone = page.locator(
+      width < 1024 ? ".mobile-call" : ".header-contact",
+    );
+    const rail = page.locator(".contact-rail");
+    await expect(phone).toHaveCSS("animation-name", "none");
+    await expect(rail).toHaveCSS(
+      "animation-name",
+      width <= 767 ? "none" : "support-contact-glow",
+    );
+    if (width > 767) {
+      const duration = await rail.evaluate((element) =>
+        parseFloat(getComputedStyle(element).animationDuration),
+      );
+      expect(duration).toBeGreaterThanOrEqual(3);
+    }
+    for (const control of [phone, rail]) {
+      await expect(control).toBeVisible();
+      await expect(control).toHaveCSS("opacity", "1");
+    }
+    const status = page.locator(".utility-status i");
+    const statusMotion = await status.evaluate((element) => {
+      const styles = getComputedStyle(element, "::after");
+      return {
+        name: styles.animationName,
+        duration: parseFloat(styles.animationDuration),
+      };
+    });
+    expect(statusMotion.name).toBe("support-status-breathe");
+    expect(statusMotion.duration).toBeGreaterThanOrEqual(3);
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    for (const control of [phone, rail])
+      await expect(control).toHaveCSS("animation-name", "none");
     expect(
-      await page
-        .locator(selector)
-        .evaluate((e) => getComputedStyle(e).animationName),
+      await status.evaluate(
+        (element) => getComputedStyle(element, "::after").animationName,
+      ),
     ).toBe("none");
-    expect(
-      await page.locator(selector).evaluate((e) => getComputedStyle(e).opacity),
-    ).toBe("1");
-  }
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  for (const selector of [".header-contact", ".contact-rail"])
-    expect(
-      await page
-        .locator(selector)
-        .evaluate((e) => getComputedStyle(e).animationName),
-    ).toBe("none");
-});
+  });
 
 test("Services and category selection work before JavaScript loads", async ({
   browser,

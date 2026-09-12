@@ -1,5 +1,7 @@
 import "./style.css";
 import "./redesign.css";
+import "./homepage.css";
+import "./contact-refresh.css";
 import "@fontsource/barlow/latin-400.css";
 import "@fontsource/barlow/latin-600.css";
 import "@fontsource/barlow-condensed/latin-600.css";

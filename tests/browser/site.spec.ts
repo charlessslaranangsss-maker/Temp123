@@ -2,8 +2,12 @@ import { test, expect } from "@playwright/test";
 for (const width of [320, 390, 768, 1024, 1280, 1440])
   test(`homepage layout and photos at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: "no-preference" });
     await page.goto("/");
-    await expect(page.locator("h1")).toContainText("Keep your");
+    await expect(page.locator("h1")).toHaveCount(1);
+    await expect(page.locator("h1")).toContainText("Mobile kitchens &");
+    await expect(page.locator("h1")).toContainText("temporary facilities.");
+    await expect(page.locator("h1")).toContainText("Keep moving.");
     await expect(page).toHaveTitle(/Temporary 123/);
     await expect(page.locator(".brand")).toContainText("Temporary123");
     await expect(page.locator(".visual-note, .equipment-jumps")).toHaveCount(0);
@@ -29,17 +33,21 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     const supportBar = page.locator(".utility");
     await expect(supportBar).toBeVisible();
     await expect(supportBar).toContainText("Live agents available 24/7");
+    await expect(supportBar).toHaveCSS("background-color", "rgb(167, 8, 5)");
+    await expect(supportBar.locator(".utility-agent-icon")).toBeVisible();
+    await expect(supportBar.locator(".utility-specialist")).toBeVisible();
     await expect(supportBar.locator("a")).toHaveAttribute(
       "href",
       "tel:+18004435212",
     );
+    await expect(supportBar.locator("a")).toHaveCSS("color", "rgb(167, 8, 5)");
     await expect(supportBar.locator("a")).toHaveCSS(
-      "color",
+      "background-color",
       "rgb(255, 255, 255)",
     );
     await expect(page.locator(".utility-status i")).toHaveCSS(
       "background-color",
-      "rgb(47, 212, 119)",
+      "rgb(38, 212, 119)",
     );
     expect(
       await page
@@ -47,10 +55,18 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
         .evaluate(
           (element) => getComputedStyle(element, "::after").animationName,
         ),
-    ).toBe("none");
+    ).toBe("support-status-breathe");
     const contactRail = page.locator(".contact-rail");
     await expect(contactRail).toBeVisible();
     await expect(contactRail).toHaveAttribute("href", "/contact-us/");
+    await expect(contactRail).toHaveCSS("background-color", "rgb(0, 128, 154)");
+    await expect(contactRail).toHaveCSS(
+      "animation-name",
+      width <= 767 ? "none" : "support-contact-glow",
+    );
+    const railBounds = await contactRail.boundingBox();
+    expect(railBounds).not.toBeNull();
+    expect(railBounds!.x).toBe(0);
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(
@@ -63,7 +79,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(phone).toHaveAttribute("href", "tel:+18004435212");
     await expect(phone.locator("strong")).toHaveCSS(
       "color",
-      "rgb(182, 61, 47)",
+      width >= 768 && width < 1024 ? "rgb(182, 61, 47)" : "rgb(167, 8, 5)",
     );
     await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
     const displayedPhoneNumbers = await page
@@ -72,6 +88,14 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     for (const text of displayedPhoneNumbers)
       expect(text.replace(/\s+/g, " ")).toContain("+1 (800) 443 - 5212");
     await expect(phone).toBeInViewport({ ratio: 1 });
+    if (width <= 767) {
+      const phoneBounds = await phone.boundingBox();
+      expect(phoneBounds).not.toBeNull();
+      expect(railBounds!.x + railBounds!.width).toBeLessThanOrEqual(
+        phoneBounds!.x + 1,
+      );
+      expect(Math.abs(railBounds!.y - phoneBounds!.y)).toBeLessThanOrEqual(1);
+    }
     await page.locator(".faq-section").scrollIntoViewIfNeeded();
     await expect(phone).toBeInViewport({ ratio: 1 });
     for (const photo of await page.locator(".image-box img").all()) {
@@ -84,7 +108,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
     expect(
       await page
-        .locator(".masthead-photo img")
+        .locator(".rental-hero-photo img")
         .evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0),
     ).toBe(true);
     await page.screenshot({
@@ -100,6 +124,8 @@ test("mobile menu supports keyboard and Escape", async ({ page }) => {
   await expect(
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).toBeVisible();
+  await expect(page.locator(".contact-rail")).not.toBeVisible();
+  await expect(page.locator(".mobile-call")).not.toBeVisible();
   await page.locator(".mobile-services > summary").click();
   const kitchenCategory = page.locator(".mobile-service-category").first();
   await kitchenCategory.locator("> summary").click();
@@ -111,6 +137,8 @@ test("mobile menu supports keyboard and Escape", async ({ page }) => {
   await expect(
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).not.toBeVisible();
+  await expect(page.locator(".contact-rail")).toBeVisible();
+  await expect(page.locator(".mobile-call")).toBeVisible();
 });
 
 test("desktop services menu exposes clear rental categories", async ({
@@ -265,12 +293,12 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   const trigger = page.getByRole("button", {
-    name: "Quick view: Mobile Kitchens",
+    name: "Quick view: Mobile kitchen trailers",
     exact: true,
   });
   await trigger.click();
   const dialog = page.getByRole("dialog", {
-    name: "Mobile Kitchens",
+    name: "Mobile kitchen trailers",
     exact: true,
   });
   await expect(dialog).toBeVisible();
@@ -292,28 +320,37 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await expect(trigger).toBeFocused();
 });
 
-test("homepage shows the nine services in the final approved order", async ({
+test("homepage shows nine rental services with ten distinct equipment photos", async ({
   page,
 }) => {
   await page.goto("/");
   const cards = page.locator(".equipment-card");
   await expect(cards).toHaveCount(9);
   await expect(cards.locator("h3")).toHaveText([
-    "Mobile Kitchens",
-    "Dishwashing",
-    "Refrigeration",
-    "Shower",
-    "Restroom",
-    "Shower and Restroom Combination Trailers",
-    "Sleeper",
-    "Laundry",
-    "Handwashing Trailers",
+    "Mobile kitchen trailers",
+    "Dishwashing trailers",
+    "Refrigeration trailers",
+    "Shower trailers",
+    "Restroom trailers",
+    "Shower & restroom combinations",
+    "Sleeper trailers",
+    "Laundry trailers",
+    "Handwashing trailers",
   ]);
   await expect(
     cards.getByRole("link", {
-      name: "Shower and Restroom Combination Trailers",
+      name: "Shower & restroom combinations",
     }),
   ).toBeVisible();
+  const photos = page.locator(".homepage img");
+  await expect(photos).toHaveCount(10);
+  const sources = await photos.evaluateAll((images) =>
+    images.map((image) => image.getAttribute("src")),
+  );
+  expect(sources.every(Boolean)).toBe(true);
+  expect(new Set(sources).size).toBe(10);
+  for (const photo of await photos.all())
+    await expect(photo).toHaveAttribute("alt", /\S/);
 });
 
 test("FAQ and equipment navigation work without JavaScript", async ({
@@ -362,11 +399,8 @@ for (const width of [320, 768, 1024, 1440]) {
 test("reduced motion removes entry animations", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
-  expect(
-    await page
-      .locator(".masthead-stage")
-      .evaluate((e) => getComputedStyle(e).animationName),
-  ).toBe("none");
+  for (const selector of [".rental-hero-copy", ".rental-hero-photo"])
+    await expect(page.locator(selector)).toHaveCSS("animation-name", "none");
 });
 test("location planner carries the selected place into the kitchen inquiry", async ({
   page,
@@ -438,7 +472,9 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   const home = await request.get("/");
   expect(home.status()).toBe(200);
   const html = await home.text();
-  expect(html).toContain("Keep your");
+  expect(html).toContain('id="rental-title"');
+  expect(html).toContain("Mobile kitchens &amp;");
+  expect(html).toContain("Keep moving.");
   expect(html).not.toContain("April");
   const missing = await request.get("/missing-synthetic-test-page/");
   expect(missing.status()).toBe(404);

@@ -5,6 +5,7 @@ type EquipmentCard = {
   path: string;
   image: string;
   smallImage?: string;
+  imageAlt?: string;
   category: string;
   text: string;
   detail: string;
@@ -146,21 +147,84 @@ export function EquipmentImage({
   );
 }
 
-export function Cards({ editorial = false }: { editorial?: boolean }) {
+const homepagePhotos = [
+  [
+    "Mobile kitchen trailers",
+    "/images/kitchen-wide.webp",
+    "Exterior of a white mobile kitchen trailer with service windows",
+  ],
+  [
+    "Dishwashing trailers",
+    "/media/cc7bd709e3c4c4a3698b1f00.webp",
+    "Stainless steel sinks and washing equipment inside a portable dishwashing facility",
+  ],
+  [
+    "Refrigeration trailers",
+    "/images/catalog/refrigeration-trailers-960.webp",
+    "Refrigerated trailer interior with insulated walls and cooling equipment",
+  ],
+  [
+    "Shower trailers",
+    "/images/catalog/temporary-shower-trailers-960.webp",
+    "Private shower enclosure with a handheld shower and adjacent washbasin",
+  ],
+  [
+    "Restroom trailers",
+    "/media/ce44e887e6e1812d2195e955.webp",
+    "Mobile restroom interior with a toilet and yellow grab rails",
+  ],
+  [
+    "Shower & restroom combinations",
+    "/media/3ce3bc9f066f86f54836e1b3.webp",
+    "Shower and restroom combination trailer with separate entrances, steps and an access ramp",
+  ],
+  [
+    "Sleeper trailers",
+    "/images/catalog/mobile-sleep-trailers-960.webp",
+    "White sleeper trailer with individual entrances and access steps",
+  ],
+  [
+    "Laundry trailers",
+    "/media/26e57177286bf38e7705fd10.png",
+    "Stacked washers and dryers inside a mobile laundry facility",
+  ],
+  [
+    "Handwashing trailers",
+    "/media/fb803de06002fc35d0c4d28f.png",
+    "Mobile handwashing trailer with sinks, mirrors and a raised canopy",
+  ],
+];
+const homepageEquipment: EquipmentCard[] = equipment.map((item, index) => ({
+  ...item,
+  name: homepagePhotos[index][0],
+  image: homepagePhotos[index][1],
+  smallImage: undefined,
+  imageAlt: homepagePhotos[index][2],
+}));
+
+export function Cards({
+  editorial = false,
+  homepage = false,
+}: {
+  editorial?: boolean;
+  homepage?: boolean;
+}) {
   return (
-    <div className={`equipment-grid${editorial ? " equipment-editorial" : ""}`}>
-      {equipment.map((e, i) => (
+    <div
+      className={`equipment-grid${editorial ? " equipment-editorial" : ""}${homepage ? " home-equipment" : ""}`}
+    >
+      {(homepage ? homepageEquipment : equipment).map((e, i) => (
         <article className="equipment-card" key={e.path} data-card>
           <a
             href={e.path}
             className="image-box"
             tabIndex={-1}
-            aria-hidden="true"
+            aria-hidden={homepage ? undefined : true}
           >
             <EquipmentImage
               image={e.image}
               smallImage={e.smallImage}
-              alt={`${e.name} equipment from Temporary 123`}
+              alt={e.imageAlt || `${e.name} equipment from Temporary 123`}
             />
             <span className="category-label">{e.category}</span>
             <span className="image-arrow" aria-hidden="true">
@@ -168,7 +232,7 @@ export function Cards({ editorial = false }: { editorial?: boolean }) {
             </span>
           </a>
           <div className="card-copy">
-            {editorial && (
+            {(editorial || homepage) && (
               <span className="service-index" aria-hidden="true">
                 {String(i + 1).padStart(2, "0")}
               </span>
@@ -218,11 +282,13 @@ export function Cards({ editorial = false }: { editorial?: boolean }) {
               Close <span aria-hidden="true">×</span>
             </button>
             <div className="dialog-grid">
-              <EquipmentImage
-                image={e.image}
-                smallImage={e.smallImage}
-                alt={e.name}
-              />
+              {!homepage && (
+                <EquipmentImage
+                  image={e.image}
+                  smallImage={e.smallImage}
+                  alt={e.name}
+                />
+              )}
               <div className="dialog-copy">
                 <span className="eyebrow">{e.category}</span>
                 <h2 id={`equipment-title-${i}`}>{e.name}</h2>
