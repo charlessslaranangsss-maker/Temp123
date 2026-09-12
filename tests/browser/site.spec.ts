@@ -367,11 +367,14 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
   await expect(cards).toHaveCount(9);
   await expect(cards.locator("h3")).toHaveText(homepageServiceNames);
   await expect(cards.locator(".card-actions > a")).toHaveCount(9);
-  for (const callLink of await cards.locator(".card-actions > a").all())
-    await expect(callLink).toHaveAttribute("href", "tel:+18004435212");
+  for (const rentalLink of await cards.locator(".card-actions > a").all()) {
+    await expect(rentalLink).toContainText("View rental");
+    await expect(rentalLink).not.toHaveAttribute("href", /^tel:/);
+  }
   await expect(
     cards.getByRole("link", {
       name: "Shower & restroom combinations",
+      exact: true,
     }),
   ).toBeVisible();
   const photos = page.locator(".homepage img");

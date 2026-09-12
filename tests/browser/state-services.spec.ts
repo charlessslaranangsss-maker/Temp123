@@ -53,10 +53,10 @@ test("state click opens localized service choices and a direct call action", asy
     "temporary facility rental options",
   );
   await expect(modal.locator("#state-services-intro")).toContainText(
-    "Rent trailers",
+    "Rent short-term",
   );
   await expect(modal.locator("#state-services-intro")).toContainText(
-    "lease arrangements",
+    "longer lease",
   );
   await expect(
     modal.getByRole("link", { name: "Call now", exact: false }),

@@ -350,13 +350,16 @@ const stateGuideDetails: Record<
   },
 };
 
+const firstSentence = (copy: string) =>
+  copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
+
 const rentalContext = (name: string) =>
-  `For this ${name}, USA project, compare temporary facility rental options available across the United States. Rent trailers for a short-term need or ask about longer-term lease arrangements; availability and delivery are confirmed for the specific site and dates.`;
+  `Compare temporary facility rental options in ${name}, USA. Rent short-term or ask about a longer lease across the United States.`;
 
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide]) => [
     name,
-    { ...guide, intro: `${guide.intro} ${rentalContext(name)}` },
+    { ...guide, intro: `${firstSentence(guide.intro)} ${rentalContext(name)}` },
   ]),
 ) as typeof stateGuideDetails;
 

@@ -267,14 +267,10 @@ export function Cards({
             </ul>
             <div className="card-actions">
               <a
-                href={homepage ? `tel:${site.phoneE164}` : e.path}
-                aria-label={
-                  homepage
-                    ? `Call now about ${e.name} at ${site.phoneDisplay}`
-                    : undefined
-                }
+                href={e.path}
+                aria-label={homepage ? `View rental: ${e.name}` : undefined}
               >
-                {homepage ? "Call Now" : "Explore facilities"}{" "}
+                {homepage ? "View rental" : "Explore facilities"}{" "}
                 <span aria-hidden="true">↗</span>
               </a>
               <button
@@ -333,9 +329,15 @@ export function Cards({
                 <a
                   className="button dialog-call-now"
                   href={`tel:${site.phoneE164}`}
-                  aria-label={`Call now ${site.phoneDisplay}`}
+                  aria-label={`Call now, kitchen specialist available 24/7 at ${site.phoneDisplay}`}
                 >
-                  Call Now <strong>{site.phoneDisplay}</strong>{" "}
+                  <span className="dialog-call-label">
+                    <strong>Call Now</strong>
+                    <small>Kitchen specialist · 24/7</small>
+                  </span>
+                  <span className="dialog-call-number">
+                    {site.phoneDisplay}
+                  </span>{" "}
                   <span aria-hidden="true">↗</span>
                 </a>
                 <a className="text-link" href={e.path}>

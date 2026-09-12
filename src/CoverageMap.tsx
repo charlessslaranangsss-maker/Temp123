@@ -203,11 +203,9 @@ export function CoverageMap() {
           Services in <span data-state-name>your state</span>, USA
         </h2>
         <p id="state-services-intro">
-          For your project in <span data-state-name>your state</span>, USA,
-          compare temporary facility rental options available across the United
-          States. Rent trailers for a short-term need or ask about longer-term
-          lease arrangements; availability and delivery are confirmed for the
-          specific site and dates.
+          Compare temporary facility rental options in{" "}
+          <span data-state-name>your state</span>, USA. Rent short-term or ask
+          about a longer lease across the United States.
         </p>
         <p className="state-dialog-question" data-state-question />
         <ul className="state-service-list">
