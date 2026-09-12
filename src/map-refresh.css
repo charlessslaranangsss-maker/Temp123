@@ -282,12 +282,20 @@
 .coverage-map .state-services-dialog {
   --state-accent: #087581;
   --state-tint: #edf7f7;
+  --state-tint-strong: #dceeee;
   box-sizing: border-box;
-  width: min(780px, calc(100vw - 32px));
+  width: min(1040px, calc(100vw - 32px));
   max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: clamp(18px, 2.5vw, 30px);
+  overflow-x: hidden;
+  overflow-y: auto;
   border: 1px solid #c4d9dd;
   border-top: 4px solid var(--state-accent);
   border-radius: 20px;
+  background:
+    radial-gradient(circle at 92% 4%, var(--state-tint) 0 12%, transparent 35%),
+    #fff;
   color: #112d36;
   font-family: var(--font-ui);
 }
@@ -295,33 +303,163 @@
 .coverage-map .state-services-dialog[data-state-theme="1"] {
   --state-accent: #2f648a;
   --state-tint: #edf4f8;
+  --state-tint-strong: #dce9f1;
 }
 
 .coverage-map .state-services-dialog[data-state-theme="2"] {
   --state-accent: #9a4b38;
   --state-tint: #faf1ee;
+  --state-tint-strong: #f2dfd8;
 }
 
 .coverage-map .state-services-dialog[data-state-theme="3"] {
   --state-accent: #337057;
   --state-tint: #eef6f1;
+  --state-tint-strong: #dcebe2;
 }
 
 .coverage-map .state-services-dialog[data-state-theme="4"] {
   --state-accent: #66558b;
   --state-tint: #f3f0f8;
+  --state-tint-strong: #e5dff0;
 }
 
 .coverage-map .state-services-dialog[data-state-theme="5"] {
   --state-accent: #815b27;
   --state-tint: #f8f3ea;
+  --state-tint-strong: #eee3cf;
+}
+
+.coverage-map .state-dialog-composition {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px 22px;
+}
+
+.coverage-map .state-services-heading {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.coverage-map .state-dialog-story {
+  grid-column: 1 / 8;
+  align-self: center;
+  min-width: 0;
+}
+
+.coverage-map .state-dialog-visual {
+  position: relative;
+  grid-column: 8 / -1;
+  min-width: 0;
+  min-height: 290px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--state-accent) 28%, #dbe6e8);
+  border-radius: 34px 12px 34px 12px;
+  background: var(--state-tint);
+  box-shadow: 0 18px 36px rgb(17 45 54 / 14%);
+}
+
+.coverage-map .state-dialog-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgb(8 31 39 / 84%) 100%);
+  pointer-events: none;
+}
+
+.coverage-map .state-dialog-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.coverage-map .state-dialog-visual:hover img {
+  transform: scale(1.035);
+}
+
+.coverage-map .state-visual-monogram {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 58%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 88%);
+  color: var(--state-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 6px 20px rgb(8 31 39 / 18%);
+  backdrop-filter: blur(8px);
+}
+
+.coverage-map .state-dialog-visual figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: grid;
+  gap: 4px;
+  color: #fff;
+}
+
+.coverage-map .state-dialog-visual figcaption span {
+  color: #cde8ea;
+  font-size: 0.62rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coverage-map .state-dialog-visual figcaption strong {
+  max-width: 24ch;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.coverage-map .state-dialog-focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: var(--state-accent);
+  font-size: 0.68rem;
+  font-weight: 780;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.coverage-map .state-dialog-focus::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--state-accent);
+  box-shadow: 0 0 0 5px var(--state-tint-strong);
 }
 
 .coverage-map .state-services-dialog h2 {
+  margin: 0 0 12px;
   font-family: inherit;
-  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
   line-height: 1.15;
   letter-spacing: -0.035em;
+}
+
+.coverage-map #state-services-intro {
+  margin: 0 0 15px;
+  color: #526970;
+  font-size: 0.94rem;
+  line-height: 1.62;
 }
 
 .coverage-map .state-services-heading .eyebrow,
@@ -347,11 +485,71 @@
 }
 
 .coverage-map .state-dialog-question {
+  margin: 0;
+  padding: 13px 15px;
   border-left-color: var(--state-accent);
   background: var(--state-tint);
+  color: #173b46;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.coverage-map .state-dialog-services {
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding: 17px 18px 8px;
+  border: 1px solid #dbe6e8;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 82%);
+}
+
+.coverage-map .state-service-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 2px 10px;
+  color: #173b46;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.coverage-map .state-service-heading strong {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--state-tint);
+  color: var(--state-accent);
+  font-size: 0.62rem;
+}
+
+.coverage-map .state-service-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 14px;
+}
+
+.coverage-map .state-service-list a {
+  min-height: 48px;
+  padding: 8px 6px;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.coverage-map .state-service-list a:is(:hover, :focus-visible) {
+  border-color: var(--state-accent);
+  border-radius: 8px;
+  background: var(--state-tint);
+  color: var(--state-accent);
+  transform: translateX(3px);
 }
 
 .coverage-map .state-services-cta {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 15px 17px;
   border-radius: 14px;
   background: var(--state-tint);
 }
@@ -372,6 +570,323 @@
 .coverage-map .state-services-cta .state-call-now strong {
   font: inherit;
   white-space: nowrap;
+}
+
+.coverage-map .state-services-call {
+  grid-column: 1 / -1;
+  margin: -4px 0 0;
+}
+
+/* Five clearly different compositions. The photograph, palette and motion
+   combine with these structures to give every state a unique presentation. */
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-dialog-story {
+  grid-column: 6 / -1;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-dialog-visual {
+  grid-column: 1 / 6;
+  grid-row: 2;
+  border-radius: 12px 46px 12px 46px;
+}
+
+.coverage-map .state-services-dialog[data-state-layout="2"] .state-dialog-story,
+.coverage-map
+  .state-services-dialog[data-state-layout="2"]
+  .state-dialog-visual {
+  grid-column: 1 / -1;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="2"]
+  .state-dialog-visual {
+  min-height: 210px;
+  max-height: 230px;
+  border-radius: 12px;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="2"]
+  .state-dialog-visual
+  img {
+  object-position: center 46%;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="3"]
+  .state-dialog-visual {
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+  min-height: 100%;
+  border-radius: 72px 12px 12px;
+}
+
+.coverage-map .state-services-dialog[data-state-layout="3"] .state-dialog-story,
+.coverage-map
+  .state-services-dialog[data-state-layout="3"]
+  .state-dialog-services {
+  grid-column: 5 / -1;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="3"]
+  .state-service-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-dialog-story {
+  grid-column: 1 / 7;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-dialog-visual {
+  grid-column: 1 / 7;
+  min-height: 250px;
+  border-radius: 12px 12px 54px 12px;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-dialog-services {
+  grid-column: 7 / -1;
+  grid-row: 2 / 4;
+}
+
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-service-list {
+  grid-template-columns: 1fr;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .coverage-map .state-services-dialog[open] .state-dialog-story,
+  .coverage-map .state-services-dialog[open] .state-dialog-services,
+  .coverage-map .state-services-dialog[open] .state-services-cta,
+  .coverage-map .state-services-dialog[open] .state-services-call {
+    animation: state-content-rise 480ms both cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .coverage-map .state-services-dialog[open] .state-dialog-services {
+    animation-delay: 90ms;
+  }
+
+  .coverage-map .state-services-dialog[open] .state-services-cta,
+  .coverage-map .state-services-dialog[open] .state-services-call {
+    animation-delay: 150ms;
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="0"]
+    .state-dialog-visual {
+    animation: state-visual-rise 620ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="1"]
+    .state-dialog-visual {
+    animation: state-visual-east 600ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="2"]
+    .state-dialog-visual {
+    animation: state-visual-west 600ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="3"]
+    .state-dialog-visual {
+    animation: state-visual-scale 560ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="4"]
+    .state-dialog-visual {
+    animation: state-visual-tilt 650ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="5"]
+    .state-dialog-visual {
+    animation: state-visual-reveal 680ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="6"]
+    .state-dialog-visual {
+    animation: state-visual-diagonal 680ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="7"]
+    .state-dialog-visual {
+    animation: state-visual-focus 640ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="8"]
+    .state-dialog-visual {
+    animation: state-visual-swing 700ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coverage-map
+    .state-services-dialog[open][data-state-motion="9"]
+    .state-dialog-visual {
+    animation: state-visual-lift 650ms both cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes state-content-rise {
+  from {
+    transform: translateY(14px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes state-visual-rise {
+  from {
+    transform: translateY(44px);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-east {
+  from {
+    transform: translateX(58px);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-west {
+  from {
+    transform: translateX(-58px);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-scale {
+  from {
+    transform: scale(0.84);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-tilt {
+  from {
+    transform: translateY(24px) rotate(-4deg);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-reveal {
+  from {
+    clip-path: inset(0 100% 0 0 round 28px);
+  }
+  to {
+    clip-path: inset(0 round 0);
+  }
+}
+
+@keyframes state-visual-diagonal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transform: translateX(-20px);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: none;
+  }
+}
+
+@keyframes state-visual-focus {
+  from {
+    transform: scale(1.08);
+    filter: blur(12px);
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-swing {
+  from {
+    transform: perspective(700px) rotateY(-14deg);
+    transform-origin: left center;
+    opacity: 0;
+  }
+}
+
+@keyframes state-visual-lift {
+  from {
+    transform: translateY(34px) scale(0.94);
+    box-shadow: 0 2px 5px rgb(17 45 54 / 5%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .coverage-map .state-services-dialog {
+    width: min(100% - 16px, 560px);
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .coverage-map .state-dialog-composition {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-services-heading,
+  .coverage-map .state-services-dialog[data-state-layout] .state-dialog-story,
+  .coverage-map .state-services-dialog[data-state-layout] .state-dialog-visual,
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-dialog-services,
+  .coverage-map .state-services-dialog[data-state-layout] .state-services-cta,
+  .coverage-map .state-services-dialog[data-state-layout] .state-services-call {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-services-heading {
+    min-width: 0;
+  }
+
+  .coverage-map .state-services-heading .eyebrow > span:first-child {
+    display: none;
+  }
+
+  .coverage-map .state-services-dialog[data-state-layout] .state-dialog-visual {
+    min-height: 190px;
+    max-height: 220px;
+    border-radius: 12px 32px 12px 12px;
+  }
+
+  .coverage-map .state-services-dialog[data-state-layout] .state-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .coverage-map .state-dialog-services {
+    padding: 14px 12px 6px;
+  }
+
+  .coverage-map .state-services-cta {
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 600px) {
@@ -397,7 +912,13 @@
   .coverage-map .map-land path,
   .coverage-map .map-tools button,
   .coverage-map .map-tools a,
-  .coverage-map .map-dialog-heading button {
+  .coverage-map .map-dialog-heading button,
+  .coverage-map .state-dialog-story,
+  .coverage-map .state-dialog-visual,
+  .coverage-map .state-dialog-services,
+  .coverage-map .state-services-cta,
+  .coverage-map .state-services-call {
+    animation: none !important;
     transition: none;
   }
 }

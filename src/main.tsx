@@ -432,8 +432,35 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   if (stateCode)
     stateCode.textContent = `State ${String(stateIndex + 1).padStart(2, "0")} of ${guides.length}`;
   stateDialog.dataset.stateTheme = String(Math.max(stateIndex, 0) % 6);
+  stateDialog.dataset.stateLayout = guide?.dataset.stateLayout || "0";
+  stateDialog.dataset.stateMotion = guide?.dataset.stateMotion || "0";
+  stateDialog.dataset.stateSignature = String(Math.max(stateIndex, 0) + 1);
   const intro = stateDialog.querySelector("#state-services-intro");
   const question = stateDialog.querySelector("[data-state-question]");
+  const focus =
+    guide?.querySelector<HTMLElement>("[data-guide-focus]")?.textContent ||
+    "Plan for the exact site";
+  stateDialog
+    .querySelectorAll<HTMLElement>("[data-state-focus]")
+    .forEach((node) => {
+      node.textContent = focus;
+    });
+  const stateImage = stateDialog.querySelector<HTMLImageElement>(
+    "img[data-state-image]",
+  );
+  if (stateImage) {
+    stateImage.src =
+      guide?.dataset.stateImage ||
+      "/images/catalog/mobile-kitchen-trailers-960.webp";
+    stateImage.alt =
+      guide?.dataset.stateImageAlt ||
+      "Commercial equipment inside a mobile kitchen trailer";
+  }
+  const initials = stateDialog.querySelector<HTMLElement>(
+    "[data-state-initials]",
+  );
+  if (initials)
+    initials.textContent = guide?.dataset.stateAbbreviation || name.slice(0, 2);
   if (intro)
     intro.textContent =
       guide?.querySelector("[data-guide-intro]")?.textContent ||

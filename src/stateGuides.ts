@@ -353,6 +353,265 @@ const stateGuideDetails: Record<
 const firstSentence = (copy: string) =>
   copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
 
+// One owned Temporary123 photograph per state. These recovered assets came from
+// the production media library, so the service-area experience can vary without
+// relying on third-party stock imagery or repeating a photograph.
+const stateVisuals = [
+  [
+    "/media/37575655390d18f0ca9e357d.png",
+    "Stainless steel cooking line inside a mobile kitchen trailer",
+  ],
+  [
+    "/media/41a2ee3cfcd6483b1a9c9939.png",
+    "Tow vehicle transporting a Temporary123 facility trailer",
+  ],
+  [
+    "/media/655fb7048f20d305203873c3.jpg",
+    "Clear-span temporary structure prepared for a project site",
+  ],
+  [
+    "/media/6a41707211fa615937b3936d.png",
+    "Temporary facility entrance with commercial access stairs",
+  ],
+  [
+    "/media/30edc5b4ac0956615e579ab5.png",
+    "Commercial mobile kitchen with stainless steel preparation equipment",
+  ],
+  [
+    "/media/a42a84ee8e932638b27ac426.png",
+    "Wooden access ramp connected to a temporary facility",
+  ],
+  [
+    "/media/81ec66874a7d2f333b98a291.jpg",
+    "Mobile kitchen cooking and preparation workspace",
+  ],
+  [
+    "/media/00283c22743a462ae815f094.png",
+    "Connected temporary kitchen and refrigeration facility walkway",
+  ],
+  [
+    "/media/e5bfe18449d2639300dc2066.png",
+    "Freshwater and wastewater support tanks beside temporary facilities",
+  ],
+  [
+    "/media/5f76b7a5967b4ca4818e2fb9.png",
+    "Dining hall arranged with tables and seating for a workforce",
+  ],
+  [
+    "/media/89fc19f3af3cac1b095788f8.png",
+    "Compact temporary facility trailer ready for delivery",
+  ],
+  [
+    "/media/4e54342585946d7f0e0254a2.png",
+    "Refrigerated container for temporary cold storage",
+  ],
+  [
+    "/media/486c33ac02031ac74b2a6e01.png",
+    "Aerial view of mobile kitchen facilities at an active site",
+  ],
+  [
+    "/media/0d8812a2273ed0d840f29bb5.png",
+    "Dishwashing trailer with stainless steel sinks and worktables",
+  ],
+  [
+    "/media/4b67ae2ec507c379fdf9a7e3.png",
+    "Mobile sleeper unit fitted with multiple bunk beds",
+  ],
+  [
+    "/media/e4c4ec3a81b6ed6fec49b183.png",
+    "Modular temporary buildings being installed at a project site",
+  ],
+  [
+    "/media/58d6431453111a9ae162178c.jpg",
+    "Commercial cooking equipment inside a mobile kitchen",
+  ],
+  [
+    "/media/1581ae8f5596a3ff6de998bc.png",
+    "Accessible ramp leading to a temporary facility entrance",
+  ],
+  [
+    "/media/9b8c1d6a8e92cd55cd909891.png",
+    "Row of temporary sleeper modules at a wooded project site",
+  ],
+  [
+    "/media/a82699176e52dc1827cc9495.jpg",
+    "Solar-powered mobile security camera trailer",
+  ],
+  [
+    "/media/93ab328afe054439996c17d1.png",
+    "Combination shower and restroom trailer with separate entrances",
+  ],
+  [
+    "/media/014607cb28f6de203d8dfa1d.png",
+    "Refrigeration trailer exterior prepared for site placement",
+  ],
+  [
+    "/media/217e577ab42026fa591bec3a.png",
+    "Interior of a temporary refrigeration trailer",
+  ],
+  [
+    "/media/0bc5577144c573df6a7cbfad.png",
+    "Combined shower and restroom interior with private fixtures",
+  ],
+  [
+    "/media/6ec88e391d22b5c6ce13ebb3.png",
+    "Temporary sleeping modules installed beside an active work area",
+  ],
+  [
+    "/media/599283a9ef6bf5d260ca0648.png",
+    "Sleeper trailer interior with practical workforce bunk beds",
+  ],
+  [
+    "/media/7ff2fcf2451eedc60c0fefc4.png",
+    "Large temporary dining structure with arranged seating",
+  ],
+  [
+    "/media/c120f1a788627b5c7ac5f743.png",
+    "Mobile generator trailers supporting temporary facilities",
+  ],
+  [
+    "/media/ee08834224bac1265eab5282.jpg",
+    "Commercial ramp and stair system for temporary site access",
+  ],
+  [
+    "/media/9013233787520e004bc8027f.jpg",
+    "Mobile security cameras mounted for site monitoring",
+  ],
+  [
+    "/media/fbafc6f8bbd15bd8a96fd5b9.png",
+    "Temporary facilities enclosed by a dedicated service area",
+  ],
+  [
+    "/media/cbf21c26707070c668fa6966.png",
+    "Mobile sink trailer configured for field handwashing",
+  ],
+  [
+    "/media/fb803de06002fc35d0c4d28f.png",
+    "Exterior service side of a mobile handwashing trailer",
+  ],
+  [
+    "/media/92093075ae986ac89edb2378.png",
+    "Private temporary accommodation with a bed and work area",
+  ],
+  [
+    "/media/138d2338adf9b187214939ae.jpg",
+    "Commercial oven bank inside a mobile kitchen facility",
+  ],
+  [
+    "/media/c5d1c17a2c736f35748c95c2.png",
+    "High-capacity dishwashing trailer production line",
+  ],
+  [
+    "/media/a83c096fb47e6af0e2acb64c.jpg",
+    "Ramp and handrail system connecting a temporary facility",
+  ],
+  [
+    "/media/398705f8cd3d002715488f73.jpg",
+    "Stainless steel kitchen line with commercial ovens",
+  ],
+  [
+    "/media/62dd9d0d9722a8000251c8e4.png",
+    "Compact shower and restroom combination interior",
+  ],
+  [
+    "/media/cb83c677ef352724248ff935.png",
+    "Dishwashing trailer with organized sinks and preparation counters",
+  ],
+  [
+    "/media/8ed76a87f67926d2fda452b5.png",
+    "Mobile sink trailer with multiple handwashing stations",
+  ],
+  [
+    "/media/0431732ea8f95dc309cc85ff.png",
+    "Dishwashing facility arranged for efficient service flow",
+  ],
+  [
+    "/media/975bd6d0d31e613e775308c2.jpg",
+    "Temporary kitchen complex supporting high-volume meal service",
+  ],
+  [
+    "/media/bb1003576a3549f1ab666e8f.jpg",
+    "Modular ramp system installed beside temporary facilities",
+  ],
+  [
+    "/media/456530fa23f7eef5c804225b.png",
+    "Mobile locker storage designed for workforce facilities",
+  ],
+  [
+    "/media/3585cdff4e89fa69dddb6708.png",
+    "Commercial mobile kitchen with cooking and ventilation equipment",
+  ],
+  [
+    "/media/ec34054c5890d01d82208188.png",
+    "Temporary facility connected by an elevated access ramp",
+  ],
+  [
+    "/media/d200bc065035db6ed9cca8d6.jpg",
+    "Long commercial ramp providing access to a temporary building",
+  ],
+  [
+    "/media/58466b5d345e4e3197f239ee.png",
+    "Mobile laundry trailer with rows of commercial dryers",
+  ],
+  [
+    "/media/26e57177286bf38e7705fd10.png",
+    "Commercial washers installed inside a mobile laundry facility",
+  ],
+] as const;
+
+const stateCodes = [
+  "AL",
+  "AK",
+  "AZ",
+  "AR",
+  "CA",
+  "CO",
+  "CT",
+  "DE",
+  "FL",
+  "GA",
+  "HI",
+  "ID",
+  "IL",
+  "IN",
+  "IA",
+  "KS",
+  "KY",
+  "LA",
+  "ME",
+  "MD",
+  "MA",
+  "MI",
+  "MN",
+  "MS",
+  "MO",
+  "MT",
+  "NE",
+  "NV",
+  "NH",
+  "NJ",
+  "NM",
+  "NY",
+  "NC",
+  "ND",
+  "OH",
+  "OK",
+  "OR",
+  "PA",
+  "RI",
+  "SC",
+  "SD",
+  "TN",
+  "TX",
+  "UT",
+  "VT",
+  "VA",
+  "WA",
+  "WV",
+  "WI",
+  "WY",
+] as const;
+
 const rentalContexts = [
   (name: string) =>
     `Temporary facility rental services can be planned for projects in ${name}, USA. Customers can rent equipment for short-term work or request a longer lease.`,
@@ -374,9 +633,23 @@ export const stateGuides = Object.fromEntries(
     {
       ...guide,
       intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
+      image: stateVisuals[index][0],
+      imageAlt: stateVisuals[index][1],
+      abbreviation: stateCodes[index],
+      layout: String(index % 5),
+      motion: String((index + Math.floor(index / 5) * 2) % 10),
     },
   ]),
-) as typeof stateGuideDetails;
+) as Record<
+  string,
+  (typeof stateGuideDetails)[string] & {
+    image: string;
+    imageAlt: string;
+    abbreviation: string;
+    layout: string;
+    motion: string;
+  }
+>;
 
 export const stateAnchor = (name: string) =>
   `planning-${name.toLowerCase().replaceAll(" ", "-")}`;

@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { existsSync } from "node:fs";
 import { stateGuides } from "../../src/stateGuides";
 
 const names = [
@@ -18,6 +19,19 @@ test("every state guide uses natural rental, rent and lease language", () => {
   expect(
     new Set(Object.values(stateGuides).map((guide) => guide.intro)).size,
   ).toBe(50);
+  expect(
+    new Set(Object.values(stateGuides).map((guide) => guide.image)).size,
+  ).toBe(50);
+  expect(
+    new Set(Object.values(stateGuides).map((guide) => guide.abbreviation)).size,
+  ).toBe(50);
+  expect(
+    new Set(
+      Object.values(stateGuides).map(
+        (guide) => `${guide.layout}:${guide.motion}`,
+      ),
+    ).size,
+  ).toBe(50);
   for (const [name, guide] of Object.entries(stateGuides)) {
     const stateMentions =
       guide.intro.toLowerCase().split(name.toLowerCase()).length - 1;
@@ -27,6 +41,10 @@ test("every state guide uses natural rental, rent and lease language", () => {
     expect(guide.intro, name).toMatch(/\brent\b/i);
     expect(guide.intro, name).toMatch(/\blease\b/i);
     expect(guide.intro, name).toContain(`${name}, USA`);
+    expect(guide.imageAlt.length, name).toBeGreaterThan(24);
+    expect(existsSync(`public${guide.image}`), `${name}: ${guide.image}`).toBe(
+      true,
+    );
   }
 });
 
@@ -51,6 +69,29 @@ test("state click opens localized service choices and a direct call action", asy
   await expect(modal).toBeVisible();
   await expect(modal.locator("[data-state-code]")).toHaveText("State 05 of 50");
   await expect(modal).toHaveAttribute("data-state-theme", "4");
+  await expect(modal).toHaveAttribute("data-state-layout", "4");
+  await expect(modal).toHaveAttribute("data-state-motion", "4");
+  await expect(modal.locator("img[data-state-image]")).toHaveAttribute(
+    "src",
+    stateGuides.California.image,
+  );
+  await expect(modal.locator("img[data-state-image]")).toHaveAttribute(
+    "alt",
+    stateGuides.California.imageAlt,
+  );
+  await expect(modal.locator("img[data-state-image]")).toBeVisible();
+  expect(
+    await modal
+      .locator("img[data-state-image]")
+      .evaluate(
+        (image: HTMLImageElement) => image.complete && image.naturalWidth > 0,
+      ),
+  ).toBe(true);
+  await expect(modal.locator("[data-state-initials]")).toHaveText("CA");
+  await expect(modal.locator(".state-dialog-visual")).toHaveCSS(
+    "animation-name",
+    "state-visual-tilt",
+  );
   await expect(
     modal.locator(".state-service-list a > span:nth-child(2)"),
   ).toHaveText(names);
@@ -79,6 +120,40 @@ test("state click opens localized service choices and a direct call action", asy
   await expect(state).toBeFocused();
 });
 
+test("different states receive different structures, owned images and motions", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/service-areas/");
+  const california = page.locator(
+    '.coverage-map-stage [data-state="California"]',
+  );
+  await california.click();
+  const dialog = page.locator("#state-services-dialog");
+  const firstPresentation = await dialog.evaluate((element) => ({
+    layout: element.getAttribute("data-state-layout"),
+    motion: element.getAttribute("data-state-motion"),
+    image: element.querySelector("img[data-state-image]")?.getAttribute("src"),
+  }));
+  await page.keyboard.press("Escape");
+  await page.locator('.coverage-map-stage [data-state="Montana"]').click();
+  const secondPresentation = await dialog.evaluate((element) => ({
+    layout: element.getAttribute("data-state-layout"),
+    motion: element.getAttribute("data-state-motion"),
+    image: element.querySelector("img[data-state-image]")?.getAttribute("src"),
+  }));
+  expect(secondPresentation).not.toEqual(firstPresentation);
+  expect(secondPresentation).toEqual({
+    layout: stateGuides.Montana.layout,
+    motion: stateGuides.Montana.motion,
+    image: stateGuides.Montana.image,
+  });
+  await expect(dialog.locator(".state-dialog-visual")).toHaveCSS(
+    "animation-name",
+    "state-visual-reveal",
+  );
+});
+
 test("mobile state selection and expanded map support keyboard, calling and dismissal", async ({
   page,
 }) => {
@@ -98,6 +173,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   ).toHaveAttribute("href", "tel:+18004435212");
   await page.screenshot({ path: "test-results/state-services-mobile.png" });
   await page.keyboard.press("Escape");
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.getByRole("button", { name: "Explore full map" }).click();
   const state = page.locator('.map-dialog [data-state="Texas"]');
   await state.focus();
@@ -107,6 +183,10 @@ test("mobile state selection and expanded map support keyboard, calling and dism
     exact: true,
   });
   await expect(modal).toBeVisible();
+  await expect(modal.locator(".state-dialog-visual")).toHaveCSS(
+    "animation-name",
+    "none",
+  );
   await page.keyboard.press("Escape");
   await expect(state).toBeFocused();
   await state.press("Enter");

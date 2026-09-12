@@ -189,63 +189,99 @@ export function CoverageMap() {
         aria-labelledby="state-services-title"
         aria-describedby="state-services-intro"
       >
-        <div className="state-services-heading">
-          <p className="eyebrow">
-            <span>Temporary facilities across the USA.</span>
-            <span className="state-dialog-code" data-state-code>
-              State 01 of 50
-            </span>
-          </p>
-          <button
-            type="button"
-            data-close-state
-            aria-label="Close state services"
-          >
-            ×
-          </button>
-        </div>
-        <h2 id="state-services-title">
-          Services in <span data-state-name>your state</span>, USA
-        </h2>
-        <p id="state-services-intro">
-          Temporary facility rental services are available for projects in{" "}
-          <span data-state-name>your state</span>, USA. Customers can rent
-          equipment for short-term projects or request a longer lease for
-          projects across the United States.
-        </p>
-        <p className="state-dialog-question" data-state-question />
-        <ul className="state-service-list">
-          {serviceCategories.map((service, index) => (
-            <li key={service.href}>
-              <a href={service.href}>
-                <span className="state-service-number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span>{service.name}</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="state-services-cta">
-          <div>
-            <h3>Need a trailer now?</h3>
-            <p>Speak directly with our USA rental team, available 24/7.</p>
+        <div className="state-dialog-composition">
+          <div className="state-services-heading">
+            <p className="eyebrow">
+              <span>Temporary facilities across the USA.</span>
+              <span className="state-dialog-code" data-state-code>
+                State 01 of 50
+              </span>
+            </p>
+            <button
+              type="button"
+              data-close-state
+              aria-label="Close state services"
+            >
+              ×
+            </button>
           </div>
-          <a
-            className="button state-call-now"
-            href={`tel:${site.phoneE164}`}
-            aria-label={`Call now ${site.phoneDisplay}`}
+
+          <section className="state-dialog-story">
+            <p className="state-dialog-focus" data-state-focus>
+              Plan for the exact site
+            </p>
+            <h2 id="state-services-title">
+              Services in <span data-state-name>your state</span>, USA
+            </h2>
+            <p id="state-services-intro">
+              Temporary facility rental services are available for projects in{" "}
+              <span data-state-name>your state</span>, USA. Customers can rent
+              equipment for short-term projects or request a longer lease for
+              projects across the United States.
+            </p>
+            <p className="state-dialog-question" data-state-question />
+          </section>
+
+          <figure className="state-dialog-visual">
+            <img
+              src="/images/catalog/mobile-kitchen-trailers-960.webp"
+              alt="Commercial equipment inside a mobile kitchen trailer"
+              width="850"
+              height="650"
+              data-state-image
+            />
+            <span className="state-visual-monogram" data-state-initials>
+              US
+            </span>
+            <figcaption>
+              <span>Project planning focus</span>
+              <strong data-state-focus>Plan for the exact site</strong>
+            </figcaption>
+          </figure>
+
+          <section
+            className="state-dialog-services"
+            aria-label="Temporary facility rental services"
           >
-            Call Now <strong>{site.phoneDisplay}</strong>{" "}
-            <span aria-hidden="true">↗</span>
-          </a>
+            <div className="state-service-heading">
+              <span>Available rental services</span>
+              <strong>9 facility types</strong>
+            </div>
+            <ul className="state-service-list">
+              {serviceCategories.map((service, index) => (
+                <li key={service.href}>
+                  <a href={service.href}>
+                    <span className="state-service-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>{service.name}</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <div className="state-services-cta">
+            <div>
+              <h3>Need a trailer now?</h3>
+              <p>Speak directly with our USA rental team, available 24/7.</p>
+            </div>
+            <a
+              className="button state-call-now"
+              href={`tel:${site.phoneE164}`}
+              aria-label={`Call now ${site.phoneDisplay}`}
+            >
+              Call Now <strong>{site.phoneDisplay}</strong>{" "}
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p className="state-services-call">
+            Prefer to call?{" "}
+            <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+            <span>Available 24/7</span>
+          </p>
         </div>
-        <p className="state-services-call">
-          Prefer to call?{" "}
-          <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
-          <span>Available 24/7</span>
-        </p>
       </dialog>
     </figure>
   );

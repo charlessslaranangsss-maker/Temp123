@@ -64,7 +64,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     );
     await expect(page.locator(".utility-status i")).toHaveCSS(
       "background-color",
-      "rgb(38, 212, 119)",
+      "rgb(53, 240, 138)",
     );
     expect(
       await page

@@ -162,7 +162,8 @@ for (const width of [390, 1440])
       };
     });
     expect(statusMotion.name).toBe("support-status-breathe");
-    expect(statusMotion.duration).toBeGreaterThanOrEqual(3);
+    expect(statusMotion.duration).toBeGreaterThanOrEqual(1);
+    expect(statusMotion.duration).toBeLessThan(2);
     await page.emulateMedia({ reducedMotion: "reduce" });
     for (const control of [phone, rail])
       await expect(control).toHaveCSS("animation-name", "none");

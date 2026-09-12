@@ -485,6 +485,11 @@ export function Site({
                   <details
                     id={stateAnchor(name)}
                     data-state-guide={name}
+                    data-state-image={guide.image}
+                    data-state-image-alt={guide.imageAlt}
+                    data-state-abbreviation={guide.abbreviation}
+                    data-state-layout={guide.layout}
+                    data-state-motion={guide.motion}
                     key={name}
                   >
                     <summary>
@@ -492,7 +497,7 @@ export function Site({
                       <span aria-hidden="true">+</span>
                     </summary>
                     <div>
-                      <h3>{guide.focus}</h3>
+                      <h3 data-guide-focus>{guide.focus}</h3>
                       <p data-guide-intro>{guide.intro}</p>
                       <p className="state-planning-question">
                         <strong>Before you call</strong>
@@ -796,8 +801,7 @@ export function Site({
                 <div className="secondary-intro-copy">
                   <span className="eyebrow">ABOUT TEMPORARY 123</span>
                   <h1 id="about-title">
-                    Temporary facilities{" "}
-                    built around the work.
+                    Temporary facilities built around the work.
                   </h1>
                   <p>
                     Temporary 123 supports construction, emergency response,
@@ -828,8 +832,8 @@ export function Site({
                     <strong>Facilities, logistics and site requirements</strong>
                     <p>
                       Start with the project location, schedule, occupancy and
-                      utilities. Our team helps identify the equipment and support
-                      services needed for a workable deployment plan.
+                      utilities. Our team helps identify the equipment and
+                      support services needed for a workable deployment plan.
                     </p>
                   </div>
                 </aside>
@@ -922,13 +926,17 @@ export function Site({
                   </h1>
                   <p>
                     Practical guidance for mobile kitchen rentals, restroom and
-                    shower trailers, workforce housing and temporary site support.
+                    shower trailers, workforce housing and temporary site
+                    support.
                   </p>
                   <a className="secondary-inline-link" href="#planning-guides">
                     Browse planning guides <span aria-hidden="true">↓</span>
                   </a>
                 </div>
-                <nav className="article-topics" aria-label="Planning guide topics">
+                <nav
+                  className="article-topics"
+                  aria-label="Planning guide topics"
+                >
                   <span>In this collection</span>
                   {[
                     ["01", "Mobile kitchens", "#kitchen-guide"],
