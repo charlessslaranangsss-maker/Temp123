@@ -353,13 +353,28 @@ const stateGuideDetails: Record<
 const firstSentence = (copy: string) =>
   copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
 
-const rentalContext = (name: string) =>
-  `Temporary facility rental services are available for projects in ${name}, USA. Customers can rent equipment for short-term projects or request a longer lease for projects across the United States.`;
+const rentalContexts = [
+  (name: string) =>
+    `Temporary facility rental services can be planned for projects in ${name}, USA. Customers can rent equipment for short-term work or request a longer lease.`,
+  (name: string) =>
+    `Customers can rent temporary facilities for projects in ${name}, USA through a rental agreement or a longer lease.`,
+  (name: string) =>
+    `Temporary facility rental options in ${name}, USA include equipment to rent for short-term projects and longer lease arrangements.`,
+  (name: string) =>
+    `Project teams in ${name}, USA can rent temporary facilities under a short-term rental or a longer lease.`,
+  (name: string) =>
+    `For projects in ${name}, USA, customers can rent temporary facilities through a short-term rental agreement or request a longer lease.`,
+  (name: string) =>
+    `Temporary facility rental planning in ${name}, USA supports customers who need to rent equipment for a short-term project or arrange a longer lease.`,
+];
 
 export const stateGuides = Object.fromEntries(
-  Object.entries(stateGuideDetails).map(([name, guide]) => [
+  Object.entries(stateGuideDetails).map(([name, guide], index) => [
     name,
-    { ...guide, intro: `${firstSentence(guide.intro)} ${rentalContext(name)}` },
+    {
+      ...guide,
+      intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
+    },
   ]),
 ) as typeof stateGuideDetails;
 

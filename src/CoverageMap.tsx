@@ -190,7 +190,12 @@ export function CoverageMap() {
         aria-describedby="state-services-intro"
       >
         <div className="state-services-heading">
-          <p className="eyebrow">Temporary facilities across the USA.</p>
+          <p className="eyebrow">
+            <span>Temporary facilities across the USA.</span>
+            <span className="state-dialog-code" data-state-code>
+              State 01 of 50
+            </span>
+          </p>
           <button
             type="button"
             data-close-state

@@ -15,12 +15,18 @@ const names = [
 
 test("every state guide uses natural rental, rent and lease language", () => {
   expect(Object.keys(stateGuides)).toHaveLength(50);
+  expect(
+    new Set(Object.values(stateGuides).map((guide) => guide.intro)).size,
+  ).toBe(50);
   for (const [name, guide] of Object.entries(stateGuides)) {
+    const stateMentions =
+      guide.intro.toLowerCase().split(name.toLowerCase()).length - 1;
+    expect(stateMentions, name).toBe(2);
+    expect(guide.intro, name).toMatch(/\btemporary\b/i);
     expect(guide.intro, name).toMatch(/\brental\b/i);
     expect(guide.intro, name).toMatch(/\brent\b/i);
     expect(guide.intro, name).toMatch(/\blease\b/i);
     expect(guide.intro, name).toContain(`${name}, USA`);
-    expect(guide.intro, name).toContain("United States");
   }
 });
 
@@ -43,21 +49,19 @@ test("state click opens localized service choices and a direct call action", asy
     exact: true,
   });
   await expect(modal).toBeVisible();
+  await expect(modal.locator("[data-state-code]")).toHaveText("State 05 of 50");
+  await expect(modal).toHaveAttribute("data-state-theme", "4");
   await expect(
     modal.locator(".state-service-list a > span:nth-child(2)"),
   ).toHaveText(names);
   await expect(
     modal.getByRole("link", { name: "Dishwashing", exact: false }),
   ).toHaveAttribute("href", "/portable-dishwashing-trailer-rental/");
-  await expect(modal.locator("#state-services-intro")).toContainText(
-    "Temporary facility rental services",
-  );
-  await expect(modal.locator("#state-services-intro")).toContainText(
-    "Customers can rent equipment",
-  );
-  await expect(modal.locator("#state-services-intro")).toContainText(
-    "longer lease",
-  );
+  const stateIntro = await modal.locator("#state-services-intro").innerText();
+  expect(stateIntro).toMatch(/\btemporary\b/i);
+  expect(stateIntro).toMatch(/\brental\b/i);
+  expect(stateIntro).toMatch(/\brent\b/i);
+  expect(stateIntro).toMatch(/\blease\b/i);
   await expect(
     modal.getByRole("link", { name: "Call now", exact: false }),
   ).toHaveAttribute("href", "tel:+18004435212");

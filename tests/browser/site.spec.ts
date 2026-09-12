@@ -7,7 +7,7 @@ const homepageServiceNames = [
   "Shower trailers",
   "Restroom trailers",
   "Shower & restroom combinations",
-  "Sleeper trailers",
+  "Sleeper / Bunkbed Trailers",
   "Laundry trailers",
   "Handwashing trailers",
 ];
@@ -104,7 +104,14 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     );
     await expect(phone.locator(":scope > span")).toBeVisible();
     await expect(phone.locator("svg")).toBeVisible();
-    if (width >= 1024) await expect(phone).toHaveCSS("border-radius", "12px");
+    if (width >= 1024) {
+      await expect(phone).toHaveCSS("border-radius", "12px");
+      expect(
+        await phone.evaluate(
+          (element) => getComputedStyle(element, "::after").animationName,
+        ),
+      ).toBe("header-call-edge-flicker");
+    }
     await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
     const displayedPhoneNumbers = await page
       .locator('a[href="tel:+18004435212"]')
@@ -508,6 +515,13 @@ test("reduced motion removes entry animations", async ({ page }) => {
     ".hero-photo-label",
   ])
     await expect(page.locator(selector)).toHaveCSS("animation-name", "none");
+  expect(
+    await page
+      .locator(".header-contact")
+      .evaluate(
+        (element) => getComputedStyle(element, "::after").animationName,
+      ),
+  ).toBe("none");
 });
 test("location planner carries the selected place into the kitchen inquiry", async ({
   page,

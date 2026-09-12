@@ -421,9 +421,17 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   stateDialog.querySelectorAll("[data-state-name]").forEach((node) => {
     node.textContent = name;
   });
-  const guide = Array.from(
+  const guides = Array.from(
     document.querySelectorAll<HTMLElement>("[data-state-guide]"),
-  ).find((node) => node.dataset.stateGuide === name);
+  );
+  const stateIndex = guides.findIndex(
+    (node) => node.dataset.stateGuide === name,
+  );
+  const guide = guides[stateIndex];
+  const stateCode = stateDialog.querySelector<HTMLElement>("[data-state-code]");
+  if (stateCode)
+    stateCode.textContent = `State ${String(stateIndex + 1).padStart(2, "0")} of ${guides.length}`;
+  stateDialog.dataset.stateTheme = String(Math.max(stateIndex, 0) % 6);
   const intro = stateDialog.querySelector("#state-services-intro");
   const question = stateDialog.querySelector("[data-state-question]");
   if (intro)

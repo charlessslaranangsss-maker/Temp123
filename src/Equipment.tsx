@@ -179,7 +179,7 @@ const homepagePhotos = [
     "Shower and restroom combination trailer with separate entrances, steps and an access ramp",
   ],
   [
-    "Sleeper trailers",
+    "Sleeper / Bunkbed Trailers",
     "/images/catalog/mobile-sleep-trailers-960.webp",
     "White sleeper trailer with individual entrances and access steps",
   ],

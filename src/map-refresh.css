@@ -280,13 +280,41 @@
 }
 
 .coverage-map .state-services-dialog {
+  --state-accent: #087581;
+  --state-tint: #edf7f7;
   box-sizing: border-box;
   width: min(780px, calc(100vw - 32px));
   max-width: calc(100vw - 32px);
   border: 1px solid #c4d9dd;
+  border-top: 4px solid var(--state-accent);
   border-radius: 20px;
   color: #112d36;
   font-family: var(--font-ui);
+}
+
+.coverage-map .state-services-dialog[data-state-theme="1"] {
+  --state-accent: #2f648a;
+  --state-tint: #edf4f8;
+}
+
+.coverage-map .state-services-dialog[data-state-theme="2"] {
+  --state-accent: #9a4b38;
+  --state-tint: #faf1ee;
+}
+
+.coverage-map .state-services-dialog[data-state-theme="3"] {
+  --state-accent: #337057;
+  --state-tint: #eef6f1;
+}
+
+.coverage-map .state-services-dialog[data-state-theme="4"] {
+  --state-accent: #66558b;
+  --state-tint: #f3f0f8;
+}
+
+.coverage-map .state-services-dialog[data-state-theme="5"] {
+  --state-accent: #815b27;
+  --state-tint: #f8f3ea;
 }
 
 .coverage-map .state-services-dialog h2 {
@@ -299,12 +327,33 @@
 .coverage-map .state-services-heading .eyebrow,
 .coverage-map .state-service-number,
 .coverage-map .state-services-call a {
-  color: #087581;
+  color: var(--state-accent);
+}
+
+.coverage-map .state-services-heading .eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.coverage-map .state-dialog-code {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--state-tint);
+  color: var(--state-accent);
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.coverage-map .state-dialog-question {
+  border-left-color: var(--state-accent);
+  background: var(--state-tint);
 }
 
 .coverage-map .state-services-cta {
   border-radius: 14px;
-  background: #f3f7f8;
+  background: var(--state-tint);
 }
 
 .coverage-map .state-services-cta .button {
