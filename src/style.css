@@ -1372,6 +1372,24 @@ body.dialog-open .mobile-call {
 .breadcrumb a {
   padding-block: var(--space-2);
 }
+.procurement-documents {
+  margin-block: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  background: var(--pale);
+  line-height: 1.65;
+}
+.procurement-documents h2 {
+  font-size: 1.5rem;
+}
+.procurement-documents ul {
+  padding-left: var(--space-4);
+  list-style: disc;
+}
+.procurement-documents a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .source-content {
   overflow-wrap: anywhere;
   line-height: 1.7;

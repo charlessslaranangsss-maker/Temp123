@@ -1,7 +1,39 @@
 import site from "../site.json" with { type: "json" };
 import { readFileSync } from "node:fs";
+import { publicOrigin } from "./seo-policy";
 export function releaseErrors() {
   const errors: string[] = [];
+  if (site.origin !== publicOrigin)
+    errors.push(
+      "Canonical origin must match the owner-approved production domain",
+    );
+  try {
+    const review = JSON.parse(
+      readFileSync(
+        new URL("../content/migration-review.json", import.meta.url),
+        "utf8",
+      ),
+    );
+    for (const [field, message] of Object.entries({
+      sourceRecoveryComplete:
+        "Legacy URL/content recovery and decisions are incomplete",
+      googlePropertiesVerified:
+        "Analytics and Search Console property/consent verification is incomplete",
+      inquiryDeliveryVerified: "Inquiry delivery has not been verified",
+      businessClaimsReviewed: "Business and procurement claims need review",
+      oldWorkflowParityVerified:
+        "Legacy planning and rental workflow parity is unverified",
+    }))
+      if (review[field] !== true) errors.push(message);
+    if (
+      review.redirectReviews.some(
+        (row: { status: string }) => row.status !== "verified",
+      )
+    )
+      errors.push("Redirect content equivalence has unresolved decisions");
+  } catch {
+    errors.push("A complete migration review is required");
+  }
   const status = JSON.parse(
     readFileSync(
       new URL("../content/migration-status.json", import.meta.url),

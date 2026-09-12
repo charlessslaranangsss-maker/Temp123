@@ -8,6 +8,23 @@ const { redirects = [], headers = [] } = JSON.parse(
 http
   .createServer(async (req, res) => {
     for (const rule of headers.filter((rule) => rule.source === "/(.*)")) {
+      const host = (req.headers.host || "").split(":")[0];
+      if (
+        rule.has?.some(
+          (condition) =>
+            condition.type === "host" &&
+            !new RegExp(`^${condition.value}$`, "i").test(host),
+        )
+      )
+        continue;
+      if (
+        rule.missing?.some(
+          (condition) =>
+            condition.type === "host" &&
+            new RegExp(`^${condition.value}$`, "i").test(host),
+        )
+      )
+        continue;
       for (const header of rule.headers)
         res.setHeader(header.key, header.value);
     }
@@ -66,7 +83,11 @@ http
     try {
       const info = await stat(file);
       if (info.isDirectory() && !path.endsWith("/")) {
-        res.writeHead(308, { Location: path + "/" }).end();
+        res
+          .writeHead(308, {
+            Location: path + "/" + new URL(req.url, "http://localhost").search,
+          })
+          .end();
         return;
       }
       const target = info.isDirectory() ? file + "/index.html" : file;
@@ -84,6 +105,7 @@ http
         ".png": "image/png",
         ".jpg": "image/jpeg",
         ".gif": "image/gif",
+        ".pdf": "application/pdf",
       };
       res
         .writeHead(200, {

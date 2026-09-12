@@ -1,15 +1,54 @@
 {
-  "checkedAt": "2026-09-11T21:40:08.437Z",
+  "checkedAt": "2026-09-12T12:59:57.126Z",
   "htmlPages": 666,
-  "localLinks": 76290,
+  "localLinks": 78232,
   "localImages": 1247,
   "uniqueTitles": 666,
   "uniqueDescriptions": 666,
-  "linkedRoutes": 689,
+  "linkedRoutes": 696,
   "problems": [],
+  "pendingMigrationLinks": [
+    {
+      "path": "/government/education/",
+      "links": 3
+    },
+    {
+      "path": "/government/emergency-services/",
+      "links": 3
+    },
+    {
+      "path": "/wp-content/uploads/2021/11/HAND-WASHING-STATION-1-web.jpg",
+      "links": 2
+    },
+    {
+      "path": "/food-service-management/",
+      "links": 1
+    },
+    {
+      "path": "/food-service-design/",
+      "links": 1
+    },
+    {
+      "path": "/food-service-staffing/",
+      "links": 1
+    },
+    {
+      "path": "/food-catering/",
+      "links": 1
+    },
+    {
+      "path": "/testimonials/",
+      "links": 1
+    }
+  ],
+  "restoredAssets": 186,
   "migration": {
+    "source": "https://temporary123.com",
     "expected": 98253,
-    "recovered": 625
+    "recovered": 625,
+    "complete": false,
+    "checkedAt": "2026-09-11T16:39:23.031Z"
   },
+  "launchReady": false,
   "indexing": "Revision host remains noindex. Production origin migration is incomplete."
 }

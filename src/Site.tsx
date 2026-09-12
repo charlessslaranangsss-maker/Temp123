@@ -12,6 +12,7 @@ import { CoverageMap } from "./CoverageMap";
 import { ServiceDetail, modelDetails } from "./ServiceDetail";
 export type SourcePage = {
   id: number;
+  modified?: string;
   path: string;
   title: string;
   html: string;
@@ -318,6 +319,8 @@ export function Footer() {
           <a href="/services/">Project solutions</a>
           <a href="/industries/">Industries served</a>
           <a href="/service-areas/">Service Areas</a>
+          <a href="/government/">Government services</a>
+          <a href="/gsa-schedule/">GSA Schedule information</a>
         </div>
         <div>
           <strong>Get in touch</strong>
@@ -805,6 +808,30 @@ export function Site({
                 </a>
               </nav>
               <h1 className="page-title">{page.title}</h1>
+              {path === "/gsa-schedule/" && (
+                <aside
+                  className="procurement-documents"
+                  aria-label="Supplier documents"
+                >
+                  <h2>Supplier documents</h2>
+                  <p>
+                    Review the published documents and contact our team to
+                    confirm current details for your procurement requirements.
+                  </p>
+                  <ul>
+                    <li>
+                      <a href="https://temporarykitchens123.com/wp-content/uploads/2023/02/EntityInformation.pdf">
+                        Entity information (PDF)
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://temporarykitchens123.com/wp-content/uploads/2023/02/V9-tk123-CAPABILITY-STATEMENT-1.pdf">
+                        Capability statement (PDF)
+                      </a>
+                    </li>
+                  </ul>
+                </aside>
+              )}
               <article
                 className="source-content"
                 dangerouslySetInnerHTML={{ __html: page.html }}

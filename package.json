@@ -10,7 +10,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build && node --import tsx scripts/prerender.tsx",
     "preview": "node scripts/serve.mjs",
-    "test": "vitest run tests/contact.test.ts tests/routes.test.ts tests/import.test.mjs",
+    "test": "vitest run tests/contact.test.ts tests/routes.test.ts tests/import.test.mjs tests/migration.test.ts",
     "test:rules": "firebase emulators:exec --project demo-temporary123 --only database \"vitest run --no-file-parallelism tests/rules.test.ts\"",
     "test:e2e": "playwright test",
     "check:release": "node --import tsx scripts/release.ts",

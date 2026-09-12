@@ -6,15 +6,16 @@ import { gunzipSync } from "node:zlib";
 import { pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
+import { canonicalFor, productionBuild, sitemapXml } from "./seo-policy";
+import { renderSourceContent } from "./source-content";
+import { preserveMedia } from "./preserve-media";
 import { load } from "cheerio";
 import { catalog } from "../src/EquipmentCatalog";
 import modelDetails from "../content/service-details.json" with { type: "json" };
 import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
-const release =
-  site.mode === "production" &&
-  (!process.env.VERCEL_ENV || process.env.VERCEL_ENV === "production");
+const release = productionBuild(site.mode, process.env.VERCEL_ENV);
 if (release) {
   const errors = releaseErrors();
   if (errors.length) throw new Error(errors.join("; "));
@@ -33,6 +34,7 @@ for (const entry of index) {
     gunzipSync(await readFile("content/pages/" + entry.file)).toString(),
   ) as SourcePage;
   page.path = entry.path;
+  if (page.path === "/gsa-schedule/") page.title = "GSA Schedule";
   pages.push(page);
 }
 const coreRoutes = [
@@ -89,28 +91,32 @@ const sourceDescription = (page: SourcePage) => {
   const subject = compact(page.title.split("|")[0], 65);
   return `Explore ${subject} from Temporary 123. Call ${site.phoneDisplay} to discuss site requirements, equipment availability and delivery.`;
 };
-const renderContent = (page: SourcePage) => {
-  let html = page.html.replace(
-    /<h2>Complete List of States and Cities of United States[\s\S]*/,
-    '<p><a href="/service-areas/">Explore our location directory →</a></p>',
-  );
-  html = html.replace(/<img\b[^>]*src="([^"]+)"[^>]*>/g, (tag, url) =>
-    media[url]?.local ? tag.replace(url, media[url].local!) : "",
-  );
-  html = html.replace(/href="(\/[^"#?]*)([^\"]*)"/g, (match, p, suffix) =>
-    catalog.items.some((item) => item.legacyPath === p)
-      ? `href="${catalog.items.find((item) => item.legacyPath === p)!.path}${suffix}"`
-      : redirectDestinations.has(p)
-        ? `href="${redirectDestinations.get(p)}${suffix}"`
-        : allRoutes.includes(p)
-          ? match
-          : `href="https://temporary123.com${p}${suffix}"`,
-  );
-  return (
-    html ||
-    `<p>Explore Temporary 123 equipment and project services, or call ${site.phoneDisplay} to speak with our team.</p>`
-  );
-};
+const unresolvedSourceLinks = new Set<string>();
+const dimensions: Record<string, { width: number; height: number }> = {};
+for (const entry of Object.values(media)) {
+  if (!entry.local?.endsWith(".png")) continue;
+  try {
+    const bytes = await readFile("public" + entry.local);
+    if (
+      bytes
+        .subarray(0, 8)
+        .equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))
+    )
+      dimensions[entry.local] = {
+        width: bytes.readUInt32BE(16),
+        height: bytes.readUInt32BE(20),
+      };
+  } catch {}
+}
+const renderContent = (page: SourcePage) =>
+  renderSourceContent(page.html, {
+    origin: site.origin,
+    routes: new Set(allRoutes),
+    redirects: redirectDestinations,
+    media,
+    unresolved: unresolvedSourceLinks,
+    dimensions,
+  });
 const esc = (s: string) =>
   s.replace(
     /[&<>"']/g,
@@ -165,9 +171,7 @@ for (const path of [...allRoutes, "/404/"]) {
                     }
                   : pageInfo(path);
   const canonical =
-    release && path !== "/404/" && indexableRoutes.includes(path)
-      ? `${site.origin.replace(/\/$/, "")}${path}`
-      : "";
+    canonicalFor(path, indexableRoutes.includes(path), release) || "";
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
@@ -302,6 +306,32 @@ for (const path of [...allRoutes, "/404/"]) {
   ).each((_, element) => {
     $(element).attr("content", cleanCopy($(element).attr("content") || ""));
   });
+  if (schema && path !== "/") {
+    const crumbs = $("nav.breadcrumb a[href]")
+      .toArray()
+      .map((el) => ({
+        name: $(el).text().trim(),
+        item: new URL($(el).attr("href")!, site.origin).href,
+      }))
+      .filter((crumb) => crumb.item !== canonical);
+    if (crumbs.length) {
+      const breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          ...crumbs,
+          { name: $("h1").first().text().trim(), item: canonical },
+        ].map((crumb, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          ...crumb,
+        })),
+      };
+      $("script[type='application/ld+json']").text(
+        JSON.stringify(breadcrumb).replace(/</g, "\\u003c"),
+      );
+    }
+  }
   const html = $.html();
   const file = path === "/404/" ? "dist/404.html" : `dist${path}index.html`;
   await mkdir(file.substring(0, file.lastIndexOf("/")), { recursive: true });
@@ -313,9 +343,29 @@ await writeFile(
     ? `User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${site.origin.replace(/\/$/, "")}/sitemap.xml\n`
     : "User-agent: *\nAllow: /\nDisallow: /api/\n# Revision HTML carries noindex while the primary domain remains elsewhere.\n",
 );
+const restoredAssets = await preserveMedia(media);
+const registry = allRoutes.map((path) => ({
+  path,
+  indexable: indexableRoutes.includes(path),
+  modified:
+    coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
+      ? undefined
+      : pages.find((page) => page.path === path)?.modified,
+}));
+await writeFile("dist/sitemap.xml", sitemapXml(registry, release));
 await writeFile(
-  "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${release ? indexableRoutes.map((p) => `<url><loc>${esc(site.origin.replace(/\/$/, "") + p)}</loc></url>`).join("") : ""}</urlset>`,
+  "audit/build-registry.json",
+  JSON.stringify(
+    {
+      generatedAt: new Date().toISOString(),
+      mode: release ? "production" : "preview",
+      pages: registry,
+      unresolvedSourceLinks: [...unresolvedSourceLinks].sort(),
+      restoredAssets,
+    },
+    null,
+    2,
+  ) + "\n",
 );
 console.log(
   `Static HTML generated for ${allRoutes.length} pages + 404 (${release ? "production" : "draft/noindex"}).`,

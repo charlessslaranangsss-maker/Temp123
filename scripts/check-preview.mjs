@@ -5,6 +5,14 @@ import { load } from "cheerio";
 const root = resolve("dist");
 const vercel = JSON.parse(await readFile("vercel.json", "utf8"));
 const redirectSources = new Set(vercel.redirects.map((rule) => rule.source));
+const registry = JSON.parse(
+  await readFile("audit/build-registry.json", "utf8"),
+);
+const review = JSON.parse(
+  await readFile("content/migration-review.json", "utf8"),
+);
+const knownMissing = new Set(review.unresolvedPaths);
+const pendingMigrationLinks = new Map();
 
 async function files(dir) {
   const all = await readdir(dir, { withFileTypes: true });
@@ -86,8 +94,16 @@ for (const file of htmlFiles) {
 
   for (const element of $("a[href],img[src]").toArray()) {
     const value = $(element).attr(element.name === "img" ? "src" : "href");
-    if (!value?.startsWith("/") || value.startsWith("//")) continue;
-    const clean = decodeURIComponent(value.split(/[?#]/)[0]);
+    if (!value || /^(tel:|mailto:|#)/i.test(value)) continue;
+    let url;
+    try {
+      url = new URL(value, "https://temporary123.com");
+    } catch {
+      continue;
+    }
+    if (!["temporary123.com", "www.temporary123.com"].includes(url.hostname))
+      continue;
+    const clean = decodeURIComponent(url.pathname);
     const target = resolve(root, `.${clean}`);
     let valid = false;
     try {
@@ -95,8 +111,14 @@ for (const file of htmlFiles) {
       valid =
         info.isFile() || (await stat(resolve(target, "index.html"))).isFile();
     } catch {}
-    if (!valid)
-      problems.push({ file, issue: "missing-local-destination", value });
+    if (!valid) {
+      if (knownMissing.has(clean)) {
+        pendingMigrationLinks.set(
+          clean,
+          (pendingMigrationLinks.get(clean) || 0) + 1,
+        );
+      } else problems.push({ file, issue: "missing-local-destination", value });
+    }
     if (element.name === "a" && redirectSources.has(clean))
       problems.push({ file, issue: "internal-link-to-redirect", value });
     if (element.name === "a" && valid) {
@@ -139,7 +161,15 @@ const report = {
   uniqueDescriptions: descriptions.size,
   linkedRoutes: incoming.size,
   problems,
-  migration: { expected: 98253, recovered: 625 },
+  pendingMigrationLinks: [...pendingMigrationLinks].map(([path, links]) => ({
+    path,
+    links,
+  })),
+  restoredAssets: registry.restoredAssets?.length || 0,
+  migration: JSON.parse(
+    await readFile("content/migration-status.json", "utf8"),
+  ),
+  launchReady: false,
   indexing:
     "Revision host remains noindex. Production origin migration is incomplete.",
 };
