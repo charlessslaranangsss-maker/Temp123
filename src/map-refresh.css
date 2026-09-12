@@ -878,8 +878,8 @@
 
 @keyframes state-visual-swing {
   from {
-    transform: perspective(700px) rotateY(-14deg);
-    transform-origin: left center;
+    transform: perspective(700px) translateY(18px) rotateX(-9deg);
+    transform-origin: center top;
     opacity: 0;
   }
 }

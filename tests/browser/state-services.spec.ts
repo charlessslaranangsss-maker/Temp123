@@ -2,7 +2,19 @@ import { test, expect } from "@playwright/test";
 import { existsSync } from "node:fs";
 import { stateGuides } from "../../src/stateGuides";
 
-const names = [
+const allServiceNames = [
+  "Mobile Kitchens",
+  "Dishwashing",
+  "Refrigeration",
+  "Shower",
+  "Restroom",
+  "Shower and Restroom Combination Trailers",
+  "Sleeper",
+  "Laundry",
+  "Handwashing Trailers",
+];
+
+const stateModalNames = [
   "Mobile Kitchens",
   "Shower",
   "Shower and Restroom Combination Trailers",
@@ -81,7 +93,7 @@ test("state click opens localized service choices and a direct call action", asy
       .evaluateAll((items) =>
         items.map((item) => item.firstChild?.textContent?.trim()),
       ),
-  ).toEqual(names);
+  ).toEqual(allServiceNames);
   const state = page.locator('.coverage-map-stage [data-state="California"]');
   await state.click();
   const modal = page.getByRole("dialog", {
@@ -126,7 +138,7 @@ test("state click opens localized service choices and a direct call action", asy
   );
   await expect(
     modal.locator(".state-service-list a > span:nth-child(2)"),
-  ).toHaveText(names);
+  ).toHaveText(stateModalNames);
   await expect(
     modal.getByRole("link", { name: "Dishwashing", exact: false }),
   ).toHaveAttribute("href", "/portable-dishwashing-trailer-rental/");
