@@ -171,9 +171,24 @@ export function Header({ path }: { path: string }) {
             ))}
           </nav>
           <a className="header-contact" href={"tel:" + site.phoneE164}>
+            <svg
+              className="header-phone-icon"
+              viewBox="0 0 24 24"
+              width="23"
+              height="23"
+              aria-hidden="true"
+            >
+              <path
+                d="M21 16.5v3a1.5 1.5 0 0 1-1.7 1.5A18.4 18.4 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3h3a1.5 1.5 0 0 1 1.5 1.3c.1.9.4 1.8.7 2.6a1.5 1.5 0 0 1-.3 1.6L8.1 9.8a15 15 0 0 0 6.1 6.1l1.3-1.3a1.5 1.5 0 0 1 1.6-.3c.8.3 1.7.6 2.6.7a1.5 1.5 0 0 1 1.3 1.5Z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
             <span>Call our team, 24/7</span>
             <strong>{site.phoneDisplay}</strong>
-            <b aria-hidden="true">↗</b>
           </a>
           <details className="mobile-nav">
             <summary>
@@ -229,7 +244,22 @@ export function Header({ path }: { path: string }) {
       >
         <span>Call our team, 24/7</span>
         <strong>{site.phoneDisplay}</strong>
-        <b aria-hidden="true">↗</b>
+        <svg
+          className="mobile-phone-icon"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        >
+          <path
+            d="M21 16.5v3a1.5 1.5 0 0 1-1.7 1.5A18.4 18.4 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3h3a1.5 1.5 0 0 1 1.5 1.3c.1.9.4 1.8.7 2.6a1.5 1.5 0 0 1-.3 1.6L8.1 9.8a15 15 0 0 0 6.1 6.1l1.3-1.3a1.5 1.5 0 0 1 1.6-.3c.8.3 1.7.6 2.6.7a1.5 1.5 0 0 1 1.3 1.5Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </a>
       <a
         className="contact-rail contact-rail-refresh"
@@ -760,14 +790,13 @@ export function Site({
             <Button />
           </section>
         ) : path === "/about-us/" ? (
-          <>
-            <section className="about-hero">
+          <div className="secondary-page about-refresh">
+            <section className="about-hero" aria-labelledby="about-title">
               <div className="wrap section about-hero-grid">
-                <div>
+                <div className="secondary-intro-copy">
                   <span className="eyebrow">ABOUT TEMPORARY 123</span>
-                  <h1>
-                    Temporary facilities
-                    <br />
+                  <h1 id="about-title">
+                    Temporary facilities{" "}
                     built around the work.
                   </h1>
                   <p>
@@ -776,15 +805,33 @@ export function Site({
                     with coordinated temporary facility rentals.
                   </p>
                   <Button href="/contact-us/">Plan your project</Button>
+                  <div className="about-intro-topics" aria-label="Our approach">
+                    <span>Facilities</span>
+                    <span>Logistics</span>
+                    <span>Site planning</span>
+                  </div>
                 </div>
                 <aside className="about-summary" aria-label="Company approach">
-                  <span>What we coordinate</span>
-                  <strong>Facilities, logistics and site requirements</strong>
-                  <p>
-                    Start with the project location, schedule, occupancy and
-                    utilities. Our team helps identify the equipment and support
-                    services needed for a workable deployment plan.
-                  </p>
+                  <img
+                    className="about-summary-photo"
+                    src="/images/kitchen.webp"
+                    srcSet="/images/kitchen-480.webp 480w, /images/kitchen.webp 850w"
+                    sizes="(max-width: 760px) calc(100vw - 40px), 480px"
+                    width="850"
+                    height="650"
+                    alt="Commercial cooking equipment and preparation space inside a Temporary 123 mobile kitchen"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                  <div className="about-summary-copy">
+                    <span>What we coordinate</span>
+                    <strong>Facilities, logistics and site requirements</strong>
+                    <p>
+                      Start with the project location, schedule, occupancy and
+                      utilities. Our team helps identify the equipment and support
+                      services needed for a workable deployment plan.
+                    </p>
+                  </div>
                 </aside>
               </div>
             </section>
@@ -825,8 +872,11 @@ export function Site({
                     "Temporary power, tents, modular buildings, command centers, water storage and site access equipment.",
                     "/equipment-rental/",
                   ],
-                ].map(([title, description, href]) => (
+                ].map(([title, description, href], index) => (
                   <article key={title}>
+                    <span className="secondary-card-number" aria-hidden="true">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                     <h3>{title}</h3>
                     <p>{description}</p>
                     <a href={href}>Explore services ↗</a>
@@ -860,24 +910,41 @@ export function Site({
                 </div>
               </div>
             </section>
-          </>
+          </div>
         ) : path === "/blog/" ? (
-          <>
-            <section className="blog-hero">
-              <div className="wrap section">
-                <span className="eyebrow">ARTICLES & PLANNING GUIDES</span>
-                <h1>
-                  Field notes for
-                  <br />
-                  better site planning.
-                </h1>
-                <p>
-                  Practical guidance for mobile kitchen rentals, restroom and
-                  shower trailers, workforce housing and temporary site support.
-                </p>
+          <div className="secondary-page articles-refresh">
+            <section className="blog-hero" aria-labelledby="articles-title">
+              <div className="wrap section blog-intro-grid">
+                <div className="secondary-intro-copy">
+                  <span className="eyebrow">ARTICLES & PLANNING GUIDES</span>
+                  <h1 id="articles-title">
+                    Field notes for better site planning.
+                  </h1>
+                  <p>
+                    Practical guidance for mobile kitchen rentals, restroom and
+                    shower trailers, workforce housing and temporary site support.
+                  </p>
+                  <a className="secondary-inline-link" href="#planning-guides">
+                    Browse planning guides <span aria-hidden="true">↓</span>
+                  </a>
+                </div>
+                <nav className="article-topics" aria-label="Planning guide topics">
+                  <span>In this collection</span>
+                  {[
+                    ["01", "Mobile kitchens", "#kitchen-guide"],
+                    ["02", "Hygiene facilities", "#hygiene-guide"],
+                    ["03", "Remote workforce support", "#workforce-guide"],
+                  ].map(([number, label, href]) => (
+                    <a key={href} href={href}>
+                      <small>{number}</small>
+                      <strong>{label}</strong>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </nav>
               </div>
             </section>
-            <section className="wrap section blog-content">
+            <section className="wrap section blog-content" id="planning-guides">
               <div className="section-heading">
                 <div>
                   <span className="eyebrow">PLANNING GUIDES</span>
@@ -893,7 +960,18 @@ export function Site({
                 </p>
               </div>
               <div className="blog-grid">
-                <article>
+                <article id="kitchen-guide">
+                  <img
+                    className="article-guide-photo"
+                    src="/images/kitchen.webp"
+                    srcSet="/images/kitchen-480.webp 480w, /images/kitchen.webp 850w"
+                    sizes="(max-width: 760px) calc(100vw - 40px), 380px"
+                    width="850"
+                    height="650"
+                    alt="Cooking line inside a mobile kitchen trailer"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>Mobile kitchens</span>
                   <h3>How to plan a mobile kitchen trailer rental</h3>
                   <p>
@@ -905,7 +983,16 @@ export function Site({
                     Explore mobile kitchen trailers ↗
                   </a>
                 </article>
-                <article>
+                <article id="hygiene-guide">
+                  <img
+                    className="article-guide-photo"
+                    src="/media/ce44e887e6e1812d2195e955.webp"
+                    width="850"
+                    height="650"
+                    alt="Restroom trailer interior with a toilet and yellow grab rails"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>Hygiene facilities</span>
                   <h3>Choosing restroom and shower trailers for a job site</h3>
                   <p>
@@ -918,7 +1005,18 @@ export function Site({
                     Compare restroom trailers ↗
                   </a>
                 </article>
-                <article>
+                <article id="workforce-guide">
+                  <img
+                    className="article-guide-photo"
+                    src="/images/catalog/mobile-sleep-trailers-960.webp"
+                    srcSet="/images/catalog/mobile-sleep-trailers-480.webp 480w, /images/catalog/mobile-sleep-trailers-960.webp 960w"
+                    sizes="(max-width: 760px) calc(100vw - 40px), 380px"
+                    width="850"
+                    height="650"
+                    alt="White sleeper trailer with separate entrances and access steps"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span>Remote workforce support</span>
                   <h3>What a temporary base camp needs to operate well</h3>
                   <p>
@@ -963,7 +1061,7 @@ export function Site({
                 </ol>
               </div>
             </section>
-          </>
+          </div>
         ) : page ? (
           <section className="wrap section source-layout">
             <div>

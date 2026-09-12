@@ -75,7 +75,7 @@ body {
   padding-block: clamp(3.5rem, 7vw, 7rem);
 }
 h1 {
-  font-family: "Barlow", Arial, sans-serif;
+  font-family: var(--font-ui);
   font-weight: 600;
   font-size: clamp(2.8rem, 5.1vw, 5rem);
   line-height: 1.04;
@@ -599,7 +599,7 @@ summary:focus-visible {
   margin-bottom: 0.6rem;
 }
 .equipment-editorial .card-copy h3 {
-  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(1.7rem, 2.2vw, 2.3rem);
   line-height: 1.1;
   min-height: 0;
@@ -694,7 +694,7 @@ summary:focus-visible {
   border: 0;
   background: none;
   color: var(--accent);
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 4rem;
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -751,7 +751,7 @@ summary:focus-visible {
   background: #e9eee7;
 }
 .industry-links h3 {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-ui);
   font-size: 2rem;
 }
 .industry-links p {
@@ -800,7 +800,7 @@ summary:focus-visible {
   padding-block: 5rem;
 }
 .closing h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(2.7rem, 4.5vw, 4.5rem);
   letter-spacing: -0.05em;
   line-height: 1.06;
@@ -886,7 +886,7 @@ summary:focus-visible {
   align-items: center;
 }
 .model-hero h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(2.7rem, 4.2vw, 4.4rem);
   line-height: 1.07;
   letter-spacing: -0.05em;
@@ -948,7 +948,7 @@ summary:focus-visible {
   margin-bottom: 2.5rem;
 }
 .service-category-heading h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   line-height: 1.05;
   letter-spacing: -0.05em;
 }
@@ -957,7 +957,7 @@ summary:focus-visible {
   gap: 5rem;
 }
 .page-title {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(2.5rem, 4.4vw, 4.5rem);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -1020,7 +1020,7 @@ summary:focus-visible {
   display: none;
 }
 .location-hero-copy h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   font-size: clamp(2.8rem, 4.5vw, 4.6rem);
   line-height: 1.04;
   letter-spacing: -0.05em;
@@ -1067,7 +1067,7 @@ summary:focus-visible {
   border-top: 4px solid var(--accent);
 }
 .state-services-dialog h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   letter-spacing: -0.04em;
   font-size: 2.2rem;
 }
@@ -1146,7 +1146,7 @@ summary:focus-visible {
   display: none;
 }
 .contact-drawer-header h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: var(--font-ui);
   letter-spacing: -0.04em;
 }
 .contact-drawer-call {

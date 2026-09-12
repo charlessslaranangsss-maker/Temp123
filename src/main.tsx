@@ -1,10 +1,45 @@
 import "./style.css";
 import "./redesign.css";
+import "./modern.css";
 import "./homepage.css";
 import "./contact-refresh.css";
-import "@fontsource/barlow/latin-400.css";
-import "@fontsource/barlow/latin-600.css";
-import "@fontsource/barlow-condensed/latin-600.css";
+import "./map-refresh.css";
+import "./secondary-refresh.css";
+import "@fontsource-variable/manrope";
+
+// Keep every facility in the rendered HTML; filtering is an optional enhancement.
+const rentalFilters = document.querySelector<HTMLElement>(".rental-filters");
+if (rentalFilters) {
+  rentalFilters.hidden = false;
+  const buttons = [
+    ...rentalFilters.querySelectorAll<HTMLButtonElement>(
+      "[data-rental-filter]",
+    ),
+  ];
+  const cards = [
+    ...document.querySelectorAll<HTMLElement>(
+      ".home-equipment [data-rental-group]",
+    ),
+  ];
+  buttons.forEach((button) =>
+    button.addEventListener("click", () => {
+      const group = button.dataset.rentalFilter;
+      let count = 0;
+      cards.forEach((card) => {
+        card.hidden = group !== "all" && card.dataset.rentalGroup !== group;
+        if (!card.hidden) count++;
+      });
+      buttons.forEach((item) =>
+        item.setAttribute("aria-pressed", String(item === button)),
+      );
+      const status = document.querySelector<HTMLElement>(
+        "[data-rental-status]",
+      );
+      if (status)
+        status.textContent = `Showing ${count} ${group === "all" ? "facilities" : `${button.childNodes[0].textContent?.trim()} facilities`}`;
+    }),
+  );
+}
 const search = document.querySelector<HTMLInputElement>("#catalog-search");
 search?.addEventListener("input", () => {
   const term = search.value.trim().toLowerCase();

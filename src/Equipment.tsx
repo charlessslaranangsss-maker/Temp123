@@ -211,10 +211,24 @@ export function Cards({
 }) {
   return (
     <div
+      id={homepage ? "home-rental-grid" : undefined}
       className={`equipment-grid${editorial ? " equipment-editorial" : ""}${homepage ? " home-equipment" : ""}`}
     >
       {(homepage ? homepageEquipment : equipment).map((e, i) => (
-        <article className="equipment-card" key={e.path} data-card>
+        <article
+          className="equipment-card"
+          key={e.path}
+          data-card
+          data-rental-group={
+            homepage
+              ? i < 3
+                ? "kitchen"
+                : i === 6 || i === 7
+                  ? "workforce"
+                  : "sanitation"
+              : undefined
+          }
+        >
           <a
             href={e.path}
             className="image-box"
@@ -253,7 +267,8 @@ export function Cards({
             </ul>
             <div className="card-actions">
               <a href={e.path}>
-                Explore facilities <span aria-hidden="true">↗</span>
+                {homepage ? "View rental" : "Explore facilities"}{" "}
+                <span aria-hidden="true">↗</span>
               </a>
               <button
                 type="button"

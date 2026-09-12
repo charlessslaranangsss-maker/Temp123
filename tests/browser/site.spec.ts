@@ -1,4 +1,17 @@
 import { test, expect } from "@playwright/test";
+
+const homepageServiceNames = [
+  "Mobile kitchen trailers",
+  "Dishwashing trailers",
+  "Refrigeration trailers",
+  "Shower trailers",
+  "Restroom trailers",
+  "Shower & restroom combinations",
+  "Sleeper trailers",
+  "Laundry trailers",
+  "Handwashing trailers",
+];
+
 for (const width of [320, 390, 768, 1024, 1280, 1440])
   test(`homepage layout and photos at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
@@ -7,7 +20,10 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(page.locator("h1")).toHaveCount(1);
     await expect(page.locator("h1")).toContainText("Mobile kitchens &");
     await expect(page.locator("h1")).toContainText("temporary facilities.");
-    await expect(page.locator("h1")).toContainText("Keep moving.");
+    await expect(page.locator("h1")).toContainText("Made for your site.");
+    await expect(
+      page.getByRole("link", { name: "Find your rental", exact: true }),
+    ).toHaveAttribute("href", "#equipment");
     await expect(page).toHaveTitle(/Temporary 123/);
     await expect(page.locator(".brand")).toContainText("Temporary123");
     await expect(page.locator(".visual-note, .equipment-jumps")).toHaveCount(0);
@@ -79,8 +95,15 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(phone).toHaveAttribute("href", "tel:+18004435212");
     await expect(phone.locator("strong")).toHaveCSS(
       "color",
-      width >= 768 && width < 1024 ? "rgb(182, 61, 47)" : "rgb(167, 8, 5)",
+      "rgb(255, 255, 255)",
     );
+    await expect(phone).toHaveCSS("background-color", "rgb(18, 63, 70)");
+    await expect(phone.locator(":scope > span")).toHaveText(
+      "Call our team, 24/7",
+    );
+    await expect(phone.locator(":scope > span")).toBeVisible();
+    await expect(phone.locator("svg")).toBeVisible();
+    if (width >= 1024) await expect(phone).toHaveCSS("border-radius", "12px");
     await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
     const displayedPhoneNumbers = await page
       .locator('a[href="tel:+18004435212"]')
@@ -214,9 +237,15 @@ for (const width of [390, 1440])
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);
-    await expect(page.locator(".coverage-map")).toContainText(
-      "Top 50 States in USA Organic States",
+    await expect(page.locator("#coverage-map-title")).toHaveText(
+      "Find your state",
     );
+    await expect(page.locator(".coverage-map-topline strong")).toHaveText(
+      "50 states",
+    );
+    await expect(
+      page.getByLabel("Choose your state", { exact: true }),
+    ).toBeVisible();
     await expect(page.locator("#project-location")).toBeVisible();
     expect(
       await page.evaluate(
@@ -326,17 +355,7 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
   await page.goto("/");
   const cards = page.locator(".equipment-card");
   await expect(cards).toHaveCount(9);
-  await expect(cards.locator("h3")).toHaveText([
-    "Mobile kitchen trailers",
-    "Dishwashing trailers",
-    "Refrigeration trailers",
-    "Shower trailers",
-    "Restroom trailers",
-    "Shower & restroom combinations",
-    "Sleeper trailers",
-    "Laundry trailers",
-    "Handwashing trailers",
-  ]);
+  await expect(cards.locator("h3")).toHaveText(homepageServiceNames);
   await expect(
     cards.getByRole("link", {
       name: "Shower & restroom combinations",
@@ -353,6 +372,64 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
     await expect(photo).toHaveAttribute("alt", /\S/);
 });
 
+for (const width of [390, 1440])
+  test(`rental filters show the selected facilities and restore all nine at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/");
+    await page
+      .getByRole("link", { name: "Find your rental", exact: true })
+      .click();
+    await expect(page).toHaveURL(/\/#equipment$/);
+    const filters = page.getByRole("group", { name: "Filter rental services" });
+    const cards = page.locator("#home-rental-grid .equipment-card");
+    const visibleCards = page.locator(
+      "#home-rental-grid .equipment-card:visible",
+    );
+    const status = page.locator("[data-rental-status]");
+    await expect(filters).toBeVisible();
+    await expect(cards).toHaveCount(9);
+    await expect(visibleCards).toHaveCount(9);
+    await expect(status).toHaveText("Showing all 9 facilities");
+    await expect(
+      filters.getByRole("button", { name: /^All facilities/ }),
+    ).toHaveAttribute("aria-pressed", "true");
+    for (const [label, names] of [
+      ["Kitchens & cold storage", homepageServiceNames.slice(0, 3)],
+      [
+        "Restrooms & hygiene",
+        [...homepageServiceNames.slice(3, 6), homepageServiceNames[8]],
+      ],
+      ["Workforce living", homepageServiceNames.slice(6, 8)],
+      ["All facilities", homepageServiceNames],
+    ] as const) {
+      const button = filters.getByRole("button", {
+        name: new RegExp(`^${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`),
+      });
+      await button.focus();
+      await button.press("Enter");
+      await expect(button).toHaveAttribute("aria-pressed", "true");
+      await expect(filters.locator('[aria-pressed="true"]')).toHaveCount(1);
+      await expect(visibleCards).toHaveCount(names.length);
+      await expect(visibleCards.locator("h3")).toHaveText([...names]);
+      await expect(status).toHaveText(
+        label === "All facilities"
+          ? "Showing 9 facilities"
+          : `Showing ${names.length} ${label} facilities`,
+      );
+      await expect(cards).toHaveCount(9);
+      await expect(page).toHaveURL(/\/#equipment$/);
+    }
+    const photos = page.locator(".homepage img");
+    await expect(photos).toHaveCount(10);
+    const sources = await photos.evaluateAll((images) =>
+      images.map((image) => image.getAttribute("src")),
+    );
+    expect(new Set(sources).size).toBe(10);
+  });
+
 test("FAQ and equipment navigation work without JavaScript", async ({
   browser,
 }) => {
@@ -362,6 +439,10 @@ test("FAQ and equipment navigation work without JavaScript", async ({
   });
   const page = await context.newPage();
   await page.goto("http://localhost:4173/");
+  await expect(page.locator(".rental-filters")).not.toBeVisible();
+  await expect(
+    page.locator("#home-rental-grid .equipment-card:visible"),
+  ).toHaveCount(9);
   await page.locator(".faq-item summary").first().click();
   await expect(page.locator(".faq-item p").first()).toBeVisible();
   await expect(page.locator(".quick-view:visible")).toHaveCount(0);
@@ -399,7 +480,11 @@ for (const width of [320, 768, 1024, 1440]) {
 test("reduced motion removes entry animations", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
-  for (const selector of [".rental-hero-copy", ".rental-hero-photo"])
+  for (const selector of [
+    ".rental-hero-copy",
+    ".rental-hero-visual",
+    ".hero-photo-label",
+  ])
     await expect(page.locator(selector)).toHaveCSS("animation-name", "none");
 });
 test("location planner carries the selected place into the kitchen inquiry", async ({
@@ -474,7 +559,8 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   const html = await home.text();
   expect(html).toContain('id="rental-title"');
   expect(html).toContain("Mobile kitchens &amp;");
-  expect(html).toContain("Keep moving.");
+  expect(html).toContain("Made for your site.");
+  expect(html).toContain("Find your rental");
   expect(html).not.toContain("April");
   const missing = await request.get("/missing-synthetic-test-page/");
   expect(missing.status()).toBe(404);

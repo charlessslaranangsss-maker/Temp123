@@ -102,23 +102,140 @@
   border-bottom-color: #d9e3e7;
 }
 
+.header-refresh .header {
+  gap: 20px;
+}
+
+.header-refresh .header > nav {
+  gap: clamp(12px, 1.2vw, 18px);
+  font-size: 0.9rem;
+}
+
 .header-refresh .header > nav > a[href="/contact-us/"] {
   color: #a70805;
   font-weight: 600;
 }
 
 .header-refresh .header-contact {
-  border-left-color: #d9e3e7;
+  grid-template-columns: 23px max-content;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 3px 12px;
+  flex: 0 0 auto;
+  min-width: 226px;
+  min-height: 62px;
+  padding: 11px 16px;
+  border: 1px solid #123f46;
+  border-radius: 12px;
+  background: #123f46;
+  color: #fff;
+  box-shadow: 0 3px 8px rgb(18 63 70 / 10%);
   animation: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.header-refresh .header-contact > span {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  color: #e1eff0;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .header-refresh .header-contact strong {
-  color: #a70805;
+  grid-column: 2;
+  grid-row: 2;
+  color: #fff;
+  font-size: 0.96rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
-.header-refresh .header-contact b {
-  color: #0c3545;
-  background: #e6f7fa;
+.header-refresh .header-phone-icon {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: center;
+  color: #9fe8e6;
+}
+
+.header-refresh .header-contact:is(:hover, :focus-visible) {
+  background: #0a3036;
+  border-color: #0a3036;
+  box-shadow: 0 5px 14px rgb(18 63 70 / 18%);
+}
+
+.header-refresh .header-contact:focus-visible {
+  outline: 3px solid #007b8f;
+  outline-offset: 4px;
+}
+
+.mobile-call.mobile-call-refresh {
+  background: #123f46;
+  border-top-color: #123f46;
+  color: #fff;
+}
+
+.mobile-call-refresh > span {
+  color: #e1eff0;
+}
+
+.mobile-call-refresh strong {
+  color: #fff;
+}
+
+.mobile-phone-icon {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  color: #9fe8e6;
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header-refresh .header {
+    gap: 14px;
+  }
+
+  .header-refresh .brand {
+    gap: 6px;
+    font-size: 1.4rem;
+  }
+
+  .header-refresh .brand img {
+    width: 44px;
+    height: 38px;
+  }
+
+  .header-refresh .brand small {
+    display: none;
+  }
+
+  .header-refresh .header > nav {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .header-refresh .header-contact {
+    min-width: 206px;
+    padding-inline: 12px;
+    column-gap: 9px;
+  }
+
+  .header-refresh .header-contact strong {
+    font-size: 0.87rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-refresh .header {
+    gap: 10px;
+  }
 }
 
 .contact-rail.contact-rail-refresh {
@@ -325,27 +442,27 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-content: center;
     column-gap: 5px;
-    background: #fff;
-    border-top: 3px solid #0c3545;
+    background: #123f46;
+    border-top: 3px solid #123f46;
     box-shadow: 0 -3px 16px rgb(12 53 69 / 12%);
   }
 
   .mobile-call-refresh > span {
     font-size: 0.68rem;
     line-height: 1.4;
-    color: #52666b;
+    color: #e1eff0;
   }
 
   .mobile-call-refresh strong {
-    color: #a70805;
+    color: #fff;
     font-size: clamp(0.9rem, 3.3vw, 1.2rem);
     line-height: 1.4;
     white-space: nowrap;
   }
 
-  .mobile-call-refresh b {
-    color: #0c3545;
-    font-size: 1.3rem;
+  .mobile-phone-icon {
+    width: 18px;
+    height: 18px;
   }
 
   .mobile-call.mobile-call-refresh:focus-visible {

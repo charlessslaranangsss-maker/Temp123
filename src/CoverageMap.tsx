@@ -11,6 +11,15 @@ const callouts = [
   "Delaware",
   "Maryland",
 ];
+// Offset labels within nearby state interiors where centered names would overlap.
+const labelOffsets: Record<string, [number, number]> = {
+  Michigan: [0, 23],
+  Mississippi: [-4, 17],
+  Illinois: [0, 12],
+  Indiana: [0, -12],
+  "West Virginia": [0, 3],
+  Virginia: [17, 13],
+};
 function Geography({ id }: { id: string }) {
   return (
     <svg
@@ -21,11 +30,11 @@ function Geography({ id }: { id: string }) {
     >
       <defs>
         <linearGradient id={id} x2="0.8" y2="1">
-          <stop stopColor="#b6e7df" />
-          <stop offset="1" stopColor="#62b5c8" />
+          <stop stopColor="#d9eeee" />
+          <stop offset="1" stopColor="#a5d7d7" />
         </linearGradient>
       </defs>
-      <g className="map-depth" transform="translate(0 9)" aria-hidden="true">
+      <g className="map-depth" transform="translate(0 3)" aria-hidden="true">
         {states.map((s) => (
           <path key={s.id} d={s.d} />
         ))}
@@ -50,20 +59,33 @@ function Geography({ id }: { id: string }) {
         {states.map((s) => {
           const index = callouts.indexOf(s.name),
             external = index >= 0;
-          const x = external ? 1015 : s.name === "Mississippi" ? s.x - 4 : s.x;
-          const y = external
-            ? 130 + index * 42
-            : s.name === "Michigan"
-              ? s.y + 23
-              : s.y;
+          const [dx, dy] = labelOffsets[s.name] ?? [0, 0];
+          const x = external ? 1015 : s.x + dx;
+          const y = external ? 130 + index * 42 : s.y + dy;
           const words = external ? [s.name] : s.name.split(" ");
           return (
-            <g key={s.id}>
+            <g key={s.id} className={external ? "map-callout" : undefined}>
               {external && (
-                <path
-                  className="map-leader"
-                  d={`M${s.x},${s.y}L990,${y - 5}H1005`}
-                />
+                <>
+                  <path
+                    className="map-leader"
+                    d={`M${s.x},${s.y}L980,${y - 6}H1003`}
+                  />
+                  <circle
+                    className="map-leader-point"
+                    cx={s.x}
+                    cy={s.y}
+                    r="3"
+                  />
+                  <rect
+                    className="map-callout-surface"
+                    x="1003"
+                    y={y - 23}
+                    width="159"
+                    height="32"
+                    rx="6"
+                  />
+                </>
               )}
               <text
                 x={x}
@@ -100,42 +122,47 @@ export function CoverageMap() {
   return (
     <figure className="coverage-map" aria-labelledby="coverage-map-title">
       <div className="coverage-map-topline">
-        <span id="coverage-map-title">Top 50 States in USA Organic States</span>
+        <span id="coverage-map-title">Find your state</span>
+        <strong>50 states</strong>
       </div>
+      <p className="coverage-map-intro">
+        Select a state on the map or choose from the list below.
+      </p>
       <div className="coverage-map-stage">
         <Geography id="map-surface" />
       </div>
-      <div className="map-tools">
-        <button type="button" data-expand-map>
-          Explore full map ↗
-        </button>
-        <a
-          href="https://www.google.com/maps/place/United+States/"
-          target="_blank"
-          rel="noopener"
-        >
-          Open Google Maps ↗
-        </a>
+      <div className="map-controls">
+        <label className="map-state-picker">
+          Choose your state
+          <select data-state-picker defaultValue="">
+            <option value="" disabled>
+              Select a state
+            </option>
+            {[...states]
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((s) => (
+                <option key={s.id} value={s.name}>
+                  {s.name}
+                </option>
+              ))}
+          </select>
+        </label>
+        <div className="map-tools">
+          <button type="button" data-expand-map aria-haspopup="dialog">
+            Explore full map <span aria-hidden="true">↗</span>
+          </button>
+          <a
+            href="https://www.google.com/maps/place/United+States/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Google Maps <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
-      <label className="map-state-picker">
-        Search your state
-        <select data-state-picker defaultValue="">
-          <option value="" disabled>
-            Search your state
-          </option>
-          {[...states]
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((s) => (
-              <option key={s.id} value={s.name}>
-                {s.name}
-              </option>
-            ))}
-        </select>
-      </label>
       <figcaption>
-        Nationwide coverage includes Alaska and Hawaii. Availability and
-        delivery timing depend on your project. Geographic boundaries: U.S.
-        Census Bureau.
+        Includes Alaska and Hawaii. Availability and delivery timing depend on
+        your site and dates. Map boundaries: U.S. Census Bureau.
       </figcaption>
       <dialog className="map-dialog" aria-label="USA service coverage map">
         <div className="map-dialog-heading">

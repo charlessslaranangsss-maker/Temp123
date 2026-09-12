@@ -81,6 +81,20 @@ for (const width of [390, 1440])
     await expect(
       page.locator(".coverage-map-stage .map-labels text"),
     ).toHaveCount(50);
+    const calloutLabels = page.locator(".coverage-map-stage .map-callout text");
+    await expect(calloutLabels).toHaveCount(8);
+    expect(await calloutLabels.allTextContents()).toEqual(
+      expect.arrayContaining([
+        "Connecticut",
+        "Delaware",
+        "Massachusetts",
+        "Maryland",
+        "New Hampshire",
+        "New Jersey",
+        "Rhode Island",
+        "Vermont",
+      ]),
+    );
     await page.getByRole("button", { name: "Explore full map" }).click();
     const dialog = page.getByRole("dialog", {
       name: "USA service coverage map",
