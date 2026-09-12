@@ -5,7 +5,7 @@ import { FacilityIcon } from "./FacilityIcon";
 const rentalGroups = [
   [
     "kitchen",
-    "Mobile kitchen trailers",
+    "Mobile Commercial Kitchen",
     "Commercial kitchen rentals.",
     "/equipment-rental/mobile-kitchen-trailers/",
   ],
@@ -17,13 +17,13 @@ const rentalGroups = [
   ],
   [
     "shower",
-    "Shower & restroom trailers",
+    "Shower & Restroom Combination",
     "Private hygiene facilities.",
     "/services/shower-restroom-combination-trailers/",
   ],
   [
     "living",
-    "Sleeper & laundry trailers",
+    "Sleeper/Bunkbed Trailers",
     "Crew support facilities.",
     "/equipment-rental/mobile-sleep-trailers/",
   ],
