@@ -18,9 +18,12 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.emulateMedia({ reducedMotion: "no-preference" });
     await page.goto("/");
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page.locator("h1")).toContainText("Mobile kitchens &");
-    await expect(page.locator("h1")).toContainText("temporary facilities.");
-    await expect(page.locator("h1")).toContainText("Made for your site.");
+    await expect(page.locator("h1")).toContainText(
+      "Temporary Facility Trailer",
+    );
+    await expect(page.locator("h1")).toContainText(
+      "Rentals Across the USA",
+    );
     await expect(
       page.getByRole("link", { name: "Find your rental", exact: true }),
     ).toHaveAttribute("href", "#equipment");
@@ -558,8 +561,8 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   expect(home.status()).toBe(200);
   const html = await home.text();
   expect(html).toContain('id="rental-title"');
-  expect(html).toContain("Mobile kitchens &amp;");
-  expect(html).toContain("Made for your site.");
+  expect(html).toContain("Temporary Facility Trailer");
+  expect(html).toContain("Rentals Across the USA");
   expect(html).toContain("Find your rental");
   expect(html).not.toContain("April");
   const missing = await request.get("/missing-synthetic-test-page/");
