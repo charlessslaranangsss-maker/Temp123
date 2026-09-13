@@ -53,10 +53,10 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/temporary-shower-trailers-960.webp",
     smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
     category: "Hygiene facilities",
-    text: "Rent the 22 ft shower trailer with 10 stalls for construction crews, man camps and emergency base camps.",
+    text: "Rent a 22 ft shower trailer with 10 stalls or a 20 ft shower container with 5 stalls for construction crews, man camps and emergency base camps.",
     detail:
-      "Temporary123 offers one shower-only configuration with 10 stalls. Share occupancy and peak-use periods so we can review the available unit, privacy, hot water, wastewater and placement requirements.",
-    tags: ["22 ft trailer", "10 stalls", "Emergency 24/7"],
+      "Shower-only options include a 22 ft trailer with 10 stalls and a 20 ft container with 5 stalls. Share occupancy and peak-use periods so we can review the available unit, privacy, hot water, wastewater, delivery method and placement requirements.",
+    tags: ["22 ft: 10 stalls", "20 ft: 5 stalls", "Emergency 24/7"],
   },
   {
     name: "Restroom",
@@ -75,10 +75,10 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/temporary-shower-trailers-960.webp",
     smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
     category: "Combined hygiene facilities",
-    text: "Rent showers and restrooms in one coordinated trailer for temporary sites and crew accommodation.",
+    text: "Rent luxury shower and restroom combination trailers with clearly listed stall capacities for temporary sites and crew accommodation.",
     detail:
-      "Rent one combined facility to simplify daily hygiene support on site. Compare toilet and shower capacity, privacy and peak use, then confirm water heating, drainage and servicing before delivery.",
-    tags: ["Combined facilities", "Private showers", "Site support"],
+      "Choose a 13 ft trailer with 3 stalls, a 22 ft trailer with 6 stalls, or a 30 ft trailer with 8 stalls. Accessible options include 3 stalls plus 1 ADA stall and 8 stalls plus 1 ADA stall. Confirm the available floor plan, water heating, drainage and servicing before delivery.",
+    tags: ["13 ft: 3 stalls", "22 ft: 6 stalls", "30 ft: 8 stalls"],
   },
   {
     name: "Sleeper",

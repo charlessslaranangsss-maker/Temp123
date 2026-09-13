@@ -18,6 +18,96 @@ export const regionSlug = (value: string) =>
 export const regionPath = (state: string, region: string) =>
   `/service-areas/${regionSlug(state)}/${regionSlug(region)}/`;
 
+type ContextualLink = {
+  href: string;
+  label: string;
+  context: string;
+};
+
+const priorityServices = [
+  {
+    href: "/equipment-rental/mobile-kitchen-trailers/",
+    labels: [
+      "mobile commercial kitchen rentals",
+      "temporary kitchen facilities for rent",
+      "mobile kitchen trailer leasing",
+    ],
+  },
+  {
+    href: "/services/shower-restroom-combination-trailers/",
+    labels: [
+      "shower and restroom combination trailer rentals",
+      "temporary shower and restroom facilities",
+      "combination hygiene trailers for lease",
+    ],
+  },
+  {
+    href: "/services/shower-trailers/22ft-10-stall/",
+    labels: [
+      "22 ft 10-stall shower trailer rentals",
+      "10-stall shower trailers for rent",
+      "temporary 22 ft shower facilities",
+    ],
+  },
+  {
+    href: "/equipment-rental/mobile-sleep-trailers/",
+    labels: [
+      "sleeper and bunkbed trailer rentals",
+      "temporary crew accommodation for lease",
+      "mobile sleeper trailers for rent",
+    ],
+  },
+] as const;
+
+const cityContexts = [
+  "support construction and renovation crews.",
+  "fit planned facility interruptions.",
+  "support emergency base camp planning.",
+  "serve remote and phased projects.",
+  "follow local access and utility needs.",
+  "support seasonal site operations.",
+  "serve industrial and public projects.",
+  "adapt to changing crew schedules.",
+] as const;
+
+const commercialIntentTemplates = [
+  "Compare temporary facilities for rent, short-term rentals and longer equipment leasing plans.",
+  "Temporary facility rental options include equipment for rent and longer lease arrangements.",
+  "Project teams can request temporary facilities for rent, flexible rentals or longer leasing terms.",
+  "Compare rentals for short assignments with temporary facility leasing and equipment for rent.",
+  "A temporary facilities rental can combine equipment for rent with longer lease options.",
+  "Rental planning covers temporary facilities for rent, available rentals and equipment leasing.",
+] as const;
+
+const buildCityLinks = (
+  state: string,
+  cities: string[],
+  globalIndex: number,
+): ContextualLink[] =>
+  cities.map((city, cityIndex) => {
+    const service = priorityServices[(globalIndex + cityIndex) % 4];
+    const label =
+      service.labels[(globalIndex + cityIndex * 2) % service.labels.length];
+    return {
+      href: `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
+      label: `${label} in ${city}`,
+      context:
+        cityContexts[(globalIndex * 3 + cityIndex) % cityContexts.length],
+    };
+  });
+
+const buildServiceLinks = (globalIndex: number): ContextualLink[] =>
+  priorityServices.map((service, serviceIndex) => ({
+    href: service.href,
+    label: service.labels[(globalIndex + serviceIndex) % service.labels.length],
+    context: [
+      "for temporary meal production.",
+      "for coordinated daily hygiene.",
+      "for dedicated shower capacity.",
+      "for base camps and man camps.",
+    ][serviceIndex],
+  }));
+
 const introTemplates = [
   (state: string, region: string) =>
     `Teams planning work in ${region}, ${state} can arrange temporary facilities around the site's access, occupancy and schedule. Rent mobile kitchens, shower and restroom combination trailers, and sleeper or bunkbed trailers when the project needs a reliable base camp.`,
@@ -116,6 +206,9 @@ export type RegionGuide = {
   detail: string;
   fact: string;
   cities: string[];
+  cityLinks: ContextualLink[];
+  serviceLinks: ContextualLink[];
+  commercialSummary: string;
   locationPhoto?: LocationPhoto;
   seasonal: SeasonalDemand;
 };
@@ -136,6 +229,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
       );
       const path = regionPath(state, region);
       const locationPhoto = regionLocationPhoto(path);
+      const globalIndex = stateOffset + regionIndex;
       return {
         state,
         region,
@@ -146,7 +240,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
         imageAlt: locationPhoto?.imageAlt || visuals[0].imageAlt,
         locationPhoto,
         gallery: visuals.slice(1, 2),
-        intro: `${introTemplates[index % introTemplates.length](state, region)} Cities in this distinct travel region include ${formatCityList(cities)}.`,
+        intro: introTemplates[index % introTemplates.length](state, region),
         detail: detailTemplates[index % detailTemplates.length](state, region),
         fact: factTemplates[index % factTemplates.length](
           state,
@@ -154,6 +248,12 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
           guide.fact,
         ),
         cities,
+        cityLinks: buildCityLinks(state, cities, globalIndex),
+        serviceLinks: buildServiceLinks(globalIndex),
+        commercialSummary:
+          commercialIntentTemplates[
+            globalIndex % commercialIntentTemplates.length
+          ],
         seasonal: buildRegionSeasonalDemand(state, region, regionIndex, cities),
       };
     });
@@ -164,10 +264,58 @@ export const regionPageByPath = Object.fromEntries(
   regionPages.map((page) => [page.path, page]),
 ) as Record<string, RegionGuide | undefined>;
 
-export function RegionDetail({ guide }: { guide: RegionGuide }) {
-  const nearbyRegions = regionPages.filter(
-    (page) => page.state === guide.state && page.path !== guide.path,
+const crossBorderRegionPaths: Record<string, string> = {
+  "/service-areas/arizona/northern-arizona/":
+    "/service-areas/utah/southwestern-utah/",
+  "/service-areas/arizona/phoenix-area/":
+    "/service-areas/nevada/las-vegas-valley/",
+  "/service-areas/arizona/southern-arizona/":
+    "/service-areas/new-mexico/southwest-new-mexico/",
+  "/service-areas/delaware/northern-delaware/":
+    "/service-areas/pennsylvania/philadelphia-and-southeast/",
+  "/service-areas/delaware/central-delaware/":
+    "/service-areas/maryland/eastern-shore/",
+  "/service-areas/delaware/delaware-beaches/":
+    "/service-areas/maryland/eastern-shore/",
+  "/service-areas/indiana/northern-indiana/":
+    "/service-areas/illinois/chicago-area/",
+  "/service-areas/indiana/central-indiana/":
+    "/service-areas/ohio/southwest-ohio/",
+  "/service-areas/indiana/southern-indiana/":
+    "/service-areas/kentucky/south-central-kentucky/",
+};
+
+export const relatedRegionPages = (guide: RegionGuide): RegionGuide[] => {
+  const allStatePages = regionPages.filter(
+    (page) => page.state === guide.state,
   );
+  const position = allStatePages.findIndex((page) => page.path === guide.path);
+  const orderedStatePages = [1, -1, 2]
+    .map(
+      (offset) =>
+        allStatePages[
+          (position + offset + allStatePages.length) % allStatePages.length
+        ],
+    )
+    .filter((page): page is RegionGuide => page.path !== guide.path);
+  const unique = [
+    ...new Map(orderedStatePages.map((page) => [page.path, page])).values(),
+  ];
+  const crossBorder = regionPageByPath[crossBorderRegionPaths[guide.path]];
+  if (unique.length < 3 && crossBorder) unique.push(crossBorder);
+  for (const page of allStatePages) {
+    if (unique.length >= 3) break;
+    if (
+      page.path !== guide.path &&
+      !unique.some((candidate) => candidate.path === page.path)
+    )
+      unique.push(page);
+  }
+  return unique.slice(0, 3);
+};
+
+export function RegionDetail({ guide }: { guide: RegionGuide }) {
+  const nearbyRegions = relatedRegionPages(guide);
   const mapQuery = encodeURIComponent(
     `${guide.cities[0]}, ${guide.state}, United States`,
   );
@@ -230,8 +378,12 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           <h2>Rental support for {guide.region}</h2>
           <p>{guide.detail}</p>
           <p>{guide.fact}</p>
-          <p className="region-cities">
-            <strong>City coverage:</strong> {formatCityList(guide.cities)}.
+          <p className="region-parent-state">
+            Review rental planning and every distinct travel region across{" "}
+            <a href={`/service-areas/#planning-${regionSlug(guide.state)}`}>
+              {guide.state}
+            </a>
+            .
           </p>
           <a className="region-inline-call" href={`tel:${site.phoneE164}`}>
             Speak with the rental team {site.phoneDisplay} ↗
@@ -239,15 +391,40 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
         </div>
         <aside className="region-services-panel">
           <span className="eyebrow">AVAILABLE SERVICES</span>
-          <h2>Build your temporary facilities plan</h2>
-          <ul>
-            <li>Mobile commercial kitchen rental</li>
-            <li>Shower and restroom combination rental</li>
-            <li>22 ft shower trailer rental with 10 stalls</li>
-            <li>Sleeper and bunkbed trailer lease</li>
-            <li>Dishwashing, refrigeration and handwashing support</li>
+          <h2>Rental equipment available in {guide.region}</h2>
+          <ul className="region-service-links">
+            {guide.serviceLinks.map((service) => (
+              <li key={service.href}>
+                <a href={service.href}>{service.label}</a> {service.context}
+              </li>
+            ))}
           </ul>
         </aside>
+      </section>
+      <section
+        className="wrap section region-city-links"
+        aria-labelledby="region-cities-title"
+      >
+        <div className="region-section-heading">
+          <div>
+            <span className="eyebrow">CITIES WE SERVE</span>
+            <h2 id="region-cities-title">
+              Temporary facility rentals across {guide.region}
+            </h2>
+          </div>
+          <p>
+            Rental and leasing plans depend on the exact property, delivery
+            route, utilities and requested operating dates.
+          </p>
+        </div>
+        <p className="region-commercial-summary">{guide.commercialSummary}</p>
+        <div className="region-city-link-grid">
+          {guide.cityLinks.map((city) => (
+            <p key={city.href}>
+              <a href={city.href}>{city.label}</a> {city.context}
+            </p>
+          ))}
+        </div>
       </section>
       <section
         className="wrap section region-seasonal"
@@ -371,11 +548,21 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
         </span>
         <h2>Explore nearby travel regions</h2>
         <div className="region-nearby-links">
-          {nearbyRegions.map((page) => (
-            <a href={page.path} key={page.path}>
-              {page.region}
-              <span aria-hidden="true">↗</span>
-            </a>
+          {nearbyRegions.map((page, index) => (
+            <p key={page.path}>
+              {
+                [
+                  "Temporary facility rentals are also available throughout",
+                  "Organizations planning the next phase can explore rental equipment in",
+                  "For broader geographic coverage, review temporary facilities across",
+                ][index]
+              }{" "}
+              <a href={page.path}>
+                {page.region}, {page.state}
+                <span aria-hidden="true">↗</span>
+              </a>
+              .
+            </p>
           ))}
         </div>
       </nav>
@@ -386,8 +573,9 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             <h2 id="region-map-title">{guide.region} travel area</h2>
             <p>
               This regional view highlights the {guide.state} service area for
-              planning a temporary facilities rental. City coverage includes{" "}
-              {formatCityList(guide.cities)}.
+              planning a temporary facilities rental near{" "}
+              {guide.seasonal.landmarks[0]}. Use the map to review the local
+              route before confirming delivery access.
             </p>
           </div>
           <figure className="region-map-visual">

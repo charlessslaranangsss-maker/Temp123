@@ -75,6 +75,59 @@ for (const file of htmlFiles) {
   )
     problems.push({ file, issue: "boilerplate-description" });
 
+  if (/^\/service-areas\/[^/]+\/[^/]+\/$/.test(route)) {
+    const cityLinks = $(".region-city-link-grid a[href]").toArray();
+    const serviceLinks = $(".region-service-links a[href]").toArray();
+    const relatedLinks = $(".region-nearby-links a[href]").toArray();
+    const parentLinks = $(".region-parent-state a[href]").toArray();
+    const contextualLinks =
+      cityLinks.length +
+      serviceLinks.length +
+      relatedLinks.length +
+      parentLinks.length;
+    if (cityLinks.length < 4 || cityLinks.length > 8)
+      problems.push({
+        file,
+        issue: "regional-city-link-count",
+        value: cityLinks.length,
+      });
+    if (serviceLinks.length !== 4)
+      problems.push({
+        file,
+        issue: "regional-service-link-count",
+        value: serviceLinks.length,
+      });
+    if (
+      relatedLinks.length !== 3 ||
+      new Set(relatedLinks.map((link) => $(link).attr("href"))).size !== 3
+    )
+      problems.push({
+        file,
+        issue: "regional-related-link-count",
+        value: relatedLinks.length,
+      });
+    if (parentLinks.length !== 1)
+      problems.push({
+        file,
+        issue: "regional-parent-link-count",
+        value: parentLinks.length,
+      });
+    if (contextualLinks < 12 || contextualLinks > 16)
+      problems.push({
+        file,
+        issue: "regional-contextual-link-count",
+        value: contextualLinks,
+      });
+    for (const link of cityLinks) {
+      const href = $(link).attr("href") || "";
+      const url = new URL(href, site.origin);
+      if (!url.searchParams.get("location"))
+        problems.push({ file, issue: "regional-city-link-location", href });
+    }
+    if (/click here/i.test($(".region-page").text()))
+      problems.push({ file, issue: "generic-regional-anchor-text" });
+  }
+
   const indexable =
     registry.mode === "production" && registeredPages.get(route)?.indexable;
   const expectedRobots =

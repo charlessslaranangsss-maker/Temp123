@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T20:15:32.582Z",
+  "generatedAt": "2026-09-13T20:40:34.418Z",
   "mode": "production",
   "indexingScope": "homepage-and-service-areas",
   "indexingBatchSize": 25,
@@ -426,6 +426,10 @@
       "indexable": false
     },
     {
+      "path": "/services/shower-containers/20ft-5-stall/",
+      "indexable": false
+    },
+    {
       "path": "/services/restroom-trailers/12ft/",
       "indexable": false
     },
@@ -442,19 +446,23 @@
       "indexable": false
     },
     {
-      "path": "/services/shower-restroom-combination-trailers/12ft/",
+      "path": "/services/shower-restroom-combination-trailers/13ft-3-stall/",
       "indexable": false
     },
     {
-      "path": "/services/shower-restroom-combination-trailers/14ft/",
+      "path": "/services/shower-restroom-combination-trailers/22ft-6-stall/",
       "indexable": false
     },
     {
-      "path": "/services/shower-restroom-combination-trailers/20ft/",
+      "path": "/services/shower-restroom-combination-trailers/30ft-8-stall/",
       "indexable": false
     },
     {
-      "path": "/services/shower-restroom-combination-trailers/30ft/",
+      "path": "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
+      "indexable": false
+    },
+    {
+      "path": "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
       "indexable": false
     },
     {

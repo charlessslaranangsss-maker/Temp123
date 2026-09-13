@@ -63,6 +63,26 @@
       "permanent": true
     },
     {
+      "source": "/services/shower-restroom-combination-trailers/12ft/",
+      "destination": "/services/shower-restroom-combination-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-restroom-combination-trailers/14ft/",
+      "destination": "/services/shower-restroom-combination-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-restroom-combination-trailers/20ft/",
+      "destination": "/services/shower-restroom-combination-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-restroom-combination-trailers/30ft/",
+      "destination": "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+      "permanent": true
+    },
+    {
       "source": "/houston-texas-mobile-kitchen-rental/",
       "destination": "/equipment-rental/mobile-kitchen-trailers/",
       "permanent": true

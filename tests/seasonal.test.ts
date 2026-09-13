@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import serviceDetails from "../content/service-details.json" with { type: "json" };
 import locationPhotos from "../src/locationPhotos.json" with { type: "json" };
 import type { LocationPhoto } from "../src/locationPhotos";
-import { regionPages } from "../src/regionGuides";
+import { regionPages, relatedRegionPages } from "../src/regionGuides";
 import { serviceCategories } from "../src/serviceMenu";
 import { stateGuides } from "../src/stateGuides";
 
@@ -81,6 +81,9 @@ describe("state and regional planning content", () => {
         guide.intro,
         guide.detail,
         guide.fact,
+        guide.commercialSummary,
+        ...guide.serviceLinks.flatMap((link) => [link.label, link.context]),
+        ...guide.cityLinks.flatMap((link) => [link.label, link.context]),
         seasonalCopy(guide.seasonal),
       ].join(" ");
       expect(words(copy), guide.path).toBeGreaterThanOrEqual(250);
@@ -100,7 +103,70 @@ describe("state and regional planning content", () => {
       );
       expect(copy, guide.path).toMatch(/Emergency support is available 24\/7/i);
       expect(copy, guide.path).toMatch(/base camp|man camp/i);
+      expect(copy, guide.path).toMatch(/rental|rentals/i);
+      expect(copy, guide.path).toMatch(/for rent/i);
+      expect(copy, guide.path).toMatch(/lease|leasing/i);
+      expect(copy, guide.path).toMatch(/temporary facilit(y|ies)/i);
       expect(copy, guide.path).not.toMatch(/[—*]/);
+    }
+    const primaryCopy = regionPages.map((guide) =>
+      normalized(
+        [
+          guide.intro,
+          guide.detail,
+          guide.fact,
+          guide.commercialSummary,
+          ...guide.serviceLinks.flatMap((link) => [link.label, link.context]),
+          ...guide.cityLinks.flatMap((link) => [link.label, link.context]),
+          seasonalCopy(guide.seasonal),
+        ].join(" "),
+      ),
+    );
+    expect(new Set(primaryCopy).size).toBe(regionPages.length);
+  });
+
+  it("creates a verified contextual linking network for every region", () => {
+    const validServicePaths = new Set(
+      serviceCategories.flatMap((category) => [
+        category.href,
+        ...category.links.map((link) => link.href),
+      ]),
+    );
+    const regionPaths = new Set(regionPages.map((guide) => guide.path));
+    for (const guide of regionPages) {
+      expect(guide.cityLinks, guide.path).toHaveLength(guide.cities.length);
+      expect(guide.serviceLinks, guide.path).toHaveLength(4);
+      expect(
+        new Set(guide.cityLinks.map((link) => link.label)).size,
+        guide.path,
+      ).toBe(guide.cityLinks.length);
+      for (const [index, link] of guide.cityLinks.entries()) {
+        const url = new URL(link.href, "https://temporary123.test");
+        expect(validServicePaths.has(url.pathname), link.href).toBe(true);
+        expect(url.searchParams.get("location"), link.href).toBe(
+          `${guide.cities[index]}, ${guide.state}`,
+        );
+        expect(link.label, guide.path).toContain(guide.cities[index]);
+      }
+      for (const link of guide.serviceLinks) {
+        expect(validServicePaths.has(link.href), link.href).toBe(true);
+      }
+      const related = relatedRegionPages(guide);
+      expect(related, guide.path).toHaveLength(3);
+      expect(new Set(related.map((page) => page.path)).size, guide.path).toBe(
+        3,
+      );
+      expect(
+        related.some((page) => page.path === guide.path),
+        guide.path,
+      ).toBe(false);
+      for (const page of related) {
+        expect(regionPaths.has(page.path), page.path).toBe(true);
+      }
+      const contextualLinkCount =
+        guide.cityLinks.length + guide.serviceLinks.length + related.length + 1;
+      expect(contextualLinkCount, guide.path).toBeGreaterThanOrEqual(12);
+      expect(contextualLinkCount, guide.path).toBeLessThanOrEqual(16);
     }
   });
 });
@@ -145,7 +211,7 @@ describe("location media and shower inventory", () => {
     }
   });
 
-  it("publishes only the current 22 ft, 10-stall shower model", () => {
+  it("publishes the verified shower-only sizes and stall counts", () => {
     const shower = serviceCategories.find(
       (category) => category.name === "Shower",
     );
@@ -154,10 +220,22 @@ describe("location media and shower inventory", () => {
         name: "22 ft Shower Trailer, 10 Stalls",
         href: "/services/shower-trailers/22ft-10-stall/",
       },
+      {
+        name: "20 ft Shower Container, 5 Stalls",
+        href: "/services/shower-containers/20ft-5-stall/",
+      },
     ]);
     expect(serviceDetails).toHaveProperty(
       "/services/shower-trailers/22ft-10-stall/",
     );
+    expect(serviceDetails).toHaveProperty(
+      "/services/shower-containers/20ft-5-stall/",
+    );
+    const container =
+      serviceDetails["/services/shower-containers/20ft-5-stall/"];
+    expect(
+      [container.name, container.intro, container.highlight].join(" "),
+    ).toMatch(/20 ft.*5 stalls/i);
     for (const size of ["12ft", "14ft", "20ft", "30ft"]) {
       expect(serviceDetails).not.toHaveProperty(
         `/services/shower-trailers/${size}/`,
@@ -166,6 +244,68 @@ describe("location media and shower inventory", () => {
     const redirects = readFileSync("vercel.json", "utf8");
     for (const size of ["12ft", "14ft", "20ft", "30ft"]) {
       expect(redirects).toContain(`/services/shower-trailers/${size}/`);
+    }
+  });
+
+  it("shows verified stall counts for every combination subcategory and page", () => {
+    const combination = serviceCategories.find(
+      (category) =>
+        category.name === "Shower and Restroom Combination Trailers",
+    );
+    const expected = [
+      {
+        name: "13 ft Luxury Combination Trailer, 3 Stalls",
+        href: "/services/shower-restroom-combination-trailers/13ft-3-stall/",
+        detail:
+          "13 ft Luxury Shower and Restroom Combination Trailer, 3 Stalls",
+      },
+      {
+        name: "22 ft Luxury Combination Trailer, 6 Stalls",
+        href: "/services/shower-restroom-combination-trailers/22ft-6-stall/",
+        detail:
+          "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls",
+      },
+      {
+        name: "30 ft Luxury Combination Trailer, 8 Stalls",
+        href: "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+        detail:
+          "30 ft Luxury Shower and Restroom Combination Trailer, 8 Stalls",
+      },
+      {
+        name: "Luxury Combination Trailer, 3 Stalls + 1 ADA",
+        href: "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
+        detail:
+          "Luxury Shower and Restroom Combination Trailer, 3 Stalls + 1 ADA",
+      },
+      {
+        name: "Luxury Combination Trailer, 8 Stalls + 1 ADA",
+        href: "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
+        detail:
+          "Luxury Shower and Restroom Combination Trailer, 8 Stalls + 1 ADA",
+      },
+    ];
+    expect(combination?.links).toEqual(
+      expected.map(({ name, href }) => ({ name, href })),
+    );
+    for (const item of expected) {
+      const detail = serviceDetails[item.href as keyof typeof serviceDetails];
+      expect(detail, item.href).toBeTruthy();
+      expect(detail.name, item.href).toBe(item.detail);
+      expect(
+        [detail.intro, detail.highlight, ...detail.equipment].join(" "),
+        item.href,
+      ).toMatch(/stall/i);
+    }
+    for (const size of ["12ft", "14ft", "20ft", "30ft"]) {
+      expect(serviceDetails).not.toHaveProperty(
+        `/services/shower-restroom-combination-trailers/${size}/`,
+      );
+    }
+    const redirects = readFileSync("vercel.json", "utf8");
+    for (const size of ["12ft", "14ft", "20ft", "30ft"]) {
+      expect(redirects).toContain(
+        `/services/shower-restroom-combination-trailers/${size}/`,
+      );
     }
   });
 });

@@ -710,6 +710,54 @@
   left: 0;
   top: 1.35rem;
 }
+.region-services-panel li {
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.55;
+}
+.region-services-panel li a,
+.region-parent-state a {
+  color: var(--region-accent);
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+.region-city-links {
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+  border-top: 1px solid #cbdcda;
+}
+.region-city-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid #cbdcda;
+}
+.region-commercial-summary {
+  max-width: 920px;
+  margin: 1.4rem 0 0;
+  color: #365760;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.region-city-link-grid p {
+  margin: 0;
+  padding: 1.25rem clamp(0rem, 2vw, 1.5rem) 1.25rem 0;
+  border-bottom: 1px solid #cbdcda;
+  color: #526f77;
+  line-height: 1.65;
+}
+.region-city-link-grid p:nth-child(even) {
+  padding-right: 0;
+  padding-left: clamp(0rem, 2vw, 1.5rem);
+}
+.region-city-link-grid a {
+  color: var(--region-accent);
+  font-weight: 850;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
 .region-gallery-section {
   padding-top: clamp(3rem, 7vw, 7rem);
   padding-bottom: clamp(3rem, 7vw, 7rem);
@@ -939,20 +987,26 @@
   letter-spacing: -0.045em;
 }
 .region-nearby-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+.region-nearby-links p {
+  margin: 0;
+  padding: 1.15rem;
+  border: 1px solid #c8dfdf;
+  border-radius: 1rem;
+  background: white;
+  color: #526f77;
+  line-height: 1.55;
 }
 .region-nearby-links a {
-  display: inline-flex;
+  display: inline;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.8rem 1rem;
-  border: 1px solid #c8dfdf;
-  border-radius: 999px;
-  background: white;
   color: var(--region-accent);
   font-weight: 800;
+  text-underline-offset: 0.22em;
 }
 .region-nearby-links a span {
   font-size: 0.85em;
@@ -1362,6 +1416,13 @@
   .region-answer-call {
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+  .region-city-link-grid,
+  .region-nearby-links {
+    grid-template-columns: 1fr;
+  }
+  .region-city-link-grid p:nth-child(even) {
+    padding-left: 0;
   }
   .region-map-grid,
   .region-layout-1 .region-map-grid,

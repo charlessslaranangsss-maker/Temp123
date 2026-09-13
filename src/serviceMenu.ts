@@ -96,11 +96,15 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Shower",
     href: "/equipment-rental/shower-trailer/",
     description:
-      "One 22 ft mobile shower trailer with 10 stalls, planned around occupancy, utilities and daily servicing needs.",
+      "Shower-only options include a 22 ft trailer with 10 stalls and a 20 ft container with 5 stalls.",
     links: [
       {
         name: "22 ft Shower Trailer, 10 Stalls",
         href: "/services/shower-trailers/22ft-10-stall/",
+      },
+      {
+        name: "20 ft Shower Container, 5 Stalls",
+        href: "/services/shower-containers/20ft-5-stall/",
       },
     ],
   },
@@ -132,23 +136,27 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Shower and Restroom Combination Trailers",
     href: "/services/shower-restroom-combination-trailers/",
     description:
-      "Combined restroom and shower facilities for sites that need both services in one footprint.",
+      "Luxury combination trailers include 13 ft with 3 stalls, 22 ft with 6 stalls, 30 ft with 8 stalls, and accessible configurations.",
     links: [
       {
-        name: "12ft Restroom and Shower Trailer",
-        href: "/services/shower-restroom-combination-trailers/12ft/",
+        name: "13 ft Luxury Combination Trailer, 3 Stalls",
+        href: "/services/shower-restroom-combination-trailers/13ft-3-stall/",
       },
       {
-        name: "14ft Restroom and Shower Trailer",
-        href: "/services/shower-restroom-combination-trailers/14ft/",
+        name: "22 ft Luxury Combination Trailer, 6 Stalls",
+        href: "/services/shower-restroom-combination-trailers/22ft-6-stall/",
       },
       {
-        name: "20ft Restroom and Shower Trailer",
-        href: "/services/shower-restroom-combination-trailers/20ft/",
+        name: "30 ft Luxury Combination Trailer, 8 Stalls",
+        href: "/services/shower-restroom-combination-trailers/30ft-8-stall/",
       },
       {
-        name: "30ft Restroom and Shower Trailer",
-        href: "/services/shower-restroom-combination-trailers/30ft/",
+        name: "Luxury Combination Trailer, 3 Stalls + 1 ADA",
+        href: "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
+      },
+      {
+        name: "Luxury Combination Trailer, 8 Stalls + 1 ADA",
+        href: "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
       },
     ],
   },
