@@ -233,9 +233,9 @@ export function CoverageMap() {
             <div className="state-local-context">
               <p>
                 <strong>Travel areas</strong>
-                <span data-state-regions>
-                  Central, northern and southern areas
-                </span>
+                <div className="state-modal-regions" data-state-regions>
+                  <a href="/service-areas/">Choose a travel region</a>
+                </div>
               </p>
               <p>
                 <strong>State fact</strong>

@@ -13,6 +13,8 @@ import { load } from "cheerio";
 import { catalog } from "../src/EquipmentCatalog";
 import modelDetails from "../content/service-details.json" with { type: "json" };
 import { serviceCategories, serviceOptions } from "../src/serviceMenu";
+import { regionPages, regionPageByPath } from "../src/regionGuides";
+import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
 const release = productionBuild(site.mode, process.env.VERCEL_ENV);
@@ -60,6 +62,7 @@ const allRoutes = [
     ...catalog.items.map((item) => item.path),
     ...serviceCategories.map((item) => item.href),
     ...serviceOptions.map((item) => item.href),
+    ...regionPages.map((item) => item.path),
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
 const editorialNoindex = new Set([
@@ -125,51 +128,75 @@ const esc = (s: string) =>
         c
       ]!,
   );
+const organizationSchema = {
+  "@type": "Organization",
+  "@id": `${site.origin}#organization`,
+  name: site.brand,
+  url: site.origin,
+  telephone: site.phoneE164,
+  logo: `${site.origin.replace(/\/$/, "")}/images/logo.webp`,
+  areaServed: Object.keys(stateGuides).map((name) => ({
+    "@type": "AdministrativeArea",
+    name: `${name}, USA`,
+  })),
+  knowsAbout: [
+    "Mobile commercial kitchen rentals",
+    "Shower and restroom combination trailers",
+    "Sleeper and bunkbed trailer rentals",
+    "Temporary facilities",
+  ],
+};
 for (const path of [...allRoutes, "/404/"]) {
   const page = pages.find((p) => p.path === path);
   const catalogItem = catalog.items.find((item) => item.path === path);
   const serviceOption = serviceOptions.find((item) => item.href === path);
   const serviceCategory = serviceCategories.find((item) => item.href === path);
   const detail = modelDetails[path as keyof typeof modelDetails];
+  const region = regionPageByPath[path];
   const info = detail
     ? {
         title: detail.name + " Rental | Temporary 123",
         description: detail.intro.split(". ")[0] + ".",
       }
-    : coreRoutes.includes(path)
-      ? pageInfo(path)
-      : page
-        ? {
-            title: page.title + " | Temporary 123",
-            description: sourceDescription(page),
-          }
-        : path === "/contact-us/"
+    : region
+      ? {
+          title: `Temporary Facilities in ${region.region}, ${region.state} | Temporary 123`,
+          description: region.intro,
+        }
+      : coreRoutes.includes(path)
+        ? pageInfo(path)
+        : page
           ? {
-              title: "Contact Temporary 123 | Talk to a Specialist",
-              description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
+              title: page.title + " | Temporary 123",
+              description: sourceDescription(page),
             }
-          : path === "/equipment-rental/"
+          : path === "/contact-us/"
             ? {
-                title: "Equipment Rental | Temporary 123",
-                description:
-                  "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+                title: "Contact Temporary 123 | Talk to a Specialist",
+                description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
               }
-            : catalogItem
+            : path === "/equipment-rental/"
               ? {
-                  title: `${catalogItem.name} | Temporary 123`,
-                  description: catalogItem.summary,
+                  title: "Equipment Rental | Temporary 123",
+                  description:
+                    "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
                 }
-              : serviceOption
+              : catalogItem
                 ? {
-                    title: `${serviceOption.name} Rental | Temporary 123`,
-                    description: serviceOption.description,
+                    title: `${catalogItem.name} | Temporary 123`,
+                    description: catalogItem.summary,
                   }
-                : serviceCategory
+                : serviceOption
                   ? {
-                      title: `${serviceCategory.name} Rental | Temporary 123`,
-                      description: serviceCategory.description,
+                      title: `${serviceOption.name} Rental | Temporary 123`,
+                      description: serviceOption.description,
                     }
-                  : pageInfo(path);
+                  : serviceCategory
+                    ? {
+                        title: `${serviceCategory.name} Rental | Temporary 123`,
+                        description: serviceCategory.description,
+                      }
+                    : pageInfo(path);
   const canonical =
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
   if (!info.description.trim()) {
@@ -180,14 +207,7 @@ for (const path of [...allRoutes, "/404/"]) {
       ? {
           "@context": "https://schema.org",
           "@graph": [
-            {
-              "@type": "Organization",
-              "@id": `${site.origin}#organization`,
-              name: site.brand,
-              url: site.origin,
-              telephone: site.phoneE164,
-              logo: `${site.origin.replace(/\/$/, "")}/images/logo.webp`,
-            },
+            organizationSchema,
             {
               "@type": "WebSite",
               "@id": `${site.origin}#website`,
@@ -197,39 +217,90 @@ for (const path of [...allRoutes, "/404/"]) {
             },
           ],
         }
-      : {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: site.origin,
-            },
-            ...(catalogItem || serviceOption || serviceCategory
-              ? [
+      : region
+        ? {
+            "@context": "https://schema.org",
+            "@graph": [
+              organizationSchema,
+              {
+                "@type": "WebPage",
+                name: info.title,
+                url: canonical,
+                description: info.description,
+                about: {
+                  "@type": "Place",
+                  name: `${region.region}, ${region.state}, USA`,
+                },
+              },
+              {
+                "@type": "Service",
+                name: `Temporary facility rentals in ${region.region}, ${region.state}`,
+                serviceType: "Temporary facility rental",
+                areaServed: {
+                  "@type": "AdministrativeArea",
+                  name: `${region.region}, ${region.state}`,
+                },
+                provider: {
+                  "@type": "Organization",
+                  name: site.brand,
+                  telephone: site.phoneE164,
+                },
+                description: `Rent or lease temporary facilities in ${region.region}, ${region.state}, including mobile kitchens, shower and restroom combinations, and sleeper or bunkbed trailers.`,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: `What temporary facilities can I rent in ${region.region}?`,
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: `Temporary 123 can discuss rental or lease options for mobile commercial kitchens, shower and restroom combination trailers, sleeper or bunkbed trailers, and supporting temporary facilities in ${region.region}, ${region.state}.`,
+                    },
+                  },
+                ],
+              },
+            ],
+          }
+        : {
+            "@context": "https://schema.org",
+            "@graph": [
+              organizationSchema,
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
                   {
                     "@type": "ListItem",
-                    position: 2,
-                    name: "Services",
-                    item: `${site.origin.replace(/\/$/, "")}/equipment-rental/`,
+                    position: 1,
+                    name: "Home",
+                    item: site.origin,
                   },
-                ]
-              : []),
-            {
-              "@type": "ListItem",
-              position: catalogItem || serviceOption || serviceCategory ? 3 : 2,
-              name:
-                page?.title ||
-                catalogItem?.name ||
-                serviceOption?.name ||
-                serviceCategory?.name ||
-                info.title,
-              item: canonical,
-            },
-          ],
-        }
+                  ...(catalogItem || serviceOption || serviceCategory
+                    ? [
+                        {
+                          "@type": "ListItem",
+                          position: 2,
+                          name: "Services",
+                          item: `${site.origin.replace(/\/$/, "")}/equipment-rental/`,
+                        },
+                      ]
+                    : []),
+                  {
+                    "@type": "ListItem",
+                    position:
+                      catalogItem || serviceOption || serviceCategory ? 3 : 2,
+                    name:
+                      page?.title ||
+                      catalogItem?.name ||
+                      serviceOption?.name ||
+                      serviceCategory?.name ||
+                      info.title,
+                    item: canonical,
+                  },
+                ],
+              },
+            ],
+          }
     : null;
   const structured = schema
     ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>`
@@ -306,7 +377,12 @@ for (const path of [...allRoutes, "/404/"]) {
   ).each((_, element) => {
     $(element).attr("content", cleanCopy($(element).attr("content") || ""));
   });
-  if (schema && path !== "/") {
+  if (
+    schema &&
+    path !== "/" &&
+    !region &&
+    !(schema as { "@graph"?: unknown })["@graph"]
+  ) {
     const crumbs = $("nav.breadcrumb a[href]")
       .toArray()
       .map((el) => ({

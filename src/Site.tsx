@@ -12,6 +12,12 @@ import { CoverageMap } from "./CoverageMap";
 import { stateGuides, stateAnchor } from "./stateGuides";
 import consolidatedLocations from "../content/location-consolidation.json" with { type: "json" };
 import { ServiceDetail, modelDetails } from "./ServiceDetail";
+import {
+  RegionDetail,
+  regionPageByPath,
+  regionPath,
+  regionSlug,
+} from "./regionGuides";
 export type SourcePage = {
   id: number;
   modified?: string;
@@ -432,6 +438,8 @@ export function Site({
               </div>
             </div>
           </section>
+        ) : regionPageByPath[path] ? (
+          <RegionDetail guide={regionPageByPath[path]!} />
         ) : path === "/service-areas/" ? (
           <>
             <section className="location-hero">
@@ -503,10 +511,21 @@ export function Site({
                     <div>
                       <h3 data-guide-focus>{guide.focus}</h3>
                       <p data-guide-intro>{guide.intro}</p>
-                      <p data-guide-regions>
-                        <strong>Travel areas:</strong>{" "}
-                        {guide.regions.join(", ")}
-                      </p>
+                      <div
+                        className="state-planning-regions"
+                        data-guide-regions
+                      >
+                        <strong>Travel regions</strong>
+                        <ul>
+                          {guide.regions.map((region) => (
+                            <li key={region}>
+                              <a href={regionPath(name, region)}>
+                                {region} <span aria-hidden="true">↗</span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <p data-guide-fact>{guide.fact}</p>
                       <p data-guide-services>{guide.serviceSummary}</p>
                       <p className="state-planning-question">

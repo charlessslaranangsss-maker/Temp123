@@ -483,12 +483,23 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   const regions = stateDialog.querySelector("[data-state-regions]");
   const fact = stateDialog.querySelector("[data-state-fact]");
   const servicesCopy = stateDialog.querySelector("[data-state-services-copy]");
-  if (regions)
-    regions.textContent =
-      guide
-        ?.querySelector("[data-guide-regions]")
-        ?.textContent?.replace(/^Travel areas:\s*/i, "") ||
-      "Confirm the exact service area";
+  if (regions) {
+    regions.replaceChildren();
+    const regionNames = guide
+      ?.querySelector("[data-guide-regions]")
+      ?.querySelectorAll("a");
+    if (regionNames?.length) {
+      regionNames.forEach((source) => {
+        const link = document.createElement("a");
+        link.href = source.getAttribute("href") || "/service-areas/";
+        link.textContent =
+          source.textContent?.replace(/\s*↗\s*$/, "") || "Travel region";
+        regions.append(link);
+      });
+    } else {
+      regions.textContent = "Confirm the exact service area";
+    }
+  }
   if (fact)
     fact.textContent =
       guide?.querySelector("[data-guide-fact]")?.textContent ||
