@@ -6,10 +6,6 @@ export type SeasonalDemand = {
   basis: string;
   corridors: string[];
   landmarks: string[];
-  delivery: {
-    window: string;
-    note: string;
-  };
   sources: { label: string; href: string }[];
 };
 
@@ -588,33 +584,6 @@ const regionalModifiers = [
   "Emergency staging plans should account for safe access, dependable utilities and regular waste servicing.",
 ] as const;
 
-const extendedDeliveryStates = new Set(["Alaska", "Hawaii"]);
-const remoteRegionPattern =
-  /Arctic|Island|Islands|Keys|North Woods|Aroostook|Great North Woods|Eastern Oregon|Central Nevada|Western North Dakota|Northwest Wyoming|Southeastern Utah|Southwest Alaska|Southeast Alaska/i;
-
-const deliveryEstimate = (state: string, region?: string) => {
-  if (extendedDeliveryStates.has(state)) {
-    return {
-      window: "Common planning range: 7 to 21 business days",
-      note: "This is an estimated planning range. Air, marine or long-distance freight connections can extend the schedule. Emergency support is available 24/7, but equipment availability, carrier space, site readiness and the final route must be confirmed before an arrival time is issued.",
-    };
-  }
-  if (region && remoteRegionPattern.test(region)) {
-    return {
-      window: "Common planning range: 4 to 10 business days",
-      note: "This is an estimated planning range. Remote mileage, mountain or coastal access and required permits can extend the schedule. Emergency support is available 24/7, with the final arrival time confirmed after equipment and site access are reviewed.",
-    };
-  }
-  return {
-    window:
-      region &&
-      /area|Metro|Corridor|Gateway|Capital|Central|Valley/i.test(region)
-        ? "Common planning range: 1 to 5 business days"
-        : "Common planning range: 2 to 7 business days",
-    note: "This is an estimated planning range after equipment availability, configuration, site readiness and transport access are confirmed. Emergency support is available 24/7, and the rental team provides the actual delivery schedule for each project.",
-  };
-};
-
 export function buildStateSeasonalDemand(
   state: string,
   index: number,
@@ -634,7 +603,6 @@ export function buildStateSeasonalDemand(
     basis: `Estimated Seasonal Facility Demand Code ${code}, ${demandLabels[code]}. This estimate applies to the ${state} statewide service area because seasonal work patterns, travel conditions and regional hazards can affect temporary facility planning. It is an estimate for project planning and is not an official government risk rating.`,
     corridors: profile.corridors,
     landmarks: profile.landmarks,
-    delivery: deliveryEstimate(state),
     sources: federalSources(profile.climate),
   };
 }
@@ -676,7 +644,6 @@ export function buildRegionSeasonalDemand(
     basis: `Estimated Seasonal Facility Demand Code ${code}, ${demandLabels[code]}. This estimate applies to the ${region} regional district because its normal work season, travel access and regional hazards can affect temporary facility demand. It is an estimate for project planning and is not an official government risk rating.`,
     corridors: [corridor],
     landmarks: [landmark],
-    delivery: deliveryEstimate(state, region),
     sources: federalSources(profile.climate),
   };
 }

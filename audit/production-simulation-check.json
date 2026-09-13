@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-09-13T21:46:54.684Z",
+  "checkedAt": "2026-09-13T21:39:17.429Z",
   "htmlPages": 399,
-  "localLinks": 50477,
-  "localImages": 1792,
+  "localLinks": 50444,
+  "localImages": 1843,
   "uniqueTitles": 399,
   "uniqueDescriptions": 399,
-  "linkedRoutes": 428,
+  "linkedRoutes": 429,
   "problems": [],
   "pendingMigrationLinks": [
     {
@@ -21,6 +21,22 @@
       "links": 2
     },
     {
+      "path": "/food-service-management/",
+      "links": 1
+    },
+    {
+      "path": "/food-service-design/",
+      "links": 1
+    },
+    {
+      "path": "/food-service-staffing/",
+      "links": 1
+    },
+    {
+      "path": "/food-catering/",
+      "links": 1
+    },
+    {
       "path": "/testimonials/",
       "links": 1
     }
@@ -33,6 +49,6 @@
     "complete": false,
     "checkedAt": "2026-09-11T16:39:23.031Z"
   },
-  "launchReady": false,
-  "indexing": "This build remains excluded from indexing."
+  "launchReady": true,
+  "indexing": "25 approved routes emit index,follow, self-canonicals and sitemap entries. Other routes remain noindex."
 }

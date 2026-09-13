@@ -1,12 +1,13 @@
 {
   "brand": "Temporary123",
-  "origin": "https://temp123-alpha.vercel.app",
+  "origin": "https://temporary123.com",
   "phoneDisplay": "+1 (800) 443 - 5212",
   "phoneE164": "+18004435212",
   "mode": "production",
-  "indexingScope": "homepage-and-service-areas",
+  "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
   "indexingStartDate": "2026-09-14",
-  "inquiriesEnabled": false
+  "inquiriesEnabled": false,
+  "domainRoutingReady": false
 }

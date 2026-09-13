@@ -1,9 +1,22 @@
-export const publicOrigin = "https://temp123-alpha.vercel.app";
+export const publicOrigin = "https://temporary123.com";
 
-export type IndexingScope = "full" | "homepage-and-service-areas";
+export type IndexingScope =
+  "full" | "homepage-and-service-areas" | "locations-and-priority-services";
 
 export function routeInIndexingScope(path: string, scope: IndexingScope) {
   if (scope === "full") return true;
+  if (
+    scope === "locations-and-priority-services" &&
+    [
+      "/equipment-rental/",
+      "/equipment-rental/mobile-kitchen-trailers/",
+      "/services/shower-restroom-combination-trailers/",
+      "/equipment-rental/shower-trailer/",
+      "/services/shower-trailers/22ft-10-stall/",
+      "/equipment-rental/mobile-sleep-trailers/",
+    ].includes(path)
+  )
+    return true;
   return (
     path === "/" ||
     path === "/service-areas/" ||

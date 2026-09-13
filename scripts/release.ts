@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { publicOrigin } from "./seo-policy";
 export function releaseErrors() {
   const errors: string[] = [];
-  const scopedIndexing = site.indexingScope === "homepage-and-service-areas";
+  const scopedIndexing = site.indexingScope !== "full";
   if (
     scopedIndexing &&
     (site.indexingBatchSize !== 25 ||

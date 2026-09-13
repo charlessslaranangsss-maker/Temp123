@@ -1,3 +1,7 @@
+import { industryGuideByPath } from "../src/IndustryDetail";
+import { statePageByPath } from "../src/StateDetail";
+import { pageSchema } from "./structured-data";
+import imageDimensions from "../content/image-dimensions.json";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { Site, isLocationPagePath, type SourcePage } from "../src/Site";
@@ -24,13 +28,19 @@ import { regionPages, regionPageByPath } from "../src/regionGuides";
 import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
-const release = productionBuild(site.mode, process.env.VERCEL_ENV);
+const domainReady =
+  site.domainRoutingReady || process.env.PUBLIC_DOMAIN_READY === "true";
+const release =
+  productionBuild(site.mode, process.env.VERCEL_ENV) && domainReady;
 const indexingScope = site.indexingScope as IndexingScope;
 if (release && indexingScope === "full") {
   const errors = releaseErrors();
   if (errors.length) throw new Error(errors.join("; "));
 }
 const source = await readFile("dist/index.html", "utf8");
+const fontAsset = (await readdir("dist/assets")).find((name) =>
+  /^manrope-latin-wght-normal-.*\.woff2$/.test(name),
+);
 const pages: SourcePage[] = [];
 const index = JSON.parse(
   await readFile("content/route-index.json", "utf8"),
@@ -71,6 +81,7 @@ const allRoutes = [
     ...serviceCategories.map((item) => item.href),
     ...serviceOptions.map((item) => item.href),
     ...regionPages.map((item) => item.path),
+    ...Object.keys(statePageByPath),
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
 const editorialNoindex = new Set([
@@ -80,9 +91,28 @@ const editorialNoindex = new Set([
   "/modular-kitchen-facilities/",
   "/video/",
 ]);
-const scopedIndexingRoutes = allRoutes.filter(
+// Publish parents before their regions and include the priority service destinations.
+const orderedIndexingRoutes = [
+  ...new Set([
+    "/",
+    "/service-areas/",
+    ...allRoutes.filter(
+      (path) =>
+        !path.startsWith("/service-areas/") &&
+        routeInIndexingScope(path, indexingScope),
+    ),
+    ...Object.entries(stateGuides).flatMap(([name]) => [
+      Object.entries(statePageByPath).find(([, state]) => state === name)![0],
+      ...regionPages
+        .filter((region) => region.state === name)
+        .map((region) => region.path),
+    ]),
+    ...allRoutes,
+  ]),
+];
+const scopedIndexingRoutes = orderedIndexingRoutes.filter(
   (path) =>
-    !redirectedRoutes.has(path) &&
+    allRoutes.includes(path) &&
     !editorialNoindex.has(path) &&
     routeInIndexingScope(path, indexingScope),
 );
@@ -144,24 +174,6 @@ const esc = (s: string) =>
         c
       ]!,
   );
-const organizationSchema = {
-  "@type": "Organization",
-  "@id": `${site.origin}#organization`,
-  name: site.brand,
-  url: site.origin,
-  telephone: site.phoneE164,
-  logo: `${site.origin.replace(/\/$/, "")}/images/logo.webp`,
-  areaServed: Object.keys(stateGuides).map((name) => ({
-    "@type": "AdministrativeArea",
-    name: `${name}, USA`,
-  })),
-  knowsAbout: [
-    "Mobile commercial kitchen rentals",
-    "Shower and restroom combination trailers",
-    "Sleeper and bunkbed trailer rentals",
-    "Temporary facilities",
-  ],
-};
 for (const path of [...allRoutes, "/404/"]) {
   const page = pages.find((p) => p.path === path);
   const catalogItem = catalog.items.find((item) => item.path === path);
@@ -169,209 +181,75 @@ for (const path of [...allRoutes, "/404/"]) {
   const serviceCategory = serviceCategories.find((item) => item.href === path);
   const detail = modelDetails[path as keyof typeof modelDetails];
   const region = regionPageByPath[path];
-  const info = detail
+  const stateName = statePageByPath[path];
+  const industry = industryGuideByPath[path];
+  const info = industry
     ? {
-        title: detail.name + " Rental | Temporary123",
-        description: detail.intro.split(". ")[0] + ".",
+        title: `${industry.title}: Temporary Facilities to Rent or Lease | Temporary123`,
+        description: industry.description,
       }
-    : region
+    : detail
       ? {
-          title: `Temporary Facilities in ${region.region}, ${region.state} | Temporary123`,
-          description: `Rent temporary mobile kitchens, shower and restroom combinations, 22 ft 10-stall shower trailers and sleeper trailers in ${region.region}, ${region.state}. Emergency 24/7.`,
+          title: detail.name + " Rental | Temporary123",
+          description: detail.intro.split(". ")[0] + ".",
         }
-      : coreRoutes.includes(path)
-        ? pageInfo(path)
-        : page
+      : region
+        ? {
+            title: `${region.index % 2 ? "Trailer Rental" : "Facilities Rental"} in ${region.region}, ${region.state}: Temporary Facilities to Rent or Lease | Temporary123`,
+            description: `Rental Services in ${region.region}, ${region.state}. Rent or lease Temporary Facilities: kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
+          }
+        : stateName
           ? {
-              title: page.title + " | Temporary123",
-              description: sourceDescription(page),
+              title: `Rental Services in ${stateName}: Temporary Facilities to Rent or Lease | Temporary123`,
+              description: `Rental Services in ${stateName}. Rent or lease Temporary Facilities: mobile kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
             }
-          : path === "/contact-us/"
-            ? {
-                title: "Contact Temporary123 | Talk to a Specialist",
-                description: `Call Temporary123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
-              }
-            : path === "/equipment-rental/"
+          : coreRoutes.includes(path)
+            ? pageInfo(path)
+            : page
               ? {
-                  title: "Equipment Rental | Temporary123",
-                  description:
-                    "Explore Temporary123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+                  title: page.title + " | Temporary123",
+                  description: sourceDescription(page),
                 }
-              : catalogItem
+              : path === "/contact-us/"
                 ? {
-                    title: `${catalogItem.name} | Temporary123`,
-                    description: catalogItem.summary,
+                    title: "Contact Temporary123 | Talk to a Specialist",
+                    description: `Call Temporary123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
                   }
-                : serviceOption
+                : path === "/equipment-rental/"
                   ? {
-                      title: `${serviceOption.name} Rental | Temporary123`,
-                      description: serviceOption.description,
+                      title: "Equipment Rental | Temporary123",
+                      description:
+                        "Explore Temporary123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
                     }
-                  : serviceCategory
+                  : catalogItem
                     ? {
-                        title: `${serviceCategory.name} Rental | Temporary123`,
-                        description: serviceCategory.description,
+                        title: `${catalogItem.name} | Temporary123`,
+                        description: catalogItem.summary,
                       }
-                    : pageInfo(path);
+                    : serviceOption
+                      ? {
+                          title: `${serviceOption.name} Rental | Temporary123`,
+                          description: serviceOption.description,
+                        }
+                      : serviceCategory
+                        ? {
+                            title: `${serviceCategory.name} Rental | Temporary123`,
+                            description: serviceCategory.description,
+                          }
+                        : pageInfo(path);
   const canonical =
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || "Temporary123 facilities"}. Call Temporary123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
-  const schema = canonical
-    ? path === "/"
-      ? {
-          "@context": "https://schema.org",
-          "@graph": [
-            organizationSchema,
-            {
-              "@type": "WebSite",
-              "@id": `${site.origin}#website`,
-              name: site.brand,
-              url: site.origin,
-              publisher: { "@id": `${site.origin}#organization` },
-            },
-          ],
-        }
-      : region
-        ? {
-            "@context": "https://schema.org",
-            "@graph": [
-              organizationSchema,
-              {
-                "@type": "WebPage",
-                name: info.title,
-                url: canonical,
-                description: info.description,
-                about: {
-                  "@type": "Place",
-                  name: `${region.region}, ${region.state}, USA`,
-                },
-                primaryImageOfPage: region.locationPhoto
-                  ? {
-                      "@type": "ImageObject",
-                      contentUrl: new URL(
-                        region.locationPhoto.image,
-                        site.origin,
-                      ).href,
-                      caption: region.locationPhoto.caption,
-                      creditText: `${region.locationPhoto.author}, ${region.locationPhoto.license}`,
-                    }
-                  : undefined,
-              },
-              {
-                "@type": "Service",
-                name: `Temporary facility rentals in ${region.region}, ${region.state}`,
-                serviceType: "Temporary facility rental",
-                areaServed: {
-                  "@type": "AdministrativeArea",
-                  name: `${region.region}, ${region.state}`,
-                },
-                provider: {
-                  "@type": "Organization",
-                  name: site.brand,
-                  telephone: site.phoneE164,
-                },
-                description: `Rent or lease temporary facilities in ${region.region}, ${region.state}, including mobile kitchens, shower and restroom combinations, and sleeper or bunkbed trailers.`,
-                availableChannel: {
-                  "@type": "ServiceChannel",
-                  servicePhone: {
-                    "@type": "ContactPoint",
-                    telephone: site.phoneE164,
-                    contactType: "emergency temporary facilities support",
-                    hoursAvailable: {
-                      "@type": "OpeningHoursSpecification",
-                      dayOfWeek: [
-                        "Monday",
-                        "Tuesday",
-                        "Wednesday",
-                        "Thursday",
-                        "Friday",
-                        "Saturday",
-                        "Sunday",
-                      ],
-                      opens: "00:00",
-                      closes: "23:59",
-                    },
-                  },
-                },
-                additionalProperty: [
-                  {
-                    "@type": "PropertyValue",
-                    name: "Estimated seasonal facility demand",
-                    value: `Code ${region.seasonal.code}, ${region.seasonal.label}. Planning estimate only, not an official government risk rating.`,
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    name: "Estimated delivery planning timeline",
-                    value: `${region.seasonal.delivery.window}. ${region.seasonal.delivery.note}`,
-                  },
-                ],
-              },
-              {
-                "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: `What temporary facilities can I rent in ${region.region}?`,
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: `Temporary123 can discuss rental or lease options for mobile commercial kitchens, shower and restroom combination trailers, sleeper or bunkbed trailers, and supporting temporary facilities in ${region.region}, ${region.state}.`,
-                    },
-                  },
-                ],
-              },
-            ],
-          }
-        : {
-            "@context": "https://schema.org",
-            "@graph": [
-              organizationSchema,
-              {
-                "@type": "BreadcrumbList",
-                itemListElement: [
-                  {
-                    "@type": "ListItem",
-                    position: 1,
-                    name: "Home",
-                    item: site.origin,
-                  },
-                  ...(catalogItem || serviceOption || serviceCategory
-                    ? [
-                        {
-                          "@type": "ListItem",
-                          position: 2,
-                          name: "Services",
-                          item: `${site.origin.replace(/\/$/, "")}/equipment-rental/`,
-                        },
-                      ]
-                    : []),
-                  {
-                    "@type": "ListItem",
-                    position:
-                      catalogItem || serviceOption || serviceCategory ? 3 : 2,
-                    name:
-                      page?.title ||
-                      catalogItem?.name ||
-                      serviceOption?.name ||
-                      serviceCategory?.name ||
-                      info.title,
-                    item: canonical,
-                  },
-                ],
-              },
-            ],
-          }
-    : null;
-  const structured = schema
-    ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>`
-    : "";
   const head =
-    structured +
+    (fontAsset
+      ? `<link rel="preload" href="/assets/${fontAsset}" as="font" type="font/woff2" crossorigin>`
+      : "") +
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
     `<meta property="og:site_name" content="${esc(site.brand)}"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(info.title)}"><meta name="twitter:description" content="${esc(info.description)}">` +
     (canonical
-      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(region?.locationPhoto ? new URL(region.locationPhoto.image, site.origin).href : site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(region?.locationPhoto?.imageAlt || site.brand + " temporary facility planning")}">`
+      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(region ? new URL(region.image, site.origin).href : site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(region?.imageAlt || site.brand + " temporary facility planning")}">`
       : "");
   const rawHtml = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)
@@ -438,36 +316,83 @@ for (const path of [...allRoutes, "/404/"]) {
   ).each((_, element) => {
     $(element).attr("content", cleanCopy($(element).attr("content") || ""));
   });
-  if (
-    schema &&
-    path !== "/" &&
-    !region &&
-    !(schema as { "@graph"?: unknown })["@graph"]
-  ) {
-    const crumbs = $("nav.breadcrumb a[href]")
+  // Match schema to final, visible HTML rather than constructing a parallel breadcrumb tree.
+  if (path !== "/404/") {
+    const h1 = $("h1").first();
+    if (path !== "/" && !$("nav.breadcrumb").length) {
+      const nav = $(
+        '<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page"></span></nav>',
+      );
+      nav.find('[aria-current="page"]').text(h1.text().trim());
+      h1.before(nav);
+    }
+    const breadcrumb = $("nav.breadcrumb").first();
+    if (breadcrumb.length && !breadcrumb.find('[aria-current="page"]').length) {
+      breadcrumb.append("<span>/</span>");
+      breadcrumb.append(
+        $('<span aria-current="page"></span>').text(
+          region?.region || stateName || h1.text().trim(),
+        ),
+      );
+    }
+    $("main img").each((_, image) => {
+      const img = $(image);
+      const src = img.attr("src") || "";
+      const size = imageDimensions[src as keyof typeof imageDimensions];
+      if (size)
+        img.attr({ width: String(size.width), height: String(size.height) });
+      const alt = img.attr("alt") || "";
+      if (
+        /^(?:\d+|collage[ -]*\d*|Final.*|Dishwashing\d+|.*\.(png|jpg|webp))$/i.test(
+          alt,
+        )
+      )
+        img.attr(
+          "alt",
+          `${h1.text().trim()}: Temporary123 equipment reference`,
+        );
+    });
+    const crumbs = breadcrumb
+      .find('a[href], [aria-current="page"]')
       .toArray()
       .map((el) => ({
         name: $(el).text().trim(),
-        item: new URL($(el).attr("href")!, site.origin).href,
-      }))
-      .filter((crumb) => crumb.item !== canonical);
-    if (crumbs.length) {
-      const breadcrumb = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          ...crumbs,
-          { name: $("h1").first().text().trim(), item: canonical },
-        ].map((crumb, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          ...crumb,
-        })),
-      };
-      $("script[type='application/ld+json']").text(
-        JSON.stringify(breadcrumb).replace(/</g, "\\u003c"),
-      );
-    }
+        item: new URL($(el).attr("href") || path, site.origin).href,
+      }));
+    const hero = $("main img").first();
+    const schema = pageSchema({
+      path,
+      title: h1.text().trim(),
+      description: cleanCopy(info.description),
+      crumbs,
+      service: Boolean(
+        industry ||
+        region ||
+        stateName ||
+        serviceCategory ||
+        serviceOption ||
+        catalogItem ||
+        detail,
+      ),
+      area: region
+        ? { name: region.region, state: region.state }
+        : stateName
+          ? { name: stateName }
+          : undefined,
+      image: hero.length
+        ? {
+            src: hero.attr("src")!,
+            alt: hero.attr("alt") || "",
+            width: Number(hero.attr("width")) || undefined,
+            height: Number(hero.attr("height")) || undefined,
+          }
+        : undefined,
+    });
+    $("head").append(
+      $('<script type="application/ld+json"></script>').text(
+        JSON.stringify(schema).replace(/</g, "\\u003c"),
+      ),
+    );
   }
   const html = $.html();
   const file = path === "/404/" ? "dist/404.html" : `dist${path}index.html`;
@@ -483,13 +408,24 @@ await writeFile(
 const restoredAssets = await preserveMedia(media);
 const registry = allRoutes.map((path) => ({
   path,
-  indexable: indexableRoutes.includes(path),
+  indexable: release && indexableRoutes.includes(path),
   modified:
     coreRoutes.includes(path) || modelDetails[path as keyof typeof modelDetails]
       ? undefined
       : pages.find((page) => page.path === path)?.modified,
 }));
 await writeFile("dist/sitemap.xml", sitemapXml(registry, release));
+// Review artifact only. Never serve the future sitemap while domain routing is pending.
+await writeFile(
+  "audit/draft-sitemap.xml",
+  sitemapXml(
+    registry.map((row) => ({
+      ...row,
+      indexable: indexableRoutes.includes(row.path),
+    })),
+    true,
+  ),
+);
 await writeFile(
   "audit/build-registry.json",
   JSON.stringify(
@@ -500,7 +436,8 @@ await writeFile(
       indexingBatchSize: site.indexingBatchSize,
       activeIndexingBatch: site.activeIndexingBatch,
       eligibleIndexingRoutes: scopedIndexingRoutes.length,
-      activeIndexingRoutes: indexableRoutes.length,
+      activeIndexingRoutes: release ? indexableRoutes.length : 0,
+      domainRoutingReady: domainReady,
       pages: registry,
       unresolvedSourceLinks: [...unresolvedSourceLinks].sort(),
       restoredAssets,

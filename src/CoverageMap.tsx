@@ -235,7 +235,8 @@ export function CoverageMap() {
                 Plan for the exact site
               </p>
               <h2 id="state-services-title">
-                Services in <span data-state-name>your state</span>, USA
+                Rental Services in <span data-state-name>your state</span>, USA{" "}
+                <small>Temporary Facilities to Rent or Lease</small>
               </h2>
               <p id="state-services-intro">
                 Temporary facility rental services are available for projects in{" "}
@@ -269,6 +270,13 @@ export function CoverageMap() {
               >
                 <a href="/service-areas/">Choose a travel region</a>
               </nav>
+              <a
+                className="state-guide-link"
+                data-state-page
+                href="/service-areas/"
+              >
+                View state rental guide ↗
+              </a>
               <div className="state-fact-card">
                 <strong>State fact</strong>
                 <span data-state-fact>Confirm the exact project location.</span>
@@ -283,7 +291,8 @@ export function CoverageMap() {
             <div className="state-seasonal-heading">
               <span className="eyebrow">LOCAL AND SEASONAL INFORMATION</span>
               <h3 id="state-seasonal-title">
-                Planning conditions in <span data-state-name>your state</span>
+                Rental Planning Conditions in{" "}
+                <span data-state-name>your state</span>
               </h3>
             </div>
             <div className="state-seasonal-copy" data-state-seasonal-copy />
@@ -295,17 +304,6 @@ export function CoverageMap() {
                 government risk rating.
               </p>
             </div>
-            <div className="state-delivery-card">
-              <span>Estimated delivery planning timeline</span>
-              <strong data-state-delivery-window>
-                Common planning range: 2 to 7 business days
-              </strong>
-              <p data-state-delivery-note>
-                Equipment availability, configuration, site readiness and
-                transport access must be confirmed.
-              </p>
-              <b>Emergency support 24/7</b>
-            </div>
             <nav
               className="state-seasonal-sources"
               data-state-seasonal-sources
@@ -315,7 +313,7 @@ export function CoverageMap() {
 
           <section
             className="state-dialog-visual"
-            aria-label="Location and temporary facility references"
+            aria-label="Temporary123 equipment photographs"
           >
             <div className="state-visual-heading">
               <div>
@@ -343,15 +341,6 @@ export function CoverageMap() {
                 <figcaption data-state-image-caption>
                   Commercial equipment inside a mobile kitchen trailer
                 </figcaption>
-                <p className="state-photo-credit">
-                  Photo:{" "}
-                  <a
-                    data-state-photo-source
-                    href="https://commons.wikimedia.org/"
-                  >
-                    Wikimedia Commons
-                  </a>
-                </p>
               </figure>
               <figure>
                 <div>
@@ -366,6 +355,20 @@ export function CoverageMap() {
                 </div>
                 <figcaption data-state-gallery-caption="1">
                   Interior of a mobile shower trailer
+                </figcaption>
+              </figure>
+              <figure>
+                <div>
+                  <img
+                    src="/images/catalog/mobile-kitchen-trailers-960.webp"
+                    alt="Temporary123 rental equipment"
+                    width="850"
+                    height="650"
+                    data-state-gallery-image="2"
+                  />
+                </div>
+                <figcaption data-state-gallery-caption="2">
+                  Temporary123 rental equipment
                 </figcaption>
               </figure>
             </div>

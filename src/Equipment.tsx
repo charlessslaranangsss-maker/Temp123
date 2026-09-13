@@ -66,7 +66,7 @@ export const equipment: EquipmentCard[] = [
     category: "Site amenities",
     text: "Rent clean temporary restrooms for crews, guests and active field operations.",
     detail:
-      "Rent restroom facilities that fit your headcount, accessibility needs and operating schedule. We can help you review capacity, water connections, servicing access and placement.",
+      "Restroom rental configurations match our shower and restroom combination trailers: 13 ft with 3 stalls, 22 ft with 6 stalls, and 30 ft with 8 stalls. Accessible options include 3 stalls plus 1 ADA stall and 8 stalls plus 1 ADA stall. Confirm the available floor plan with the rental team.",
     tags: ["Restrooms", "Accessibility", "Site support"],
   },
   {

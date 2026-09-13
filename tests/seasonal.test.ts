@@ -1,3 +1,6 @@
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { StateDetail } from "../src/StateDetail";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import serviceDetails from "../content/service-details.json" with { type: "json" };
@@ -15,17 +18,8 @@ const normalized = (value: string) =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
-const seasonalCopy = (seasonal: {
-  summary: string[];
-  basis: string;
-  delivery: { window: string; note: string };
-}) =>
-  [
-    ...seasonal.summary,
-    seasonal.basis,
-    seasonal.delivery.window,
-    seasonal.delivery.note,
-  ].join(" ");
+const seasonalCopy = (seasonal: { summary: string[]; basis: string }) =>
+  [...seasonal.summary, seasonal.basis].join(" ");
 
 describe("state and regional planning content", () => {
   it("covers all 50 states and 246 distinct travel regions", () => {
@@ -55,17 +49,17 @@ describe("state and regional planning content", () => {
         guide.fact,
         seasonalCopy(guide.seasonal),
       ].join(" ");
-      expect(words(copy), state).toBeGreaterThanOrEqual(250);
-      expect(words(copy), state).toBeLessThanOrEqual(500);
+      const visibleCopy = renderToStaticMarkup(
+        createElement(StateDetail, { name: state }),
+      ).replace(/<[^>]*>/g, " ");
+      expect(words(visibleCopy), state).toBeGreaterThanOrEqual(250);
+      expect(words(visibleCopy), state).toBeLessThanOrEqual(500);
       expect(guide.seasonal.code, state).toBeGreaterThanOrEqual(1);
       expect(guide.seasonal.code, state).toBeLessThanOrEqual(5);
       expect(guide.seasonal.basis, state).toContain(
         "not an official government risk rating",
       );
-      expect(guide.seasonal.delivery.note, state).toMatch(
-        /estimated|estimate/i,
-      );
-      expect(copy, state).toMatch(/Emergency support is available 24\/7/i);
+
       expect(copy, state).toMatch(/base camp|man camp/i);
       expect(copy, state).toMatch(/mobile commercial kitchens/i);
       expect(copy, state).toMatch(/shower and restroom combination/i);
@@ -98,10 +92,7 @@ describe("state and regional planning content", () => {
       expect(guide.seasonal.basis, guide.path).toContain(
         "not an official government risk rating",
       );
-      expect(guide.seasonal.delivery.note, guide.path).toMatch(
-        /estimated|estimate/i,
-      );
-      expect(copy, guide.path).toMatch(/Emergency support is available 24\/7/i);
+
       expect(copy, guide.path).toMatch(/base camp|man camp/i);
       expect(copy, guide.path).toMatch(/rental|rentals/i);
       expect(copy, guide.path).toMatch(/for rent/i);
@@ -172,7 +163,7 @@ describe("state and regional planning content", () => {
 });
 
 describe("location media and shower inventory", () => {
-  it("assigns one unique licensed location image to every page", () => {
+  it("retains licensed location imagery with provenance in the source archive", () => {
     const entries: [string, LocationPhoto][] = [
       ...Object.entries(locationPhotos.states),
       ...Object.entries(locationPhotos.regions),
@@ -245,6 +236,17 @@ describe("location media and shower inventory", () => {
     for (const size of ["12ft", "14ft", "20ft", "30ft"]) {
       expect(redirects).toContain(`/services/shower-trailers/${size}/`);
     }
+  });
+
+  it("uses the same verified configurations under Restroom and Combination", () => {
+    expect(
+      serviceCategories.find((category) => category.name === "Restroom")?.links,
+    ).toEqual(
+      serviceCategories.find(
+        (category) =>
+          category.name === "Shower and Restroom Combination Trailers",
+      )?.links,
+    );
   });
 
   it("shows verified stall counts for every combination subcategory and page", () => {

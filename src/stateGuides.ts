@@ -1,5 +1,4 @@
-import { regionMedia } from "./regionMedia";
-import { stateLocationPhoto } from "./locationPhotos";
+import { equipmentSet } from "./equipmentPhotos";
 import { buildStateSeasonalDemand } from "./seasonalDemand";
 
 // Editorial planning prompts, not claims of local inventory, delivery times,
@@ -1146,54 +1145,21 @@ const rentalContexts = [
     `Temporary facility rental planning in ${name}, USA supports customers who need to rent equipment for a short-term project or arrange a longer lease.`,
 ];
 
-const statePhotoMedia = regionMedia.filter(
-  (_, index) =>
-    index <= 40 ||
-    (index >= 64 && index <= 71) ||
-    (index >= 77 && index <= 111),
-);
-
-const buildStateGallery = (stateIndex: number, state: string) => {
-  const poolSize = statePhotoMedia.length;
-  const candidates = [
-    stateIndex,
-    (stateIndex * 11 + 37) % poolSize,
-    (stateIndex * 23 + 71) % poolSize,
-  ];
-  const indexes: number[] = [];
-  candidates.forEach((candidate) => {
-    let index = candidate;
-    while (indexes.includes(index)) index = (index + 1) % poolSize;
-    indexes.push(index);
-  });
-  return indexes.map((index, visualIndex) => {
-    const media = statePhotoMedia[index];
-    const contexts = [
-      `for temporary facility rental planning in ${state}`,
-      `for a temporary base camp rental in ${state}`,
-      `available for facility lease planning in ${state}`,
-    ];
-    return {
-      image: media.image,
-      imageAlt: `${media.label} ${contexts[visualIndex]}`,
-    };
-  });
-};
+const buildStateGallery = (index: number, state: string) =>
+  equipmentSet(index + 246);
 
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {
     const local = stateLocalDetails[name];
     const gallery = buildStateGallery(index, name);
-    const locationPhoto = stateLocationPhoto(name);
     const seasonal = buildStateSeasonalDemand(name, index);
     return [
       name,
       {
         ...guide,
-        intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
-        image: locationPhoto?.image || gallery[0].image,
-        imageAlt: locationPhoto?.imageAlt || gallery[0].imageAlt,
-        locationPhoto,
+        intro: `Rental Services in ${name}: rent or lease Temporary Facilities for base camp and man camp projects. ${firstSentence(guide.intro)}`,
+        image: gallery[0].image,
+        imageAlt: gallery[0].imageAlt,
         gallery,
         regions: local.regions,
         fact: local.fact,
@@ -1210,7 +1176,6 @@ export const stateGuides = Object.fromEntries(
   (typeof stateGuideDetails)[string] & {
     image: string;
     imageAlt: string;
-    locationPhoto: ReturnType<typeof stateLocationPhoto>;
     gallery: { image: string; imageAlt: string }[];
     regions: string[];
     fact: string;

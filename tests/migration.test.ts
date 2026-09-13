@@ -62,7 +62,7 @@ describe("migration indexing separation", () => {
     expect(productionBuild("draft", "production")).toBe(false);
     expect(canonicalFor("/gsa-schedule/", true, false)).toBeUndefined();
     expect(canonicalFor("/gsa-schedule/", true, true)).toBe(
-      "https://temp123-alpha.vercel.app/gsa-schedule/",
+      "https://temporary123.com/gsa-schedule/",
     );
     expect(canonicalFor("/video/", false, true)).toBeUndefined();
     expect(() => canonicalFor("//evil.example/", true, true)).toThrow();
@@ -89,7 +89,7 @@ describe("migration indexing separation", () => {
     const rule = vercel.headers.find((rule) => "missing" in rule);
     expect(rule).toMatchObject({
       source: "/(.*)",
-      missing: [{ type: "host", value: "temp123-alpha\\.vercel\\.app" }],
+      missing: [{ type: "host", value: "temporary123\\.com" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
     });
   });

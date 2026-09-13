@@ -1,3 +1,4 @@
+import { applyCityRentalView } from "./cityRentalView";
 import "./style.css";
 import "./redesign.css";
 import "./modern.css";
@@ -5,6 +6,7 @@ import "./homepage.css";
 import "./contact-refresh.css";
 import "./map-refresh.css";
 import "./secondary-refresh.css";
+import "./location-refresh.css";
 import "@fontsource-variable/manrope";
 
 // Keep every facility in the rendered HTML; filtering is an optional enhancement.
@@ -76,6 +78,7 @@ const requestedLocation =
     ?.trim()
     .slice(0, 120) || "";
 if (requestedLocation) {
+  applyCityRentalView(requestedLocation);
   document
     .querySelectorAll<HTMLElement>("[data-project-location]")
     .forEach((element) => {
@@ -143,6 +146,7 @@ if (
     }
     contactScroll = window.scrollY;
     mobileNav?.removeAttribute("open");
+    void mountQuoteForm();
     contactDrawer.showModal();
     document.body.classList.add("dialog-open", "contact-drawer-open");
     document.body.style.position = "fixed";
@@ -292,18 +296,29 @@ function setupMotion() {
 }
 setupMotion();
 motionPreference.addEventListener("change", setupMotion);
-if (document.querySelector("#quote-island")) {
-  Promise.all([
+let quoteHydration: Promise<void> | undefined;
+function mountQuoteForm() {
+  const island = document.querySelector<HTMLElement>("#quote-island");
+  if (!island || quoteHydration) return quoteHydration;
+  quoteHydration = Promise.all([
     import("react-dom/client"),
     import("react"),
     import("./QuoteForm"),
-  ]).then(([{ hydrateRoot }, React, { QuoteForm }]) =>
-    hydrateRoot(
-      document.querySelector("#quote-island")!,
-      React.createElement(QuoteForm),
-    ),
-  );
+  ])
+    .then(([{ hydrateRoot }, React, { QuoteForm }]) => {
+      hydrateRoot(island, React.createElement(QuoteForm));
+    })
+    .catch(() => {
+      quoteHydration = undefined;
+    });
+  return quoteHydration;
 }
+// The form stays server-rendered. Load its interactive code only when needed.
+if (
+  document.querySelector("#quote-island") &&
+  !document.querySelector("#quote-island")?.closest("dialog")
+)
+  void mountQuoteForm();
 
 // The equipment directory is fully linked in HTML; filtering is an enhancement.
 const equipmentSearch =
@@ -459,17 +474,6 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       "[data-state-image-caption]",
     );
     if (caption) caption.textContent = stateImage.alt;
-    const source = stateDialog.querySelector<HTMLAnchorElement>(
-      "[data-state-photo-source]",
-    );
-    if (source) {
-      source.href =
-        guide?.dataset.stateImageSource || "https://commons.wikimedia.org/";
-      const author =
-        guide?.dataset.stateImageAuthor || "Wikimedia Commons contributor";
-      const license = guide?.dataset.stateImageLicense || "source license";
-      source.textContent = `${author}, ${license}`;
-    }
   }
   const galleryImages = stateDialog.querySelectorAll<HTMLImageElement>(
     "img[data-state-gallery-image]",
@@ -499,6 +503,10 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   if (question)
     question.textContent =
       guide?.querySelector("[data-guide-question]")?.textContent || "";
+  const statePage =
+    stateDialog.querySelector<HTMLAnchorElement>("[data-state-page]");
+  if (statePage)
+    statePage.href = `/service-areas/${name.toLowerCase().replaceAll(" ", "-")}/`;
   const regions = stateDialog.querySelector("[data-state-regions]");
   const fact = stateDialog.querySelector("[data-state-fact]");
   const servicesCopy = stateDialog.querySelector("[data-state-services-copy]");
@@ -559,20 +567,6 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       "";
   if (demandCode)
     demandCode.textContent = `Code ${guide?.dataset.stateDemandCode || "3"} · ${guide?.dataset.stateDemandLabel || "Moderate"}`;
-  const deliveryWindow = stateDialog.querySelector<HTMLElement>(
-    "[data-state-delivery-window]",
-  );
-  const deliveryNote = stateDialog.querySelector<HTMLElement>(
-    "[data-state-delivery-note]",
-  );
-  if (deliveryWindow)
-    deliveryWindow.textContent =
-      guide?.dataset.stateDeliveryWindow ||
-      "Delivery estimate available by phone";
-  if (deliveryNote)
-    deliveryNote.textContent =
-      guide?.dataset.stateDeliveryNote ||
-      "Call to confirm equipment availability and the actual dispatch schedule.";
   const seasonalSources = stateDialog.querySelector<HTMLElement>(
     "[data-state-seasonal-sources]",
   );

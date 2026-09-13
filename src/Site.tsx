@@ -1,3 +1,6 @@
+import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
+import { StateDetail, statePageByPath } from "./StateDetail";
+import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
 import { Home } from "./Home";
@@ -270,7 +273,7 @@ export function Header({ path }: { path: string }) {
       <a
         className="contact-rail contact-rail-refresh"
         href="/contact-us/"
-        aria-label="Contact Temporary123"
+        aria-label="Contact Us at Temporary123"
         aria-current={path === "/contact-us/" ? "page" : undefined}
       >
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -440,6 +443,10 @@ export function Site({
               </div>
             </div>
           </section>
+        ) : industryGuideByPath[path] ? (
+          <IndustryDetail path={path} />
+        ) : statePageByPath[path] ? (
+          <StateDetail name={statePageByPath[path]} />
         ) : regionPageByPath[path] ? (
           <RegionDetail guide={regionPageByPath[path]!} />
         ) : path === "/service-areas/" ? (
@@ -447,15 +454,20 @@ export function Site({
             <section className="location-hero">
               <div className="wrap section location-hero-grid">
                 <div className="location-hero-copy">
+                  <nav className="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span>/</span>
+                    <span aria-current="page">Service Areas</span>
+                  </nav>
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
                   <h1>
-                    Temporary facility rentals
-                    <br />
-                    across the USA.
+                    Rental Services across the USA{" "}
+                    <small>Temporary Facilities to Rent or Lease</small>
                   </h1>
                   <p>
-                    Temporary123 coordinates mobile kitchens, hygiene facilities
-                    and workforce support in all 50 states.
+                    Rent or lease Temporary Facilities with Temporary123. Rental
+                    services include mobile kitchens, hygiene facilities and
+                    workforce support in all 50 states. Emergency 24/7.
                   </p>
                   <div className="location-stats" aria-label="Coverage summary">
                     <div>
@@ -497,9 +509,6 @@ export function Site({
                     data-state-guide={name}
                     data-state-image={guide.image}
                     data-state-image-alt={guide.imageAlt}
-                    data-state-image-source={guide.locationPhoto?.sourceUrl}
-                    data-state-image-license={guide.locationPhoto?.license}
-                    data-state-image-author={guide.locationPhoto?.author}
                     data-state-image-two={guide.gallery[1].image}
                     data-state-image-alt-two={guide.gallery[1].imageAlt}
                     data-state-image-three={guide.gallery[2].image}
@@ -509,8 +518,6 @@ export function Site({
                     data-state-motion={guide.motion}
                     data-state-demand-code={guide.seasonal.code}
                     data-state-demand-label={guide.seasonal.label}
-                    data-state-delivery-window={guide.seasonal.delivery.window}
-                    data-state-delivery-note={guide.seasonal.delivery.note}
                     key={name}
                   >
                     <summary>
@@ -519,6 +526,7 @@ export function Site({
                     </summary>
                     <div>
                       <h3 data-guide-focus>{guide.focus}</h3>
+                      <a href={statePath(name)}>View {name} rental guide</a>
                       <p data-guide-intro>{guide.intro}</p>
                       <div
                         className="state-planning-regions"
@@ -538,18 +546,13 @@ export function Site({
                       <p data-guide-fact>{guide.fact}</p>
                       <p data-guide-services>{guide.serviceSummary}</p>
                       <section className="state-planning-seasonal">
-                        <strong>Local and seasonal information</strong>
+                        <strong>Rental Planning Conditions</strong>
                         <div data-guide-seasonal-copy>
                           {guide.seasonal.summary.map((paragraph) => (
                             <p key={paragraph}>{paragraph}</p>
                           ))}
                         </div>
                         <p data-guide-demand>{guide.seasonal.basis}</p>
-                        <p data-guide-delivery>
-                          <strong>Estimated delivery planning timeline:</strong>{" "}
-                          {guide.seasonal.delivery.window}.{" "}
-                          {guide.seasonal.delivery.note}
-                        </p>
                         <p data-guide-emergency>
                           <strong>Emergency support 24/7.</strong> Call the
                           rental team to confirm equipment availability and the
@@ -1232,7 +1235,13 @@ export function Site({
           </section>
         )}
       </main>
-      <Footer showClosing={!regionPageByPath[path]} />
+      <Footer
+        showClosing={
+          !regionPageByPath[path] &&
+          !statePageByPath[path] &&
+          !industryGuideByPath[path]
+        }
+      />
     </div>
   );
 }

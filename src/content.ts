@@ -18,11 +18,11 @@ export const routes = [
   "/privacy/",
 ];
 const titles: Record<string, string> = {
-  "/": "Mobile Kitchen & Temporary Facility Rentals",
+  "/": "Temporary Facilities Rental: Rent or Lease Nationwide",
   "/services/": "Temporary Facility Solutions",
   "/equipment-rental/": "Equipment Rental",
   "/industries/": "Industries & Project Solutions",
-  "/service-areas/": "Temporary Facility Rental Service Areas",
+  "/service-areas/": "Rental Service Areas: Temporary Facilities to Rent or Lease",
   "/planning/": "Plan Your Temporary Facilities",
   "/about-us/": "About Temporary123",
   "/blog/": "Articles on Temporary Facility Planning",
@@ -30,7 +30,7 @@ const titles: Record<string, string> = {
   "/privacy/": "Privacy",
 };
 const descriptions: Record<string, string> = {
-  "/": "Rent mobile kitchens, refrigeration, restroom and shower trailers, and workforce facilities nationwide. Plan your project with Temporary123. Call our team 24/7.",
+  "/": "Rent or lease Temporary Facilities nationwide. Rental kitchens, shower and restroom combinations, showers and sleeper trailers for base camps. Emergency 24/7.",
   "/equipment-rental/":
     "Browse mobile kitchens, restroom and shower trailers, workforce accommodation and temporary facility options. Discuss your site and dates with Temporary123.",
   "/services/":
@@ -38,7 +38,7 @@ const descriptions: Record<string, string> = {
   "/industries/":
     "Explore temporary facility support for construction, government, food service and emergency response projects. Find equipment for your operation.",
   "/service-areas/":
-    "Find mobile kitchen trailer rentals by city and state. Search Temporary123 service locations across the United States for temporary food service support.",
+    "Rental Services across the USA. Rent or lease Temporary Facilities: kitchens, shower and restroom combinations, shower trailers and sleeper trailers. Emergency 24/7.",
   "/planning/":
     "Prepare your temporary facility brief with site access, utilities, occupancy and rental dates. Use the Temporary123 project planning guide before you call.",
   "/about-us/":

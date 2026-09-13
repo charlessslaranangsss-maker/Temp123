@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-09-13T20:40:34.418Z",
-  "mode": "production",
-  "indexingScope": "homepage-and-service-areas",
+  "generatedAt": "2026-09-13T21:46:13.335Z",
+  "mode": "preview",
+  "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
-  "eligibleIndexingRoutes": 248,
-  "activeIndexingRoutes": 25,
+  "eligibleIndexingRoutes": 304,
+  "activeIndexingRoutes": 0,
+  "domainRoutingReady": false,
   "pages": [
     {
       "path": "/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/",
@@ -21,7 +22,7 @@
     },
     {
       "path": "/service-areas/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/planning/",
@@ -430,22 +431,6 @@
       "indexable": false
     },
     {
-      "path": "/services/restroom-trailers/12ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/restroom-trailers/14ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/restroom-trailers/20ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/restroom-trailers/30ft/",
-      "indexable": false
-    },
-    {
       "path": "/services/shower-restroom-combination-trailers/13ft-3-stall/",
       "indexable": false
     },
@@ -491,95 +476,95 @@
     },
     {
       "path": "/service-areas/alabama/north-alabama/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alabama/central-alabama/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alabama/wiregrass/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alabama/gulf-coast/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alaska/southcentral/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alaska/interior/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alaska/southeast/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alaska/southwest/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alaska/arctic/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arizona/northern-arizona/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arizona/phoenix-area/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arizona/southern-arizona/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arkansas/ozarks/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arkansas/arkansas-river-valley/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arkansas/delta/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/arkansas/southwest-arkansas/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/north-coast/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/bay-area/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/central-valley/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/los-angeles-basin/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/inland-empire/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/california/san-diego/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/colorado/front-range/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/colorado/western-slope/",
@@ -1472,6 +1457,206 @@
     {
       "path": "/service-areas/wyoming/southeast-wyoming/",
       "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arizona/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arkansas/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/colorado/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/connecticut/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/delaware/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/hawaii/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/idaho/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/illinois/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/indiana/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/iowa/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kentucky/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-dakota/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/rhode-island/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-carolina/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-dakota/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/tennessee/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/vermont/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/",
+      "indexable": false
     }
   ],
   "unresolvedSourceLinks": [
@@ -1589,7 +1774,6 @@
     "/government/emergency-services/",
     "/temporary-luxury-remote-accommodation-rentals/",
     "/testimonials/",
-    "/wp-content/uploads/2021/11/CLASSROOM-TRAILER-web.jpg",
     "/wp-content/uploads/2023/02/Air-Force.png",
     "/wp-content/uploads/2023/02/Army.png",
     "/wp-content/uploads/2023/02/Coast-Guard.png",

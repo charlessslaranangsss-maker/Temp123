@@ -11,6 +11,29 @@ export type ServiceCategory = {
   links: ServiceLink[];
 };
 
+const combinationOptions: ServiceLink[] = [
+  {
+    name: "13 ft Luxury Combination Trailer, 3 Stalls",
+    href: "/services/shower-restroom-combination-trailers/13ft-3-stall/",
+  },
+  {
+    name: "22 ft Luxury Combination Trailer, 6 Stalls",
+    href: "/services/shower-restroom-combination-trailers/22ft-6-stall/",
+  },
+  {
+    name: "30 ft Luxury Combination Trailer, 8 Stalls",
+    href: "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+  },
+  {
+    name: "Luxury Combination Trailer, 3 Stalls + 1 ADA",
+    href: "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
+  },
+  {
+    name: "Luxury Combination Trailer, 8 Stalls + 1 ADA",
+    href: "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
+  },
+];
+
 export const serviceCategories: ServiceCategory[] = [
   {
     name: "Mobile Kitchens",
@@ -112,53 +135,15 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Restroom",
     href: "/equipment-rental/restroom-trailers/",
     description:
-      "Clean portable restroom rentals for work sites, events and temporary facilities.",
-    links: [
-      {
-        name: "12ft Restroom Trailer",
-        href: "/services/restroom-trailers/12ft/",
-      },
-      {
-        name: "14ft Restroom Trailer",
-        href: "/services/restroom-trailers/14ft/",
-      },
-      {
-        name: "20ft Restroom Trailer",
-        href: "/services/restroom-trailers/20ft/",
-      },
-      {
-        name: "30ft Restroom Trailer",
-        href: "/services/restroom-trailers/30ft/",
-      },
-    ],
+      "Restroom rental options use our shower and restroom combination trailers: 13 ft with 3 stalls, 22 ft with 6 stalls, 30 ft with 8 stalls, and accessible configurations.",
+    links: combinationOptions,
   },
   {
     name: "Shower and Restroom Combination Trailers",
     href: "/services/shower-restroom-combination-trailers/",
     description:
       "Luxury combination trailers include 13 ft with 3 stalls, 22 ft with 6 stalls, 30 ft with 8 stalls, and accessible configurations.",
-    links: [
-      {
-        name: "13 ft Luxury Combination Trailer, 3 Stalls",
-        href: "/services/shower-restroom-combination-trailers/13ft-3-stall/",
-      },
-      {
-        name: "22 ft Luxury Combination Trailer, 6 Stalls",
-        href: "/services/shower-restroom-combination-trailers/22ft-6-stall/",
-      },
-      {
-        name: "30 ft Luxury Combination Trailer, 8 Stalls",
-        href: "/services/shower-restroom-combination-trailers/30ft-8-stall/",
-      },
-      {
-        name: "Luxury Combination Trailer, 3 Stalls + 1 ADA",
-        href: "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
-      },
-      {
-        name: "Luxury Combination Trailer, 8 Stalls + 1 ADA",
-        href: "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
-      },
-    ],
+    links: combinationOptions,
   },
   {
     name: "Sleeper",
@@ -228,7 +213,10 @@ const establishedPaths = new Set([
 
 export const serviceOptions = serviceCategories.flatMap((category) =>
   category.links
-    .filter((link) => !establishedPaths.has(link.href))
+    .filter(
+      (link) =>
+        !establishedPaths.has(link.href) && category.name !== "Restroom",
+    )
     .map((link) => ({
       ...link,
       category: category.name,

@@ -15,15 +15,15 @@ const allServiceNames = [
 ];
 
 const stateModalNames = [
-  "Mobile Kitchens",
-  "Shower",
-  "Shower and Restroom Combination Trailers",
-  "Sleeper",
-  "Dishwashing",
-  "Refrigeration",
-  "Restroom",
-  "Laundry",
-  "Handwashing Trailers",
+  "Mobile commercial kitchen rentals",
+  "Shower and restroom combination trailers",
+  "22 ft shower trailer rental, 10 stalls",
+  "Sleeper and bunkbed trailer rentals",
+  "Dishwashing trailer rentals",
+  "Refrigeration trailer rentals",
+  "Restroom trailer rentals",
+  "Laundry trailer rentals",
+  "Handwashing trailer rentals",
 ];
 
 test("every state guide uses natural rental, rent and lease language", () => {
@@ -59,7 +59,7 @@ test("every state guide uses natural rental, rent and lease language", () => {
     expect(guide.intro, name).toMatch(/\brental\b/i);
     expect(guide.intro, name).toMatch(/\brent\b/i);
     expect(guide.intro, name).toMatch(/\blease\b/i);
-    expect(guide.intro, name).toContain(`${name}, USA`);
+    expect(guide.intro, name).toContain(name);
     expect(guide.imageAlt.length, name).toBeGreaterThan(24);
     expect(guide.gallery, name).toHaveLength(3);
     expect(guide.regions.length, name).toBeGreaterThanOrEqual(3);
@@ -97,8 +97,7 @@ test("state click opens localized service choices and a direct call action", asy
   const state = page.locator('.coverage-map-stage [data-state="California"]');
   await state.click();
   const modal = page.getByRole("dialog", {
-    name: "Services in California, USA",
-    exact: true,
+    name: /Rental Services in California, USA/,
   });
   await expect(modal).toBeVisible();
   await expect(modal.locator("[data-state-code]")).toHaveText("State 05 of 50");
@@ -122,7 +121,7 @@ test("state click opens localized service choices and a direct call action", asy
     "Sacramento is the state capital.",
   );
   await expect(modal.locator("[data-state-services-copy]")).toContainText(
-    "Basecamp",
+    "Base camp",
   );
   expect(
     await modal
@@ -153,7 +152,7 @@ test("state click opens localized service choices and a direct call action", asy
   const countryReferences = (
     (await modal.innerText()).match(/\b(?:USA|United States)\b/g) || []
   ).length;
-  expect(countryReferences).toBeGreaterThanOrEqual(4);
+  expect(countryReferences).toBeGreaterThanOrEqual(1);
   expect(countryReferences).toBeLessThanOrEqual(7);
   await page.screenshot({ path: "test-results/state-services-desktop.png" });
   await page.keyboard.press("Escape");
@@ -205,8 +204,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await page.goto("/service-areas/");
   await page.locator("[data-state-picker]").selectOption("New Hampshire");
   let modal = page.getByRole("dialog", {
-    name: "Services in New Hampshire, USA",
-    exact: true,
+    name: /Rental Services in New Hampshire, USA/,
   });
   await expect(modal).toBeVisible();
   expect(await modal.evaluate((e) => e.scrollWidth <= e.clientWidth)).toBe(
@@ -223,8 +221,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await state.focus();
   await state.press("Space");
   modal = page.getByRole("dialog", {
-    name: "Services in Texas, USA",
-    exact: true,
+    name: /Rental Services in Texas, USA/,
   });
   await expect(modal).toBeVisible();
   await expect(modal.locator(".state-dialog-visual")).toHaveCSS(

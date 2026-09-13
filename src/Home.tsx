@@ -78,15 +78,16 @@ export function Home() {
               <span aria-hidden="true" /> Nationwide equipment rentals
             </span>
             <h1 id="rental-title">
-              Temporary Facility Trailer
+              Temporary Facilities Rental
               <br />
-              <em>Rentals Across the USA</em>
+              <em>Rent or Lease Nationwide</em>
             </h1>
             <p>
-              Mobile shower trailers, shower and restroom combination trailers,
-              laundry trailers, sleeper and bunkhouse trailers, mobile kitchens,
-              dishwashing trailers, and refrigeration trailers for short- and
-              long-term rental.
+              Rent or lease mobile commercial kitchens, shower and restroom
+              combination trailers, shower trailers, and sleeper or bunkbed
+              trailers. Supporting Temporary Facilities rental options include
+              laundry, dishwashing, refrigeration, restrooms and handwashing.
+              Emergency 24/7.
             </p>
             <div className="rental-hero-actions">
               <a className="button home-primary" href="/contact-us/">
@@ -313,13 +314,14 @@ export function Home() {
         <div className="home-industry-intro">
           <span className="eyebrow">BUILT AROUND YOUR OPERATION</span>
           <h2 id="industries-title">
-            Wherever the
+            Rental services for
             <br />
-            <em>work takes you.</em>
+            <em>your operation.</em>
           </h2>
           <p>
-            Planned downtime or an unexpected challenge. Start with the support
-            your team needs.
+            Rent or lease Temporary Facilities for construction, hospitality,
+            public services and emergency base camps. Start with kitchens,
+            combination trailers, showers and sleeper accommodation.
           </p>
           <a className="home-inline-link" href="/service-areas/">
             Explore service areas <span aria-hidden="true">↗</span>
@@ -337,25 +339,25 @@ export function Home() {
             [
               "living",
               "Construction & workforce",
-              "Kitchens, sleeping accommodation and daily essentials for teams working away from home.",
+              "Rent kitchens, shower and restroom combinations, showers and sleeper trailers for base camps and man camps.",
               "/man-camps-for-rent/",
             ],
             [
               "kitchen",
               "Food service & hospitality",
-              "Keep food preparation and service going during renovations, events and temporary closures.",
+              "Kitchen rental and supporting hygiene and accommodation facilities for renovations, events and service interruptions.",
               "/food-services-2/",
             ],
             [
               "pin",
               "Government & public services",
-              "Temporary facilities planned around operational and procurement requirements.",
+              "Lease temporary kitchens, combination facilities, showers and sleeper trailers for public-service operations.",
               "/government/",
             ],
             [
               "truck",
               "Emergency & disaster response",
-              "Discuss urgent equipment, site and workforce requirements with our team, 24 hours a day.",
+              "Emergency 24/7: rent kitchens, hygiene facilities and sleeper trailers for response teams and base camps.",
               "/disaster-relief-man-camp-workforce-rentals/",
             ],
           ].map(([icon, title, description, href]) => (
