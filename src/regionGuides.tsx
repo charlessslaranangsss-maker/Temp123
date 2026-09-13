@@ -321,7 +321,13 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             >
               <li>Mobile commercial kitchen rentals</li>
               <li>Shower and restroom combination trailers</li>
+              <li>Shower trailer rentals</li>
               <li>Sleeper and bunkbed trailer rentals</li>
+              <li>Dishwashing trailer rentals</li>
+              <li>Refrigeration trailer rentals</li>
+              <li>Restroom trailer rentals</li>
+              <li>Laundry trailer rentals</li>
+              <li>Handwashing trailer rentals</li>
             </ul>
             <a className="region-answer-call" href={`tel:${site.phoneE164}`}>
               Call a specialist 24/7 <strong>{site.phoneDisplay}</strong>
