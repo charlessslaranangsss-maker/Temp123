@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import details from "../../content/service-details.json" with { type: "json" };
+import deployment from "../../vercel.json" with { type: "json" };
 
 test("Services stays selected across pointer gaps and closes only on outside click or Escape", async ({
   page,
@@ -42,6 +43,14 @@ test("all service model destinations have equipment, planning, source and descri
   request,
 }) => {
   for (const [path, item] of Object.entries(details)) {
+    const redirect = deployment.redirects.find((rule) => rule.source === path);
+    if (redirect) {
+      const moved = await request.get(path, { maxRedirects: 0 });
+      expect(moved.status(), path).toBe(308);
+      expect(new URL(moved.headers().location, "http://localhost:4173").pathname).toBe(redirect.destination);
+      expect((await request.get(redirect.destination)).status(), redirect.destination).toBe(200);
+      continue;
+    }
     const response = await request.get(path);
     expect(response.status(), path).toBe(200);
     const html = await response.text();

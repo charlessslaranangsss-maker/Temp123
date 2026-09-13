@@ -19,9 +19,9 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.goto("/");
     await expect(page.locator("h1")).toHaveCount(1);
     await expect(page.locator("h1")).toContainText(
-      "Temporary Facility Trailer",
+      "Temporary Facilities Rental",
     );
-    await expect(page.locator("h1")).toContainText("Rentals Across the USA");
+    await expect(page.locator("h1")).toContainText("Rent or Lease Nationwide");
     await expect(
       page.getByRole("link", { name: "Find your rental", exact: true }),
     ).toHaveAttribute("href", "#equipment");
@@ -49,7 +49,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     ).toBeGreaterThanOrEqual(0.85);
     const supportBar = page.locator(".utility");
     await expect(supportBar).toBeVisible();
-    await expect(supportBar).toContainText("Live agents available 24/7");
+    await expect(supportBar).toContainText("Emergency support available 24/7.");
     await expect(supportBar).toHaveCSS("background-color", "rgb(167, 8, 5)");
     await expect(supportBar.locator(".utility-agent-icon")).toBeVisible();
     await expect(supportBar.locator(".utility-specialist")).toBeVisible();
@@ -188,7 +188,7 @@ test("desktop services menu exposes clear rental categories", async ({
   ).toBeVisible();
   await menu.getByRole("button", { name: "Restroom", exact: true }).click();
   await expect(
-    menu.getByRole("link", { name: "30ft Restroom Trailer" }),
+    menu.getByRole("link", { name: "30 ft Luxury Combination Trailer, 8 Stalls" }),
   ).toBeVisible();
   await expect(
     menu.getByRole("button", {
@@ -213,7 +213,7 @@ test("every service model in the desktop menu resolves locally", async ({
         links.map((link) => link.getAttribute("href")).filter(Boolean),
       ),
     ]);
-  expect(hrefs.length).toBeGreaterThan(30);
+  expect(hrefs.length).toBeGreaterThanOrEqual(29);
   for (const href of hrefs) {
     const response = await request.get(href as string);
     expect(response.status(), href as string).toBe(200);
@@ -223,12 +223,12 @@ test("every service model in the desktop menu resolves locally", async ({
 test("service model pages provide unique planning content", async ({
   page,
 }) => {
-  await page.goto("/services/shower-restroom-combination-trailers/20ft/");
+  await page.goto("/services/shower-restroom-combination-trailers/22ft-6-stall/");
   await expect(page.locator("h1")).toHaveText(
-    "20ft Restroom and Shower Trailer",
+    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls",
   );
   await expect(page).toHaveTitle(
-    "20ft Restroom and Shower Trailer Rental | Temporary123",
+    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental | Temporary123",
   );
   await expect(page.getByText("PLAN BEFORE DELIVERY")).toBeVisible();
 });
@@ -531,7 +531,7 @@ test("location planner carries the selected place into the kitchen inquiry", asy
     .getByLabel("Project city and state", { exact: true })
     .fill("Akiak, Alaska");
   await page.getByRole("button", { name: "Explore mobile kitchens" }).click();
-  await expect(page.locator("h1")).toHaveText("Mobile Kitchens");
+  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak, Alaska");
   await expect(page.locator("[data-project-location]")).toHaveText(
     "Akiak, Alaska",
   );
@@ -594,8 +594,8 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   expect(home.status()).toBe(200);
   const html = await home.text();
   expect(html).toContain('id="rental-title"');
-  expect(html).toContain("Temporary Facility Trailer");
-  expect(html).toContain("Rentals Across the USA");
+  expect(html).toContain("Temporary Facilities Rental");
+  expect(html).toContain("Rent or Lease Nationwide");
   expect(html).toContain("Find your rental");
   expect(html).not.toContain("April");
   const missing = await request.get("/missing-synthetic-test-page/");

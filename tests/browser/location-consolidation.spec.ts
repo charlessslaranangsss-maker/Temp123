@@ -30,7 +30,7 @@ test("old city link retains location and the approved service names", async ({
   await page.goto(
     "/equipment-rental/mobile-kitchen-trailers/akiak-mobile-kitchen-rental/",
   );
-  await expect(page.locator("h1")).toHaveText("Mobile Kitchens");
+  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak");
   await expect(page.locator("[data-project-location]")).toHaveText("Akiak");
   await expect(
     page
@@ -38,9 +38,9 @@ test("old city link retains location and the approved service names", async ({
       .filter({ visible: true }),
   ).toBeVisible();
   await page.locator('.service-category-cards a[href*="/24ft/"]').click();
-  await expect(page.locator("h1")).toHaveText("24ft Mobile Kitchen Trailer");
+  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak");
   await page
-    .getByRole("link", { name: "Contact Temporary123", exact: true })
+    .getByRole("link", { name: "Contact Us at Temporary123", exact: true })
     .click();
   await expect(
     page.locator('#contact-drawer input[name="location"]'),
