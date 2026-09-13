@@ -325,30 +325,32 @@ function ContactDrawer() {
   );
 }
 
-export function Footer() {
+export function Footer({ showClosing = true }: { showClosing?: boolean }) {
   return (
     <>
-      <section className="closing">
-        <div className="wrap closing-grid">
-          <div>
-            <span className="eyebrow">LET’S GET YOUR PROJECT MOVING</span>
-            <h2>
-              One call.
-              <br />A clearer plan.
-            </h2>
+      {showClosing && (
+        <section className="closing">
+          <div className="wrap closing-grid">
+            <div>
+              <span className="eyebrow">LET’S GET YOUR PROJECT MOVING</span>
+              <h2>
+                One call.
+                <br />A clearer plan.
+              </h2>
+            </div>
+            <div>
+              <p>
+                Tell us where, when, and what your team needs. Our specialists
+                will help you take the next step.
+              </p>
+              <a className="phone-link" href={"tel:" + site.phoneE164}>
+                {site.phoneDisplay} ↗
+              </a>
+              <span className="small">Call our team, 24 hours a day.</span>
+            </div>
           </div>
-          <div>
-            <p>
-              Tell us where, when, and what your team needs. Our specialists
-              will help you take the next step.
-            </p>
-            <a className="phone-link" href={"tel:" + site.phoneE164}>
-              {site.phoneDisplay} ↗
-            </a>
-            <span className="small">Call our team, 24 hours a day.</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
       <footer className="wrap footer">
         <div>
           <a className="wordmark" href="/">
@@ -1191,7 +1193,7 @@ export function Site({
           </section>
         )}
       </main>
-      <Footer />
+      <Footer showClosing={!regionPageByPath[path]} />
     </div>
   );
 }

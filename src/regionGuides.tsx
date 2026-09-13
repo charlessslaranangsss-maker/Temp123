@@ -1,6 +1,6 @@
 import site from "../site.json" with { type: "json" };
+import { regionMedia } from "./regionMedia";
 import { stateGuides } from "./stateGuides";
-import states from "./usStates.json" with { type: "json" };
 
 export const regionSlug = (value: string) =>
   value
@@ -65,73 +65,6 @@ const stateCities: Record<string, [string, string]> = {
   Wyoming: ["Cheyenne", "Casper"],
 };
 
-const regionPhotos = [
-  [
-    "/images/catalog/mobile-kitchen-trailers-960.webp",
-    "Mobile commercial kitchen trailer prepared for a temporary site",
-  ],
-  [
-    "/images/catalog/temporary-shower-trailers-960.webp",
-    "Temporary shower trailer ready for regional deployment",
-  ],
-  [
-    "/images/catalog/restroom-trailers-960.webp",
-    "Restroom trailer for a temporary facilities rental project",
-  ],
-  [
-    "/images/catalog/bunkhouse-trailers-960.webp",
-    "Sleeper and bunkbed trailers for a remote project crew",
-  ],
-  [
-    "/images/catalog/laundry-trailers-960.webp",
-    "Mobile laundry trailer supporting a temporary work site",
-  ],
-  [
-    "/images/catalog/mobile-crew-camps-960.webp",
-    "Mobile crew camp facilities arranged for site operations",
-  ],
-  [
-    "/images/catalog/dining-structure-rental-960.webp",
-    "Temporary dining structure rental for a project site",
-  ],
-  [
-    "/images/catalog/mobile-office-trailers-960.webp",
-    "Mobile office trailer supporting temporary site operations",
-  ],
-  [
-    "/images/catalog/generator-trailers-960.webp",
-    "Generator trailer supporting temporary facilities on site",
-  ],
-  [
-    "/images/catalog/handwashing-stations-960.webp",
-    "Handwashing station for a temporary facilities setup",
-  ],
-  [
-    "/images/catalog/mobile-sleep-trailers-960.webp",
-    "Mobile sleeper trailers ready for a regional crew",
-  ],
-  [
-    "/images/catalog/classroom-trailers-960.webp",
-    "Classroom trailer for temporary facilities planning",
-  ],
-  [
-    "/images/catalog/breakroom-trailer-960.webp",
-    "Breakroom trailer for a temporary work site",
-  ],
-  [
-    "/images/catalog/mobile-command-trailers-960.webp",
-    "Command center trailer for regional site operations",
-  ],
-  [
-    "/images/catalog/modular-buildings-960.webp",
-    "Modular building for a temporary facilities rental",
-  ],
-  [
-    "/images/catalog/tent-rentals-960.webp",
-    "Temporary tent rental supporting a project site",
-  ],
-] as const;
-
 const introTemplates = [
   (state: string, region: string) =>
     `Teams planning work in ${region}, ${state} can arrange temporary facilities around the site's access, occupancy and schedule. Rent mobile kitchens, shower and restroom combination trailers, and sleeper or bunkbed trailers when the project needs a reliable basecamp.`,
@@ -173,6 +106,44 @@ const factTemplates = [
     `${fact} Include ${region} in the project brief so the right rental and servicing discussion can begin.`,
 ] as const;
 
+const regionStateEntries = Object.entries(stateGuides);
+
+const buildRegionVisuals = (
+  globalIndex: number,
+  state: string,
+  region: string,
+  cities: [string, string],
+) => {
+  const poolSize = regionMedia.length;
+  const round = Math.floor(globalIndex / poolSize);
+  const candidates = [
+    globalIndex % poolSize,
+    (globalIndex * 7 + 29 + round * 13) % poolSize,
+    (globalIndex * 17 + 61 + round * 23) % poolSize,
+    (globalIndex * 31 + 89 + round * 37) % poolSize,
+  ];
+  const indexes: number[] = [];
+  candidates.forEach((candidate) => {
+    let index = candidate;
+    while (indexes.includes(index)) index = (index + 1) % poolSize;
+    indexes.push(index);
+  });
+  const captions = [
+    `Temporary facilities equipment prepared for projects in ${region}.`,
+    `Rental equipment reference for sites near ${cities[0]}.`,
+    `Basecamp facility option for temporary work near ${cities[1]}.`,
+    `Mobile support equipment available for rent or lease in ${state}.`,
+  ];
+  return indexes.map((index, visualIndex) => {
+    const media = regionMedia[index];
+    return {
+      image: media.image,
+      imageAlt: `${media.label} for a temporary facilities rental in ${region}, ${state}`,
+      caption: captions[visualIndex],
+    };
+  });
+};
+
 export type RegionGuide = {
   state: string;
   region: string;
@@ -181,38 +152,36 @@ export type RegionGuide = {
   layout: number;
   image: string;
   imageAlt: string;
-  gallery: { image: string; imageAlt: string }[];
+  gallery: { image: string; imageAlt: string; caption: string }[];
   intro: string;
   detail: string;
   fact: string;
   cities: [string, string];
-  statePath: string;
-  stateX: number;
-  stateY: number;
-  regionPhoto: string;
-  regionPhotoAlt: string;
 };
 
-export const regionPages: RegionGuide[] = Object.entries(stateGuides).flatMap(
-  ([state, guide]) =>
-    guide.regions.map((region, regionIndex) => {
+export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
+  ([state, guide], stateIndex) => {
+    const stateOffset = regionStateEntries
+      .slice(0, stateIndex)
+      .reduce((total, [, item]) => total + item.regions.length, 0);
+    return guide.regions.map((region, regionIndex) => {
       const index = regionIndex;
       const cities = stateCities[state] || [state, state];
-      const stateShape = states.find((item) => item.name === state)!;
-      const photo =
-        regionPhotos[
-          (Object.keys(stateGuides).indexOf(state) * 3 + index) %
-            regionPhotos.length
-        ];
+      const visuals = buildRegionVisuals(
+        stateOffset + regionIndex,
+        state,
+        region,
+        cities,
+      );
       return {
         state,
         region,
         path: regionPath(state, region),
         index,
         layout: (Object.keys(stateGuides).indexOf(state) + index) % 6,
-        image: guide.gallery[index % guide.gallery.length].image,
-        imageAlt: guide.gallery[index % guide.gallery.length].imageAlt,
-        gallery: guide.gallery,
+        image: visuals[0].image,
+        imageAlt: visuals[0].imageAlt,
+        gallery: visuals.slice(1),
         intro: `${introTemplates[index % introTemplates.length](state, region)} Cities covered in this regional guide include ${cities[0]} and ${cities[1]}.`,
         detail: `${detailTemplates[index % detailTemplates.length](state, region)} Teams in ${cities[0]} and ${cities[1]} can use the same planning brief when the project spans more than one city.`,
         fact: factTemplates[index % factTemplates.length](
@@ -221,13 +190,9 @@ export const regionPages: RegionGuide[] = Object.entries(stateGuides).flatMap(
           guide.fact,
         ),
         cities,
-        statePath: stateShape.d,
-        stateX: stateShape.x,
-        stateY: stateShape.y,
-        regionPhoto: photo[0],
-        regionPhotoAlt: `${photo[1]} in ${region}, ${state}`,
       };
-    }),
+    });
+  },
 );
 
 export const regionPageByPath = Object.fromEntries(
@@ -238,6 +203,11 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
   const nearbyRegions = regionPages.filter(
     (page) => page.state === guide.state && page.path !== guide.path,
   );
+  const mapQuery = encodeURIComponent(
+    `${guide.cities[0]}, ${guide.state}, United States`,
+  );
+  const googleMapsEmbedUrl = `https://www.google.com/maps/?q=${mapQuery}&output=embed&z=7`;
+  const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
   return (
     <article className={`region-page region-layout-${guide.layout}`}>
       <section className="region-hero">
@@ -307,40 +277,58 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
       </section>
       <section className="wrap section region-gallery-section">
         <div className="region-section-heading">
-          <span className="eyebrow">EQUIPMENT REFERENCES</span>
-          <h2>See the options before you call.</h2>
+          <div>
+            <span className="eyebrow">EQUIPMENT REFERENCES</span>
+            <h2>Facilities selected for the work ahead.</h2>
+          </div>
           <p>
-            Representative Temporary 123 equipment views for planning a{" "}
-            {guide.region} rental.
+            A distinct set of Temporary 123 equipment views for planning a{" "}
+            {guide.region} rental, lease or temporary basecamp.
           </p>
         </div>
         <div className="region-gallery">
           {guide.gallery.map((item, index) => (
             <figure key={item.image}>
-              <img
-                src={item.image}
-                alt={item.imageAlt}
-                width="960"
-                height="640"
-                loading={index ? "lazy" : undefined}
-              />
-              <figcaption>{item.imageAlt}</figcaption>
+              <div className="region-gallery-image">
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  width="960"
+                  height="640"
+                  loading="lazy"
+                />
+                <span aria-hidden="true">0{index + 1}</span>
+              </div>
+              <figcaption>{item.caption}</figcaption>
             </figure>
           ))}
         </div>
       </section>
-      <section
-        className="wrap section region-faq"
-        aria-labelledby="region-faq-title"
-      >
-        <span className="eyebrow">QUICK ANSWER</span>
-        <h2 id="region-faq-title">What can you rent in {guide.region}?</h2>
-        <p>
-          Temporary 123 can discuss a rental or lease for mobile commercial
-          kitchens, shower and restroom combination trailers, sleeper or bunkbed
-          trailers, and supporting temporary facilities in {guide.region},{" "}
-          {guide.state}.
-        </p>
+      <section className="region-answer" aria-labelledby="region-faq-title">
+        <div className="wrap section region-answer-card">
+          <div className="region-answer-heading">
+            <span className="eyebrow">QUICK ANSWER</span>
+            <h2 id="region-faq-title">What can you rent in {guide.region}?</h2>
+          </div>
+          <div className="region-answer-body">
+            <p>
+              Temporary 123 provides temporary facility rentals and lease
+              options for projects in {guide.region}, {guide.state}. Available
+              equipment supports food service, hygiene and crew accommodation.
+            </p>
+            <ul
+              aria-label={`Temporary facilities available in ${guide.region}`}
+            >
+              <li>Mobile commercial kitchen rentals</li>
+              <li>Shower and restroom combination trailers</li>
+              <li>Sleeper and bunkbed trailer rentals</li>
+            </ul>
+            <a className="region-answer-call" href={`tel:${site.phoneE164}`}>
+              Call a specialist 24/7 <strong>{site.phoneDisplay}</strong>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
       </section>
       <nav
         className="wrap section region-nearby"
@@ -371,19 +359,28 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </p>
           </div>
           <figure className="region-map-visual">
-            <img
-              src={guide.regionPhoto}
-              alt={guide.regionPhotoAlt}
+            <iframe
+              src={googleMapsEmbedUrl}
+              title={`Google Map of ${guide.region}, ${guide.state}`}
               width="960"
-              height="640"
+              height="430"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
-            <span className="region-map-badge">
-              {guide.state} <span aria-hidden="true">|</span> {guide.region}
-            </span>
             <figcaption>
-              <strong>{guide.state}</strong>
-              <span>{guide.region}</span>
+              <span>
+                <strong>{guide.region}</strong>
+                <small>{guide.state}, United States</small>
+              </span>
+              <a
+                href={googleMapsLink}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${guide.region}, ${guide.state} in Google Maps`}
+              >
+                Open in Google Maps <span aria-hidden="true">↗</span>
+              </a>
             </figcaption>
           </figure>
         </div>
