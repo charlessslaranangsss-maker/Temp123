@@ -988,6 +988,179 @@
   }
 }
 
+/* Compact state planning brief with one location photo and one equipment image. */
+.coverage-map .state-dialog-seasonal {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(240px, 0.7fr));
+  gap: 14px;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid color-mix(in srgb, var(--state-accent) 24%, #dbe6e8);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff, var(--state-tint));
+}
+.coverage-map .state-seasonal-heading {
+  grid-column: 1;
+}
+.coverage-map .state-seasonal-heading h3 {
+  margin: 8px 0 0;
+  color: #112d36;
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.coverage-map .state-seasonal-copy {
+  grid-column: 1;
+}
+.coverage-map .state-seasonal-copy p {
+  margin: 0 0 8px;
+  color: #48646c;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+.coverage-map .state-demand-card,
+.coverage-map .state-delivery-card {
+  grid-row: 1 / span 2;
+  padding: 17px;
+  border: 1px solid #d3e2e3;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 88%);
+}
+.coverage-map .state-demand-card > span,
+.coverage-map .state-delivery-card > span {
+  display: block;
+  color: var(--state-accent);
+  font-size: 0.61rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.coverage-map .state-demand-card > strong,
+.coverage-map .state-delivery-card > strong {
+  display: block;
+  margin-top: 8px;
+  color: #123b45;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.coverage-map .state-demand-card p,
+.coverage-map .state-delivery-card p {
+  color: #587079;
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+.coverage-map .state-delivery-card b {
+  display: inline-flex;
+  margin-top: 5px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  color: #fff;
+  background: #bf3b2f;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+}
+.coverage-map .state-seasonal-sources {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  padding-top: 10px;
+  border-top: 1px solid #d7e3e4;
+}
+.coverage-map .state-seasonal-sources a {
+  color: var(--state-accent);
+  font-size: 0.68rem;
+  font-weight: 750;
+}
+.coverage-map .state-dialog-photo-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+}
+.coverage-map .state-photo-credit {
+  margin: 0;
+  padding: 0 12px 12px;
+  color: #60777e;
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+.coverage-map .state-photo-credit a {
+  color: var(--state-accent);
+}
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-dialog-seasonal,
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-dialog-seasonal {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-seasonal-heading,
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-seasonal-copy,
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-seasonal-heading,
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-seasonal-copy {
+  grid-column: 1 / -1;
+}
+.coverage-map .state-services-dialog[data-state-layout="1"] .state-demand-card,
+.coverage-map
+  .state-services-dialog[data-state-layout="1"]
+  .state-delivery-card,
+.coverage-map .state-services-dialog[data-state-layout="4"] .state-demand-card,
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-delivery-card {
+  grid-row: auto;
+}
+.coverage-map
+  .state-services-dialog[data-state-layout="2"]
+  .state-dialog-seasonal {
+  border-radius: 8px 28px 8px 28px;
+}
+.coverage-map
+  .state-services-dialog[data-state-layout="3"]
+  .state-dialog-seasonal {
+  background: #fff;
+  box-shadow: inset 7px 0 0 var(--state-accent);
+}
+.coverage-map
+  .state-services-dialog[data-state-layout="4"]
+  .state-dialog-seasonal {
+  border-radius: 28px 8px 28px 8px;
+}
+@media (max-width: 760px) {
+  .coverage-map .state-dialog-seasonal,
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-dialog-seasonal {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .coverage-map .state-seasonal-heading,
+  .coverage-map .state-seasonal-copy,
+  .coverage-map .state-demand-card,
+  .coverage-map .state-delivery-card,
+  .coverage-map .state-seasonal-sources,
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-seasonal-heading,
+  .coverage-map .state-services-dialog[data-state-layout] .state-seasonal-copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .coverage-map .state-dialog-photo-grid,
+  .coverage-map
+    .state-services-dialog[data-state-layout]
+    .state-dialog-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .coverage-map {
     border-radius: 16px;

@@ -23,8 +23,9 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
             <h1>{item.name}</h1>
             <p className="model-intro">{item.intro}</p>
             <div className="model-actions">
-              <a className="button" href="/contact-us/">
-                Request this configuration <span aria-hidden="true">↗</span>
+              <a className="button" href={"tel:" + site.phoneE164}>
+                Call Now, {item.category} Specialist 24/7{" "}
+                <span aria-hidden="true">↗</span>
               </a>
               <a className="model-call" href={"tel:" + site.phoneE164}>
                 {site.phoneDisplay}
@@ -75,8 +76,8 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
                 arrangements are confirmed in your proposal.
               </p>
             </div>
-            <a href="/contact-us/" className="button">
-              Discuss your requirements <span aria-hidden="true">↗</span>
+            <a href={"tel:" + site.phoneE164} className="button">
+              Emergency support 24/7 <span aria-hidden="true">↗</span>
             </a>
           </aside>
         </div>
@@ -95,8 +96,9 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
         <details className="model-source">
           <summary>Equipment information source</summary>
           <p>
-            Configuration information was checked against the published
-            equipment listing. Photographs and drawings are representative.{" "}
+            Configuration information was checked against the current client
+            equipment schedule and service reference. Photographs are
+            representative.{" "}
             <a href={item.source} target="_blank" rel="noopener">
               View the equipment reference ↗
             </a>

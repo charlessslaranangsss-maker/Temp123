@@ -53,10 +53,10 @@ export const equipment: EquipmentCard[] = [
     image: "/images/catalog/temporary-shower-trailers-960.webp",
     smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
     category: "Hygiene facilities",
-    text: "Rent private mobile showers that help crews stay clean and comfortable on demanding sites.",
+    text: "Rent the 22 ft shower trailer with 10 stalls for construction crews, man camps and emergency base camps.",
     detail:
-      "Rent shower capacity planned around your crew and shift changes. Share occupancy and peak-use periods so we can review privacy, hot water, wastewater and placement requirements.",
-    tags: ["Showers", "Crew welfare", "Daily servicing"],
+      "Temporary123 offers one shower-only configuration with 10 stalls. Share occupancy and peak-use periods so we can review the available unit, privacy, hot water, wastewater and placement requirements.",
+    tags: ["22 ft trailer", "10 stalls", "Emergency 24/7"],
   },
   {
     name: "Restroom",
@@ -238,7 +238,7 @@ export function Cards({
             <EquipmentImage
               image={e.image}
               smallImage={e.smallImage}
-              alt={e.imageAlt || `${e.name} equipment from Temporary 123`}
+              alt={e.imageAlt || `${e.name} equipment from Temporary123`}
             />
             <span className="category-label">{e.category}</span>
             <span className="image-arrow" aria-hidden="true">

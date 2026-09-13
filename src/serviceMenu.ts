@@ -96,23 +96,11 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Shower",
     href: "/equipment-rental/shower-trailer/",
     description:
-      "Mobile shower facilities planned around occupancy, utilities and daily servicing needs.",
+      "One 22 ft mobile shower trailer with 10 stalls, planned around occupancy, utilities and daily servicing needs.",
     links: [
       {
-        name: "12ft Shower Trailer",
-        href: "/services/shower-trailers/12ft/",
-      },
-      {
-        name: "14ft Shower Trailer",
-        href: "/services/shower-trailers/14ft/",
-      },
-      {
-        name: "20ft Shower Trailer",
-        href: "/services/shower-trailers/20ft/",
-      },
-      {
-        name: "30ft Shower Trailer",
-        href: "/services/shower-trailers/30ft/",
+        name: "22 ft Shower Trailer, 10 Stalls",
+        href: "/services/shower-trailers/22ft-10-stall/",
       },
     ],
   },
@@ -240,7 +228,7 @@ export const serviceOptions = serviceCategories.flatMap((category) =>
       categoryDescription: category.description,
       description:
         modelDetails[link.href as keyof typeof modelDetails]?.intro ||
-        `${link.name} rental planning from Temporary 123.`,
+        `${link.name} rental planning from Temporary123.`,
     })),
 );
 

@@ -1,4 +1,6 @@
 import { regionMedia } from "./regionMedia";
+import { stateLocationPhoto } from "./locationPhotos";
+import { buildStateSeasonalDemand } from "./seasonalDemand";
 
 // Editorial planning prompts, not claims of local inventory, delivery times,
 // permitting approval or completed projects. Service labels live in serviceMenu.
@@ -357,7 +359,7 @@ const firstSentence = (copy: string) =>
 
 // These are plain-language travel planning areas rather than claims about
 // official sales territories. They help callers describe the part of a state
-// where a basecamp or temporary facility will be placed.
+// where a base camp or temporary facility will be placed.
 const stateLocalDetails: Record<string, { regions: string[]; fact: string }> = {
   Alabama: {
     regions: ["North Alabama", "Central Alabama", "Wiregrass", "Gulf Coast"],
@@ -1078,7 +1080,7 @@ const stateCodes = [
   "WY",
 ] as const;
 
-const basecampGalleryVisuals = [
+const baseCampGalleryVisuals = [
   [
     "/images/catalog/mobile-kitchen-trailers-960.webp",
     "Mobile commercial kitchen trailer prepared for temporary food service",
@@ -1089,7 +1091,7 @@ const basecampGalleryVisuals = [
   ],
   [
     "/images/catalog/mobile-sleep-trailers-960.webp",
-    "Mobile sleeper trailer ready to support a temporary basecamp",
+    "Mobile sleeper trailer ready to support a temporary base camp",
   ],
   [
     "/images/catalog/restroom-trailers-960.webp",
@@ -1117,16 +1119,16 @@ const basecampGalleryVisuals = [
   ],
   [
     "/images/catalog/dining-structure-rental-960.webp",
-    "Temporary dining structure arranged for a basecamp workforce",
+    "Temporary dining structure arranged for a base camp workforce",
   ],
 ] as const;
 
 const serviceSummaries = [
-  "Basecamp rentals include mobile commercial kitchens, shower trailers, shower and restroom combinations, and sleeper/bunkbed trailers. Dishwashing, laundry, refrigeration, restroom and handwashing facilities are also available.",
-  "Core basecamp services include kitchen trailers, mobile showers, shower and restroom combination trailers, and sleeper/bunkbed rentals. Supporting refrigeration, laundry, dishwashing, restroom and handwashing units can be added.",
-  "Temporary basecamp equipment includes mobile kitchens, showers, shower and restroom combinations, and sleeper/bunkbed trailers. Rental plans can also include dishwashing, refrigeration, laundry, restroom and handwashing facilities.",
-  "Rent mobile commercial kitchens, shower trailers, combination shower and restroom units, and sleeper/bunkbed trailers for a basecamp. Additional temporary facilities include laundry, refrigeration, dishwashing, restrooms and handwashing.",
-  "Basecamp facility leases can combine kitchen, shower, shower and restroom combination, and sleeper/bunkbed trailers. Refrigeration, dishwashing, laundry, restroom and handwashing rentals remain available for wider site needs.",
+  "Base camp rentals include mobile commercial kitchens, 22 ft 10-stall shower trailers, shower and restroom combinations, and sleeper/bunkbed trailers. Dishwashing, laundry, refrigeration, restroom and handwashing facilities are also available.",
+  "Core base camp services include kitchen trailers, mobile showers, shower and restroom combination trailers, and sleeper/bunkbed rentals. Supporting refrigeration, laundry, dishwashing, restroom and handwashing units can be added.",
+  "Temporary base camp equipment includes mobile kitchens, showers, shower and restroom combinations, and sleeper/bunkbed trailers. Rental plans can also include dishwashing, refrigeration, laundry, restroom and handwashing facilities.",
+  "Rent mobile commercial kitchens, 22 ft 10-stall shower trailers, combination shower and restroom units, and sleeper/bunkbed trailers for a base camp. Additional temporary facilities include laundry, refrigeration, dishwashing, restrooms and handwashing.",
+  "Base camp facility leases can combine kitchen, shower, shower and restroom combination, and sleeper/bunkbed trailers. Refrigeration, dishwashing, laundry, restroom and handwashing rentals remain available for wider site needs.",
 ] as const;
 
 const rentalContexts = [
@@ -1168,7 +1170,7 @@ const buildStateGallery = (stateIndex: number, state: string) => {
     const media = statePhotoMedia[index];
     const contexts = [
       `for temporary facility rental planning in ${state}`,
-      `for a temporary basecamp rental in ${state}`,
+      `for a temporary base camp rental in ${state}`,
       `available for facility lease planning in ${state}`,
     ];
     return {
@@ -1182,13 +1184,16 @@ export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {
     const local = stateLocalDetails[name];
     const gallery = buildStateGallery(index, name);
+    const locationPhoto = stateLocationPhoto(name);
+    const seasonal = buildStateSeasonalDemand(name, index);
     return [
       name,
       {
         ...guide,
         intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
-        image: gallery[0].image,
-        imageAlt: gallery[0].imageAlt,
+        image: locationPhoto?.image || gallery[0].image,
+        imageAlt: locationPhoto?.imageAlt || gallery[0].imageAlt,
+        locationPhoto,
         gallery,
         regions: local.regions,
         fact: local.fact,
@@ -1196,6 +1201,7 @@ export const stateGuides = Object.fromEntries(
         abbreviation: stateCodes[index],
         layout: String(index % 5),
         motion: String((index + Math.floor(index / 5) * 2) % 10),
+        seasonal,
       },
     ];
   }),
@@ -1204,6 +1210,7 @@ export const stateGuides = Object.fromEntries(
   (typeof stateGuideDetails)[string] & {
     image: string;
     imageAlt: string;
+    locationPhoto: ReturnType<typeof stateLocationPhoto>;
     gallery: { image: string; imageAlt: string }[];
     regions: string[];
     fact: string;
@@ -1211,6 +1218,7 @@ export const stateGuides = Object.fromEntries(
     abbreviation: string;
     layout: string;
     motion: string;
+    seasonal: ReturnType<typeof buildStateSeasonalDemand>;
   }
 >;
 

@@ -108,7 +108,7 @@ const sourceDescription = (page: SourcePage) => {
     (inherited.length >= 155 && !/[.!?]$/.test(inherited));
   if (!unusable) return inherited;
   const subject = compact(page.title.split("|")[0], 65);
-  return `Explore ${subject} from Temporary 123. Call ${site.phoneDisplay} to discuss site requirements, equipment availability and delivery.`;
+  return `Explore ${subject} from Temporary123. Call ${site.phoneDisplay} to discuss site requirements, equipment availability and delivery.`;
 };
 const unresolvedSourceLinks = new Set<string>();
 const dimensions: Record<string, { width: number; height: number }> = {};
@@ -171,52 +171,52 @@ for (const path of [...allRoutes, "/404/"]) {
   const region = regionPageByPath[path];
   const info = detail
     ? {
-        title: detail.name + " Rental | Temporary 123",
+        title: detail.name + " Rental | Temporary123",
         description: detail.intro.split(". ")[0] + ".",
       }
     : region
       ? {
-          title: `Temporary Facilities in ${region.region}, ${region.state} | Temporary 123`,
-          description: region.intro,
+          title: `Temporary Facilities in ${region.region}, ${region.state} | Temporary123`,
+          description: `Rent temporary mobile kitchens, shower and restroom combinations, 22 ft 10-stall shower trailers and sleeper trailers in ${region.region}, ${region.state}. Emergency 24/7.`,
         }
       : coreRoutes.includes(path)
         ? pageInfo(path)
         : page
           ? {
-              title: page.title + " | Temporary 123",
+              title: page.title + " | Temporary123",
               description: sourceDescription(page),
             }
           : path === "/contact-us/"
             ? {
-                title: "Contact Temporary 123 | Talk to a Specialist",
-                description: `Call Temporary 123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
+                title: "Contact Temporary123 | Talk to a Specialist",
+                description: `Call Temporary123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
               }
             : path === "/equipment-rental/"
               ? {
-                  title: "Equipment Rental | Temporary 123",
+                  title: "Equipment Rental | Temporary123",
                   description:
-                    "Explore Temporary 123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
+                    "Explore Temporary123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
                 }
               : catalogItem
                 ? {
-                    title: `${catalogItem.name} | Temporary 123`,
+                    title: `${catalogItem.name} | Temporary123`,
                     description: catalogItem.summary,
                   }
                 : serviceOption
                   ? {
-                      title: `${serviceOption.name} Rental | Temporary 123`,
+                      title: `${serviceOption.name} Rental | Temporary123`,
                       description: serviceOption.description,
                     }
                   : serviceCategory
                     ? {
-                        title: `${serviceCategory.name} Rental | Temporary 123`,
+                        title: `${serviceCategory.name} Rental | Temporary123`,
                         description: serviceCategory.description,
                       }
                     : pageInfo(path);
   const canonical =
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
   if (!info.description.trim()) {
-    info.description = `Explore ${page?.title || "Temporary 123 facilities"}. Call Temporary 123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
+    info.description = `Explore ${page?.title || "Temporary123 facilities"}. Call Temporary123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
   const schema = canonical
     ? path === "/"
@@ -247,6 +247,17 @@ for (const path of [...allRoutes, "/404/"]) {
                   "@type": "Place",
                   name: `${region.region}, ${region.state}, USA`,
                 },
+                primaryImageOfPage: region.locationPhoto
+                  ? {
+                      "@type": "ImageObject",
+                      contentUrl: new URL(
+                        region.locationPhoto.image,
+                        site.origin,
+                      ).href,
+                      caption: region.locationPhoto.caption,
+                      creditText: `${region.locationPhoto.author}, ${region.locationPhoto.license}`,
+                    }
+                  : undefined,
               },
               {
                 "@type": "Service",
@@ -262,6 +273,40 @@ for (const path of [...allRoutes, "/404/"]) {
                   telephone: site.phoneE164,
                 },
                 description: `Rent or lease temporary facilities in ${region.region}, ${region.state}, including mobile kitchens, shower and restroom combinations, and sleeper or bunkbed trailers.`,
+                availableChannel: {
+                  "@type": "ServiceChannel",
+                  servicePhone: {
+                    "@type": "ContactPoint",
+                    telephone: site.phoneE164,
+                    contactType: "emergency temporary facilities support",
+                    hoursAvailable: {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday",
+                      ],
+                      opens: "00:00",
+                      closes: "23:59",
+                    },
+                  },
+                },
+                additionalProperty: [
+                  {
+                    "@type": "PropertyValue",
+                    name: "Estimated seasonal facility demand",
+                    value: `Code ${region.seasonal.code}, ${region.seasonal.label}. Planning estimate only, not an official government risk rating.`,
+                  },
+                  {
+                    "@type": "PropertyValue",
+                    name: "Estimated delivery planning timeline",
+                    value: `${region.seasonal.delivery.window}. ${region.seasonal.delivery.note}`,
+                  },
+                ],
               },
               {
                 "@type": "FAQPage",
@@ -271,7 +316,7 @@ for (const path of [...allRoutes, "/404/"]) {
                     name: `What temporary facilities can I rent in ${region.region}?`,
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: `Temporary 123 can discuss rental or lease options for mobile commercial kitchens, shower and restroom combination trailers, sleeper or bunkbed trailers, and supporting temporary facilities in ${region.region}, ${region.state}.`,
+                      text: `Temporary123 can discuss rental or lease options for mobile commercial kitchens, shower and restroom combination trailers, sleeper or bunkbed trailers, and supporting temporary facilities in ${region.region}, ${region.state}.`,
                     },
                   },
                 ],
@@ -326,7 +371,7 @@ for (const path of [...allRoutes, "/404/"]) {
     `<meta name="description" content="${esc(info.description)}"><meta property="og:title" content="${esc(info.title)}"><meta property="og:description" content="${esc(info.description)}"><meta property="og:type" content="website">` +
     `<meta property="og:site_name" content="${esc(site.brand)}"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(info.title)}"><meta name="twitter:description" content="${esc(info.description)}">` +
     (canonical
-      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(site.brand)} temporary facility planning">`
+      ? `<link rel="canonical" href="${esc(canonical)}"><meta property="og:url" content="${esc(canonical)}"><meta property="og:image" content="${esc(region?.locationPhoto ? new URL(region.locationPhoto.image, site.origin).href : site.origin.replace(/\/$/, "") + "/social-card.png")}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${esc(region?.locationPhoto?.imageAlt || site.brand + " temporary facility planning")}">`
       : "");
   const rawHtml = source
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)

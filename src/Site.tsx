@@ -90,7 +90,7 @@ export function Header({ path }: { path: string }) {
       </div>
       <div className="header-sticky header-refresh">
         <header className="header wrap">
-          <a className="brand" href="/" aria-label="Temporary 123 home">
+          <a className="brand" href="/" aria-label="Temporary123 home">
             <img src="/images/logo.webp" width="53" height="44" alt="" />
             <span>
               Temporary<span className="brand-number">123</span>
@@ -270,7 +270,7 @@ export function Header({ path }: { path: string }) {
       <a
         className="contact-rail contact-rail-refresh"
         href="/contact-us/"
-        aria-label="Contact Temporary 123"
+        aria-label="Contact Temporary123"
         aria-current={path === "/contact-us/" ? "page" : undefined}
       >
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -357,7 +357,7 @@ export function Footer({ showClosing = true }: { showClosing?: boolean }) {
             Temporary<span>123</span>
           </a>
           <p>Temporary facilities for the work ahead.</p>
-          <small>© {new Date().getFullYear()} Temporary 123</small>
+          <small>© {new Date().getFullYear()} Temporary123</small>
         </div>
         <div>
           <strong>Explore</strong>
@@ -413,7 +413,7 @@ export function Site({
                 <br />
                 start here.
               </h1>
-              <p>Share your site, dates and requirements with Temporary 123.</p>
+              <p>Share your site, dates and requirements with Temporary123.</p>
               <a className="phone-link" href={"tel:" + site.phoneE164}>
                 {site.phoneDisplay} ↗
               </a>
@@ -454,8 +454,8 @@ export function Site({
                     across the USA.
                   </h1>
                   <p>
-                    Temporary 123 coordinates mobile kitchens, hygiene
-                    facilities and workforce support in all 50 states.
+                    Temporary123 coordinates mobile kitchens, hygiene facilities
+                    and workforce support in all 50 states.
                   </p>
                   <div className="location-stats" aria-label="Coverage summary">
                     <div>
@@ -497,6 +497,9 @@ export function Site({
                     data-state-guide={name}
                     data-state-image={guide.image}
                     data-state-image-alt={guide.imageAlt}
+                    data-state-image-source={guide.locationPhoto?.sourceUrl}
+                    data-state-image-license={guide.locationPhoto?.license}
+                    data-state-image-author={guide.locationPhoto?.author}
                     data-state-image-two={guide.gallery[1].image}
                     data-state-image-alt-two={guide.gallery[1].imageAlt}
                     data-state-image-three={guide.gallery[2].image}
@@ -504,6 +507,10 @@ export function Site({
                     data-state-abbreviation={guide.abbreviation}
                     data-state-layout={guide.layout}
                     data-state-motion={guide.motion}
+                    data-state-demand-code={guide.seasonal.code}
+                    data-state-demand-label={guide.seasonal.label}
+                    data-state-delivery-window={guide.seasonal.delivery.window}
+                    data-state-delivery-note={guide.seasonal.delivery.note}
                     key={name}
                   >
                     <summary>
@@ -530,6 +537,38 @@ export function Site({
                       </div>
                       <p data-guide-fact>{guide.fact}</p>
                       <p data-guide-services>{guide.serviceSummary}</p>
+                      <section className="state-planning-seasonal">
+                        <strong>Local and seasonal information</strong>
+                        <div data-guide-seasonal-copy>
+                          {guide.seasonal.summary.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                        <p data-guide-demand>{guide.seasonal.basis}</p>
+                        <p data-guide-delivery>
+                          <strong>Estimated delivery planning timeline:</strong>{" "}
+                          {guide.seasonal.delivery.window}.{" "}
+                          {guide.seasonal.delivery.note}
+                        </p>
+                        <p data-guide-emergency>
+                          <strong>Emergency support 24/7.</strong> Call the
+                          rental team to confirm equipment availability and the
+                          actual dispatch schedule.
+                        </p>
+                        <ul data-guide-sources>
+                          {guide.seasonal.sources.map((source) => (
+                            <li key={source.href}>
+                              <a
+                                href={source.href}
+                                target="_blank"
+                                rel="external noreferrer"
+                              >
+                                {source.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
                       <p className="state-planning-question">
                         <strong>Before you call</strong>
                         <span data-guide-question>{guide.question}</span>
@@ -777,7 +816,7 @@ export function Site({
                   </h2>
                   <p>
                     Browse specialized temporary facility, workforce, government
-                    and emergency support pages from Temporary 123.
+                    and emergency support pages from Temporary123.
                   </p>
                 </div>
                 <details>
@@ -830,12 +869,12 @@ export function Site({
             <section className="about-hero" aria-labelledby="about-title">
               <div className="wrap section about-hero-grid">
                 <div className="secondary-intro-copy">
-                  <span className="eyebrow">ABOUT TEMPORARY 123</span>
+                  <span className="eyebrow">ABOUT TEMPORARY123</span>
                   <h1 id="about-title">
                     Temporary facilities built around the work.
                   </h1>
                   <p>
-                    Temporary 123 supports construction, emergency response,
+                    Temporary123 supports construction, emergency response,
                     government, food service and remote workforce operations
                     with coordinated temporary facility rentals.
                   </p>
@@ -854,7 +893,7 @@ export function Site({
                     sizes="(max-width: 760px) calc(100vw - 40px), 480px"
                     width="850"
                     height="650"
-                    alt="Commercial cooking equipment and preparation space inside a Temporary 123 mobile kitchen"
+                    alt="Commercial cooking equipment and preparation space inside a Temporary123 mobile kitchen"
                     fetchPriority="high"
                     decoding="async"
                   />
@@ -937,7 +976,7 @@ export function Site({
                     arrangements are finalized.
                   </p>
                   <p>
-                    Temporary 123 is listed as a GSA Schedule contract holder.
+                    Temporary123 is listed as a GSA Schedule contract holder.
                     Call our team at{" "}
                     <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a> to
                     discuss commercial, government or emergency project needs.
@@ -1163,7 +1202,7 @@ export function Site({
           <section className="wrap section narrow">
             <h1>Privacy</h1>
             <p>
-              This website provides information about Temporary 123 services.
+              This website provides information about Temporary123 services.
               Calling the published telephone number connects you directly with
               the business.
             </p>
@@ -1173,7 +1212,7 @@ export function Site({
               team.
             </p>
             <p>
-              For questions about your information, contact Temporary 123 at{" "}
+              For questions about your information, contact Temporary123 at{" "}
               {site.phoneDisplay}.
             </p>
           </section>

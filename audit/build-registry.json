@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T18:28:25.176Z",
+  "generatedAt": "2026-09-13T20:08:22.475Z",
   "mode": "production",
   "indexingScope": "homepage-and-service-areas",
   "indexingBatchSize": 25,
@@ -422,19 +422,7 @@
       "indexable": false
     },
     {
-      "path": "/services/shower-trailers/12ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/shower-trailers/14ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/shower-trailers/20ft/",
-      "indexable": false
-    },
-    {
-      "path": "/services/shower-trailers/30ft/",
+      "path": "/services/shower-trailers/22ft-10-stall/",
       "indexable": false
     },
     {

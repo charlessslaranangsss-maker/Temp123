@@ -9,7 +9,7 @@ test("all 25 equipment entries and legacy destinations resolve", async ({
   for (const item of catalog.items) {
     const page = await request.get(item.path);
     expect(page.status(), item.path).toBe(200);
-    expect(await page.text()).toContain("Temporary 123");
+    expect(await page.text()).toContain("Temporary123");
     const redirect = await request.get(item.legacyPath, { maxRedirects: 0 });
     expect(redirect.status(), item.legacyPath).toBe(308);
     expect(redirect.headers().location).toBe(item.path);

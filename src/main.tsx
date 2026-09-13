@@ -459,6 +459,17 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       "[data-state-image-caption]",
     );
     if (caption) caption.textContent = stateImage.alt;
+    const source = stateDialog.querySelector<HTMLAnchorElement>(
+      "[data-state-photo-source]",
+    );
+    if (source) {
+      source.href =
+        guide?.dataset.stateImageSource || "https://commons.wikimedia.org/";
+      const author =
+        guide?.dataset.stateImageAuthor || "Wikimedia Commons contributor";
+      const license = guide?.dataset.stateImageLicense || "source license";
+      source.textContent = `${author}, ${license}`;
+    }
   }
   const galleryImages = stateDialog.querySelectorAll<HTMLImageElement>(
     "img[data-state-gallery-image]",
@@ -525,6 +536,59 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     servicesCopy.textContent =
       guide?.querySelector("[data-guide-services]")?.textContent ||
       "Basecamp and supporting temporary facility rentals are available.";
+  const seasonalCopy = stateDialog.querySelector<HTMLElement>(
+    "[data-state-seasonal-copy]",
+  );
+  if (seasonalCopy) {
+    seasonalCopy.replaceChildren();
+    guide
+      ?.querySelectorAll<HTMLElement>("[data-guide-seasonal-copy] p")
+      .forEach((source) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = source.textContent;
+        seasonalCopy.append(paragraph);
+      });
+  }
+  const demand = stateDialog.querySelector<HTMLElement>("[data-state-demand]");
+  const demandCode = stateDialog.querySelector<HTMLElement>(
+    "[data-state-demand-code]",
+  );
+  if (demand)
+    demand.textContent =
+      guide?.querySelector<HTMLElement>("[data-guide-demand]")?.textContent ||
+      "";
+  if (demandCode)
+    demandCode.textContent = `Code ${guide?.dataset.stateDemandCode || "3"} · ${guide?.dataset.stateDemandLabel || "Moderate"}`;
+  const deliveryWindow = stateDialog.querySelector<HTMLElement>(
+    "[data-state-delivery-window]",
+  );
+  const deliveryNote = stateDialog.querySelector<HTMLElement>(
+    "[data-state-delivery-note]",
+  );
+  if (deliveryWindow)
+    deliveryWindow.textContent =
+      guide?.dataset.stateDeliveryWindow ||
+      "Delivery estimate available by phone";
+  if (deliveryNote)
+    deliveryNote.textContent =
+      guide?.dataset.stateDeliveryNote ||
+      "Call to confirm equipment availability and the actual dispatch schedule.";
+  const seasonalSources = stateDialog.querySelector<HTMLElement>(
+    "[data-state-seasonal-sources]",
+  );
+  if (seasonalSources) {
+    seasonalSources.replaceChildren();
+    guide
+      ?.querySelectorAll<HTMLAnchorElement>("[data-guide-sources] a")
+      .forEach((source) => {
+        const link = document.createElement("a");
+        link.href = source.href;
+        link.textContent = source.textContent;
+        link.target = "_blank";
+        link.rel = "external noreferrer";
+        seasonalSources.append(link);
+      });
+  }
   stateDialog.showModal();
 };
 document.querySelectorAll<SVGElement>("[data-state]").forEach((state) => {

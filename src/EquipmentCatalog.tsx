@@ -146,7 +146,7 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
       </nav>
       <div className="brief-intro">
         <div>
-          <span className="eyebrow">TEMPORARY 123 EQUIPMENT</span>
+          <span className="eyebrow">TEMPORARY123 EQUIPMENT</span>
           <h1>{item.name}</h1>
           <p>{item.summary}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>

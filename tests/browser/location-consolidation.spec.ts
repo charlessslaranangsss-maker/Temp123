@@ -40,7 +40,7 @@ test("old city link retains location and the approved service names", async ({
   await page.locator('.service-category-cards a[href*="/24ft/"]').click();
   await expect(page.locator("h1")).toHaveText("24ft Mobile Kitchen Trailer");
   await page
-    .getByRole("link", { name: "Contact Temporary 123", exact: true })
+    .getByRole("link", { name: "Contact Temporary123", exact: true })
     .click();
   await expect(
     page.locator('#contact-drawer input[name="location"]'),
@@ -56,8 +56,12 @@ test("location planner supports keyboard submission without JavaScript", async (
   await page
     .getByLabel("Project city and state", { exact: true })
     .fill("Arlington, Texas");
-  await page.getByLabel("Project city and state", { exact: true }).press("Escape");
-  await page.getByRole("button", { name: "Explore mobile kitchens" }).press("Enter");
+  await page
+    .getByLabel("Project city and state", { exact: true })
+    .press("Escape");
+  await page
+    .getByRole("button", { name: "Explore mobile kitchens" })
+    .press("Enter");
   expect(new URL(page.url()).searchParams.get("location")).toBe(
     "Arlington, Texas",
   );

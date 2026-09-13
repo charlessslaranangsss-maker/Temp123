@@ -25,7 +25,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await expect(
       page.getByRole("link", { name: "Find your rental", exact: true }),
     ).toHaveAttribute("href", "#equipment");
-    await expect(page).toHaveTitle(/Temporary 123/);
+    await expect(page).toHaveTitle(/Temporary123/);
     await expect(page.locator(".brand")).toContainText("Temporary123");
     await expect(page.locator(".visual-note, .equipment-jumps")).toHaveCount(0);
     await expect(
@@ -228,7 +228,7 @@ test("service model pages provide unique planning content", async ({
     "20ft Restroom and Shower Trailer",
   );
   await expect(page).toHaveTitle(
-    "20ft Restroom and Shower Trailer Rental | Temporary 123",
+    "20ft Restroom and Shower Trailer Rental | Temporary123",
   );
   await expect(page.getByText("PLAN BEFORE DELIVERY")).toBeVisible();
 });

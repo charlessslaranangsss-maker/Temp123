@@ -11,15 +11,27 @@ const callouts = [
   "Delaware",
   "Maryland",
 ];
-const basecampServiceNames = new Set([
-  "Mobile Kitchens",
-  "Shower",
-  "Shower and Restroom Combination Trailers",
-  "Sleeper",
+const baseCampServicePriority = new Map([
+  ["Mobile Kitchens", 0],
+  ["Shower and Restroom Combination Trailers", 1],
+  ["Shower", 2],
+  ["Sleeper", 3],
 ]);
+const stateServiceLabels: Record<string, string> = {
+  "Mobile Kitchens": "Mobile commercial kitchen rentals",
+  "Shower and Restroom Combination Trailers":
+    "Shower and restroom combination trailers",
+  Shower: "22 ft shower trailer rental, 10 stalls",
+  Sleeper: "Sleeper and bunkbed trailer rentals",
+  Dishwashing: "Dishwashing trailer rentals",
+  Refrigeration: "Refrigeration trailer rentals",
+  Restroom: "Restroom trailer rentals",
+  Laundry: "Laundry trailer rentals",
+  "Handwashing Trailers": "Handwashing trailer rentals",
+};
 const stateServices = [...serviceCategories].sort((left, right) => {
-  const leftPriority = basecampServiceNames.has(left.name) ? 0 : 1;
-  const rightPriority = basecampServiceNames.has(right.name) ? 0 : 1;
+  const leftPriority = baseCampServicePriority.get(left.name) ?? 10;
+  const rightPriority = baseCampServicePriority.get(right.name) ?? 10;
   return leftPriority - rightPriority;
 });
 // Offset labels within nearby state interiors where centered names would overlap.
@@ -232,7 +244,7 @@ export function CoverageMap() {
                 projects across the United States.
               </p>
               <p className="state-service-summary" data-state-services-copy>
-                Basecamp rentals include mobile commercial kitchens, shower
+                Base camp rentals include mobile commercial kitchens, shower
                 trailers, shower and restroom combinations, and sleeper/bunkbed
                 trailers. Supporting temporary facilities are also available.
               </p>
@@ -265,8 +277,45 @@ export function CoverageMap() {
           </section>
 
           <section
+            className="state-dialog-seasonal"
+            aria-labelledby="state-seasonal-title"
+          >
+            <div className="state-seasonal-heading">
+              <span className="eyebrow">LOCAL AND SEASONAL INFORMATION</span>
+              <h3 id="state-seasonal-title">
+                Planning conditions in <span data-state-name>your state</span>
+              </h3>
+            </div>
+            <div className="state-seasonal-copy" data-state-seasonal-copy />
+            <div className="state-demand-card">
+              <span>Estimated demand</span>
+              <strong data-state-demand-code>Code 3 · Moderate</strong>
+              <p data-state-demand>
+                This is an estimated planning indicator, not an official
+                government risk rating.
+              </p>
+            </div>
+            <div className="state-delivery-card">
+              <span>Estimated delivery planning timeline</span>
+              <strong data-state-delivery-window>
+                Common planning range: 2 to 7 business days
+              </strong>
+              <p data-state-delivery-note>
+                Equipment availability, configuration, site readiness and
+                transport access must be confirmed.
+              </p>
+              <b>Emergency support 24/7</b>
+            </div>
+            <nav
+              className="state-seasonal-sources"
+              data-state-seasonal-sources
+              aria-label="Planning information sources"
+            />
+          </section>
+
+          <section
             className="state-dialog-visual"
-            aria-label="Temporary facility equipment examples"
+            aria-label="Location and temporary facility references"
           >
             <div className="state-visual-heading">
               <div>
@@ -294,6 +343,15 @@ export function CoverageMap() {
                 <figcaption data-state-image-caption>
                   Commercial equipment inside a mobile kitchen trailer
                 </figcaption>
+                <p className="state-photo-credit">
+                  Photo:{" "}
+                  <a
+                    data-state-photo-source
+                    href="https://commons.wikimedia.org/"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </p>
               </figure>
               <figure>
                 <div>
@@ -310,21 +368,6 @@ export function CoverageMap() {
                   Interior of a mobile shower trailer
                 </figcaption>
               </figure>
-              <figure>
-                <div>
-                  <img
-                    src="/images/catalog/mobile-sleep-trailers-960.webp"
-                    alt="Sleeper trailer prepared for a basecamp"
-                    width="850"
-                    height="650"
-                    data-state-gallery-image="2"
-                  />
-                  <span aria-hidden="true">03</span>
-                </div>
-                <figcaption data-state-gallery-caption="2">
-                  Sleeper trailer prepared for a basecamp
-                </figcaption>
-              </figure>
             </div>
           </section>
 
@@ -333,14 +376,14 @@ export function CoverageMap() {
             aria-label="Temporary facility rental services"
           >
             <div className="state-service-heading">
-              <span>Basecamp and supporting rentals</span>
+              <span>Base camp and supporting rentals</span>
               <strong>9 facility types</strong>
             </div>
             <ul className="state-service-list">
               {stateServices.map((service, index) => (
                 <li
                   className={
-                    basecampServiceNames.has(service.name)
+                    baseCampServicePriority.has(service.name)
                       ? "basecamp-service"
                       : undefined
                   }
@@ -350,7 +393,9 @@ export function CoverageMap() {
                     <span className="state-service-number" aria-hidden="true">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span>{service.name}</span>
+                    <span>
+                      {stateServiceLabels[service.name] || service.name}
+                    </span>
                     <span aria-hidden="true">↗</span>
                   </a>
                 </li>

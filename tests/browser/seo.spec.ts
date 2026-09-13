@@ -49,7 +49,7 @@ test("every generated page returns substantive HTML", async ({ request }) => {
     expect(response.headers()["content-type"], path).toContain("text/html");
     const html = await response.text();
     expect(html, path).toContain("<main");
-    expect(html, path).toContain("Temporary 123");
+    expect(html, path).toContain("Temporary123");
   });
 });
 

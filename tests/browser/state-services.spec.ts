@@ -64,7 +64,7 @@ test("every state guide uses natural rental, rent and lease language", () => {
     expect(guide.gallery, name).toHaveLength(3);
     expect(guide.regions.length, name).toBeGreaterThanOrEqual(3);
     expect(guide.fact, name).toMatch(/state capital\.$/);
-    expect(guide.serviceSummary, name).toMatch(/basecamp/i);
+    expect(guide.serviceSummary, name).toMatch(/base camp/i);
     expect(guide.serviceSummary, name).toMatch(/kitchen/i);
     expect(guide.serviceSummary, name).toMatch(/shower/i);
     expect(guide.serviceSummary, name).toMatch(/sleeper|bunkbed/i);

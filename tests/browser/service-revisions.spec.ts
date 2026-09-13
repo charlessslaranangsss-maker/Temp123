@@ -49,7 +49,7 @@ test("all service model destinations have equipment, planning, source and descri
     expect(html, path).toContain("Confirm with your quote");
     expect(html, path).toContain(item.source);
     expect(html, path).toContain('class="model-features"');
-    expect(html, path).not.toContain("rental planning from Temporary 123");
+    expect(html, path).not.toContain("rental planning from Temporary123");
   }
   const small = await (
     await request.get("/services/dishwashing-trailers/22ft/")

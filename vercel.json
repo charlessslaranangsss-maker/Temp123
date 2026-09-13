@@ -43,6 +43,26 @@
   ],
   "redirects": [
     {
+      "source": "/services/shower-trailers/12ft/",
+      "destination": "/services/shower-trailers/22ft-10-stall/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-trailers/14ft/",
+      "destination": "/services/shower-trailers/22ft-10-stall/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-trailers/20ft/",
+      "destination": "/services/shower-trailers/22ft-10-stall/",
+      "permanent": true
+    },
+    {
+      "source": "/services/shower-trailers/30ft/",
+      "destination": "/services/shower-trailers/22ft-10-stall/",
+      "permanent": true
+    },
+    {
       "source": "/houston-texas-mobile-kitchen-rental/",
       "destination": "/equipment-rental/mobile-kitchen-trailers/",
       "permanent": true

@@ -113,6 +113,11 @@ for (const file of htmlFiles) {
   for (const element of $("a[href],img[src]").toArray()) {
     const value = $(element).attr(element.name === "img" ? "src" : "href");
     if (!value || /^(tel:|mailto:|#)/i.test(value)) continue;
+    if (
+      element.name === "a" &&
+      ($(element).attr("rel") || "").split(/\s+/).includes("external")
+    )
+      continue;
     let url;
     try {
       url = new URL(value, site.origin);

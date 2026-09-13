@@ -1,6 +1,12 @@
 import site from "../site.json" with { type: "json" };
 import { regionMedia } from "./regionMedia";
 import { stateGuides } from "./stateGuides";
+import { regionCities } from "./regionCities";
+import { regionLocationPhoto, type LocationPhoto } from "./locationPhotos";
+import {
+  buildRegionSeasonalDemand,
+  type SeasonalDemand,
+} from "./seasonalDemand";
 
 export const regionSlug = (value: string) =>
   value
@@ -12,73 +18,26 @@ export const regionSlug = (value: string) =>
 export const regionPath = (state: string, region: string) =>
   `/service-areas/${regionSlug(state)}/${regionSlug(region)}/`;
 
-const stateCities: Record<string, [string, string]> = {
-  Alabama: ["Birmingham", "Montgomery"],
-  Alaska: ["Anchorage", "Fairbanks"],
-  Arizona: ["Phoenix", "Tucson"],
-  Arkansas: ["Little Rock", "Fayetteville"],
-  California: ["Los Angeles", "San Francisco"],
-  Colorado: ["Denver", "Colorado Springs"],
-  Connecticut: ["Hartford", "New Haven"],
-  Delaware: ["Wilmington", "Dover"],
-  Florida: ["Miami", "Orlando"],
-  Georgia: ["Atlanta", "Savannah"],
-  Hawaii: ["Honolulu", "Hilo"],
-  Idaho: ["Boise", "Idaho Falls"],
-  Illinois: ["Chicago", "Springfield"],
-  Indiana: ["Indianapolis", "Fort Wayne"],
-  Iowa: ["Des Moines", "Cedar Rapids"],
-  Kansas: ["Wichita", "Topeka"],
-  Kentucky: ["Louisville", "Lexington"],
-  Louisiana: ["New Orleans", "Baton Rouge"],
-  Maine: ["Portland", "Bangor"],
-  Maryland: ["Baltimore", "Annapolis"],
-  Massachusetts: ["Boston", "Worcester"],
-  Michigan: ["Detroit", "Grand Rapids"],
-  Minnesota: ["Minneapolis", "Saint Paul"],
-  Mississippi: ["Jackson", "Gulfport"],
-  Missouri: ["Kansas City", "St. Louis"],
-  Montana: ["Billings", "Helena"],
-  Nebraska: ["Omaha", "Lincoln"],
-  Nevada: ["Las Vegas", "Reno"],
-  "New Hampshire": ["Manchester", "Concord"],
-  "New Jersey": ["Newark", "Jersey City"],
-  "New Mexico": ["Albuquerque", "Santa Fe"],
-  "New York": ["New York City", "Buffalo"],
-  "North Carolina": ["Charlotte", "Raleigh"],
-  "North Dakota": ["Fargo", "Bismarck"],
-  Ohio: ["Columbus", "Cleveland"],
-  Oklahoma: ["Oklahoma City", "Tulsa"],
-  Oregon: ["Portland", "Salem"],
-  Pennsylvania: ["Philadelphia", "Pittsburgh"],
-  "Rhode Island": ["Providence", "Newport"],
-  "South Carolina": ["Charleston", "Columbia"],
-  "South Dakota": ["Sioux Falls", "Rapid City"],
-  Tennessee: ["Nashville", "Memphis"],
-  Texas: ["Houston", "Dallas"],
-  Utah: ["Salt Lake City", "Provo"],
-  Vermont: ["Burlington", "Montpelier"],
-  Virginia: ["Virginia Beach", "Richmond"],
-  Washington: ["Seattle", "Spokane"],
-  "West Virginia": ["Charleston", "Huntington"],
-  Wisconsin: ["Milwaukee", "Madison"],
-  Wyoming: ["Cheyenne", "Casper"],
-};
-
 const introTemplates = [
   (state: string, region: string) =>
-    `Teams planning work in ${region}, ${state} can arrange temporary facilities around the site's access, occupancy and schedule. Rent mobile kitchens, shower and restroom combination trailers, and sleeper or bunkbed trailers when the project needs a reliable basecamp.`,
+    `Teams planning work in ${region}, ${state} can arrange temporary facilities around the site's access, occupancy and schedule. Rent mobile kitchens, shower and restroom combination trailers, and sleeper or bunkbed trailers when the project needs a reliable base camp.`,
   (state: string, region: string) =>
     `A ${region} project in ${state} may need a temporary facility plan that connects food service, hygiene and crew support. Compare short-term rental options with a longer lease, then confirm delivery access and utility requirements for the exact site.`,
   (state: string, region: string) =>
-    `For work across ${region}, ${state}, Temporary 123 helps project teams plan rental facilities before mobilization. The conversation can cover mobile commercial kitchens, shower trailers, combination units and sleeper or bunkbed rentals for short or extended assignments.`,
+    `For work across ${region}, ${state}, Temporary123 helps project teams plan rental facilities before mobilization. The conversation can cover mobile commercial kitchens, 22 ft 10-stall shower trailers, combination units and sleeper or bunkbed rentals for short or extended assignments.`,
   (state: string, region: string) =>
     `Project managers in ${region}, ${state} can use a temporary facilities rental plan to keep crews supported during construction, renovation or remote work. Review the site route, equipment footprint and servicing plan before choosing a rent or lease arrangement.`,
   (state: string, region: string) =>
     `When a site is located in ${region}, ${state}, a coordinated temporary facility rental keeps the next phase moving. Discuss kitchen capacity, shower and restroom combinations, sleeper or bunkbed trailers and the delivery sequence with our team.`,
   (state: string, region: string) =>
-    `A clear rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary 123 can help compare mobile kitchen, hygiene and sleeper trailer options for a short-term rent or a longer lease.`,
+    `A clear rental brief for ${region}, ${state} should name the work area, crew size and operating dates. Temporary123 can help compare mobile kitchen, hygiene and sleeper trailer options for a short-term rent or a longer lease.`,
 ] as const;
+
+const formatCityList = (cities: string[]) => {
+  if (cities.length < 2) return cities[0] || "the surrounding area";
+  if (cities.length === 2) return `${cities[0]} and ${cities[1]}`;
+  return `${cities.slice(0, -1).join(", ")}, and ${cities.at(-1)}`;
+};
 
 const detailTemplates = [
   (state: string, region: string) =>
@@ -112,7 +71,7 @@ const buildRegionVisuals = (
   globalIndex: number,
   state: string,
   region: string,
-  cities: [string, string],
+  cities: string[],
 ) => {
   const poolSize = regionMedia.length;
   const round = Math.floor(globalIndex / poolSize);
@@ -131,7 +90,7 @@ const buildRegionVisuals = (
   const captions = [
     `Temporary facilities equipment prepared for projects in ${region}.`,
     `Rental equipment reference for sites near ${cities[0]}.`,
-    `Basecamp facility option for temporary work near ${cities[1]}.`,
+    `Base camp facility option for temporary work near ${cities[1] || cities[0]}.`,
     `Mobile support equipment available for rent or lease in ${state}.`,
   ];
   return indexes.map((index, visualIndex) => {
@@ -156,7 +115,9 @@ export type RegionGuide = {
   intro: string;
   detail: string;
   fact: string;
-  cities: [string, string];
+  cities: string[];
+  locationPhoto?: LocationPhoto;
+  seasonal: SeasonalDemand;
 };
 
 export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
@@ -166,30 +127,34 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
       .reduce((total, [, item]) => total + item.regions.length, 0);
     return guide.regions.map((region, regionIndex) => {
       const index = regionIndex;
-      const cities = stateCities[state] || [state, state];
+      const cities = regionCities(state, regionIndex);
       const visuals = buildRegionVisuals(
         stateOffset + regionIndex,
         state,
         region,
         cities,
       );
+      const path = regionPath(state, region);
+      const locationPhoto = regionLocationPhoto(path);
       return {
         state,
         region,
-        path: regionPath(state, region),
+        path,
         index,
         layout: (Object.keys(stateGuides).indexOf(state) + index) % 6,
-        image: visuals[0].image,
-        imageAlt: visuals[0].imageAlt,
-        gallery: visuals.slice(1),
-        intro: `${introTemplates[index % introTemplates.length](state, region)} Cities covered in this regional guide include ${cities[0]} and ${cities[1]}.`,
-        detail: `${detailTemplates[index % detailTemplates.length](state, region)} Teams in ${cities[0]} and ${cities[1]} can use the same planning brief when the project spans more than one city.`,
+        image: locationPhoto?.image || visuals[0].image,
+        imageAlt: locationPhoto?.imageAlt || visuals[0].imageAlt,
+        locationPhoto,
+        gallery: visuals.slice(1, 2),
+        intro: `${introTemplates[index % introTemplates.length](state, region)} Cities in this distinct travel region include ${formatCityList(cities)}.`,
+        detail: detailTemplates[index % detailTemplates.length](state, region),
         fact: factTemplates[index % factTemplates.length](
           state,
           region,
           guide.fact,
         ),
         cities,
+        seasonal: buildRegionSeasonalDemand(state, region, regionIndex, cities),
       };
     });
   },
@@ -230,6 +195,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
               Temporary facilities in {guide.region}, {guide.state}
             </h1>
             <p className="region-intro">{guide.intro}</p>
+            <p className="region-emergency">Emergency support 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call now <strong>{site.phoneDisplay}</strong>{" "}
               <span aria-hidden="true">↗</span>
@@ -246,6 +212,14 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             <figcaption>
               <span>{guide.region}</span>
               <strong>Plan the right site setup</strong>
+              {guide.locationPhoto ? (
+                <small>
+                  Photo: {guide.locationPhoto.author},{" "}
+                  <a href={guide.locationPhoto.sourceUrl}>
+                    {guide.locationPhoto.license}
+                  </a>
+                </small>
+              ) : null}
             </figcaption>
           </figure>
         </div>
@@ -257,8 +231,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           <p>{guide.detail}</p>
           <p>{guide.fact}</p>
           <p className="region-cities">
-            <strong>City coverage:</strong> {guide.cities[0]} and{" "}
-            {guide.cities[1]}.
+            <strong>City coverage:</strong> {formatCityList(guide.cities)}.
           </p>
           <a className="region-inline-call" href={`tel:${site.phoneE164}`}>
             Speak with the rental team {site.phoneDisplay} ↗
@@ -270,20 +243,73 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           <ul>
             <li>Mobile commercial kitchen rental</li>
             <li>Shower and restroom combination rental</li>
+            <li>22 ft shower trailer rental with 10 stalls</li>
             <li>Sleeper and bunkbed trailer lease</li>
             <li>Dishwashing, refrigeration and handwashing support</li>
           </ul>
         </aside>
       </section>
+      <section
+        className="wrap section region-seasonal"
+        aria-labelledby="region-seasonal-title"
+      >
+        <div className="region-seasonal-heading">
+          <span className="eyebrow">LOCAL AND SEASONAL INFORMATION</span>
+          <h2 id="region-seasonal-title">
+            When temporary facilities may be needed in {guide.region}
+          </h2>
+          <p className="region-seasonal-route">
+            <strong>Local orientation:</strong> {guide.seasonal.corridors[0]}{" "}
+            near {guide.seasonal.landmarks[0]}, with city references for{" "}
+            {formatCityList(guide.cities)}.
+          </p>
+        </div>
+        <div className="region-seasonal-copy">
+          {guide.seasonal.summary.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+        <aside className="region-demand-card">
+          <span>Estimated seasonal facility demand</span>
+          <strong>
+            Code {guide.seasonal.code} · {guide.seasonal.label}
+          </strong>
+          <p>{guide.seasonal.basis}</p>
+        </aside>
+        <aside className="region-delivery-card">
+          <span>Estimated delivery planning timeline</span>
+          <strong>{guide.seasonal.delivery.window}</strong>
+          <p>{guide.seasonal.delivery.note}</p>
+          <a href={`tel:${site.phoneE164}`}>
+            Emergency support 24/7 · {site.phoneDisplay}
+          </a>
+        </aside>
+        <nav
+          className="region-seasonal-sources"
+          aria-label="Planning information sources"
+        >
+          <span>Planning references:</span>
+          {guide.seasonal.sources.map((source) => (
+            <a
+              href={source.href}
+              key={source.href}
+              target="_blank"
+              rel="external noreferrer"
+            >
+              {source.label}
+            </a>
+          ))}
+        </nav>
+      </section>
       <section className="wrap section region-gallery-section">
         <div className="region-section-heading">
           <div>
             <span className="eyebrow">EQUIPMENT REFERENCES</span>
-            <h2>Facilities selected for the work ahead.</h2>
+            <h2>One equipment reference for the work ahead.</h2>
           </div>
           <p>
-            A distinct set of Temporary 123 equipment views for planning a{" "}
-            {guide.region} rental, lease or temporary basecamp.
+            One Temporary123 equipment view supports the location photograph
+            while keeping this {guide.region} guide direct and easy to scan.
           </p>
         </div>
         <div className="region-gallery">
@@ -312,16 +338,16 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           </div>
           <div className="region-answer-body">
             <p>
-              Temporary 123 provides temporary facility rentals and lease
-              options for projects in {guide.region}, {guide.state}. Available
-              equipment supports food service, hygiene and crew accommodation.
+              Temporary123 provides temporary facility rentals and lease options
+              for projects in {guide.region}, {guide.state}. Available equipment
+              supports food service, hygiene and crew accommodation.
             </p>
             <ul
               aria-label={`Temporary facilities available in ${guide.region}`}
             >
               <li>Mobile commercial kitchen rentals</li>
               <li>Shower and restroom combination trailers</li>
-              <li>Shower trailer rentals</li>
+              <li>22 ft shower trailer rentals with 10 stalls</li>
               <li>Sleeper and bunkbed trailer rentals</li>
               <li>Dishwashing trailer rentals</li>
               <li>Refrigeration trailer rentals</li>
@@ -361,7 +387,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             <p>
               This regional view highlights the {guide.state} service area for
               planning a temporary facilities rental. City coverage includes{" "}
-              {guide.cities[0]} and {guide.cities[1]}.
+              {formatCityList(guide.cities)}.
             </p>
           </div>
           <figure className="region-map-visual">
