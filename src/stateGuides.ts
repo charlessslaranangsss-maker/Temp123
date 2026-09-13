@@ -1,3 +1,5 @@
+import { regionMedia } from "./regionMedia";
+
 // Editorial planning prompts, not claims of local inventory, delivery times,
 // permitting approval or completed projects. Service labels live in serviceMenu.
 const stateGuideDetails: Record<
@@ -1142,25 +1144,52 @@ const rentalContexts = [
     `Temporary facility rental planning in ${name}, USA supports customers who need to rent equipment for a short-term project or arrange a longer lease.`,
 ];
 
+const statePhotoMedia = regionMedia.filter(
+  (_, index) =>
+    index <= 40 ||
+    (index >= 64 && index <= 71) ||
+    (index >= 77 && index <= 111),
+);
+
+const buildStateGallery = (stateIndex: number, state: string) => {
+  const poolSize = statePhotoMedia.length;
+  const candidates = [
+    stateIndex,
+    (stateIndex * 11 + 37) % poolSize,
+    (stateIndex * 23 + 71) % poolSize,
+  ];
+  const indexes: number[] = [];
+  candidates.forEach((candidate) => {
+    let index = candidate;
+    while (indexes.includes(index)) index = (index + 1) % poolSize;
+    indexes.push(index);
+  });
+  return indexes.map((index, visualIndex) => {
+    const media = statePhotoMedia[index];
+    const contexts = [
+      `for temporary facility rental planning in ${state}`,
+      `for a temporary basecamp rental in ${state}`,
+      `available for facility lease planning in ${state}`,
+    ];
+    return {
+      image: media.image,
+      imageAlt: `${media.label} ${contexts[visualIndex]}`,
+    };
+  });
+};
+
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {
     const local = stateLocalDetails[name];
-    const secondImage =
-      basecampGalleryVisuals[index % basecampGalleryVisuals.length];
-    const thirdImage =
-      basecampGalleryVisuals[(index + 5) % basecampGalleryVisuals.length];
+    const gallery = buildStateGallery(index, name);
     return [
       name,
       {
         ...guide,
         intro: `${firstSentence(guide.intro)} ${rentalContexts[index % rentalContexts.length](name)}`,
-        image: stateVisuals[index][0],
-        imageAlt: stateVisuals[index][1],
-        gallery: [
-          { image: stateVisuals[index][0], imageAlt: stateVisuals[index][1] },
-          { image: secondImage[0], imageAlt: secondImage[1] },
-          { image: thirdImage[0], imageAlt: thirdImage[1] },
-        ],
+        image: gallery[0].image,
+        imageAlt: gallery[0].imageAlt,
+        gallery,
         regions: local.regions,
         fact: local.fact,
         serviceSummary: serviceSummaries[index % serviceSummaries.length],

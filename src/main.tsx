@@ -455,6 +455,10 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     stateImage.alt =
       guide?.dataset.stateImageAlt ||
       "Commercial equipment inside a mobile kitchen trailer";
+    const caption = stateDialog.querySelector<HTMLElement>(
+      "[data-state-image-caption]",
+    );
+    if (caption) caption.textContent = stateImage.alt;
   }
   const galleryImages = stateDialog.querySelectorAll<HTMLImageElement>(
     "img[data-state-gallery-image]",
@@ -467,6 +471,10 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     const [src, alt] = gallerySources[index] || [];
     if (src) image.src = src;
     if (alt) image.alt = alt;
+    const caption = stateDialog.querySelector<HTMLElement>(
+      `[data-state-gallery-caption="${index + 1}"]`,
+    );
+    if (caption) caption.textContent = image.alt;
   });
   const initials = stateDialog.querySelector<HTMLElement>(
     "[data-state-initials]",
@@ -489,11 +497,20 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       ?.querySelector("[data-guide-regions]")
       ?.querySelectorAll("a");
     if (regionNames?.length) {
-      regionNames.forEach((source) => {
+      regionNames.forEach((source, index) => {
         const link = document.createElement("a");
         link.href = source.getAttribute("href") || "/service-areas/";
-        link.textContent =
+        const number = document.createElement("span");
+        number.className = "state-region-number";
+        number.setAttribute("aria-hidden", "true");
+        number.textContent = String(index + 1).padStart(2, "0");
+        const label = document.createElement("strong");
+        label.textContent =
           source.textContent?.replace(/\s*↗\s*$/, "") || "Travel region";
+        const arrow = document.createElement("span");
+        arrow.setAttribute("aria-hidden", "true");
+        arrow.textContent = "↗";
+        link.append(number, label, arrow);
         regions.append(link);
       });
     } else {

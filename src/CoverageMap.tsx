@@ -218,70 +218,115 @@ export function CoverageMap() {
           </div>
 
           <section className="state-dialog-story">
-            <p className="state-dialog-focus" data-state-focus>
-              Plan for the exact site
-            </p>
-            <h2 id="state-services-title">
-              Services in <span data-state-name>your state</span>, USA
-            </h2>
-            <p id="state-services-intro">
-              Temporary facility rental services are available for projects in{" "}
-              <span data-state-name>your state</span>, USA. Customers can rent
-              equipment for short-term projects or request a longer lease for
-              projects across the United States.
-            </p>
-            <div className="state-local-context">
-              <p>
-                <strong>Travel areas</strong>
-                <div className="state-modal-regions" data-state-regions>
-                  <a href="/service-areas/">Choose a travel region</a>
-                </div>
+            <div className="state-dialog-copy">
+              <p className="state-dialog-focus" data-state-focus>
+                Plan for the exact site
               </p>
+              <h2 id="state-services-title">
+                Services in <span data-state-name>your state</span>, USA
+              </h2>
+              <p id="state-services-intro">
+                Temporary facility rental services are available for projects in{" "}
+                <span data-state-name>your state</span>, USA. Customers can rent
+                equipment for short-term projects or request a longer lease for
+                projects across the United States.
+              </p>
+              <p className="state-service-summary" data-state-services-copy>
+                Basecamp rentals include mobile commercial kitchens, shower
+                trailers, shower and restroom combinations, and sleeper/bunkbed
+                trailers. Supporting temporary facilities are also available.
+              </p>
+              <p className="state-dialog-question" data-state-question />
+            </div>
+
+            <aside className="state-region-panel">
+              <span className="state-region-kicker">
+                Distinct travel regions
+              </span>
+              <h3>
+                Explore <span data-state-name>your state</span> by region
+              </h3>
               <p>
+                Select a travel region to open its dedicated rental and lease
+                guide on this website.
+              </p>
+              <nav
+                className="state-modal-regions"
+                data-state-regions
+                aria-label="Distinct travel regions"
+              >
+                <a href="/service-areas/">Choose a travel region</a>
+              </nav>
+              <div className="state-fact-card">
                 <strong>State fact</strong>
                 <span data-state-fact>Confirm the exact project location.</span>
-              </p>
-            </div>
-            <p className="state-service-summary" data-state-services-copy>
-              Basecamp rentals include mobile commercial kitchens, shower
-              trailers, shower and restroom combinations, and sleeper/bunkbed
-              trailers. Supporting temporary facilities are also available.
-            </p>
-            <p className="state-dialog-question" data-state-question />
+              </div>
+            </aside>
           </section>
 
-          <figure className="state-dialog-visual">
-            <div className="state-dialog-photo-grid">
-              <img
-                src="/images/catalog/mobile-kitchen-trailers-960.webp"
-                alt="Commercial equipment inside a mobile kitchen trailer"
-                width="850"
-                height="650"
-                data-state-image
-              />
-              <img
-                src="/images/catalog/shower-trailer-960.webp"
-                alt="Interior of a mobile shower trailer"
-                width="850"
-                height="650"
-                data-state-gallery-image="1"
-              />
-              <img
-                src="/images/catalog/mobile-sleep-trailers-960.webp"
-                alt="Sleeper trailer prepared for a basecamp"
-                width="850"
-                height="650"
-                data-state-gallery-image="2"
-              />
+          <section
+            className="state-dialog-visual"
+            aria-label="Temporary facility equipment examples"
+          >
+            <div className="state-visual-heading">
+              <div>
+                <span>Equipment references</span>
+                <strong>
+                  Options for <span data-state-name>your state</span>
+                </strong>
+              </div>
+              <span className="state-visual-monogram" data-state-initials>
+                US
+              </span>
             </div>
-            <span className="state-visual-monogram" data-state-initials>
-              US
-            </span>
-            <figcaption>
-              <span>Project planning focus</span>
-              <strong data-state-focus>Plan for the exact site</strong>
-            </figcaption>
-          </figure>
+            <div className="state-dialog-photo-grid">
+              <figure>
+                <div>
+                  <img
+                    src="/images/catalog/mobile-kitchen-trailers-960.webp"
+                    alt="Commercial equipment inside a mobile kitchen trailer"
+                    width="850"
+                    height="650"
+                    data-state-image
+                  />
+                  <span aria-hidden="true">01</span>
+                </div>
+                <figcaption data-state-image-caption>
+                  Commercial equipment inside a mobile kitchen trailer
+                </figcaption>
+              </figure>
+              <figure>
+                <div>
+                  <img
+                    src="/images/catalog/shower-trailer-960.webp"
+                    alt="Interior of a mobile shower trailer"
+                    width="850"
+                    height="650"
+                    data-state-gallery-image="1"
+                  />
+                  <span aria-hidden="true">02</span>
+                </div>
+                <figcaption data-state-gallery-caption="1">
+                  Interior of a mobile shower trailer
+                </figcaption>
+              </figure>
+              <figure>
+                <div>
+                  <img
+                    src="/images/catalog/mobile-sleep-trailers-960.webp"
+                    alt="Sleeper trailer prepared for a basecamp"
+                    width="850"
+                    height="650"
+                    data-state-gallery-image="2"
+                  />
+                  <span aria-hidden="true">03</span>
+                </div>
+                <figcaption data-state-gallery-caption="2">
+                  Sleeper trailer prepared for a basecamp
+                </figcaption>
+              </figure>
+            </div>
+          </section>
 
           <section
             className="state-dialog-services"
