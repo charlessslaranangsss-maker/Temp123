@@ -6,7 +6,13 @@ import { gunzipSync } from "node:zlib";
 import { pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
-import { canonicalFor, productionBuild, sitemapXml } from "./seo-policy";
+import {
+  canonicalFor,
+  productionBuild,
+  routeInIndexingScope,
+  sitemapXml,
+  type IndexingScope,
+} from "./seo-policy";
 import { renderSourceContent } from "./source-content";
 import { preserveMedia } from "./preserve-media";
 import { load } from "cheerio";
@@ -18,7 +24,8 @@ import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
 const release = productionBuild(site.mode, process.env.VERCEL_ENV);
-if (release) {
+const indexingScope = site.indexingScope as IndexingScope;
+if (release && indexingScope === "full") {
   const errors = releaseErrors();
   if (errors.length) throw new Error(errors.join("; "));
 }
@@ -73,7 +80,10 @@ const editorialNoindex = new Set([
   "/video/",
 ]);
 const indexableRoutes = allRoutes.filter(
-  (path) => !redirectedRoutes.has(path) && !editorialNoindex.has(path),
+  (path) =>
+    !redirectedRoutes.has(path) &&
+    !editorialNoindex.has(path) &&
+    routeInIndexingScope(path, indexingScope),
 );
 const compact = (value: string, maximum: number) => {
   const clean = value.replace(/\s+/g, " ").trim();
@@ -435,6 +445,7 @@ await writeFile(
     {
       generatedAt: new Date().toISOString(),
       mode: release ? "production" : "preview",
+      indexingScope,
       pages: registry,
       unresolvedSourceLinks: [...unresolvedSourceLinks].sort(),
       restoredAssets,

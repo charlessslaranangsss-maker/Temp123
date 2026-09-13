@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-09-13T18:05:46.416Z",
-  "mode": "preview",
+  "generatedAt": "2026-09-13T18:16:26.958Z",
+  "mode": "production",
+  "indexingScope": "homepage-and-service-areas",
   "pages": [
     {
       "path": "/",
@@ -8,11 +9,11 @@
     },
     {
       "path": "/services/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/industries/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/",
@@ -20,31 +21,31 @@
     },
     {
       "path": "/planning/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/about-us/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/blog/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/contact-us/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/privacy/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/20ft-refrigeration-trailers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/26ft-military-bulk-kitchen/",
@@ -53,12 +54,12 @@
     },
     {
       "path": "/2800-correctional-facilities-series/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T14:21:04"
     },
     {
       "path": "/2800-military-series/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T14:23:39"
     },
     {
@@ -68,156 +69,156 @@
     },
     {
       "path": "/4000-military-series/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T14:28:09"
     },
     {
       "path": "/40ft-military-bulk-kitchen/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T14:31:31"
     },
     {
       "path": "/4500-correctional-facilities-series/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T14:38:52"
     },
     {
       "path": "/4500-military-series/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2024-02-02T16:50:52"
     },
     {
       "path": "/base-camps-for-rent/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:39:02"
     },
     {
       "path": "/camp-management-and-design/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2024-02-02T17:19:01"
     },
     {
       "path": "/construction-man-camp-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:45:56"
     },
     {
       "path": "/disaster-relief-man-camp-workforce-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:53:40"
     },
     {
       "path": "/equipment-rental-refrigeration-12ft-refrigerated-trailer/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/breakroom-trailer/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:04:17"
     },
     {
       "path": "/equipment-rental/classroom-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2024-02-02T19:04:47"
     },
     {
       "path": "/equipment-rental/fencing-barricades-trash-receptacles/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T15:53:02"
     },
     {
       "path": "/equipment-rental/generator-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-02-18T19:19:09"
     },
     {
       "path": "/equipment-rental/laundry-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T16:01:27"
     },
     {
       "path": "/equipment-rental/mobile-kitchen-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T12:38:47"
     },
     {
       "path": "/equipment-rental/mobile-office-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:01:48"
     },
     {
       "path": "/equipment-rental/modular-buildings/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-12-10T01:46:54"
     },
     {
       "path": "/equipment-rental/modular-command-center-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-03-30T19:21:03"
     },
     {
       "path": "/equipment-rental/ramp-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-04-14T16:48:35"
     },
     {
       "path": "/equipment-rental/refrigeration/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-02-18T18:34:26"
     },
     {
       "path": "/equipment-rental/restroom-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:21:43"
     },
     {
       "path": "/equipment-rental/security-camera-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T16:24:02"
     },
     {
       "path": "/equipment-rental/shower-trailer/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:13:17"
     },
     {
       "path": "/equipment-rental/stair-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T16:30:14"
     },
     {
       "path": "/equipment-rental/tent-structures/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-03-30T17:41:07"
     },
     {
       "path": "/equipment-rental/wastewater-and-freshwater-container/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-11-04T11:19:15"
     },
     {
       "path": "/facility-management-and-base-operations-support/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-06-29T20:28:55"
     },
     {
       "path": "/food-services-2/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-11-04T07:41:28"
     },
     {
       "path": "/government-and-non-government/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-04-12T16:05:00"
     },
     {
       "path": "/government/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-12-06T11:06:56"
     },
     {
       "path": "/government/correctional-facilities/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-05-24T16:37:34"
     },
     {
@@ -227,52 +228,52 @@
     },
     {
       "path": "/government/military-kitchen/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-04-18T19:31:57"
     },
     {
       "path": "/gsa-schedule/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-12-12T21:04:39"
     },
     {
       "path": "/hospitality/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-06-29T20:29:33"
     },
     {
       "path": "/man-camp-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:38:36"
     },
     {
       "path": "/man-camps-for-rent/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:34:30"
     },
     {
       "path": "/mining-man-camp-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:48:49"
     },
     {
       "path": "/mobile-kitchen-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T17:58:11"
     },
     {
       "path": "/mobile-man-camp-for-lease/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-11-04T12:59:13"
     },
     {
       "path": "/mobile-staffing/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-03-30T19:22:32"
     },
     {
       "path": "/mobile-units-for-disaster-relief-special-events/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-04-12T16:03:17"
     },
     {
@@ -282,61 +283,61 @@
     },
     {
       "path": "/oilfield-man-camp-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:52:38"
     },
     {
       "path": "/portable-dishwashing-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:33:54"
     },
     {
       "path": "/portable-man-camps-for-rent/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:41:26"
     },
     {
       "path": "/remote-basecamp-temporary-housing-rent-mobile-trailers-modular-buildings-restroom-shower-laundry-dining-temporary-building-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:09:06"
     },
     {
       "path": "/remote-containerized-military-berthing-solution-for-rent/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/remote-man-camp-for-rent/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-02-18T19:12:04"
     },
     {
       "path": "/remote-man-camp-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:42:14"
     },
     {
       "path": "/restroom-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:28:38"
     },
     {
       "path": "/shower-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:17:08"
     },
     {
       "path": "/sleeper-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:24:36"
     },
     {
       "path": "/temporary-man-camp-solutions/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:41:54"
     },
     {
       "path": "/turnkey-man-camp-solutions/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:54:06"
     },
     {
@@ -346,147 +347,147 @@
     },
     {
       "path": "/equipment-rental/handwashing-stations/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/mobile-sleep-trailers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/mobile-crew-camps/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/refrigerated-containers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/bunkhouse-trailers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/dining-structure-rental/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-restroom-combination-trailers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/24ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/26ft-bulk/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/28ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/38ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/40ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/40ft-combination/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/dishwashing-trailers/22ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/dishwashing-trailers/24ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/dishwashing-trailers/26ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/dishwashing-trailers/38ft-conveyor/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-trailers/12ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-trailers/14ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-trailers/20ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-trailers/30ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/restroom-trailers/12ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/restroom-trailers/14ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/restroom-trailers/20ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/restroom-trailers/30ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-restroom-combination-trailers/12ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-restroom-combination-trailers/14ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-restroom-combination-trailers/20ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/shower-restroom-combination-trailers/30ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-sleeper-trailers/20ft-shared/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-sleeper-trailers/20ft-contractor/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/mobile-sleeper-trailers/20ft-vip/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/laundry-trailers/24ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/laundry-trailers/30ft/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/services/handwashing-trailers/hands-free/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/service-areas/alabama/north-alabama/",
@@ -1588,6 +1589,7 @@
     "/government/emergency-services/",
     "/temporary-luxury-remote-accommodation-rentals/",
     "/testimonials/",
+    "/wp-content/uploads/2021/11/CLASSROOM-TRAILER-web.jpg",
     "/wp-content/uploads/2023/02/Air-Force.png",
     "/wp-content/uploads/2023/02/Army.png",
     "/wp-content/uploads/2023/02/Coast-Guard.png",

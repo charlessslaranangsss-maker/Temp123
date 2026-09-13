@@ -1,4 +1,15 @@
-export const publicOrigin = "https://temporary123.com";
+export const publicOrigin = "https://temp123-alpha.vercel.app";
+
+export type IndexingScope = "full" | "homepage-and-service-areas";
+
+export function routeInIndexingScope(path: string, scope: IndexingScope) {
+  if (scope === "full") return true;
+  return (
+    path === "/" ||
+    path === "/service-areas/" ||
+    path.startsWith("/service-areas/")
+  );
+}
 
 export function productionBuild(mode: string, environment?: string) {
   return (

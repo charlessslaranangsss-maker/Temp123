@@ -30,7 +30,7 @@
       "missing": [
         {
           "type": "host",
-          "value": "temporary123\\.com"
+          "value": "temp123-alpha\\.vercel\\.app"
         }
       ],
       "headers": [

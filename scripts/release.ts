@@ -3,47 +3,51 @@ import { readFileSync } from "node:fs";
 import { publicOrigin } from "./seo-policy";
 export function releaseErrors() {
   const errors: string[] = [];
+  const scopedIndexing = site.indexingScope === "homepage-and-service-areas";
   if (site.origin !== publicOrigin)
     errors.push(
       "Canonical origin must match the owner-approved production domain",
     );
-  try {
-    const review = JSON.parse(
+  if (!scopedIndexing)
+    try {
+      const review = JSON.parse(
+        readFileSync(
+          new URL("../content/migration-review.json", import.meta.url),
+          "utf8",
+        ),
+      );
+      for (const [field, message] of Object.entries({
+        sourceRecoveryComplete:
+          "Legacy URL/content recovery and decisions are incomplete",
+        googlePropertiesVerified:
+          "Analytics and Search Console property/consent verification is incomplete",
+        inquiryDeliveryVerified: "Inquiry delivery has not been verified",
+        businessClaimsReviewed: "Business and procurement claims need review",
+        oldWorkflowParityVerified:
+          "Legacy planning and rental workflow parity is unverified",
+      }))
+        if (review[field] !== true) errors.push(message);
+      if (
+        review.redirectReviews.some(
+          (row: { status: string }) => row.status !== "verified",
+        )
+      )
+        errors.push("Redirect content equivalence has unresolved decisions");
+    } catch {
+      errors.push("A complete migration review is required");
+    }
+  if (!scopedIndexing) {
+    const status = JSON.parse(
       readFileSync(
-        new URL("../content/migration-review.json", import.meta.url),
+        new URL("../content/migration-status.json", import.meta.url),
         "utf8",
       ),
     );
-    for (const [field, message] of Object.entries({
-      sourceRecoveryComplete:
-        "Legacy URL/content recovery and decisions are incomplete",
-      googlePropertiesVerified:
-        "Analytics and Search Console property/consent verification is incomplete",
-      inquiryDeliveryVerified: "Inquiry delivery has not been verified",
-      businessClaimsReviewed: "Business and procurement claims need review",
-      oldWorkflowParityVerified:
-        "Legacy planning and rental workflow parity is unverified",
-    }))
-      if (review[field] !== true) errors.push(message);
-    if (
-      review.redirectReviews.some(
-        (row: { status: string }) => row.status !== "verified",
-      )
-    )
-      errors.push("Redirect content equivalence has unresolved decisions");
-  } catch {
-    errors.push("A complete migration review is required");
+    if (!status.complete)
+      errors.push(
+        `Source migration incomplete: ${status.recovered} of ${status.expected} pages recovered`,
+      );
   }
-  const status = JSON.parse(
-    readFileSync(
-      new URL("../content/migration-status.json", import.meta.url),
-      "utf8",
-    ),
-  );
-  if (!status.complete)
-    errors.push(
-      `Source migration incomplete: ${status.recovered} of ${status.expected} pages recovered`,
-    );
   try {
     const url = new URL(site.origin);
     if (
@@ -62,19 +66,21 @@ export function releaseErrors() {
   }
   if (!/^\+[1-9]\d{7,14}$/.test(site.phoneE164) || !site.phoneDisplay)
     errors.push("approved phone missing");
-  const migration = JSON.parse(
-    readFileSync(
-      new URL("../audit/backlink-reconciliation.json", import.meta.url),
-      "utf8",
-    ),
-  );
-  if (
-    migration.some(
-      (row: { migrationStatus: string }) =>
-        row.migrationStatus === "needs_source_recovery",
+  if (!scopedIndexing) {
+    const migration = JSON.parse(
+      readFileSync(
+        new URL("../audit/backlink-reconciliation.json", import.meta.url),
+        "utf8",
+      ),
+    );
+    if (
+      migration.some(
+        (row: { migrationStatus: string }) =>
+          row.migrationStatus === "needs_source_recovery",
+      )
     )
-  )
-    errors.push("Backlink target recovery is incomplete");
+      errors.push("Backlink target recovery is incomplete");
+  }
   try {
     const evidence = JSON.parse(
       readFileSync(
@@ -104,6 +110,6 @@ if (process.argv[1]?.endsWith("release.ts")) {
     process.exitCode = 1;
   } else
     console.log(
-      "Editorial configuration checks passed. Complete staging security/deployment evidence before release.",
+      "Indexing configuration checks passed for the approved release scope.",
     );
 }

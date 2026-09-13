@@ -3,6 +3,7 @@ import {
   canonicalFor,
   modificationDate,
   productionBuild,
+  routeInIndexingScope,
   sitemapXml,
 } from "../scripts/seo-policy";
 import { renderSourceContent } from "../scripts/source-content";
@@ -32,7 +33,10 @@ describe("evidence-based city consolidation", () => {
         media: {},
         unresolved: new Set(),
       });
-      const escaped = (row.sourceLocation || row.location).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const escaped = (row.sourceLocation || row.location).replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&",
+      );
       const text = load(html)
         .text()
         .toLowerCase()
@@ -57,16 +61,28 @@ describe("migration indexing separation", () => {
     expect(productionBuild("draft", "production")).toBe(false);
     expect(canonicalFor("/gsa-schedule/", true, false)).toBeUndefined();
     expect(canonicalFor("/gsa-schedule/", true, true)).toBe(
-      "https://temporary123.com/gsa-schedule/",
+      "https://temp123-alpha.vercel.app/gsa-schedule/",
     );
     expect(canonicalFor("/video/", false, true)).toBeUndefined();
     expect(() => canonicalFor("//evil.example/", true, true)).toThrow();
+  });
+  it("limits this release to the homepage and service-area routes", () => {
+    const scope = "homepage-and-service-areas";
+    expect(routeInIndexingScope("/", scope)).toBe(true);
+    expect(routeInIndexingScope("/service-areas/", scope)).toBe(true);
+    expect(
+      routeInIndexingScope(
+        "/service-areas/washington/olympic-peninsula/",
+        scope,
+      ),
+    ).toBe(true);
+    expect(routeInIndexingScope("/equipment-rental/", scope)).toBe(false);
   });
   it("protects nonproduction hostnames, including static downloads", () => {
     const rule = vercel.headers.find((rule) => "missing" in rule);
     expect(rule).toMatchObject({
       source: "/(.*)",
-      missing: [{ type: "host", value: "temporary123\\.com" }],
+      missing: [{ type: "host", value: "temp123-alpha\\.vercel\\.app" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
     });
   });

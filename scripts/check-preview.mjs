@@ -4,9 +4,13 @@ import { load } from "cheerio";
 
 const root = resolve("dist");
 const vercel = JSON.parse(await readFile("vercel.json", "utf8"));
+const site = JSON.parse(await readFile("site.json", "utf8"));
 const redirectSources = new Set(vercel.redirects.map((rule) => rule.source));
 const registry = JSON.parse(
   await readFile("audit/build-registry.json", "utf8"),
+);
+const registeredPages = new Map(
+  registry.pages.map((page) => [page.path, page]),
 );
 const review = JSON.parse(
   await readFile("content/migration-review.json", "utf8"),
@@ -71,12 +75,26 @@ for (const file of htmlFiles) {
   )
     problems.push({ file, issue: "boilerplate-description" });
 
+  const indexable =
+    registry.mode === "production" && registeredPages.get(route)?.indexable;
   const expectedRobots =
-    route === "/404/" ? "noindex,nofollow" : "noindex,follow";
+    route === "/404/"
+      ? "noindex,nofollow"
+      : indexable
+        ? "index,follow"
+        : "noindex,follow";
   if (robots !== expectedRobots)
-    problems.push({ file, issue: "preview-robots", value: robots });
-  if (canonical)
-    problems.push({ file, issue: "preview-canonical", value: canonical });
+    problems.push({ file, issue: "robots", value: robots, expectedRobots });
+  const expectedCanonical = indexable
+    ? new URL(route, site.origin).href
+    : undefined;
+  if (canonical !== expectedCanonical)
+    problems.push({
+      file,
+      issue: "canonical",
+      value: canonical,
+      expectedCanonical,
+    });
 
   for (const selector of [
     "meta[property='og:title']",
@@ -97,11 +115,17 @@ for (const file of htmlFiles) {
     if (!value || /^(tel:|mailto:|#)/i.test(value)) continue;
     let url;
     try {
-      url = new URL(value, "https://temporary123.com");
+      url = new URL(value, site.origin);
     } catch {
       continue;
     }
-    if (!["temporary123.com", "www.temporary123.com"].includes(url.hostname))
+    if (
+      ![
+        new URL(site.origin).hostname,
+        "temporary123.com",
+        "www.temporary123.com",
+      ].includes(url.hostname)
+    )
       continue;
     const clean = decodeURIComponent(url.pathname);
     const target = resolve(root, `.${clean}`);
@@ -149,8 +173,26 @@ const robotsText = await readFile(resolve(root, "robots.txt"), "utf8");
 if (!/User-agent: \*\s+Allow: \/\s+Disallow: \/api\//.test(robotsText))
   problems.push({ issue: "robots-policy" });
 const sitemapText = await readFile(resolve(root, "sitemap.xml"), "utf8");
-if (/<url>/.test(sitemapText))
-  problems.push({ issue: "preview-sitemap-not-empty" });
+const sitemapUrls = [...sitemapText.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
+  (match) => match[1].replaceAll("&amp;", "&"),
+);
+const expectedSitemapUrls = registry.pages
+  .filter((page) => registry.mode === "production" && page.indexable)
+  .map((page) => new URL(page.path, site.origin).href);
+if (
+  sitemapUrls.length !== expectedSitemapUrls.length ||
+  sitemapUrls.some((url, index) => url !== expectedSitemapUrls[index])
+)
+  problems.push({
+    issue: "sitemap-coverage",
+    actual: sitemapUrls.length,
+    expected: expectedSitemapUrls.length,
+  });
+if (
+  registry.mode === "production" &&
+  !robotsText.includes(`Sitemap: ${site.origin}/sitemap.xml`)
+)
+  problems.push({ issue: "robots-sitemap-reference" });
 
 const report = {
   checkedAt: new Date().toISOString(),
@@ -169,9 +211,11 @@ const report = {
   migration: JSON.parse(
     await readFile("content/migration-status.json", "utf8"),
   ),
-  launchReady: false,
+  launchReady: registry.mode === "production" && problems.length === 0,
   indexing:
-    "Revision host remains noindex. Production origin migration is incomplete.",
+    registry.mode === "production"
+      ? `${expectedSitemapUrls.length} approved routes emit index,follow, self-canonicals and sitemap entries. Other routes remain noindex.`
+      : "This build remains excluded from indexing.",
 };
 await writeFile(
   "audit/homepage-revision-check.json",
