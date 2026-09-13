@@ -79,7 +79,7 @@ export function Header({ path }: { path: string }) {
             />
           </svg>
           <p className="utility-message">
-            <strong>Live agents available 24/7.</strong>{" "}
+            <strong>Emergency support available 24/7.</strong>{" "}
             <span className="utility-call-label">Call us at</span>{" "}
             <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>{" "}
             <span className="utility-specialist">
