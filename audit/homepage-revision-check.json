@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-13T18:23:11.426Z",
+  "checkedAt": "2026-09-13T18:28:37.072Z",
   "htmlPages": 354,
   "localLinks": 42276,
   "localImages": 1899,
@@ -50,5 +50,5 @@
     "checkedAt": "2026-09-11T16:39:23.031Z"
   },
   "launchReady": true,
-  "indexing": "248 approved routes emit index,follow, self-canonicals and sitemap entries. Other routes remain noindex."
+  "indexing": "25 approved routes emit index,follow, self-canonicals and sitemap entries. Other routes remain noindex."
 }

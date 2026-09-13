@@ -4,6 +4,13 @@ import { publicOrigin } from "./seo-policy";
 export function releaseErrors() {
   const errors: string[] = [];
   const scopedIndexing = site.indexingScope === "homepage-and-service-areas";
+  if (
+    scopedIndexing &&
+    (site.indexingBatchSize !== 25 ||
+      !Number.isInteger(site.activeIndexingBatch) ||
+      site.activeIndexingBatch < 1)
+  )
+    errors.push("Scoped indexing must use a valid 25-page active batch");
   if (site.origin !== publicOrigin)
     errors.push(
       "Canonical origin must match the owner-approved production domain",

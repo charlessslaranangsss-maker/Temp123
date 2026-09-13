@@ -5,5 +5,8 @@
   "phoneE164": "+18004435212",
   "mode": "production",
   "indexingScope": "homepage-and-service-areas",
+  "indexingBatchSize": 25,
+  "activeIndexingBatch": 1,
+  "indexingStartDate": "2026-09-14",
   "inquiriesEnabled": false
 }

@@ -10,6 +10,7 @@ import {
   canonicalFor,
   productionBuild,
   routeInIndexingScope,
+  routesForIndexingBatch,
   sitemapXml,
   type IndexingScope,
 } from "./seo-policy";
@@ -79,11 +80,16 @@ const editorialNoindex = new Set([
   "/modular-kitchen-facilities/",
   "/video/",
 ]);
-const indexableRoutes = allRoutes.filter(
+const scopedIndexingRoutes = allRoutes.filter(
   (path) =>
     !redirectedRoutes.has(path) &&
     !editorialNoindex.has(path) &&
     routeInIndexingScope(path, indexingScope),
+);
+const indexableRoutes = routesForIndexingBatch(
+  scopedIndexingRoutes,
+  site.activeIndexingBatch,
+  site.indexingBatchSize,
 );
 const compact = (value: string, maximum: number) => {
   const clean = value.replace(/\s+/g, " ").trim();
@@ -446,9 +452,47 @@ await writeFile(
       generatedAt: new Date().toISOString(),
       mode: release ? "production" : "preview",
       indexingScope,
+      indexingBatchSize: site.indexingBatchSize,
+      activeIndexingBatch: site.activeIndexingBatch,
+      eligibleIndexingRoutes: scopedIndexingRoutes.length,
+      activeIndexingRoutes: indexableRoutes.length,
       pages: registry,
       unresolvedSourceLinks: [...unresolvedSourceLinks].sort(),
       restoredAssets,
+    },
+    null,
+    2,
+  ) + "\n",
+);
+const rolloutStart = new Date(`${site.indexingStartDate}T00:00:00Z`);
+const rolloutBatches = Array.from(
+  { length: Math.ceil(scopedIndexingRoutes.length / site.indexingBatchSize) },
+  (_, index) => {
+    const date = new Date(rolloutStart);
+    date.setUTCDate(date.getUTCDate() + index);
+    return {
+      batch: index + 1,
+      plannedDate: date.toISOString().slice(0, 10),
+      active: index + 1 <= site.activeIndexingBatch,
+      routes: scopedIndexingRoutes.slice(
+        index * site.indexingBatchSize,
+        (index + 1) * site.indexingBatchSize,
+      ),
+    };
+  },
+);
+await writeFile(
+  "audit/indexing-rollout.json",
+  JSON.stringify(
+    {
+      generatedAt: new Date().toISOString(),
+      origin: site.origin,
+      indexingScope,
+      batchSize: site.indexingBatchSize,
+      activeBatch: site.activeIndexingBatch,
+      totalRoutes: scopedIndexingRoutes.length,
+      totalBatches: rolloutBatches.length,
+      batches: rolloutBatches,
     },
     null,
     2,

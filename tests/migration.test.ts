@@ -4,6 +4,7 @@ import {
   modificationDate,
   productionBuild,
   routeInIndexingScope,
+  routesForIndexingBatch,
   sitemapXml,
 } from "../scripts/seo-policy";
 import { renderSourceContent } from "../scripts/source-content";
@@ -77,6 +78,12 @@ describe("migration indexing separation", () => {
       ),
     ).toBe(true);
     expect(routeInIndexingScope("/equipment-rental/", scope)).toBe(false);
+  });
+  it("activates cumulative groups of 25 routes", () => {
+    const routes = Array.from({ length: 63 }, (_, index) => `/route-${index}/`);
+    expect(routesForIndexingBatch(routes, 1, 25)).toEqual(routes.slice(0, 25));
+    expect(routesForIndexingBatch(routes, 2, 25)).toEqual(routes.slice(0, 50));
+    expect(routesForIndexingBatch(routes, 3, 25)).toEqual(routes);
   });
   it("protects nonproduction hostnames, including static downloads", () => {
     const rule = vercel.headers.find((rule) => "missing" in rule);

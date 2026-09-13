@@ -11,6 +11,18 @@ export function routeInIndexingScope(path: string, scope: IndexingScope) {
   );
 }
 
+export function routesForIndexingBatch(
+  paths: string[],
+  activeBatch: number,
+  batchSize: number,
+) {
+  if (!Number.isInteger(activeBatch) || activeBatch < 1)
+    throw new Error("Active indexing batch must be a positive integer");
+  if (!Number.isInteger(batchSize) || batchSize < 1)
+    throw new Error("Indexing batch size must be a positive integer");
+  return paths.slice(0, activeBatch * batchSize);
+}
+
 export function productionBuild(mode: string, environment?: string) {
   return (
     mode === "production" && (!environment || environment === "production")
