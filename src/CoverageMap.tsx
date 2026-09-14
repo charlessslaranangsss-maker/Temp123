@@ -156,7 +156,13 @@ function Geography({ id }: { id: string }) {
     </svg>
   );
 }
-export function CoverageMap({ compact = false }: { compact?: boolean }) {
+export function CoverageMap({
+  compact = false,
+  showDirectory = true,
+}: {
+  compact?: boolean;
+  showDirectory?: boolean;
+}) {
   return (
     <>
       <figure className="coverage-map" aria-labelledby="coverage-map-title">
@@ -529,7 +535,7 @@ export function CoverageMap({ compact = false }: { compact?: boolean }) {
           </dialog>
         )}
       </figure>
-      <MapLocationDirectory />
+      {showDirectory && <MapLocationDirectory />}
     </>
   );
 }

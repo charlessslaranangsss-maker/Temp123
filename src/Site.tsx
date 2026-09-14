@@ -4,6 +4,7 @@ import { StateDetail, statePageByPath } from "./StateDetail";
 import { CityDetail } from "./CityDetail";
 import { cityPageByPath } from "./cityDirectory";
 import { CoverageMap } from "./CoverageMap";
+import { MapLocationDirectory } from "./MapLocationDirectory";
 import { CityDirectoryPage } from "./CityDirectoryPage";
 import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
@@ -485,14 +486,17 @@ export function Site({
                     </div>
                   </div>
                 </div>
+                <div
+                  id="service-area-map"
+                  className="location-hero-map"
+                  aria-label="Explore service locations"
+                >
+                  <CoverageMap showDirectory={false} />
+                </div>
               </div>
             </section>
-            <section
-              className="wrap section"
-              id="service-area-map"
-              aria-label="Explore service locations"
-            >
-              <CoverageMap />
+            <section className="wrap section">
+              <MapLocationDirectory />
             </section>
             <section
               className="wrap section state-planning"

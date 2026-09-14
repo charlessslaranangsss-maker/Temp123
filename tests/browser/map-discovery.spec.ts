@@ -8,6 +8,18 @@ for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     for (const route of ["/", "/service-areas/"]) {
       await page.goto(route);
+      if (route === "/service-areas/") {
+        const copy = await page.locator(".location-hero-copy").boundingBox();
+        const map = await page.locator(".location-hero-map").boundingBox();
+        expect(copy).not.toBeNull();
+        expect(map).not.toBeNull();
+        if (width >= 1200)
+          expect(map!.x).toBeGreaterThanOrEqual(copy!.x + copy!.width);
+        else expect(map!.y).toBeGreaterThanOrEqual(copy!.y + copy!.height);
+        await page
+          .locator(".location-hero")
+          .screenshot({ path: `test-results/service-area-hero-${width}.png` });
+      }
       await expect(
         page.locator(".coverage-map-stage [data-state]"),
       ).toHaveCount(50);

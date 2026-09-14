@@ -1,4 +1,7 @@
 /* Coverage controls and SVG labels use a consistent light surface. */
+.location-hero-map {
+  min-width: 0;
+}
 .map-location-directory {
   margin-block: 2rem;
   color: var(--ink, #112d36);
