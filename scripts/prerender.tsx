@@ -25,6 +25,9 @@ import { catalog } from "../src/EquipmentCatalog";
 import modelDetails from "../content/service-details.json" with { type: "json" };
 import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import { regionPages, regionPageByPath } from "../src/regionGuides";
+import { cityPageByPath, reviewedCityPages } from "../src/cityDirectory";
+import { cityHeadline } from "../src/CityDetail";
+import { cityEditorial } from "../src/cityEditorial";
 import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
@@ -81,6 +84,8 @@ const allRoutes = [
     ...serviceCategories.map((item) => item.href),
     ...serviceOptions.map((item) => item.href),
     ...regionPages.map((item) => item.path),
+    ...regionPages.map((item) => `${item.path}cities/`),
+    ...reviewedCityPages.map((item) => item.path),
     ...Object.keys(statePageByPath),
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
@@ -90,6 +95,7 @@ const editorialNoindex = new Set([
   "/government/hospitals/",
   "/modular-kitchen-facilities/",
   "/video/",
+  ...regionPages.map((item) => `${item.path}cities/`),
 ]);
 // Publish parents before their regions and include the priority service destinations.
 const orderedIndexingRoutes = [
@@ -105,7 +111,12 @@ const orderedIndexingRoutes = [
       Object.entries(statePageByPath).find(([, state]) => state === name)![0],
       ...regionPages
         .filter((region) => region.state === name)
-        .map((region) => region.path),
+        .flatMap((region) => [
+          region.path,
+          ...reviewedCityPages
+            .filter((city) => city.regionPath === region.path)
+            .map((city) => city.path),
+        ]),
     ]),
     ...allRoutes,
   ]),
@@ -181,6 +192,10 @@ for (const path of [...allRoutes, "/404/"]) {
   const serviceCategory = serviceCategories.find((item) => item.href === path);
   const detail = modelDetails[path as keyof typeof modelDetails];
   const region = regionPageByPath[path];
+  const city = cityPageByPath[path];
+  const directoryRegion = path.endsWith("/cities/")
+    ? regionPageByPath[path.slice(0, -7)]
+    : undefined;
   const stateName = statePageByPath[path];
   const industry = industryGuideByPath[path];
   const info = industry
@@ -193,6 +208,16 @@ for (const path of [...allRoutes, "/404/"]) {
           title: detail.name + " Rental | Temporary123",
           description: detail.intro.split(". ")[0] + ".",
         }
+      : city
+        ? {
+            title: `${cityHeadline(city)} | Temporary123`,
+            description: compact(`${cityEditorial[city.geoid].intro} Emergency 24/7.`, 155),
+          }
+        : directoryRegion
+          ? {
+              title: `${directoryRegion.region}, ${directoryRegion.state} City Rental Directory | Temporary123`,
+              description: `Browse ${directoryRegion.region}, ${directoryRegion.state} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
+            }
       : region
         ? {
             title: `${region.index % 2 ? "Trailer Rental" : "Facilities Rental"} in ${region.region}, ${region.state}: Temporary Facilities to Rent or Lease | Temporary123`,
@@ -387,6 +412,7 @@ for (const path of [...allRoutes, "/404/"]) {
       crumbs,
       service: Boolean(
         industry ||
+        city ||
         region ||
         stateName ||
         serviceCategory ||
@@ -394,7 +420,9 @@ for (const path of [...allRoutes, "/404/"]) {
         catalogItem ||
         detail,
       ),
-      area: region
+      area: city
+        ? { name: city.name, state: city.state }
+        : region
         ? { name: region.region, state: region.state }
         : stateName
           ? { name: stateName }

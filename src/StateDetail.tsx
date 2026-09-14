@@ -5,6 +5,7 @@ import { regionPages } from "./regionGuides";
 import { serviceCategories } from "./serviceMenu";
 import { stateRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
+import { citiesForRegion } from "./cityDirectory";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
@@ -80,6 +81,7 @@ export function StateDetail({ name }: { name: string }) {
             <a href={region.path} key={region.path}>
               <strong>{region.region}</strong>
               <span>{region.cities.slice(0, 3).join(", ")}</span>
+              <span>{citiesForRegion(region.path).length} listed locations</span>
               <span aria-hidden="true">↗</span>
             </a>
           ))}

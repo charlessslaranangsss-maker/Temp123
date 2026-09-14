@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-14T13:48:39.912Z",
+  "generatedAt": "2026-09-14T15:41:16.489Z",
   "mode": "preview",
   "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
-  "eligibleIndexingRoutes": 304,
+  "eligibleIndexingRoutes": 309,
   "activeIndexingRoutes": 0,
   "domainRoutingReady": false,
   "pages": [
@@ -1456,6 +1456,1010 @@
     },
     {
       "path": "/service-areas/wyoming/southeast-wyoming/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/north-alabama/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/central-alabama/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/wiregrass/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alabama/gulf-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/southcentral/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/interior/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/southeast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/southwest/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/alaska/arctic/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arizona/northern-arizona/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arizona/phoenix-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arizona/southern-arizona/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arkansas/ozarks/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arkansas/arkansas-river-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arkansas/delta/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/arkansas/southwest-arkansas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/north-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/bay-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/central-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/los-angeles-basin/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/inland-empire/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/california/san-diego/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/colorado/front-range/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/colorado/western-slope/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/colorado/eastern-plains/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/colorado/san-luis-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/connecticut/litchfield-hills/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/connecticut/greater-hartford/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/connecticut/connecticut-river-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/connecticut/connecticut-shoreline/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/delaware/northern-delaware/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/delaware/central-delaware/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/delaware/delaware-beaches/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/north-florida/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/central-florida/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/south-florida/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/florida/florida-keys/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/north-georgia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/metro-atlanta/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/central-georgia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/coastal-georgia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/georgia/south-georgia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/hawaii/oahu/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/hawaii/maui-county/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/hawaii/hawaii-island/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/hawaii/kauai/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/idaho/north-idaho/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/idaho/southwest-idaho/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/idaho/central-mountains/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/idaho/eastern-idaho/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/illinois/chicago-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/illinois/northern-illinois/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/illinois/central-illinois/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/illinois/southern-illinois/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/indiana/northern-indiana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/indiana/central-indiana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/indiana/southern-indiana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/iowa/northwest-iowa/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/iowa/central-iowa/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/iowa/northeast-iowa/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/iowa/southern-iowa/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/western-kansas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/north-central-kansas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/kansas-city-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/south-central-kansas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kansas/southeast-kansas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kentucky/western-coalfields/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kentucky/bluegrass-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kentucky/eastern-kentucky/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/kentucky/south-central-kentucky/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/north-louisiana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/acadiana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/capital-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/greater-new-orleans/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/louisiana/river-parishes/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/aroostook-county/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/highlands/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/western-lakes-and-mountains/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/midcoast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/downeast-and-acadia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maine/southern-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/western-maryland/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/capital-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/central-maryland/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/eastern-shore/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/maryland/southern-maryland/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/berkshires/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/central-massachusetts/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/greater-boston/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/north-shore/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/massachusetts/south-shore-and-cape-cod/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/upper-peninsula/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/northern-lower-peninsula/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/west-michigan/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/mid-michigan/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/michigan/southeast-michigan/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/northwest-minnesota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/northeast-minnesota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/central-minnesota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/twin-cities/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/minnesota/southern-minnesota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/delta/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/hills/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/central-mississippi/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/pine-belt/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/mississippi/gulf-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/northwest-missouri/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/kansas-city-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/central-missouri/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/ozarks/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/st-louis-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/missouri/southeast-missouri/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/glacier-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/central-montana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/yellowstone-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/missouri-river-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/montana/southeast-montana/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/sandhills/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/central-nebraska/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/northeast-nebraska/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nebraska/lincoln-and-omaha-corridor/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/northern-nevada/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/reno-tahoe/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/central-nevada/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/las-vegas-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/nevada/southern-nevada/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/great-north-woods/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/white-mountains/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/lakes-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/dartmouth-lake-sunapee/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/merrimack-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-hampshire/seacoast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/skylands/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/gateway-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/central-jersey/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/shore-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/delaware-river-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-jersey/southern-shore/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/north-central-new-mexico/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/northeast-new-mexico/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/albuquerque-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/southeast-new-mexico/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-mexico/southwest-new-mexico/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/north-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/capital-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/central-new-york/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/finger-lakes/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/western-new-york/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/hudson-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/new-york/new-york-city-and-long-island/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/mountains/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/piedmont-triad/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/charlotte-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/research-triangle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/coastal-plain/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-carolina/outer-banks/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-dakota/western-north-dakota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-dakota/north-central-north-dakota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-dakota/red-river-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/north-dakota/south-central-north-dakota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/northeast-ohio/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/northwest-ohio/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/central-ohio/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/southwest-ohio/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/ohio/southeast-ohio/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/northwest-oklahoma/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/green-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/central-oklahoma/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/kiamichi-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oklahoma/southwest-oklahoma/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/oregon-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/willamette-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/southern-oregon/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/central-oregon/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/oregon/eastern-oregon/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/erie-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/pittsburgh-and-southwest/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/pennsylvania-wilds/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/central-pennsylvania/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/northeast-pennsylvania/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/pennsylvania/philadelphia-and-southeast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/rhode-island/providence-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/rhode-island/blackstone-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/rhode-island/newport-county/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/rhode-island/south-county/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-carolina/upstate/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-carolina/midlands/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-carolina/pee-dee/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-carolina/lowcountry/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-dakota/black-hills-and-badlands/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-dakota/central-south-dakota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-dakota/glacial-lakes-and-prairies/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/south-dakota/southeast-south-dakota/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/tennessee/west-tennessee/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/tennessee/middle-tennessee/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/tennessee/cumberland-plateau/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/tennessee/east-tennessee/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/north-texas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/east-texas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/central-texas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/west-texas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/gulf-coast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/texas/south-texas/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/northern-utah/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/wasatch-front/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/central-utah/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/southeastern-utah/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/utah/southwestern-utah/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/vermont/northeast-kingdom/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/vermont/champlain-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/vermont/central-vermont/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/vermont/southern-vermont/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/northern-virginia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/shenandoah-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/central-virginia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/hampton-roads/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/eastern-shore/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/virginia/southwest-virginia/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/olympic-peninsula/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/puget-sound/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/north-cascades/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/central-washington/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/eastern-washington/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/southwest-washington/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/northern-panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/mountaineer-country/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/eastern-panhandle/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/metro-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/new-river-greenbrier-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/west-virginia/southern-coalfields/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/northwoods/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/lake-superior-region/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/central-wisconsin/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/fox-valley/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/madison-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/milwaukee-and-southeast/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wisconsin/driftless-area/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/northwest-wyoming/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/northeast-wyoming/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/central-wyoming/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/southwest-wyoming/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/wyoming/southeast-wyoming/cities/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/olympic-peninsula/sequim/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/puget-sound/olympia/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/puget-sound/seattle/",
+      "indexable": false
+    },
+    {
+      "path": "/service-areas/washington/puget-sound/tacoma/",
       "indexable": false
     },
     {

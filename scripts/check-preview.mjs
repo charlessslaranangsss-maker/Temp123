@@ -121,7 +121,12 @@ for (const file of htmlFiles) {
     for (const link of cityLinks) {
       const href = $(link).attr("href") || "";
       const url = new URL(href, site.origin);
-      if (!url.searchParams.get("location"))
+      const reviewedCityLink =
+        url.pathname.startsWith(route) &&
+        url.pathname !== `${route}cities/` &&
+        registeredPages.has(url.pathname) &&
+        !url.search;
+      if (!reviewedCityLink && !url.searchParams.get("location"))
         problems.push({ file, issue: "regional-city-link-location", href });
     }
     if (/click here/i.test($(".region-page").text()))

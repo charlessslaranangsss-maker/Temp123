@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-09-14T13:31:01.973Z",
-  "htmlPages": 399,
-  "localLinks": 50477,
-  "localImages": 1792,
-  "uniqueTitles": 399,
-  "uniqueDescriptions": 399,
-  "linkedRoutes": 428,
+  "checkedAt": "2026-09-14T15:44:51.132Z",
+  "htmlPages": 650,
+  "localLinks": 79882,
+  "localImages": 2048,
+  "uniqueTitles": 650,
+  "uniqueDescriptions": 650,
+  "linkedRoutes": 679,
   "problems": [],
   "pendingMigrationLinks": [
     {

@@ -53,6 +53,20 @@ search?.addEventListener("input", () => {
   document.querySelector("#catalog-status")!.textContent =
     `${count} matching pages`;
 });
+const citySearch = document.querySelector<HTMLInputElement>("#city-directory-search");
+citySearch?.addEventListener("input", () => {
+  const term = citySearch.value.trim().toLowerCase();
+  let count = 0;
+  document.querySelectorAll<HTMLElement>("[data-city-item]").forEach((item) => {
+    item.hidden = !item.dataset.cityName?.includes(term);
+    if (!item.hidden) count++;
+  });
+  document.querySelectorAll<HTMLElement>(".city-directory-group").forEach((group) => {
+    group.hidden = !group.querySelector("[data-city-item]:not([hidden])");
+  });
+  const status = document.querySelector<HTMLElement>("#city-directory-status");
+  if (status) status.textContent = `${count} matching locations`;
+});
 const mobileNav = document.querySelector<HTMLDetailsElement>(".mobile-nav");
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && mobileNav?.open) {

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-14T13:48:39.914Z",
+  "generatedAt": "2026-09-14T15:41:16.490Z",
   "origin": "https://temporary123.com",
   "indexingScope": "locations-and-priority-services",
   "batchSize": 25,
   "activeBatch": 1,
-  "totalRoutes": 304,
+  "totalRoutes": 309,
   "totalBatches": 13,
   "batches": [
     {
@@ -367,7 +367,12 @@
         "/service-areas/virginia/southwest-virginia/",
         "/service-areas/washington/",
         "/service-areas/washington/olympic-peninsula/",
+        "/service-areas/washington/olympic-peninsula/port-angeles/",
+        "/service-areas/washington/olympic-peninsula/sequim/",
         "/service-areas/washington/puget-sound/",
+        "/service-areas/washington/puget-sound/olympia/",
+        "/service-areas/washington/puget-sound/seattle/",
+        "/service-areas/washington/puget-sound/tacoma/",
         "/service-areas/washington/north-cascades/",
         "/service-areas/washington/central-washington/",
         "/service-areas/washington/eastern-washington/",
@@ -383,12 +388,7 @@
         "/service-areas/wisconsin/northwoods/",
         "/service-areas/wisconsin/lake-superior-region/",
         "/service-areas/wisconsin/central-wisconsin/",
-        "/service-areas/wisconsin/fox-valley/",
-        "/service-areas/wisconsin/madison-area/",
-        "/service-areas/wisconsin/milwaukee-and-southeast/",
-        "/service-areas/wisconsin/driftless-area/",
-        "/service-areas/wyoming/",
-        "/service-areas/wyoming/northwest-wyoming/"
+        "/service-areas/wisconsin/fox-valley/"
       ]
     },
     {
@@ -396,6 +396,11 @@
       "plannedDate": "2026-09-26",
       "active": false,
       "routes": [
+        "/service-areas/wisconsin/madison-area/",
+        "/service-areas/wisconsin/milwaukee-and-southeast/",
+        "/service-areas/wisconsin/driftless-area/",
+        "/service-areas/wyoming/",
+        "/service-areas/wyoming/northwest-wyoming/",
         "/service-areas/wyoming/northeast-wyoming/",
         "/service-areas/wyoming/central-wyoming/",
         "/service-areas/wyoming/southwest-wyoming/",

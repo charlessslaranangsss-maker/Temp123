@@ -1,6 +1,9 @@
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
 import { rentalCategoryHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
+import { CityDetail } from "./CityDetail";
+import { cityPageByPath } from "./cityDirectory";
+import { CityDirectoryPage } from "./CityDirectoryPage";
 import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
@@ -95,7 +98,7 @@ export function Header({ path }: { path: string }) {
       <div className="header-sticky header-refresh">
         <header className="header wrap">
           <a className="brand" href="/" aria-label="Temporary123 home">
-            <img src="/images/logo.webp" width="53" height="44" alt="" />
+            <img src="/images/temporary123-logo.png" width="80" height="44" alt="" />
             <span>
               Temporary<span className="brand-number">123</span>
               <small>TEMPORARY FACILITIES · PERMANENT COMMITMENT</small>
@@ -401,6 +404,7 @@ export function Site({
     (item) => item.path === path,
   );
   const serviceCategory = serviceCategories.find((item) => item.href === path);
+  const directoryParent = path.endsWith("/cities/") ? path.slice(0, -7) : "";
   return (
     <div id="top">
       <Header path={path} />
@@ -448,6 +452,10 @@ export function Site({
           <IndustryDetail path={path} />
         ) : statePageByPath[path] ? (
           <StateDetail name={statePageByPath[path]} />
+        ) : cityPageByPath[path] ? (
+          <CityDetail city={cityPageByPath[path]!} />
+        ) : regionPageByPath[directoryParent] ? (
+          <CityDirectoryPage guide={regionPageByPath[directoryParent]!} />
         ) : regionPageByPath[path] ? (
           <RegionDetail guide={regionPageByPath[path]!} />
         ) : path === "/service-areas/" ? (
@@ -1236,6 +1244,8 @@ export function Site({
       <Footer
         showClosing={
           !regionPageByPath[path] &&
+          !regionPageByPath[directoryParent] &&
+          !cityPageByPath[path] &&
           !statePageByPath[path] &&
           !industryGuideByPath[path]
         }

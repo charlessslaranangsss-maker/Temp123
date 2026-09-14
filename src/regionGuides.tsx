@@ -3,6 +3,7 @@ import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
 import { regionCities } from "./regionCities";
+import { citiesForRegion, hasCityGuide } from "./cityDirectory";
 import {
   buildRegionSeasonalDemand,
   type SeasonalDemand,
@@ -85,13 +86,19 @@ const buildCityLinks = (
   state: string,
   cities: string[],
   globalIndex: number,
+  path: string,
 ): ContextualLink[] =>
   cities.map((city, cityIndex) => {
     const service = priorityServices[(globalIndex + cityIndex) % 4];
     const label =
       service.labels[(globalIndex + cityIndex * 2) % service.labels.length];
+    const cityGuide = citiesForRegion(path).find(
+      (entry) => entry.name.toLowerCase() === city.toLowerCase(),
+    );
     return {
-      href: `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
+      href: cityGuide && hasCityGuide(cityGuide)
+        ? cityGuide.path
+        : `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
       label: capitalizeLinkLabel(`${label} in ${city}`),
       context:
         cityContexts[(globalIndex * 3 + cityIndex) % cityContexts.length],
@@ -194,6 +201,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
       .reduce((total, [, item]) => total + item.regions.length, 0);
     return guide.regions.map((region, regionIndex) => {
       const index = regionIndex;
+      const path = regionPath(state, region);
       const cities = regionCities(state, regionIndex);
       const visuals = buildRegionVisuals(
         stateOffset + regionIndex,
@@ -201,7 +209,6 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
         region,
         cities,
       );
-      const path = regionPath(state, region);
       const globalIndex = stateOffset + regionIndex;
       return {
         state,
@@ -220,7 +227,7 @@ export const regionPages: RegionGuide[] = regionStateEntries.flatMap(
           guide.fact,
         ),
         cities,
-        cityLinks: buildCityLinks(state, cities, globalIndex),
+        cityLinks: buildCityLinks(state, cities, globalIndex, path),
         serviceLinks: buildServiceLinks(globalIndex),
         commercialSummary:
           commercialIntentTemplates[
@@ -377,6 +384,9 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </p>
           ))}
         </div>
+        <a className="region-city-directory-link" href={`${guide.path}cities/`}>
+          Browse all {citiesForRegion(guide.path).length} {guide.region} rental locations ↗
+        </a>
       </section>
       <section
         className="wrap section region-seasonal"

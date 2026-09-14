@@ -133,10 +133,15 @@ describe("state and regional planning content", () => {
       ).toBe(guide.cityLinks.length);
       for (const [index, link] of guide.cityLinks.entries()) {
         const url = new URL(link.href, "https://temporary123.test");
-        expect(validServicePaths.has(url.pathname), link.href).toBe(true);
-        expect(url.searchParams.get("location"), link.href).toBe(
-          `${guide.cities[index]}, ${guide.state}`,
-        );
+        if (url.pathname.startsWith(guide.path)) {
+          expect(url.pathname.endsWith("/"), link.href).toBe(true);
+          expect(url.search, link.href).toBe("");
+        } else {
+          expect(validServicePaths.has(url.pathname), link.href).toBe(true);
+          expect(url.searchParams.get("location"), link.href).toBe(
+            `${guide.cities[index]}, ${guide.state}`,
+          );
+        }
         expect(link.label, guide.path).toContain(guide.cities[index]);
       }
       for (const link of guide.serviceLinks) {

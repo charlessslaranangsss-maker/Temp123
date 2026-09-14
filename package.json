@@ -16,6 +16,7 @@
     "check:release": "node --import tsx scripts/release.ts",
     "check:seo": "node scripts/check-preview.mjs",
     "check:links": "node scripts/check-internal-link-casing.mjs",
+    "check:cities": "node --import tsx scripts/check-city-pages.mjs",
     "optimize:location-photos": "python scripts/optimize-location-photos.py",
     "typecheck": "tsc --noEmit",
     "check:security": "python scripts/check-security-evidence.py security/security-evidence.json",

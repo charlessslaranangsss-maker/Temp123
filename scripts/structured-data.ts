@@ -20,7 +20,7 @@ export function pageSchema(input: {
       name: site.brand,
       url: `${origin}/`,
       telephone: site.phoneE164,
-      logo: `${origin}/images/logo.webp`,
+      logo: `${origin}/images/temporary123-logo.png`,
       areaServed: { "@type": "Country", name: "United States" },
       contactPoint: {
         "@type": "ContactPoint",
