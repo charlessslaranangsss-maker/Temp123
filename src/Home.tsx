@@ -78,7 +78,7 @@ export function Home() {
               <span aria-hidden="true" /> Nationwide equipment rentals
             </span>
             <h1 id="rental-title">
-              Temporary Facilities Rental
+              Temporary Facilities and Trailer Rental
               <br />
               <em>Rent or Lease Nationwide</em>
             </h1>
