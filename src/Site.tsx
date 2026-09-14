@@ -1,4 +1,5 @@
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
+import { rentalCategoryHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
 import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
@@ -460,10 +461,7 @@ export function Site({
                     <span aria-current="page">Service Areas</span>
                   </nav>
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
-                  <h1>
-                    Rental Services across the USA{" "}
-                    <small>Temporary Facilities to Rent or Lease</small>
-                  </h1>
+                  <h1>Temporary Facilities Rental across the USA</h1>
                   <p>
                     Rent or lease Temporary Facilities with Temporary123. Rental
                     services include mobile kitchens, hygiene facilities and
@@ -639,7 +637,7 @@ export function Site({
               <span className="eyebrow">TEMPORARY FACILITY RENTALS</span>
               <div className="service-category-heading">
                 <div>
-                  <h1>{serviceCategory.name}</h1>
+                  <h1>{rentalCategoryHeadline(serviceCategory.name)}</h1>
                   {path === consolidatedLocations.destination && (
                     <p
                       className="selected-project-location"

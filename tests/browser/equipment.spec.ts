@@ -1,5 +1,9 @@
 import { test, expect } from "@playwright/test";
 import { serviceCategories } from "../../src/serviceMenu";
+import {
+  rentalCategoryHeadline,
+  rentalProductHeadline,
+} from "../../src/rentalHeadlines";
 import details from "../../content/service-details.json" with { type: "json" };
 import catalog from "../../content/equipment-catalog.json" with { type: "json" };
 
@@ -76,7 +80,11 @@ test("equipment briefs remain readable and connected on mobile", async ({
     const detail = details[item.path as keyof typeof details];
     const category = serviceCategories.find((c) => c.href === item.path);
     await expect(page.locator("h1")).toHaveText(
-      detail?.name || category?.name || item.name,
+      detail
+        ? rentalProductHeadline(detail.name)
+        : category
+          ? rentalCategoryHeadline(category.name)
+          : rentalProductHeadline(item.name),
     );
     await expect(
       page.locator("main a[href='tel:+18004435212']").first(),

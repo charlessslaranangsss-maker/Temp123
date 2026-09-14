@@ -7,6 +7,7 @@ import {
   buildRegionSeasonalDemand,
   type SeasonalDemand,
 } from "./seasonalDemand";
+import { regionRentalHeadline } from "./rentalHeadlines";
 
 export const regionSlug = (value: string) =>
   value
@@ -303,9 +304,7 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </nav>
             <p className="eyebrow">REGIONAL RENTAL GUIDE</p>
             <h1>
-              {guide.index % 2 ? "Trailer Rental" : "Facilities Rental"} in{" "}
-              {guide.region}, {guide.state}{" "}
-              <small>Temporary Facilities to Rent or Lease</small>
+              {regionRentalHeadline(guide.region, guide.state, guide.index)}
             </h1>
             <p className="region-intro">{guide.intro}</p>
             <p className="region-emergency">Emergency 24/7</p>

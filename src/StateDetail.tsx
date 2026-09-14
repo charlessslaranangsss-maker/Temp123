@@ -3,6 +3,7 @@ import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPages } from "./regionGuides";
 import { serviceCategories } from "./serviceMenu";
+import { stateRentalHeadline } from "./rentalHeadlines";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
@@ -39,10 +40,7 @@ export function StateDetail({ name }: { name: string }) {
               <span aria-current="page">{name}</span>
             </nav>
             <p className="eyebrow">STATE RENTAL GUIDE</p>
-            <h1>
-              Rental Services in {name}{" "}
-              <small>Temporary Facilities to Rent or Lease</small>
-            </h1>
+            <h1>{stateRentalHeadline(name)}</h1>
             <p className="region-intro">{guide.intro}</p>
             <p className="region-emergency">Emergency 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>

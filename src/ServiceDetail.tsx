@@ -1,6 +1,7 @@
 import details from "../content/service-details.json" with { type: "json" };
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
+import { rentalProductHeadline } from "./rentalHeadlines";
 export const modelDetails = details;
 export function ServiceDetail({ path }: { path: keyof typeof details }) {
   const item = details[path];
@@ -20,7 +21,7 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
         <div className="model-hero">
           <div>
             <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
-            <h1>{item.name}</h1>
+            <h1>{rentalProductHeadline(item.name)}</h1>
             <p className="model-intro">{item.intro}</p>
             <div className="model-actions">
               <a className="button" href={"tel:" + site.phoneE164}>

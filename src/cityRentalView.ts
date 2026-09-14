@@ -1,4 +1,5 @@
 import { equipmentPhotos } from "./equipmentPhotos";
+import { cityRentalHeadline } from "./rentalHeadlines";
 
 // City selections retain the existing service URL and query. They are not new indexable city pages.
 export function applyCityRentalView(location: string) {
@@ -12,11 +13,8 @@ export function applyCityRentalView(location: string) {
     return;
   const originalTitle = title.textContent || "Temporary123 equipment";
   main.dataset.cityView = "true";
-  const headline = `Trailer Rental in ${location}`;
-  title.replaceChildren(document.createTextNode(`${headline} `));
-  const small = document.createElement("small");
-  small.textContent = "Temporary Facilities to Rent or Lease";
-  title.append(small);
+  const headline = cityRentalHeadline(location, originalTitle);
+  title.replaceChildren(document.createTextNode(headline));
   const description = document.createElement("p");
   description.className = "model-intro";
   description.textContent = `Rent or lease Temporary Facilities for your ${location} project. Explore ${originalTitle} and discuss rental availability with Temporary123. Emergency 24/7.`;

@@ -30,7 +30,8 @@ test("old city link retains location and the approved service names", async ({
   await page.goto(
     "/equipment-rental/mobile-kitchen-trailers/akiak-mobile-kitchen-rental/",
   );
-  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak");
+  await expect(page.locator("h1")).toHaveText(/Akiak/);
+  await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
   await expect(page.locator("[data-project-location]")).toHaveText("Akiak");
   await expect(
     page
@@ -38,7 +39,7 @@ test("old city link retains location and the approved service names", async ({
       .filter({ visible: true }),
   ).toBeVisible();
   await page.locator('.service-category-cards a[href*="/24ft/"]').click();
-  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak");
+  await expect(page.locator("h1")).toHaveText(/Akiak/);
   await page
     .getByRole("link", { name: "Contact Us at Temporary123", exact: true })
     .click();
@@ -65,7 +66,7 @@ test("location planner supports keyboard submission without JavaScript", async (
   expect(new URL(page.url()).searchParams.get("location")).toBe(
     "Arlington, Texas",
   );
-  await expect(page.locator("h1")).toHaveText("Mobile Kitchens");
+  await expect(page.locator("h1")).toHaveText("Mobile Kitchen Trailer Rental");
   await expect(page.locator(".service-category-cards a")).toHaveCount(7);
   await context.close();
 });

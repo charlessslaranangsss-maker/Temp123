@@ -23,7 +23,7 @@ test("Services stays selected across pointer gaps and closes only on outside cli
   );
   await model.click();
   await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
-  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer");
+  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer Rental");
   await trigger.click();
   await menu.getByRole("button", { name: "Dishwashing", exact: true }).click();
   await menu.getByRole("link", { name: "26ft Dishwashing Trailer" }).click();
@@ -202,6 +202,6 @@ test("Services and category selection work before JavaScript loads", async ({
     .getByRole("link", { name: "22ft Dishwashing Trailer" })
     .click();
   await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
-  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer");
+  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer Rental");
   await context.close();
 });

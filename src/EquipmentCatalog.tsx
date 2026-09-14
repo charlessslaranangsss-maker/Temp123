@@ -1,5 +1,6 @@
 import catalog from "../content/equipment-catalog.json" with { type: "json" };
 import site from "../site.json" with { type: "json" };
+import { rentalProductHeadline } from "./rentalHeadlines";
 export type CatalogItem = (typeof catalog.items)[number];
 
 function CatalogImage({ item }: { item: CatalogItem }) {
@@ -147,7 +148,7 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
       <div className="brief-intro">
         <div>
           <span className="eyebrow">TEMPORARY123 EQUIPMENT</span>
-          <h1>{item.name}</h1>
+          <h1>{rentalProductHeadline(item.name)}</h1>
           <p>{item.summary}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>
             Call {site.phoneDisplay}

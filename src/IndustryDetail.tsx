@@ -6,7 +6,7 @@ export const industryGuides = [
   {
     path: "/man-camps-for-rent/",
     name: "Construction & workforce",
-    title: "Construction & Workforce Trailer Rental",
+    title: "Construction Trailer Rental & Base Camp Facilities",
     layout: "workforce",
     photos: [28, 0, 20],
     description:
@@ -35,7 +35,7 @@ export const industryGuides = [
   {
     path: "/food-services-2/",
     name: "Food service & hospitality",
-    title: "Food Service & Hospitality Facilities Rental",
+    title: "Food Service Kitchen Trailer Lease",
     layout: "hospitality",
     photos: [1, 46, 24],
     description:
@@ -64,7 +64,7 @@ export const industryGuides = [
   {
     path: "/government/",
     name: "Government & public services",
-    title: "Government & Public Services Facilities Rental",
+    title: "Government Temporary Facilities Rental",
     layout: "public",
     photos: [26, 6, 29],
     description:
@@ -93,7 +93,7 @@ export const industryGuides = [
   {
     path: "/disaster-relief-man-camp-workforce-rentals/",
     name: "Emergency & disaster response",
-    title: "Emergency & Disaster Response Trailer Rental",
+    title: "Emergency Response Trailer Rental",
     layout: "emergency",
     photos: [23, 14, 30],
     description:
@@ -157,10 +157,7 @@ export function IndustryDetail({ path }: { path: string }) {
           <div className="industry-hero-grid">
             <div>
               <span className="eyebrow">{guide.name}</span>
-              <h1>
-                {guide.title}{" "}
-                <small>Temporary Facilities to Rent or Lease</small>
-              </h1>
+              <h1>{guide.title}</h1>
               <p>{guide.intro}</p>
               <a className="button" href={`tel:${site.phoneE164}`}>
                 Emergency 24/7 · {site.phoneDisplay}

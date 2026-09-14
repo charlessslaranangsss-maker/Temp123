@@ -47,14 +47,12 @@ for (const row of registry.pages) {
   });
   if (/^\/service-areas\/.+\/$/.test(row.path)) {
     locationPages++;
-    for (const token of [
-      /rental/i,
-      /\brent\b/i,
-      /\blease\b/i,
-      /temporary facilities/i,
-    ]) {
-      if (!token.test($("h1").text()))
-        issues.push([row.path, "h1-keyword", String(token)]);
+    const headline = $("h1").text().trim();
+    if (!/rental|lease|facilities/i.test(headline))
+      issues.push([row.path, "h1-commercial-intent"]);
+    if (headline.length > 75)
+      issues.push([row.path, "h1-too-long", headline.length]);
+    for (const token of [/rental/i, /\brent\b/i, /\blease\b/i, /temporary facilities/i]) {
       if (!token.test($('meta[name="description"]').attr("content")))
         issues.push([row.path, "description-keyword", String(token)]);
     }

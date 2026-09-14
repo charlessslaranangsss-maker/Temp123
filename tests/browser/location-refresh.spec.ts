@@ -12,10 +12,8 @@ for (const width of [390, 1440]) {
       "/service-areas/new-york/new-york-city-and-long-island/",
     ]) {
       await page.goto(route);
-      await expect(page.locator("h1")).toContainText("Rental");
-      await expect(page.locator("h1")).toContainText(
-        "Temporary Facilities to Rent or Lease",
-      );
+      await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
+      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(75);
       await expect(
         page.getByRole("heading", {
           name: "Rental Planning Conditions",
@@ -68,9 +66,8 @@ for (const width of [390, 1440]) {
     await page.keyboard.press("Escape");
     await page.goto("/service-areas/washington/olympic-peninsula/");
     await page.locator(".region-city-link-grid a").first().click();
-    await expect(page.locator("main h1")).toContainText(
-      "Trailer Rental in Port Angeles",
-    );
+    await expect(page.locator("main h1")).toHaveText(/Port Angeles/);
+    await expect(page.locator("main h1")).toHaveText(/(Rental|Lease|Facilities)/);
     await expect(page.locator(".city-rental-gallery img")).toHaveCount(3);
     await expect(page.locator("main img:visible")).toHaveCount(3);
     expect(
@@ -94,10 +91,8 @@ for (const width of [390, 1440]) {
       const failures: string[] = [];
       page.on("pageerror", (error) => failures.push(error.message));
       await page.goto(path);
-      await expect(page.locator("h1")).toContainText("Rental");
-      await expect(page.locator("h1")).toContainText(
-        "Temporary Facilities to Rent or Lease",
-      );
+      await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
+      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(75);
       await expect(page.locator("main img")).toHaveCount(3);
       await expect(page.locator(".industry-services li")).toHaveCount(9);
       for (const img of await page.locator("main img").all()) {

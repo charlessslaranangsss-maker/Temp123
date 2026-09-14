@@ -225,7 +225,7 @@ test("service model pages provide unique planning content", async ({
 }) => {
   await page.goto("/services/shower-restroom-combination-trailers/22ft-6-stall/");
   await expect(page.locator("h1")).toHaveText(
-    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls",
+    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental",
   );
   await expect(page).toHaveTitle(
     "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental | Temporary123",
@@ -531,7 +531,8 @@ test("location planner carries the selected place into the kitchen inquiry", asy
     .getByLabel("Project city and state", { exact: true })
     .fill("Akiak, Alaska");
   await page.getByRole("button", { name: "Explore mobile kitchens" }).click();
-  await expect(page.locator("h1")).toContainText("Trailer Rental in Akiak, Alaska");
+  await expect(page.locator("h1")).toHaveText(/Akiak, Alaska/);
+  await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
   await expect(page.locator("[data-project-location]")).toHaveText(
     "Akiak, Alaska",
   );
