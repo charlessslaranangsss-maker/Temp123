@@ -200,9 +200,12 @@ export function Home() {
           <div>
             <span className="eyebrow">FIND YOUR FACILITY</span>
             <h2 id="equipment-title">
-              Big plans.
+              Big plans,
               <br />
-              <em>Emergency equipment rentals.</em>
+              <em>
+                Emergency trailer rentals, shower, kitchen, shower and bathroom
+                combination, sleeper bunk bed, laundry.
+              </em>
             </h2>
           </div>
           <p>
