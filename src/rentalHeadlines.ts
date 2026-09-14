@@ -4,29 +4,34 @@ const locationSeed = (value: string) =>
     7,
   );
 
-const select = <T,>(items: readonly T[], key: string) =>
+const select = <T>(items: readonly T[], key: string) =>
   items[locationSeed(key) % items.length];
 
 const stateHeadlines = [
-  (state: string) => `Mobile Kitchen Rental in ${state}`,
-  (state: string) => `Temporary Facilities Lease in ${state}`,
-  (state: string) => `Emergency Shower Trailer Rental in ${state}`,
-  (state: string) => `Bunk Bed Trailer Rental in ${state}`,
-  (state: string) => `Portable Facilities Rental in ${state}`,
-  (state: string) => `Modular Trailer Lease in ${state}`,
-  (state: string) => `Emergency Trailer Rental in ${state}`,
-  (state: string) => `Shower and Restroom Trailer Rental in ${state}`,
+  (state: string) => `${state} Mobile Kitchen Trailer Rental`,
+  (state: string) => `${state} Temporary Facilities Lease`,
+  (state: string) => `${state} Emergency Shower Trailer Rental`,
+  (state: string) => `${state} Sleeper Bunkbed Trailer Rental`,
+  (state: string) => `${state} Portable Facilities Rental`,
+  (state: string) => `${state} Mobile Trailer Lease`,
+  (state: string) => `${state} Emergency Trailer Rental`,
+  (state: string) => `${state} Shower and Restroom Trailer Rental`,
 ] as const;
 
+export const regionLocationLabel = (region: string, state: string) =>
+  region.toLowerCase().includes(state.toLowerCase())
+    ? region
+    : `${region}, ${state}`;
+
 const regionHeadlines = [
-  (region: string, state: string) => `Mobile Kitchen Rental in ${region}, ${state}`,
-  (region: string, state: string) => `Temporary Facilities Lease in ${region}, ${state}`,
-  (region: string, state: string) => `Emergency Shower Trailer Rental in ${region}, ${state}`,
-  (region: string, state: string) => `Bunk Bed Trailer Rental in ${region}, ${state}`,
-  (region: string, state: string) => `Portable Facilities Rental in ${region}, ${state}`,
-  (region: string, state: string) => `Modular Trailer Lease in ${region}, ${state}`,
-  (region: string, state: string) => `Emergency Trailer Rental in ${region}, ${state}`,
-  (region: string, state: string) => `Shower and Restroom Trailer Rental in ${region}, ${state}`,
+  (location: string) => `${location} Mobile Kitchen Trailer Rental`,
+  (location: string) => `${location} Temporary Facilities Lease`,
+  (location: string) => `${location} Emergency Shower Trailer Rental`,
+  (location: string) => `${location} Sleeper Bunkbed Trailer Rental`,
+  (location: string) => `${location} Portable Facilities Rental`,
+  (location: string) => `${location} Mobile Trailer Lease`,
+  (location: string) => `${location} Emergency Trailer Rental`,
+  (location: string) => `${location} Shower and Restroom Trailer Rental`,
 ] as const;
 
 export const stateRentalHeadline = (state: string) =>
@@ -37,30 +42,34 @@ export const regionRentalHeadline = (
   state: string,
   regionIndex: number,
 ) =>
-  regionHeadlines[
-    (locationSeed(state) + regionIndex) % regionHeadlines.length
-  ](region, state);
+  regionHeadlines[(locationSeed(state) + regionIndex) % regionHeadlines.length](
+    regionLocationLabel(region, state),
+  );
 
 const cityServiceHeadlines = {
   kitchen: [
-    (location: string) => `Mobile Kitchen Rental in ${location}`,
-    (location: string) => `Kitchen Trailer Lease in ${location}`,
+    (location: string) => `${location} Mobile Kitchen Rental`,
+    (location: string) => `${location} Kitchen Trailer Lease`,
   ],
   shower: [
-    (location: string) => `Emergency Shower Trailer Rental in ${location}`,
-    (location: string) => `Portable Shower Trailer Lease in ${location}`,
+    (location: string) => `${location} Emergency Shower Trailer Rental`,
+    (location: string) => `${location} Portable Shower Trailer Lease`,
   ],
   combination: [
-    (location: string) => `Shower and Restroom Trailer Rental in ${location}`,
-    (location: string) => `Temporary Combination Trailer Lease in ${location}`,
+    (location: string) => `${location} Shower and Restroom Trailer Rental`,
+    (location: string) => `${location} Combination Trailer Lease`,
+  ],
+  restroom: [
+    (location: string) => `${location} Restroom Trailer Rental`,
+    (location: string) => `${location} Portable Restroom Trailer Lease`,
   ],
   sleeper: [
-    (location: string) => `Sleeper Bunk Bed Trailer Rental in ${location}`,
-    (location: string) => `Base Camp Trailer Lease in ${location}`,
+    (location: string) => `${location} Sleeper Bunkbed Trailer Rental`,
+    (location: string) => `${location} Base Camp Trailer Lease`,
   ],
   facility: [
-    (location: string) => `Temporary Facilities Rental in ${location}`,
-    (location: string) => `Portable Facility Lease in ${location}`,
+    (location: string) => `${location} Temporary Facilities Rental`,
+    (location: string) => `${location} Portable Facility Lease`,
   ],
 } as const;
 
@@ -68,13 +77,15 @@ export const cityRentalHeadline = (location: string, service: string) => {
   const lowerService = service.toLowerCase();
   const kind = /kitchen/.test(lowerService)
     ? "kitchen"
-    : /combination|restroom/.test(lowerService)
+    : /combination|shower.*restroom|restroom.*shower/.test(lowerService)
       ? "combination"
-      : /shower/.test(lowerService)
-        ? "shower"
-        : /sleep|bunk/.test(lowerService)
-          ? "sleeper"
-          : "facility";
+      : /restroom/.test(lowerService)
+        ? "restroom"
+        : /shower/.test(lowerService)
+          ? "shower"
+          : /sleep|bunk/.test(lowerService)
+            ? "sleeper"
+            : "facility";
   return select(cityServiceHeadlines[kind], `${location}-${service}`)(location);
 };
 

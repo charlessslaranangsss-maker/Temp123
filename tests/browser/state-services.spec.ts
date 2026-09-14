@@ -97,7 +97,7 @@ test("state click opens localized service choices and a direct call action", asy
   const state = page.locator('.coverage-map-stage [data-state="California"]');
   await state.click();
   const modal = page.getByRole("dialog", {
-    name: /Rental Services in California, USA/,
+    name: /California Rental Services/,
   });
   await expect(modal).toBeVisible();
   await expect(modal.locator("[data-state-code]")).toHaveText("State 05 of 50");
@@ -204,7 +204,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await page.goto("/service-areas/");
   await page.locator("[data-state-picker]").selectOption("New Hampshire");
   let modal = page.getByRole("dialog", {
-    name: /Rental Services in New Hampshire, USA/,
+    name: /New Hampshire Rental Services/,
   });
   await expect(modal).toBeVisible();
   expect(await modal.evaluate((e) => e.scrollWidth <= e.clientWidth)).toBe(
@@ -221,7 +221,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await state.focus();
   await state.press("Space");
   modal = page.getByRole("dialog", {
-    name: /Rental Services in Texas, USA/,
+    name: /Texas Rental Services/,
   });
   await expect(modal).toBeVisible();
   await expect(modal.locator(".state-dialog-visual")).toHaveCSS(

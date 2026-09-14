@@ -235,7 +235,7 @@ export function CoverageMap() {
                 Plan for the exact site
               </p>
               <h2 id="state-services-title">
-                Rental Services in <span data-state-name>your state</span>, USA{" "}
+                <span data-state-name>Your state</span> Rental Services{" "}
                 <small>Temporary Facilities to Rent or Lease</small>
               </h2>
               <p id="state-services-intro">

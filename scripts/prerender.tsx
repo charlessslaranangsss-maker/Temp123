@@ -28,6 +28,7 @@ import { regionPages, regionPageByPath } from "../src/regionGuides";
 import { cityPageByPath, reviewedCityPages } from "../src/cityDirectory";
 import { cityHeadline } from "../src/CityDetail";
 import { cityEditorial } from "../src/cityEditorial";
+import { regionLocationLabel, regionRentalHeadline, stateRentalHeadline } from "../src/rentalHeadlines";
 import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
@@ -213,19 +214,19 @@ for (const path of [...allRoutes, "/404/"]) {
             title: `${cityHeadline(city)} | Temporary123`,
             description: compact(`${cityEditorial[city.geoid].intro} Emergency 24/7.`, 155),
           }
-        : directoryRegion
+      : directoryRegion
           ? {
-              title: `${directoryRegion.region}, ${directoryRegion.state} City Rental Directory | Temporary123`,
+              title: `${regionLocationLabel(directoryRegion.region, directoryRegion.state)} Facility Rental Locations | Temporary123`,
               description: `Browse ${directoryRegion.region}, ${directoryRegion.state} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
             }
       : region
         ? {
-            title: `${region.index % 2 ? "Trailer Rental" : "Facilities Rental"} in ${region.region}, ${region.state}: Temporary Facilities to Rent or Lease | Temporary123`,
+            title: `${regionRentalHeadline(region.region, region.state, region.index)} | Temporary123`,
             description: `Rental Services in ${region.region}, ${region.state}. Rent or lease Temporary Facilities: kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
           }
         : stateName
           ? {
-              title: `Rental Services in ${stateName}: Temporary Facilities to Rent or Lease | Temporary123`,
+              title: `${stateRentalHeadline(stateName)} | Temporary123`,
               description: `Rental Services in ${stateName}. Rent or lease Temporary Facilities: mobile kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
             }
           : coreRoutes.includes(path)

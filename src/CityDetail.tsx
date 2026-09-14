@@ -25,7 +25,7 @@ const serviceLinks = [
 
 export const cityHeadline = (city: CityPage): string =>
   cityEditorial[city.geoid]?.heading ||
-  `Temporary Facilities Rental in ${city.name}, ${city.state}`;
+  `${city.name}, ${city.state} Temporary Facilities Rental`;
 
 export function CityDetail({ city }: { city: CityPage }) {
   const editorial = cityEditorial[city.geoid];

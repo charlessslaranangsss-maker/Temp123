@@ -17,7 +17,7 @@ export type CityEditorial = {
 
 export const cityEditorial: Record<string, CityEditorial> = {
   "5355365": {
-    heading: "Temporary Facilities Rental in Port Angeles, Washington",
+    heading: "Port Angeles, Washington Mobile Kitchen Trailer Rental",
     intro:
       "A Port Angeles project brief should identify whether the site is near the waterfront, the US 101 corridor or a more constrained approach toward the peninsula's interior. Temporary123 can discuss mobile kitchens, hygiene trailers and crew accommodation for a construction job, renovation or base camp after the exact address and operating period are known.",
     answer:
@@ -43,7 +43,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     },
   },
   "5363385": {
-    heading: "Facilities Rental in Sequim, Washington",
+    heading: "Sequim, Washington Temporary Facilities Rental",
     intro:
       "Sequim sits on the northern Olympic Peninsula, with city and surrounding sites that can have different access and utility arrangements. A rental discussion can cover temporary food service, shower and restroom capacity, and sleeper trailers for a renovation, work camp or emergency base camp without assuming that every property has the same setup space.",
     answer:
@@ -68,7 +68,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     },
   },
   "5363000": {
-    heading: "Temporary Facilities Rental in Seattle, Washington",
+    heading: "Seattle, Washington Temporary Facilities Rental",
     intro:
       "Seattle rental planning often turns on the last part of the delivery route and the amount of room available on an active property. Temporary123 can discuss a mobile commercial kitchen, showers, combination restrooms and sleeper support for a renovation, construction crew or base camp once site access and occupancy are specified.",
     answer:
@@ -94,7 +94,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     },
   },
   "5370000": {
-    heading: "Base Camp Trailer Rental in Tacoma, Washington",
+    heading: "Tacoma, Washington Sleeper Bunkbed Trailer Rental",
     intro:
       "Tacoma combines residential, institutional and industrial work areas, so a temporary facility plan should start with the specific site rather than the city name alone. For a crew base camp or occupied-facility renovation, Temporary123 can review kitchen, shower, restroom and sleeper trailer rental options alongside servicing needs.",
     answer:
@@ -119,7 +119,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     },
   },
   "5351300": {
-    heading: "Portable Facilities Rental in Olympia, Washington",
+    heading: "Olympia, Washington Shower and Restroom Trailer Rental",
     intro:
       "An Olympia project can range from an occupied campus or government property to a separate work compound. Temporary123 can discuss kitchens, shower and restroom trailers, and sleeper accommodation for construction, renovation or emergency planning when the project team defines the site boundary and who must keep using it.",
     answer:

@@ -469,7 +469,7 @@ export function Site({
                     <span aria-current="page">Service Areas</span>
                   </nav>
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
-                  <h1>Temporary Facilities Rental across the USA</h1>
+                  <h1>USA Temporary Facilities Rental Service Areas</h1>
                   <p>
                     Rent or lease Temporary Facilities with Temporary123. Rental
                     services include mobile kitchens, hygiene facilities and

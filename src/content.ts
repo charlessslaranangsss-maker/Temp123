@@ -22,7 +22,7 @@ const titles: Record<string, string> = {
   "/services/": "Temporary Facility Solutions",
   "/equipment-rental/": "Equipment Rental",
   "/industries/": "Industries & Project Solutions",
-  "/service-areas/": "Rental Service Areas: Temporary Facilities to Rent or Lease",
+  "/service-areas/": "USA Temporary Facilities Rental Service Areas",
   "/planning/": "Plan Your Temporary Facilities",
   "/about-us/": "About Temporary123",
   "/blog/": "Articles on Temporary Facility Planning",

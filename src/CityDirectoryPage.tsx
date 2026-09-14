@@ -1,5 +1,6 @@
 import { citiesForRegion, hasCityGuide } from "./cityDirectory";
 import type { RegionGuide } from "./regionGuides";
+import { regionLocationLabel } from "./rentalHeadlines";
 import { statePath } from "./statePaths";
 
 export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
@@ -28,7 +29,10 @@ export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
         <header className="city-directory-heading">
           <div>
             <span className="eyebrow">REGIONAL CITY DIRECTORY</span>
-            <h1>Temporary Facilities Rental in {guide.region} Cities</h1>
+            <h1>
+              {regionLocationLabel(guide.region, guide.state)} Facility Rental
+              Locations
+            </h1>
             <p>
               Explore {cities.length} Census-listed {guide.region},{" "}
               {guide.state}

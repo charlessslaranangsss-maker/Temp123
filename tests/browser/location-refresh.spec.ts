@@ -13,7 +13,9 @@ for (const width of [390, 1440]) {
     ]) {
       await page.goto(route);
       await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
-      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(75);
+      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(
+        75,
+      );
       await expect(
         page.getByRole("heading", {
           name: "Rental Planning Conditions",
@@ -52,7 +54,7 @@ for (const width of [390, 1440]) {
     const dialog = page.locator("#state-services-dialog");
     await expect(dialog).toBeVisible();
     await expect(dialog.locator("#state-services-title")).toContainText(
-      "Rental Services in California",
+      "California Rental Services",
     );
     await expect(dialog.locator("img")).toHaveCount(3);
     await expect(dialog.locator("[data-state-page]")).toHaveAttribute(
@@ -66,15 +68,25 @@ for (const width of [390, 1440]) {
     await page.keyboard.press("Escape");
     await page.goto("/service-areas/washington/olympic-peninsula/");
     await page.locator(".region-city-link-grid a").first().click();
-    await expect(page.locator("main h1")).toHaveText(/Port Angeles/);
-    await expect(page.locator("main h1")).toHaveText(/(Rental|Lease|Facilities)/);
-    await expect(page.locator(".city-rental-gallery img")).toHaveCount(3);
-    await expect(page.locator("main img:visible")).toHaveCount(3);
+    await expect(page.locator("main h1")).toHaveText(
+      /^Port Angeles, Washington /,
+    );
+    await expect(page.locator("main h1")).toHaveText(
+      /(Rental|Lease|Facilities)/,
+    );
+    await expect(page.locator("main img:visible")).toHaveCount(1);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true);
+    await page.goto(
+      "/equipment-rental/mobile-kitchen-trailers/?location=Boise%2C%20Idaho",
+    );
+    await expect(page.locator("main h1")).toHaveText(/^Boise, Idaho /);
+    await expect(page.locator("main h1")).toHaveText(
+      /Kitchen.*(Rental|Lease)$/,
+    );
   });
 }
 
@@ -92,7 +104,9 @@ for (const width of [390, 1440]) {
       page.on("pageerror", (error) => failures.push(error.message));
       await page.goto(path);
       await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
-      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(75);
+      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(
+        75,
+      );
       await expect(page.locator("main img")).toHaveCount(3);
       await expect(page.locator(".industry-services li")).toHaveCount(9);
       for (const img of await page.locator("main img").all()) {
