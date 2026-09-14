@@ -188,7 +188,9 @@ test("desktop services menu exposes clear rental categories", async ({
   ).toBeVisible();
   await menu.getByRole("button", { name: "Restroom", exact: true }).click();
   await expect(
-    menu.getByRole("link", { name: "30 ft Luxury Combination Trailer, 8 Stalls" }),
+    menu.getByRole("link", {
+      name: "30 ft Luxury Combination Trailer, 8 Stalls",
+    }),
   ).toBeVisible();
   await expect(
     menu.getByRole("button", {
@@ -223,7 +225,9 @@ test("every service model in the desktop menu resolves locally", async ({
 test("service model pages provide unique planning content", async ({
   page,
 }) => {
-  await page.goto("/services/shower-restroom-combination-trailers/22ft-6-stall/");
+  await page.goto(
+    "/services/shower-restroom-combination-trailers/22ft-6-stall/",
+  );
   await expect(page.locator("h1")).toHaveText(
     "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental",
   );
@@ -240,8 +244,12 @@ for (const width of [390, 1440])
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/service-areas/");
     await expect(page.locator(".location-hero h1")).toContainText(
-      "across the USA",
+      "USA Temporary Facilities Rental Service Areas",
     );
+    await expect(page.locator("#project-location")).toBeVisible();
+    await page
+      .getByRole("link", { name: "Explore the interactive map" })
+      .click();
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);
@@ -254,15 +262,13 @@ for (const width of [390, 1440])
     await expect(
       page.getByLabel("Choose your state", { exact: true }),
     ).toBeVisible();
-    await expect(page.locator("#project-location")).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,
       ),
     ).toBe(true);
-    await page.screenshot({
+    await page.locator("#service-area-map").screenshot({
       path: `test-results/location-coverage-${width}.png`,
-      fullPage: false,
     });
   });
 

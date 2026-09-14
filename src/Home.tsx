@@ -1,6 +1,7 @@
 import site from "../site.json" with { type: "json" };
 import { Cards, EquipmentImage } from "./Equipment";
 import { FacilityIcon } from "./FacilityIcon";
+import { CoverageMap } from "./CoverageMap";
 
 const rentalGroups = [
   [
@@ -378,6 +379,25 @@ export function Home() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section
+        className="wrap section"
+        id="service-area-map"
+        aria-labelledby="home-coverage-title"
+      >
+        <div className="home-section-heading">
+          <div>
+            <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
+            <h2 id="home-coverage-title">Find rentals in your area.</h2>
+          </div>
+          <p>
+            Choose your state to explore regional and city rental guides, or{" "}
+            <a href="/service-areas/">browse all service areas</a>. Confirm
+            availability and delivery for your project location with our team.
+          </p>
+        </div>
+        <CoverageMap />
       </section>
 
       <section className="faq-section home-faq" aria-labelledby="faq-title">

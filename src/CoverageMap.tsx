@@ -1,4 +1,6 @@
 import states from "./usStates.json" with { type: "json" };
+import { reviewedCityPages } from "./cityDirectory";
+import { StateGuideCards } from "./StateGuideCards";
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 const callouts = [
@@ -34,6 +36,18 @@ const stateServices = [...serviceCategories].sort((left, right) => {
   const rightPriority = baseCampServicePriority.get(right.name) ?? 10;
   return leftPriority - rightPriority;
 });
+const mapCitiesByState = states
+  .map((state) => ({
+    state: state.name,
+    cities: reviewedCityPages
+      .filter((city) => city.state === state.name)
+      .sort(
+        (left, right) =>
+          left.name.localeCompare(right.name) ||
+          left.region.localeCompare(right.region),
+      ),
+  }))
+  .filter(({ cities }) => cities.length > 0);
 // Offset labels within nearby state interiors where centered names would overlap.
 const labelOffsets: Record<string, [number, number]> = {
   Michigan: [0, 23],
@@ -144,6 +158,9 @@ function Geography({ id }: { id: string }) {
 export function CoverageMap() {
   return (
     <figure className="coverage-map" aria-labelledby="coverage-map-title">
+      <template id="map-state-guides">
+        <StateGuideCards />
+      </template>
       <div className="coverage-map-topline">
         <span id="coverage-map-title">Find your state</span>
         <strong>50 states</strong>
@@ -404,6 +421,43 @@ export function CoverageMap() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section
+            className="state-dialog-cities"
+            data-state-cities
+            aria-labelledby="state-cities-title"
+            hidden
+          >
+            <div className="state-city-heading">
+              <span>Published local guides</span>
+              <h3 id="state-cities-title">
+                Cities served in <span data-state-name>your state</span>
+              </h3>
+              <p>
+                Choose a city to read its reviewed rental guide. For other
+                locations, use the state or regional guide and confirm the exact
+                project address with our rental team.
+              </p>
+            </div>
+            <div className="state-city-groups">
+              {mapCitiesByState.map(({ state, cities }) => (
+                <nav
+                  key={state}
+                  data-map-city-state={state}
+                  aria-label={`${state} city rental guides`}
+                  hidden
+                >
+                  {cities.map((city) => (
+                    <a href={city.path} key={city.geoid}>
+                      <strong>{city.name}</strong>
+                      <span>{city.region}</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+                </nav>
+              ))}
+            </div>
           </section>
 
           <div className="state-services-cta">

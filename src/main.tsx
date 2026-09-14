@@ -53,7 +53,9 @@ search?.addEventListener("input", () => {
   document.querySelector("#catalog-status")!.textContent =
     `${count} matching pages`;
 });
-const citySearch = document.querySelector<HTMLInputElement>("#city-directory-search");
+const citySearch = document.querySelector<HTMLInputElement>(
+  "#city-directory-search",
+);
 citySearch?.addEventListener("input", () => {
   const term = citySearch.value.trim().toLowerCase();
   let count = 0;
@@ -61,9 +63,11 @@ citySearch?.addEventListener("input", () => {
     item.hidden = !item.dataset.cityName?.includes(term);
     if (!item.hidden) count++;
   });
-  document.querySelectorAll<HTMLElement>(".city-directory-group").forEach((group) => {
-    group.hidden = !group.querySelector("[data-city-item]:not([hidden])");
-  });
+  document
+    .querySelectorAll<HTMLElement>(".city-directory-group")
+    .forEach((group) => {
+      group.hidden = !group.querySelector("[data-city-item]:not([hidden])");
+    });
   const status = document.querySelector<HTMLElement>("#city-directory-status");
   if (status) status.textContent = `${count} matching locations`;
 });
@@ -451,7 +455,10 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     node.textContent = name;
   });
   const guides = Array.from(
-    document.querySelectorAll<HTMLElement>("[data-state-guide]"),
+    (
+      document.querySelector<HTMLTemplateElement>("#map-state-guides")
+        ?.content || document
+    ).querySelectorAll<HTMLElement>("[data-state-guide]"),
   );
   const stateIndex = guides.findIndex(
     (node) => node.dataset.stateGuide === name,
@@ -558,6 +565,18 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     servicesCopy.textContent =
       guide?.querySelector("[data-guide-services]")?.textContent ||
       "Basecamp and supporting temporary facility rentals are available.";
+  const citySection = stateDialog.querySelector<HTMLElement>(
+    "[data-state-cities]",
+  );
+  let hasPublishedCities = false;
+  citySection
+    ?.querySelectorAll<HTMLElement>("[data-map-city-state]")
+    .forEach((group) => {
+      const matchesState = group.dataset.mapCityState === name;
+      group.hidden = !matchesState;
+      hasPublishedCities ||= matchesState;
+    });
+  if (citySection) citySection.hidden = !hasPublishedCities;
   const seasonalCopy = stateDialog.querySelector<HTMLElement>(
     "[data-state-seasonal-copy]",
   );

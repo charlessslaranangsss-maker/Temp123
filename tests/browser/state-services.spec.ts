@@ -86,7 +86,7 @@ test("state click opens localized service choices and a direct call action", asy
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto("/service-areas/");
+  await page.goto("/#service-area-map");
   expect(
     await page
       .locator("#services-panel .service-category-link")
@@ -167,7 +167,7 @@ test("different states receive different structures, owned images and motions", 
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto("/service-areas/");
+  await page.goto("/#service-area-map");
   const california = page.locator(
     '.coverage-map-stage [data-state="California"]',
   );
@@ -201,7 +201,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/service-areas/");
+  await page.goto("/#service-area-map");
   await page.locator("[data-state-picker]").selectOption("New Hampshire");
   let modal = page.getByRole("dialog", {
     name: /New Hampshire Rental Services/,

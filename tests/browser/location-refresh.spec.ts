@@ -50,6 +50,12 @@ for (const width of [390, 1440]) {
       ).toBe(true);
     }
     await page.goto("/service-areas/");
+    await expect(page.locator(".coverage-map")).toHaveCount(0);
+    await page
+      .getByRole("link", { name: "Explore the interactive map" })
+      .click();
+    await expect(page).toHaveURL(/\/#service-area-map$/);
+    await expect(page.locator(".coverage-map")).toHaveCount(1);
     await page.locator("[data-state-picker]").selectOption("California");
     const dialog = page.locator("#state-services-dialog");
     await expect(dialog).toBeVisible();
@@ -65,6 +71,15 @@ for (const width of [390, 1440]) {
     expect(
       await dialog.evaluate((el) => el.scrollWidth <= el.clientWidth),
     ).toBe(true);
+    await page.keyboard.press("Escape");
+    await page.locator("[data-state-picker]").selectOption("Washington");
+    await expect(dialog.locator("[data-state-cities]")).toBeVisible();
+    await expect(
+      dialog.locator('[data-map-city-state="Washington"] a'),
+    ).toHaveCount(5);
+    await expect(
+      dialog.locator('[data-map-city-state="Washington"] a').first(),
+    ).toHaveAttribute("href", /^\/service-areas\/washington\/.+\/$/);
     await page.keyboard.press("Escape");
     await page.goto("/service-areas/washington/olympic-peninsula/");
     await page.locator(".region-city-link-grid a").first().click();

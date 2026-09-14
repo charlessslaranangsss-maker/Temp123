@@ -38,6 +38,26 @@ if (expectedByRegion.size !== 246)
     `Expected 246 region directories, found ${expectedByRegion.size}`,
   );
 
+const serviceAreasHtml = await readFile(fileFor("/"), "utf8");
+const serviceAreas = load(serviceAreasHtml);
+const mapCityLinks = new Map();
+serviceAreas("[data-state-cities] a[href]").each((_, element) => {
+  const href = serviceAreas(element).attr("href");
+  const label = serviceAreas(element).find("strong").text().trim();
+  if (!href || !reviewedPaths.has(href))
+    issues.push(`Map links unreviewed city ${href || "without href"}`);
+  if (!label) issues.push(`Map city link lacks a readable name: ${href}`);
+  if (href) mapCityLinks.set(href, (mapCityLinks.get(href) || 0) + 1);
+});
+for (const path of reviewedPaths) {
+  if (mapCityLinks.get(path) !== 1)
+    issues.push(`Map must link reviewed city exactly once: ${path}`);
+}
+if (mapCityLinks.size !== reviewedPaths.size)
+  issues.push(
+    `Map exposes ${mapCityLinks.size} city links, expected ${reviewedPaths.size}`,
+  );
+
 for (const [regionPath, expected] of expectedByRegion) {
   const html = await readFile(fileFor(`${regionPath}cities/`), "utf8");
   const $ = load(html);

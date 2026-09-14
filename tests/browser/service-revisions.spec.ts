@@ -23,7 +23,9 @@ test("Services stays selected across pointer gaps and closes only on outside cli
   );
   await model.click();
   await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
-  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer Rental");
+  await expect(page.locator("h1")).toHaveText(
+    "22ft Dishwashing Trailer Rental",
+  );
   await trigger.click();
   await menu.getByRole("button", { name: "Dishwashing", exact: true }).click();
   await menu.getByRole("link", { name: "26ft Dishwashing Trailer" }).click();
@@ -47,8 +49,13 @@ test("all service model destinations have equipment, planning, source and descri
     if (redirect) {
       const moved = await request.get(path, { maxRedirects: 0 });
       expect(moved.status(), path).toBe(308);
-      expect(new URL(moved.headers().location, "http://localhost:4173").pathname).toBe(redirect.destination);
-      expect((await request.get(redirect.destination)).status(), redirect.destination).toBe(200);
+      expect(
+        new URL(moved.headers().location, "http://localhost:4173").pathname,
+      ).toBe(redirect.destination);
+      expect(
+        (await request.get(redirect.destination)).status(),
+        redirect.destination,
+      ).toBe(200);
       continue;
     }
     const response = await request.get(path);
@@ -83,7 +90,7 @@ for (const width of [390, 1440])
     page.on("console", (m) => {
       if (m.type() === "error") errors.push(m.text());
     });
-    await page.goto("/service-areas/");
+    await page.goto("/#service-area-map");
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);
@@ -202,6 +209,8 @@ test("Services and category selection work before JavaScript loads", async ({
     .getByRole("link", { name: "22ft Dishwashing Trailer" })
     .click();
   await expect(page).toHaveURL(/dishwashing-trailers\/22ft\/$/);
-  await expect(page.locator("h1")).toHaveText("22ft Dishwashing Trailer Rental");
+  await expect(page.locator("h1")).toHaveText(
+    "22ft Dishwashing Trailer Rental",
+  );
   await context.close();
 });
