@@ -12,6 +12,10 @@ export const statePageByPath = Object.fromEntries(
 );
 export function StateDetail({ name }: { name: string }) {
   const guide = stateGuides[name];
+  const headline =
+    name === "Texas"
+      ? "Emergency trailer rental, shower, kitchen, shower and bathroom combination, sleeper bunk bed, and complete man-camp services."
+      : stateRentalHeadline(name);
   const regions = regionPages.filter((region) => region.state === name);
   const priority = [
     "Mobile Kitchens",
@@ -42,7 +46,7 @@ export function StateDetail({ name }: { name: string }) {
               <span aria-current="page">{name}</span>
             </nav>
             <p className="eyebrow">STATE RENTAL GUIDE</p>
-            <h1>{stateRentalHeadline(name)}</h1>
+            <h1>{headline}</h1>
             <p className="region-intro">{guide.intro}</p>
             <p className="region-emergency">Emergency 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
