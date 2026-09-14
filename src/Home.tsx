@@ -11,13 +11,13 @@ const rentalGroups = [
   ],
   [
     "shower",
-    "Shower",
+    "Shower Trailer",
     "Mobile shower trailer rentals.",
     "/equipment-rental/shower-trailer/",
   ],
   [
     "shower",
-    "Shower & Restroom Combination",
+    "Shower & Restroom Combination Facilities",
     "Private hygiene facilities.",
     "/services/shower-restroom-combination-trailers/",
   ],
