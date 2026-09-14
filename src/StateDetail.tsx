@@ -4,6 +4,7 @@ import { statePath } from "./statePaths";
 import { regionPages } from "./regionGuides";
 import { serviceCategories } from "./serviceMenu";
 import { stateRentalHeadline } from "./rentalHeadlines";
+import { capitalizeLinkLabel } from "./linkLabels";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
@@ -128,7 +129,7 @@ export function StateDetail({ name }: { name: string }) {
             {services.map((service) => (
               <li key={service.href}>
                 <a href={service.href}>
-                  {labels[service.name] || service.name}
+                  {capitalizeLinkLabel(labels[service.name] || service.name)}
                 </a>
               </li>
             ))}

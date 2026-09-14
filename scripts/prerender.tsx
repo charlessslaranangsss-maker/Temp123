@@ -311,6 +311,26 @@ for (const path of [...allRoutes, "/404/"]) {
       if (value) $(element).attr(name, cleanCopy(value));
     }
   });
+  // Internal-link labels are navigation elements, so retain a consistent,
+  // professional sentence-case opening across both authored and recovered copy.
+  $("a[href^='/']").each((_, anchor) => {
+    const firstText = $(anchor)
+      .contents()
+      .toArray()
+      .find(
+        (node) =>
+          node.type === "text" &&
+          "data" in node &&
+          typeof node.data === "string" &&
+          node.data.trim().length > 0,
+      );
+    if (firstText && "data" in firstText && typeof firstText.data === "string")
+      firstText.data = firstText.data.replace(
+        /^(\s*)([a-z])/,
+        (_match: string, space: string, letter: string) =>
+          `${space}${letter.toUpperCase()}`,
+      );
+  });
   $(
     "meta[name='description'], meta[property='og:title'], meta[property='og:description']",
   ).each((_, element) => {

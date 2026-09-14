@@ -317,7 +317,7 @@ export function QuoteForm() {
           />
           <span>
             I agree that {site.brand} may use these details to respond to my
-            inquiry. <a href="/privacy/">Read the privacy notice.</a>
+            inquiry. <a href="/privacy/">Read the Privacy Notice.</a>
             {error("consent")}
           </span>
         </label>

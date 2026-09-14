@@ -389,7 +389,7 @@ export function Home() {
             <p>
               Have something specific in mind?
               <br />
-              <a href="/contact-us/">Talk to a rental specialist ↗</a>
+              <a href="/contact-us/">Talk to a Rental Specialist ↗</a>
             </p>
           </div>
           <div className="faq-list">

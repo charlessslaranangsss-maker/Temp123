@@ -127,7 +127,7 @@ export function Header({ path }: { path: string }) {
                     <span>Temporary facility rentals</span>
                     <strong>Services for every stage of your project</strong>
                   </div>
-                  <a href="/equipment-rental/">View all services ↗</a>
+                  <a href="/equipment-rental/">View All Services ↗</a>
                 </div>
                 <div className="services-panel-body">
                   <div className="service-category-list">
@@ -153,7 +153,7 @@ export function Header({ path }: { path: string }) {
                               <span>Available configurations</span>
                               <strong>{category.name}</strong>
                             </div>
-                            <a href={category.href}>Category overview ↗</a>
+                            <a href={category.href}>Category Overview ↗</a>
                           </div>
                           <p>{category.description}</p>
                           <div className="service-submenu-links">
@@ -213,7 +213,7 @@ export function Header({ path }: { path: string }) {
                   Services <span aria-hidden="true">+</span>
                 </summary>
                 <div>
-                  <a href="/equipment-rental/">View all rental services</a>
+                  <a href="/equipment-rental/">View All Rental Services</a>
                   {serviceCategories.map((category) => (
                     <details
                       className="mobile-service-category"
@@ -223,7 +223,7 @@ export function Header({ path }: { path: string }) {
                         {category.name} <span aria-hidden="true">+</span>
                       </summary>
                       <div>
-                        <a href={category.href}>View category</a>
+                        <a href={category.href}>View Category</a>
                         {category.links.map((link) => (
                           <a href={link.href} key={link.href}>
                             {link.name}
@@ -366,16 +366,16 @@ export function Footer({ showClosing = true }: { showClosing?: boolean }) {
         <div>
           <strong>Explore</strong>
           <a href="/equipment-rental/">Services</a>
-          <a href="/services/">Project solutions</a>
-          <a href="/industries/">Industries served</a>
+          <a href="/services/">Project Solutions</a>
+          <a href="/industries/">Industries Served</a>
           <a href="/service-areas/">Service Areas</a>
-          <a href="/government/">Government services</a>
-          <a href="/gsa-schedule/">GSA Schedule information</a>
+          <a href="/government/">Government Services</a>
+          <a href="/gsa-schedule/">GSA Schedule Information</a>
         </div>
         <div>
           <strong>Get in touch</strong>
-          <a href="/contact-us/">Contact us</a>
-          <a href="/planning/">Project planning</a>
+          <a href="/contact-us/">Contact Us</a>
+          <a href="/planning/">Project Planning</a>
           <a href="/privacy/">Privacy</a>
         </div>
         <a className="back-top" href="#top">

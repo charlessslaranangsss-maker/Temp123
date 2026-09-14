@@ -1,11 +1,12 @@
 import site from "../site.json" with { type: "json" };
 import { equipmentPhotos } from "./equipmentPhotos";
 import { serviceCategories } from "./serviceMenu";
+import { capitalizeLinkLabel } from "./linkLabels";
 
 export const industryGuides = [
   {
     path: "/man-camps-for-rent/",
-    name: "Construction & workforce",
+    name: "Construction & Workforce",
     title: "Construction Trailer Rental & Base Camp Facilities",
     layout: "workforce",
     photos: [28, 0, 20],
@@ -34,7 +35,7 @@ export const industryGuides = [
   },
   {
     path: "/food-services-2/",
-    name: "Food service & hospitality",
+    name: "Food Service & Hospitality",
     title: "Food Service Kitchen Trailer Lease",
     layout: "hospitality",
     photos: [1, 46, 24],
@@ -63,7 +64,7 @@ export const industryGuides = [
   },
   {
     path: "/government/",
-    name: "Government & public services",
+    name: "Government & Public Services",
     title: "Government Temporary Facilities Rental",
     layout: "public",
     photos: [26, 6, 29],
@@ -92,7 +93,7 @@ export const industryGuides = [
   },
   {
     path: "/disaster-relief-man-camp-workforce-rentals/",
-    name: "Emergency & disaster response",
+    name: "Emergency & Disaster Response",
     title: "Emergency Response Trailer Rental",
     layout: "emergency",
     photos: [23, 14, 30],
@@ -139,9 +140,9 @@ export function IndustryDetail({ path }: { path: string }) {
       (priority.includes(b.name) ? priority.indexOf(b.name) : 9),
   );
   const names: Record<string, string> = {
-    "Mobile Kitchens": "Mobile commercial kitchen rentals",
-    Shower: "Shower trailers: 22 ft with 10 stalls",
-    Sleeper: "Sleeper and bunkbed trailer rentals",
+    "Mobile Kitchens": "Mobile Commercial Kitchen Rentals",
+    Shower: "Shower Trailers: 22 ft with 10 Stalls",
+    Sleeper: "Sleeper and Bunkbed Trailer Rentals",
   };
   return (
     <article className={`industry-page industry-layout-${guide.layout}`}>
@@ -185,7 +186,9 @@ export function IndustryDetail({ path }: { path: string }) {
         <ul>
           {services.map((service) => (
             <li key={service.href}>
-              <a href={service.href}>{names[service.name] || service.name}</a>
+              <a href={service.href}>
+                {capitalizeLinkLabel(names[service.name] || service.name)}
+              </a>
             </li>
           ))}
         </ul>
@@ -230,12 +233,12 @@ export function IndustryDetail({ path }: { path: string }) {
         className="wrap industry-related"
         aria-label="Related rental planning"
       >
-        <a href="/service-areas/">Explore state and regional rental services</a>
+        <a href="/service-areas/">Explore State and Regional Rental Services</a>
         {industryGuides
           .filter((item) => item.path !== path)
           .map((item) => (
             <a key={item.path} href={item.path}>
-              {item.name} rentals
+              {item.name} Rentals
             </a>
           ))}
       </nav>

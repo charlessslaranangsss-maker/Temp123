@@ -72,6 +72,26 @@ export function renderSourceContent(html: string, options: Options) {
       )
     )
       return;
+    const firstTextNode = a
+      .contents()
+      .toArray()
+      .find(
+        (node) =>
+          node.type === "text" &&
+          "data" in node &&
+          typeof node.data === "string" &&
+          node.data.trim().length > 0,
+      );
+    if (
+      firstTextNode &&
+      "data" in firstTextNode &&
+      typeof firstTextNode.data === "string"
+    )
+      firstTextNode.data = firstTextNode.data.replace(
+        /^(\s*)([a-z])/,
+        (_match: string, space: string, letter: string) =>
+          `${space}${letter.toUpperCase()}`,
+      );
     const path = url.pathname;
     const suffix = url.search + url.hash;
     const mapped = options.media[new URL(path, options.origin).href]?.local;

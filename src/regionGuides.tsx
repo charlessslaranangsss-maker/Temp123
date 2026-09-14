@@ -8,6 +8,7 @@ import {
   type SeasonalDemand,
 } from "./seasonalDemand";
 import { regionRentalHeadline } from "./rentalHeadlines";
+import { capitalizeLinkLabel } from "./linkLabels";
 
 export const regionSlug = (value: string) =>
   value
@@ -91,7 +92,7 @@ const buildCityLinks = (
       service.labels[(globalIndex + cityIndex * 2) % service.labels.length];
     return {
       href: `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
-      label: `${label} in ${city}`,
+      label: capitalizeLinkLabel(`${label} in ${city}`),
       context:
         cityContexts[(globalIndex * 3 + cityIndex) % cityContexts.length],
     };
@@ -100,7 +101,9 @@ const buildCityLinks = (
 const buildServiceLinks = (globalIndex: number): ContextualLink[] =>
   priorityServices.map((service, serviceIndex) => ({
     href: service.href,
-    label: service.labels[(globalIndex + serviceIndex) % service.labels.length],
+    label: capitalizeLinkLabel(
+      service.labels[(globalIndex + serviceIndex) % service.labels.length],
+    ),
     context: [
       "for temporary meal production.",
       "for coordinated daily hygiene.",
