@@ -37,6 +37,9 @@
   outline-offset: 3px;
 }
 .state-preview-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
   width: min(36rem, calc(100% - 2rem));
   max-height: calc(100dvh - 2rem);
   padding: 2rem;
