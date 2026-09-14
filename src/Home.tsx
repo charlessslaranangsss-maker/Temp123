@@ -397,7 +397,7 @@ export function Home() {
             availability and delivery for your project location with our team.
           </p>
         </div>
-        <CoverageMap />
+        <CoverageMap compact />
       </section>
 
       <section className="faq-section home-faq" aria-labelledby="faq-title">

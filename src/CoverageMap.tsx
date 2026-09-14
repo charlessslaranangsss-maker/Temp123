@@ -1,6 +1,7 @@
 import states from "./usStates.json" with { type: "json" };
 import { reviewedCityPages } from "./cityDirectory";
 import { StateGuideCards } from "./StateGuideCards";
+import { MapLocationDirectory } from "./MapLocationDirectory";
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 const callouts = [
@@ -155,332 +156,380 @@ function Geography({ id }: { id: string }) {
     </svg>
   );
 }
-export function CoverageMap() {
+export function CoverageMap({ compact = false }: { compact?: boolean }) {
   return (
-    <figure className="coverage-map" aria-labelledby="coverage-map-title">
-      <template id="map-state-guides">
-        <StateGuideCards />
-      </template>
-      <div className="coverage-map-topline">
-        <span id="coverage-map-title">Find your state</span>
-        <strong>50 states</strong>
-      </div>
-      <p className="coverage-map-intro">
-        Select a state on the map or choose from the list below.
-      </p>
-      <div className="coverage-map-stage">
-        <Geography id="map-surface" />
-      </div>
-      <div className="map-controls">
-        <div className="map-state-picker">
-          <label htmlFor="coverage-state-picker">Choose your state</label>
-          <select id="coverage-state-picker" data-state-picker defaultValue="">
-            <option value="" disabled>
-              Select a state
-            </option>
-            {[...states]
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((s) => (
-                <option key={s.id} value={s.name}>
-                  {s.name}
-                </option>
-              ))}
-          </select>
+    <>
+      <figure className="coverage-map" aria-labelledby="coverage-map-title">
+        <template id="map-state-guides">
+          <StateGuideCards />
+        </template>
+        <div className="coverage-map-topline">
+          <span id="coverage-map-title">Find your state</span>
+          <strong>50 states</strong>
         </div>
-        <div className="map-tools">
-          <button type="button" data-expand-map aria-haspopup="dialog">
-            Explore full map <span aria-hidden="true">↗</span>
-          </button>
-          <a
-            href="https://www.google.com/maps/place/United+States/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open Google Maps <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-      <figcaption>
-        Includes Alaska and Hawaii. Availability and delivery timing depend on
-        your site and dates. Map boundaries: U.S. Census Bureau.
-      </figcaption>
-      <dialog className="map-dialog" aria-label="USA service coverage map">
-        <div className="map-dialog-heading">
-          <strong>All 50 states. One point of contact.</strong>
-          <button type="button" data-close-map aria-label="Close coverage map">
-            Close ×
-          </button>
-        </div>
-        <p>
-          Scroll across the map on smaller screens to read every state name.
+        <p className="coverage-map-intro">
+          Select a state on the map or choose from the list below.
         </p>
-        <div
-          className="map-large-scroll"
-          tabIndex={0}
-          role="region"
-          aria-label="Scrollable full-size state map"
-        >
-          <Geography id="large-map-surface" />
+        <div className="coverage-map-stage">
+          <Geography id="map-surface" />
         </div>
-      </dialog>
-      <dialog
-        id="state-services-dialog"
-        className="state-services-dialog"
-        aria-labelledby="state-services-title"
-        aria-describedby="state-services-intro"
-      >
-        <div className="state-dialog-composition">
-          <div className="state-services-heading">
-            <p className="eyebrow">
-              <span>Temporary facilities across the USA.</span>
-              <span className="state-dialog-code" data-state-code>
-                State 01 of 50
-              </span>
-            </p>
+        <div className="map-controls">
+          <div className="map-state-picker">
+            <label htmlFor="coverage-state-picker">Choose your state</label>
+            <select
+              id="coverage-state-picker"
+              data-state-picker
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select a state
+              </option>
+              {[...states]
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((s) => (
+                  <option key={s.id} value={s.name}>
+                    {s.name}
+                  </option>
+                ))}
+            </select>
+          </div>
+          <div className="map-tools">
+            <button type="button" data-expand-map aria-haspopup="dialog">
+              Explore full map <span aria-hidden="true">↗</span>
+            </button>
+            <a
+              href="https://www.google.com/maps/place/United+States/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Google Maps <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <figcaption>
+          Includes Alaska and Hawaii. Availability and delivery timing depend on
+          your site and dates. Map boundaries: U.S. Census Bureau.
+        </figcaption>
+        <dialog className="map-dialog" aria-label="USA service coverage map">
+          <div className="map-dialog-heading">
+            <strong>All 50 states. One point of contact.</strong>
+            <button
+              type="button"
+              data-close-map
+              aria-label="Close coverage map"
+            >
+              Close ×
+            </button>
+          </div>
+          <p>
+            Scroll across the map on smaller screens to read every state name.
+          </p>
+          <div
+            className="map-large-scroll"
+            tabIndex={0}
+            role="region"
+            aria-label="Scrollable full-size state map"
+          >
+            <Geography id="large-map-surface" />
+          </div>
+        </dialog>
+        {compact ? (
+          <dialog
+            id="state-services-dialog"
+            className="state-preview-dialog"
+            aria-labelledby="state-services-title"
+            aria-describedby="state-services-intro"
+          >
             <button
               type="button"
               data-close-state
               aria-label="Close state services"
             >
-              ×
+              Close ×
             </button>
-          </div>
-
-          <section className="state-dialog-story">
-            <div className="state-dialog-copy">
-              <p className="state-dialog-focus" data-state-focus>
-                Plan for the exact site
-              </p>
-              <h2 id="state-services-title">
-                <span data-state-name>Your state</span> Rental Services{" "}
-                <small>Temporary Facilities to Rent or Lease</small>
-              </h2>
-              <p id="state-services-intro">
-                Temporary facility rental services are available for projects in{" "}
-                <span data-state-name>your state</span>, USA. Customers can rent
-                equipment for short-term projects or request a longer lease for
-                projects across the United States.
-              </p>
-              <p className="state-service-summary" data-state-services-copy>
-                Base camp rentals include mobile commercial kitchens, shower
-                trailers, shower and restroom combinations, and sleeper/bunkbed
-                trailers. Supporting temporary facilities are also available.
-              </p>
-              <p className="state-dialog-question" data-state-question />
-            </div>
-
-            <aside className="state-region-panel">
-              <span className="state-region-kicker">
-                Distinct travel regions
-              </span>
-              <h3>
-                Explore <span data-state-name>your state</span> by region
-              </h3>
-              <p>
-                Select a travel region to open its dedicated rental and lease
-                guide on this website.
-              </p>
-              <nav
-                className="state-modal-regions"
-                data-state-regions
-                aria-label="Distinct travel regions"
-              >
-                <a href="/service-areas/">Choose a travel region</a>
-              </nav>
-              <a
-                className="state-guide-link"
-                data-state-page
-                href="/service-areas/"
-              >
-                View state rental guide ↗
-              </a>
-              <div className="state-fact-card">
-                <strong>State fact</strong>
-                <span data-state-fact>Confirm the exact project location.</span>
-              </div>
-            </aside>
-          </section>
-
-          <section
-            className="state-dialog-seasonal"
-            aria-labelledby="state-seasonal-title"
-          >
-            <div className="state-seasonal-heading">
-              <span className="eyebrow">LOCAL AND SEASONAL INFORMATION</span>
-              <h3 id="state-seasonal-title">
-                Rental Planning Conditions in{" "}
-                <span data-state-name>your state</span>
-              </h3>
-            </div>
-            <div className="state-seasonal-copy" data-state-seasonal-copy />
-            <div className="state-demand-card">
-              <span>Estimated demand</span>
-              <strong data-state-demand-code>Code 3 · Moderate</strong>
-              <p data-state-demand>
-                This is an estimated planning indicator, not an official
-                government risk rating.
-              </p>
-            </div>
-            <nav
-              className="state-seasonal-sources"
-              data-state-seasonal-sources
-              aria-label="Planning information sources"
-            />
-          </section>
-
-          <section
-            className="state-dialog-visual"
-            aria-label="Temporary123 equipment photographs"
-          >
-            <div className="state-visual-heading">
-              <div>
-                <span>Equipment references</span>
-                <strong>
-                  Options for <span data-state-name>your state</span>
-                </strong>
-              </div>
-              <span className="state-visual-monogram" data-state-initials>
-                US
-              </span>
-            </div>
-            <div className="state-dialog-photo-grid">
-              <figure>
-                <div>
-                  <img
-                    src="/images/catalog/mobile-kitchen-trailers-960.webp"
-                    alt="Commercial equipment inside a mobile kitchen trailer"
-                    width="850"
-                    height="650"
-                    data-state-image
-                  />
-                  <span aria-hidden="true">01</span>
-                </div>
-                <figcaption data-state-image-caption>
-                  Commercial equipment inside a mobile kitchen trailer
-                </figcaption>
-              </figure>
-              <figure>
-                <div>
-                  <img
-                    src="/images/catalog/shower-trailer-960.webp"
-                    alt="Interior of a mobile shower trailer"
-                    width="850"
-                    height="650"
-                    data-state-gallery-image="1"
-                  />
-                  <span aria-hidden="true">02</span>
-                </div>
-                <figcaption data-state-gallery-caption="1">
-                  Interior of a mobile shower trailer
-                </figcaption>
-              </figure>
-              <figure>
-                <div>
-                  <img
-                    src="/images/catalog/mobile-kitchen-trailers-960.webp"
-                    alt="Temporary123 rental equipment"
-                    width="850"
-                    height="650"
-                    data-state-gallery-image="2"
-                  />
-                </div>
-                <figcaption data-state-gallery-caption="2">
-                  Temporary123 rental equipment
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section
-            className="state-dialog-services"
-            aria-label="Temporary facility rental services"
-          >
-            <div className="state-service-heading">
-              <span>Base camp and supporting rentals</span>
-              <strong>9 facility types</strong>
-            </div>
-            <ul className="state-service-list">
-              {stateServices.map((service, index) => (
-                <li
-                  className={
-                    baseCampServicePriority.has(service.name)
-                      ? "basecamp-service"
-                      : undefined
-                  }
-                  key={service.href}
-                >
-                  <a href={service.href}>
-                    <span className="state-service-number" aria-hidden="true">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span>
-                      {stateServiceLabels[service.name] || service.name}
-                    </span>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section
-            className="state-dialog-cities"
-            data-state-cities
-            aria-labelledby="state-cities-title"
-            hidden
-          >
-            <div className="state-city-heading">
-              <span>Published local guides</span>
-              <h3 id="state-cities-title">
-                Cities served in <span data-state-name>your state</span>
-              </h3>
-              <p>
-                Choose a city to read its reviewed rental guide. For other
-                locations, use the state or regional guide and confirm the exact
-                project address with our rental team.
-              </p>
-            </div>
-            <div className="state-city-groups">
-              {mapCitiesByState.map(({ state, cities }) => (
-                <nav
-                  key={state}
-                  data-map-city-state={state}
-                  aria-label={`${state} city rental guides`}
-                  hidden
-                >
-                  {cities.map((city) => (
-                    <a href={city.path} key={city.geoid}>
-                      <strong>{city.name}</strong>
-                      <span>{city.region}</span>
-                      <span aria-hidden="true">↗</span>
-                    </a>
-                  ))}
-                </nav>
-              ))}
-            </div>
-          </section>
-
-          <div className="state-services-cta">
-            <div>
-              <h3>Need a trailer now?</h3>
-              <p>Speak directly with our USA rental team, available 24/7.</p>
-            </div>
-            <a
-              className="button state-call-now"
-              href={`tel:${site.phoneE164}`}
-              aria-label={`Call now ${site.phoneDisplay}`}
-            >
-              Call Now <strong>{site.phoneDisplay}</strong>{" "}
-              <span aria-hidden="true">↗</span>
+            <h2 id="state-services-title">
+              <span data-state-name>Your state</span> Rental Services
+            </h2>
+            <p id="state-services-intro">
+              Confirm rental availability for your project location.
+            </p>
+            <a className="button" data-state-page href="/service-areas/">
+              View state rental services ↗
             </a>
-          </div>
-          <p className="state-services-call">
-            Prefer to call?{" "}
-            <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
-            <span>Available 24/7</span>
-          </p>
-        </div>
-      </dialog>
-    </figure>
+          </dialog>
+        ) : (
+          <dialog
+            id="state-services-dialog"
+            className="state-services-dialog"
+            aria-labelledby="state-services-title"
+            aria-describedby="state-services-intro"
+          >
+            <div className="state-dialog-composition">
+              <div className="state-services-heading">
+                <p className="eyebrow">
+                  <span>Temporary facilities across the USA.</span>
+                  <span className="state-dialog-code" data-state-code>
+                    State 01 of 50
+                  </span>
+                </p>
+                <button
+                  type="button"
+                  data-close-state
+                  aria-label="Close state services"
+                >
+                  ×
+                </button>
+              </div>
+
+              <section className="state-dialog-story">
+                <div className="state-dialog-copy">
+                  <p className="state-dialog-focus" data-state-focus>
+                    Plan for the exact site
+                  </p>
+                  <h2 id="state-services-title">
+                    <span data-state-name>Your state</span> Rental Services{" "}
+                    <small>Temporary Facilities to Rent or Lease</small>
+                  </h2>
+                  <p id="state-services-intro">
+                    Temporary facility rental services are available for
+                    projects in <span data-state-name>your state</span>, USA.
+                    Customers can rent equipment for short-term projects or
+                    request a longer lease for projects across the United
+                    States.
+                  </p>
+                  <p className="state-service-summary" data-state-services-copy>
+                    Base camp rentals include mobile commercial kitchens, shower
+                    trailers, shower and restroom combinations, and
+                    sleeper/bunkbed trailers. Supporting temporary facilities
+                    are also available.
+                  </p>
+                  <p className="state-dialog-question" data-state-question />
+                </div>
+
+                <aside className="state-region-panel">
+                  <span className="state-region-kicker">
+                    Distinct travel regions
+                  </span>
+                  <h3>
+                    Explore <span data-state-name>your state</span> by region
+                  </h3>
+                  <p>
+                    Select a travel region to open its dedicated rental and
+                    lease guide on this website.
+                  </p>
+                  <nav
+                    className="state-modal-regions"
+                    data-state-regions
+                    aria-label="Distinct travel regions"
+                  >
+                    <a href="/service-areas/">Choose a travel region</a>
+                  </nav>
+                  <a
+                    className="state-guide-link"
+                    data-state-page
+                    href="/service-areas/"
+                  >
+                    View state rental guide ↗
+                  </a>
+                  <div className="state-fact-card">
+                    <strong>State fact</strong>
+                    <span data-state-fact>
+                      Confirm the exact project location.
+                    </span>
+                  </div>
+                </aside>
+              </section>
+
+              <section
+                className="state-dialog-seasonal"
+                aria-labelledby="state-seasonal-title"
+              >
+                <div className="state-seasonal-heading">
+                  <span className="eyebrow">
+                    LOCAL AND SEASONAL INFORMATION
+                  </span>
+                  <h3 id="state-seasonal-title">
+                    Rental Planning Conditions in{" "}
+                    <span data-state-name>your state</span>
+                  </h3>
+                </div>
+                <div className="state-seasonal-copy" data-state-seasonal-copy />
+                <div className="state-demand-card">
+                  <span>Estimated demand</span>
+                  <strong data-state-demand-code>Code 3 · Moderate</strong>
+                  <p data-state-demand>
+                    This is an estimated planning indicator, not an official
+                    government risk rating.
+                  </p>
+                </div>
+                <nav
+                  className="state-seasonal-sources"
+                  data-state-seasonal-sources
+                  aria-label="Planning information sources"
+                />
+              </section>
+
+              <section
+                className="state-dialog-visual"
+                aria-label="Temporary123 equipment photographs"
+              >
+                <div className="state-visual-heading">
+                  <div>
+                    <span>Equipment references</span>
+                    <strong>
+                      Options for <span data-state-name>your state</span>
+                    </strong>
+                  </div>
+                  <span className="state-visual-monogram" data-state-initials>
+                    US
+                  </span>
+                </div>
+                <div className="state-dialog-photo-grid">
+                  <figure>
+                    <div>
+                      <img
+                        src="/images/catalog/mobile-kitchen-trailers-960.webp"
+                        alt="Commercial equipment inside a mobile kitchen trailer"
+                        width="850"
+                        height="650"
+                        data-state-image
+                      />
+                      <span aria-hidden="true">01</span>
+                    </div>
+                    <figcaption data-state-image-caption>
+                      Commercial equipment inside a mobile kitchen trailer
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <div>
+                      <img
+                        src="/images/catalog/shower-trailer-960.webp"
+                        alt="Interior of a mobile shower trailer"
+                        width="850"
+                        height="650"
+                        data-state-gallery-image="1"
+                      />
+                      <span aria-hidden="true">02</span>
+                    </div>
+                    <figcaption data-state-gallery-caption="1">
+                      Interior of a mobile shower trailer
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <div>
+                      <img
+                        src="/images/catalog/mobile-kitchen-trailers-960.webp"
+                        alt="Temporary123 rental equipment"
+                        width="850"
+                        height="650"
+                        data-state-gallery-image="2"
+                      />
+                    </div>
+                    <figcaption data-state-gallery-caption="2">
+                      Temporary123 rental equipment
+                    </figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section
+                className="state-dialog-services"
+                aria-label="Temporary facility rental services"
+              >
+                <div className="state-service-heading">
+                  <span>Base camp and supporting rentals</span>
+                  <strong>9 facility types</strong>
+                </div>
+                <ul className="state-service-list">
+                  {stateServices.map((service, index) => (
+                    <li
+                      className={
+                        baseCampServicePriority.has(service.name)
+                          ? "basecamp-service"
+                          : undefined
+                      }
+                      key={service.href}
+                    >
+                      <a href={service.href}>
+                        <span
+                          className="state-service-number"
+                          aria-hidden="true"
+                        >
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span>
+                          {stateServiceLabels[service.name] || service.name}
+                        </span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              <section
+                className="state-dialog-cities"
+                data-state-cities
+                aria-labelledby="state-cities-title"
+                hidden
+              >
+                <div className="state-city-heading">
+                  <span>Published local guides</span>
+                  <h3 id="state-cities-title">
+                    Cities served in <span data-state-name>your state</span>
+                  </h3>
+                  <p>
+                    Choose a city to read its reviewed rental guide. For other
+                    locations, use the state or regional guide and confirm the
+                    exact project address with our rental team.
+                  </p>
+                </div>
+                <div className="state-city-groups">
+                  {mapCitiesByState.map(({ state, cities }) => (
+                    <nav
+                      key={state}
+                      data-map-city-state={state}
+                      aria-label={`${state} city rental guides`}
+                      hidden
+                    >
+                      {cities.map((city) => (
+                        <a href={city.path} key={city.geoid}>
+                          <strong>{city.name}</strong>
+                          <span>{city.region}</span>
+                          <span aria-hidden="true">↗</span>
+                        </a>
+                      ))}
+                    </nav>
+                  ))}
+                </div>
+              </section>
+
+              <div className="state-services-cta">
+                <div>
+                  <h3>Need a trailer now?</h3>
+                  <p>
+                    Speak directly with our USA rental team, available 24/7.
+                  </p>
+                </div>
+                <a
+                  className="button state-call-now"
+                  href={`tel:${site.phoneE164}`}
+                  aria-label={`Call now ${site.phoneDisplay}`}
+                >
+                  Call Now <strong>{site.phoneDisplay}</strong>{" "}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <p className="state-services-call">
+                Prefer to call?{" "}
+                <a href={`tel:${site.phoneE164}`}>{site.phoneDisplay}</a>
+                <span>Available 24/7</span>
+              </p>
+            </div>
+          </dialog>
+        )}
+      </figure>
+      <MapLocationDirectory />
+    </>
   );
 }

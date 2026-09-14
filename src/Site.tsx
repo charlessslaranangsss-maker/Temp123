@@ -3,6 +3,7 @@ import { rentalCategoryHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
 import { CityDetail } from "./CityDetail";
 import { cityPageByPath } from "./cityDirectory";
+import { CoverageMap } from "./CoverageMap";
 import { CityDirectoryPage } from "./CityDirectoryPage";
 import site from "../site.json" with { type: "json" };
 import { QuoteForm } from "./QuoteForm";
@@ -484,10 +485,14 @@ export function Site({
                     </div>
                   </div>
                 </div>
-                <a className="button" href="/#service-area-map">
-                  Explore the interactive map ↗
-                </a>
               </div>
+            </section>
+            <section
+              className="wrap section"
+              id="service-area-map"
+              aria-label="Explore service locations"
+            >
+              <CoverageMap />
             </section>
             <section
               className="wrap section state-planning"

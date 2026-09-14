@@ -247,9 +247,6 @@ for (const width of [390, 1440])
       "USA Temporary Facilities Rental Service Areas",
     );
     await expect(page.locator("#project-location")).toBeVisible();
-    await page
-      .getByRole("link", { name: "Explore the interactive map" })
-      .click();
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);

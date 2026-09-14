@@ -90,7 +90,7 @@ for (const width of [390, 1440])
     page.on("console", (m) => {
       if (m.type() === "error") errors.push(m.text());
     });
-    await page.goto("/#service-area-map");
+    await page.goto("/service-areas/#service-area-map");
     await expect(
       page.locator(".coverage-map-stage .map-land path"),
     ).toHaveCount(50);

@@ -50,11 +50,6 @@ for (const width of [390, 1440]) {
       ).toBe(true);
     }
     await page.goto("/service-areas/");
-    await expect(page.locator(".coverage-map")).toHaveCount(0);
-    await page
-      .getByRole("link", { name: "Explore the interactive map" })
-      .click();
-    await expect(page).toHaveURL(/\/#service-area-map$/);
     await expect(page.locator(".coverage-map")).toHaveCount(1);
     await page.locator("[data-state-picker]").selectOption("California");
     const dialog = page.locator("#state-services-dialog");
