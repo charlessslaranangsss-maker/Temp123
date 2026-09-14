@@ -204,7 +204,7 @@ export function Home() {
               <br />
               <em>
                 Emergency trailer rentals, shower, kitchen, shower and bathroom
-                combination, sleeper bunk bed, laundry.
+                combination, sleeper bunk bed, and laundry.
               </em>
             </h2>
           </div>
