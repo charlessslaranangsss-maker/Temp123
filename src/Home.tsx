@@ -202,7 +202,7 @@ export function Home() {
             <h2 id="equipment-title">
               Big plans.
               <br />
-              <em>The right equipment.</em>
+              <em>Emergency equipment rentals.</em>
             </h2>
           </div>
           <p>
