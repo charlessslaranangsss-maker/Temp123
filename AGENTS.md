@@ -6,6 +6,7 @@ These rules apply to every Codex task and developer working in this repository.
 
 1. Read `PROJECT_STATUS.md`.
 2. Read `docs/BOSS_REQUIREMENTS.md` for approved business and SEO requirements.
+   For reusable implementation briefs, read `docs/prompts/README.md` and the relevant ready-to-paste prompt there. The prompts do not override verified project status or this file.
 3. Check `docs/PAGE_ASSIGNMENTS.md` before editing a page or shared component.
 4. Run `git status --short` and treat every existing change as another person's work unless ownership is documented.
 5. Add or update your assignment in `docs/PAGE_ASSIGNMENTS.md` before making material changes.
