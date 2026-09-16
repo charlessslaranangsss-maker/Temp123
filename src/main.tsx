@@ -3,11 +3,284 @@ import "./style.css";
 import "./redesign.css";
 import "./modern.css";
 import "./homepage.css";
+import "./calculator.css";
 import "./contact-refresh.css";
 import "./map-refresh.css";
 import "./secondary-refresh.css";
 import "./location-refresh.css";
+import "./seo-dashboard.css";
 import "@fontsource-variable/manrope";
+import {
+  calculateStartingEstimate,
+  calculatorDuration,
+  calculatorService,
+  equipmentPrices,
+} from "./calculatorData";
+
+// Most routes use prerendered HTML plus targeted DOM enhancements. The SEO
+// dashboard is the exception because its live evidence table is stateful.
+// Hydrate only that route so its refresh status and results cannot remain
+// frozen in the server-rendered fallback state.
+if (location.pathname === "/seo-dashboard/") {
+  const root = document.getElementById("root");
+  if (root) {
+    void Promise.all([import("react-dom/client"), import("./SeoDashboard")]).then(
+      ([{ hydrateRoot }, { SeoDashboard }]) => {
+        hydrateRoot(root, <SeoDashboard />);
+      },
+    );
+  }
+}
+
+let calculatorAppCheck: import("firebase/app-check").AppCheck | undefined;
+async function calculatorAppCheckToken() {
+  if (!import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY)
+    throw new Error(
+      "Online quote requests are not enabled yet. Your details have not been sent.",
+    );
+  const [
+    { initializeApp, getApps },
+    { initializeAppCheck, ReCaptchaEnterpriseProvider, getToken },
+  ] = await Promise.all([import("firebase/app"), import("firebase/app-check")]);
+  const app =
+    getApps()[0] ||
+    initializeApp({
+      apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+      appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    });
+  calculatorAppCheck ||= initializeAppCheck(app, {
+    provider: new ReCaptchaEnterpriseProvider(
+      import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY,
+    ),
+    isTokenAutoRefreshEnabled: false,
+  });
+  try {
+    return (await getToken(calculatorAppCheck)).token;
+  } catch {
+    throw new Error(
+      "We could not verify the form. Please check your connection and try again.",
+    );
+  }
+}
+
+const calculatorForm = document.querySelector<HTMLFormElement>(
+  "#rental-calculator-form",
+);
+if (calculatorForm) {
+  const currency = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+  const submitButton = calculatorForm.querySelector<HTMLButtonElement>(
+    "[data-calculator-submit]",
+  );
+  const calculateButton = calculatorForm.querySelector<HTMLButtonElement>(
+    "[data-calculator-calculate]",
+  );
+  const calculationStatus = calculatorForm.querySelector<HTMLElement>(
+    "[data-calculator-status]",
+  );
+  const submitStatus = calculatorForm.querySelector<HTMLElement>(
+    "[data-calculator-submit-status]",
+  );
+  const planningFieldNames = [
+    "state",
+    "city",
+    "zipCode",
+    "equipment",
+    "length",
+    "people",
+    "startDate",
+    "endDate",
+  ];
+  let lastPayload = "";
+  let idempotencyKey = "";
+  let submitting = false;
+
+  const calculate = () => {
+    const endInput = calculatorForm.elements.namedItem(
+      "endDate",
+    ) as HTMLInputElement;
+    endInput.setCustomValidity("");
+    for (const name of planningFieldNames) {
+      const field = calculatorForm.elements.namedItem(name);
+      if (!(field instanceof HTMLElement) || !("checkValidity" in field))
+        continue;
+      const control = field as HTMLInputElement | HTMLSelectElement;
+      if (!control.checkValidity()) {
+        control.reportValidity();
+        return null;
+      }
+    }
+    const data = new FormData(calculatorForm);
+    const startDate = String(data.get("startDate") || "");
+    const endDate = String(data.get("endDate") || "");
+    const message = document.querySelector<HTMLElement>(
+      "[data-estimate-message]",
+    );
+    if (startDate && endDate && endDate < startDate) {
+      endInput.setCustomValidity("End date must be on or after the start date.");
+      endInput.reportValidity();
+      endInput.addEventListener("input", () => endInput.setCustomValidity(""), {
+        once: true,
+      });
+      return;
+    }
+    try {
+      const estimate = calculateStartingEstimate(
+        String(data.get("equipment") || ""),
+        Number(data.get("length")),
+        Number(data.get("people")),
+      );
+      document.querySelector<HTMLElement>("[data-estimate-total]")!.textContent =
+        currency.format(estimate.total);
+      document.querySelector<HTMLElement>("[data-equipment-price]")!.textContent =
+        currency.format(estimate.equipment);
+      document.querySelector<HTMLElement>("[data-delivery-price]")!.textContent =
+        currency.format(estimate.delivery);
+      if (message)
+        message.textContent =
+          "Starting equipment plus delivery estimate. Rental duration and project-specific charges are not included. Call us for discounts!";
+      const equipmentId = String(data.get("equipment") || "");
+      const equipment = equipmentPrices.find((item) => item.id === equipmentId);
+      if (!equipment) throw new RangeError("Choose a listed equipment type.");
+      if (calculationStatus) {
+        calculationStatus.className = "calculator-submit-status success";
+        calculationStatus.textContent =
+          "Starting estimate calculated. No contact information was sent.";
+      }
+      return { data, estimate, equipment, startDate, endDate };
+    } catch (error) {
+      if (message)
+        message.textContent =
+          error instanceof Error ? error.message : "Unable to calculate an estimate.";
+      if (calculationStatus) {
+        calculationStatus.className = "calculator-submit-status error";
+        calculationStatus.setAttribute("role", "alert");
+        calculationStatus.textContent = "Unable to calculate the starting estimate.";
+      }
+      return null;
+    }
+  };
+
+  calculateButton?.addEventListener("click", calculate);
+
+  calculatorForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (submitting) return;
+    if (!calculatorForm.reportValidity()) return;
+    const calculation = calculate();
+    if (!calculation) return;
+    const { data, estimate, equipment, startDate, endDate } = calculation;
+    try {
+      const equipmentId = String(data.get("equipment") || "");
+      const state = String(data.get("state") || "").trim();
+      const city = String(data.get("city") || "").trim();
+      const zipCode = String(data.get("zipCode") || "").trim();
+      const projectDetails = String(data.get("projectDetails") || "").trim();
+      const length = Number(data.get("length"));
+      const people = Number(data.get("people"));
+      const payload = JSON.stringify({
+        name: String(data.get("name") || "").trim(),
+        email: String(data.get("email") || "").trim(),
+        phone: String(data.get("phone") || "").trim(),
+        startDate,
+        location: `${city}, ${state}${zipCode ? ` ${zipCode}` : ""}`,
+        service: calculatorService(equipmentId),
+        duration: calculatorDuration(startDate, endDate),
+        industry: String(data.get("industry") || ""),
+        message: [
+          "Calculator quote request.",
+          `Equipment: ${equipment.name}.`,
+          `Trailer length: ${length} ft. Number of people: ${people}.`,
+          `Rental dates: ${startDate} through ${endDate}.`,
+          `Preliminary starting estimate: ${currency.format(estimate.total)} (${currency.format(estimate.equipment)} equipment plus ${currency.format(estimate.delivery)} delivery).`,
+          projectDetails ? `Project details: ${projectDetails}` : "Project details: Not provided.",
+          "Final pricing, availability and site requirements must be confirmed.",
+        ].join("\n"),
+        consent: data.get("consent") === "on",
+        website: String(data.get("website") || ""),
+        page: location.pathname === "/rental-calculator/" ? "/rental-calculator/" : "/",
+      });
+      if (payload !== lastPayload) {
+        idempotencyKey = crypto.randomUUID();
+        lastPayload = payload;
+      }
+      submitting = true;
+      calculatorForm.setAttribute("aria-busy", "true");
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Saving quote request…";
+      }
+      if (submitStatus) {
+        submitStatus.className = "calculator-submit-status";
+        submitStatus.setAttribute("role", "status");
+        submitStatus.textContent = "Your estimate is ready. Securely saving your quote request…";
+      }
+      try {
+        const token = await calculatorAppCheckToken();
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Firebase-AppCheck": token,
+            "Idempotency-Key": idempotencyKey,
+          },
+          body: payload,
+          signal: AbortSignal.timeout(20_000),
+        });
+        const result = await response.json().catch(() => null);
+        if (!response.ok) {
+          if (response.status === 429)
+            throw new Error("Too many attempts. Please wait a few minutes before trying again.");
+          throw new Error(
+            typeof result?.error === "string"
+              ? result.error
+              : "We could not save your quote request. Please try again.",
+          );
+        }
+        if (result?.ok !== true)
+          throw new Error("We could not confirm your quote request. Please retry with the same details.");
+        if (submitStatus) {
+          submitStatus.classList.add("success");
+          submitStatus.textContent =
+            "Your estimate is ready and your quote request has been saved. Our team can now follow up.";
+        }
+      } catch (submissionError) {
+        if (submitStatus) {
+          submitStatus.classList.add("error");
+          submitStatus.setAttribute("role", "alert");
+          submitStatus.textContent =
+            submissionError instanceof Error &&
+            ["TimeoutError", "AbortError", "TypeError"].includes(submissionError.name)
+              ? "The connection was interrupted. Your estimate and details are still here; try again."
+              : submissionError instanceof Error
+                ? submissionError.message
+                : "We could not save your quote request. Please try again.";
+        }
+      } finally {
+        submitting = false;
+        calculatorForm.removeAttribute("aria-busy");
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Request Exact Quote ↗";
+        }
+      }
+    } catch (error) {
+      if (submitStatus) {
+        submitStatus.className = "calculator-submit-status error";
+        submitStatus.setAttribute("role", "alert");
+        submitStatus.textContent =
+          error instanceof Error
+            ? error.message
+            : "We could not prepare your quote request. Please try again.";
+      }
+    }
+  });
+}
 
 // Keep every facility in the rendered HTML; filtering is an optional enhancement.
 const rentalFilters = document.querySelector<HTMLElement>(".rental-filters");
@@ -90,6 +363,59 @@ mobileNav?.addEventListener("focusout", () => {
 
 const contactDrawer =
   document.querySelector<HTMLDialogElement>("#contact-drawer");
+const emergencyStorageKey = "temporary123:emergency-seen";
+const setEmergencyOpen = (dispatch: HTMLElement, open: boolean) => {
+  const panel = dispatch.querySelector<HTMLElement>("[data-emergency-panel]");
+  const trigger = dispatch.querySelector<HTMLButtonElement>(
+    "[data-emergency-open]",
+  );
+  if (!panel || !trigger) return;
+  dispatch.classList.toggle("is-open", open);
+  panel.setAttribute("aria-hidden", String(!open));
+  trigger.setAttribute("aria-expanded", String(open));
+};
+document.addEventListener("click", (event) => {
+  const target = event.target as HTMLElement;
+  const trigger = target.closest<HTMLButtonElement>("[data-emergency-open]");
+  const close = target.closest<HTMLButtonElement>("[data-emergency-close]");
+  const dispatch = (trigger ?? close)?.closest<HTMLElement>(
+    "[data-emergency-dispatch]",
+  );
+  if (!dispatch) return;
+  if (trigger) {
+    setEmergencyOpen(dispatch, !dispatch.classList.contains("is-open"));
+    return;
+  }
+  setEmergencyOpen(dispatch, false);
+  try {
+    window.sessionStorage.setItem(emergencyStorageKey, "1");
+  } catch {
+    // The experience still works when storage is unavailable.
+  }
+  dispatch.querySelector<HTMLButtonElement>("[data-emergency-open]")?.focus();
+});
+if (document.querySelector("[data-emergency-dispatch]")) {
+  let alreadySeen = false;
+  try {
+    alreadySeen = window.sessionStorage.getItem(emergencyStorageKey) === "1";
+  } catch {
+    // Treat blocked storage as a fresh visit.
+  }
+  if (!alreadySeen) {
+    window.setTimeout(() => {
+      const dispatch = document.querySelector<HTMLElement>(
+        "[data-emergency-dispatch]",
+      );
+      if (!dispatch) return;
+      setEmergencyOpen(dispatch, true);
+      try {
+        window.sessionStorage.setItem(emergencyStorageKey, "1");
+      } catch {
+        // The experience still works when storage is unavailable.
+      }
+    }, 6000);
+  }
+}
 const requestedLocation =
   new URLSearchParams(window.location.search)
     .get("location")
@@ -454,6 +780,13 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   stateDialog.querySelectorAll("[data-state-name]").forEach((node) => {
     node.textContent = name;
   });
+  const planningTitle = stateDialog.querySelector("#state-seasonal-title");
+  if (planningTitle) {
+    planningTitle.textContent =
+      name === "Iowa"
+        ? "Trailer, or Modular Facilities, or Mobile, or Trailer, or Emergency."
+        : `Rental Planning Conditions in ${name}`;
+  }
   const guides = Array.from(
     (
       document.querySelector<HTMLTemplateElement>("#map-state-guides")
@@ -464,6 +797,13 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     (node) => node.dataset.stateGuide === name,
   );
   const guide = guides[stateIndex];
+  stateDialog
+    .querySelectorAll<HTMLElement>("[data-state-headline]")
+    .forEach((node) => {
+      node.textContent =
+        guide?.dataset.stateHeadline ||
+        `Temporary Facilities Rental in ${name}`;
+    });
   const stateCode = stateDialog.querySelector<HTMLElement>("[data-state-code]");
   if (stateCode)
     stateCode.textContent = `State ${String(stateIndex + 1).padStart(2, "0")} of ${guides.length}`;

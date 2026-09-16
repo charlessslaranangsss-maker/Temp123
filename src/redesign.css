@@ -877,7 +877,7 @@ summary:focus-visible {
   border-radius: 0;
   background: #e8ede7;
 }
-.model-page > section:first-child {
+.model-hero-section {
   background: #edf1ec;
 }
 .model-hero {

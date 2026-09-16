@@ -40,6 +40,16 @@ describe("contact application boundary", () => {
     expect(d.save).toHaveBeenCalledOnce();
     expect(d.deliver).toHaveBeenCalledWith("test-id");
   });
+  it.each(["/", "/rental-calculator/"])(
+    "accepts calculator inquiry source %s",
+    async (page) => {
+      const d = deps();
+      const request = req();
+      request.body = JSON.stringify({ ...lead, page });
+      expect((await submit(request, d)).status).toBe(201);
+      expect(d.save).toHaveBeenCalledOnce();
+    },
+  );
   it.each([
     ["GET", 405],
     ["DELETE", 405],

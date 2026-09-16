@@ -19,15 +19,15 @@ export const cityEditorial: Record<string, CityEditorial> = {
   "5355365": {
     heading: "Port Angeles, Washington Mobile Kitchen Trailer Rental",
     intro:
-      "A Port Angeles project brief should identify whether the site is near the waterfront, the US 101 corridor or a more constrained approach toward the peninsula's interior. Temporary123 can discuss mobile kitchens, hygiene trailers and crew accommodation for a construction job, renovation or base camp after the exact address and operating period are known.",
+      "Temporary123 supports commercial and institutional base camps in Port Angeles with mobile kitchen trailer rentals for industrial projects, military operations, hospital or nursing-home renovations, hospitality facilities, correctional facilities and emergency-response sites. Final equipment and delivery planning depend on the operating period, crew size, utility connections and exact installation address.",
     answer:
-      "For a Port Angeles base camp, rent or lease a mobile commercial kitchen alongside shower and restroom combination trailers, a 22 ft shower-only unit with 10 stalls, or sleeper and bunkbed trailers. Refrigeration, dishwashing and laundry can support a longer crew assignment. Confirm the required capacity before selecting equipment.",
+      "A Port Angeles base camp can pair a mobile commercial kitchen with the flagship 22 ft shower trailer with three hand sinks, shower and restroom combination trailers, sleeper or bunkbed units, refrigeration, dishwashing and laundry. Temporary123 sizes the rental package around the number of people, meal volume, shift schedule and available utilities.",
     local:
-      "Port Angeles identifies US 101, the Tumwater Truck Route and streets connecting to the ferry landing as significant parts of its transportation network. For a temporary kitchen or sleeper trailer, those routes are orientation points, not a delivery promise. Share the installation address, turns, unloading area, utility connections and any ferry-dependent movement so the rental team can assess the actual trip and site layout.",
+      "Commercial base camps near the Port Angeles waterfront, industrial areas or the US 101 corridor can have different access and staging limits. The Tumwater Truck Route and streets connecting to the ferry landing are useful orientation points, not a delivery promise. Share the installation address, unloading area, turning space, utility connections and any ferry-dependent movement so the rental team can assess the route and site layout.",
     seasonal:
-      "Spring through fall is a practical planning window for peninsula road work and outdoor camps; a facility renovation can need temporary food service at any time. In wetter or stormier months, a kitchen, showers and dry sleeper space may help a planned crew stay operational, but any emergency deployment depends on the actual event and accessible route.",
+      "Industrial work, military support, institutional renovations and emergency-response operations can require temporary food service and hygiene facilities in any season. During wetter or stormier periods, a commercial kitchen, showers and dry sleeper space can help a staffed base camp remain operational, subject to equipment availability and safe site access.",
     question:
-      "Will equipment arrive by a road-only route, or does any part of the project depend on a ferry or separate receiving arrangement?",
+      "How many people and shifts must the Port Angeles base camp support, and what water, power, waste and delivery access are available?",
     sourceTitle: "City of Port Angeles transportation plan",
     sourceUrl:
       "https://www.cityofpa.us/DocumentCenter/View/13310/2023-Amended-Comprehensive-Plan-",
@@ -35,11 +35,10 @@ export const cityEditorial: Record<string, CityEditorial> = {
     seasonalSourceUrl:
       "https://engage.wsdot.wa.gov/olympic-peninsula-construction",
     photo: {
-      image: "/media/sheet-28ft-kitchen-exterior.png",
-      alt: "Full exterior of a 28 ft mobile commercial kitchen trailer",
-      caption: "28 ft mobile kitchen trailer",
-      sourceUrl:
-        "https://drive.google.com/file/d/1nfL9Kylpa1xaGNBE_3OvKVx40HMRGw_l/view",
+      image: "/images/catalog/mobile-kitchen-trailers-960.webp",
+      alt: "Commercial mobile kitchen trailer interior for a Port Angeles base camp rental",
+      caption: "Commercial mobile kitchen trailer for base camp food service",
+      sourceUrl: "https://temporary123.com/",
     },
   },
   "5363385": {

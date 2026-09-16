@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-15T15:53:05.686Z",
+  "previewOrigin": "https://temp123-nine.vercel.app",
+  "registryMode": "preview",
+  "registryPages": 650,
+  "liveSitemapStatus": 200,
+  "liveSitemapUrls": 0,
+  "localHtmlPresent": 650,
+  "live200": 650,
+  "liveRedirects": 0,
+  "liveErrors": 0,
+  "noindex": 650,
+  "canonicalPresent": 0,
+  "sitemapIncluded": 0,
+  "registryIndexable": 0,
+  "byType": {
+    "Homepage": 1,
+    "Service detail": 26,
+    "Core or preserved legacy": 52,
+    "Equipment": 24,
+    "Region": 246,
+    "Region city directory": 246,
+    "City": 5,
+    "State": 50
+  }
+}

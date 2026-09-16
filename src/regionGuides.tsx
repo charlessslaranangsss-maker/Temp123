@@ -10,6 +10,8 @@ import {
 } from "./seasonalDemand";
 import { regionRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { locationCarouselImages } from "./locationCarouselImages";
 
 export const regionSlug = (value: string) =>
   value
@@ -96,9 +98,10 @@ const buildCityLinks = (
       (entry) => entry.name.toLowerCase() === city.toLowerCase(),
     );
     return {
-      href: cityGuide && hasCityGuide(cityGuide)
-        ? cityGuide.path
-        : `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
+      href:
+        cityGuide && hasCityGuide(cityGuide)
+          ? cityGuide.path
+          : `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
       label: capitalizeLinkLabel(`${label} in ${city}`),
       context:
         cityContexts[(globalIndex * 3 + cityIndex) % cityContexts.length],
@@ -295,6 +298,9 @@ export const relatedRegionPages = (guide: RegionGuide): RegionGuide[] => {
 
 export function RegionDetail({ guide }: { guide: RegionGuide }) {
   const nearby = relatedRegionPages(guide);
+  const headline = regionRentalHeadline(guide.region, guide.state, guide.index);
+  const location = `${guide.region}, ${guide.state}`;
+  const carouselImages = locationCarouselImages(location, headline);
   const query = encodeURIComponent(
     `${guide.cities[0]}, ${guide.state}, United States`,
   );
@@ -313,28 +319,20 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
               <span aria-current="page">{guide.region}</span>
             </nav>
             <p className="eyebrow">REGIONAL RENTAL GUIDE</p>
-            <h1>
-              {regionRentalHeadline(guide.region, guide.state, guide.index)}
-            </h1>
+            <h1>{headline}</h1>
             <p className="region-intro">{guide.intro}</p>
             <p className="region-emergency">Emergency 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call now {site.phoneDisplay}
             </a>
           </div>
-          <figure className="region-hero-visual">
-            <img
-              src={guide.image}
-              alt={guide.imageAlt}
-              width="850"
-              height="650"
-              fetchPriority="high"
+          <div className="region-hero-visual region-hero-carousel">
+            <ServiceHeroCarousel
+              images={carouselImages}
+              label={`${location} temporary facility rental equipment`}
+              caption={`Verified commercial equipment references for rental planning in ${location}. Confirm the available unit and configuration before booking.`}
             />
-            <figcaption>
-              <span>{guide.region}</span>
-              <strong>Equipment for your base camp</strong>
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </section>
       <section className="region-answer" aria-labelledby="region-faq-title">
@@ -385,7 +383,8 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           ))}
         </div>
         <a className="region-city-directory-link" href={`${guide.path}cities/`}>
-          Browse all {citiesForRegion(guide.path).length} {guide.region} rental locations ↗
+          Browse all {citiesForRegion(guide.path).length} {guide.region} rental
+          locations ↗
         </a>
       </section>
       <section
@@ -433,30 +432,6 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </a>
           ))}
         </nav>
-      </section>
-      <section className="wrap section region-gallery-section">
-        <div className="region-section-heading">
-          <div>
-            <span className="eyebrow">EQUIPMENT REFERENCES</span>
-            <h2>Equipment for your rental plan</h2>
-          </div>
-        </div>
-        <div className="region-gallery">
-          {guide.gallery.map((item) => (
-            <figure key={item.image}>
-              <div className="region-gallery-image">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width="850"
-                  height="650"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>{item.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
       </section>
       <nav
         className="wrap section region-nearby"

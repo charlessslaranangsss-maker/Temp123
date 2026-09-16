@@ -165,13 +165,13 @@ const homepagePhotos = [
   ],
   [
     "Shower trailers",
-    "/images/catalog/temporary-shower-trailers-960.webp",
-    "Private shower enclosure with a handheld shower and adjacent washbasin",
+    "/images/catalog/shower-trailer-960.webp",
+    "Private shower stall inside a shower trailer with overhead and handheld shower heads, ventilation and storage hooks",
   ],
   [
     "Restroom trailers",
-    "/media/ce44e887e6e1812d2195e955.webp",
-    "Mobile restroom interior with a toilet and yellow grab rails",
+    "/images/catalog/restroom-trailers-960.webp",
+    "Representative ADA shower and restroom combination trailer shown as a restroom facilities preview",
   ],
   [
     "Shower & restroom combinations",
@@ -198,7 +198,12 @@ const homepageEquipment: EquipmentCard[] = equipment.map((item, index) => ({
   ...item,
   name: homepagePhotos[index][0],
   image: homepagePhotos[index][1],
-  smallImage: undefined,
+  smallImage:
+    index === 3
+      ? "/images/catalog/shower-trailer-480.webp"
+      : index === 4
+        ? "/images/catalog/restroom-trailers-480.webp"
+        : undefined,
   imageAlt: homepagePhotos[index][2],
 }));
 
@@ -235,11 +240,21 @@ export function Cards({
             tabIndex={-1}
             aria-hidden={homepage ? undefined : true}
           >
-            <EquipmentImage
-              image={e.image}
-              smallImage={e.smallImage}
-              alt={e.imageAlt || `${e.name} equipment from Temporary123`}
-            />
+            {e.image ? (
+              <EquipmentImage
+                image={e.image}
+                smallImage={e.smallImage}
+                alt={e.imageAlt || `${e.name} equipment from Temporary123`}
+              />
+            ) : (
+              <div
+                className="verified-image-pending"
+                role="img"
+                aria-label={e.imageAlt}
+              >
+                <span>Verified equipment photo pending</span>
+              </div>
+            )}
             <span className="category-label">{e.category}</span>
             <span className="image-arrow" aria-hidden="true">
               ↗
@@ -254,6 +269,11 @@ export function Cards({
             <h3>
               <a href={e.path}>{e.name}</a>
             </h3>
+            {homepage && i === 4 && (
+              <span className="representative-photo-note">
+                Representative shower + restroom configuration
+              </span>
+            )}
             <p>{e.text}</p>
             {e.secondaryName && e.secondaryPath && (
               <a className="related-card-service" href={e.secondaryPath}>

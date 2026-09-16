@@ -1,5 +1,5 @@
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
-import { rentalCategoryHeadline } from "./rentalHeadlines";
+import { rentalCategoryHeadline, rentalHubHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
 import { CityDetail } from "./CityDetail";
 import { cityPageByPath } from "./cityDirectory";
@@ -20,6 +20,8 @@ import { StateGuideCards } from "./StateGuideCards";
 import consolidatedLocations from "../content/location-consolidation.json" with { type: "json" };
 import { ServiceDetail, modelDetails } from "./ServiceDetail";
 import { RegionDetail, regionPageByPath, regionSlug } from "./regionGuides";
+import { RentalCalculator } from "./RentalCalculator";
+import { SeoDashboard } from "./SeoDashboard";
 export type SourcePage = {
   id: number;
   modified?: string;
@@ -31,6 +33,7 @@ export type SourcePage = {
 };
 const nav = [
   ["Service Areas", "/service-areas/"],
+  ["Calculator", "/rental-calculator/"],
   ["About Us", "/about-us/"],
   ["Articles", "/blog/"],
   ["Contact Us", "/contact-us/"],
@@ -60,36 +63,6 @@ export function Header({ path }: { path: string }) {
       <a href="#main" className="skip">
         Skip to content
       </a>
-      <div className="utility utility-refresh">
-        <div className="wrap utility-inner">
-          <span className="utility-status" aria-hidden="true">
-            <i />
-          </span>
-          <svg
-            className="utility-agent-icon"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-          <p className="utility-message">
-            <strong>Emergency support available 24/7.</strong>{" "}
-            <span className="utility-call-label">Call us at</span>{" "}
-            <a href={"tel:" + site.phoneE164}>{site.phoneDisplay}</a>{" "}
-            <span className="utility-specialist">
-              to speak with a kitchen specialist.
-            </span>
-          </p>
-        </div>
-      </div>
       <div className="header-sticky header-refresh">
         <header className="header wrap">
           <a className="brand" href="/" aria-label="Temporary123 home">
@@ -274,13 +247,53 @@ export function Header({ path }: { path: string }) {
           />
         </svg>
       </a>
+      <aside
+        className="emergency-dispatch"
+        data-emergency-dispatch
+        aria-label="Emergency rental support"
+      >
+        <button
+          className="emergency-dispatch-trigger"
+          type="button"
+          data-emergency-open
+          aria-expanded="false"
+          aria-controls="emergency-dispatch-panel"
+        >
+          <span className="emergency-dispatch-signal" aria-hidden="true"><i /></span>
+          <span><small>24/7</small><strong>Emergency</strong></span>
+        </button>
+        <section
+          id="emergency-dispatch-panel"
+          className="emergency-dispatch-panel"
+          data-emergency-panel
+          aria-live="polite"
+          aria-hidden="true"
+        >
+          <button
+            className="emergency-dispatch-close"
+            type="button"
+            data-emergency-close
+            aria-label="Dismiss emergency support message"
+          >×</button>
+          <span className="emergency-dispatch-kicker">24/7 dispatch line</span>
+          <h2>Emergency rental support</h2>
+          <p>
+            Need a temporary facility urgently? Call our team for availability
+            and next-step coordination.
+          </p>
+          <a className="emergency-dispatch-call" href={"tel:" + site.phoneE164}>
+            Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
+          </a>
+          <small>For urgent rental support only</small>
+        </section>
+      </aside>
       <a
         className="contact-rail contact-rail-refresh"
         href="/contact-us/"
         aria-label="Contact Us at Temporary123"
         aria-current={path === "/contact-us/" ? "page" : undefined}
       >
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <span className="contact-rail-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
           <path
             d="M5 5h14v11H9l-4 3V5Z"
             fill="none"
@@ -288,8 +301,13 @@ export function Header({ path }: { path: string }) {
             strokeWidth="2"
             strokeLinejoin="round"
           />
-        </svg>
-        <span>Contact us</span>
+        </svg></span>
+        <span className="contact-rail-copy">
+          <small>Project desk</small>
+          <strong>Plan a rental</strong>
+          <em>Open project brief</em>
+        </span>
+        <span className="contact-rail-arrow" aria-hidden="true">↗</span>
       </a>
     </>
   );
@@ -372,6 +390,7 @@ export function Footer({ showClosing = true }: { showClosing?: boolean }) {
           <a href="/services/">Project Solutions</a>
           <a href="/industries/">Industries Served</a>
           <a href="/service-areas/">Service Areas</a>
+          <a href="/rental-calculator/">Rental Calculator</a>
           <a href="/government/">Government Services</a>
           <a href="/gsa-schedule/">GSA Schedule Information</a>
         </div>
@@ -399,6 +418,7 @@ export function Site({
   catalog?: { path: string; title: string }[];
   serviceCatalog?: { path: string; title: string }[];
 }) {
+  if (path === "/seo-dashboard/") return <SeoDashboard />;
   const contact = ["/contact/", "/contact-us/"].includes(path);
   const equipmentBrief = equipmentCatalogData.items.find(
     (item) => item.path === path,
@@ -412,6 +432,8 @@ export function Site({
       <main id="main" tabIndex={-1}>
         {path === "/" ? (
           <Home />
+        ) : path === "/rental-calculator/" ? (
+          <RentalCalculator />
         ) : contact ? (
           <section className="wrap section contact-grid">
             <div>
@@ -673,13 +695,7 @@ export function Site({
           ) ? (
           <section className="wrap section">
             <span className="eyebrow">EQUIPMENT & PROJECT SOLUTIONS</span>
-            <h1>
-              {path === "/equipment-rental/"
-                ? "Equipment for your temporary site."
-                : path === "/industries/"
-                  ? "Facilities shaped around your industry."
-                  : "Temporary facilities for the whole project."}
-            </h1>
+            <h1>{rentalHubHeadline(path)}</h1>
             <p className="directory-intro">
               {path === "/equipment-rental/"
                 ? "Compare equipment layouts and explore the facilities your operation needs. Confirm availability, access and connections with our team before selecting a unit."

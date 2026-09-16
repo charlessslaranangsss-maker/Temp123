@@ -11,6 +11,7 @@ export const routes = [
   "/equipment-rental/",
   "/industries/",
   "/service-areas/",
+  "/rental-calculator/",
   "/planning/",
   "/about-us/",
   "/blog/",
@@ -23,6 +24,9 @@ const titles: Record<string, string> = {
   "/equipment-rental/": "Equipment Rental",
   "/industries/": "Industries & Project Solutions",
   "/service-areas/": "USA Temporary Facilities Rental Service Areas",
+  "/seo-dashboard/": "SEO Migration Dashboard",
+  "/rental-calculator/":
+    "Nationwide Temporary Facility Rental and Delivery Calculator",
   "/planning/": "Plan Your Temporary Facilities",
   "/about-us/": "About Temporary123",
   "/blog/": "Articles on Temporary Facility Planning",
@@ -39,6 +43,10 @@ const descriptions: Record<string, string> = {
     "Explore temporary facility support for construction, government, food service and emergency response projects. Find equipment for your operation.",
   "/service-areas/":
     "Rental Services across the USA. Rent or lease Temporary Facilities: kitchens, shower and restroom combinations, shower trailers and sleeper trailers. Emergency 24/7.",
+  "/seo-dashboard/":
+    "Owner-facing Temporary123 migration dashboard for crawl health, city landing pages, priority authority URLs, and controlled SEO release readiness.",
+  "/rental-calculator/":
+    "Calculate published starting prices for nationwide temporary facility rental and trailer delivery, then contact Temporary123 for a project-specific quote.",
   "/planning/":
     "Prepare your temporary facility brief with site access, utilities, occupancy and rental dates. Use the Temporary123 project planning guide before you call.",
   "/about-us/":

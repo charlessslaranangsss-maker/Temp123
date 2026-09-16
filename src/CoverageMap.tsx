@@ -2,6 +2,8 @@ import states from "./usStates.json" with { type: "json" };
 import { reviewedCityPages } from "./cityDirectory";
 import { StateGuideCards } from "./StateGuideCards";
 import { MapLocationDirectory } from "./MapLocationDirectory";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { locationCarouselImages } from "./locationCarouselImages";
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 const callouts = [
@@ -254,7 +256,9 @@ export function CoverageMap({
               Close ×
             </button>
             <h2 id="state-services-title">
-              <span data-state-name>Your state</span> Rental Services
+              <span data-state-headline>
+                Temporary Facilities Rental in your state
+              </span>
             </h2>
             <p id="state-services-intro">
               Confirm rental availability for your project location.
@@ -293,8 +297,9 @@ export function CoverageMap({
                     Plan for the exact site
                   </p>
                   <h2 id="state-services-title">
-                    <span data-state-name>Your state</span> Rental Services{" "}
-                    <small>Temporary Facilities to Rent or Lease</small>
+                    <span data-state-headline>
+                      Temporary Facilities Rental in your state
+                    </span>
                   </h2>
                   <p id="state-services-intro">
                     Temporary facility rental services are available for
@@ -390,52 +395,14 @@ export function CoverageMap({
                     US
                   </span>
                 </div>
-                <div className="state-dialog-photo-grid">
-                  <figure>
-                    <div>
-                      <img
-                        src="/images/catalog/mobile-kitchen-trailers-960.webp"
-                        alt="Commercial equipment inside a mobile kitchen trailer"
-                        width="850"
-                        height="650"
-                        data-state-image
-                      />
-                      <span aria-hidden="true">01</span>
-                    </div>
-                    <figcaption data-state-image-caption>
-                      Commercial equipment inside a mobile kitchen trailer
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <div>
-                      <img
-                        src="/images/catalog/shower-trailer-960.webp"
-                        alt="Interior of a mobile shower trailer"
-                        width="850"
-                        height="650"
-                        data-state-gallery-image="1"
-                      />
-                      <span aria-hidden="true">02</span>
-                    </div>
-                    <figcaption data-state-gallery-caption="1">
-                      Interior of a mobile shower trailer
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <div>
-                      <img
-                        src="/images/catalog/mobile-kitchen-trailers-960.webp"
-                        alt="Temporary123 rental equipment"
-                        width="850"
-                        height="650"
-                        data-state-gallery-image="2"
-                      />
-                    </div>
-                    <figcaption data-state-gallery-caption="2">
-                      Temporary123 rental equipment
-                    </figcaption>
-                  </figure>
-                </div>
+                <ServiceHeroCarousel
+                  images={locationCarouselImages(
+                    "the selected state",
+                    "Commercial basecamp temporary facility rental",
+                  )}
+                  label="Temporary123 commercial basecamp equipment"
+                  caption="Verified Temporary123 equipment references for statewide commercial and institutional project planning. Availability and the assigned unit must be confirmed before booking."
+                />
               </section>
 
               <section

@@ -1,5 +1,22 @@
 import { test, expect } from "@playwright/test";
 
+test("emergency dispatch opens once per session and remains manually available", async ({ page }) => {
+  await page.goto("/");
+  const dispatch = page.locator("[data-emergency-dispatch]");
+  const panel = dispatch.locator("[data-emergency-panel]");
+  await expect(panel).toHaveAttribute("aria-hidden", "true");
+  await expect(panel).toHaveAttribute("aria-hidden", "false", { timeout: 7000 });
+  await expect(panel).toContainText("Emergency rental support");
+  await dispatch.locator("[data-emergency-close]").click();
+  await expect(panel).toHaveAttribute("aria-hidden", "true");
+  await expect.poll(() => page.evaluate(() => sessionStorage.getItem("temporary123:emergency-seen"))).toBe("1");
+  await page.reload();
+  await page.waitForTimeout(6200);
+  await expect(panel).toHaveAttribute("aria-hidden", "true");
+  await dispatch.locator("[data-emergency-open]").click();
+  await expect(panel).toHaveAttribute("aria-hidden", "false");
+});
+
 const homepageServiceNames = [
   "Mobile kitchen trailers",
   "Dishwashing trailers",
@@ -47,40 +64,27 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
         await brandText.elementHandle(),
       ),
     ).toBeGreaterThanOrEqual(0.85);
-    const supportBar = page.locator(".utility");
-    await expect(supportBar).toBeVisible();
-    await expect(supportBar).toContainText("Emergency support available 24/7.");
-    await expect(supportBar).toHaveCSS("background-color", "rgb(167, 8, 5)");
-    await expect(supportBar.locator(".utility-agent-icon")).toBeVisible();
-    await expect(supportBar.locator(".utility-specialist")).toBeVisible();
-    await expect(supportBar.locator("a")).toHaveAttribute(
+    await expect(page.locator(".utility")).toHaveCount(0);
+    const emergency = page.locator("[data-emergency-dispatch]");
+    await expect(emergency).toBeVisible();
+    await expect(emergency.locator("[data-emergency-panel]")).toHaveAttribute(
+      "aria-hidden",
+      "true",
+    );
+    await expect(emergency.locator("[data-emergency-open]")).toHaveAttribute(
+      "aria-expanded",
+      "false",
+    );
+    await expect(emergency.locator(".emergency-dispatch-call")).toHaveAttribute(
       "href",
       "tel:+18004435212",
     );
-    await expect(supportBar.locator("a")).toHaveCSS("color", "rgb(167, 8, 5)");
-    await expect(supportBar.locator("a")).toHaveCSS(
-      "background-color",
-      "rgb(255, 255, 255)",
-    );
-    await expect(page.locator(".utility-status i")).toHaveCSS(
-      "background-color",
-      "rgb(53, 240, 138)",
-    );
-    expect(
-      await page
-        .locator(".utility-status i")
-        .evaluate(
-          (element) => getComputedStyle(element, "::after").animationName,
-        ),
-    ).toBe("support-status-breathe");
     const contactRail = page.locator(".contact-rail");
     await expect(contactRail).toBeVisible();
     await expect(contactRail).toHaveAttribute("href", "/contact-us/");
-    await expect(contactRail).toHaveCSS("background-color", "rgb(0, 128, 154)");
-    await expect(contactRail).toHaveCSS(
-      "animation-name",
-      width <= 767 ? "none" : "support-contact-glow",
-    );
+    await expect(contactRail).toContainText("Project desk");
+    await expect(contactRail).toContainText("Plan a rental");
+    await expect(contactRail).toHaveCSS("animation-name", "none");
     const railBounds = await contactRail.boundingBox();
     expect(railBounds).not.toBeNull();
     expect(railBounds!.x).toBe(0);
@@ -229,10 +233,10 @@ test("service model pages provide unique planning content", async ({
     "/services/shower-restroom-combination-trailers/22ft-6-stall/",
   );
   await expect(page.locator("h1")).toHaveText(
-    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental",
+    "22 ft 6-Stall Shower and Restroom Combination Trailer Rental",
   );
   await expect(page).toHaveTitle(
-    "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls Rental | Temporary123",
+    "22 ft 6-Stall Shower and Restroom Combination Trailer Rental | Temporary123",
   );
   await expect(page.getByText("PLAN BEFORE DELIVERY")).toBeVisible();
 });

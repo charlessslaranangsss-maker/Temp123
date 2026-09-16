@@ -1,6 +1,7 @@
 import { stateGuides, stateAnchor } from "./stateGuides";
 import { statePath } from "./statePaths";
 import { regionPath } from "./regionGuides";
+import { stateRentalHeadline } from "./rentalHeadlines";
 
 export function StateGuideCards() {
   return (
@@ -9,6 +10,7 @@ export function StateGuideCards() {
         <details
           id={stateAnchor(name)}
           data-state-guide={name}
+          data-state-headline={stateRentalHeadline(name)}
           data-state-image={guide.image}
           data-state-image-alt={guide.imageAlt}
           data-state-image-two={guide.gallery[1].image}

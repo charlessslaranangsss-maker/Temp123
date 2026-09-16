@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { existsSync } from "node:fs";
 import { stateGuides } from "../../src/stateGuides";
+import { stateRentalHeadline } from "../../src/rentalHeadlines";
 
 const allServiceNames = [
   "Mobile Kitchens",
@@ -97,23 +98,26 @@ test("state click opens localized service choices and a direct call action", asy
   const state = page.locator('.coverage-map-stage [data-state="California"]');
   await state.click();
   const modal = page.getByRole("dialog", {
-    name: /California Rental Services/,
+    name: stateRentalHeadline("California"),
   });
   await expect(modal).toBeVisible();
+  await expect(page.locator("h1")).toHaveCount(1);
+  await expect(modal.locator("#state-services-title")).toHaveText(
+    stateRentalHeadline("California"),
+  );
+  expect(
+    await modal
+      .locator("#state-services-title")
+      .evaluate((node) => node.tagName),
+  ).toBe("H2");
   await expect(modal.locator("[data-state-code]")).toHaveText("State 05 of 50");
   await expect(modal).toHaveAttribute("data-state-theme", "4");
   await expect(modal).toHaveAttribute("data-state-layout", "4");
   await expect(modal).toHaveAttribute("data-state-motion", "4");
-  await expect(modal.locator("img[data-state-image]")).toHaveAttribute(
-    "src",
-    stateGuides.California.image,
-  );
-  await expect(modal.locator("img[data-state-image]")).toHaveAttribute(
-    "alt",
-    stateGuides.California.imageAlt,
-  );
-  await expect(modal.locator("img[data-state-image]")).toBeVisible();
-  await expect(modal.locator("img[data-state-gallery-image]")).toHaveCount(2);
+  const carousel = modal.locator("[data-service-carousel]");
+  await expect(carousel).toBeVisible();
+  await expect(carousel).toHaveAttribute("data-carousel-autoplay", "true");
+  await expect(carousel.locator("[data-carousel-slide]")).toHaveCount(10);
   await expect(modal.locator("[data-state-regions]")).toContainText(
     "Central Valley",
   );
@@ -124,8 +128,8 @@ test("state click opens localized service choices and a direct call action", asy
     "Base camp",
   );
   expect(
-    await modal
-      .locator("img[data-state-image]")
+    await carousel
+      .locator('[data-carousel-slide][data-active="true"] img')
       .evaluate(
         (image: HTMLImageElement) => image.complete && image.naturalWidth > 0,
       ),
@@ -163,7 +167,7 @@ test("state click opens localized service choices and a direct call action", asy
   await expect(state).toBeFocused();
 });
 
-test("different states receive different structures, owned images and motions", async ({
+test("different states receive different structures and motions with verified equipment imagery", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -176,21 +180,23 @@ test("different states receive different structures, owned images and motions", 
   const firstPresentation = await dialog.evaluate((element) => ({
     layout: element.getAttribute("data-state-layout"),
     motion: element.getAttribute("data-state-motion"),
-    image: element.querySelector("img[data-state-image]")?.getAttribute("src"),
+    image: element
+      .querySelector('[data-carousel-slide][data-active="true"] img')
+      ?.getAttribute("src"),
   }));
   await page.keyboard.press("Escape");
   await page.locator('.coverage-map-stage [data-state="Montana"]').click();
   const secondPresentation = await dialog.evaluate((element) => ({
     layout: element.getAttribute("data-state-layout"),
     motion: element.getAttribute("data-state-motion"),
-    image: element.querySelector("img[data-state-image]")?.getAttribute("src"),
+    image: element
+      .querySelector('[data-carousel-slide][data-active="true"] img')
+      ?.getAttribute("src"),
   }));
   expect(secondPresentation).not.toEqual(firstPresentation);
-  expect(secondPresentation).toEqual({
-    layout: stateGuides.Montana.layout,
-    motion: stateGuides.Montana.motion,
-    image: stateGuides.Montana.image,
-  });
+  expect(secondPresentation.layout).toBe(stateGuides.Montana.layout);
+  expect(secondPresentation.motion).toBe(stateGuides.Montana.motion);
+  expect(secondPresentation.image).toBe(firstPresentation.image);
   await expect(dialog.locator(".state-dialog-visual")).toHaveCSS(
     "animation-name",
     "state-visual-reveal",
@@ -204,7 +210,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await page.goto("/service-areas/#service-area-map");
   await page.locator("[data-state-picker]").selectOption("New Hampshire");
   let modal = page.getByRole("dialog", {
-    name: /New Hampshire Rental Services/,
+    name: stateRentalHeadline("New Hampshire"),
   });
   await expect(modal).toBeVisible();
   expect(await modal.evaluate((e) => e.scrollWidth <= e.clientWidth)).toBe(
@@ -221,7 +227,7 @@ test("mobile state selection and expanded map support keyboard, calling and dism
   await state.focus();
   await state.press("Space");
   modal = page.getByRole("dialog", {
-    name: /Texas Rental Services/,
+    name: stateRentalHeadline("Texas"),
   });
   await expect(modal).toBeVisible();
   await expect(modal.locator(".state-dialog-visual")).toHaveCSS(

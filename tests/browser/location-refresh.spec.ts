@@ -1,4 +1,8 @@
 import { test, expect } from "@playwright/test";
+import {
+  matchesLocationRentalHeadline,
+  stateRentalHeadline,
+} from "../../src/rentalHeadlines";
 
 for (const width of [390, 1440]) {
   test(`state, regional and city rental views at ${width}px`, async ({
@@ -6,16 +10,20 @@ for (const width of [390, 1440]) {
   }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.emulateMedia({ reducedMotion: "reduce" });
-    for (const route of [
-      "/service-areas/california/",
-      "/service-areas/washington/olympic-peninsula/",
-      "/service-areas/new-york/new-york-city-and-long-island/",
+    for (const { route, location } of [
+      { route: "/service-areas/california/", location: "California" },
+      {
+        route: "/service-areas/washington/olympic-peninsula/",
+        location: "Olympic Peninsula, Washington",
+      },
+      {
+        route: "/service-areas/new-york/new-york-city-and-long-island/",
+        location: "New York City and Long Island, New York",
+      },
     ]) {
       await page.goto(route);
-      await expect(page.locator("h1")).toHaveText(/(Rental|Lease|Facilities)/);
-      expect((await page.locator("h1").innerText()).length).toBeLessThanOrEqual(
-        75,
-      );
+      const headline = await page.locator("h1").innerText();
+      expect(matchesLocationRentalHeadline(headline, location)).toBe(true);
       await expect(
         page.getByRole("heading", {
           name: "Rental Planning Conditions",
@@ -55,7 +63,7 @@ for (const width of [390, 1440]) {
     const dialog = page.locator("#state-services-dialog");
     await expect(dialog).toBeVisible();
     await expect(dialog.locator("#state-services-title")).toContainText(
-      "California Rental Services",
+      stateRentalHeadline("California"),
     );
     await expect(dialog.locator("img")).toHaveCount(3);
     await expect(dialog.locator("[data-state-page]")).toHaveAttribute(
@@ -78,12 +86,12 @@ for (const width of [390, 1440]) {
     await page.keyboard.press("Escape");
     await page.goto("/service-areas/washington/olympic-peninsula/");
     await page.locator(".region-city-link-grid a").first().click();
-    await expect(page.locator("main h1")).toHaveText(
-      /^Port Angeles, Washington /,
-    );
-    await expect(page.locator("main h1")).toHaveText(
-      /(Rental|Lease|Facilities)/,
-    );
+    expect(
+      matchesLocationRentalHeadline(
+        await page.locator("main h1").innerText(),
+        "Port Angeles, Washington",
+      ),
+    ).toBe(true);
     await expect(page.locator("main img:visible")).toHaveCount(1);
     expect(
       await page.evaluate(
@@ -93,9 +101,9 @@ for (const width of [390, 1440]) {
     await page.goto(
       "/equipment-rental/mobile-kitchen-trailers/?location=Boise%2C%20Idaho",
     );
-    await expect(page.locator("main h1")).toHaveText(/^Boise, Idaho /);
+    await expect(page.locator("main h1")).toHaveText(/ in Boise, Idaho$/);
     await expect(page.locator("main h1")).toHaveText(
-      /Kitchen.*(Rental|Lease)$/,
+      /Kitchen.*(Rental|Lease) in Boise, Idaho$/,
     );
   });
 }

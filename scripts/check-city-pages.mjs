@@ -101,7 +101,10 @@ for (const row of inventory.records) {
   const images = $("main article img").length;
   if (titles.has(title)) issues.push(`Duplicate city title: ${title}`);
   titles.add(title);
-  if (!h1.includes(row[1]) || !/Rental|Lease/.test(h1))
+  if (
+    !h1.includes(row[1]) ||
+    !/(?:Rental|For Rent|Leasing|Short-Term Rental|Long-Term Rental)/.test(h1)
+  )
     issues.push(`Weak city H1: ${cityPath}`);
   if (words < 250 || words > 500)
     issues.push(`City word count ${words}: ${cityPath}`);

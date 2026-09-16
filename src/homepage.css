@@ -1,3 +1,5 @@
+@import "./service-hero-carousel.css";
+
 /* Equipment-led homepage, with a consistent type and action hierarchy. */
 .homepage {
   --home-navy: #112d36;
@@ -508,6 +510,26 @@
 .home-equipment .image-box:hover img {
   transform: scale(1.045);
 }
+.home-equipment .verified-image-pending {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    linear-gradient(135deg, rgb(0 128 143 / 12%), transparent 62%),
+    #edf4f3;
+  color: #27535b;
+  text-align: center;
+}
+.home-equipment .verified-image-pending span {
+  max-width: 14rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
 .home-equipment .category-label,
 .home-equipment .image-arrow,
 .home-equipment .service-index,
@@ -528,6 +550,19 @@
   letter-spacing: -0.03em;
   line-height: 1.35;
   min-height: 0;
+}
+.home-equipment .representative-photo-note {
+  align-self: flex-start;
+  margin: 0.15rem 0 0.55rem;
+  border-radius: 999px;
+  background: #e7f4f3;
+  color: #24515a;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
 .home-equipment .card-copy p {
   font-size: 0.92rem;

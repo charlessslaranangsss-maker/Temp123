@@ -6,16 +6,16 @@ import { serviceCategories } from "./serviceMenu";
 import { stateRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
 import { citiesForRegion } from "./cityDirectory";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { locationCarouselImages } from "./locationCarouselImages";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
 );
 export function StateDetail({ name }: { name: string }) {
   const guide = stateGuides[name];
-  const headline =
-    name === "Texas"
-      ? "Emergency trailer rental, shower, kitchen, shower and bathroom combination, sleeper bunk bed, and complete man-camp services."
-      : stateRentalHeadline(name);
+  const headline = stateRentalHeadline(name);
+  const carouselImages = locationCarouselImages(name, headline);
   const regions = regionPages.filter((region) => region.state === name);
   const priority = [
     "Mobile Kitchens",
@@ -53,19 +53,13 @@ export function StateDetail({ name }: { name: string }) {
               Call the rental team {site.phoneDisplay}
             </a>
           </div>
-          <figure className="region-hero-visual">
-            <img
-              src={guide.image}
-              alt={guide.imageAlt}
-              width="850"
-              height="650"
-              fetchPriority="high"
+          <div className="region-hero-visual region-hero-carousel">
+            <ServiceHeroCarousel
+              images={carouselImages}
+              label={`${name} temporary facility rental equipment`}
+              caption={`Verified equipment references for commercial and institutional rental planning in ${name}. Confirm the available unit and configuration before booking.`}
             />
-            <figcaption>
-              <span>{name}</span>
-              <strong>Equipment for your base camp</strong>
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </section>
       <section className="wrap section state-guide-regions">
@@ -85,7 +79,9 @@ export function StateDetail({ name }: { name: string }) {
             <a href={region.path} key={region.path}>
               <strong>{region.region}</strong>
               <span>{region.cities.slice(0, 3).join(", ")}</span>
-              <span>{citiesForRegion(region.path).length} listed locations</span>
+              <span>
+                {citiesForRegion(region.path).length} listed locations
+              </span>
               <span aria-hidden="true">↗</span>
             </a>
           ))}
@@ -141,20 +137,15 @@ export function StateDetail({ name }: { name: string }) {
             ))}
           </ul>
         </div>
-        <div className="region-gallery">
-          {guide.gallery.slice(1).map((photo) => (
-            <figure key={photo.image}>
-              <img
-                src={photo.image}
-                alt={photo.imageAlt}
-                width="850"
-                height="650"
-                loading="lazy"
-              />
-              <figcaption>{photo.imageAlt}</figcaption>
-            </figure>
-          ))}
-        </div>
+        <aside className="location-equipment-note">
+          <span className="eyebrow">VERIFIED IMAGE POLICY</span>
+          <h3>Commercial equipment, not random location scenery</h3>
+          <p>
+            The carousel above uses reviewed equipment references from the
+            rental library. Images are presented as configuration references and
+            do not claim that a specific unit was photographed in {name}.
+          </p>
+        </aside>
       </section>
       <div className="wrap state-guide-call">
         <p>

@@ -28,7 +28,14 @@ import { regionPages, regionPageByPath } from "../src/regionGuides";
 import { cityPageByPath, reviewedCityPages } from "../src/cityDirectory";
 import { cityHeadline } from "../src/CityDetail";
 import { cityEditorial } from "../src/cityEditorial";
-import { regionLocationLabel, regionRentalHeadline, stateRentalHeadline } from "../src/rentalHeadlines";
+import {
+  regionLocationLabel,
+  regionRentalHeadline,
+  rentalCategoryHeadline,
+  rentalHubHeadline,
+  rentalProductHeadline,
+  stateRentalHeadline,
+} from "../src/rentalHeadlines";
 import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
 // Vercel preview builds must never inherit production indexing settings.
@@ -66,6 +73,8 @@ const coreRoutes = [
   "/services/",
   "/industries/",
   "/service-areas/",
+  "/seo-dashboard/",
+  "/rental-calculator/",
   "/planning/",
   "/about-us/",
   "/blog/",
@@ -199,6 +208,7 @@ for (const path of [...allRoutes, "/404/"]) {
     : undefined;
   const stateName = statePageByPath[path];
   const industry = industryGuideByPath[path];
+  const hubHeadline = rentalHubHeadline(path);
   const info = industry
     ? {
         title: `${industry.title}: Temporary Facilities to Rent or Lease | Temporary123`,
@@ -206,7 +216,7 @@ for (const path of [...allRoutes, "/404/"]) {
       }
     : detail
       ? {
-          title: detail.name + " Rental | Temporary123",
+          title: `${rentalProductHeadline(detail.name)} | Temporary123`,
           description: detail.intro.split(". ")[0] + ".",
         }
       : city
@@ -229,6 +239,12 @@ for (const path of [...allRoutes, "/404/"]) {
               title: `${stateRentalHeadline(stateName)} | Temporary123`,
               description: `Rental Services in ${stateName}. Rent or lease Temporary Facilities: mobile kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
             }
+          : hubHeadline
+            ? {
+                title: `${hubHeadline} | Temporary123`,
+                description:
+                  pageInfo(path).description,
+              }
           : coreRoutes.includes(path)
             ? pageInfo(path)
             : page
@@ -249,17 +265,17 @@ for (const path of [...allRoutes, "/404/"]) {
                     }
                   : catalogItem
                     ? {
-                        title: `${catalogItem.name} | Temporary123`,
+                        title: `${rentalProductHeadline(catalogItem.name)} | Temporary123`,
                         description: catalogItem.summary,
                       }
                     : serviceOption
                       ? {
-                          title: `${serviceOption.name} Rental | Temporary123`,
+                          title: `${rentalProductHeadline(serviceOption.name)} | Temporary123`,
                           description: serviceOption.description,
                         }
                       : serviceCategory
                         ? {
-                            title: `${serviceCategory.name} Rental | Temporary123`,
+                            title: `${rentalCategoryHeadline(serviceCategory.name)} | Temporary123`,
                             description: serviceCategory.description,
                           }
                         : pageInfo(path);

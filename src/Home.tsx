@@ -2,6 +2,7 @@ import site from "../site.json" with { type: "json" };
 import { Cards, EquipmentImage } from "./Equipment";
 import { FacilityIcon } from "./FacilityIcon";
 import { CoverageMap } from "./CoverageMap";
+import { CalculatorWorkspace } from "./RentalCalculator";
 
 const rentalGroups = [
   [
@@ -88,7 +89,11 @@ export function Home() {
               combination trailers, shower trailers, and sleeper or bunkbed
               trailers. Supporting Temporary Facilities rental options include
               laundry, dishwashing, refrigeration, restrooms and handwashing.
-              Emergency 24/7.
+              For dedicated commercial kitchen and dishwashing rentals, visit{" "}
+              <a href="https://temporarykitchens123.com/">
+                Temporary Kitchens 123
+              </a>
+              . Emergency 24/7.
             </p>
             <div className="rental-hero-actions">
               <a className="button home-primary" href="/contact-us/">
@@ -261,6 +266,8 @@ export function Home() {
           </a>
         </div>
       </section>
+
+      <CalculatorWorkspace homepage />
 
       <section
         className="home-process"

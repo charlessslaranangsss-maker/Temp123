@@ -41,7 +41,7 @@ export const leadSchema = z
       .max(3000),
     consent: z.literal(true),
     website: z.string().max(0, "Unable to accept this inquiry.").default(""),
-    page: z.literal("/contact/"),
+    page: z.enum(["/contact/", "/rental-calculator/", "/"]),
   })
   .strict();
 export type Lead = z.infer<typeof leadSchema>;

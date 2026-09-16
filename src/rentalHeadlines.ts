@@ -7,69 +7,209 @@ const locationSeed = (value: string) =>
 const select = <T>(items: readonly T[], key: string) =>
   items[locationSeed(key) % items.length];
 
-const stateHeadlines = [
-  (state: string) => `${state} Mobile Kitchen Trailer Rental`,
-  (state: string) => `${state} Temporary Facilities Lease`,
-  (state: string) => `${state} Emergency Shower Trailer Rental`,
-  (state: string) => `${state} Sleeper Bunkbed Trailer Rental`,
-  (state: string) => `${state} Portable Facilities Rental`,
-  (state: string) => `${state} Mobile Trailer Lease`,
-  (state: string) => `${state} Emergency Trailer Rental`,
-  (state: string) => `${state} Shower and Restroom Trailer Rental`,
+export const commercialUseCases = [
+  "Emergency Basecamp",
+  "Industrial Basecamp",
+  "Institutional Facility",
+  "Accessible Commercial Site",
+  "Workforce Camp",
+  "Construction Project",
+  "Commercial Food Service",
+  "Workforce Housing",
+  "Remote Operations",
 ] as const;
 
+export const locationEquipmentFamilies = [
+  "Shower Trailer",
+  "Shower and Restroom Combination Trailer",
+  "ADA Shower and Restroom Combination Trailer",
+  "Laundry Temporary Facilities",
+  "Kitchen Emergency Trailer",
+  "Commercial Kitchen Trailer",
+  "Commercial Kitchen Modular Building",
+  "Sleeper Bunk-Bed Facility",
+  "Man Camp Temporary Facilities",
+] as const;
+
+export const locationRentalIntents = [
+  "Rental",
+  "For Rent",
+  "Leasing",
+  "Short-Term Rental",
+  "Long-Term Rental",
+] as const;
+
+export type LocationHeadlineOption = {
+  commercialUseCase: (typeof commercialUseCases)[number];
+  equipmentFamily: (typeof locationEquipmentFamilies)[number];
+  rentalIntent: (typeof locationRentalIntents)[number];
+};
+
+const locationHeadlineRotation: readonly LocationHeadlineOption[] = [
+  {
+    commercialUseCase: "Emergency Basecamp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Institutional Facility",
+    equipmentFamily: "Shower and Restroom Combination Trailer",
+    rentalIntent: "For Rent",
+  },
+  {
+    commercialUseCase: "Accessible Commercial Site",
+    equipmentFamily: "ADA Shower and Restroom Combination Trailer",
+    rentalIntent: "Leasing",
+  },
+  {
+    commercialUseCase: "Workforce Camp",
+    equipmentFamily: "Laundry Temporary Facilities",
+    rentalIntent: "Long-Term Rental",
+  },
+  {
+    commercialUseCase: "Construction Project",
+    equipmentFamily: "Kitchen Emergency Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Commercial Food Service",
+    equipmentFamily: "Commercial Kitchen Modular Building",
+    rentalIntent: "For Rent",
+  },
+  {
+    commercialUseCase: "Workforce Housing",
+    equipmentFamily: "Sleeper Bunk-Bed Facility",
+    rentalIntent: "Leasing",
+  },
+  {
+    commercialUseCase: "Remote Operations",
+    equipmentFamily: "Man Camp Temporary Facilities",
+    rentalIntent: "Rental",
+  },
+] as const;
+
+const acceptedLocationHeadlineOptions: readonly LocationHeadlineOption[] = [
+  ...locationHeadlineRotation,
+  {
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Commercial Kitchen Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Commercial Kitchen Modular Building",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Industrial Basecamp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Rental",
+  },
+  {
+    commercialUseCase: "Workforce Camp",
+    equipmentFamily: "Shower Trailer",
+    rentalIntent: "Short-Term Rental",
+  },
+] as const;
+
+const approvedStateOptions: Record<string, LocationHeadlineOption> = {
+  Alabama: locationHeadlineRotation[0],
+  California: locationHeadlineRotation[1],
+  Colorado: locationHeadlineRotation[4],
+  Texas: locationHeadlineRotation[7],
+};
+
+export const buildLocationRentalHeadline = (
+  location: string,
+  option: LocationHeadlineOption,
+) =>
+  `${location} ${option.commercialUseCase} ${option.equipmentFamily} ${option.rentalIntent}`;
+
+export const matchesLocationRentalHeadline = (
+  headline: string,
+  location: string,
+) => {
+  if (!headline.startsWith(`${location} `)) return false;
+  const phrase = headline.slice(location.length + 1);
+  return acceptedLocationHeadlineOptions.some(
+    ({ commercialUseCase, equipmentFamily, rentalIntent }) =>
+      phrase === `${commercialUseCase} ${equipmentFamily} ${rentalIntent}`,
+  );
+};
+
 export const regionLocationLabel = (region: string, state: string) =>
-  region.toLowerCase().includes(state.toLowerCase())
+  region.toLowerCase() === state.toLowerCase() ||
+  region.toLowerCase().endsWith(`, ${state.toLowerCase()}`)
     ? region
     : `${region}, ${state}`;
 
-const regionHeadlines = [
-  (location: string) => `${location} Mobile Kitchen Trailer Rental`,
-  (location: string) => `${location} Temporary Facilities Lease`,
-  (location: string) => `${location} Emergency Shower Trailer Rental`,
-  (location: string) => `${location} Sleeper Bunkbed Trailer Rental`,
-  (location: string) => `${location} Portable Facilities Rental`,
-  (location: string) => `${location} Mobile Trailer Lease`,
-  (location: string) => `${location} Emergency Trailer Rental`,
-  (location: string) => `${location} Shower and Restroom Trailer Rental`,
-] as const;
-
 export const stateRentalHeadline = (state: string) =>
-  select(stateHeadlines, state)(state);
+  buildLocationRentalHeadline(
+    state,
+    approvedStateOptions[state] || select(locationHeadlineRotation, state),
+  );
 
 export const regionRentalHeadline = (
   region: string,
   state: string,
   regionIndex: number,
-) =>
-  regionHeadlines[(locationSeed(state) + regionIndex) % regionHeadlines.length](
-    regionLocationLabel(region, state),
-  );
+) => {
+  const location = regionLocationLabel(region, state);
+  const option =
+    locationHeadlineRotation[
+      (locationSeed(state) + regionIndex) % locationHeadlineRotation.length
+    ];
+  return buildLocationRentalHeadline(location, option);
+};
 
 const cityServiceHeadlines = {
   kitchen: [
-    (location: string) => `${location} Mobile Kitchen Rental`,
-    (location: string) => `${location} Kitchen Trailer Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Commercial Food Service",
+        equipmentFamily: "Commercial Kitchen Modular Building",
+        rentalIntent: "For Rent",
+      }),
+    (location: string) =>
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Construction Project",
+        equipmentFamily: "Kitchen Emergency Trailer",
+        rentalIntent: "Rental",
+      }),
   ],
   shower: [
-    (location: string) => `${location} Emergency Shower Trailer Rental`,
-    (location: string) => `${location} Portable Shower Trailer Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[0]),
+    (location: string) =>
+      buildLocationRentalHeadline(location, {
+        commercialUseCase: "Workforce Camp",
+        equipmentFamily: "Shower Trailer",
+        rentalIntent: "Short-Term Rental",
+      }),
   ],
   combination: [
-    (location: string) => `${location} Shower and Restroom Trailer Rental`,
-    (location: string) => `${location} Combination Trailer Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[1]),
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[2]),
   ],
   restroom: [
-    (location: string) => `${location} Restroom Trailer Rental`,
-    (location: string) => `${location} Portable Restroom Trailer Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[1]),
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[2]),
   ],
   sleeper: [
-    (location: string) => `${location} Sleeper Bunkbed Trailer Rental`,
-    (location: string) => `${location} Base Camp Trailer Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[6]),
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[7]),
   ],
   facility: [
-    (location: string) => `${location} Temporary Facilities Rental`,
-    (location: string) => `${location} Portable Facility Lease`,
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[3]),
+    (location: string) =>
+      buildLocationRentalHeadline(location, locationHeadlineRotation[7]),
   ],
 } as const;
 
@@ -89,21 +229,43 @@ export const cityRentalHeadline = (location: string, service: string) => {
   return select(cityServiceHeadlines[kind], `${location}-${service}`)(location);
 };
 
-export const rentalProductHeadline = (name: string) =>
-  /rental|lease/i.test(name) ? name : `${name} Rental`;
+export const rentalProductHeadline = (name: string) => {
+  if (/Combination Trailer/i.test(name)) {
+    if (/ADA/i.test(name))
+      return "ADA Shower and Restroom Combination Trailer Rental";
+    const size = name.match(/^(\d+)\s*ft/i)?.[1];
+    const stalls = name.match(/(\d+) Stalls?/i)?.[1];
+    if (size && stalls)
+      return `${size} ft ${stalls}-Stall Shower and Restroom Combination Trailer Rental`;
+    return "Shower and Restroom Combination Trailer Rental";
+  }
+  if (/^22 ft Shower Trailer, 10 Stalls$/i.test(name))
+    return "22 ft 10-Stall Shower Trailer Rental";
+  if (/^20 ft Shower Container, 5 Stalls$/i.test(name))
+    return "20 ft 5-Stall Shower Container Rental";
+  return /rental|lease/i.test(name) ? name : `${name} Rental`;
+};
 
 const categoryHeadlines: Record<string, string> = {
-  "Mobile Kitchens": "Mobile Kitchen Trailer Rental",
+  "Mobile Kitchens": "Kitchen Trailer Rental",
   Dishwashing: "Dishwashing Trailer Rental",
   Refrigeration: "Refrigerated Trailer Rental",
   Shower: "Emergency Shower Trailer Rental",
   Restroom: "Restroom Trailer Rental",
   "Shower and Restroom Combination Trailers":
-    "Shower and Restroom Trailer Rental",
-  Sleeper: "Sleeper Bunk Bed Trailer Rental",
+    "Shower and Restroom Combination Trailer Rental",
+  Sleeper: "Sleeper Bunk-Bed Facility Rental",
   Laundry: "Laundry Trailer Rental",
   "Handwashing Trailers": "Portable Handwashing Trailer Rental",
 };
 
 export const rentalCategoryHeadline = (name: string) =>
   categoryHeadlines[name] || `${name} Facility Rental`;
+
+const hubHeadlines: Record<string, string> = {
+  "/equipment-rental/": "Nationwide Temporary Facility and Equipment Rental",
+  "/industries/": "Commercial and Institutional Temporary Facility Rental",
+  "/services/": "Nationwide Temporary Facility Rental Services",
+};
+
+export const rentalHubHeadline = (path: string) => hubHeadlines[path];

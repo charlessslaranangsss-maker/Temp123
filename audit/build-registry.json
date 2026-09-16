@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T15:41:16.489Z",
+  "generatedAt": "2026-09-16T04:49:10.712Z",
   "mode": "preview",
   "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
@@ -22,6 +22,14 @@
     },
     {
       "path": "/service-areas/",
+      "indexable": false
+    },
+    {
+      "path": "/seo-dashboard/",
+      "indexable": false
+    },
+    {
+      "path": "/rental-calculator/",
       "indexable": false
     },
     {

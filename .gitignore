@@ -12,3 +12,8 @@ docs/REVISED-PROJECT-PROMPT.md
 security/archive/
 content/catalog/
 content/priority/
+.codex-tmp/
+dist-da-dashboard/
+dist-index-dashboard/
+outputs/
+work/

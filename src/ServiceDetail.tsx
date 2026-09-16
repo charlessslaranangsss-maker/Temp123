@@ -2,50 +2,62 @@ import details from "../content/service-details.json" with { type: "json" };
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { imagesForServicePath } from "./serviceHeroImages";
 export const modelDetails = details;
 export function ServiceDetail({ path }: { path: keyof typeof details }) {
   const item = details[path];
+  const verifiedImages = imagesForServicePath(path);
   const related = serviceCategories
     .find((c) => c.name === item.category)!
     .links.filter((l) => l.href !== path);
   return (
     <article className="model-page">
-      <section className="wrap section">
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>/</span>
-          <a href="/equipment-rental/">Services</a>
-          <span>/</span>
-          <a href={item.categoryHref}>{item.category}</a>
-        </nav>
-        <div className="model-hero">
-          <div>
-            <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
-            <h1>{rentalProductHeadline(item.name)}</h1>
-            <p className="model-intro">{item.intro}</p>
-            <div className="model-actions">
-              <a className="button" href={"tel:" + site.phoneE164}>
-                Call Now, {item.category} Specialist 24/7{" "}
-                <span aria-hidden="true">↗</span>
-              </a>
-              <a className="model-call" href={"tel:" + site.phoneE164}>
-                {site.phoneDisplay}
-              </a>
+      <section className="model-hero-section">
+        <div className="wrap section">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/equipment-rental/">Services</a>
+            <span>/</span>
+            <a href={item.categoryHref}>{item.category}</a>
+          </nav>
+          <div className="model-hero">
+            <div>
+              <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
+              <h1>{rentalProductHeadline(item.name)}</h1>
+              <p className="model-intro">{item.intro}</p>
+              <div className="model-actions">
+                <a className="button" href={"tel:" + site.phoneE164}>
+                  Call Now, {item.category} Specialist 24/7{" "}
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a className="model-call" href={"tel:" + site.phoneE164}>
+                  {site.phoneDisplay}
+                </a>
+              </div>
             </div>
+            {verifiedImages ? (
+              <ServiceHeroCarousel
+                images={verifiedImages}
+                label={item.name}
+                caption={`Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`}
+              />
+            ) : (
+              <figure className="service-hero-unverified">
+                <div>
+                  <span>PHOTO REVIEW IN PROGRESS</span>
+                  <strong>
+                    Exact equipment photography is pending verification.
+                  </strong>
+                </div>
+                <figcaption>
+                  Confirm the available {item.name.toLowerCase()} configuration
+                  and floor plan before booking.
+                </figcaption>
+              </figure>
+            )}
           </div>
-          <figure>
-            <img
-              src={item.image}
-              alt={item.alt}
-              width="960"
-              height="640"
-              fetchPriority="high"
-            />
-            <figcaption>
-              {item.alt}. Confirm the available unit's floor plan before
-              booking.
-            </figcaption>
-          </figure>
         </div>
       </section>
       <section className="model-body">

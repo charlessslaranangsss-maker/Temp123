@@ -2,7 +2,10 @@ import site from "../site.json" with { type: "json" };
 import { nearbyCities, type CityPage } from "./cityDirectory";
 import { cityEditorial } from "./cityEditorial";
 import { regionCities } from "./regionCities";
+import { cityRentalHeadline } from "./rentalHeadlines";
 import { buildRegionSeasonalDemand } from "./seasonalDemand";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { locationCarouselImages } from "./locationCarouselImages";
 
 const serviceLinks = [
   {
@@ -23,9 +26,25 @@ const serviceLinks = [
   },
 ] as const;
 
+const approvedCityHeadlines: Record<string, string> = {
+  "5355365":
+    "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+  "5370000":
+    "Tacoma, Washington Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+  "5351300":
+    "Olympia, Washington Institutional Facility Shower and Restroom Combination Trailer For Rent",
+  "5363000":
+    "Seattle, Washington Construction Project Kitchen Emergency Trailer Rental",
+  "5363385":
+    "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
+};
+
 export const cityHeadline = (city: CityPage): string =>
-  cityEditorial[city.geoid]?.heading ||
-  `${city.name}, ${city.state} Temporary Facilities Rental`;
+  approvedCityHeadlines[city.geoid] ||
+  cityRentalHeadline(
+    `${city.name}, ${city.state}`,
+    cityEditorial[city.geoid]?.heading || "Temporary Facilities",
+  );
 
 export function CityDetail({ city }: { city: CityPage }) {
   const editorial = cityEditorial[city.geoid];
@@ -38,7 +57,9 @@ export function CityDetail({ city }: { city: CityPage }) {
     city.regionIndex,
     regionCities(city.state, city.regionIndex),
   );
-  const photo = editorial.photo;
+  const headline = cityHeadline(city);
+  const location = `${city.name}, ${city.state}`;
+  const carouselImages = locationCarouselImages(location, headline);
   return (
     <article className={`city-page city-layout-${Number(city.geoid) % 4}`}>
       <section className="city-hero">
@@ -56,7 +77,7 @@ export function CityDetail({ city }: { city: CityPage }) {
               <span aria-current="page">{city.name}</span>
             </nav>
             <span className="eyebrow">CITY RENTAL GUIDE</span>
-            <h1>{editorial.heading}</h1>
+            <h1>{headline}</h1>
             <p className="city-lead">{editorial.intro}</p>
             <div className="city-hero-actions">
               <span className="city-emergency">Emergency 24/7</span>
@@ -65,16 +86,13 @@ export function CityDetail({ city }: { city: CityPage }) {
               </a>
             </div>
           </div>
-          <figure className="city-equipment-photo">
-            <img
-              src={photo.image}
-              alt={photo.alt}
-              width="850"
-              height="650"
-              loading="eager"
+          <div className="city-equipment-photo city-equipment-carousel">
+            <ServiceHeroCarousel
+              images={carouselImages}
+              label={`${location} temporary facility rental equipment`}
+              caption={`Verified commercial equipment references for rental planning in ${location}. Confirm the available unit and configuration before booking.`}
             />
-            <figcaption>{photo.caption} · Equipment reference</figcaption>
-          </figure>
+          </div>
         </div>
       </section>
       <section
@@ -90,7 +108,12 @@ export function CityDetail({ city }: { city: CityPage }) {
           <ul className="city-service-list">
             {serviceLinks.map((service) => (
               <li key={service.href}>
-                <a href={service.href}>{service.label}</a>
+                <a href={service.href}>
+                  {city.geoid === "5355365" &&
+                  service.href === "/services/shower-trailers/22ft-10-stall/"
+                    ? `${service.label} with individual rooms`
+                    : service.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -164,10 +187,10 @@ export function CityDetail({ city }: { city: CityPage }) {
         </div>
         <div className="city-related-links">
           {nearby.map((other) => (
-              <a href={other.path} key={other.geoid}>
-                {other.name}
-              </a>
-            ))}
+            <a href={other.path} key={other.geoid}>
+              {other.name}
+            </a>
+          ))}
           <a href={`${city.regionPath}cities/`}>All {city.region} cities</a>
           <a href={city.regionPath}>{city.region} rental guide</a>
           <a href={city.statePath}>All {city.state} travel regions</a>
