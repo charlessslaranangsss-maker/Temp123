@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-16T10:39:32.223Z",
+  "environment": "Local intercepted browser fixtures; not registered pages or live QA",
+  "checks": [
+    {
+      "title": "38ft All Electric Kitchen",
+      "reviewId": "26.01",
+      "width": 1440,
+      "view": "exterior",
+      "fullOriginalDimensions": [
+        1434,
+        1097
+      ],
+      "result": "PASS"
+    },
+    {
+      "title": "Office, Sleeper and Shower & Restroom Trailer",
+      "reviewId": "27.01",
+      "width": 1440,
+      "view": "exterior",
+      "fullOriginalDimensions": [
+        1434,
+        1097
+      ],
+      "result": "PASS"
+    },
+    {
+      "title": "38ft All Electric Kitchen",
+      "reviewId": "26.01",
+      "width": 390,
+      "view": "exterior",
+      "fullOriginalDimensions": [
+        1434,
+        1097
+      ],
+      "result": "PASS"
+    },
+    {
+      "title": "Office, Sleeper and Shower & Restroom Trailer",
+      "reviewId": "27.01",
+      "width": 390,
+      "view": "exterior",
+      "fullOriginalDimensions": [
+        1434,
+        1097
+      ],
+      "result": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "networkErrors": [],
+  "status": "PASS"
+}

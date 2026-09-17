@@ -1,3 +1,5 @@
+import introOverrides from "../content/aligned-page-introductions.json" with { type: "json" };
+import replacedLeads from "../content/aligned-source-original-leads.json" with { type: "json" };
 import { industryGuideByPath } from "../src/IndustryDetail";
 import { statePageByPath } from "../src/StateDetail";
 import { pageSchema } from "./structured-data";
@@ -27,7 +29,7 @@ import { serviceCategories, serviceOptions } from "../src/serviceMenu";
 import { regionPages, regionPageByPath } from "../src/regionGuides";
 import { cityPageByPath, reviewedCityPages } from "../src/cityDirectory";
 import { cityHeadline } from "../src/CityDetail";
-import { cityEditorial } from "../src/cityEditorial";
+import { alignedLocationIntro } from "../src/alignedIntroductions";
 import {
   regionLocationLabel,
   regionRentalHeadline,
@@ -186,6 +188,8 @@ const renderContent = (page: SourcePage) =>
     media,
     unresolved: unresolvedSourceLinks,
     dimensions,
+    removeLeadParagraph: Boolean(introOverrides[page.path as keyof typeof introOverrides]),
+    replacedLead: replacedLeads[page.path as keyof typeof replacedLeads],
   });
 const esc = (s: string) =>
   s.replace(
@@ -222,22 +226,22 @@ for (const path of [...allRoutes, "/404/"]) {
       : city
         ? {
             title: `${cityHeadline(city)} | Temporary123`,
-            description: compact(`${cityEditorial[city.geoid].intro} Emergency 24/7.`, 155),
+            description: compact(alignedLocationIntro(cityHeadline(city), `${city.name}, ${city.state}`).split(/(?<!\bSt)\. /)[0] + ".", 155),
           }
       : directoryRegion
           ? {
               title: `${regionLocationLabel(directoryRegion.region, directoryRegion.state)} Facility Rental Locations | Temporary123`,
-              description: `Browse ${directoryRegion.region}, ${directoryRegion.state} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
+              description: `Browse ${regionLocationLabel(directoryRegion.region, directoryRegion.state)} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
             }
       : region
         ? {
             title: `${regionRentalHeadline(region.region, region.state, region.index)} | Temporary123`,
-            description: `Rental Services in ${region.region}, ${region.state}. Rent or lease Temporary Facilities: kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
+            description: compact(alignedLocationIntro(regionRentalHeadline(region.region, region.state, region.index), regionLocationLabel(region.region, region.state)).split(/(?<!\bSt)\. /)[0] + ".", 155),
           }
         : stateName
           ? {
               title: `${stateRentalHeadline(stateName)} | Temporary123`,
-              description: `Rental Services in ${stateName}. Rent or lease Temporary Facilities: mobile kitchens, shower and restroom combinations, showers and sleeper trailers. Emergency 24/7.`,
+              description: compact(alignedLocationIntro(stateRentalHeadline(stateName), stateName).split(/(?<!\bSt)\. /)[0] + ".", 155),
             }
           : hubHeadline
             ? {
@@ -279,8 +283,9 @@ for (const path of [...allRoutes, "/404/"]) {
                             description: serviceCategory.description,
                           }
                         : pageInfo(path);
-  const canonical =
+  const indexableCanonical =
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
+  const canonical = indexableCanonical || (path === "/service-areas/oklahoma/panhandle/" ? new URL(path, site.origin).href : "");
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || "Temporary123 facilities"}. Call Temporary123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
@@ -297,7 +302,7 @@ for (const path of [...allRoutes, "/404/"]) {
     .replace(/<title>.*?<\/title>/, `<title>${esc(info.title)}</title>`)
     .replace(
       /<meta name="robots" content="[^"]*"\s*\/?\s*>/,
-      `<meta name="robots" content="${canonical ? "index,follow" : path === "/404/" ? "noindex,nofollow" : "noindex,follow"}"/>`,
+      `<meta name="robots" content="${indexableCanonical ? "index,follow" : path === "/404/" ? "noindex,nofollow" : "noindex,follow"}"/>`,
     )
     .replace("<!--page-head-->", head)
     .replace(
@@ -421,11 +426,15 @@ for (const path of [...allRoutes, "/404/"]) {
         name: $(el).text().trim(),
         item: new URL($(el).attr("href") || path, site.origin).href,
       }));
-    const hero = $("main img").first();
+    // Inert state templates and closed dialogs are not the visible page hero.
+    const hero = $("main img")
+      .filter((_, image) => $(image).parents("template, dialog").length === 0)
+      .first();
     const schema = pageSchema({
       path,
       title: h1.text().trim(),
       description: cleanCopy(info.description),
+      serviceType: path === "/service-areas/oklahoma/panhandle/" ? "Laundry trailer and laundry container rental" : undefined,
       crumbs,
       service: Boolean(
         industry ||

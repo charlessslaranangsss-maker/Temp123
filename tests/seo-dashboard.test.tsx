@@ -65,24 +65,33 @@ describe("owner-visible SEO dashboard evidence", () => {
     expect(html).toContain("Stored evidence loaded. Run live checks when ready.");
     expect(html).toContain(">Refresh now</button>");
     expect(html).not.toContain("disabled=\"\"");
+    expect(html).toContain("Programmatic SEO diagnostics");
+    expect(html).toContain("Location URL failures");
+    expect(html).toContain("Incomplete content rows");
+    expect(html).toContain("GSC sitemap submissions");
+    expect(html).toContain("not connected—not replaced with sample values");
   });
 
-  it("prioritizes indexing and website authority in the dashboard navigation", () => {
+  it("prioritizes 12-hour diagnostics, indexing, and website authority", () => {
     const html = renderToStaticMarkup(<SeoDashboard />);
     const nav = html.slice(
       html.indexOf('aria-label="Dashboard sections"'),
       html.indexOf("</nav>"),
     );
 
-    expect(nav.indexOf('href="#indexing"')).toBeLessThan(
-      nav.indexOf('href="#domain-authority"'),
+    expect(nav.indexOf('id="seo-tab-diagnostics"')).toBeLessThan(
+      nav.indexOf('id="seo-tab-indexing"'),
     );
-    expect(nav.indexOf('href="#domain-authority"')).toBeLessThan(
-      nav.indexOf('href="#overview"'),
+    expect(nav.indexOf('id="seo-tab-indexing"')).toBeLessThan(
+      nav.indexOf('id="seo-tab-domain-authority"'),
     );
-    expect(html).toContain('id="indexing" class="seo-section seo-order-indexing"');
+    expect(nav.indexOf('id="seo-tab-domain-authority"')).toBeLessThan(
+      nav.indexOf('id="seo-tab-overview"'),
+    );
+    expect(html).toContain('id="indexing" role="tabpanel"');
+    expect(html).toContain('id="diagnostics" role="tabpanel"');
     expect(html).toContain(
-      'id="domain-authority" class="seo-section seo-order-domain-authority"',
+      'id="domain-authority" role="tabpanel"',
     );
   });
 });

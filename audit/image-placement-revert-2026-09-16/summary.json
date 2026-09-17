@@ -1,0 +1,70 @@
+{
+  "at": "2026-09-16T09:37:11.169Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseCommit": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommit": false,
+  "deployed": false,
+  "preview": "http://127.0.0.1:4205",
+  "frozenBuild": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\image-placement-revert-20260916\\dist",
+  "runtimeFilesChanged": [
+    "src/Site.tsx",
+    "src/CityDirectoryPage.tsx",
+    "src/ApprovedEquipmentPhotoOptions.tsx"
+  ],
+  "removedHero": 1,
+  "restoredDirectories": 246,
+  "removedGenericCategoryBlocks": [
+    "/equipment-rental/mobile-kitchen-trailers/",
+    "/portable-dishwashing-trailer-rental/",
+    "/equipment-rental/shower-trailer/",
+    "/equipment-rental/mobile-sleep-trailers/",
+    "/equipment-rental/laundry-trailers/",
+    "/services/shower-restroom-combination-trailers/"
+  ],
+  "preservedExplicitException": "April 20ft refrigerated-container interior remains on existing refrigeration hub",
+  "protectedFilesUnchanged": [
+    "content/equipment-photo-policy.json",
+    "content/verified-equipment-images.json",
+    "src/locationCarouselImages.ts",
+    "src/serviceHeroImages.ts",
+    "src/ServiceHeroCarousel.tsx",
+    "src/main.tsx",
+    "src/CoverageMap.tsx",
+    "public/service-hero-carousel.js"
+  ],
+  "protectedFileDrift": [],
+  "manifestSha256": "e2b4f1adca1fe28ee564673ee73a703e2f9df021d4eaf5f100258fc51bb3f11c",
+  "tests": {
+    "focused": 110,
+    "application": 44,
+    "browser": 31
+  },
+  "audit": {
+    "auditedAt": "2026-09-16T09:36:37.089Z",
+    "environment": "Local isolated production build; not a deployment",
+    "build": "dist",
+    "baseURL": "http://127.0.0.1:4205",
+    "registeredPages": 651,
+    "serviceAreaPages": 548,
+    "uniqueStates": 50,
+    "modalPresentations": 100,
+    "imagesClassified": 153,
+    "imageUseRecords": 154,
+    "sourceImages": 149,
+    "supplementalCatalogImages": 4,
+    "approvedImages": 108,
+    "withheldImages": 46,
+    "pagesWithPhotos": 263,
+    "pagesWithoutImageSection": 247,
+    "pagesMissingPhotography": 38,
+    "statesMissingPhotography": 8,
+    "unsafePageMappingsCorrected": 301,
+    "pass": 648,
+    "fail": 0,
+    "issues": [],
+    "brokenImages": [],
+    "semantics": "PASS means correct verified mapping or truthful pending state, not that missing photography exists. Live deployment verification is separate.",
+    "imageSchemaNote": "Prerender automatically updates image structured-data references to the corrected first visible image. Non-image head metadata, H1s, canonicals, robots and sitemap are compared to baseline."
+  }
+}

@@ -1,20 +1,96 @@
 import { test, expect } from "@playwright/test";
 
-test("emergency dispatch opens once per session and remains manually available", async ({ page }) => {
+test("emergency dispatch waits for activity, dismisses for 24 hours, and remains manually available", async ({
+  page,
+}) => {
+  await page.clock.install();
   await page.goto("/");
   const dispatch = page.locator("[data-emergency-dispatch]");
   const panel = dispatch.locator("[data-emergency-panel]");
   await expect(panel).toHaveAttribute("aria-hidden", "true");
-  await expect(panel).toHaveAttribute("aria-hidden", "false", { timeout: 7000 });
-  await expect(panel).toContainText("Emergency rental support");
+  await page.clock.fastForward(20000);
+  await expect(panel).toHaveAttribute("aria-hidden", "true");
+  await page.evaluate(() => document.dispatchEvent(new Event("scroll")));
+  await page.clock.fastForward(14000);
+  expect(await panel.getAttribute("aria-hidden")).toBe("true");
+  await page.clock.fastForward(1000);
+  await expect(panel).toHaveAttribute("aria-hidden", "false");
+  await expect(panel).toContainText("Need equipment urgently?");
+  await expect(dispatch.locator("[data-emergency-open]")).toBeHidden();
   await dispatch.locator("[data-emergency-close]").click();
   await expect(panel).toHaveAttribute("aria-hidden", "true");
-  await expect.poll(() => page.evaluate(() => sessionStorage.getItem("temporary123:emergency-seen"))).toBe("1");
+  const dismissedUntil = await page.evaluate(() =>
+    Number(localStorage.getItem("temporary123:emergency-dismissed-until-v1")),
+  );
+  expect(dismissedUntil - Date.now()).toBeGreaterThanOrEqual(24 * 60 * 60 * 1000);
+  expect(dismissedUntil - Date.now()).toBeLessThanOrEqual(
+    24 * 60 * 60 * 1000 + 60_000,
+  );
   await page.reload();
-  await page.waitForTimeout(6200);
+  await page.evaluate(() => document.dispatchEvent(new Event("scroll")));
+  await page.clock.fastForward(16000);
   await expect(panel).toHaveAttribute("aria-hidden", "true");
   await dispatch.locator("[data-emergency-open]").click();
   await expect(panel).toHaveAttribute("aria-hidden", "false");
+  await expect(panel.getByRole("link", { name: /Call/ })).toHaveAttribute(
+    "href",
+    "tel:+18004435212",
+  );
+});
+
+test("project desk and emergency controls are mutually exclusive and restore focus", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const deskTrigger = page.locator(".contact-rail");
+  const drawer = page.getByRole("dialog", { name: "Request availability" });
+  const emergencyTrigger = page.locator("[data-emergency-open]");
+  const emergencyPanel = page.locator("[data-emergency-panel]");
+
+  await deskTrigger.focus();
+  await page.keyboard.press("Enter");
+  await expect(drawer).toBeVisible();
+  await expect(deskTrigger).toHaveAttribute("aria-expanded", "true");
+  await expect(
+    drawer.getByRole("button", { name: "Close contact form" }),
+  ).toBeFocused();
+  await expect(emergencyPanel).toHaveAttribute("aria-hidden", "true");
+  await page.keyboard.press("Escape");
+  await expect(drawer).not.toBeVisible();
+  await expect(deskTrigger).toBeFocused();
+
+  await emergencyTrigger.focus();
+  await page.keyboard.press("Enter");
+  await expect(emergencyPanel).toHaveAttribute("aria-hidden", "false");
+  await expect(page.locator("[data-emergency-close]")).toBeFocused();
+  await emergencyPanel
+    .getByRole("link", { name: "Check urgent availability" })
+    .click();
+  await expect(drawer).toBeVisible();
+  await expect(emergencyPanel).toHaveAttribute("aria-hidden", "true");
+  await page.keyboard.press("Escape");
+
+  await emergencyTrigger.click();
+  await page.keyboard.press("Escape");
+  await expect(emergencyPanel).toHaveAttribute("aria-hidden", "true");
+  await expect(emergencyTrigger).toBeFocused();
+});
+
+test("sticky project controls respect reduced motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  expect(
+    await page.locator("[data-emergency-panel]").evaluate((element) =>
+      getComputedStyle(element)
+        .transitionDuration.split(",")
+        .every((duration) => parseFloat(duration) <= 0.00001),
+    ),
+  ).toBe(true);
+  await expect(page.locator(".contact-rail")).toHaveCSS(
+    "animation-name",
+    "none",
+  );
 });
 
 const homepageServiceNames = [
@@ -36,7 +112,7 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     await page.goto("/");
     await expect(page.locator("h1")).toHaveCount(1);
     await expect(page.locator("h1")).toContainText(
-      "Temporary Facilities Rental",
+      "Temporary Facilities and Trailer Rental",
     );
     await expect(page.locator("h1")).toContainText("Rent or Lease Nationwide");
     await expect(
@@ -82,12 +158,14 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     const contactRail = page.locator(".contact-rail");
     await expect(contactRail).toBeVisible();
     await expect(contactRail).toHaveAttribute("href", "/contact-us/");
-    await expect(contactRail).toContainText("Project desk");
-    await expect(contactRail).toContainText("Plan a rental");
+    await expect(contactRail).toContainText("Need a rental?Contact now");
     await expect(contactRail).toHaveCSS("animation-name", "none");
     const railBounds = await contactRail.boundingBox();
     expect(railBounds).not.toBeNull();
-    expect(railBounds!.x).toBe(0);
+    expect(railBounds!.width).toBeLessThanOrEqual(
+      width <= 900 ? width * 0.54 : 72,
+    );
+    if (width > 900) expect(railBounds!.x).toBe(0);
     await page.evaluate(() => document.fonts.ready);
     expect(
       await page.evaluate(
@@ -97,42 +175,41 @@ for (const width of [320, 390, 768, 1024, 1280, 1440])
     const phone = page.locator(
       width < 1024 ? ".mobile-call" : ".header-contact",
     );
-    await expect(phone).toHaveAttribute("href", "tel:+18004435212");
-    await expect(phone.locator("strong")).toHaveCSS(
-      "color",
-      "rgb(255, 255, 255)",
-    );
-    await expect(phone).toHaveCSS("background-color", "rgb(18, 63, 70)");
-    await expect(phone.locator(":scope > span")).toHaveText(
-      "Call our team, 24/7",
-    );
-    await expect(phone.locator(":scope > span")).toBeVisible();
-    await expect(phone.locator("svg")).toBeVisible();
-    if (width >= 1024) {
-      await expect(phone).toHaveCSS("border-radius", "12px");
-      expect(
-        await phone.evaluate(
-          (element) => getComputedStyle(element, "::after").animationName,
-        ),
-      ).toBe("header-call-edge-flicker");
+    if (width <= 900) {
+      await expect(phone).not.toBeVisible();
+      await expect(emergency.locator("[data-emergency-open]")).toBeInViewport({
+        ratio: 1,
+      });
+    } else {
+      await expect(phone).toHaveAttribute("href", "tel:+18004435212");
+      await expect(phone.locator("strong")).toHaveCSS(
+        "color",
+        "rgb(255, 255, 255)",
+      );
+      await expect(phone).toHaveCSS("background-color", "rgb(18, 63, 70)");
+      await expect(phone.locator(":scope > span")).toHaveText(
+        "Call our team, 24/7",
+      );
+      await expect(phone.locator(":scope > span")).toBeVisible();
+      await expect(phone.locator("svg")).toBeVisible();
+      if (width >= 1024) {
+        await expect(phone).toHaveCSS("border-radius", "12px");
+        expect(
+          await phone.evaluate(
+            (element) => getComputedStyle(element, "::after").animationName,
+          ),
+        ).toBe("header-call-edge-flicker");
+      }
+      await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
+      await expect(phone).toBeInViewport({ ratio: 1 });
     }
-    await expect(phone.locator("strong")).toHaveText("+1 (800) 443 - 5212");
     const displayedPhoneNumbers = await page
       .locator('a[href="tel:+18004435212"]')
       .allTextContents();
     for (const text of displayedPhoneNumbers)
       expect(text.replace(/\s+/g, " ")).toContain("+1 (800) 443 - 5212");
-    await expect(phone).toBeInViewport({ ratio: 1 });
-    if (width <= 767) {
-      const phoneBounds = await phone.boundingBox();
-      expect(phoneBounds).not.toBeNull();
-      expect(railBounds!.x + railBounds!.width).toBeLessThanOrEqual(
-        phoneBounds!.x + 1,
-      );
-      expect(Math.abs(railBounds!.y - phoneBounds!.y)).toBeLessThanOrEqual(1);
-    }
     await page.locator(".faq-section").scrollIntoViewIfNeeded();
-    await expect(phone).toBeInViewport({ ratio: 1 });
+    if (width > 900) await expect(phone).toBeInViewport({ ratio: 1 });
     for (const photo of await page.locator(".image-box img").all()) {
       await photo.scrollIntoViewIfNeeded();
       await expect(photo).toHaveJSProperty("complete", true);
@@ -173,18 +250,18 @@ test("mobile menu supports keyboard and Escape", async ({ page }) => {
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).not.toBeVisible();
   await expect(page.locator(".contact-rail")).toBeVisible();
-  await expect(page.locator(".mobile-call")).toBeVisible();
+  await expect(page.locator(".mobile-call")).not.toBeVisible();
 });
 
-test("desktop services menu exposes clear rental categories", async ({
+test("desktop inventory menu exposes clear rental categories", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto("/");
   const trigger = page.locator(".services-trigger");
-  await expect(trigger).toContainText("Services");
+  await expect(trigger).toContainText("Inventory");
   await trigger.click();
-  const menu = page.getByRole("group", { name: "Services menu" });
+  const menu = page.getByRole("group", { name: "Equipment rental inventory menu" });
   await expect(menu).toBeVisible();
   await expect(menu.locator(".service-category")).toHaveCount(9);
   await expect(
@@ -282,8 +359,9 @@ test("desktop navigation follows the requested order", async ({ page }) => {
     ),
   ).toHaveText([
     "Home",
-    "Services ⌄",
+    "Inventory ⌄",
     "Service Areas",
+    "Calculator",
     "About Us",
     "Articles",
     "Contact Us",
@@ -296,7 +374,7 @@ test("Contact Us opens an in-page project drawer", async ({ page }) => {
   const trigger = page.locator('.header > nav a[href="/contact-us/"]');
   await trigger.click();
   await expect(page).toHaveURL(/\/$/);
-  const drawer = page.getByRole("dialog", { name: "Contact Us" });
+  const drawer = page.getByRole("dialog", { name: "Request availability" });
   await expect(drawer).toBeVisible();
   await expect(drawer.locator('input[name="name"]')).toBeVisible();
   await expect(drawer.locator('input[name="startDate"]')).toBeVisible();
@@ -315,9 +393,9 @@ test("mobile Contact Us tab opens the drawer without navigating", async ({
   await page.goto("/equipment-rental/");
   await page.locator(".contact-rail").click();
   await expect(page).toHaveURL(/\/equipment-rental\/$/);
-  const drawer = page.getByRole("dialog", { name: "Contact Us" });
+  const drawer = page.getByRole("dialog", { name: "Request availability" });
   await expect(drawer).toBeVisible();
-  await expect(drawer.getByRole("link", { name: /Call:/ })).toContainText(
+  await expect(drawer.getByRole("link", { name: /Call now/ })).toContainText(
     "+1 (800) 443 - 5212",
   );
   expect(
@@ -367,7 +445,7 @@ test("equipment quick view contains focus and restores its trigger", async ({
   await page.keyboard.press("Escape");
   await expect(dialog).not.toBeVisible();
   await expect(trigger).toBeFocused();
-  await expect(page.locator(".mobile-call")).toBeInViewport({ ratio: 1 });
+  await expect(page.locator(".contact-rail")).toBeInViewport({ ratio: 1 });
   await trigger.click();
   await dialog.getByRole("button", { name: "Close quick view" }).click();
   await expect(trigger).toBeFocused();
@@ -381,8 +459,8 @@ test("homepage shows nine rental services with ten distinct equipment photos", a
   await expect(cards).toHaveCount(9);
   await expect(page.locator(".hero-service-strip strong")).toHaveText([
     "Mobile Commercial Kitchen",
-    "Shower",
-    "Shower & Restroom Combination",
+    "Shower Trailer",
+    "Shower & Restroom Combination Facilities",
     "Sleeper/Bunkbed Trailers",
   ]);
   await expect(cards.locator("h3")).toHaveText(homepageServiceNames);
@@ -602,7 +680,7 @@ test("initial HTML and unknown-route status work without JavaScript", async ({
   expect(home.status()).toBe(200);
   const html = await home.text();
   expect(html).toContain('id="rental-title"');
-  expect(html).toContain("Temporary Facilities Rental");
+  expect(html).toContain("Temporary Facilities and Trailer Rental");
   expect(html).toContain("Rent or Lease Nationwide");
   expect(html).toContain("Find your rental");
   expect(html).not.toContain("April");

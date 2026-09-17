@@ -143,7 +143,7 @@ for (const file of htmlFiles) {
         : "noindex,follow";
   if (robots !== expectedRobots)
     problems.push({ file, issue: "robots", value: robots, expectedRobots });
-  const expectedCanonical = indexable
+  const expectedCanonical = indexable || route === "/service-areas/oklahoma/panhandle/"
     ? new URL(route, site.origin).href
     : undefined;
   if (canonical !== expectedCanonical)

@@ -1,0 +1,350 @@
+diff --git a/src/alignedIntroductions.ts b/src/alignedIntroductions.ts
+index 29e2dc5..4bbe8e7 100644
+--- a/src/alignedIntroductions.ts
++++ b/src/alignedIntroductions.ts
+@@ -81,7 +81,9 @@ export function alignedLocationIntro(
+               ? "industrial basecamps"
+               : /emergency basecamp/i.test(headline)
+                 ? "emergency basecamps"
+-                : "your operation";
++                : /commercial food service/i.test(headline)
++                  ? "commercial food-service operations"
++                  : "your operation";
+   const mode = /long-term/i.test(headline)
+     ? "long-term rental"
+     : /short-term/i.test(headline)
+@@ -91,7 +93,9 @@ export function alignedLocationIntro(
+         : "rental";
+   const subjects: Record<string, [string, string]> = {
+     "mobile-kitchen": [
+-      "commercial kitchen trailer",
++      /kitchen emergency trailer/i.test(headline)
++        ? "emergency commercial kitchen trailer"
++        : "commercial kitchen trailer",
+       "Plan cooking and preparation space around your menu, meal volume and service schedule. Confirm the cooking line, power, potable water, drainage and trailer access.",
+     ],
+     "kitchen-modular": [
+@@ -119,7 +123,7 @@ export function alignedLocationIntro(
+       "Plan shower and toilet access together, with privacy, stall layout, water heating and wastewater servicing. Match the required combination configuration to its identified equipment reference.",
+     ],
+     "ada-combination": [
+-      "ADA shower and restroom combination",
++      "ADA shower and restroom combination trailer",
+       "Review accessible washing and toilet facilities, the access route, ramp and room layout. The catalogue reference does not show the accessible room or ramp; confirm those features and the actual configuration before booking.",
+     ],
+     "sleeper-trailer": [
+@@ -146,16 +150,17 @@ export function alignedLocationIntro(
+   let result: string;
+   if (/\bman camp\b/i.test(headline)) {
+     result =
+-      "Plan man-camp temporary facilities in " +
++      "Plan " + mode + " of man-camp temporary facilities in " +
+       location +
+       " for remote operations. Compare the separately labelled office/sleeper/shower-restroom trailer, 38 ft all-electric kitchen reference and shower-only trailer. Coordinate accommodation, food preparation, hygiene, utilities and delivery while confirming each product's actual layout.";
+   } else if (subjects[family]) {
+     const [subject, details] = subjects[family];
++    const rentalPhrase = subject.endsWith("facilities")
++      ? `${mode} of ${subject}`
++      : `${subject} ${mode}`;
+     result =
+       "Arrange " +
+-      subject +
+-      " " +
+-      mode +
++      rentalPhrase +
+       " in " +
+       location +
+       " for " +
+@@ -175,3 +180,14 @@ export function alignedLocationIntro(
+       ", provide the exact delivery address and access details.";
+   return result;
+ }
++
++// Equipment-specific answers where the legacy regional summary omitted the primary family.
++export function locationRentalPlanningAnswer(headline: string): string | undefined {
++  const briefs: Record<string, string> = {
++    "kitchen-modular": "Discuss rental of a commercial kitchen modular building for food-service operations. Review the building layout, cooking and preparation workflow, installation footprint and utility connections. A kitchen trailer is a separate equipment option, not a specification for the modular building.",
++    "ada-combination": "Discuss rental or leasing of an accessible shower and restroom combination trailer. Review both washing and toilet needs, the accessible room, approach route, ramp, utilities and servicing. Confirm the actual accessible configuration rather than relying on a standard combination trailer reference.",
++    "laundry-unspecified": "Discuss long-term rental of temporary laundry facilities for a workforce camp. Match washing and drying capacity to crew numbers and laundry volume, then confirm power, water, drainage and placement. Compare the separately identified trailer and container options for the required site layout.",
++  };
++  return briefs[detectEquipmentFamily(headline)];
++}
++
+diff --git a/src/stateGuides.ts b/src/stateGuides.ts
+index f0a8b79..11d3584 100644
+--- a/src/stateGuides.ts
++++ b/src/stateGuides.ts
+@@ -116,7 +116,7 @@ const stateGuideDetails: Record<
+     question: "Who will review the placement plan before delivery is booked?",
+   },
+   Kentucky: {
+-    focus: "Follow the food service route",
++    focus: "Plan laundry collection and washing routes",
+     intro:
+       "For a Kentucky renovation or event, work backward from the serving point to preparation, storage and washing. This makes it easier to identify whether a standalone kitchen or coordinated supporting facilities suit the operation.",
+     question:
+@@ -402,6 +402,12 @@ const stateEquipmentBrief: Record<string, { purpose: string; question: string }>
+   },
+ };
+ 
++const focusedServiceSummaries: Record<string, string> = {
++  "Commercial Kitchen Modular Building": "For a modular commercial kitchen rental, confirm the building layout, installation footprint, food-service workflow and utility connections. Mobile kitchen trailers and the other base-camp facilities are separate equipment options.",
++  "ADA Shower and Restroom Combination Trailer": "For an accessible shower and restroom combination trailer rental, review the accessible room, ramp, approach route, utilities and servicing requirements. Confirm the actual configuration; a standard combination trailer does not establish an accessible layout. Other base-camp facilities are separate rental options.",
++  "Laundry Temporary Facilities": "For temporary laundry rental, plan washing and drying around crew numbers, laundry volume, power, water and drainage. Trailer and container options have different placement requirements; confirm the chosen configuration. Kitchens, hygiene units and crew accommodation are separate supporting rentals.",
++};
++
+ // These are plain-language travel planning areas rather than claims about
+ // official sales territories. They help callers describe the part of a state
+ // where a base camp or temporary facility will be placed.
+@@ -1212,9 +1218,9 @@ export const stateGuides = Object.fromEntries(
+         gallery,
+         regions: local.regions,
+         fact: local.fact,
+-        serviceSummary: name === "Montana"
+-          ? "For a modular commercial kitchen rental, confirm the building layout, installation footprint, food-service workflow and utility connections. Mobile kitchen trailers and the other base-camp facilities are separate equipment options."
+-          : serviceSummaries[index % serviceSummaries.length],
++        serviceSummary:
++          focusedServiceSummaries[stateRentalOption(name).equipmentFamily] ||
++          serviceSummaries[index % serviceSummaries.length],
+         abbreviation: stateCodes[index],
+         layout: String(index % 5),
+         motion: String((index + Math.floor(index / 5) * 2) % 10),
+diff --git a/src/regionGuides.tsx b/src/regionGuides.tsx
+index 88f0764..e148503 100644
+--- a/src/regionGuides.tsx
++++ b/src/regionGuides.tsx
+@@ -1,4 +1,4 @@
+-import { alignedLocationIntro } from "./alignedIntroductions";
++import { alignedLocationIntro, locationRentalPlanningAnswer } from "./alignedIntroductions";
+ import { equipmentSet } from "./equipmentPhotos";
+ import { statePath } from "./statePaths";
+ import site from "../site.json" with { type: "json" };
+@@ -338,13 +338,13 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
+           <div className="region-answer-heading">
+             <span className="eyebrow">QUICK ANSWER</span>
+             <h2 id="region-faq-title">What can you rent in {guide.region}?</h2>
+-            <p>
+-              Rent or lease Temporary Facilities for construction, man camps,
+-              renovations and emergency base camps. Confirm availability,
+-              occupancy and utilities with our rental team.
++            <p data-rental-planning>
++              {locationRentalPlanningAnswer(headline) ||
++                "Rent or lease Temporary Facilities for construction, man camps, renovations and emergency base camps. Confirm availability, occupancy and utilities with our rental team."}
+             </p>
+           </div>
+           <div className="region-answer-body">
++            {locationRentalPlanningAnswer(headline) && <p>Related rental options:</p>}
+             <ul className="region-service-links">
+               {guide.serviceLinks.map((service) => (
+                 <li key={service.href}>
+@@ -353,8 +353,9 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
+               ))}
+             </ul>
+             <p className="supporting-rentals">
+-              Supporting rentals: dishwashing, refrigeration, restrooms, laundry
+-              and handwashing trailers.
++              {/\blaundry\b/i.test(headline)
++                ? "Other supporting rentals: dishwashing, refrigeration, restrooms and handwashing trailers."
++                : "Supporting rentals: dishwashing, refrigeration, restrooms, laundry and handwashing trailers."}
+             </p>
+           </div>
+         </div>
+diff --git a/src/cityEditorial.ts b/src/cityEditorial.ts
+index 2c8b6da..34f126d 100644
+--- a/src/cityEditorial.ts
++++ b/src/cityEditorial.ts
+@@ -97,7 +97,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
+     intro:
+       "Tacoma combines residential, institutional and industrial work areas, so a temporary facility plan should start with the specific site rather than the city name alone. For a crew base camp or occupied-facility renovation, Temporary123 can review kitchen, shower, restroom and sleeper trailer rental options alongside servicing needs.",
+     answer:
+-      "Tacoma crews can rent or lease mobile commercial kitchens, shower and restroom combination trailers, a 22 ft 10-stall shower-only trailer, and sleeper or bunkbed units. A longer man camp may also need laundry, refrigeration, dishwashing, separate restrooms and handwashing. Choose capacity after confirming shift size and available utility connections.",
++      "Tacoma crews can discuss leasing sleeper and bunk-bed facilities for workforce housing. Review sleeping capacity, shift schedules, privacy, ventilation and access for the chosen unit. Kitchens and shower or shower/restroom combination units are separate supporting rental options. A longer man camp may also need laundry, refrigeration, dishwashing, separate restrooms and handwashing. Choose capacity after confirming shift size and available utility connections.",
+     local:
+       "Tacoma's transportation plan maps freight corridors and a heavy-haul network around its industrial areas. A project near the Tideflats may therefore require a different delivery and staging discussion from a compact property elsewhere in Tacoma. Identify the access gate, proposed equipment footprint, worker routes and water, power and waste connections before requesting a trailer configuration or longer lease.",
+     seasonal:
+@@ -122,7 +122,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
+     intro:
+       "An Olympia project can range from an occupied campus or government property to a separate work compound. Temporary123 can discuss kitchens, shower and restroom trailers, and sleeper accommodation for construction, renovation or emergency planning when the project team defines the site boundary and who must keep using it.",
+     answer:
+-      "Olympia project teams can discuss a mobile kitchen rental, shower and restroom combination trailers, a 22 ft 10-stall shower-only trailer, and sleeper or bunkbed accommodation. For a temporary base camp or a building renovation, refrigeration, laundry, dishwashing and handwashing may complete the setup. Lease length and final equipment are confirmed with the team.",
++      "Olympia project teams can discuss shower and restroom combination trailer rental for an institutional facility. Plan shower and toilet access together, including the stall layout, water supply, hot water, wastewater servicing and site access. Mobile kitchens, shower-only trailers and sleeper facilities are separate rental options. For a temporary base camp or a building renovation, refrigeration, laundry, dishwashing and handwashing may complete the setup. Lease length and final equipment are confirmed with the team.",
+     local:
+       "The Washington State Capitol Campus in Olympia publishes specific visitor access and parking directions, illustrating why a location name is not enough for a trailer delivery brief. For a government or institutional site, clarify who controls the service entrance, any reserved arrival window, pedestrian separation and utility connections. Those details matter more than a generalized citywide arrival estimate when planning temporary facilities.",
+     seasonal:
+diff --git a/scripts/prerender.tsx b/scripts/prerender.tsx
+index 3f84c57..02a307d 100644
+--- a/scripts/prerender.tsx
++++ b/scripts/prerender.tsx
+@@ -226,7 +226,7 @@ for (const path of [...allRoutes, "/404/"]) {
+       : city
+         ? {
+             title: `${cityHeadline(city)} | Temporary123`,
+-            description: compact(alignedLocationIntro(cityHeadline(city), `${city.name}, ${city.state}`).split(". ")[0] + ".", 155),
++            description: compact(alignedLocationIntro(cityHeadline(city), `${city.name}, ${city.state}`).split(/(?<!\bSt)\. /)[0] + ".", 155),
+           }
+       : directoryRegion
+           ? {
+@@ -236,12 +236,12 @@ for (const path of [...allRoutes, "/404/"]) {
+       : region
+         ? {
+             title: `${regionRentalHeadline(region.region, region.state, region.index)} | Temporary123`,
+-            description: compact(alignedLocationIntro(regionRentalHeadline(region.region, region.state, region.index), regionLocationLabel(region.region, region.state)).split(". ")[0] + ".", 155),
++            description: compact(alignedLocationIntro(regionRentalHeadline(region.region, region.state, region.index), regionLocationLabel(region.region, region.state)).split(/(?<!\bSt)\. /)[0] + ".", 155),
+           }
+         : stateName
+           ? {
+               title: `${stateRentalHeadline(stateName)} | Temporary123`,
+-              description: compact(alignedLocationIntro(stateRentalHeadline(stateName), stateName).split(". ")[0] + ".", 155),
++              description: compact(alignedLocationIntro(stateRentalHeadline(stateName), stateName).split(/(?<!\bSt)\. /)[0] + ".", 155),
+             }
+           : hubHeadline
+             ? {
+diff --git a/content/service-details.json b/content/service-details.json
+index 10de986..c54228a 100644
+--- a/content/service-details.json
++++ b/content/service-details.json
+@@ -521,7 +521,7 @@
+       "Confirm bed count, storage, bathrooms and any separate support facilities.",
+       "Review site access, power, cleaning, waste service and delivery arrangements."
+     ],
+-    "use": "Temporary sleeper trailers support people staying close to construction or remote work. Coordinate sleeping space with meals, restrooms, showers and laundry so the accommodation plan covers everyday needs.",
++    "use": "Temporary containerized sleeper units support people staying close to construction or remote work. Coordinate sleeping space with meals, restrooms, showers and laundry so the accommodation plan covers everyday needs.",
+     "image": "/media/4b67ae2ec507c379fdf9a7e3.png",
+     "alt": "Communal bunk-bed sleeping area for temporary containerized crew berthing",
+     "unknown": "Bed count, bathroom configuration, utility ratings and included furnishings require a confirmed unit specification.",
+diff --git a/src/cityRentalView.ts b/src/cityRentalView.ts
+index 80027ed..cf96995 100644
+--- a/src/cityRentalView.ts
++++ b/src/cityRentalView.ts
+@@ -1,75 +1,66 @@
+-import { equipmentPhotos } from "./equipmentPhotos";
+-import { cityRentalHeadline } from "./rentalHeadlines";
++/** A selected city adds project context; it must never change the product. */
++export function localizedServiceCopy(
++  location: string,
++  heading: string,
++  introduction: string,
++): { heading: string; introduction: string } {
++  const place = location.replace(/\s+/g, " ").trim().slice(0, 120);
++  const originalHeading = heading.trim();
++  const originalIntroduction = introduction.trim();
++  if (!place) return { heading: originalHeading, introduction: originalIntroduction };
++  return {
++    heading: originalHeading + " in " + place,
++    introduction: originalIntroduction + (originalIntroduction ? " " : "") +
++      "For your project in " + place +
++      ", confirm rental dates, site access and utility connections with the rental team.",
++  };
++}
+ 
+-// City selections retain the existing service URL and query. They are not new indexable city pages.
++// These are contextual views of existing service URLs, not new city landing pages.
+ export function applyCityRentalView(location: string) {
+   const main = document.querySelector<HTMLElement>("main");
+   const title = main?.querySelector("h1");
+-  if (
+-    !main ||
+-    !title ||
+-    !/\/(equipment-rental|services)\//.test(window.location.pathname)
+-  )
+-    return;
+-  const originalTitle = title.textContent || "Temporary123 equipment";
+-  main.dataset.cityView = "true";
+-  const headline = cityRentalHeadline(location, originalTitle);
+-  title.replaceChildren(document.createTextNode(headline));
+-  const description = document.createElement("p");
+-  description.className = "model-intro";
+-  description.textContent = `Rent or lease Temporary Facilities for your ${location} project. Explore ${originalTitle} and discuss rental availability with Temporary123. Emergency 24/7.`;
+-  title.after(description);
+-  main.querySelectorAll("figure").forEach((figure) => (figure.hidden = true));
+-  main.querySelectorAll("img").forEach((image) => (image.hidden = true));
+-  const photoType = /kitchen/i.test(originalTitle)
+-    ? "kitchen"
+-    : /sleep|bunk/i.test(originalTitle)
+-      ? "Sleeper"
+-      : /shower|restroom/i.test(originalTitle)
+-        ? "Shower"
+-        : "equipment";
+-  const pool = equipmentPhotos.filter((photo) =>
+-    photo.imageAlt.toLowerCase().includes(photoType.toLowerCase()),
+-  );
+-  const index =
+-    [...location].reduce(
+-      (total, letter) => (total * 31 + letter.charCodeAt(0)) >>> 0,
+-      0,
+-    ) % pool.length;
+-  const gallery = document.createElement("div");
+-  gallery.className = "city-rental-gallery";
+-  gallery.setAttribute(
+-    "aria-label",
+-    `Rental equipment for ${location} project planning`,
+-  );
+-  for (let i = 0; i < 3; i++) {
+-    const photo = pool[(index + i) % pool.length];
+-    const figure = document.createElement("figure");
+-    const image = document.createElement("img");
+-    image.src = photo.image;
+-    image.alt = photo.imageAlt;
+-    image.width = 850;
+-    image.height = 650;
+-    const caption = document.createElement("figcaption");
+-    caption.textContent = photo.caption;
+-    figure.append(image, caption);
+-    gallery.append(figure);
++  if (!main || !title || !location.trim() ||
++      (!/\/(equipment-rental|services)\//.test(window.location.pathname) &&
++       window.location.pathname !== "/remote-containerized-military-berthing-solution-for-rent/")) return;
++
++  let description = main.querySelector<HTMLElement>("[data-h1-intro]");
++  if (!description) {
++    description = document.createElement("p");
++    description.className = "model-intro";
++    description.setAttribute("data-h1-intro", "");
++    title.after(description);
+   }
+-  description.after(gallery);
+-  document.title = `${headline}: Temporary Facilities to Rent or Lease | Temporary123`;
+-  document
+-    .querySelector('meta[name="description"]')
+-    ?.setAttribute("content", description.textContent);
+-  document
+-    .querySelectorAll('script[type="application/ld+json"]')
+-    .forEach((script) => {
++  // Keep the original values for a second selection without accumulating locations.
++  const originalTitle = main.dataset.cityOriginalHeading || title.textContent || "Equipment Rental";
++  const originalIntroduction = main.dataset.cityOriginalIntroduction ?? description.textContent ?? "";
++  main.dataset.cityOriginalHeading = originalTitle;
++  main.dataset.cityOriginalIntroduction = originalIntroduction;
++  const copy = localizedServiceCopy(location, originalTitle, originalIntroduction);
++  title.textContent = copy.heading;
++  description.textContent = copy.introduction;
++  // Category pages have a separate location note here; the equipment lead must come first.
++  title.after(description);
++  main.dataset.cityView = "true";
++
++  // All reviewed galleries, specifications, product tabs and supporting copy stay intact.
++  // In particular, never substitute a modular kitchen for a trailer or ADA for non-ADA.
++  document.title = copy.heading + " | Temporary123";
++  document.querySelector('meta[name="description"]')?.setAttribute("content", copy.introduction);
++  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
++    try {
+       const schema = JSON.parse(script.textContent || "{}");
+-      for (const node of schema["@graph"] || []) {
+-        if (["WebPage", "Service"].includes(node["@type"])) {
+-          node.name = title.textContent;
+-          node.description = description.textContent;
++      for (const node of Array.isArray(schema["@graph"]) ? schema["@graph"] : []) {
++        const types = Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]];
++        if (types.some((type: string) => type === "WebPage" || type === "Service")) {
++          node.name = copy.heading;
++          node.description = copy.introduction;
+         }
+       }
+       script.textContent = JSON.stringify(schema).replace(/</g, "\\u003c");
+-    });
++    } catch {
++      // A malformed, unrelated schema block must not break city context or the page.
++    }
++  }
++  // Canonical links, robots directives, URLs, redirects and the base page remain unchanged.
+ }

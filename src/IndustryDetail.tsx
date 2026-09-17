@@ -1,3 +1,7 @@
+import { resolveLocationGallery } from "./locationCarouselImages";
+import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { alignedPageIntro } from "./alignedIntroductions";
 import site from "../site.json" with { type: "json" };
 import { equipmentPhotos } from "./equipmentPhotos";
 import { serviceCategories } from "./serviceMenu";
@@ -127,7 +131,17 @@ export const industryGuideByPath = Object.fromEntries(
 
 export function IndustryDetail({ path }: { path: string }) {
   const guide = industryGuideByPath[path];
-  const photos = guide.photos.map((index) => equipmentPhotos[index]);
+  const titleSets: Record<string, string[]> = {
+    "/food-services-2/": ["24 ft Mobile Kitchen Trailer", "24 ft Mobile Kitchen Trailer", "24 ft Mobile Kitchen Trailer"],
+    "/man-camps-for-rent/": ["Office, Sleeper and Shower & Restroom Trailer", "38ft All Electric Kitchen", "20 ft Shower Trailer"],
+    "/government/": ["24 ft Mobile Kitchen Trailer", "Shower and Restroom Combination Trailer", "Two-Stall Sleeper Trailer"],
+    "/disaster-relief-man-camp-workforce-rentals/": ["20 ft Shower Trailer", "24 ft Mobile Kitchen Trailer", "Two-Stall Sleeper Trailer"],
+  };
+  const sets = titleSets[path].map(resolveLocationGallery);
+  const photos = sets.map((set, index) => {
+    const image = set.images[path === "/food-services-2/" ? Math.min(index, set.images.length-1) : 0];
+    return { image: image.src, imageAlt: image.alt, caption: set.headline + ". " + referenceCaptionForModel(set.modelId) };
+  });
   const priority = [
     "Mobile Kitchens",
     "Shower and Restroom Combination Trailers",
@@ -159,21 +173,12 @@ export function IndustryDetail({ path }: { path: string }) {
             <div>
               <span className="eyebrow">{guide.name}</span>
               <h1>{guide.title}</h1>
-              <p>{guide.intro}</p>
+              <p data-h1-intro>{alignedPageIntro(path, guide.title, guide.intro)}</p>
               <a className="button" href={`tel:${site.phoneE164}`}>
                 Emergency 24/7 · {site.phoneDisplay}
               </a>
             </div>
-            <figure>
-              <img
-                src={photos[0].image}
-                alt={photos[0].imageAlt}
-                width="850"
-                height="650"
-                fetchPriority="high"
-              />
-              <figcaption>{photos[0].caption}</figcaption>
-            </figure>
+            <ServiceHeroCarousel images={sets[0].images} label={sets[0].headline} lightboxLabel={sets[0].headline} caption={referenceCaptionForModel(sets[0].modelId)} />
           </div>
         </div>
       </section>

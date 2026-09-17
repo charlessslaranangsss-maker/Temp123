@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-16",
+  "source": "Two new folders supplied by Charles; all originals downloaded and visually inspected. Client names establish reference use, not independently measured specifications.",
+  "placement": "Charles authorized deciding the best exact placements locally. Replace the accommodation and kitchen selections in the EXISTING Man Camp / Remote Operations photo groups with these distinctly named multifunctional references. Keep the third shower-only group separate. Preserve standalone product mappings, all H1s/URLs, and map/directory/category layouts; no new pages or photo sections. Publication is not authorized.",
+  "models": [
+    {
+      "id": "new-38ft-all-electric-kitchen",
+      "name": "38ft All Electric Kitchen",
+      "family": "mobile-kitchen",
+      "configuration": "all-electric",
+      "lengthFt": 38,
+      "stalls": null,
+      "priority": 90,
+      "sourceEvidence": "Client-supplied Multifunctional Trailer (38ft All Electric Kitchen) folder. Exterior shows multiple entrances, a stainless work area and a shower/toilet compartment. Full kitchen, power source and length are not established visually. Not the existing standard 38ft kitchen.",
+      "caption": "Client-supplied 38 ft all-electric multifunctional kitchen reference. Shower/toilet compartment visible; confirm the cooking layout, electrical specification and dimensions.",
+      "folderUrl": "https://drive.google.com/drive/folders/1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT"
+    },
+    {
+      "id": "new-office-sleeper-shower-restroom",
+      "name": "Office, Sleeper and Shower & Restroom Trailer",
+      "family": "office-sleeper-hygiene-trailer",
+      "configuration": "office-sleeper-shower-restroom",
+      "lengthFt": null,
+      "stalls": null,
+      "priority": 10,
+      "sourceEvidence": "Client-supplied Office, Sleeper and Shower & Restroom Trailer folder. Exterior shows a wheeled multi-room unit, bunk room and shower/toilet room. Office interior, dimensions and capacities are not shown. Not a standalone sleeper or hygiene trailer.",
+      "caption": "Combined office, sleeper, shower and restroom reference. Bunks and shower/toilet room visible; office interior and dimensions are not shown. Confirm layout before booking.",
+      "folderUrl": "https://drive.google.com/drive/folders/1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm"
+    }
+  ],
+  "images": [
+    {
+      "id": "26.01",
+      "group": "38ft-all-electric-kitchen",
+      "model": "new-38ft-all-electric-kitchen",
+      "family": "mobile-kitchen",
+      "original": "/media/equipment-drive/38ft-all-electric-kitchen/38ft-all-electric-kitchen-multifunctional-exterior.png",
+      "sha256": "94548d625b33f94d5ea3c5db645b49bb7f2a911ec382743404846a04765a444a",
+      "bytes": 2352800,
+      "width": 1434,
+      "height": 1097,
+      "view": "exterior",
+      "status": "approved",
+      "reason": "",
+      "alt": "Multifunctional trailer exterior with black steps, a stainless work area and an open shower/toilet compartment",
+      "reviewedVisually": true,
+      "verificationBasis": "client-named-reviewed-reference",
+      "evidence": "Full original visually inspected after download and byte-size validation. Exterior only. Folder label does not visually prove all-electric equipment or length.",
+      "sourceUrl": "https://drive.google.com/file/d/13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2/view",
+      "driveFileId": "13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2",
+      "driveFolderId": "1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT"
+    },
+    {
+      "id": "27.01",
+      "group": "office-sleeper-shower-restroom-trailer",
+      "model": "new-office-sleeper-shower-restroom",
+      "family": "office-sleeper-hygiene-trailer",
+      "original": "/media/equipment-drive/office-sleeper-shower-restroom-trailer/office-sleeper-shower-restroom-trailer-exterior.png",
+      "sha256": "ecf9eb40caa93e8c39176be6194faa7e3ab0a2548089e486cfc20c1101ac2106",
+      "bytes": 2341098,
+      "width": 1434,
+      "height": 1097,
+      "view": "exterior",
+      "status": "approved",
+      "reason": "",
+      "alt": "Office, sleeper, shower and restroom trailer exterior with separate steps, visible bunks and an open shower/toilet room",
+      "reviewedVisually": true,
+      "verificationBasis": "client-named-reviewed-reference",
+      "evidence": "Full original visually inspected after download and byte-size validation. Exterior only. Office interior, overall length and occupancy are not visible or inferred.",
+      "sourceUrl": "https://drive.google.com/file/d/141iOYBwJVarSKqChnAWTrF33tIXv0oD4/view",
+      "driveFileId": "141iOYBwJVarSKqChnAWTrF33tIXv0oD4",
+      "driveFolderId": "1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm"
+    }
+  ]
+}

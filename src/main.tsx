@@ -1,4 +1,5 @@
 import { applyCityRentalView } from "./cityRentalView";
+import calculatorCities from "./calculatorCities.json" with { type: "json" };
 import "./style.css";
 import "./redesign.css";
 import "./modern.css";
@@ -8,6 +9,7 @@ import "./contact-refresh.css";
 import "./map-refresh.css";
 import "./secondary-refresh.css";
 import "./location-refresh.css";
+import "./location-image-gallery.css";
 import "./seo-dashboard.css";
 import "@fontsource-variable/manrope";
 import {
@@ -24,11 +26,12 @@ import {
 if (location.pathname === "/seo-dashboard/") {
   const root = document.getElementById("root");
   if (root) {
-    void Promise.all([import("react-dom/client"), import("./SeoDashboard")]).then(
-      ([{ hydrateRoot }, { SeoDashboard }]) => {
-        hydrateRoot(root, <SeoDashboard />);
-      },
-    );
+    void Promise.all([
+      import("react-dom/client"),
+      import("./SeoDashboard"),
+    ]).then(([{ hydrateRoot }, { SeoDashboard }]) => {
+      hydrateRoot(root, <SeoDashboard />);
+    });
   }
 }
 
@@ -69,6 +72,18 @@ const calculatorForm = document.querySelector<HTMLFormElement>(
   "#rental-calculator-form",
 );
 if (calculatorForm) {
+  const stateSelect = calculatorForm.elements.namedItem("state") as HTMLSelectElement;
+  const citySelect = calculatorForm.elements.namedItem("city") as HTMLSelectElement;
+  const updateCities = () => {
+    const names = calculatorCities[stateSelect.value as keyof typeof calculatorCities] || [];
+    citySelect.replaceChildren(new Option(
+      names.length ? "Choose a city" : "Choose a state first", "", true, true,
+    ));
+    for (const name of names) citySelect.add(new Option(name, name));
+    citySelect.disabled = names.length === 0;
+  };
+  stateSelect.addEventListener("change", updateCities);
+  updateCities();
   const currency = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -122,7 +137,9 @@ if (calculatorForm) {
       "[data-estimate-message]",
     );
     if (startDate && endDate && endDate < startDate) {
-      endInput.setCustomValidity("End date must be on or after the start date.");
+      endInput.setCustomValidity(
+        "End date must be on or after the start date.",
+      );
       endInput.reportValidity();
       endInput.addEventListener("input", () => endInput.setCustomValidity(""), {
         once: true,
@@ -135,12 +152,15 @@ if (calculatorForm) {
         Number(data.get("length")),
         Number(data.get("people")),
       );
-      document.querySelector<HTMLElement>("[data-estimate-total]")!.textContent =
-        currency.format(estimate.total);
-      document.querySelector<HTMLElement>("[data-equipment-price]")!.textContent =
-        currency.format(estimate.equipment);
-      document.querySelector<HTMLElement>("[data-delivery-price]")!.textContent =
-        currency.format(estimate.delivery);
+      document.querySelector<HTMLElement>(
+        "[data-estimate-total]",
+      )!.textContent = currency.format(estimate.total);
+      document.querySelector<HTMLElement>(
+        "[data-equipment-price]",
+      )!.textContent = currency.format(estimate.equipment);
+      document.querySelector<HTMLElement>(
+        "[data-delivery-price]",
+      )!.textContent = currency.format(estimate.delivery);
       if (message)
         message.textContent =
           "Starting equipment plus delivery estimate. Rental duration and project-specific charges are not included. Call us for discounts!";
@@ -156,11 +176,14 @@ if (calculatorForm) {
     } catch (error) {
       if (message)
         message.textContent =
-          error instanceof Error ? error.message : "Unable to calculate an estimate.";
+          error instanceof Error
+            ? error.message
+            : "Unable to calculate an estimate.";
       if (calculationStatus) {
         calculationStatus.className = "calculator-submit-status error";
         calculationStatus.setAttribute("role", "alert");
-        calculationStatus.textContent = "Unable to calculate the starting estimate.";
+        calculationStatus.textContent =
+          "Unable to calculate the starting estimate.";
       }
       return null;
     }
@@ -198,12 +221,17 @@ if (calculatorForm) {
           `Trailer length: ${length} ft. Number of people: ${people}.`,
           `Rental dates: ${startDate} through ${endDate}.`,
           `Preliminary starting estimate: ${currency.format(estimate.total)} (${currency.format(estimate.equipment)} equipment plus ${currency.format(estimate.delivery)} delivery).`,
-          projectDetails ? `Project details: ${projectDetails}` : "Project details: Not provided.",
+          projectDetails
+            ? `Project details: ${projectDetails}`
+            : "Project details: Not provided.",
           "Final pricing, availability and site requirements must be confirmed.",
         ].join("\n"),
         consent: data.get("consent") === "on",
         website: String(data.get("website") || ""),
-        page: location.pathname === "/rental-calculator/" ? "/rental-calculator/" : "/",
+        page:
+          location.pathname === "/rental-calculator/"
+            ? "/rental-calculator/"
+            : "/",
       });
       if (payload !== lastPayload) {
         idempotencyKey = crypto.randomUUID();
@@ -218,7 +246,8 @@ if (calculatorForm) {
       if (submitStatus) {
         submitStatus.className = "calculator-submit-status";
         submitStatus.setAttribute("role", "status");
-        submitStatus.textContent = "Your estimate is ready. Securely saving your quote request…";
+        submitStatus.textContent =
+          "Your estimate is ready. Securely saving your quote request…";
       }
       try {
         const token = await calculatorAppCheckToken();
@@ -235,7 +264,9 @@ if (calculatorForm) {
         const result = await response.json().catch(() => null);
         if (!response.ok) {
           if (response.status === 429)
-            throw new Error("Too many attempts. Please wait a few minutes before trying again.");
+            throw new Error(
+              "Too many attempts. Please wait a few minutes before trying again.",
+            );
           throw new Error(
             typeof result?.error === "string"
               ? result.error
@@ -243,7 +274,9 @@ if (calculatorForm) {
           );
         }
         if (result?.ok !== true)
-          throw new Error("We could not confirm your quote request. Please retry with the same details.");
+          throw new Error(
+            "We could not confirm your quote request. Please retry with the same details.",
+          );
         if (submitStatus) {
           submitStatus.classList.add("success");
           submitStatus.textContent =
@@ -255,7 +288,9 @@ if (calculatorForm) {
           submitStatus.setAttribute("role", "alert");
           submitStatus.textContent =
             submissionError instanceof Error &&
-            ["TimeoutError", "AbortError", "TypeError"].includes(submissionError.name)
+            ["TimeoutError", "AbortError", "TypeError"].includes(
+              submissionError.name,
+            )
               ? "The connection was interrupted. Your estimate and details are still here; try again."
               : submissionError instanceof Error
                 ? submissionError.message
@@ -363,59 +398,136 @@ mobileNav?.addEventListener("focusout", () => {
 
 const contactDrawer =
   document.querySelector<HTMLDialogElement>("#contact-drawer");
-const emergencyStorageKey = "temporary123:emergency-seen";
-const setEmergencyOpen = (dispatch: HTMLElement, open: boolean) => {
-  const panel = dispatch.querySelector<HTMLElement>("[data-emergency-panel]");
-  const trigger = dispatch.querySelector<HTMLButtonElement>(
+const emergencyDispatch = document.querySelector<HTMLElement>(
+  "[data-emergency-dispatch]",
+);
+const emergencyStorageKey = "temporary123:emergency-dismissed-until-v1";
+const emergencyDismissalDuration = 24 * 60 * 60 * 1000;
+let emergencyAutoTimer: number | undefined;
+let emergencyAutoAttempted = false;
+
+const emergencyDismissed = () => {
+  try {
+    return (
+      Number(window.localStorage.getItem(emergencyStorageKey) || 0) > Date.now()
+    );
+  } catch {
+    return false;
+  }
+};
+
+const rememberEmergencyDismissal = () => {
+  try {
+    window.localStorage.setItem(
+      emergencyStorageKey,
+      String(Date.now() + emergencyDismissalDuration),
+    );
+  } catch {
+    // The controls remain usable when storage is unavailable.
+  }
+};
+
+const setContactExpanded = (expanded: boolean) => {
+  document
+    .querySelectorAll<HTMLElement>('[aria-controls="contact-drawer"]')
+    .forEach((trigger) =>
+      trigger.setAttribute("aria-expanded", String(expanded)),
+    );
+};
+
+const setEmergencyOpen = (
+  open: boolean,
+  options: {
+    focusPanel?: boolean;
+    focusTrigger?: boolean;
+    dismiss?: boolean;
+  } = {},
+) => {
+  const panel = emergencyDispatch?.querySelector<HTMLElement>(
+    "[data-emergency-panel]",
+  );
+  const trigger = emergencyDispatch?.querySelector<HTMLButtonElement>(
     "[data-emergency-open]",
   );
-  if (!panel || !trigger) return;
-  dispatch.classList.toggle("is-open", open);
+  if (!emergencyDispatch || !panel || !trigger) return;
+
+  emergencyDispatch.classList.toggle("is-open", open);
   panel.setAttribute("aria-hidden", String(!open));
+  panel.inert = !open;
   trigger.setAttribute("aria-expanded", String(open));
+
+  if (options.dismiss) rememberEmergencyDismissal();
+  if (open && options.focusPanel) {
+    window.setTimeout(() => {
+      panel.querySelector<HTMLButtonElement>("[data-emergency-close]")?.focus();
+    }, 230);
+  } else if (!open && options.focusTrigger) {
+    trigger.focus({ preventScroll: true });
+  }
 };
+
+const anotherInteractionIsActive = () => {
+  const active = document.activeElement as HTMLElement | null;
+  return Boolean(
+    contactDrawer?.open ||
+    document.querySelector("dialog[open]") ||
+    document.body.classList.contains("dialog-open") ||
+    active?.matches("input, select, textarea, [contenteditable='true']"),
+  );
+};
+
+const attemptEmergencyAutoExpand = () => {
+  emergencyAutoAttempted = true;
+  if (
+    !emergencyDispatch ||
+    emergencyDismissed() ||
+    emergencyDispatch.classList.contains("is-open") ||
+    anotherInteractionIsActive()
+  )
+    return;
+  setEmergencyOpen(true);
+};
+
+const beginEmergencyActivityWindow = () => {
+  if (emergencyAutoTimer || emergencyAutoAttempted || emergencyDismissed())
+    return;
+  emergencyAutoTimer = window.setTimeout(attemptEmergencyAutoExpand, 15000);
+  for (const eventName of ["pointerdown", "keydown", "scroll", "touchstart"])
+    document.removeEventListener(eventName, beginEmergencyActivityWindow);
+};
+
+if (emergencyDispatch) {
+  setEmergencyOpen(false);
+  for (const eventName of ["pointerdown", "keydown", "scroll", "touchstart"])
+    document.addEventListener(eventName, beginEmergencyActivityWindow, {
+      passive: true,
+      once: true,
+    });
+}
+
 document.addEventListener("click", (event) => {
   const target = event.target as HTMLElement;
   const trigger = target.closest<HTMLButtonElement>("[data-emergency-open]");
   const close = target.closest<HTMLButtonElement>("[data-emergency-close]");
-  const dispatch = (trigger ?? close)?.closest<HTMLElement>(
-    "[data-emergency-dispatch]",
-  );
-  if (!dispatch) return;
+  if (!trigger && !close) return;
   if (trigger) {
-    setEmergencyOpen(dispatch, !dispatch.classList.contains("is-open"));
+    if (contactDrawer?.open) contactDrawer.close();
+    setEmergencyOpen(true, { focusPanel: true });
     return;
   }
-  setEmergencyOpen(dispatch, false);
-  try {
-    window.sessionStorage.setItem(emergencyStorageKey, "1");
-  } catch {
-    // The experience still works when storage is unavailable.
-  }
-  dispatch.querySelector<HTMLButtonElement>("[data-emergency-open]")?.focus();
+  setEmergencyOpen(false, { dismiss: true, focusTrigger: true });
 });
-if (document.querySelector("[data-emergency-dispatch]")) {
-  let alreadySeen = false;
-  try {
-    alreadySeen = window.sessionStorage.getItem(emergencyStorageKey) === "1";
-  } catch {
-    // Treat blocked storage as a fresh visit.
+
+document.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Escape" &&
+    emergencyDispatch?.classList.contains("is-open") &&
+    !contactDrawer?.open
+  ) {
+    event.preventDefault();
+    setEmergencyOpen(false, { dismiss: true, focusTrigger: true });
   }
-  if (!alreadySeen) {
-    window.setTimeout(() => {
-      const dispatch = document.querySelector<HTMLElement>(
-        "[data-emergency-dispatch]",
-      );
-      if (!dispatch) return;
-      setEmergencyOpen(dispatch, true);
-      try {
-        window.sessionStorage.setItem(emergencyStorageKey, "1");
-      } catch {
-        // The experience still works when storage is unavailable.
-      }
-    }, 6000);
-  }
-}
+});
 const requestedLocation =
   new URLSearchParams(window.location.search)
     .get("location")
@@ -489,9 +601,11 @@ if (
       if (field) field.value = inquiryLocation;
     }
     contactScroll = window.scrollY;
+    setEmergencyOpen(false);
     mobileNav?.removeAttribute("open");
     void mountQuoteForm();
     contactDrawer.showModal();
+    setContactExpanded(true);
     document.body.classList.add("dialog-open", "contact-drawer-open");
     document.body.style.position = "fixed";
     document.body.style.top = `-${contactScroll}px`;
@@ -503,6 +617,15 @@ if (
   contactDrawer
     .querySelector("[data-close-contact]")
     ?.addEventListener("click", () => contactDrawer.close());
+  contactDrawer
+    .querySelector("[data-focus-availability]")
+    ?.addEventListener("click", () => {
+      contactDrawer
+        .querySelector<HTMLElement>(
+          "#quote-island input:not([type='hidden']), #quote-island select, #quote-island textarea",
+        )
+        ?.focus();
+    });
   contactDrawer.addEventListener("click", (event) => {
     if (event.target !== contactDrawer) return;
     const box = contactDrawer.getBoundingClientRect();
@@ -515,6 +638,7 @@ if (
       contactDrawer.close();
   });
   contactDrawer.addEventListener("close", () => {
+    setContactExpanded(false);
     document.body.classList.remove("dialog-open", "contact-drawer-open");
     document.body.style.position = "";
     document.body.style.top = "";
@@ -542,7 +666,9 @@ if (
       button.hidden = false;
       button.addEventListener("click", () => {
         previousScroll = window.scrollY;
+        dialog.dispatchEvent(new Event("service-carousel:destroy", { bubbles: true }));
         dialog.showModal();
+        dialog.dispatchEvent(new Event("service-carousel:mount", { bubbles: true }));
         document.body.classList.add("dialog-open");
         document.body.style.position = "fixed";
         document.body.style.top = `-${previousScroll}px`;
@@ -558,8 +684,11 @@ if (
             "a[href], button:not([disabled])",
           ),
         ];
-        const first = controls[0],
-          last = controls.at(-1);
+        const visibleControls = controls.filter((control) =>
+          control.tabIndex >= 0 && control.getClientRects().length > 0
+        );
+        const first = visibleControls[0],
+          last = visibleControls.at(-1);
         if (event.shiftKey && document.activeElement === first) {
           event.preventDefault();
           last?.focus();
@@ -580,6 +709,7 @@ if (
           dialog.close();
       });
       dialog.addEventListener("close", () => {
+        dialog.dispatchEvent(new Event("service-carousel:destroy", { bubbles: true }));
         document.body.classList.remove("dialog-open");
         document.body.style.position = "";
         document.body.style.top = "";
@@ -782,10 +912,7 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
   });
   const planningTitle = stateDialog.querySelector("#state-seasonal-title");
   if (planningTitle) {
-    planningTitle.textContent =
-      name === "Iowa"
-        ? "Trailer, or Modular Facilities, or Mobile, or Trailer, or Emergency."
-        : `Rental Planning Conditions in ${name}`;
+    planningTitle.textContent = `Rental Planning Conditions in ${name}`;
   }
   const guides = Array.from(
     (
@@ -821,37 +948,27 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
     .forEach((node) => {
       node.textContent = focus;
     });
-  const stateImage = stateDialog.querySelector<HTMLImageElement>(
-    "img[data-state-image]",
-  );
-  if (stateImage) {
-    stateImage.src =
-      guide?.dataset.stateImage ||
-      "/images/catalog/mobile-kitchen-trailers-960.webp";
-    stateImage.alt =
-      guide?.dataset.stateImageAlt ||
-      "Commercial equipment inside a mobile kitchen trailer";
-    const caption = stateDialog.querySelector<HTMLElement>(
-      "[data-state-image-caption]",
-    );
-    if (caption) caption.textContent = stateImage.alt;
+  // Replace the complete gallery from the same exact title used by the state page.
+  // Destroy first: no old timer, lightbox, event handler or image survives a state switch.
+  const galleryHost = stateDialog.querySelector<HTMLElement>("[data-state-gallery-host]");
+  if (galleryHost) {
+    galleryHost.dispatchEvent(new Event("service-carousel:destroy", { bubbles: true }));
+    galleryHost.replaceChildren();
+    const photoTemplate = Array.from(document.querySelectorAll<HTMLTemplateElement>("template[data-state-gallery-template]"))
+      .find(template => template.dataset.stateGalleryTemplate === name &&
+        template.content.querySelector<HTMLElement>("[data-gallery-title]")?.dataset.galleryTitle === guide?.dataset.stateHeadline);
+    if (photoTemplate) {
+      const content = photoTemplate.content.cloneNode(true) as DocumentFragment;
+      content.querySelectorAll("script").forEach(script => script.remove());
+      galleryHost.append(content);
+    } else {
+      const pending = document.createElement("div");
+      pending.className = "verified-photo-pending";
+      pending.setAttribute("data-verified-photo-pending", "");
+      pending.textContent = "Verified photography coming soon";
+      galleryHost.append(pending);
+    }
   }
-  const galleryImages = stateDialog.querySelectorAll<HTMLImageElement>(
-    "img[data-state-gallery-image]",
-  );
-  const gallerySources = [
-    [guide?.dataset.stateImageTwo, guide?.dataset.stateImageAltTwo],
-    [guide?.dataset.stateImageThree, guide?.dataset.stateImageAltThree],
-  ];
-  galleryImages.forEach((image, index) => {
-    const [src, alt] = gallerySources[index] || [];
-    if (src) image.src = src;
-    if (alt) image.alt = alt;
-    const caption = stateDialog.querySelector<HTMLElement>(
-      `[data-state-gallery-caption="${index + 1}"]`,
-    );
-    if (caption) caption.textContent = image.alt;
-  });
   const initials = stateDialog.querySelector<HTMLElement>(
     "[data-state-initials]",
   );
@@ -957,6 +1074,7 @@ const openState = (name: string, trigger: HTMLElement | SVGElement) => {
       });
   }
   stateDialog.showModal();
+  galleryHost?.dispatchEvent(new Event("service-carousel:mount", { bubbles: true }));
 };
 document.querySelectorAll<SVGElement>("[data-state]").forEach((state) => {
   state.addEventListener("click", () => openState(state.dataset.state!, state));
@@ -978,6 +1096,12 @@ stateDialog
   ?.querySelector("[data-close-state]")
   ?.addEventListener("click", () => stateDialog.close());
 stateDialog?.addEventListener("close", () => {
+  if (!stateDialog.open) {
+    const host = stateDialog.querySelector<HTMLElement>("[data-state-gallery-host]");
+    host?.dispatchEvent(new Event("service-carousel:destroy", { bubbles: true }));
+    host?.replaceChildren();
+  }
+
   if (!contactDrawer?.open) stateTrigger?.focus({ preventScroll: true });
 });
 stateDialog?.addEventListener("click", (event) => {

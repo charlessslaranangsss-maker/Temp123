@@ -1,0 +1,284 @@
+{
+  "createdAt": "2026-09-16T08:52:06.818Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseCommit": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommitCreated": false,
+  "sourceFingerprint": "f4e2edf9462d7e9969a4ca2f142e8db0b8947fafbfe910dbde83b7f55496e2a7",
+  "manifestSha256": "b2dd5c5c6b5bd2d6194421d9d583a8bdddeac914a512d80eda8dc72331fdcd57",
+  "policySha256": "a6d254484922a68e1f1974a6d2f6952e84091625fc07005f7e143efd8ef070ad",
+  "build": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\owner-image-rollout-20260916\\dist",
+  "changedFilesSinceAprilSnapshot": [
+    {
+      "file": "content/equipment-photo-policy.json",
+      "sha256": "a6d254484922a68e1f1974a6d2f6952e84091625fc07005f7e143efd8ef070ad",
+      "status": "changed"
+    },
+    {
+      "file": "content/verified-equipment-images.json",
+      "sha256": "b2dd5c5c6b5bd2d6194421d9d583a8bdddeac914a512d80eda8dc72331fdcd57",
+      "status": "changed"
+    },
+    {
+      "file": "scripts/build-location-image-manifest.py",
+      "sha256": "fde0ddc81dbf33ac307d93bdc23998c42336ea2b4c65d86aa7dd3864593336f1",
+      "status": "changed"
+    },
+    {
+      "file": "src/equipmentPhotoPolicy.ts",
+      "sha256": "e9bf8cc88e342f6da0f409742764bd769a71cae0bec05d94d43406296a34f820",
+      "status": "changed"
+    },
+    {
+      "file": "src/locationCarouselImages.ts",
+      "sha256": "c23224c71a3e99ad2ef5260b1c0131894572bb32f756668a03d0bd3f8c36fba6",
+      "status": "changed"
+    },
+    {
+      "file": "src/LocationImageCarousel.tsx",
+      "sha256": "935524ff7910a7c1e427e292cb2480fa0d60760000b382d999b9e00bf6b74e3f",
+      "status": "changed"
+    },
+    {
+      "file": "src/location-image-gallery.css",
+      "sha256": "ea54ecd3869231cc017489853c2d86b74139561afe2ab62621f710621869ec82",
+      "status": "changed"
+    },
+    {
+      "file": "src/ApprovedEquipmentPhotoOptions.tsx",
+      "sha256": "2b06b3a18ca7e0114df4260c61649b25d14298d9d3cc9a5ab988246173e19d2b",
+      "status": "changed"
+    },
+    {
+      "file": "src/serviceHeroImages.ts",
+      "sha256": "db283f0f4126e8b844524d27ca760c9d2f38c8285197c70f365efee6dd11bb10",
+      "status": "changed"
+    },
+    {
+      "file": "src/ServiceDetail.tsx",
+      "sha256": "770db4e6519b2da75137d996cacd6bbc0a4ebd9564a39e75211a2e955a8bef05",
+      "status": "changed"
+    },
+    {
+      "file": "src/ServiceHeroCarousel.tsx",
+      "sha256": "01f4f7bb9cbd305a7a72a543668baf5ef0b4a3c8a2085f1ccfcc037a816297f2",
+      "status": "changed"
+    },
+    {
+      "file": "tests/ownerImageRollout.test.tsx",
+      "sha256": "16c529a3e0673b0e4175c1b2f52a340024306876d5211697d20e46c55adeeed2",
+      "status": "added"
+    },
+    {
+      "file": "tests/aprilPhotoPolicy.test.tsx",
+      "sha256": "165927bcbd58de015d90a5d74a87e1edc8aaa4e3bd8cf1768b5ed72b11b4372a",
+      "status": "changed"
+    },
+    {
+      "file": "tests/locationCarouselImages.test.ts",
+      "sha256": "513c02f1c296ff46a68f6eeb77b7be463d34be62048551581e14b3b8e8e16ebd",
+      "status": "changed"
+    },
+    {
+      "file": "tests/browser/owner-image-rollout.spec.ts",
+      "sha256": "3db1f18cc18888c9497d1c8ab4016f8dbc5a6b79cd6a2ca9f3d8b355db204880",
+      "status": "added"
+    },
+    {
+      "file": "tests/browser/service-area-images.spec.ts",
+      "sha256": "92cbb429d1a31cd8327ce5c8c9509fd87052e3a3704753438b4e968ca2135958",
+      "status": "changed"
+    },
+    {
+      "file": "scripts/audit-service-area-images.ts",
+      "sha256": "c31e964d23ff4dca818863339e9c8d1e45ae8388600e0ef23dcbbe4b706c0acc",
+      "status": "changed"
+    }
+  ],
+  "cumulativeImageSourceFiles": [
+    {
+      "file": "content/equipment-photo-policy.json",
+      "snapshotSha256": "a6d254484922a68e1f1974a6d2f6952e84091625fc07005f7e143efd8ef070ad",
+      "workingSha256": "a6d254484922a68e1f1974a6d2f6952e84091625fc07005f7e143efd8ef070ad"
+    },
+    {
+      "file": "content/verified-equipment-images.json",
+      "snapshotSha256": "b2dd5c5c6b5bd2d6194421d9d583a8bdddeac914a512d80eda8dc72331fdcd57",
+      "workingSha256": "b2dd5c5c6b5bd2d6194421d9d583a8bdddeac914a512d80eda8dc72331fdcd57"
+    },
+    {
+      "file": "scripts/build-location-image-manifest.py",
+      "snapshotSha256": "fde0ddc81dbf33ac307d93bdc23998c42336ea2b4c65d86aa7dd3864593336f1",
+      "workingSha256": "fde0ddc81dbf33ac307d93bdc23998c42336ea2b4c65d86aa7dd3864593336f1"
+    },
+    {
+      "file": "src/equipmentPhotoPolicy.ts",
+      "snapshotSha256": "e9bf8cc88e342f6da0f409742764bd769a71cae0bec05d94d43406296a34f820",
+      "workingSha256": "e9bf8cc88e342f6da0f409742764bd769a71cae0bec05d94d43406296a34f820"
+    },
+    {
+      "file": "src/locationCarouselImages.ts",
+      "snapshotSha256": "c23224c71a3e99ad2ef5260b1c0131894572bb32f756668a03d0bd3f8c36fba6",
+      "workingSha256": "c23224c71a3e99ad2ef5260b1c0131894572bb32f756668a03d0bd3f8c36fba6"
+    },
+    {
+      "file": "src/LocationImageCarousel.tsx",
+      "snapshotSha256": "935524ff7910a7c1e427e292cb2480fa0d60760000b382d999b9e00bf6b74e3f",
+      "workingSha256": "935524ff7910a7c1e427e292cb2480fa0d60760000b382d999b9e00bf6b74e3f"
+    },
+    {
+      "file": "src/location-image-gallery.css",
+      "snapshotSha256": "ea54ecd3869231cc017489853c2d86b74139561afe2ab62621f710621869ec82",
+      "workingSha256": "ea54ecd3869231cc017489853c2d86b74139561afe2ab62621f710621869ec82"
+    },
+    {
+      "file": "src/ApprovedEquipmentPhotoOptions.tsx",
+      "snapshotSha256": "2b06b3a18ca7e0114df4260c61649b25d14298d9d3cc9a5ab988246173e19d2b",
+      "workingSha256": "2b06b3a18ca7e0114df4260c61649b25d14298d9d3cc9a5ab988246173e19d2b"
+    },
+    {
+      "file": "src/serviceHeroImages.ts",
+      "snapshotSha256": "db283f0f4126e8b844524d27ca760c9d2f38c8285197c70f365efee6dd11bb10",
+      "workingSha256": "db283f0f4126e8b844524d27ca760c9d2f38c8285197c70f365efee6dd11bb10"
+    },
+    {
+      "file": "src/ServiceDetail.tsx",
+      "snapshotSha256": "770db4e6519b2da75137d996cacd6bbc0a4ebd9564a39e75211a2e955a8bef05",
+      "workingSha256": "770db4e6519b2da75137d996cacd6bbc0a4ebd9564a39e75211a2e955a8bef05"
+    },
+    {
+      "file": "src/ServiceHeroCarousel.tsx",
+      "snapshotSha256": "01f4f7bb9cbd305a7a72a543668baf5ef0b4a3c8a2085f1ccfcc037a816297f2",
+      "workingSha256": "01f4f7bb9cbd305a7a72a543668baf5ef0b4a3c8a2085f1ccfcc037a816297f2"
+    },
+    {
+      "file": "src/CoverageMap.tsx",
+      "snapshotSha256": "cf1f6e94d4e677474c63a12175d4f54ffe2d592227e324c01bc00bbd68b0e73f",
+      "workingSha256": "cf1f6e94d4e677474c63a12175d4f54ffe2d592227e324c01bc00bbd68b0e73f"
+    },
+    {
+      "file": "src/StateDetail.tsx",
+      "snapshotSha256": "a7a7d1aabd1b6b6ed9a50b6d128a5165cb0cf6cc8f8c47b81b285c4ec095cb51",
+      "workingSha256": "a7a7d1aabd1b6b6ed9a50b6d128a5165cb0cf6cc8f8c47b81b285c4ec095cb51"
+    },
+    {
+      "file": "src/CityDetail.tsx",
+      "snapshotSha256": "9f2ddbb9f708464e858e8d36c911e39aa73bf3972d8cdfcdccaa3c26c9709ddd",
+      "workingSha256": "9f2ddbb9f708464e858e8d36c911e39aa73bf3972d8cdfcdccaa3c26c9709ddd"
+    },
+    {
+      "file": "src/CityDirectoryPage.tsx",
+      "snapshotSha256": "5bf0d925581f547f4edf56470bd71f9607c58875e5893b4ef0fa8e5f2718453a",
+      "workingSha256": "5bf0d925581f547f4edf56470bd71f9607c58875e5893b4ef0fa8e5f2718453a"
+    },
+    {
+      "file": "src/regionGuides.tsx",
+      "snapshotSha256": "02fe60c939a20a8f5286867508472d4fadf97b44e28d5f9381a208d41000ac31",
+      "workingSha256": "02fe60c939a20a8f5286867508472d4fadf97b44e28d5f9381a208d41000ac31"
+    },
+    {
+      "file": "src/Site.tsx",
+      "snapshotSha256": "b5b8649ce89b19fe72999b5443615f0c020d7f531caa9cec9c0ca1b8661c8020",
+      "workingSha256": "b5b8649ce89b19fe72999b5443615f0c020d7f531caa9cec9c0ca1b8661c8020"
+    },
+    {
+      "file": "src/main.tsx",
+      "snapshotSha256": "bcd578e02d6c692881ba5fd3caae31c83cc2ccca5c5523878819676d8dd981e5",
+      "workingSha256": "bcd578e02d6c692881ba5fd3caae31c83cc2ccca5c5523878819676d8dd981e5"
+    },
+    {
+      "file": "src/service-hero-carousel.css",
+      "snapshotSha256": "5171f76c78acda1a81ccdfb784a7b7b8995295a8ec513e37fe14cb80f4053fd8",
+      "workingSha256": "5171f76c78acda1a81ccdfb784a7b7b8995295a8ec513e37fe14cb80f4053fd8"
+    },
+    {
+      "file": "public/service-hero-carousel.js",
+      "snapshotSha256": "8e236f818ceb1e3aa7647f6c1fbd2105fc4b02fd8d1f56fd041cf9bed8799d29",
+      "workingSha256": "8e236f818ceb1e3aa7647f6c1fbd2105fc4b02fd8d1f56fd041cf9bed8799d29"
+    },
+    {
+      "file": "scripts/prerender.tsx",
+      "snapshotSha256": "aa75da1ff4a92928eda257e3e19b96fb5957d90470ce2c6d353fa955397e367d",
+      "workingSha256": "aa75da1ff4a92928eda257e3e19b96fb5957d90470ce2c6d353fa955397e367d"
+    }
+  ],
+  "workingTreeStatus": [
+    "M .env.example",
+    " M .gitignore",
+    " M PROJECT_STATUS.md",
+    " M api/seo-live.ts",
+    " M audit/build-registry.json",
+    " M audit/indexing-rollout.json",
+    " M docs/DECISIONS.md",
+    " M docs/PAGE_ASSIGNMENTS.md",
+    " M docs/TEST_RESULTS.md",
+    " M public/service-hero-carousel.js",
+    " M scripts/prerender.tsx",
+    " M server/firebase.ts",
+    " M server/seo-live.ts",
+    " M src/CityDetail.tsx",
+    " M src/CityDirectoryPage.tsx",
+    " M src/CoverageMap.tsx",
+    " M src/SeoDashboard.tsx",
+    " M src/ServiceDetail.tsx",
+    " M src/ServiceHeroCarousel.tsx",
+    " M src/Site.tsx",
+    " M src/StateDetail.tsx",
+    " M src/contact-refresh.css",
+    " M src/locationCarouselImages.ts",
+    " M src/main.tsx",
+    " M src/regionGuides.tsx",
+    " M src/seo-dashboard.css",
+    " M src/service-hero-carousel.css",
+    " M src/serviceHeroImages.ts",
+    " M tests/browser/service-hero-carousel.spec.ts",
+    " M tests/browser/site.spec.ts",
+    " M tests/locationCarouselImages.test.ts",
+    " M tests/seasonal.test.ts",
+    " M tests/seo-dashboard.test.tsx",
+    " M tests/serviceHeroImages.test.ts",
+    " M vercel.json",
+    "?? api/seo-diagnostics.ts",
+    "?? audit/april-approved-service-area-images-summary.json",
+    "?? audit/april-approved-service-area-images.csv",
+    "?? audit/april-approved-service-area-images.json",
+    "?? audit/owner-image-rollout-2026-09-16-summary.json",
+    "?? audit/owner-image-rollout-2026-09-16.csv",
+    "?? audit/owner-image-rollout-2026-09-16.json",
+    "?? audit/service-area-ceo-audit-2026-09-16-summary.json",
+    "?? audit/service-area-ceo-audit-2026-09-16.csv",
+    "?? audit/service-area-ceo-browser-2026-09-16.json",
+    "?? audit/service-area-ceo-photo-needs-2026-09-16.csv",
+    "?? audit/service-area-image-classification.csv",
+    "?? audit/service-area-image-source-inventory.json",
+    "?? audit/service-area-images-2026-09-16-summary.json",
+    "?? audit/service-area-images-2026-09-16.csv",
+    "?? audit/service-area-images-2026-09-16.json",
+    "?? audit/service-area-images-baseline-2026-09-16.json.gz",
+    "?? content/equipment-photo-policy.json",
+    "?? content/verified-equipment-images.json",
+    "?? docs/phase1/APRIL_PHOTO_APPROVALS_2026-09-16.md",
+    "?? docs/phase1/SERVICE_AREA_CEO_AUDIT_2026-09-16.md",
+    "?? docs/phase1/SERVICE_AREA_IMAGE_AUDIT.md",
+    "?? public/images/location-verified/",
+    "?? scripts/audit-service-area-images.ts",
+    "?? scripts/build-location-image-manifest.py",
+    "?? scripts/write-service-area-image-report.py",
+    "?? server/seo-diagnostics.ts",
+    "?? src/ApprovedEquipmentPhotoOptions.tsx",
+    "?? src/LocationImageCarousel.tsx",
+    "?? src/equipmentPhotoPolicy.ts",
+    "?? src/location-image-gallery.css",
+    "?? tests/aprilPhotoPolicy.test.tsx",
+    "?? tests/browser/april-photo-policy.spec.ts",
+    "?? tests/browser/owner-image-rollout.spec.ts",
+    "?? tests/browser/service-area-images.spec.ts",
+    "?? tests/ownerImageRollout.test.tsx"
+  ],
+  "deployedByThisHandoff": false,
+  "immutableDeploymentURL": null,
+  "deploymentRevision": null,
+  "liveProbeAt": "2026-09-16T08:43:36.108Z",
+  "liveImageMatches": 0,
+  "liveImageSamples": 10
+}

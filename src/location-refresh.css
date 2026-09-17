@@ -952,6 +952,10 @@
   margin-top: 0.4rem;
   color: #59717a;
 }
+.city-directory-equipment {
+  max-width: 760px;
+  margin: 2rem 0 2.5rem;
+}
 .city-directory-toolbar {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;

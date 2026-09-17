@@ -97,7 +97,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     intro:
       "Tacoma combines residential, institutional and industrial work areas, so a temporary facility plan should start with the specific site rather than the city name alone. For a crew base camp or occupied-facility renovation, Temporary123 can review kitchen, shower, restroom and sleeper trailer rental options alongside servicing needs.",
     answer:
-      "Tacoma crews can rent or lease mobile commercial kitchens, shower and restroom combination trailers, a 22 ft 10-stall shower-only trailer, and sleeper or bunkbed units. A longer man camp may also need laundry, refrigeration, dishwashing, separate restrooms and handwashing. Choose capacity after confirming shift size and available utility connections.",
+      "Tacoma crews can discuss leasing sleeper and bunk-bed facilities for workforce housing. Review sleeping capacity, shift schedules, privacy, ventilation and access for the chosen unit. Kitchens and shower or shower/restroom combination units are separate supporting rental options. A longer man camp may also need laundry, refrigeration, dishwashing, separate restrooms and handwashing. Choose capacity after confirming shift size and available utility connections.",
     local:
       "Tacoma's transportation plan maps freight corridors and a heavy-haul network around its industrial areas. A project near the Tideflats may therefore require a different delivery and staging discussion from a compact property elsewhere in Tacoma. Identify the access gate, proposed equipment footprint, worker routes and water, power and waste connections before requesting a trailer configuration or longer lease.",
     seasonal:
@@ -122,7 +122,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     intro:
       "An Olympia project can range from an occupied campus or government property to a separate work compound. Temporary123 can discuss kitchens, shower and restroom trailers, and sleeper accommodation for construction, renovation or emergency planning when the project team defines the site boundary and who must keep using it.",
     answer:
-      "Olympia project teams can discuss a mobile kitchen rental, shower and restroom combination trailers, a 22 ft 10-stall shower-only trailer, and sleeper or bunkbed accommodation. For a temporary base camp or a building renovation, refrigeration, laundry, dishwashing and handwashing may complete the setup. Lease length and final equipment are confirmed with the team.",
+      "Olympia project teams can discuss shower and restroom combination trailer rental for an institutional facility. Plan shower and toilet access together, including the stall layout, water supply, hot water, wastewater servicing and site access. Mobile kitchens, shower-only trailers and sleeper facilities are separate rental options. For a temporary base camp or a building renovation, refrigeration, laundry, dishwashing and handwashing may complete the setup. Lease length and final equipment are confirmed with the team.",
     local:
       "The Washington State Capitol Campus in Olympia publishes specific visitor access and parking directions, illustrating why a location name is not enough for a trailer delivery brief. For a government or institutional site, clarify who controls the service entrance, any reserved arrival window, pedestrian separation and utility connections. Those details matter more than a generalized citywide arrival estimate when planning temporary facilities.",
     seasonal:

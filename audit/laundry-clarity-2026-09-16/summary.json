@@ -1,0 +1,131 @@
+{
+  "at": "2026-09-16T10:11:42.863Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseCommit": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommit": false,
+  "deployed": false,
+  "preview": "http://127.0.0.1:4207",
+  "frozenBuild": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\laundry-clarity-20260916\\dist",
+  "sourceFingerprint": "4640b6077785c8efe9500f2af6eb2a99196af53c8dc47942b7cadae257f0cebc",
+  "manifestSha256": "77fb4db6af4efab4c22d2b75556aad90c3e391ec5bc2baf0742a5a102d734617",
+  "files": [
+    {
+      "file": "content/equipment-photo-policy.json",
+      "sha256": "e9161721581f45a4490b72c3a65a22756e07b5e2336ea93684bf68ca35fd1678"
+    },
+    {
+      "file": "content/verified-equipment-images.json",
+      "sha256": "77fb4db6af4efab4c22d2b75556aad90c3e391ec5bc2baf0742a5a102d734617"
+    },
+    {
+      "file": "src/LocationImageCarousel.tsx",
+      "sha256": "78150b2cdab26ab7fc8fce0f6e4237b3dc6bfb109be71b654ab8a6601a93fdd4"
+    },
+    {
+      "file": "src/ServiceHeroCarousel.tsx",
+      "sha256": "5b98105ca2a78f498d349603f761004deed42be523b1e121974ade4743e5cb1e"
+    },
+    {
+      "file": "src/equipmentPhotoPolicy.ts",
+      "sha256": "dc158945599273432961c982c55ab3b88a90f7ef69247fa2ede944f87b9e89bd"
+    },
+    {
+      "file": "public/service-hero-carousel.js",
+      "sha256": "6c1237b43fd8e37c32b0383f882d0ab821694fab796eee8b8535023364edb513"
+    },
+    {
+      "file": "src/service-hero-carousel.css",
+      "sha256": "3051c9955a9be3285b59a12a534f1399aad465d89e9e033f283d74cc8ddf120f"
+    },
+    {
+      "file": "scripts/audit-service-area-images.ts",
+      "sha256": "db9a48a1b366ffa6e0d6c017f9b209917166ede9deda32cc03d95215d277e6ff"
+    },
+    {
+      "file": "scripts/gallery-audit-description.ts",
+      "sha256": "c071f810c10506e3c1e9acd7f917cf622acc6c50b665958fad2b9556f38f1f97"
+    },
+    {
+      "file": "tests/laundryGalleryClarity.test.tsx",
+      "sha256": "00a4cc8b3643163cbef27db93f9ef8a92e08041c55a09cd53da2e16950ed7d12"
+    },
+    {
+      "file": "tests/browser/laundry-gallery-clarity.spec.ts",
+      "sha256": "0b8946cae25fa0bb5f95456d7953b3d05a03f723df103d3cb41c1ec92c8e9de6"
+    }
+  ],
+  "earlierFrozenBuildUnchanged": true,
+  "concurrentEdits": [
+    {
+      "file": "src/CityDirectoryPage.tsx",
+      "testedSha256": "9f032410a1dd43a643283c45c0d095440a9eb470893a514cf21b61ea641d77da",
+      "currentSha256": "36fc40984f76ac049703b8bc12ef06bb0ea6927de4ac9323ffc8e3cf0f4578a1",
+      "note": "Concurrent insertion of a missing space in directory introduction.",
+      "combinedRuntimeValidation": "NOT RUN; audit targets the unchanged frozen candidate"
+    },
+    {
+      "file": "src/regionGuides.tsx",
+      "testedSha256": "02fe60c939a20a8f5286867508472d4fadf97b44e28d5f9381a208d41000ac31",
+      "currentSha256": "6764cbc43f5dd4a45643c168526f8964ae7d671ea3afa61623d1fa07dc0ca8d0",
+      "note": "Concurrent change of city-link labels to city/state rental-guide wording.",
+      "combinedRuntimeValidation": "NOT RUN; audit targets the unchanged frozen candidate"
+    }
+  ],
+  "protectedFilesUnchanged": [
+    "src/Site.tsx",
+    "src/ApprovedEquipmentPhotoOptions.tsx",
+    "src/locationCarouselImages.ts",
+    "src/galleryImageOrder.ts",
+    "src/serviceHeroImages.ts",
+    "src/Equipment.tsx",
+    "src/rentalHeadlines.ts",
+    "src/CoverageMap.tsx",
+    "src/main.tsx",
+    "scripts/prerender.tsx",
+    "vercel.json"
+  ],
+  "altChanges": [
+    {
+      "id": "08.01",
+      "alt": "Laundry trailer interior reference with washing machines, dryers and a central aisle"
+    }
+  ],
+  "flaggedRecords": 50,
+  "flaggedPages": 36,
+  "flaggedModals": 14,
+  "laundryBrowserPresentations": 100,
+  "fullImageChecks": 400,
+  "tests": {
+    "focused": 164,
+    "application": 44,
+    "browser": 34
+  },
+  "audit": {
+    "auditedAt": "2026-09-16T10:08:30.866Z",
+    "environment": "Local isolated production build; not a deployment",
+    "build": "dist",
+    "baseURL": "http://127.0.0.1:4207",
+    "registeredPages": 651,
+    "serviceAreaPages": 548,
+    "uniqueStates": 50,
+    "modalPresentations": 100,
+    "imagesClassified": 153,
+    "imageUseRecords": 154,
+    "sourceImages": 149,
+    "supplementalCatalogImages": 4,
+    "approvedImages": 108,
+    "withheldImages": 46,
+    "pagesWithPhotos": 263,
+    "pagesWithoutImageSection": 247,
+    "pagesMissingPhotography": 38,
+    "statesMissingPhotography": 8,
+    "unsafePageMappingsCorrected": 301,
+    "pass": 648,
+    "fail": 0,
+    "issues": [],
+    "brokenImages": [],
+    "semantics": "PASS means correct verified mapping or truthful pending state, not that missing photography exists. Live deployment verification is separate.",
+    "imageSchemaNote": "Prerender automatically updates image structured-data references to the corrected first visible image. Non-image head metadata, H1s, canonicals, robots and sitemap are compared to baseline."
+  }
+}

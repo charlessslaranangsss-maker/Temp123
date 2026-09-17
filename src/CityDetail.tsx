@@ -1,11 +1,11 @@
+import { alignedLocationIntro } from "./alignedIntroductions";
 import site from "../site.json" with { type: "json" };
 import { nearbyCities, type CityPage } from "./cityDirectory";
 import { cityEditorial } from "./cityEditorial";
 import { regionCities } from "./regionCities";
 import { cityRentalHeadline } from "./rentalHeadlines";
 import { buildRegionSeasonalDemand } from "./seasonalDemand";
-import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { locationCarouselImages } from "./locationCarouselImages";
+import { LocationImageCarousel } from "./LocationImageCarousel";
 
 const serviceLinks = [
   {
@@ -59,7 +59,6 @@ export function CityDetail({ city }: { city: CityPage }) {
   );
   const headline = cityHeadline(city);
   const location = `${city.name}, ${city.state}`;
-  const carouselImages = locationCarouselImages(location, headline);
   return (
     <article className={`city-page city-layout-${Number(city.geoid) % 4}`}>
       <section className="city-hero">
@@ -78,7 +77,7 @@ export function CityDetail({ city }: { city: CityPage }) {
             </nav>
             <span className="eyebrow">CITY RENTAL GUIDE</span>
             <h1>{headline}</h1>
-            <p className="city-lead">{editorial.intro}</p>
+            <p className="city-lead" data-h1-intro>{alignedLocationIntro(headline, location)}</p>
             <div className="city-hero-actions">
               <span className="city-emergency">Emergency 24/7</span>
               <a className="button" href={`tel:${site.phoneE164}`}>
@@ -87,11 +86,7 @@ export function CityDetail({ city }: { city: CityPage }) {
             </div>
           </div>
           <div className="city-equipment-photo city-equipment-carousel">
-            <ServiceHeroCarousel
-              images={carouselImages}
-              label={`${location} temporary facility rental equipment`}
-              caption={`Verified commercial equipment references for rental planning in ${location}. Confirm the available unit and configuration before booking.`}
-            />
+            <LocationImageCarousel headline={headline} />
           </div>
         </div>
       </section>

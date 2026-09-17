@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "updatedAt": "2026-09-16",
+  "minimumUsablePhotos": 1,
+  "interiorOnlyAccepted": true,
+  "exteriorOnlyAccepted": true,
+  "requireBothViews": false,
+  "retainExactFamilyAndConfigurationMatching": true,
+  "source": "April as relayed by Charles, followed by Charles delegating suitable name-based image selection on 2026-09-16. This is image-use approval, not independent verification of dimensions or compliance.",
+  "delegatedSelection": {
+    "instruction": "I approve everything if you find it correct and necessary, you can decide to put pictures in there, base it also on the name as its already there",
+    "basis": "Use client-provided equipment names together with visual subject checks. Retain specific April restrictions. Broad titles may show separate, explicitly labelled equipment options; never put multiple equipment families into one carousel. Unknown or contradictory exact specifications remain unpictured.",
+    "contextGalleries": {
+      "laundry": ["30 ft Laundry Trailer", "20 ft Laundry Container"],
+      "man-camp": [
+        "Office, Sleeper and Shower & Restroom Trailer",
+        "38ft All Electric Kitchen",
+        "20 ft Shower Trailer"
+      ],
+      "directory": [
+        "24 ft Mobile Kitchen Trailer",
+        "20 ft Shower Trailer",
+        "Two-Stall Sleeper Trailer"
+      ]
+    },
+    "additionalApprovals": [
+      {
+        "id": "charles-named-30ft-laundry-interior",
+        "modelId": "model-08",
+        "family": "laundry-trailer",
+        "lengthFt": 30,
+        "configuration": "client-named-interior-reference",
+        "priority": 5,
+        "reviewIds": ["08.01"],
+        "basis": "The supplied equipment schedule and folder designate the 30ft laundry option. The image visibly shows a laundry interior. Use alone as a named reference; the similar 26-27ft image is not combined with it and machine counts are not inferred.",
+        "caption": "30 ft laundry trailer option: interior reference from the supplied trailer collection, not a laundry container. Confirm the actual unit length, machine count and layout with your quote.",
+        "alts": {
+          "08.01": "Laundry trailer interior reference with washing machines, dryers and a central aisle"
+        }
+      },
+      {
+        "id": "charles-named-contractor-accommodation",
+        "modelId": "model-22",
+        "family": "contractor-accommodation",
+        "lengthFt": 20,
+        "configuration": "client-named-accommodation-reference",
+        "priority": 10,
+        "reviewIds": ["22.01", "22.04"],
+        "basis": "Client-named 20ft contractor accommodation collection; visually matched bunk-room views. These references do not establish a wheeled chassis. Keep the different four-bed room and VIP private room separate.",
+        "caption": "Reference images from the supplied 20 ft contractor-accommodation collection. Confirm the actual layout and delivery configuration with your quote; the exterior references show modular accommodation units.",
+        "alts": {
+          "22.01": "Bunk beds and a reading light in a contractor-accommodation room",
+          "22.04": "Doorway view of the contractor-accommodation bunk room"
+        }
+      },
+      {
+        "id": "charles-named-vip-private-room",
+        "modelId": "model-23",
+        "family": "vip-accommodation",
+        "lengthFt": 20,
+        "configuration": "client-named-private-room-reference",
+        "priority": 10,
+        "reviewIds": ["23.07"],
+        "basis": "Client-named 20ft VIP accommodation collection. Only the visibly private room is used; communal bunks and the separate four-door trailer are not VIP imagery.",
+        "caption": "Private-room interior reference from the supplied 20 ft VIP-accommodation collection. Exterior and chassis configuration are not shown; confirm the available unit with your quote.",
+        "alts": {
+          "23.07": "Private accommodation room with a bed, seating, refrigerator and microwave"
+        }
+      },
+      {
+        "id": "charles-generic-ada-catalog-reference",
+        "modelId": "client-labelled-ada-reference",
+        "family": "ada-combination",
+        "lengthFt": null,
+        "configuration": "catalog-labelled-ada-reference",
+        "priority": 10,
+        "reviewIds": ["catalog-restroom"],
+        "basis": "The existing branded catalogue image is labelled Shower and Restroom Facilities ADA Room and visibly shows combination facilities. Delegated name-based approval permits a generic catalogue reference, not proof of accessibility, an exact stall count, size or a specific ADA variant.",
+        "caption": "Catalogue reference labelled Shower and Restroom Facilities - ADA Room. The accessible room and ramp arrangement are not shown; confirm the required access layout and exact configuration with your quote.",
+        "alts": {
+          "catalog-restroom": "Branded catalogue view of shower and restroom facilities, labelled ADA Room"
+        }
+      }
+    ]
+  },
+  "instructions": [
+    "Yung iba kahit inside photos lang okay lang yun. Basta meron photo",
+    "Yung 2 stalls sleeper meron yan ahh",
+    "20ft ref container (kuha ka inside photo ng ref dun sa trailer, walang outside photo)",
+    "20ft ref trailer- lahat ng nasa drive upload mo"
+  ],
+  "supersedes": [
+    "The previous tracker classified missing optional exteriors/interiors as required photography gaps.",
+    "The earlier instruction to use only an interior on the 20ft refrigerated trailer is superseded: use all five supplied Drive photos on the trailer."
+  ],
+  "approvals": [
+    {
+      "id": "april-20ft-refrigerated-trailer-all",
+      "modelId": "model-19",
+      "family": "refrigerated-trailer",
+      "lengthFt": 20,
+      "configuration": "owner-approved-reference-set",
+      "reviewIds": ["19.01", "19.02", "19.03", "19.04", "19.05"],
+      "basis": "Explicit approval to use all five files from the supplied 20ft refrigerated trailer Drive folder. Exterior/fleet views remain labelled as reference views, not proof of one physical unit or its dimensions.",
+      "folderUrl": "https://drive.google.com/drive/folders/11G3nczi2n2feLv5PX-rLegZAYXl3JsGu"
+    },
+    {
+      "id": "april-20ft-refrigerated-container-inside",
+      "modelId": "april-20ft-refrigerated-container",
+      "family": "refrigerated-container",
+      "lengthFt": 20,
+      "configuration": "owner-approved-shared-interior",
+      "sourceReviewId": "19.02",
+      "reviewIds": ["april-container-19-02"],
+      "basis": "Explicit narrow cross-family permission: reuse only the refrigerated interior from the trailer folder for the 20ft container. No exterior or 40ft substitution. The photo is a shared interior reference, not independently photographed container evidence.",
+      "folderUrl": "https://drive.google.com/drive/folders/11G3nczi2n2feLv5PX-rLegZAYXl3JsGu"
+    },
+    {
+      "id": "april-two-stall-sleeper-inside",
+      "modelId": "april-two-stall-sleeper",
+      "family": "sleeper-trailer",
+      "lengthFt": null,
+      "configuration": "two-stall-interior-reference",
+      "stalls": 2,
+      "reviewIds": ["24.01", "24.08"],
+      "basis": "April identified the existing two-stall sleeper set and accepts interior-only use. Use the two views of the bunk room as owner-designated interior references. Do not combine the different four-bunk room, container-on-flatbed exteriors or four-room wheeled trailer. No overall length or chassis claim is established.",
+      "folderUrl": "https://drive.google.com/drive/folders/1qjo6lh6faMeZcFNM3MauAK6EDHuUi3xx"
+    }
+  ]
+}

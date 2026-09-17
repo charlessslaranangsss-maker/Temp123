@@ -1,0 +1,5420 @@
+{
+  "at": "2026-09-16T10:39:29.350Z",
+  "oldRecordsPreserved": 154,
+  "oldRecordDrift": [],
+  "oldModelDrift": [],
+  "pages": 651,
+  "serviceAreaPages": 548,
+  "modalPresentations": 100,
+  "changedAssignments": [],
+  "existingTitlesMatchingNewImages": [],
+  "newPrepared": [
+    {
+      "id": "26.01",
+      "group": "38ft-all-electric-kitchen",
+      "model": "new-38ft-all-electric-kitchen",
+      "family": "mobile-kitchen",
+      "original": "/media/equipment-drive/38ft-all-electric-kitchen/38ft-all-electric-kitchen-multifunctional-exterior.png",
+      "sha256": "94548d625b33f94d5ea3c5db645b49bb7f2a911ec382743404846a04765a444a",
+      "bytes": 2352800,
+      "width": 960,
+      "height": 734,
+      "view": "exterior",
+      "status": "approved",
+      "reason": "",
+      "alt": "Multifunctional trailer exterior with black steps, a stainless work area and an open shower/toilet compartment",
+      "reviewedVisually": true,
+      "verificationBasis": "client-named-reviewed-reference",
+      "evidence": "Full original visually inspected after download and byte-size validation. Exterior only. Folder label does not visually prove all-electric equipment or length.",
+      "sourceUrl": "https://drive.google.com/file/d/13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2/view",
+      "driveFileId": "13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2",
+      "driveFolderId": "1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT",
+      "src": "/images/location-verified/94548d625b33f94d5ea3-960.webp",
+      "srcSet": "/images/location-verified/94548d625b33f94d5ea3-480.webp 480w, /images/location-verified/94548d625b33f94d5ea3-960.webp 960w",
+      "thumbnail": "/images/location-verified/94548d625b33f94d5ea3-480.webp"
+    },
+    {
+      "id": "27.01",
+      "group": "office-sleeper-shower-restroom-trailer",
+      "model": "new-office-sleeper-shower-restroom",
+      "family": "office-sleeper-hygiene-trailer",
+      "original": "/media/equipment-drive/office-sleeper-shower-restroom-trailer/office-sleeper-shower-restroom-trailer-exterior.png",
+      "sha256": "ecf9eb40caa93e8c39176be6194faa7e3ab0a2548089e486cfc20c1101ac2106",
+      "bytes": 2341098,
+      "width": 960,
+      "height": 734,
+      "view": "exterior",
+      "status": "approved",
+      "reason": "",
+      "alt": "Office, sleeper, shower and restroom trailer exterior with separate steps, visible bunks and an open shower/toilet room",
+      "reviewedVisually": true,
+      "verificationBasis": "client-named-reviewed-reference",
+      "evidence": "Full original visually inspected after download and byte-size validation. Exterior only. Office interior, overall length and occupancy are not visible or inferred.",
+      "sourceUrl": "https://drive.google.com/file/d/141iOYBwJVarSKqChnAWTrF33tIXv0oD4/view",
+      "driveFileId": "141iOYBwJVarSKqChnAWTrF33tIXv0oD4",
+      "driveFolderId": "1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm",
+      "src": "/images/location-verified/ecf9eb40caa93e8c3917-960.webp",
+      "srcSet": "/images/location-verified/ecf9eb40caa93e8c3917-480.webp 480w, /images/location-verified/ecf9eb40caa93e8c3917-960.webp 960w",
+      "thumbnail": "/images/location-verified/ecf9eb40caa93e8c3917-480.webp"
+    }
+  ],
+  "inventory": [
+    {
+      "kind": "page",
+      "url": "/",
+      "exactTitle": "Temporary Facilities and Trailer RentalRent or Lease Nationwide",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/",
+      "exactTitle": "Nationwide Temporary Facility Rental Services",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/industries/",
+      "exactTitle": "Commercial and Institutional Temporary Facility Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/",
+      "exactTitle": "USA Temporary Facilities Rental Service Areas",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/seo-dashboard/",
+      "exactTitle": "SEO Migration Dashboard",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/rental-calculator/",
+      "exactTitle": "Nationwide Temporary Facility Rental and Delivery Calculator",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/planning/",
+      "exactTitle": "Bring the essentials.We’ll take it from there.",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/about-us/",
+      "exactTitle": "Temporary facilities built around the work.",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/blog/",
+      "exactTitle": "Field notes for better site planning.",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/contact-us/",
+      "exactTitle": "The right facilitiesstart here.",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/privacy/",
+      "exactTitle": "Privacy",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/",
+      "exactTitle": "Nationwide Temporary Facility and Equipment Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/20ft-refrigeration-trailers/",
+      "exactTitle": "20ft Refrigeration Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/26ft-military-bulk-kitchen/",
+      "exactTitle": "26ft Military Bulk Kitchen",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/2800-correctional-facilities-series/",
+      "exactTitle": "2800 Correctional Facilities Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/2800-military-series/",
+      "exactTitle": "2800 Military Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/4000-correctional-facilities-series/",
+      "exactTitle": "4000 Correctional Facilities Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/4000-military-series/",
+      "exactTitle": "4000 Military Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/40ft-military-bulk-kitchen/",
+      "exactTitle": "40ft Military Bulk Kitchen",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/4500-correctional-facilities-series/",
+      "exactTitle": "4500 Correctional Facilities Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/4500-military-series/",
+      "exactTitle": "4500 Military Series",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/base-camps-for-rent/",
+      "exactTitle": "Base Camps for Rent | Modular & Scalable Housing Solutions",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/camp-management-and-design/",
+      "exactTitle": "Camp Management and Design",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/construction-man-camp-rentals/",
+      "exactTitle": "Construction Man Camp Rentals | Workforce Housing for Construction Sites",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/disaster-relief-man-camp-workforce-rentals/",
+      "exactTitle": "Emergency Response Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental-refrigeration-12ft-refrigerated-trailer/",
+      "exactTitle": "12ft Refrigeration Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/breakroom-trailer/",
+      "exactTitle": "Breakroom trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/classroom-trailers/",
+      "exactTitle": "Classroom trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "exactTitle": "Fencing, barricades & receptacles Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/generator-trailers/",
+      "exactTitle": "Generator trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/laundry-trailers/",
+      "exactTitle": "Laundry Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/mobile-kitchen-trailers/",
+      "exactTitle": "Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/mobile-office-trailers/",
+      "exactTitle": "Mobile office trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/modular-buildings/",
+      "exactTitle": "Modular buildings Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/modular-command-center-trailers/",
+      "exactTitle": "Military command center trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/ramp-rentals/",
+      "exactTitle": "Ramp rentals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/refrigeration/",
+      "exactTitle": "Refrigerated Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/restroom-trailers/",
+      "exactTitle": "Restroom Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/security-camera-trailers/",
+      "exactTitle": "Security camera trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/shower-trailer/",
+      "exactTitle": "Emergency Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/stair-rentals/",
+      "exactTitle": "Stair rentals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/tent-structures/",
+      "exactTitle": "Tent rentals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/wastewater-and-freshwater-container/",
+      "exactTitle": "Wastewater & freshwater containers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/facility-management-and-base-operations-support/",
+      "exactTitle": "Facility Management and Base Operations Support",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/food-services-2/",
+      "exactTitle": "Food Service Kitchen Trailer Lease",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/government-and-non-government/",
+      "exactTitle": "Acquired Government and Non-Goverment Approvals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/government/",
+      "exactTitle": "Government Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/government/correctional-facilities/",
+      "exactTitle": "Correctional Facilities",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/government/hospitals/",
+      "exactTitle": "Hospitals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/government/military-kitchen/",
+      "exactTitle": "Military Kitchen",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/gsa-schedule/",
+      "exactTitle": "GSA Schedule",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/hospitality/",
+      "exactTitle": "Hospitality",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/man-camp-rental/",
+      "exactTitle": "Man Camp Rental | Workforce Housing for Remote Sites",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/man-camps-for-rent/",
+      "exactTitle": "Construction Trailer Rental & Base Camp Facilities",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/mining-man-camp-rentals/",
+      "exactTitle": "Mining Man Camp Rentals | Workforce Housing for Mining Operations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/mobile-kitchen-trailer-rental/",
+      "exactTitle": "Mobile Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/mobile-man-camp-for-lease/",
+      "exactTitle": "Mobile Man Camp for Lease | Flexible Workforce Housing Solutions",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/mobile-staffing/",
+      "exactTitle": "Mobile Staffing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/mobile-units-for-disaster-relief-special-events/",
+      "exactTitle": "Mobile Units for Disaster Relief & Special Events",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/modular-kitchen-facilities/",
+      "exactTitle": "Modular Kitchen Facilities",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/oilfield-man-camp-rentals/",
+      "exactTitle": "Oilfield Man Camp Rentals | Workforce Housing for Oilfield Projects",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/portable-dishwashing-trailer-rental/",
+      "exactTitle": "Dishwashing Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/portable-man-camps-for-rent/",
+      "exactTitle": "Portable Man Camps for Rent | Flexible Workforce Housing Solutions",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/remote-basecamp-temporary-housing-rent-mobile-trailers-modular-buildings-restroom-shower-laundry-dining-temporary-building-rentals/",
+      "exactTitle": "Remote Basecamp Temporary Housing, Mobile Trailers & Modular Building Rentals",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/remote-containerized-military-berthing-solution-for-rent/",
+      "exactTitle": "Containerized Sleeper Units Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/remote-man-camp-for-rent/",
+      "exactTitle": "Remote Man Camp for Rent | Workforce Housing for Remote Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/remote-man-camp-rental/",
+      "exactTitle": "Remote Man Camp Rental | Workforce Housing for Remote Job Sites",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/restroom-trailer-rental/",
+      "exactTitle": "Restroom Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/shower-trailer-rental/",
+      "exactTitle": "Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/sleeper-trailer-rental/",
+      "exactTitle": "Sleeper Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/temporary-man-camp-solutions/",
+      "exactTitle": "Temporary Man Camp Solutions | Portable Workforce Housing Options",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/turnkey-man-camp-solutions/",
+      "exactTitle": "Turnkey Man Camp Solutions | Fully-Equipped Workforce Housing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/video/",
+      "exactTitle": "Temporary 123 Videos",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/handwashing-stations/",
+      "exactTitle": "Portable Handwashing Stations Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/mobile-sleep-trailers/",
+      "exactTitle": "Sleeper Bunk-Bed Facility Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/mobile-crew-camps/",
+      "exactTitle": "Mobile crew camps Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/refrigerated-containers/",
+      "exactTitle": "40ft Refrigerated Container Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/bunkhouse-trailers/",
+      "exactTitle": "Bunkhouse trailers Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/equipment-rental/dining-structure-rental/",
+      "exactTitle": "Dining structures Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/",
+      "exactTitle": "Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/24ft/",
+      "exactTitle": "24ft Mobile Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/26ft-bulk/",
+      "exactTitle": "26ft Bulk Mobile Kitchen Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/28ft/",
+      "exactTitle": "28ft Mobile Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/38ft/",
+      "exactTitle": "38ft Mobile Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/40ft/",
+      "exactTitle": "40ft Mobile Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/40ft-combination/",
+      "exactTitle": "40ft Combination Mobile Kitchen Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
+      "exactTitle": "40ft Bulk Combination Mobile Kitchen Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/dishwashing-trailers/22ft/",
+      "exactTitle": "22ft Dishwashing Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/dishwashing-trailers/24ft/",
+      "exactTitle": "24ft Dishwashing Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/dishwashing-trailers/26ft/",
+      "exactTitle": "26ft Dishwashing Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/dishwashing-trailers/38ft-conveyor/",
+      "exactTitle": "38ft Conveyor Dishwashing Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-trailers/22ft-10-stall/",
+      "exactTitle": "22 ft 10-Stall Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-containers/20ft-5-stall/",
+      "exactTitle": "20 ft 5-Stall Shower Container Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/13ft-3-stall/",
+      "exactTitle": "13 ft 3-Stall Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/22ft-6-stall/",
+      "exactTitle": "22 ft 6-Stall Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+      "exactTitle": "30 ft 8-Stall Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
+      "exactTitle": "ADA Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/shower-restroom-combination-trailers/8-stall-1-ada/",
+      "exactTitle": "ADA Shower and Restroom Combination Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-sleeper-trailers/20ft-shared/",
+      "exactTitle": "20ft Shared Sleeper Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-sleeper-trailers/20ft-contractor/",
+      "exactTitle": "20ft Contractor Sleeper Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/mobile-sleeper-trailers/20ft-vip/",
+      "exactTitle": "20ft VIP Sleeper Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/laundry-trailers/24ft/",
+      "exactTitle": "24ft Mobile Laundry Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/laundry-trailers/30ft/",
+      "exactTitle": "30ft Mobile Laundry Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/services/handwashing-trailers/hands-free/",
+      "exactTitle": "Hands-Free Handwashing Stations Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/north-alabama/",
+      "exactTitle": "North Alabama, Alabama Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/central-alabama/",
+      "exactTitle": "Central Alabama, Alabama Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/wiregrass/",
+      "exactTitle": "Wiregrass, Alabama Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/gulf-coast/",
+      "exactTitle": "Gulf Coast, Alabama Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southcentral/",
+      "exactTitle": "Southcentral, Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/interior/",
+      "exactTitle": "Interior, Alaska Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southeast/",
+      "exactTitle": "Southeast, Alaska Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southwest/",
+      "exactTitle": "Southwest, Alaska Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/arctic/",
+      "exactTitle": "Arctic, Alaska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/northern-arizona/",
+      "exactTitle": "Northern Arizona, Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/phoenix-area/",
+      "exactTitle": "Phoenix area, Arizona Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/southern-arizona/",
+      "exactTitle": "Southern Arizona, Arizona Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/ozarks/",
+      "exactTitle": "Ozarks, Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/arkansas-river-valley/",
+      "exactTitle": "Arkansas River Valley, Arkansas Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/delta/",
+      "exactTitle": "Delta, Arkansas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/southwest-arkansas/",
+      "exactTitle": "Southwest Arkansas, Arkansas Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/north-coast/",
+      "exactTitle": "North Coast, California Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/bay-area/",
+      "exactTitle": "Bay Area, California Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/central-valley/",
+      "exactTitle": "Central Valley, California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/los-angeles-basin/",
+      "exactTitle": "Los Angeles Basin, California Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/inland-empire/",
+      "exactTitle": "Inland Empire, California Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/san-diego/",
+      "exactTitle": "San Diego, California Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/front-range/",
+      "exactTitle": "Front Range, Colorado Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/western-slope/",
+      "exactTitle": "Western Slope, Colorado Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/eastern-plains/",
+      "exactTitle": "Eastern Plains, Colorado Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/san-luis-valley/",
+      "exactTitle": "San Luis Valley, Colorado Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/litchfield-hills/",
+      "exactTitle": "Litchfield Hills, Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/greater-hartford/",
+      "exactTitle": "Greater Hartford, Connecticut Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-river-valley/",
+      "exactTitle": "Connecticut River Valley, Connecticut Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-shoreline/",
+      "exactTitle": "Connecticut Shoreline, Connecticut Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/northern-delaware/",
+      "exactTitle": "Northern Delaware, Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/central-delaware/",
+      "exactTitle": "Central Delaware, Delaware Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/delaware-beaches/",
+      "exactTitle": "Delaware Beaches, Delaware Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/panhandle/",
+      "exactTitle": "Panhandle, Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/north-florida/",
+      "exactTitle": "North Florida, Florida Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/central-florida/",
+      "exactTitle": "Central Florida, Florida Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/south-florida/",
+      "exactTitle": "South Florida, Florida Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/florida-keys/",
+      "exactTitle": "Florida Keys, Florida Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/north-georgia/",
+      "exactTitle": "North Georgia, Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/metro-atlanta/",
+      "exactTitle": "Metro Atlanta, Georgia Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/central-georgia/",
+      "exactTitle": "Central Georgia, Georgia Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/coastal-georgia/",
+      "exactTitle": "Coastal Georgia, Georgia Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/south-georgia/",
+      "exactTitle": "South Georgia, Georgia Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/oahu/",
+      "exactTitle": "Oahu, Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/maui-county/",
+      "exactTitle": "Maui County, Hawaii Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/hawaii-island/",
+      "exactTitle": "Hawaii Island, Hawaii Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/kauai/",
+      "exactTitle": "Kauai, Hawaii Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/north-idaho/",
+      "exactTitle": "North Idaho, Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/southwest-idaho/",
+      "exactTitle": "Southwest Idaho, Idaho Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/central-mountains/",
+      "exactTitle": "Central Mountains, Idaho Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/eastern-idaho/",
+      "exactTitle": "Eastern Idaho, Idaho Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/chicago-area/",
+      "exactTitle": "Chicago area, Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/northern-illinois/",
+      "exactTitle": "Northern Illinois, Illinois Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/central-illinois/",
+      "exactTitle": "Central Illinois, Illinois Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/southern-illinois/",
+      "exactTitle": "Southern Illinois, Illinois Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/northern-indiana/",
+      "exactTitle": "Northern Indiana, Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/central-indiana/",
+      "exactTitle": "Central Indiana, Indiana Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/southern-indiana/",
+      "exactTitle": "Southern Indiana, Indiana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northwest-iowa/",
+      "exactTitle": "Northwest Iowa, Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/central-iowa/",
+      "exactTitle": "Central Iowa, Iowa Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northeast-iowa/",
+      "exactTitle": "Northeast Iowa, Iowa Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/southern-iowa/",
+      "exactTitle": "Southern Iowa, Iowa Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/western-kansas/",
+      "exactTitle": "Western Kansas, Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/north-central-kansas/",
+      "exactTitle": "North Central Kansas, Kansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/kansas-city-area/",
+      "exactTitle": "Kansas City area, Kansas Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/south-central-kansas/",
+      "exactTitle": "South Central Kansas, Kansas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/southeast-kansas/",
+      "exactTitle": "Southeast Kansas, Kansas Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/western-coalfields/",
+      "exactTitle": "Western Coalfields, Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/bluegrass-region/",
+      "exactTitle": "Bluegrass region, Kentucky Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/eastern-kentucky/",
+      "exactTitle": "Eastern Kentucky, Kentucky Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/south-central-kentucky/",
+      "exactTitle": "South Central Kentucky, Kentucky Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/north-louisiana/",
+      "exactTitle": "North Louisiana, Louisiana Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/acadiana/",
+      "exactTitle": "Acadiana, Louisiana Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/capital-region/",
+      "exactTitle": "Capital Region, Louisiana Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/greater-new-orleans/",
+      "exactTitle": "Greater New Orleans, Louisiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/river-parishes/",
+      "exactTitle": "River Parishes, Louisiana Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/aroostook-county/",
+      "exactTitle": "Aroostook County, Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/highlands/",
+      "exactTitle": "Highlands, Maine Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/western-lakes-and-mountains/",
+      "exactTitle": "Western Lakes and Mountains, Maine Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/midcoast/",
+      "exactTitle": "Midcoast, Maine Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/downeast-and-acadia/",
+      "exactTitle": "DownEast and Acadia, Maine Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/southern-coast/",
+      "exactTitle": "Southern Coast, Maine Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/western-maryland/",
+      "exactTitle": "Western Maryland, Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/capital-region/",
+      "exactTitle": "Capital Region, Maryland Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/central-maryland/",
+      "exactTitle": "Central Maryland, Maryland Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/eastern-shore/",
+      "exactTitle": "Eastern Shore, Maryland Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/southern-maryland/",
+      "exactTitle": "Southern Maryland, Maryland Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/berkshires/",
+      "exactTitle": "Berkshires, Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/central-massachusetts/",
+      "exactTitle": "Central Massachusetts, Massachusetts Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/greater-boston/",
+      "exactTitle": "Greater Boston, Massachusetts Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/north-shore/",
+      "exactTitle": "North Shore, Massachusetts Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/south-shore-and-cape-cod/",
+      "exactTitle": "South Shore and Cape Cod, Massachusetts Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/upper-peninsula/",
+      "exactTitle": "Upper Peninsula, Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/northern-lower-peninsula/",
+      "exactTitle": "Northern Lower Peninsula, Michigan Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/west-michigan/",
+      "exactTitle": "West Michigan, Michigan Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/mid-michigan/",
+      "exactTitle": "Mid Michigan, Michigan Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/southeast-michigan/",
+      "exactTitle": "Southeast Michigan, Michigan Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/northwest-minnesota/",
+      "exactTitle": "Northwest Minnesota, Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/northeast-minnesota/",
+      "exactTitle": "Northeast Minnesota, Minnesota Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/central-minnesota/",
+      "exactTitle": "Central Minnesota, Minnesota Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/twin-cities/",
+      "exactTitle": "Twin Cities, Minnesota Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/southern-minnesota/",
+      "exactTitle": "Southern Minnesota, Minnesota Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/delta/",
+      "exactTitle": "Delta, Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/hills/",
+      "exactTitle": "Hills, Mississippi Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/central-mississippi/",
+      "exactTitle": "Central Mississippi, Mississippi Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/pine-belt/",
+      "exactTitle": "Pine Belt, Mississippi Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/gulf-coast/",
+      "exactTitle": "Gulf Coast, Mississippi Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/northwest-missouri/",
+      "exactTitle": "Northwest Missouri, Missouri Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/kansas-city-area/",
+      "exactTitle": "Kansas City area, Missouri Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/central-missouri/",
+      "exactTitle": "Central Missouri, Missouri Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/ozarks/",
+      "exactTitle": "Ozarks, Missouri Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/st-louis-area/",
+      "exactTitle": "St. Louis area, Missouri Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/southeast-missouri/",
+      "exactTitle": "Southeast Missouri, Missouri Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/glacier-country/",
+      "exactTitle": "Glacier Country, Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/central-montana/",
+      "exactTitle": "Central Montana, Montana Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/yellowstone-country/",
+      "exactTitle": "Yellowstone Country, Montana Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/missouri-river-country/",
+      "exactTitle": "Missouri River Country, Montana Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/southeast-montana/",
+      "exactTitle": "Southeast Montana, Montana Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/panhandle/",
+      "exactTitle": "Panhandle, Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/sandhills/",
+      "exactTitle": "Sandhills, Nebraska Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/central-nebraska/",
+      "exactTitle": "Central Nebraska, Nebraska Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/northeast-nebraska/",
+      "exactTitle": "Northeast Nebraska, Nebraska Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/lincoln-and-omaha-corridor/",
+      "exactTitle": "Lincoln and Omaha corridor, Nebraska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/northern-nevada/",
+      "exactTitle": "Northern Nevada, Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/reno-tahoe/",
+      "exactTitle": "Reno Tahoe, Nevada Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/central-nevada/",
+      "exactTitle": "Central Nevada, Nevada Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/las-vegas-valley/",
+      "exactTitle": "Las Vegas Valley, Nevada Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/southern-nevada/",
+      "exactTitle": "Southern Nevada, Nevada Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/great-north-woods/",
+      "exactTitle": "Great North Woods, New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/white-mountains/",
+      "exactTitle": "White Mountains, New Hampshire Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/lakes-region/",
+      "exactTitle": "Lakes Region, New Hampshire Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/dartmouth-lake-sunapee/",
+      "exactTitle": "Dartmouth Lake Sunapee, New Hampshire Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/merrimack-valley/",
+      "exactTitle": "Merrimack Valley, New Hampshire Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/seacoast/",
+      "exactTitle": "Seacoast, New Hampshire Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/skylands/",
+      "exactTitle": "Skylands, New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/gateway-region/",
+      "exactTitle": "Gateway Region, New Jersey Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/central-jersey/",
+      "exactTitle": "Central Jersey, New Jersey Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/shore-region/",
+      "exactTitle": "Shore Region, New Jersey Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/delaware-river-region/",
+      "exactTitle": "Delaware River Region, New Jersey Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/southern-shore/",
+      "exactTitle": "Southern Shore, New Jersey Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/north-central-new-mexico/",
+      "exactTitle": "North Central New Mexico, New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/northeast-new-mexico/",
+      "exactTitle": "Northeast New Mexico, New Mexico Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/albuquerque-area/",
+      "exactTitle": "Albuquerque area, New Mexico Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southeast-new-mexico/",
+      "exactTitle": "Southeast New Mexico, New Mexico Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southwest-new-mexico/",
+      "exactTitle": "Southwest New Mexico, New Mexico Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/north-country/",
+      "exactTitle": "North Country, New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/capital-region/",
+      "exactTitle": "Capital Region, New York Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/central-new-york/",
+      "exactTitle": "Central New York, New York Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/finger-lakes/",
+      "exactTitle": "Finger Lakes, New York Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/western-new-york/",
+      "exactTitle": "Western New York, New York Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/hudson-valley/",
+      "exactTitle": "Hudson Valley, New York Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/new-york-city-and-long-island/",
+      "exactTitle": "New York City and Long Island, New York Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/mountains/",
+      "exactTitle": "Mountains, North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/piedmont-triad/",
+      "exactTitle": "Piedmont Triad, North Carolina Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/charlotte-region/",
+      "exactTitle": "Charlotte region, North Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/research-triangle/",
+      "exactTitle": "Research Triangle, North Carolina Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/coastal-plain/",
+      "exactTitle": "Coastal Plain, North Carolina Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/outer-banks/",
+      "exactTitle": "Outer Banks, North Carolina Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/western-north-dakota/",
+      "exactTitle": "Western North Dakota, North Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/north-central-north-dakota/",
+      "exactTitle": "North Central North Dakota, North Dakota Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/red-river-valley/",
+      "exactTitle": "Red River Valley, North Dakota Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/south-central-north-dakota/",
+      "exactTitle": "South Central North Dakota, North Dakota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northeast-ohio/",
+      "exactTitle": "Northeast Ohio, Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northwest-ohio/",
+      "exactTitle": "Northwest Ohio, Ohio Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/central-ohio/",
+      "exactTitle": "Central Ohio, Ohio Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/southwest-ohio/",
+      "exactTitle": "Southwest Ohio, Ohio Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/southeast-ohio/",
+      "exactTitle": "Southeast Ohio, Ohio Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/panhandle/",
+      "exactTitle": "Panhandle, Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/northwest-oklahoma/",
+      "exactTitle": "Northwest Oklahoma, Oklahoma Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/green-country/",
+      "exactTitle": "Green Country, Oklahoma Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/central-oklahoma/",
+      "exactTitle": "Central Oklahoma, Oklahoma Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/kiamichi-country/",
+      "exactTitle": "Kiamichi Country, Oklahoma Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/southwest-oklahoma/",
+      "exactTitle": "Southwest Oklahoma, Oklahoma Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/oregon-coast/",
+      "exactTitle": "Oregon Coast, Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/willamette-valley/",
+      "exactTitle": "Willamette Valley, Oregon Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/southern-oregon/",
+      "exactTitle": "Southern Oregon, Oregon Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/central-oregon/",
+      "exactTitle": "Central Oregon, Oregon Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/eastern-oregon/",
+      "exactTitle": "Eastern Oregon, Oregon Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/erie-region/",
+      "exactTitle": "Erie region, Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/pittsburgh-and-southwest/",
+      "exactTitle": "Pittsburgh and Southwest, Pennsylvania Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/pennsylvania-wilds/",
+      "exactTitle": "Pennsylvania Wilds, Pennsylvania Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/central-pennsylvania/",
+      "exactTitle": "Central Pennsylvania, Pennsylvania Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/northeast-pennsylvania/",
+      "exactTitle": "Northeast Pennsylvania, Pennsylvania Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/philadelphia-and-southeast/",
+      "exactTitle": "Philadelphia and Southeast, Pennsylvania Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/providence-area/",
+      "exactTitle": "Providence area, Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/blackstone-valley/",
+      "exactTitle": "Blackstone Valley, Rhode Island Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/newport-county/",
+      "exactTitle": "Newport County, Rhode Island Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/south-county/",
+      "exactTitle": "South County, Rhode Island Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/upstate/",
+      "exactTitle": "Upstate, South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/midlands/",
+      "exactTitle": "Midlands, South Carolina Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/pee-dee/",
+      "exactTitle": "Pee Dee, South Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/lowcountry/",
+      "exactTitle": "Lowcountry, South Carolina Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/black-hills-and-badlands/",
+      "exactTitle": "Black Hills and Badlands, South Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/central-south-dakota/",
+      "exactTitle": "Central South Dakota, South Dakota Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/glacial-lakes-and-prairies/",
+      "exactTitle": "Glacial Lakes and Prairies, South Dakota Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/southeast-south-dakota/",
+      "exactTitle": "Southeast South Dakota, South Dakota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/west-tennessee/",
+      "exactTitle": "West Tennessee, Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/middle-tennessee/",
+      "exactTitle": "Middle Tennessee, Tennessee Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/cumberland-plateau/",
+      "exactTitle": "Cumberland Plateau, Tennessee Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/east-tennessee/",
+      "exactTitle": "East Tennessee, Tennessee Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/panhandle/",
+      "exactTitle": "Panhandle, Texas Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/north-texas/",
+      "exactTitle": "North Texas, Texas Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/east-texas/",
+      "exactTitle": "East Texas, Texas Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/central-texas/",
+      "exactTitle": "Central Texas, Texas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/west-texas/",
+      "exactTitle": "West Texas, Texas Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/gulf-coast/",
+      "exactTitle": "Gulf Coast, Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/south-texas/",
+      "exactTitle": "South Texas, Texas Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/northern-utah/",
+      "exactTitle": "Northern Utah, Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/wasatch-front/",
+      "exactTitle": "Wasatch Front, Utah Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/central-utah/",
+      "exactTitle": "Central Utah, Utah Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/southeastern-utah/",
+      "exactTitle": "Southeastern Utah, Utah Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/southwestern-utah/",
+      "exactTitle": "Southwestern Utah, Utah Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/northeast-kingdom/",
+      "exactTitle": "Northeast Kingdom, Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/champlain-valley/",
+      "exactTitle": "Champlain Valley, Vermont Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/central-vermont/",
+      "exactTitle": "Central Vermont, Vermont Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/southern-vermont/",
+      "exactTitle": "Southern Vermont, Vermont Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/northern-virginia/",
+      "exactTitle": "Northern Virginia, Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/shenandoah-valley/",
+      "exactTitle": "Shenandoah Valley, Virginia Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/central-virginia/",
+      "exactTitle": "Central Virginia, Virginia Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/hampton-roads/",
+      "exactTitle": "Hampton Roads, Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/eastern-shore/",
+      "exactTitle": "Eastern Shore, Virginia Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/southwest-virginia/",
+      "exactTitle": "Southwest Virginia, Virginia Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/",
+      "exactTitle": "Olympic Peninsula, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/puget-sound/",
+      "exactTitle": "Puget Sound, Washington Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/north-cascades/",
+      "exactTitle": "North Cascades, Washington Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/central-washington/",
+      "exactTitle": "Central Washington, Washington Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/eastern-washington/",
+      "exactTitle": "Eastern Washington, Washington Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/southwest-washington/",
+      "exactTitle": "Southwest Washington, Washington Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/northern-panhandle/",
+      "exactTitle": "Northern Panhandle, West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/mountaineer-country/",
+      "exactTitle": "Mountaineer Country, West Virginia Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/eastern-panhandle/",
+      "exactTitle": "Eastern Panhandle, West Virginia Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/metro-valley/",
+      "exactTitle": "Metro Valley, West Virginia Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/new-river-greenbrier-valley/",
+      "exactTitle": "New River Greenbrier Valley, West Virginia Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/southern-coalfields/",
+      "exactTitle": "Southern Coalfields, West Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/northwoods/",
+      "exactTitle": "Northwoods, Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/lake-superior-region/",
+      "exactTitle": "Lake Superior region, Wisconsin Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/central-wisconsin/",
+      "exactTitle": "Central Wisconsin, Wisconsin Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/fox-valley/",
+      "exactTitle": "Fox Valley, Wisconsin Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/madison-area/",
+      "exactTitle": "Madison area, Wisconsin Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/milwaukee-and-southeast/",
+      "exactTitle": "Milwaukee and Southeast, Wisconsin Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/driftless-area/",
+      "exactTitle": "Driftless Area, Wisconsin Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/northwest-wyoming/",
+      "exactTitle": "Northwest Wyoming, Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/northeast-wyoming/",
+      "exactTitle": "Northeast Wyoming, Wyoming Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/central-wyoming/",
+      "exactTitle": "Central Wyoming, Wyoming Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southwest-wyoming/",
+      "exactTitle": "Southwest Wyoming, Wyoming Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southeast-wyoming/",
+      "exactTitle": "Southeast Wyoming, Wyoming Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/north-alabama/cities/",
+      "exactTitle": "North Alabama, Alabama Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/central-alabama/cities/",
+      "exactTitle": "Central Alabama, Alabama Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/wiregrass/cities/",
+      "exactTitle": "Wiregrass, Alabama Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/gulf-coast/cities/",
+      "exactTitle": "Gulf Coast, Alabama Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southcentral/cities/",
+      "exactTitle": "Southcentral, Alaska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/interior/cities/",
+      "exactTitle": "Interior, Alaska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southeast/cities/",
+      "exactTitle": "Southeast, Alaska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/southwest/cities/",
+      "exactTitle": "Southwest, Alaska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/arctic/cities/",
+      "exactTitle": "Arctic, Alaska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/northern-arizona/cities/",
+      "exactTitle": "Northern Arizona, Arizona Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/phoenix-area/cities/",
+      "exactTitle": "Phoenix area, Arizona Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/southern-arizona/cities/",
+      "exactTitle": "Southern Arizona, Arizona Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/ozarks/cities/",
+      "exactTitle": "Ozarks, Arkansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/arkansas-river-valley/cities/",
+      "exactTitle": "Arkansas River Valley, Arkansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/delta/cities/",
+      "exactTitle": "Delta, Arkansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/southwest-arkansas/cities/",
+      "exactTitle": "Southwest Arkansas, Arkansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/north-coast/cities/",
+      "exactTitle": "North Coast, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/bay-area/cities/",
+      "exactTitle": "Bay Area, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/central-valley/cities/",
+      "exactTitle": "Central Valley, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/los-angeles-basin/cities/",
+      "exactTitle": "Los Angeles Basin, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/inland-empire/cities/",
+      "exactTitle": "Inland Empire, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/san-diego/cities/",
+      "exactTitle": "San Diego, California Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/front-range/cities/",
+      "exactTitle": "Front Range, Colorado Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/western-slope/cities/",
+      "exactTitle": "Western Slope, Colorado Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/eastern-plains/cities/",
+      "exactTitle": "Eastern Plains, Colorado Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/san-luis-valley/cities/",
+      "exactTitle": "San Luis Valley, Colorado Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/litchfield-hills/cities/",
+      "exactTitle": "Litchfield Hills, Connecticut Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/greater-hartford/cities/",
+      "exactTitle": "Greater Hartford, Connecticut Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-river-valley/cities/",
+      "exactTitle": "Connecticut River Valley, Connecticut Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-shoreline/cities/",
+      "exactTitle": "Connecticut Shoreline, Connecticut Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/northern-delaware/cities/",
+      "exactTitle": "Northern Delaware, Delaware Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/central-delaware/cities/",
+      "exactTitle": "Central Delaware, Delaware Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/delaware-beaches/cities/",
+      "exactTitle": "Delaware Beaches, Delaware Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/panhandle/cities/",
+      "exactTitle": "Panhandle, Florida Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/north-florida/cities/",
+      "exactTitle": "North Florida, Florida Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/central-florida/cities/",
+      "exactTitle": "Central Florida, Florida Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/south-florida/cities/",
+      "exactTitle": "South Florida, Florida Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/florida-keys/cities/",
+      "exactTitle": "Florida Keys, Florida Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/north-georgia/cities/",
+      "exactTitle": "North Georgia, Georgia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/metro-atlanta/cities/",
+      "exactTitle": "Metro Atlanta, Georgia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/central-georgia/cities/",
+      "exactTitle": "Central Georgia, Georgia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/coastal-georgia/cities/",
+      "exactTitle": "Coastal Georgia, Georgia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/south-georgia/cities/",
+      "exactTitle": "South Georgia, Georgia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/oahu/cities/",
+      "exactTitle": "Oahu, Hawaii Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/maui-county/cities/",
+      "exactTitle": "Maui County, Hawaii Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/hawaii-island/cities/",
+      "exactTitle": "Hawaii Island, Hawaii Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/kauai/cities/",
+      "exactTitle": "Kauai, Hawaii Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/north-idaho/cities/",
+      "exactTitle": "North Idaho, Idaho Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/southwest-idaho/cities/",
+      "exactTitle": "Southwest Idaho, Idaho Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/central-mountains/cities/",
+      "exactTitle": "Central Mountains, Idaho Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/eastern-idaho/cities/",
+      "exactTitle": "Eastern Idaho, Idaho Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/chicago-area/cities/",
+      "exactTitle": "Chicago area, Illinois Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/northern-illinois/cities/",
+      "exactTitle": "Northern Illinois, Illinois Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/central-illinois/cities/",
+      "exactTitle": "Central Illinois, Illinois Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/southern-illinois/cities/",
+      "exactTitle": "Southern Illinois, Illinois Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/northern-indiana/cities/",
+      "exactTitle": "Northern Indiana, Indiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/central-indiana/cities/",
+      "exactTitle": "Central Indiana, Indiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/southern-indiana/cities/",
+      "exactTitle": "Southern Indiana, Indiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northwest-iowa/cities/",
+      "exactTitle": "Northwest Iowa, Iowa Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/central-iowa/cities/",
+      "exactTitle": "Central Iowa, Iowa Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northeast-iowa/cities/",
+      "exactTitle": "Northeast Iowa, Iowa Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/southern-iowa/cities/",
+      "exactTitle": "Southern Iowa, Iowa Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/western-kansas/cities/",
+      "exactTitle": "Western Kansas, Kansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/north-central-kansas/cities/",
+      "exactTitle": "North Central Kansas, Kansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/kansas-city-area/cities/",
+      "exactTitle": "Kansas City area, Kansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/south-central-kansas/cities/",
+      "exactTitle": "South Central Kansas, Kansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/southeast-kansas/cities/",
+      "exactTitle": "Southeast Kansas, Kansas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/western-coalfields/cities/",
+      "exactTitle": "Western Coalfields, Kentucky Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/bluegrass-region/cities/",
+      "exactTitle": "Bluegrass region, Kentucky Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/eastern-kentucky/cities/",
+      "exactTitle": "Eastern Kentucky, Kentucky Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/south-central-kentucky/cities/",
+      "exactTitle": "South Central Kentucky, Kentucky Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/north-louisiana/cities/",
+      "exactTitle": "North Louisiana, Louisiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/acadiana/cities/",
+      "exactTitle": "Acadiana, Louisiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/capital-region/cities/",
+      "exactTitle": "Capital Region, Louisiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/greater-new-orleans/cities/",
+      "exactTitle": "Greater New Orleans, Louisiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/river-parishes/cities/",
+      "exactTitle": "River Parishes, Louisiana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/aroostook-county/cities/",
+      "exactTitle": "Aroostook County, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/highlands/cities/",
+      "exactTitle": "Highlands, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/western-lakes-and-mountains/cities/",
+      "exactTitle": "Western Lakes and Mountains, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/midcoast/cities/",
+      "exactTitle": "Midcoast, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/downeast-and-acadia/cities/",
+      "exactTitle": "DownEast and Acadia, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/southern-coast/cities/",
+      "exactTitle": "Southern Coast, Maine Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/western-maryland/cities/",
+      "exactTitle": "Western Maryland, Maryland Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/capital-region/cities/",
+      "exactTitle": "Capital Region, Maryland Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/central-maryland/cities/",
+      "exactTitle": "Central Maryland, Maryland Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/eastern-shore/cities/",
+      "exactTitle": "Eastern Shore, Maryland Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/southern-maryland/cities/",
+      "exactTitle": "Southern Maryland, Maryland Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/berkshires/cities/",
+      "exactTitle": "Berkshires, Massachusetts Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/central-massachusetts/cities/",
+      "exactTitle": "Central Massachusetts, Massachusetts Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/greater-boston/cities/",
+      "exactTitle": "Greater Boston, Massachusetts Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/north-shore/cities/",
+      "exactTitle": "North Shore, Massachusetts Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/south-shore-and-cape-cod/cities/",
+      "exactTitle": "South Shore and Cape Cod, Massachusetts Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/upper-peninsula/cities/",
+      "exactTitle": "Upper Peninsula, Michigan Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/northern-lower-peninsula/cities/",
+      "exactTitle": "Northern Lower Peninsula, Michigan Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/west-michigan/cities/",
+      "exactTitle": "West Michigan, Michigan Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/mid-michigan/cities/",
+      "exactTitle": "Mid Michigan, Michigan Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/southeast-michigan/cities/",
+      "exactTitle": "Southeast Michigan, Michigan Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/northwest-minnesota/cities/",
+      "exactTitle": "Northwest Minnesota, Minnesota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/northeast-minnesota/cities/",
+      "exactTitle": "Northeast Minnesota, Minnesota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/central-minnesota/cities/",
+      "exactTitle": "Central Minnesota, Minnesota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/twin-cities/cities/",
+      "exactTitle": "Twin Cities, Minnesota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/southern-minnesota/cities/",
+      "exactTitle": "Southern Minnesota, Minnesota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/delta/cities/",
+      "exactTitle": "Delta, Mississippi Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/hills/cities/",
+      "exactTitle": "Hills, Mississippi Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/central-mississippi/cities/",
+      "exactTitle": "Central Mississippi, Mississippi Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/pine-belt/cities/",
+      "exactTitle": "Pine Belt, Mississippi Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/gulf-coast/cities/",
+      "exactTitle": "Gulf Coast, Mississippi Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/northwest-missouri/cities/",
+      "exactTitle": "Northwest Missouri, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/kansas-city-area/cities/",
+      "exactTitle": "Kansas City area, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/central-missouri/cities/",
+      "exactTitle": "Central Missouri, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/ozarks/cities/",
+      "exactTitle": "Ozarks, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/st-louis-area/cities/",
+      "exactTitle": "St. Louis area, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/southeast-missouri/cities/",
+      "exactTitle": "Southeast Missouri, Missouri Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/glacier-country/cities/",
+      "exactTitle": "Glacier Country, Montana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/central-montana/cities/",
+      "exactTitle": "Central Montana, Montana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/yellowstone-country/cities/",
+      "exactTitle": "Yellowstone Country, Montana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/missouri-river-country/cities/",
+      "exactTitle": "Missouri River Country, Montana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/southeast-montana/cities/",
+      "exactTitle": "Southeast Montana, Montana Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/panhandle/cities/",
+      "exactTitle": "Panhandle, Nebraska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/sandhills/cities/",
+      "exactTitle": "Sandhills, Nebraska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/central-nebraska/cities/",
+      "exactTitle": "Central Nebraska, Nebraska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/northeast-nebraska/cities/",
+      "exactTitle": "Northeast Nebraska, Nebraska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/lincoln-and-omaha-corridor/cities/",
+      "exactTitle": "Lincoln and Omaha corridor, Nebraska Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/northern-nevada/cities/",
+      "exactTitle": "Northern Nevada, Nevada Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/reno-tahoe/cities/",
+      "exactTitle": "Reno Tahoe, Nevada Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/central-nevada/cities/",
+      "exactTitle": "Central Nevada, Nevada Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/las-vegas-valley/cities/",
+      "exactTitle": "Las Vegas Valley, Nevada Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/southern-nevada/cities/",
+      "exactTitle": "Southern Nevada, Nevada Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/great-north-woods/cities/",
+      "exactTitle": "Great North Woods, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/white-mountains/cities/",
+      "exactTitle": "White Mountains, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/lakes-region/cities/",
+      "exactTitle": "Lakes Region, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/dartmouth-lake-sunapee/cities/",
+      "exactTitle": "Dartmouth Lake Sunapee, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/merrimack-valley/cities/",
+      "exactTitle": "Merrimack Valley, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/seacoast/cities/",
+      "exactTitle": "Seacoast, New Hampshire Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/skylands/cities/",
+      "exactTitle": "Skylands, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/gateway-region/cities/",
+      "exactTitle": "Gateway Region, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/central-jersey/cities/",
+      "exactTitle": "Central Jersey, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/shore-region/cities/",
+      "exactTitle": "Shore Region, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/delaware-river-region/cities/",
+      "exactTitle": "Delaware River Region, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/southern-shore/cities/",
+      "exactTitle": "Southern Shore, New Jersey Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/north-central-new-mexico/cities/",
+      "exactTitle": "North Central New Mexico, New Mexico Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/northeast-new-mexico/cities/",
+      "exactTitle": "Northeast New Mexico, New Mexico Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/albuquerque-area/cities/",
+      "exactTitle": "Albuquerque area, New Mexico Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southeast-new-mexico/cities/",
+      "exactTitle": "Southeast New Mexico, New Mexico Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southwest-new-mexico/cities/",
+      "exactTitle": "Southwest New Mexico, New Mexico Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/north-country/cities/",
+      "exactTitle": "North Country, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/capital-region/cities/",
+      "exactTitle": "Capital Region, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/central-new-york/cities/",
+      "exactTitle": "Central New York, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/finger-lakes/cities/",
+      "exactTitle": "Finger Lakes, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/western-new-york/cities/",
+      "exactTitle": "Western New York, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/hudson-valley/cities/",
+      "exactTitle": "Hudson Valley, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/new-york-city-and-long-island/cities/",
+      "exactTitle": "New York City and Long Island, New York Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/mountains/cities/",
+      "exactTitle": "Mountains, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/piedmont-triad/cities/",
+      "exactTitle": "Piedmont Triad, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/charlotte-region/cities/",
+      "exactTitle": "Charlotte region, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/research-triangle/cities/",
+      "exactTitle": "Research Triangle, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/coastal-plain/cities/",
+      "exactTitle": "Coastal Plain, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/outer-banks/cities/",
+      "exactTitle": "Outer Banks, North Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/western-north-dakota/cities/",
+      "exactTitle": "Western North Dakota, North Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/north-central-north-dakota/cities/",
+      "exactTitle": "North Central North Dakota, North Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/red-river-valley/cities/",
+      "exactTitle": "Red River Valley, North Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/south-central-north-dakota/cities/",
+      "exactTitle": "South Central North Dakota, North Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northeast-ohio/cities/",
+      "exactTitle": "Northeast Ohio, Ohio Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northwest-ohio/cities/",
+      "exactTitle": "Northwest Ohio, Ohio Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/central-ohio/cities/",
+      "exactTitle": "Central Ohio, Ohio Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/southwest-ohio/cities/",
+      "exactTitle": "Southwest Ohio, Ohio Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/southeast-ohio/cities/",
+      "exactTitle": "Southeast Ohio, Ohio Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/panhandle/cities/",
+      "exactTitle": "Panhandle, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/northwest-oklahoma/cities/",
+      "exactTitle": "Northwest Oklahoma, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/green-country/cities/",
+      "exactTitle": "Green Country, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/central-oklahoma/cities/",
+      "exactTitle": "Central Oklahoma, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/kiamichi-country/cities/",
+      "exactTitle": "Kiamichi Country, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/southwest-oklahoma/cities/",
+      "exactTitle": "Southwest Oklahoma, Oklahoma Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/oregon-coast/cities/",
+      "exactTitle": "Oregon Coast, Oregon Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/willamette-valley/cities/",
+      "exactTitle": "Willamette Valley, Oregon Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/southern-oregon/cities/",
+      "exactTitle": "Southern Oregon, Oregon Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/central-oregon/cities/",
+      "exactTitle": "Central Oregon, Oregon Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/eastern-oregon/cities/",
+      "exactTitle": "Eastern Oregon, Oregon Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/erie-region/cities/",
+      "exactTitle": "Erie region, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/pittsburgh-and-southwest/cities/",
+      "exactTitle": "Pittsburgh and Southwest, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/pennsylvania-wilds/cities/",
+      "exactTitle": "Pennsylvania Wilds, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/central-pennsylvania/cities/",
+      "exactTitle": "Central Pennsylvania, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/northeast-pennsylvania/cities/",
+      "exactTitle": "Northeast Pennsylvania, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/philadelphia-and-southeast/cities/",
+      "exactTitle": "Philadelphia and Southeast, Pennsylvania Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/providence-area/cities/",
+      "exactTitle": "Providence area, Rhode Island Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/blackstone-valley/cities/",
+      "exactTitle": "Blackstone Valley, Rhode Island Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/newport-county/cities/",
+      "exactTitle": "Newport County, Rhode Island Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/south-county/cities/",
+      "exactTitle": "South County, Rhode Island Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/upstate/cities/",
+      "exactTitle": "Upstate, South Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/midlands/cities/",
+      "exactTitle": "Midlands, South Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/pee-dee/cities/",
+      "exactTitle": "Pee Dee, South Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/lowcountry/cities/",
+      "exactTitle": "Lowcountry, South Carolina Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/black-hills-and-badlands/cities/",
+      "exactTitle": "Black Hills and Badlands, South Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/central-south-dakota/cities/",
+      "exactTitle": "Central South Dakota, South Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/glacial-lakes-and-prairies/cities/",
+      "exactTitle": "Glacial Lakes and Prairies, South Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/southeast-south-dakota/cities/",
+      "exactTitle": "Southeast South Dakota, South Dakota Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/west-tennessee/cities/",
+      "exactTitle": "West Tennessee, Tennessee Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/middle-tennessee/cities/",
+      "exactTitle": "Middle Tennessee, Tennessee Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/cumberland-plateau/cities/",
+      "exactTitle": "Cumberland Plateau, Tennessee Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/east-tennessee/cities/",
+      "exactTitle": "East Tennessee, Tennessee Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/panhandle/cities/",
+      "exactTitle": "Panhandle, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/north-texas/cities/",
+      "exactTitle": "North Texas, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/east-texas/cities/",
+      "exactTitle": "East Texas, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/central-texas/cities/",
+      "exactTitle": "Central Texas, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/west-texas/cities/",
+      "exactTitle": "West Texas, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/gulf-coast/cities/",
+      "exactTitle": "Gulf Coast, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/south-texas/cities/",
+      "exactTitle": "South Texas, Texas Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/northern-utah/cities/",
+      "exactTitle": "Northern Utah, Utah Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/wasatch-front/cities/",
+      "exactTitle": "Wasatch Front, Utah Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/central-utah/cities/",
+      "exactTitle": "Central Utah, Utah Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/southeastern-utah/cities/",
+      "exactTitle": "Southeastern Utah, Utah Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/southwestern-utah/cities/",
+      "exactTitle": "Southwestern Utah, Utah Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/northeast-kingdom/cities/",
+      "exactTitle": "Northeast Kingdom, Vermont Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/champlain-valley/cities/",
+      "exactTitle": "Champlain Valley, Vermont Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/central-vermont/cities/",
+      "exactTitle": "Central Vermont, Vermont Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/southern-vermont/cities/",
+      "exactTitle": "Southern Vermont, Vermont Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/northern-virginia/cities/",
+      "exactTitle": "Northern Virginia, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/shenandoah-valley/cities/",
+      "exactTitle": "Shenandoah Valley, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/central-virginia/cities/",
+      "exactTitle": "Central Virginia, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/hampton-roads/cities/",
+      "exactTitle": "Hampton Roads, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/eastern-shore/cities/",
+      "exactTitle": "Eastern Shore, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/southwest-virginia/cities/",
+      "exactTitle": "Southwest Virginia, Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/cities/",
+      "exactTitle": "Olympic Peninsula, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/puget-sound/cities/",
+      "exactTitle": "Puget Sound, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/north-cascades/cities/",
+      "exactTitle": "North Cascades, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/central-washington/cities/",
+      "exactTitle": "Central Washington, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/eastern-washington/cities/",
+      "exactTitle": "Eastern Washington, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/southwest-washington/cities/",
+      "exactTitle": "Southwest Washington, Washington Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/northern-panhandle/cities/",
+      "exactTitle": "Northern Panhandle, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/mountaineer-country/cities/",
+      "exactTitle": "Mountaineer Country, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/eastern-panhandle/cities/",
+      "exactTitle": "Eastern Panhandle, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/metro-valley/cities/",
+      "exactTitle": "Metro Valley, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/new-river-greenbrier-valley/cities/",
+      "exactTitle": "New River Greenbrier Valley, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/southern-coalfields/cities/",
+      "exactTitle": "Southern Coalfields, West Virginia Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/northwoods/cities/",
+      "exactTitle": "Northwoods, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/lake-superior-region/cities/",
+      "exactTitle": "Lake Superior region, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/central-wisconsin/cities/",
+      "exactTitle": "Central Wisconsin, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/fox-valley/cities/",
+      "exactTitle": "Fox Valley, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/madison-area/cities/",
+      "exactTitle": "Madison area, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/milwaukee-and-southeast/cities/",
+      "exactTitle": "Milwaukee and Southeast, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/driftless-area/cities/",
+      "exactTitle": "Driftless Area, Wisconsin Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/northwest-wyoming/cities/",
+      "exactTitle": "Northwest Wyoming, Wyoming Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/northeast-wyoming/cities/",
+      "exactTitle": "Northeast Wyoming, Wyoming Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/central-wyoming/cities/",
+      "exactTitle": "Central Wyoming, Wyoming Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southwest-wyoming/cities/",
+      "exactTitle": "Southwest Wyoming, Wyoming Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southeast-wyoming/cities/",
+      "exactTitle": "Southeast Wyoming, Wyoming Facility Rental Locations",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "exactTitle": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/sequim/",
+      "exactTitle": "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/puget-sound/olympia/",
+      "exactTitle": "Olympia, Washington Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/puget-sound/seattle/",
+      "exactTitle": "Seattle, Washington Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/puget-sound/tacoma/",
+      "exactTitle": "Tacoma, Washington Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alabama/",
+      "exactTitle": "Alabama Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/alaska/",
+      "exactTitle": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arizona/",
+      "exactTitle": "Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/",
+      "exactTitle": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/",
+      "exactTitle": "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/colorado/",
+      "exactTitle": "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/",
+      "exactTitle": "Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/delaware/",
+      "exactTitle": "Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/",
+      "exactTitle": "Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/",
+      "exactTitle": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/hawaii/",
+      "exactTitle": "Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/",
+      "exactTitle": "Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/illinois/",
+      "exactTitle": "Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/indiana/",
+      "exactTitle": "Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/",
+      "exactTitle": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/",
+      "exactTitle": "Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kentucky/",
+      "exactTitle": "Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/louisiana/",
+      "exactTitle": "Louisiana Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/",
+      "exactTitle": "Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/",
+      "exactTitle": "Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/",
+      "exactTitle": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/",
+      "exactTitle": "Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/",
+      "exactTitle": "Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/",
+      "exactTitle": "Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/missouri/",
+      "exactTitle": "Missouri Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/",
+      "exactTitle": "Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/",
+      "exactTitle": "Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/",
+      "exactTitle": "Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/",
+      "exactTitle": "New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/",
+      "exactTitle": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/",
+      "exactTitle": "New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/",
+      "exactTitle": "New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/",
+      "exactTitle": "North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-dakota/",
+      "exactTitle": "North Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/",
+      "exactTitle": "Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/",
+      "exactTitle": "Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/",
+      "exactTitle": "Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/pennsylvania/",
+      "exactTitle": "Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/rhode-island/",
+      "exactTitle": "Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/",
+      "exactTitle": "South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-dakota/",
+      "exactTitle": "South Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/",
+      "exactTitle": "Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/",
+      "exactTitle": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/",
+      "exactTitle": "Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/",
+      "exactTitle": "Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/",
+      "exactTitle": "Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/",
+      "exactTitle": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/",
+      "exactTitle": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wisconsin/",
+      "exactTitle": "Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/",
+      "exactTitle": "Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Alabama",
+      "exactTitle": "Alabama Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Alabama",
+      "exactTitle": "Alabama Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Alaska",
+      "exactTitle": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Alaska",
+      "exactTitle": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Arizona",
+      "exactTitle": "Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Arizona",
+      "exactTitle": "Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Arkansas",
+      "exactTitle": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Arkansas",
+      "exactTitle": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "California",
+      "exactTitle": "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "California",
+      "exactTitle": "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Colorado",
+      "exactTitle": "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Colorado",
+      "exactTitle": "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Connecticut",
+      "exactTitle": "Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Connecticut",
+      "exactTitle": "Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Delaware",
+      "exactTitle": "Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Delaware",
+      "exactTitle": "Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Florida",
+      "exactTitle": "Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Florida",
+      "exactTitle": "Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Georgia",
+      "exactTitle": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Georgia",
+      "exactTitle": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Hawaii",
+      "exactTitle": "Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Hawaii",
+      "exactTitle": "Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Idaho",
+      "exactTitle": "Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Idaho",
+      "exactTitle": "Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Illinois",
+      "exactTitle": "Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Illinois",
+      "exactTitle": "Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Indiana",
+      "exactTitle": "Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Indiana",
+      "exactTitle": "Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Iowa",
+      "exactTitle": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Iowa",
+      "exactTitle": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Kansas",
+      "exactTitle": "Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Kansas",
+      "exactTitle": "Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Kentucky",
+      "exactTitle": "Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Kentucky",
+      "exactTitle": "Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Louisiana",
+      "exactTitle": "Louisiana Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Louisiana",
+      "exactTitle": "Louisiana Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Maine",
+      "exactTitle": "Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Maine",
+      "exactTitle": "Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Maryland",
+      "exactTitle": "Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Maryland",
+      "exactTitle": "Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Massachusetts",
+      "exactTitle": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Massachusetts",
+      "exactTitle": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Michigan",
+      "exactTitle": "Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Michigan",
+      "exactTitle": "Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Minnesota",
+      "exactTitle": "Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Minnesota",
+      "exactTitle": "Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Mississippi",
+      "exactTitle": "Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Mississippi",
+      "exactTitle": "Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Missouri",
+      "exactTitle": "Missouri Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Missouri",
+      "exactTitle": "Missouri Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Montana",
+      "exactTitle": "Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Montana",
+      "exactTitle": "Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Nebraska",
+      "exactTitle": "Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Nebraska",
+      "exactTitle": "Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Nevada",
+      "exactTitle": "Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Nevada",
+      "exactTitle": "Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New Hampshire",
+      "exactTitle": "New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New Hampshire",
+      "exactTitle": "New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New Jersey",
+      "exactTitle": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New Jersey",
+      "exactTitle": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New Mexico",
+      "exactTitle": "New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New Mexico",
+      "exactTitle": "New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New York",
+      "exactTitle": "New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New York",
+      "exactTitle": "New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "North Carolina",
+      "exactTitle": "North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "North Carolina",
+      "exactTitle": "North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "North Dakota",
+      "exactTitle": "North Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "North Dakota",
+      "exactTitle": "North Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Ohio",
+      "exactTitle": "Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Ohio",
+      "exactTitle": "Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Oklahoma",
+      "exactTitle": "Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Oklahoma",
+      "exactTitle": "Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Oregon",
+      "exactTitle": "Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Oregon",
+      "exactTitle": "Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Pennsylvania",
+      "exactTitle": "Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Pennsylvania",
+      "exactTitle": "Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Rhode Island",
+      "exactTitle": "Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Rhode Island",
+      "exactTitle": "Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "South Carolina",
+      "exactTitle": "South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "South Carolina",
+      "exactTitle": "South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "South Dakota",
+      "exactTitle": "South Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "South Dakota",
+      "exactTitle": "South Dakota Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Tennessee",
+      "exactTitle": "Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Tennessee",
+      "exactTitle": "Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Texas",
+      "exactTitle": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Texas",
+      "exactTitle": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Utah",
+      "exactTitle": "Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Utah",
+      "exactTitle": "Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Vermont",
+      "exactTitle": "Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Vermont",
+      "exactTitle": "Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Virginia",
+      "exactTitle": "Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Virginia",
+      "exactTitle": "Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Washington",
+      "exactTitle": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Washington",
+      "exactTitle": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "West Virginia",
+      "exactTitle": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "West Virginia",
+      "exactTitle": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Wisconsin",
+      "exactTitle": "Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Wisconsin",
+      "exactTitle": "Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Wyoming",
+      "exactTitle": "Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Wyoming",
+      "exactTitle": "Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "changed": false,
+      "newFiles": []
+    }
+  ]
+}

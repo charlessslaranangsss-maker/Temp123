@@ -7,10 +7,18 @@ type Options = {
   media: Record<string, { local?: string }>;
   unresolved: Set<string>;
   dimensions?: Record<string, { width: number; height: number }>;
+  removeLeadParagraph?: boolean;
+  replacedLead?: string;
 };
 
 export function renderSourceContent(html: string, options: Options) {
   const $ = load(html, undefined, false);
+  if (options.removeLeadParagraph) {
+    // Site renders the aligned H1 lead. Preserve navigation, images and archives.
+    const normalizeLead = (s: string) => s.replace(/\s+/g, ' ').trim();
+    const first = $("p").filter((_, el) => Boolean(options.replacedLead) && normalizeLead($(el).text()) === normalizeLead(options.replacedLead || '') && !$(el).find("img").length).first();
+    if (first.length) first.remove();
+  }
   // These headings introduce repeated global navigation, not page-specific copy.
   // Preserve subsequent peer sections and keep the original archive untouched.
   $("h2,h3,h4,h5,h6").each((_, el) => {

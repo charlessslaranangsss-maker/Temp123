@@ -1,3 +1,4 @@
+import { alignedLocationIntro } from "./alignedIntroductions";
 import site from "../site.json" with { type: "json" };
 import { stateGuides } from "./stateGuides";
 import { statePath } from "./statePaths";
@@ -6,8 +7,7 @@ import { serviceCategories } from "./serviceMenu";
 import { stateRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
 import { citiesForRegion } from "./cityDirectory";
-import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { locationCarouselImages } from "./locationCarouselImages";
+import { LocationImageCarousel } from "./LocationImageCarousel";
 
 export const statePageByPath = Object.fromEntries(
   Object.keys(stateGuides).map((name) => [statePath(name), name]),
@@ -15,7 +15,6 @@ export const statePageByPath = Object.fromEntries(
 export function StateDetail({ name }: { name: string }) {
   const guide = stateGuides[name];
   const headline = stateRentalHeadline(name);
-  const carouselImages = locationCarouselImages(name, headline);
   const regions = regionPages.filter((region) => region.state === name);
   const priority = [
     "Mobile Kitchens",
@@ -47,18 +46,14 @@ export function StateDetail({ name }: { name: string }) {
             </nav>
             <p className="eyebrow">STATE RENTAL GUIDE</p>
             <h1>{headline}</h1>
-            <p className="region-intro">{guide.intro}</p>
+            <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, name)}</p>
             <p className="region-emergency">Emergency 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call the rental team {site.phoneDisplay}
             </a>
           </div>
           <div className="region-hero-visual region-hero-carousel">
-            <ServiceHeroCarousel
-              images={carouselImages}
-              label={`${name} temporary facility rental equipment`}
-              caption={`Verified equipment references for commercial and institutional rental planning in ${name}. Confirm the available unit and configuration before booking.`}
-            />
+            <LocationImageCarousel headline={headline} />
           </div>
         </div>
       </section>

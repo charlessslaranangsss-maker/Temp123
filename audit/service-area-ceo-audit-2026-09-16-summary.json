@@ -1,0 +1,147 @@
+{
+  "completedAt": "2026-09-16T06:43:54.917Z",
+  "scope": "All registered Service Areas routes and 50 states in two modal presentations; fresh local build plus public Vercel preview",
+  "pages": 548,
+  "photoPages": 150,
+  "missingPhotoPages": 73,
+  "titleDecisionPages": 325,
+  "wrongImageOrTechnicalFailures": 0,
+  "liveHttp200": 548,
+  "liveNoindex": 548,
+  "liveCanonicals": 0,
+  "uniqueDisplayedImages": 17,
+  "liveAssets": 51,
+  "liveAssetFailures": 0,
+  "states": 50,
+  "statesWithPhotos": 23,
+  "statesMissingPhotos": 13,
+  "statesNeedingTitleDecisions": 14,
+  "browserModals": 100,
+  "browserModalFailures": 0,
+  "browserPageVisits": 22,
+  "browserPageFailures": 0,
+  "browserChecks": [
+    {
+      "name": "switch states while already open; close and reopen resets",
+      "status": "PASS"
+    },
+    {
+      "name": "live lightbox complete image, controls and focus at 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "live lightbox complete image, controls and focus at 390",
+      "status": "PASS"
+    },
+    {
+      "name": "production 5.5-second autoplay, interaction pause and reduced motion",
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "failedAssets": [],
+  "unexpectedWrites": [],
+  "canonicalProbes": [
+    {
+      "route": "/service-areas/",
+      "status": 404,
+      "title": "\n\t\t\tPage not found - Temporary 123\t\t",
+      "h1": "The page can’t be found.",
+      "checkedAt": "2026-09-16T06:43:50.221Z"
+    },
+    {
+      "route": "/service-areas/alabama/",
+      "status": 301,
+      "title": "",
+      "h1": "",
+      "checkedAt": "2026-09-16T06:43:51.066Z"
+    },
+    {
+      "route": "/service-areas/california/",
+      "status": 301,
+      "title": "",
+      "h1": "",
+      "checkedAt": "2026-09-16T06:43:52.100Z"
+    },
+    {
+      "route": "/service-areas/texas/",
+      "status": 301,
+      "title": "",
+      "h1": "",
+      "checkedAt": "2026-09-16T06:43:53.326Z"
+    },
+    {
+      "route": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "status": 404,
+      "title": "\n\t\t\tPage not found - Temporary 123\t\t",
+      "h1": "The page can’t be found.",
+      "checkedAt": "2026-09-16T06:43:53.682Z"
+    },
+    {
+      "route": "/service-areas/washington/puget-sound/tacoma/",
+      "status": 404,
+      "title": "\n\t\t\tPage not found - Temporary 123\t\t",
+      "h1": "The page can’t be found.",
+      "checkedAt": "2026-09-16T06:43:54.141Z"
+    }
+  ],
+  "sourceDriftSinceSnapshot": [],
+  "familySummary": [
+    {
+      "family": "unspecified",
+      "pages": 289,
+      "states": 7,
+      "photos": 0
+    },
+    {
+      "family": "shower-trailer",
+      "pages": 40,
+      "states": 6,
+      "photos": 40
+    },
+    {
+      "family": "laundry-unspecified",
+      "pages": 36,
+      "states": 7,
+      "photos": 0
+    },
+    {
+      "family": "kitchen-modular",
+      "pages": 38,
+      "states": 8,
+      "photos": 0
+    },
+    {
+      "family": "ada-combination",
+      "pages": 35,
+      "states": 5,
+      "photos": 0
+    },
+    {
+      "family": "mobile-kitchen",
+      "pages": 38,
+      "states": 7,
+      "photos": 38
+    },
+    {
+      "family": "sleeper-trailer",
+      "pages": 39,
+      "states": 7,
+      "photos": 39
+    },
+    {
+      "family": "shower-restroom-combination",
+      "pages": 33,
+      "states": 3,
+      "photos": 33
+    }
+  ],
+  "missingTitleBreakdown": {
+    "cityDirectories": 246,
+    "hub": 1,
+    "manCamp": 42,
+    "laundry": 36
+  },
+  "deploymentPerformedByThisAudit": false,
+  "siteSourceEditedByThisAudit": false
+}

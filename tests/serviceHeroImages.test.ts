@@ -70,7 +70,7 @@ describe("service hero image ordering", () => {
   it("uses setting-specific alt text only for visually verified commercial settings", () => {
     const refrigeratedFleet = serviceHeroImages[
       "/20ft-refrigeration-trailers/"
-    ].find(({ sourceUrl }) => sourceUrl.includes("1TVc3g0"));
+    ].find(({ reviewId }) => reviewId === "19.04");
     const warehouseViews = serviceHeroImages[
       "/services/shower-restroom-combination-trailers/22ft-6-stall/"
     ].filter(({ sourceUrl }) =>
@@ -85,14 +85,24 @@ describe("service hero image ordering", () => {
   });
 
   it("keeps each sleeper variant matched to its page identity", () => {
-    const shared = serviceHeroImages["/services/mobile-sleeper-trailers/20ft-shared/"];
-    const contractor = serviceHeroImages["/services/mobile-sleeper-trailers/20ft-contractor/"];
-    const vip = serviceHeroImages["/services/mobile-sleeper-trailers/20ft-vip/"];
-    const containerized = serviceHeroImages["/remote-containerized-military-berthing-solution-for-rent/"];
+    const shared =
+      serviceHeroImages["/services/mobile-sleeper-trailers/20ft-shared/"];
+    const contractor =
+      serviceHeroImages["/services/mobile-sleeper-trailers/20ft-contractor/"];
+    const vip =
+      serviceHeroImages["/services/mobile-sleeper-trailers/20ft-vip/"];
+    const containerized =
+      serviceHeroImages[
+        "/remote-containerized-military-berthing-solution-for-rent/"
+      ];
 
     expect(shared.length).toBeGreaterThan(1);
-    shared.forEach(({ alt }) => expect(alt.toLowerCase()).toMatch(/sleeper|bunk-bed/));
-    contractor.forEach(({ alt }) => expect(alt.toLowerCase()).toContain("contractor"));
+    shared.forEach(({ alt }) =>
+      expect(alt.toLowerCase()).toMatch(/sleeper|bunk-bed/),
+    );
+    contractor.forEach(({ alt }) =>
+      expect(alt.toLowerCase()).toContain("contractor"),
+    );
     expect(vip).toHaveLength(1);
     expect(vip[0].alt.toLowerCase()).toMatch(/vip|private/);
     expect(vip[0].alt.toLowerCase()).not.toMatch(/shared|contractor|bunk/);

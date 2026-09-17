@@ -1,21 +1,15 @@
+import { catalogPhotoCoverage } from "./catalogImageCoverage";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { alignedPageIntro } from "./alignedIntroductions";
 import catalog from "../content/equipment-catalog.json" with { type: "json" };
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
 export type CatalogItem = (typeof catalog.items)[number];
 
 function CatalogImage({ item }: { item: CatalogItem }) {
-  return (
-    <img
-      src={item.large}
-      srcSet={`${item.small} ${item.smallWidth}w${item.largeWidth > item.smallWidth ? `, ${item.large} ${item.largeWidth}w` : ""}`}
-      sizes="(max-width: 600px) calc(100vw - 36px), (max-width: 1023px) 45vw, 420px"
-      width={item.width}
-      height={item.height}
-      alt={`${item.name}: ${item.kind === "plan" ? "source equipment layout" : "source equipment view"}`}
-      loading="lazy"
-      decoding="async"
-    />
-  );
+  const photo = catalogPhotoCoverage(item), image = photo.images[0];
+  if (!image) return <div className="verified-photo-pending" data-catalog-photo-pending><strong>Verified photography coming soon</strong><p>{photo.caption}</p></div>;
+  return <img src={image.src} srcSet={image.srcSet} sizes="(max-width: 700px) calc(100vw - 40px), 480px" width={image.width} height={image.height} alt={image.alt} loading="lazy" decoding="async" />;
 }
 
 export function EquipmentCatalog() {
@@ -83,15 +77,15 @@ export function EquipmentCatalog() {
                   data-search={`${item.name} ${item.summary}`}
                 >
                   <a
-                    className={`catalog-media ${item.kind === "plan" ? "is-plan" : ""} ${item.width < 600 ? "small-original" : ""}`}
-                    href={item.image}
+                    className="catalog-media"
+                    href={catalogPhotoCoverage(item).images[0]?.fullSrc || item.path}
                     target="_blank"
                     rel="noopener"
-                    aria-label={`Open ${item.name} ${item.kind === "plan" ? "layout" : "image"} at original size`}
+                    aria-label={"View " + item.name + " reference or equipment details"}
                   >
                     <CatalogImage item={item} />
                     <span>
-                      {item.kind === "plan" ? "View layout" : "View image"} ↗
+                      {catalogPhotoCoverage(item).status === "held" ? "View equipment" : catalogPhotoCoverage(item).status === "reviewed-layout" ? "View layout" : "View image"} ↗
                     </span>
                   </a>
                   <div className="catalog-card-copy">
@@ -133,6 +127,7 @@ export function EquipmentCatalog() {
 }
 
 export function EquipmentBrief({ item }: { item: CatalogItem }) {
+  const photo = catalogPhotoCoverage(item);
   const related = catalog.items
     .filter(
       (candidate) => candidate.group === item.group && candidate.id !== item.id,
@@ -149,23 +144,15 @@ export function EquipmentBrief({ item }: { item: CatalogItem }) {
         <div>
           <span className="eyebrow">TEMPORARY123 EQUIPMENT</span>
           <h1>{rentalProductHeadline(item.name)}</h1>
-          <p>{item.summary}</p>
+          <p data-h1-intro>{alignedPageIntro(item.path, item.name, item.summary)}</p>
           <a className="button" href={`tel:${site.phoneE164}`}>
             Call {site.phoneDisplay}
             <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <figure
-          className={`brief-image ${item.kind === "plan" ? "is-plan" : ""}`}
-        >
-          <CatalogImage item={item} />
-          <figcaption>
-            Equipment and layouts vary by project.{" "}
-            <a href={item.image} target="_blank" rel="noopener">
-              Open source image ↗
-            </a>
-          </figcaption>
-        </figure>
+        <div className="brief-image" data-catalog-gallery={item.id}>
+          {photo.images.length ? <ServiceHeroCarousel images={photo.images} label={item.name} lightboxLabel={item.name} caption={photo.caption} /> : <div className="verified-photo-pending" data-catalog-photo-pending><strong>Verified photography coming soon</strong><p>{photo.caption}</p></div>}
+        </div>
       </div>
       <div className="brief-planning">
         <div>

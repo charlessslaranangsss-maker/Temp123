@@ -1,6 +1,7 @@
 import { cert, getApps, initializeApp } from "firebase-admin/app";
 import { getDatabase } from "firebase-admin/database";
 import { getAppCheck } from "firebase-admin/app-check";
+import { getFirestore } from "firebase-admin/firestore";
 export function required(name: string) {
   const v = process.env[name];
   if (!v) throw new Error(`Missing server setting: ${name}`);
@@ -32,5 +33,9 @@ export function firebase() {
       },
       "temporary123-server",
     );
-  return { db: getDatabase(app), appCheck: getAppCheck(app) };
+  return {
+    db: getDatabase(app),
+    firestore: getFirestore(app),
+    appCheck: getAppCheck(app),
+  };
 }

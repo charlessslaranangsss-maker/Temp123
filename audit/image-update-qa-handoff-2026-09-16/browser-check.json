@@ -1,0 +1,916 @@
+{
+  "startedAt": "2026-09-16T08:43:57.982Z",
+  "environment": "Local frozen build; not live QA",
+  "base": "http://127.0.0.1:4201",
+  "build": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\owner-image-rollout-20260916\\dist",
+  "manifestSha256": "b2dd5c5c6b5bd2d6194421d9d583a8bdddeac914a512d80eda8dc72331fdcd57",
+  "modals": [
+    {
+      "state": "Alabama",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Alaska",
+      "kind": "service-area-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Arizona",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Arkansas",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "California",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Colorado",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Connecticut",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Delaware",
+      "kind": "service-area-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Florida",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Georgia",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Hawaii",
+      "kind": "service-area-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Idaho",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Illinois",
+      "kind": "service-area-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Indiana",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Iowa",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Kansas",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Kentucky",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Louisiana",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Maine",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Maryland",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Massachusetts",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Michigan",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Minnesota",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Mississippi",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Missouri",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Montana",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Nebraska",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Nevada",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Hampshire",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Jersey",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Mexico",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New York",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "North Carolina",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "North Dakota",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Ohio",
+      "kind": "service-area-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Oklahoma",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Oregon",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Pennsylvania",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Rhode Island",
+      "kind": "service-area-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "South Carolina",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "South Dakota",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Tennessee",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Texas",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Utah",
+      "kind": "service-area-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Vermont",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Virginia",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Washington",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "West Virginia",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Wisconsin",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Wyoming",
+      "kind": "service-area-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Alabama",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Alaska",
+      "kind": "homepage-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Arizona",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Arkansas",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "California",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Colorado",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Connecticut",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Delaware",
+      "kind": "homepage-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Florida",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Georgia",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Hawaii",
+      "kind": "homepage-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Idaho",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Illinois",
+      "kind": "homepage-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Indiana",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Iowa",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Kansas",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Kentucky",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Louisiana",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Maine",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Maryland",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Massachusetts",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Michigan",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Minnesota",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Mississippi",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Missouri",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Montana",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Nebraska",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Nevada",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Hampshire",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Jersey",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New Mexico",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "New York",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "North Carolina",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "North Dakota",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Ohio",
+      "kind": "homepage-modal",
+      "groups": [
+        "april-two-stall-sleeper"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Oklahoma",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Oregon",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Pennsylvania",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-10"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Rhode Island",
+      "kind": "homepage-modal",
+      "groups": [
+        "client-labelled-ada-reference"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "South Carolina",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "South Dakota",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Tennessee",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Texas",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Utah",
+      "kind": "homepage-modal",
+      "groups": [],
+      "status": "PASS"
+    },
+    {
+      "state": "Vermont",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Virginia",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-12"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Washington",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "West Virginia",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-22",
+        "model-12",
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Wisconsin",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-21"
+      ],
+      "status": "PASS"
+    },
+    {
+      "state": "Wyoming",
+      "kind": "homepage-modal",
+      "groups": [
+        "model-08",
+        "model-06"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/service-areas/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/texas/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/iowa/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/alaska/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/arkansas/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/20ft-refrigeration-trailers/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/equipment-rental/refrigeration/",
+      "width": 1440,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/texas/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/iowa/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/alaska/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/arkansas/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/20ft-refrigeration-trailers/",
+      "width": 390,
+      "status": "PASS"
+    },
+    {
+      "route": "/equipment-rental/refrigeration/",
+      "width": 390,
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "name": "All 100 modals: exact headings, isolated groups, slide reset, initial decode, next controls, unique carousel IDs and cleanup",
+      "status": "PASS"
+    },
+    {
+      "name": "Representative dedicated pages at 1440 and 390px: no horizontal overflow, correct full-image lightbox and Escape",
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "networkErrors": [],
+  "unexpectedWrites": [],
+  "completedAt": "2026-09-16T08:44:53.919Z",
+  "status": "PASS"
+}

@@ -1,5 +1,6 @@
 import { equipmentSet } from "./equipmentPhotos";
 import { buildStateSeasonalDemand } from "./seasonalDemand";
+import { stateRentalOption } from "./rentalHeadlines";
 
 // Editorial planning prompts, not claims of local inventory, delivery times,
 // permitting approval or completed projects. Service labels live in serviceMenu.
@@ -115,7 +116,7 @@ const stateGuideDetails: Record<
     question: "Who will review the placement plan before delivery is booked?",
   },
   Kentucky: {
-    focus: "Follow the food service route",
+    focus: "Plan laundry collection and washing routes",
     intro:
       "For a Kentucky renovation or event, work backward from the serving point to preparation, storage and washing. This makes it easier to identify whether a standalone kitchen or coordinated supporting facilities suit the operation.",
     question:
@@ -163,7 +164,7 @@ const stateGuideDetails: Record<
       "Will the facility operate continuously or be unused for part of the rental?",
   },
   Mississippi: {
-    focus: "Connect food service and welfare",
+    focus: "Plan sleeping space and supporting facilities",
     intro:
       "For a Mississippi field project, plan kitchen service, handwashing and restroom access together. Show where crews gather and how service vehicles will reach the facilities without cutting across the main pedestrian route.",
     question:
@@ -184,7 +185,7 @@ const stateGuideDetails: Record<
       "How often can supply and servicing vehicles realistically reach the site?",
   },
   Nebraska: {
-    focus: "Separate meals from deliveries",
+    focus: "Plan bunk-bed occupancy and site access",
     intro:
       "For a Nebraska agricultural or construction project, show how supply vehicles and staff will use the site during meal periods. A clear unloading point and sufficient storage help the team plan food service around the daily workflow.",
     question:
@@ -355,6 +356,57 @@ const stateGuideDetails: Record<
 
 const firstSentence = (copy: string) =>
   copy.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || copy;
+
+// The state H1 is the source of truth for the lead and planning question.
+// Legacy state notes sometimes describe a different equipment family; only
+// retain their location-specific sentence when it does not name equipment.
+const equipmentWords =
+  /\b(kitchens?|cook(?:ing)?|meals?|food|refrigera\w*|cold storage|dishwash\w*|shower\w*|restroom\w*|laundry|washers?|dryers?|sleep\w*|bunk\w*|accommodation|handwash\w*)\b/i;
+
+const stateEquipmentBrief: Record<string, { purpose: string; question: string }> = {
+  "Shower Trailer": {
+    purpose: "Plan shower access, water supply, drainage and private changing space for the workforce.",
+    question: "Where can the shower trailer connect to water and drainage without blocking site access?",
+  },
+  "Shower and Restroom Combination Trailer": {
+    purpose: "Plan both shower and restroom access, utilities and servicing for the same site.",
+    question: "Can the combination trailer serve both shower and restroom users at the proposed location?",
+  },
+  "ADA Shower and Restroom Combination Trailer": {
+    purpose: "Review accessible approaches, shower and restroom circulation, utilities and servicing before selecting a unit.",
+    question: "Is the route to the accessible shower and restroom combination clear and usable?",
+  },
+  "Laundry Temporary Facilities": {
+    purpose: "Plan laundry capacity, water, drainage, power and collection routes around crew demand.",
+    question: "How will laundry be supplied and serviced throughout the rental period?",
+  },
+  "Kitchen Emergency Trailer": {
+    purpose: "Plan an emergency food-service layout with safe cooking, preparation and supply routes.",
+    question: "How quickly must the temporary kitchen be ready for the site's food-service needs?",
+  },
+  "Commercial Kitchen Trailer": {
+    purpose: "Plan commercial cooking, preparation, deliveries and utility connections for the temporary kitchen.",
+    question: "How will the temporary kitchen connect to the existing service operation?",
+  },
+  "Commercial Kitchen Modular Building": {
+    purpose: "Plan commercial food preparation, service flow, utilities and access for a modular kitchen.",
+    question: "Where can the modular kitchen be placed without interrupting food-service routes?",
+  },
+  "Sleeper Bunk-Bed Facility": {
+    purpose: "Plan workforce sleeping capacity, privacy, access and supporting facilities for a temporary bunk-bed site.",
+    question: "How many crew members need sleeping space during the busiest phase?",
+  },
+  "Man Camp Temporary Facilities": {
+    purpose: "Plan the full workforce-camp layout, including sleeping, food service, hygiene and site utilities.",
+    question: "Which camp facilities are needed for the expected crew size and project duration?",
+  },
+};
+
+const focusedServiceSummaries: Record<string, string> = {
+  "Commercial Kitchen Modular Building": "For a modular commercial kitchen rental, confirm the building layout, installation footprint, food-service workflow and utility connections. Mobile kitchen trailers and the other base-camp facilities are separate equipment options.",
+  "ADA Shower and Restroom Combination Trailer": "For an accessible shower and restroom combination trailer rental, review the accessible room, ramp, approach route, utilities and servicing requirements. Confirm the actual configuration; a standard combination trailer does not establish an accessible layout. Other base-camp facilities are separate rental options.",
+  "Laundry Temporary Facilities": "For temporary laundry rental, plan washing and drying around crew numbers, laundry volume, power, water and drainage. Trailer and container options have different placement requirements; confirm the chosen configuration. Kitchens, hygiene units and crew accommodation are separate supporting rentals.",
+};
 
 // These are plain-language travel planning areas rather than claims about
 // official sales territories. They help callers describe the part of a state
@@ -1094,7 +1146,7 @@ const baseCampGalleryVisuals = [
   ],
   [
     "/images/catalog/restroom-trailers-960.webp",
-    "Clean mobile restroom trailer interior for a temporary site",
+    "Shower and restroom combination trailer interior shown as a reference for temporary site planning",
   ],
   [
     "/images/catalog/bunkhouse-trailers-960.webp",
@@ -1151,19 +1203,24 @@ const buildStateGallery = (index: number, state: string) =>
 export const stateGuides = Object.fromEntries(
   Object.entries(stateGuideDetails).map(([name, guide], index) => {
     const local = stateLocalDetails[name];
+    const brief = stateEquipmentBrief[stateRentalOption(name).equipmentFamily];
+    const siteNote = firstSentence(guide.intro);
     const gallery = buildStateGallery(index, name);
     const seasonal = buildStateSeasonalDemand(name, index);
     return [
       name,
       {
         ...guide,
-        intro: `Rental Services in ${name}: rent or lease Temporary Facilities for base camp and man camp projects. ${firstSentence(guide.intro)}`,
+        intro: `For ${name} projects, ${brief.purpose.charAt(0).toLowerCase()}${brief.purpose.slice(1)}${equipmentWords.test(siteNote) ? "" : ` ${siteNote}`}`,
+        question: brief.question,
         image: gallery[0].image,
         imageAlt: gallery[0].imageAlt,
         gallery,
         regions: local.regions,
         fact: local.fact,
-        serviceSummary: serviceSummaries[index % serviceSummaries.length],
+        serviceSummary:
+          focusedServiceSummaries[stateRentalOption(name).equipmentFamily] ||
+          serviceSummaries[index % serviceSummaries.length],
         abbreviation: stateCodes[index],
         layout: String(index % 5),
         motion: String((index + Math.floor(index / 5) * 2) % 10),

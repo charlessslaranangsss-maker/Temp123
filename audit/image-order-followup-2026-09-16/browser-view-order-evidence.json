@@ -1,0 +1,4109 @@
+{
+  "gallerySequences": [
+    {
+      "route": "/service-areas/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+          "view": "interior",
+          "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+          "view": "interior",
+          "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+          "view": "interior",
+          "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+          "view": "exterior",
+          "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/service-areas/",
+      "index": 1,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+          "view": "interior",
+          "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+          "view": "exterior",
+          "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+          "view": "exterior",
+          "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+          "view": "exterior",
+          "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/service-areas/",
+      "index": 2,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+          "view": "interior",
+          "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/20ft-refrigeration-trailers/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png",
+          "view": "interior",
+          "display": "/images/location-verified/87e877cda19ee1b0f5d2-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-stainless-steel-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/b5666e7c4ab955192cd5-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/portable-refrigeration-trailer-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/e9c8eac1a713a04ea72f-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/6620814f30241303945e-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-fleet.png",
+          "view": "exterior",
+          "display": "/images/location-verified/e6fafa4c81cad96b3682-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/equipment-rental/laundry-trailers/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+          "view": "interior",
+          "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/equipment-rental/refrigeration/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png",
+          "view": "interior",
+          "display": "/images/location-verified/87e877cda19ee1b0f5d2-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/portable-dishwashing-trailer-rental/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/commercial-dish-trailer-stainless-workstation.png",
+          "view": "interior",
+          "display": "/images/location-verified/39da30a1422bb09192fd-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-commercial-dishwasher.png",
+          "view": "interior",
+          "display": "/images/location-verified/c1a1858704083016552d-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-handwashing-station.png",
+          "view": "interior",
+          "display": "/images/location-verified/f7bb29a4ce27d1d8e020-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-three-compartment-sink.png",
+          "view": "interior",
+          "display": "/images/location-verified/06a2358b959cba278011-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-utility-sink-storage-racks.png",
+          "view": "interior",
+          "display": "/images/location-verified/224f845e1e70d21eb734-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dishwashing-trailer-wash-rinse-sanitize-sink.png",
+          "view": "interior",
+          "display": "/images/location-verified/98d052a0b070d3ddbd7f-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/mobile-dish-trailer-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/1ea6f29f897bc6856d85-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-rental-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/8a3b778dc9d47a4d49bf-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/remote-containerized-military-berthing-solution-for-rent/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/4b67ae2ec507c379fdf9a7e3.png",
+          "view": "interior",
+          "display": "/media/4b67ae2ec507c379fdf9a7e3.png"
+        },
+        {
+          "src": "/media/599283a9ef6bf5d260ca0648.png",
+          "view": "interior",
+          "display": "/media/599283a9ef6bf5d260ca0648.png"
+        },
+        {
+          "src": "/media/16e1edca80af2743a382280b.png",
+          "view": "interior",
+          "display": "/media/16e1edca80af2743a382280b.png"
+        },
+        {
+          "src": "/media/d4284cb63385949087e03ee9.png",
+          "view": "interior",
+          "display": "/media/d4284cb63385949087e03ee9.png"
+        },
+        {
+          "src": "/media/9b8c1d6a8e92cd55cd909891.png",
+          "view": "exterior",
+          "display": "/media/9b8c1d6a8e92cd55cd909891.png"
+        },
+        {
+          "src": "/media/6ec88e391d22b5c6ce13ebb3.png",
+          "view": "exterior",
+          "display": "/media/6ec88e391d22b5c6ce13ebb3.png"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/equipment-rental/handwashing-stations/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/handwashing-sink-trailer/01-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/handwashing-sink-trailer/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/handwashing-sink-trailer/02-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/handwashing-sink-trailer/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/handwashing-sink-trailer/03-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/handwashing-sink-trailer/03-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/equipment-rental/refrigerated-containers/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/catalog/refrigerated-containers-960.webp",
+          "view": "exterior",
+          "display": "/images/location-verified/a881a4293bdbc0e51fa8-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/shower-restroom-combination-trailers/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+          "view": "interior",
+          "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+          "view": "exterior",
+          "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+          "view": "exterior",
+          "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/24ft/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/24ft-mobile-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/24ft-mobile-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/24ft-mobile-kitchen/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/24ft-mobile-kitchen/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/24ft-mobile-kitchen/04-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/24ft-mobile-kitchen/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/24ft-mobile-kitchen/05-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/24ft-mobile-kitchen/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/24ft-mobile-kitchen/02-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/24ft-mobile-kitchen/02-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/28ft/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/02-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/05-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/04-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/06-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/06-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/28ft-mobile-kitchen/07-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/28ft-mobile-kitchen/07-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/38ft/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/38ft-mobile-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-mobile-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-mobile-kitchen/02-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/38ft-mobile-kitchen/02-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/40ft/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/02-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/03-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/04-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/05-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/06-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/06-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/07-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/07-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/08-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/08-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/09-960.webp",
+          "view": "plan",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/09-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-mobile-kitchen/10-960.webp",
+          "view": "plan",
+          "display": "/images/service-heroes/40ft-mobile-kitchen/10-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/40ft-combination/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-combination-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-combination-kitchen/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/04-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-combination-kitchen/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/05-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-combination-kitchen/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/06-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-combination-kitchen/06-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/07-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-combination-kitchen/07-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/08-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-combination-kitchen/08-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/09-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-combination-kitchen/09-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-combination-kitchen/02-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/40ft-combination-kitchen/02-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-kitchen-trailers/40ft-bulk-combination/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/02-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/04-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/05-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/40ft-bulk-combination-kitchen/06-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/40ft-bulk-combination-kitchen/06-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/dishwashing-trailers/38ft-conveyor/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/02-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/04-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/05-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/05-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/06-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/38ft-high-temp-dish/06-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/07-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/38ft-high-temp-dish/07-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/08-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/38ft-high-temp-dish/08-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/09-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/38ft-high-temp-dish/09-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/38ft-high-temp-dish/10-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/38ft-high-temp-dish/10-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/shower-containers/20ft-5-stall/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/20ft-shower-container/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/20ft-shower-container/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/20ft-shower-container/02-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/20ft-shower-container/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/20ft-shower-container/03-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/20ft-shower-container/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/20ft-shower-container/04-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/20ft-shower-container/04-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/shower-restroom-combination-trailers/13ft-3-stall/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/13ft-shower-restroom-combination/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/13ft-shower-restroom-combination/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/13ft-shower-restroom-combination/02-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/13ft-shower-restroom-combination/02-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/shower-restroom-combination-trailers/22ft-6-stall/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/22ft-shower-restroom-combination/01-960.webp",
+          "view": "interior",
+          "display": "/images/service-heroes/22ft-shower-restroom-combination/01-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/22ft-shower-restroom-combination/04-960.webp",
+          "view": "detail",
+          "display": "/images/service-heroes/22ft-shower-restroom-combination/04-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/22ft-shower-restroom-combination/02-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/22ft-shower-restroom-combination/02-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/22ft-shower-restroom-combination/03-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/22ft-shower-restroom-combination/03-960.webp"
+        },
+        {
+          "src": "/images/service-heroes/22ft-shower-restroom-combination/05-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/22ft-shower-restroom-combination/05-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/service-heroes/30ft-shower-restroom-combination/01-960.webp",
+          "view": "exterior",
+          "display": "/images/service-heroes/30ft-shower-restroom-combination/01-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-sleeper-trailers/20ft-shared/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/4b67ae2ec507c379fdf9a7e3.png",
+          "view": "interior",
+          "display": "/media/4b67ae2ec507c379fdf9a7e3.png"
+        },
+        {
+          "src": "/media/599283a9ef6bf5d260ca0648.png",
+          "view": "interior",
+          "display": "/media/599283a9ef6bf5d260ca0648.png"
+        },
+        {
+          "src": "/media/1ac07501887589e4f0c3060e.png",
+          "view": "exterior",
+          "display": "/media/1ac07501887589e4f0c3060e.png"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-sleeper-trailers/20ft-contractor/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/services/mobile-sleeper-trailers/20ft-vip/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-private-room.png",
+          "view": "interior",
+          "display": "/images/location-verified/1be33879c903b5341e6b-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/service-areas/alabama/north-alabama/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/images/catalog/restroom-trailers-960.webp",
+          "view": "exterior",
+          "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/service-areas/alabama/central-alabama/",
+      "index": 1,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+          "view": "interior",
+          "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+          "view": "interior",
+          "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+          "view": "interior",
+          "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "/service-areas/arkansas/delta/",
+      "index": 0,
+      "slides": [
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+          "view": "interior",
+          "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+          "view": "exterior",
+          "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+        },
+        {
+          "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+          "view": "exterior",
+          "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "modals": [
+    {
+      "host": "/service-areas/",
+      "state": "Alabama",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Alaska",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Arizona",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Arkansas",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "California",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Colorado",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Connecticut",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Delaware",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Florida",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Georgia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Hawaii",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Idaho",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Illinois",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Indiana",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Iowa",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Kansas",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Kentucky",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Louisiana",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Maine",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Maryland",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Massachusetts",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Michigan",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Minnesota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Mississippi",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Missouri",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Montana",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Nebraska",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Nevada",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "New Hampshire",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "New Jersey",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "New Mexico",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "New York",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "North Carolina",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "North Dakota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Ohio",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Oklahoma",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Oregon",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Pennsylvania",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Rhode Island",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "South Carolina",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "South Dakota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Tennessee",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Texas",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Utah",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Vermont",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Virginia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Washington",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "West Virginia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Wisconsin",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/service-areas/",
+      "state": "Wyoming",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Alabama",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Alaska",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Arizona",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Arkansas",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "California",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Colorado",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Connecticut",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Delaware",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Florida",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Georgia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Hawaii",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Idaho",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Illinois",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Indiana",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Iowa",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Kansas",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Kentucky",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Louisiana",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Maine",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Maryland",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Massachusetts",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Michigan",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Minnesota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Mississippi",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Missouri",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Montana",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Nebraska",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Nevada",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "New Hampshire",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "New Jersey",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "New Mexico",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "New York",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "North Carolina",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "North Dakota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Ohio",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Oklahoma",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Oregon",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Pennsylvania",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+            "view": "interior",
+            "display": "/images/location-verified/ee85c5176470af5e87fc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/5c01e444dc88f976bfa3-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7db24ad2139ec43e362b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/a1fd0e0d53b4d489ef53-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/e9df604dc15c6e80be25-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Rhode Island",
+      "groups": [
+        [
+          {
+            "src": "/images/catalog/restroom-trailers-960.webp",
+            "view": "exterior",
+            "display": "/images/location-verified/703e00d32f1b70bf993a-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "South Carolina",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "South Dakota",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Tennessee",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Texas",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Utah",
+      "groups": [],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Vermont",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Virginia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Washington",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "West Virginia",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/30ed74f6a1ad4d9343eb-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/fe6c68b1dc9123c64e49-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/6867327e45f627a43cdc-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+            "view": "exterior",
+            "display": "/images/location-verified/58083d08991a7762257a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+            "view": "interior",
+            "display": "/images/location-verified/d845978efea5edbfc3d7-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+            "view": "interior",
+            "display": "/images/location-verified/39709c2b240b98d0ebca-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+            "view": "interior",
+            "display": "/images/location-verified/dff88e39d64f5bc3f9bf-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+            "view": "interior",
+            "display": "/images/location-verified/98a5ea41d685c77ba534-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+            "view": "exterior",
+            "display": "/images/location-verified/40d9bf96b7be94de0552-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Wisconsin",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+            "view": "interior",
+            "display": "/images/location-verified/dabab6914d03a327f753-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/c8e61016692cc24ed87e-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+            "view": "exterior",
+            "display": "/images/location-verified/13d11fc194e658fa5c5b-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+            "view": "exterior",
+            "display": "/images/location-verified/7891e17e60628430980f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+            "view": "exterior",
+            "display": "/images/location-verified/ea9f8d1cea1ede56e56f-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+            "view": "exterior",
+            "display": "/images/location-verified/45b677c4b981464953cc-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    },
+    {
+      "host": "/",
+      "state": "Wyoming",
+      "groups": [
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+            "view": "interior",
+            "display": "/images/location-verified/8f2f634239040859c87a-960.webp"
+          }
+        ],
+        [
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+            "view": "interior",
+            "display": "/images/location-verified/f94926f0ae77d3870245-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+            "view": "interior",
+            "display": "/images/location-verified/2c480cafdab7ea60ca7c-960.webp"
+          },
+          {
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+            "view": "interior",
+            "display": "/images/location-verified/039811b7354f99e17078-960.webp"
+          }
+        ]
+      ],
+      "result": "PASS"
+    }
+  ],
+  "errors": []
+}

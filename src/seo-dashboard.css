@@ -37,17 +37,27 @@
   display: grid;
   gap: 7px;
 }
-.seo-sidebar nav a {
+.seo-sidebar nav button {
   color: #b9d0ce;
-  text-decoration: none;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
   padding: 11px 13px;
   border-radius: 9px;
   font-size: 14px;
 }
-.seo-sidebar nav a:hover {
+.seo-sidebar nav button:hover,
+.seo-sidebar nav button[aria-selected="true"] {
   background: #123e45;
   color: #fff;
 }
+.seo-sidebar nav button:focus-visible {
+  outline: 2px solid #75d6ce;
+  outline-offset: 2px;
+}
+.seo-section[hidden] { display: none !important; }
 .seo-back {
   margin-top: auto;
   color: #75d6ce;
@@ -65,23 +75,26 @@
 .seo-alert {
   order: 0;
 }
-.seo-order-indexing {
+.seo-order-diagnostics {
   order: 1;
 }
-.seo-order-domain-authority {
+.seo-order-indexing {
   order: 2;
 }
-.seo-order-overview {
+.seo-order-domain-authority {
   order: 3;
 }
-.seo-order-portfolio {
+.seo-order-overview {
   order: 4;
 }
-.seo-order-protected {
+.seo-order-portfolio {
   order: 5;
 }
-.seo-order-workflow {
+.seo-order-protected {
   order: 6;
+}
+.seo-order-workflow {
+  order: 7;
 }
 .seo-topbar {
   display: flex;
@@ -132,6 +145,132 @@
   color: #654d15;
   font-size: 12px;
   line-height: 1.55;
+}
+.diagnostic-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.diagnostic-heading h2 {
+  margin: 6px 0 4px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+.diagnostic-heading p,
+.diagnostic-footnote {
+  margin: 0;
+  color: #667f84;
+  font-size: 12px;
+}
+.diagnostic-run-time {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid #cbdad7;
+  border-radius: 999px;
+  background: #fff;
+  color: #557176;
+  font-size: 11px;
+  font-weight: 700;
+}
+.diagnostic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.diagnostic-card {
+  min-width: 0;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid #d7e2df;
+  border-top: 4px solid #179783;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff 0%, #f8fbfa 100%);
+  box-shadow: 0 14px 34px rgba(9, 43, 50, 0.07);
+}
+.diagnostic-card.warning,
+.diagnostic-card.error {
+  border-top-color: #c33b31;
+}
+.diagnostic-card.not_configured {
+  border-top-color: #d69a18;
+}
+.diagnostic-card-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.diagnostic-card-top span {
+  max-width: 180px;
+  color: #47666c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+.diagnostic-card-top b {
+  color: #0c3941;
+  font-size: 38px;
+  line-height: .9;
+  letter-spacing: -2px;
+}
+.diagnostic-card > p {
+  min-height: 38px;
+  margin: 14px 0 12px;
+  color: #70868a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.diagnostic-chart,
+.diagnostic-empty-chart {
+  display: block;
+  width: 100%;
+  height: 92px;
+  border-radius: 10px;
+  background: #edf5f3;
+}
+.diagnostic-chart line {
+  stroke: #cadbd7;
+  stroke-width: 1;
+}
+.diagnostic-chart polyline {
+  fill: none;
+  stroke: #0c8f81;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.diagnostic-card.warning .diagnostic-chart polyline,
+.diagnostic-card.error .diagnostic-chart polyline {
+  stroke: #c33b31;
+}
+.diagnostic-empty-chart {
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  color: #78908f;
+  font-size: 11px;
+  text-align: center;
+}
+.diagnostic-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+  margin-top: 15px;
+  color: #657e83;
+  font-size: 11px;
+}
+.diagnostic-details strong {
+  color: #153c43;
+}
+.diagnostic-wide {
+  grid-column: 1 / -1;
+  overflow-wrap: anywhere;
+}
+.diagnostic-footnote {
+  margin-top: 12px;
 }
 .seo-kpis {
   display: grid;
@@ -621,6 +760,9 @@
   margin: 0;
 }
 @media (max-width: 1100px) {
+  .diagnostic-grid {
+    grid-template-columns: 1fr;
+  }
   .seo-kpis {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -658,6 +800,10 @@
   .seo-live-controls {
     align-items: flex-start;
     flex-wrap: wrap;
+  }
+  .diagnostic-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
   .seo-kpis {
     grid-template-columns: repeat(2, 1fr);

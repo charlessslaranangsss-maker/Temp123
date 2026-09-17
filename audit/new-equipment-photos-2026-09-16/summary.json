@@ -1,0 +1,63 @@
+{
+  "at": "2026-09-16T10:44:15.824Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseCommit": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommitCreated": false,
+  "deployed": false,
+  "download": {
+    "at": "2026-09-16T10:20:00.651922+00:00",
+    "suppliedFolders": 2,
+    "enumeratedFolders": 2,
+    "imagesFound": 2,
+    "downloaded": 2,
+    "bytes": 4693898,
+    "errors": [],
+    "imageErrors": [],
+    "skippedNonImages": 0
+  },
+  "preparedOriginals": 2,
+  "responsiveWebPFiles": 4,
+  "approvedImageUses": 110,
+  "withheldImageUses": 46,
+  "existingPagesEnumerated": 651,
+  "serviceAreaPagesEnumerated": 548,
+  "modalPresentationsCompared": 100,
+  "matchingExistingTargets": 0,
+  "existingPagePhotosReplaced": 0,
+  "assignmentChanges": [],
+  "oldImageRecordsPreserved": 154,
+  "oldRecordDrift": [],
+  "oldModelDrift": [],
+  "tests": {
+    "focused": 184,
+    "application": 44,
+    "browserFixturePresentations": 4,
+    "productionPages": 651
+  },
+  "sourceDrift": [],
+  "protectedFileDrift": [
+    "src/rentalHeadlines.ts"
+  ],
+  "buildDirectory": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\new-equipment-photos-20260916\\dist",
+  "mappingManifest": "content/verified-equipment-images.json",
+  "additionsRegistry": "content/equipment-photo-additions.json",
+  "manifestSha256": "3d520c6bf327e3f6bfb6f96bc03665cfddac0b9953dea4e0d472a22f885ba567",
+  "changedExistingSourceFiles": [
+    "content/verified-equipment-images.json",
+    "src/locationCarouselImages.ts",
+    "src/LocationImageCarousel.tsx",
+    "src/equipmentPhotoPolicy.ts",
+    "src/rentalHeadlines.ts",
+    "scripts/build-location-image-manifest.py",
+    "scripts/audit-service-area-images.ts"
+  ],
+  "newFiles": [
+    "content/equipment-photo-additions.json",
+    "tests/newEquipmentPhotos.test.tsx",
+    "public/media/equipment-drive/38ft-all-electric-kitchen/38ft-all-electric-kitchen-multifunctional-exterior.png",
+    "public/media/equipment-drive/office-sleeper-shower-restroom-trailer/office-sleeper-shower-restroom-trailer-exterior.png"
+  ],
+  "placementStatus": "BLOCKED: exact existing target pages not found. No new page/section or standard/standalone substitution authorized.",
+  "verificationBoundary": "Prepared-photo browser fixtures and local build only, not live pages; previous snapshot ports remain unchanged."
+}

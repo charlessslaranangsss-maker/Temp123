@@ -1,6 +1,14 @@
+import { resolveLocationGallery } from "./locationCarouselImages";
+import { orderGalleryImages } from "./galleryImageOrder";
 export type ServiceHeroImageView = "interior" | "exterior" | "plan" | "detail";
 
 export type ServiceHeroImage = {
+  fullSrc?: string;
+  thumbnail?: string;
+  family?: string;
+  model?: string;
+  sha256?: string;
+  reviewId?: string;
   id: string;
   src: string;
   srcSet: string;
@@ -222,22 +230,16 @@ export const serviceHeroImages: Readonly<
       ["detail", 960, 720, "1Oqeq1ZqieCokf7uYamF6sglkbS8kIfCR"],
     ],
   ),
-  "/20ft-refrigeration-trailers/": verifiedSet(
-    "20ft-refrigerated-trailer",
-    "20 ft refrigerated trailer",
-    [
-      ["interior", 960, 1280, "10hjCOlxP65729BATQw_ejxRr2XHUk96v"],
-      ["exterior", 960, 734, "1KpTzRD3I5lTYx-ooTZDTu8PrFTvYkyFM"],
-      [
-        "exterior",
-        960,
-        720,
-        "1TVc3g0TYH0wNOft7KSUmVMii43SJXTP6",
-        "20 ft refrigerated trailer outside a commercial building",
-      ],
-      ["exterior", 960, 734, "1P5JMJsvJlUP6AfLYVNfYcDS39VH6cgdU"],
-    ],
-  ),
+  // April: all five Drive references for the trailer; container remains inside-only.
+  "/20ft-refrigeration-trailers/": resolveLocationGallery(
+    "20 ft Refrigerated Trailer",
+  ).images,
+  "/media-library/20ft-refrigerated-container/": resolveLocationGallery(
+    "20 ft Refrigerated Container",
+  ).images,
+  "/media-library/two-stall-sleeper/": resolveLocationGallery(
+    "2-Stall Sleeper Trailer",
+  ).images,
   "/services/shower-restroom-combination-trailers/13ft-3-stall/": verifiedSet(
     "13ft-shower-restroom-combination",
     "13 ft three-stall shower and restroom combination trailer",
@@ -295,33 +297,102 @@ export const serviceHeroImages: Readonly<
   "/services/mobile-sleeper-trailers/20ft-shared/": localSet(
     "20ft-shared-sleeper",
     [
-      ["interior", "/media/4b67ae2ec507c379fdf9a7e3.png", 850, 650, "Communal bunk-bed sleeping area inside a 20 ft shared mobile sleeper trailer"],
-      ["interior", "/media/599283a9ef6bf5d260ca0648.png", 850, 650, "Four-bunk shared sleeping area inside a mobile sleeper trailer"],
-      ["exterior", "/media/1ac07501887589e4f0c3060e.png", 850, 650, "Exterior of a four-room mobile sleeper bunk-bed trailer"],
+      [
+        "interior",
+        "/media/4b67ae2ec507c379fdf9a7e3.png",
+        850,
+        650,
+        "Communal bunk-bed sleeping area inside a 20 ft shared mobile sleeper trailer",
+      ],
+      [
+        "interior",
+        "/media/599283a9ef6bf5d260ca0648.png",
+        850,
+        650,
+        "Four-bunk shared sleeping area inside a mobile sleeper trailer",
+      ],
+      [
+        "exterior",
+        "/media/1ac07501887589e4f0c3060e.png",
+        850,
+        650,
+        "Exterior of a four-room mobile sleeper bunk-bed trailer",
+      ],
     ],
   ),
   "/services/mobile-sleeper-trailers/20ft-contractor/": localSet(
     "20ft-contractor-sleeper",
     [
-      ["interior", "/media/16e1edca80af2743a382280b.png", 850, 650, "Two-bunk contractor sleeping room inside a mobile sleeper trailer"],
-      ["interior", "/media/d4284cb63385949087e03ee9.png", 850, 650, "Compact contractor bunk-bed accommodation inside a mobile sleeper trailer"],
+      [
+        "interior",
+        "/media/16e1edca80af2743a382280b.png",
+        850,
+        650,
+        "Two-bunk contractor sleeping room inside a mobile sleeper trailer",
+      ],
+      [
+        "interior",
+        "/media/d4284cb63385949087e03ee9.png",
+        850,
+        650,
+        "Compact contractor bunk-bed accommodation inside a mobile sleeper trailer",
+      ],
     ],
   ),
-  "/services/mobile-sleeper-trailers/20ft-vip/": localSet(
-    "20ft-vip-sleeper",
+  "/services/mobile-sleeper-trailers/20ft-vip/": localSet("20ft-vip-sleeper", [
     [
-      ["interior", "/media/92093075ae986ac89edb2378.png", 850, 650, "Private bed and lounge area inside a 20 ft VIP mobile sleeper trailer"],
+      "interior",
+      "/media/92093075ae986ac89edb2378.png",
+      850,
+      650,
+      "Private bed and lounge area inside a 20 ft VIP mobile sleeper trailer",
     ],
-  ),
+  ]),
   "/remote-containerized-military-berthing-solution-for-rent/": localSet(
     "containerized-sleeper",
     [
-      ["interior", "/media/4b67ae2ec507c379fdf9a7e3.png", 850, 650, "Communal bunk-bed sleeping area for temporary containerized crew berthing"],
-      ["interior", "/media/599283a9ef6bf5d260ca0648.png", 850, 650, "Four-bunk sleeping area for temporary containerized crew berthing"],
-      ["interior", "/media/16e1edca80af2743a382280b.png", 850, 650, "Two-bunk room inside a modular temporary berthing unit"],
-      ["interior", "/media/d4284cb63385949087e03ee9.png", 850, 650, "Compact bunk room inside a modular temporary berthing unit"],
-      ["exterior", "/media/9b8c1d6a8e92cd55cd909891.png", 850, 650, "Row of modular sleeping units for temporary crew berthing"],
-      ["exterior", "/media/6ec88e391d22b5c6ce13ebb3.png", 850, 650, "Exterior view of modular sleeping units in a temporary crew camp"],
+      [
+        "interior",
+        "/media/4b67ae2ec507c379fdf9a7e3.png",
+        850,
+        650,
+        "Communal bunk-bed sleeping area for temporary containerized crew berthing",
+      ],
+      [
+        "interior",
+        "/media/599283a9ef6bf5d260ca0648.png",
+        850,
+        650,
+        "Four-bunk sleeping area for temporary containerized crew berthing",
+      ],
+      [
+        "interior",
+        "/media/16e1edca80af2743a382280b.png",
+        850,
+        650,
+        "Two-bunk room inside a modular temporary berthing unit",
+      ],
+      [
+        "interior",
+        "/media/d4284cb63385949087e03ee9.png",
+        850,
+        650,
+        "Compact bunk room inside a modular temporary berthing unit",
+      ],
+      [
+        "exterior",
+        "/media/9b8c1d6a8e92cd55cd909891.png",
+        850,
+        650,
+        "Row of modular sleeping units for temporary crew berthing",
+      ],
+      [
+        "exterior",
+        "/media/6ec88e391d22b5c6ce13ebb3.png",
+        850,
+        650,
+        "Exterior view of modular sleeping units in a temporary crew camp",
+      ],
     ],
   ),
   "/media-library/30ft-laundry-trailer/": verifiedSet(
@@ -348,19 +419,61 @@ export const serviceHeroImages: Readonly<
     "20 ft five-stall shower trailer with handwashing sinks",
     [
       ["interior", 960, 1280, "1ZSLojSpLoJEV92yLEv9NayqUlipOeetu"],
-      ["detail", 960, 1280, "1roGL7xG7Z17OexW0hy2MHbMR8tNXXA2Z", "Three handwashing sinks and mirrors in a 20 ft shower trailer"],
-      ["exterior", 960, 1280, "11oNTsbQSHlZAzkL8InhiidCttgBmR1Ba", "20 ft multi-door shower trailer inside a commercial facility"],
-      ["exterior", 960, 738, "1aPclhaNoLuCP8h7U8mzRngIhveigA113", "Side view of a 20 ft multi-door shower trailer inside a commercial facility"],
-      ["exterior", 960, 1217, "1yrIfrp5t5s5wuL68SLz5L2YM-_uQn3wg", "Rear view of a 20 ft shower trailer"],
+      [
+        "detail",
+        960,
+        1280,
+        "1roGL7xG7Z17OexW0hy2MHbMR8tNXXA2Z",
+        "Three handwashing sinks and mirrors in a 20 ft shower trailer",
+      ],
+      [
+        "exterior",
+        960,
+        1280,
+        "11oNTsbQSHlZAzkL8InhiidCttgBmR1Ba",
+        "20 ft multi-door shower trailer inside a commercial facility",
+      ],
+      [
+        "exterior",
+        960,
+        738,
+        "1aPclhaNoLuCP8h7U8mzRngIhveigA113",
+        "Side view of a 20 ft multi-door shower trailer inside a commercial facility",
+      ],
+      [
+        "exterior",
+        960,
+        1217,
+        "1yrIfrp5t5s5wuL68SLz5L2YM-_uQn3wg",
+        "Rear view of a 20 ft shower trailer",
+      ],
     ],
   ),
   "/equipment-rental/handwashing-stations/": verifiedSet(
     "handwashing-sink-trailer",
     "commercial handwashing sink trailer",
     [
-      ["detail", 960, 734, "1rImzuG71XXGALTGed9faoJ8dX5069wSV", "Two banks of sinks under awnings on a commercial handwashing trailer"],
-      ["exterior", 960, 734, "1pS_NNVjF11EaD4BvbAkeNmK0kvORa83R", "Six-sink commercial handwashing trailer in an industrial lot"],
-      ["exterior", 960, 734, "1kXodyplA7NjFtiHz1JE_WGtPKFkM4G5n", "Commercial handwashing trailer with deployed sinks and awning"],
+      [
+        "exterior",
+        960,
+        734,
+        "1rImzuG71XXGALTGed9faoJ8dX5069wSV",
+        "Two banks of sinks under awnings on a commercial handwashing trailer",
+      ],
+      [
+        "exterior",
+        960,
+        734,
+        "1pS_NNVjF11EaD4BvbAkeNmK0kvORa83R",
+        "Six-sink commercial handwashing trailer in an industrial lot",
+      ],
+      [
+        "exterior",
+        960,
+        734,
+        "1kXodyplA7NjFtiHz1JE_WGtPKFkM4G5n",
+        "Commercial handwashing trailer with deployed sinks and awning",
+      ],
     ],
   ),
   "/media-library/water-tank/": verifiedSet(
@@ -379,26 +492,33 @@ export const serviceHeroImages: Readonly<
 export function orderedServiceHeroImages(
   images: readonly ServiceHeroImage[],
 ): ServiceHeroImage[] {
-  // Keep the customer journey consistent on every equipment page: show the
-  // usable interior and its equipment details first, then exterior views, and
-  // leave floor plans until last. The original order is retained within each
-  // group so the approved Drive sequence is still deterministic.
-  const viewPriority: Record<ServiceHeroImageView, number> = {
-    interior: 0,
-    detail: 1,
-    exterior: 2,
-    plan: 3,
-  };
-
-  return [...images].sort(
-    (a, b) =>
-      viewPriority[a.view] - viewPriority[b.view] || a.sortOrder - b.sortOrder,
-  );
+  return orderGalleryImages(images);
 }
 
 export function imagesForServicePath(
   path: string,
 ): readonly ServiceHeroImage[] | undefined {
+  // The legacy registry is retained for traceability; visible model galleries use
+  // the same reviewed manifest as location pages, including its explicit holds.
+  const detail = serviceDetails[path as keyof typeof serviceDetails];
+  if (detail) {
+    if (path === '/services/handwashing-trailers/hands-free/') return undefined;
+    const selection = resolveLocationGallery(detail.name).images;
+    return selection.length ? selection : undefined;
+  }
+  const approvedNamedTitles: Record<string, string> = {
+    "/services/laundry-trailers/30ft/": "30 ft Laundry Trailer",
+    "/equipment-rental/refrigerated-containers/":
+      "40 ft Refrigerated Container",
+    "/services/mobile-sleeper-trailers/20ft-contractor/":
+      "20 ft Contractor Sleeper Trailer",
+    "/services/mobile-sleeper-trailers/20ft-vip/": "20 ft VIP Sleeper Trailer",
+  };
+  if (approvedNamedTitles[path]) {
+    const selected = resolveLocationGallery(approvedNamedTitles[path]).images;
+    return selected.length ? selected : undefined;
+  }
   const images = serviceHeroImages[path];
   return images?.length ? orderedServiceHeroImages(images) : undefined;
 }
+import serviceDetails from '../content/service-details.json' with { type: 'json' };

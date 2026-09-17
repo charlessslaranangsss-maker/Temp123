@@ -1,6 +1,91 @@
 # Temporary123 Decision Log
 
+## 2026-09-17 — Both approved Panhandle captions set the quality bar
+
+Charles confirmed the boss approved and was impressed by both the 20 ft laundry-container and 30 ft laundry-trailer captions. For a new gallery caption, use their shared direct structure: exact location/use/equipment/rental opening, specific rental benefit, one useful third sentence, and the approved phone CTA. The third sentence may clarify a genuinely confusing photo identity, as with the container, or help plan around the customer's actual need, as with the trailer. Do not force the same sentence type across every product or copy Panhandle facts into other pages. The Olympic office and kitchen samples were revised accordingly; the shower sample retains its relevant model distinction. The local preview awaits Charles's acceptance.
+
+## 2026-09-17 — Olympic Peninsula final caption sample
+
+Charles asked for a finished customer-facing pass after the screenshot-derived skill update. The three Olympic Peninsula captions now use the Panhandle structure without the former site-logistics lists. Each names its equipment and a specific customer use, states the rental/lease inquiry terms, and ends with the approved phone-assistance CTA. The shower caption includes one useful 20 ft versus 22 ft photo distinction. Keep this as a local review sample until Charles accepts the wording; no broader rollout or deployment is implied.
+
+## 2026-09-17 — Approved Panhandle caption as skill quality standard
+
+Charles supplied a screenshot of the Oklahoma Panhandle 20 ft laundry-container caption and identified its concise, direct customer appeal as the model for future image-group descriptions. The skill now records its structure and exact example: location/commercial use/equipment/rental-or-lease first, rental-term and equipment-specific benefit next, one useful photo-identity clarification when needed, then an approved call line. Captions should be distinct across products and avoid internal audit language. The 24/7 phrase is a verified phone-assistance claim, not a delivery or inventory guarantee. The screenshot is a style example, not permission to copy Oklahoma facts to other pages or sites.
+
+## 2026-09-17 — Olympic Peninsula customer copy revision
+
+Charles rejected the first Olympic Peninsula sample as weaker than the Panhandle example and requested unique, attractive captions with "Call us now ... available 24/7." This supersedes the sample's prior omission of 24/7 below. Use the already published phone-assistance claim, without implying 24/7 delivery or guaranteed stock. Keep the opening location + relevant commercial/base-camp use + exact equipment + Rental or Lease, then write a distinct customer use and practical planning prompt for each of the three existing groups. Keep unsupported image/specification claims out of customer copy and retain internal evidence separately. Only the Olympic Peninsula page is under review; no sitewide change or release follows from this sample.
+
+## 2026-09-17 — Olympic Peninsula caption sample
+
+Use the Oklahoma Panhandle caption opening as the quality reference for one review page: location + remote base-camp use + exact equipment + Rental or Lease, then practical site planning and inquiry terms. Keep the two client-named multifunctional exterior references distinct from visually confirmed features, and identify the 20 ft five-stall shower trailer separately. Weekly, monthly and yearly terms are questions for inquiry, not guaranteed availability. Use the published phone CTA without extending the Panhandle-only 24/7 claim. Limit this sample to the Olympic Peninsula page pending Charles's review; preserve H1, route, images, alt, metadata and indexing.
+
+## 2026-09-17 — Existing service-area gallery captions
+
+Use each existing gallery group's equipment headline with the enclosing location H1's place, commercial use and rent/lease intent to form visible copy. State that photos are equipment references rather than local deployment evidence, and invite discussion of dates, access and utilities using the published phone number. Do not add an unverified 24/7 claim to newly generated captions. Preserve the separately approved Oklahoma Panhandle caption and alt behavior, photo identities and no-gallery layouts. Do not expand routes or change H1, canonical or indexing logic in this narrow pass.
+
+## 2026-09-17 — Oklahoma Panhandle caption-leading phrase and CTA
+
+Charles's latest direction supersedes the tacked-on rental-term and quote-disclaimer candidate. Keep Oklahoma Panhandle, the commercial/base-camp use, the exact trailer/container product and Rental or Lease together in the caption's opening phrase. Include weekly, monthly and yearly rental or lease as discussion options, not guaranteed stock or contract availability. End with Call us now and the published 24/7 phone assistance claim. Do not imply round-the-clock dispatch/delivery. Keep the 30 ft trailer and 20 ft container separate and do not keyword-stuff their image alt text. The existing global punctuation/phone normalization stays unchanged. This instruction changes captions, not page H1s, indexing, image identity, or unrelated layouts.
+
+## 2026-09-16 — New multifunctional photo sources
+
+- Source: Charles supplied two new Drive folders, requested every image downloaded first and matching existing photos updated; earlier owner-delegated selection and no-new-layout limits remain in effect.
+- All two listed originals were downloaded and decoded before mapping: 26.01 is the client-named 38ft all-electric multifunctional kitchen reference; 27.01 is the combined office/sleeper/shower/restroom reference. Both are exteriors. Never crop an open doorway and relabel it as a separately supplied interior.
+- Keep these models isolated from the standard 38ft kitchen, standalone sleeper/hygiene units, modular kitchens and exact ADA variants. Captions distinguish visible features from unverified electrical specifications, office interior, dimensions and capacities. One exterior is sufficient; no compulsory interior request.
+- Source preparation found no exact dedicated product-page H1. Subsequent placement uses the corresponding existing, separately labelled Man Camp product groups rather than creating a new route or photo section. Latest placement evidence is recorded separately under multifunctional-placement-2026-09-16. All changes stay local pending review.
+
+## 2026-09-16 — Authorized placement of the two new multifunctional references
+
+- Source: Charles: "Yes, decide the best exact placements and do it locally."
+- Decision: The existing Man Camp / Remote Operations galleries are the relevant broad context. Replace their existing contractor-accommodation selection with the client-named Office, Sleeper and Shower & Restroom Trailer, and the existing standard-kitchen selection with the client-named 38ft All Electric Kitchen. Retain the separate shower-only option as the third group. Two substitutions, no additional gallery positions, sections, category pages or routes.
+- Keep each product's exact supplied name, separate image group, truthful exterior alt, reference caption and product-aware full-image viewer. These external views do not independently establish electrical specifications, dimensions, office interior or capacity. Do not mix in photographs of another unit to invent missing views.
+- This resolves the previous placement-pending status for these two supplied references. It does not authorize replacing standard 38ft kitchen, standalone sleeper/shower/restroom, modular-building or exact ADA imagery. April's refrigerated-container/trailer and two-stall sleeper exceptions remain unchanged, as does laundry separation.
+- Existing hub/directory/category layouts and all H1s/URLs remain unchanged. Implementation and tests stay local; no commit, push, deployment or indexing action is authorized by this task.
+
+## 2026-09-16 — Broad laundry product separation and audit clarity
+
+- Source: Independent QA finding relayed in the current conversation. User authorized either separate, clearly identified laundry options or a single appropriate product; keep the work local until review.
+- Decision: A broad Laundry Temporary Facilities title may intentionally retain the 30 ft laundry trailer and 20 ft laundry container as two separately labelled product galleries inside its EXISTING image area. Exact trailer/container headings still select their own product. No H1, URL, photo placement, product specification, or other equipment approval is changed.
+- Presentation: Explicit trailer/container headings, product-specific reference captions, and matching product identity/reference notes in each laundry full-image viewer. Trailer image 08.01 alt text now explicitly identifies it as a laundry-trailer interior reference; container alts already identify the container. Interior-only use remains acceptable.
+- Audit: The aggregate assignedFiles field is an inventory across the page/modal, not a single carousel. Generated reports must include presentation, groupCount, and imageGroups with each group's title, family, model, files, views, alts and caption. Broad grouped rows must never be described as a single model.
+- Scope and release: Preserve the removed hub/directory/category additions and all image identities/holds. The original port-4205 build and its historical evidence remain unchanged. The new follow-up is local-only and requires QA review; no deployment is authorized by this decision.
+
+## 2026-09-16 — Services cards use equipment photos, not diagrams or mixed facilities
+
+Charles's four screenshots and `/services/` clarification apply to the existing generic equipment-card slots also shared by `/equipment-rental/`. Use locally available, visually checked photographs: a commercial dishwashing machine, a shower-only stall, washers/dryers in a mobile laundry trailer, and an open handwashing sink trailer. Keep the separate homepage photo overrides and shower/restroom combination card unchanged. This is a local image-selection correction, not approval to add sections, alter SEO/routing or deploy the shared worktree.
+
+## 2026-09-16 — Ordering follow-up: actual views, shared guard and explicit QA evidence
+
+The coordinator requested interior-before-exterior enforcement across every assigned gallery. Use the actual pictured equipment space, not filenames: an external sink bank and the outside of a trailer inside a warehouse are exterior views. Keep all actual interior views and interior details before any exterior within each individual carousel; keep unrelated labelled equipment options as separate carousels. src/galleryImageOrder.ts defines the shared order and ServiceHeroCarousel enforces it for direct callers. The manifest generator stores each model in the same semantic order. No identity/category/caption/held approval changed; the existing external handwashing image's incorrect Interior detail view label was corrected. The original frozen 4201 revision remains untouched. A new port-4203 candidate and all-gallery visual/HTTP evidence are documented in audit/image-order-followup-2026-09-16/HANDOFF.md, pending independent re-review. No commit, push or deployment is authorized by this follow-up; any later release remains limited to the existing temp123-nine project under coordination.
+
+## 2026-09-16 — Charles correction: update existing images, do not add sections
+
+- Latest direct instruction: Charles objected to photography added alongside the Service Areas map and asked to revert photo blocks where the original page had none. This overrides the prior assistant interpretation of delegated placement permission.
+- Removed the added gallery beneath the /service-areas/ H1, the added gallery on all city-directory pages, and generic category overview photo-option sections. The main map hero and original directory/category layouts are restored without replacing them with missing-photo placeholders.
+- Preserve existing state/regional/city photo slots, all state-modal image uses, approved image classifications, and carousel/lightbox behavior. April's specific 20ft refrigerated-container interior reference is retained; the trailer keeps all five Drive references and the two-stall sleeper keeps its existing approved interiors.
+- Navigation pages with no original image slot are intentionally unpictured, NOT photography gaps. The full route inventory still includes them for no-new-section checks. Do not add photography to those pages merely to improve image-coverage totals.
+- Only image selection changes in existing slots are authorized by default. No unsolicited layout expansion, H1/URL changes, indexing changes, or deployment follows from this correction. The older frozen port-4201 build is preserved as historical evidence, not the current layout acceptance target.
+
+## 2026-09-16 — Owner-delegated suitable named references and broad location galleries
+
+- Source: Charles explicitly delegated choosing correct and necessary existing images based also on the supplied equipment names. April's specific one-photo, two-stall and refrigeration restrictions remain authoritative.
+- Decision: Use client-named, visually appropriate references with explicit limitations. Recognized generic laundry, directory and man-camp titles may show separately named equipment options; every carousel still contains only one equipment family/configuration. Preserve H1s and URLs instead of rewriting them to fit photos.
+- Generic ADA titles may use the existing branded ADA Room catalogue image as a disclosed reference, never as proof of a specific ADA model, access arrangement or compliance. Exact variants remain held.
+- Supersedes: the older broad-title placeholder policy and requirement to await another approval for scoped named-reference selection. Does not supersede exact April exceptions, truthful labels, unknown-specific-model holds or deployment/indexing gates.
+- Evidence: docs/phase1/OWNER_IMAGE_ROLLOUT_2026-09-16.md; 510/548 Service Areas pages now have photos/references and all 648 local route/modal audit records passed.
+
 Record decisions that multiple tasks must follow. Include the date, decision maker/source, decision, reason, and affected areas.
+
+## 2026-09-16 — Exact-title verified photography for every service-area page and state modal
+
+- Source: Charles's urgent Service Areas image implementation request in the current conversation.
+- Decision: The exact visible H1/modal title selects one verified equipment family and one compatible model/configuration from content/verified-equipment-images.json through src/locationCarouselImages.ts. Body copy, location names, random selection and the former mixed fallback do not choose images. Explicit dimensions/configuration must be supported. Ambiguous titles, missing models, ADA claims without supporting evidence, and trailer/container mismatches show "Verified photography coming soon" without a substitute photo.
+- Image standard: All verified interior views, including interior equipment details, precede all verified exterior views. External fixtures remain exterior. Do not merge different models to obtain a missing view. Suppress exact/near duplicates and unverified category associations. Alt text describes visible equipment, not invented local deployment or inventory availability.
+- Runtime standard: Dedicated pages and both map layouts share the resolver and rendered gallery. State opening destroys the previous controller and image DOM, clones the exact state/title template and starts at slide zero. Manual navigation pauses autoplay until Play is chosen and interaction ends; reduced motion disables autoplay. Full-image viewing uses a centered native dialog above map/state dialogs with original uncropped images, controls, keyboard navigation, outside/Escape close and bounded focus.
+- Preservation boundary: No H1, URL, slug, canonical, head meta, robots, sitemap or indexing-gate change. Prerendered image structured-data references track the corrected visible hero rather than closed dialogs. Other equipment-detail image registries were not remapped by this task.
+- Evidence: 153 classified images, 97 approved, 56 withheld; 548 dedicated routes and 100 state-modal presentations passed the local audit. Missing imagery remains explicit rather than fabricated. See docs/phase1/SERVICE_AREA_IMAGE_AUDIT.md.
+- Replaces an earlier decision: Yes, for Service Areas/map image selection and carousel behavior only. Supersedes the mixed-pool location helper and fixed state gallery. It does not authorize domain cutover, indexing changes, or deployment of unrelated unreviewed changes.
 
 ## 2026-09-15 — Shared coordination source
 
@@ -153,3 +238,39 @@ Record decisions that multiple tasks must follow. Include the date, decision mak
 - Reason: The supplied links include both the parent and 24 children, so reproducing every link literally would duplicate nearly the entire collection. A source-only staging area makes all assets accessible while preventing unreviewed model, setting, or alt-text claims from reaching the site.
 - Affected areas: Local source-asset organization, Drive manifest, integrity checks, and future image-review workflow
 - Replaces an earlier decision: No; it preserves the existing exact-model and verified-image requirements.
+
+## 2026-09-16 — Coordinate Project Desk and Emergency dispatch as one sticky system
+
+- Source: Urgent owner request to redesign the oversized sticky contact control and duplicate-feeling Emergency UI without changing the existing inquiry workflow
+- Decision: Use a compact desktop Project Desk edge tab with a maximum-400 px solid drawer, and two compact bottom actions on mobile while hiding the older duplicate mobile call bar. Keep Emergency as a bottom-right pill that may auto-expand only once, 15 seconds after the first meaningful interaction; dismissing it stores a 24-hour local preference. Show either the Emergency trigger or panel, never both. Opening Project Desk minimizes Emergency and opening Emergency closes Project Desk. Keep availability language conditional, retain the exact telephone action and quote form, and honor keyboard focus, Escape, visible focus, touch targets, and reduced motion.
+- Reason: The two urgent-contact entry points need to remain discoverable without obscuring content, creating false urgency, duplicating actions, or competing for focus.
+- Affected areas: Global sticky Project Desk and Emergency presentation, drawer interaction, local dismissal preference, responsive behavior, accessibility state, and focused browser regression coverage
+- Replaces an earlier decision: Yes; it supersedes the six-second session-based Emergency auto-open and the oversized desktop contact rail while preserving the underlying inquiry workflow and contact routes.
+
+## 2026-09-16 — April one-photo approval and refrigeration follow-up
+
+Implemented locally: one usable photo is sufficient; 20ft container interior-only, 20ft trailer all five Drive references, and two-stall sleeper two existing interior views. 85 focused tests, 44 app tests, 26 browser checks, 651-page build and 648 service-area audit entries passed. No deployment or indexing change. See docs/phase1/APRIL_PHOTO_APPROVALS_2026-09-16.md for the source of the approval, exact scope, evidence and revised tracker totals.
+
+## 2026-09-16 — Preserve current Vercel source until org scope is available
+
+- Decision: Keep the existing `cc-devs/temp123` project connected to `charlessslaranangsss-maker/Temp123` until GitHub organization access for Vercel is explicitly granted and `Temporary-123-Inc/Temporary-123` is visible in the picker. Do not create a second Vercel project or deploy shared uncommitted work as a workaround.
+- Reason: The GitHub namespace picker offered only the personal account. Granting Vercel app access to the organization is a separate security-sensitive permission step, and the combined local release remains under active multi-owner coordination.
+
+
+## 2026-09-17 Panhandle lease terms — LIVE VERIFIED
+
+The Oklahoma Panhandle 30 ft laundry trailer and 20 ft laundry container captions now include rental or lease and weekly/monthly/yearly rental terms. Live alias temp123-nine.vercel.app verified on dpl_6ykocrDRHboUz1zNH2Em9b164U5Q. Both tabs and all four images decoded at desktop/mobile (eight image displays), zero content/browser/overflow failures. Preservation: 651 H1s/intros and 100 map presentations unchanged. Current tests: 209 targeted + 44 application pass; build 651 pages + 404. Preview noindex preserved. Separate primary staging was not promoted over the already-correct concurrent release. Evidence: work/qa/panhandle-lease-20260917/independent-final/REPORT.md. No further deployment is needed for this request.
+
+## 2026-09-17 — Service-area caption standard
+Use the boss-approved Panhandle format for existing equipment gallery captions, with model-specific benefit and detail, rental/lease inquiry terms, and the verified 24/7 phone-assistance CTA. Preserve the already approved Panhandle and Olympic page-specific captions. This is local review copy only; no deployment authorization inferred.
+
+## 2026-09-17 — Galleries for previously unpictured service areas
+
+Add verified equipment-option gallery tabs and customer-facing captions to all service-area city directories. For modular-kitchen pages lacking a verified modular-building photo, show verified mobile-kitchen trailers only as explicitly labelled rental alternatives, with visible copy stating that the images do not depict a modular building. Keep image claims truthful and seek a verified modular photo before presenting one as the modular product.
+## 2026-09-17 — Existing photos for four equipment needs
+
+Use the approved 38 ft mobile-kitchen interior before the 24 ft kitchen gallery on modular-kitchen pages, explicitly as trailer alternatives. Pair ADA-labelled catalogue and standard combination photos in separate labelled groups. Pair two-stall sleeper interiors and four-room trailer exterior in separate labelled groups. Identify the existing 20 ft five-stall shower set as the photographed reference on generic shower pages. Do not transfer ADA status, room layout, modular building form, or 22 ft ten-stall specifications across these distinct assets.
+
+## 2026-09-17 — Homepage Restroom photo disclosure
+
+Use the approved toilet-interior photo from a shower and restroom combination trailer for the homepage Restroom preview, with an explicit combination-unit label and alt text. Do not represent it as a restroom-only trailer. No verified restroom-only photo was found in the current local asset inventory; the product distinction remains visible.

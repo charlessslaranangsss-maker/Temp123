@@ -139,15 +139,16 @@ export const matchesLocationRentalHeadline = (
 
 export const regionLocationLabel = (region: string, state: string) =>
   region.toLowerCase() === state.toLowerCase() ||
-  region.toLowerCase().endsWith(`, ${state.toLowerCase()}`)
+  region.toLowerCase().endsWith(`, ${state.toLowerCase()}`) ||
+  region.toLowerCase().endsWith(` ${state.toLowerCase()}`)
     ? region
     : `${region}, ${state}`;
 
+export const stateRentalOption = (state: string): LocationHeadlineOption =>
+  approvedStateOptions[state] || select(locationHeadlineRotation, state);
+
 export const stateRentalHeadline = (state: string) =>
-  buildLocationRentalHeadline(
-    state,
-    approvedStateOptions[state] || select(locationHeadlineRotation, state),
-  );
+  buildLocationRentalHeadline(state, stateRentalOption(state));
 
 export const regionRentalHeadline = (
   region: string,

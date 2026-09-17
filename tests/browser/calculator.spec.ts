@@ -7,7 +7,7 @@ test("homepage calculator produces the published starting estimate", async ({
   const calculator = page.locator("#rental-calculator-form");
   await expect(calculator).toBeVisible();
   await calculator.getByLabel("State").selectOption("Washington");
-  await calculator.getByLabel("City").fill("Port Angeles");
+  await calculator.getByLabel("City").selectOption("Port Angeles");
   await calculator.getByLabel("ZIP code (optional)").fill("98362");
   await calculator.getByLabel("Equipment type").selectOption("mobile-kitchen");
   await calculator.getByLabel("Trailer length").selectOption("25");
@@ -62,12 +62,22 @@ test("calculator separates state, city and ZIP code with browser validation", as
   await page.goto("/rental-calculator/");
   const calculator = page.locator("#rental-calculator-form");
   await expect(calculator.locator('select[name="state"]')).toBeVisible();
-  await expect(calculator.locator('input[name="city"]')).toBeVisible();
+  const city = calculator.locator('select[name="city"]');
+  await expect(city).toBeVisible();
+  await expect(city).toBeDisabled();
   const zipCode = calculator.locator('input[name="zipCode"]');
   await expect(zipCode).toBeVisible();
   await expect(
     calculator.locator('select[name="state"] option[value="Washington"]'),
   ).toHaveCount(1);
+  await calculator.getByLabel("State").selectOption("Washington");
+  await expect(city).toBeEnabled();
+  await expect(city.locator('option[value="Port Angeles"]')).toHaveCount(1);
+  await city.selectOption("Port Angeles");
+  await calculator.getByLabel("State").selectOption("Alaska");
+  await expect(city).toHaveValue("");
+  await expect(city.locator('option[value="Port Angeles"]')).toHaveCount(0);
+  await expect(city.locator('option[value="Anchorage"]')).toHaveCount(1);
   await zipCode.fill("9836");
   expect(await zipCode.evaluate((input: HTMLInputElement) => input.checkValidity())).toBe(false);
   await zipCode.fill("98362");

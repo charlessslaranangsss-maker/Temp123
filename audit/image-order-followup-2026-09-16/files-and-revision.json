@@ -1,0 +1,57 @@
+{
+  "at": "2026-09-16T09:35:22.497Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseHEAD": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommit": false,
+  "deployed": false,
+  "deploymentUrl": null,
+  "deploymentId": null,
+  "newSnapshot": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\image-order-followup-20260916",
+  "baseSnapshot": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\owner-image-rollout-20260916",
+  "parentSourceFingerprint": "f4e2edf9462d7e9969a4ca2f142e8db0b8947fafbfe910dbde83b7f55496e2a7",
+  "sourceFingerprint": "f2270831321d02243f6778d4a27559f6a3b6d1d0f16d2fcd4ab07bd712d13c98",
+  "manifestSha256": "e2b4f1adca1fe28ee564673ee73a703e2f9df021d4eaf5f100258fc51bb3f11c",
+  "policySha256": "a6d254484922a68e1f1974a6d2f6952e84091625fc07005f7e143efd8ef070ad",
+  "visualReviewSha256": "91c22606be8a2349161e9eeeb4d03cf604daf3f596a63fd8fabe8c9aede3490b",
+  "changedFiles": [
+    {
+      "file": "src/galleryImageOrder.ts",
+      "sha256": "ef60737ecc6009c8d07f58751e28186afe4a43344aab97e5f899e56e3e027c38"
+    },
+    {
+      "file": "src/ServiceHeroCarousel.tsx",
+      "sha256": "d646a1865a376677994fec7173035a28d962b6d4d6dbd2f4605f770925b2fc7f"
+    },
+    {
+      "file": "src/locationCarouselImages.ts",
+      "sha256": "f6cc61c32f538559c416a58db8f61b94be14c1eecc68f4e8906997dc425555f8"
+    },
+    {
+      "file": "src/serviceHeroImages.ts",
+      "sha256": "602eb44a40061ac0a4d810eaa1784d67acfe0383fc641ed0ffa3226f4739a25f"
+    },
+    {
+      "file": "scripts/build-location-image-manifest.py",
+      "sha256": "2706329dca6191cf33a8d099cd18a70a5f0e5157e52048316f6c83422317ed9c"
+    },
+    {
+      "file": "content/verified-equipment-images.json",
+      "sha256": "e2b4f1adca1fe28ee564673ee73a703e2f9df021d4eaf5f100258fc51bb3f11c"
+    },
+    {
+      "file": "tests/galleryImageOrder.test.tsx",
+      "sha256": "9f0b48ecd70333875748b7693224891e81fba0c2acbf1318c0147d486a183338"
+    },
+    {
+      "file": "scripts/audit-gallery-order.mjs",
+      "sha256": "2d1b2d1dd49f26d213700877746a01db56d24f03b3df074fd38a1eefa5212623"
+    },
+    {
+      "file": "tests/browser/gallery-order-followup.spec.ts",
+      "sha256": "18988dd0b468a78facf94a26aa0c080175f9caa4e3595581300ca66020fd97f1"
+    }
+  ],
+  "sourceDrift": [],
+  "original4201PagesPreserved": 548
+}

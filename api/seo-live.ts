@@ -14,16 +14,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const snapshot = await createLiveSeoSnapshot();
-    res.setHeader("Cache-Control", "private, no-store, max-age=0");
-    res.setHeader("Pragma", "no-cache");
-    res.setHeader("Expires", "0");
+    res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=600");
     return res.status(200).json(snapshot);
-  } catch (error) {
+  } catch {
     console.error(JSON.stringify({ event: "seo_live_snapshot_failed" }));
     res.setHeader("Cache-Control", "private, no-store");
     return res.status(503).json({
       error: "Live SEO checks are temporarily unavailable.",
-      detail: error instanceof Error ? error.message : undefined,
     });
   }
 }

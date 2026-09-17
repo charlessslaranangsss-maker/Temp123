@@ -84,16 +84,17 @@ export function Home() {
               <br />
               <em>Rent or Lease Nationwide</em>
             </h1>
-            <p>
-              Rent or lease mobile commercial kitchens, shower and restroom
-              combination trailers, shower trailers, and sleeper or bunkbed
-              trailers. Supporting Temporary Facilities rental options include
-              laundry, dishwashing, refrigeration, restrooms and handwashing.
+            <p data-h1-intro>
+              Plan nationwide rental or leasing of temporary facilities around
+              the work your site needs to keep running. Compare commercial
+              kitchen trailers, hygiene facilities, crew accommodation and
+              supporting equipment by product type, then confirm the available
+              configuration, utilities, delivery access and rental period.
               For dedicated commercial kitchen and dishwashing rentals, visit{" "}
               <a href="https://temporarykitchens123.com/">
                 Temporary Kitchens 123
               </a>
-              . Emergency 24/7.
+              . Our rental team is available 24/7; dispatch timing requires confirmation.
             </p>
             <div className="rental-hero-actions">
               <a className="button home-primary" href="/contact-us/">

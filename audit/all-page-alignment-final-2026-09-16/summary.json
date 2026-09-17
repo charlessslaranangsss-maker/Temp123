@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-16T15:48:19.179Z",
+  "environment": "Local isolated build; not live deployment",
+  "origin": "http://127.0.0.1:4173",
+  "pages": 651,
+  "serviceAreaPages": 548,
+  "modalPresentations": 100,
+  "changedIntroductions": 651,
+  "unchangedReviewedIntroductions": 0,
+  "intentionalNoPhotoNavigation": 247,
+  "catalogueEntries": 25,
+  "catalogueWithOneReference": 15,
+  "catalogueWithMultipleImages": 5,
+  "catalogueHeld": 5,
+  "serviceEntries": 33,
+  "serviceEntriesHeld": 16,
+  "serviceCards": 9,
+  "assetsChecked": 416,
+  "pass": 448,
+  "fail": 303,
+  "problems": [],
+  "browserAcceptance": "Recorded separately; static PASS is not browser or live QA"
+}

@@ -7,6 +7,7 @@ export function pageSchema(input: {
   description: string;
   crumbs: { name: string; item: string }[];
   service?: boolean;
+  serviceType?: string;
   area?: { name: string; state?: string };
   image?: { src: string; alt: string; width?: number; height?: number };
 }) {
@@ -97,7 +98,7 @@ export function pageSchema(input: {
       name: input.title,
       description: input.description,
       provider: { "@id": organizationId },
-      serviceType: "Temporary facilities rental and lease",
+      serviceType: input.serviceType ?? "Temporary facilities rental and lease",
       areaServed: area,
     });
   if (input.crumbs.length)

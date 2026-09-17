@@ -2,6 +2,7 @@ import { citiesForRegion, hasCityGuide } from "./cityDirectory";
 import type { RegionGuide } from "./regionGuides";
 import { regionLocationLabel } from "./rentalHeadlines";
 import { statePath } from "./statePaths";
+import { LocationImageCarousel } from "./LocationImageCarousel";
 
 export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
   const cities = citiesForRegion(guide.path);
@@ -33,11 +34,12 @@ export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
               {regionLocationLabel(guide.region, guide.state)} Facility Rental
               Locations
             </h1>
-            <p>
-              Explore {cities.length} Census-listed {guide.region},{" "}
-              {guide.state}
-              locations. Select a linked city for a detailed rental guide, or
-              use the regional guide to plan facilities anywhere in this area.
+            <p data-h1-intro>
+              Browse {cities.length} Census-listed locations in{" "}
+              {regionLocationLabel(guide.region, guide.state)}. Select a linked
+              city for its equipment-specific rental guide, or open the regional
+              guide to plan a facility rental for another listed community.
+              Confirm the exact delivery address and site access with your request.
             </p>
             <a className="button secondary" href={guide.path}>
               View {guide.region} Rental Services
@@ -48,6 +50,11 @@ export function CityDirectoryPage({ guide }: { guide: RegionGuide }) {
             <span>locations</span>
           </div>
         </header>
+        <section className="city-directory-equipment" aria-label="Temporary facility equipment options">
+          <LocationImageCarousel
+            headline={`${regionLocationLabel(guide.region, guide.state)} Facility Rental Locations`}
+          />
+        </section>
         <div className="city-directory-toolbar">
           <label htmlFor="city-directory-search">Find a city</label>
           <input

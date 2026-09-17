@@ -1,0 +1,1085 @@
+{
+  "startedAt": "2026-09-16T06:34:30.259Z",
+  "origin": "https://temp123-nine.vercel.app",
+  "modals": [
+    {
+      "kind": "service-area-modal",
+      "state": "Alabama",
+      "exactTitle": "Alabama Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Alaska",
+      "exactTitle": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Arizona",
+      "exactTitle": "Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Arkansas",
+      "exactTitle": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "California",
+      "exactTitle": "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Colorado",
+      "exactTitle": "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Connecticut",
+      "exactTitle": "Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Delaware",
+      "exactTitle": "Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Florida",
+      "exactTitle": "Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Georgia",
+      "exactTitle": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Hawaii",
+      "exactTitle": "Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Idaho",
+      "exactTitle": "Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Illinois",
+      "exactTitle": "Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Indiana",
+      "exactTitle": "Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Iowa",
+      "exactTitle": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Kansas",
+      "exactTitle": "Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Kentucky",
+      "exactTitle": "Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Louisiana",
+      "exactTitle": "Louisiana Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Maine",
+      "exactTitle": "Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Maryland",
+      "exactTitle": "Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Massachusetts",
+      "exactTitle": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Michigan",
+      "exactTitle": "Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Minnesota",
+      "exactTitle": "Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Mississippi",
+      "exactTitle": "Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Missouri",
+      "exactTitle": "Missouri Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Montana",
+      "exactTitle": "Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Nebraska",
+      "exactTitle": "Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Nevada",
+      "exactTitle": "Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "New Hampshire",
+      "exactTitle": "New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "New Jersey",
+      "exactTitle": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "New Mexico",
+      "exactTitle": "New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "New York",
+      "exactTitle": "New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "North Carolina",
+      "exactTitle": "North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "North Dakota",
+      "exactTitle": "North Dakota Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Ohio",
+      "exactTitle": "Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Oklahoma",
+      "exactTitle": "Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Oregon",
+      "exactTitle": "Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Pennsylvania",
+      "exactTitle": "Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Rhode Island",
+      "exactTitle": "Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "South Carolina",
+      "exactTitle": "South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "South Dakota",
+      "exactTitle": "South Dakota Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Tennessee",
+      "exactTitle": "Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Texas",
+      "exactTitle": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Utah",
+      "exactTitle": "Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Vermont",
+      "exactTitle": "Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Virginia",
+      "exactTitle": "Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Washington",
+      "exactTitle": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "West Virginia",
+      "exactTitle": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Wisconsin",
+      "exactTitle": "Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "service-area-modal",
+      "state": "Wyoming",
+      "exactTitle": "Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Alabama",
+      "exactTitle": "Alabama Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Alaska",
+      "exactTitle": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Arizona",
+      "exactTitle": "Arizona Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Arkansas",
+      "exactTitle": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "California",
+      "exactTitle": "California Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Colorado",
+      "exactTitle": "Colorado Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Connecticut",
+      "exactTitle": "Connecticut Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Delaware",
+      "exactTitle": "Delaware Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Florida",
+      "exactTitle": "Florida Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Georgia",
+      "exactTitle": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Hawaii",
+      "exactTitle": "Hawaii Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Idaho",
+      "exactTitle": "Idaho Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Illinois",
+      "exactTitle": "Illinois Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Indiana",
+      "exactTitle": "Indiana Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Iowa",
+      "exactTitle": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Kansas",
+      "exactTitle": "Kansas Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Kentucky",
+      "exactTitle": "Kentucky Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Louisiana",
+      "exactTitle": "Louisiana Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Maine",
+      "exactTitle": "Maine Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Maryland",
+      "exactTitle": "Maryland Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Massachusetts",
+      "exactTitle": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Michigan",
+      "exactTitle": "Michigan Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Minnesota",
+      "exactTitle": "Minnesota Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Mississippi",
+      "exactTitle": "Mississippi Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Missouri",
+      "exactTitle": "Missouri Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Montana",
+      "exactTitle": "Montana Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Nebraska",
+      "exactTitle": "Nebraska Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Nevada",
+      "exactTitle": "Nevada Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "New Hampshire",
+      "exactTitle": "New Hampshire Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "New Jersey",
+      "exactTitle": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "New Mexico",
+      "exactTitle": "New Mexico Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "New York",
+      "exactTitle": "New York Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "North Carolina",
+      "exactTitle": "North Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "North Dakota",
+      "exactTitle": "North Dakota Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Ohio",
+      "exactTitle": "Ohio Workforce Housing Sleeper Bunk-Bed Facility Leasing",
+      "family": "sleeper-trailer",
+      "placeholder": false,
+      "viewCount": 1,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Oklahoma",
+      "exactTitle": "Oklahoma Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Oregon",
+      "exactTitle": "Oregon Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Pennsylvania",
+      "exactTitle": "Pennsylvania Institutional Facility Shower and Restroom Combination Trailer For Rent",
+      "family": "shower-restroom-combination",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Rhode Island",
+      "exactTitle": "Rhode Island Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+      "family": "ada-combination",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "South Carolina",
+      "exactTitle": "South Carolina Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "South Dakota",
+      "exactTitle": "South Dakota Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Tennessee",
+      "exactTitle": "Tennessee Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Texas",
+      "exactTitle": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Utah",
+      "exactTitle": "Utah Commercial Food Service Commercial Kitchen Modular Building For Rent",
+      "family": "kitchen-modular",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Vermont",
+      "exactTitle": "Vermont Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Virginia",
+      "exactTitle": "Virginia Construction Project Kitchen Emergency Trailer Rental",
+      "family": "mobile-kitchen",
+      "placeholder": false,
+      "viewCount": 5,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Washington",
+      "exactTitle": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "West Virginia",
+      "exactTitle": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "family": "unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Wisconsin",
+      "exactTitle": "Wisconsin Emergency Basecamp Shower Trailer Rental",
+      "family": "shower-trailer",
+      "placeholder": false,
+      "viewCount": 6,
+      "status": "PASS"
+    },
+    {
+      "kind": "homepage-modal",
+      "state": "Wyoming",
+      "exactTitle": "Wyoming Workforce Camp Laundry Temporary Facilities Long-Term Rental",
+      "family": "laundry-unspecified",
+      "placeholder": true,
+      "viewCount": 0,
+      "status": "PASS"
+    }
+  ],
+  "pages": [
+    {
+      "url": "/service-areas/",
+      "width": 1440,
+      "family": "unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/",
+      "width": 1440,
+      "family": "shower-trailer",
+      "status": "PASS",
+      "viewCount": 6
+    },
+    {
+      "url": "/service-areas/alabama/central-alabama/",
+      "width": 1440,
+      "family": "laundry-unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/gulf-coast/",
+      "width": 1440,
+      "family": "kitchen-modular",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/north-alabama/",
+      "width": 1440,
+      "family": "ada-combination",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/wiregrass/",
+      "width": 1440,
+      "family": "mobile-kitchen",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/alaska/arctic/",
+      "width": 1440,
+      "family": "sleeper-trailer",
+      "status": "PASS",
+      "viewCount": 1
+    },
+    {
+      "url": "/service-areas/arizona/",
+      "width": 1440,
+      "family": "shower-restroom-combination",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "width": 1440,
+      "family": "mobile-kitchen",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/washington/puget-sound/tacoma/",
+      "width": 1440,
+      "family": "sleeper-trailer",
+      "status": "PASS",
+      "viewCount": 1
+    },
+    {
+      "url": "/service-areas/alabama/central-alabama/cities/",
+      "width": 1440,
+      "family": "unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/",
+      "width": 390,
+      "family": "unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/",
+      "width": 390,
+      "family": "shower-trailer",
+      "status": "PASS",
+      "viewCount": 6
+    },
+    {
+      "url": "/service-areas/alabama/central-alabama/",
+      "width": 390,
+      "family": "laundry-unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/gulf-coast/",
+      "width": 390,
+      "family": "kitchen-modular",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/north-alabama/",
+      "width": 390,
+      "family": "ada-combination",
+      "status": "PASS",
+      "viewCount": 0
+    },
+    {
+      "url": "/service-areas/alabama/wiregrass/",
+      "width": 390,
+      "family": "mobile-kitchen",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/alaska/arctic/",
+      "width": 390,
+      "family": "sleeper-trailer",
+      "status": "PASS",
+      "viewCount": 1
+    },
+    {
+      "url": "/service-areas/arizona/",
+      "width": 390,
+      "family": "shower-restroom-combination",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "width": 390,
+      "family": "mobile-kitchen",
+      "status": "PASS",
+      "viewCount": 5
+    },
+    {
+      "url": "/service-areas/washington/puget-sound/tacoma/",
+      "width": 390,
+      "family": "sleeper-trailer",
+      "status": "PASS",
+      "viewCount": 1
+    },
+    {
+      "url": "/service-areas/alabama/central-alabama/cities/",
+      "width": 390,
+      "family": "unspecified",
+      "status": "PASS",
+      "viewCount": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "switch states while already open; close and reopen resets",
+      "status": "PASS"
+    },
+    {
+      "name": "live lightbox complete image, controls and focus at 1440",
+      "status": "PASS"
+    },
+    {
+      "name": "live lightbox complete image, controls and focus at 390",
+      "status": "PASS"
+    },
+    {
+      "name": "production 5.5-second autoplay, interaction pause and reduced motion",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "failedAssets": [],
+  "externalFailures": [],
+  "unexpectedWrites": [],
+  "completedAt": "2026-09-16T06:35:25.324Z"
+}

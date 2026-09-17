@@ -1,0 +1,1024 @@
+{
+  "reviewedAt": "2026-09-16",
+  "scope": "All 113 distinct original/fullSrc paths used by every carousel in the frozen 651-route build and both 50-state modal template collections.",
+  "rule": "The pictured unit space determines interior/exterior, not the filename, presence of a roof in the background, or a visible fixture.",
+  "images": [
+    {
+      "key": "V001",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+      "sha256": "dabab6914d03a327f753ae7074f3355b156e5325cbff71fa3dca2823299cdd46",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V002",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+      "sha256": "c8e61016692cc24ed87e1535eb1d0bdab31df836eed8301a227f2805021d8ab8",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V003",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+      "sha256": "13d11fc194e658fa5c5be33c3852191cec58b21c55db2108cd78c9949335c703",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Despite the interior filename, the full photo shows an external sink bank, trailer rear lights, stabilizers and warehouse floor.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V004",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+      "sha256": "7891e17e60628430980fd835fc4690a6d189017a7d86e7aad7840960bc1ad55a",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V005",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+      "sha256": "ea9f8d1cea1ede56e56f5ac0e706547f4decfd5b5a75076ea08db176377910da",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V006",
+      "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+      "sha256": "45b677c4b981464953cc49dbbfcec39c5ad82a23b6094f2b547fb4b3889da98e",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Externally accessed sink and mirror bank; trailer tail lights and warehouse floor are visible.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V007",
+      "src": "/images/catalog/restroom-trailers-960.webp",
+      "sha256": "703e00d32f1b70bf993a0652ae54a0e338aa86345b9fa08f846e07be067c6406",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Exterior catalogue reference; ADA room/access certification remains outside this view classification.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V008",
+      "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+      "sha256": "ee85c5176470af5e87fc10a0918d2a0e24be5a73eb645573733c80a5c89d969b",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Despite entry-steps in the filename, this photo shows an enclosed shower and toilet interior.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V009",
+      "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+      "sha256": "5c01e444dc88f976bfa395f817338fdca4765cf8be18394fa029cc8daf3e8a6c",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V010",
+      "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+      "sha256": "7db24ad2139ec43e362befc5a46d484a7e69f851b1d6cafe4a414c0a04af0925",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V011",
+      "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+      "sha256": "a1fd0e0d53b4d489ef53ad5af54f3571e9f298fa37dc79888a83351ba9e4563f",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V012",
+      "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+      "sha256": "e9df604dc15c6e80be25da73ae492955b09fc556aaf6f0e3d306085d5e82d441",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Despite private-shower-stall in the filename, the photo shows exterior doors, wheels and steps.",
+      "sheet": "assigned-01.jpg"
+    },
+    {
+      "key": "V013",
+      "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+      "sha256": "d845978efea5edbfc3d78e4b0e9c1cf0069fb4454fb26a6d7e39bddd118dd57c",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V014",
+      "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+      "sha256": "39709c2b240b98d0ebca67ac208726f2bc05acdb9957a523305dfc959ef75141",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V015",
+      "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+      "sha256": "dff88e39d64f5bc3f9bf9560c905bf0ced088cc41ba3cab3a596d40a8e4c56ba",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V016",
+      "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+      "sha256": "98a5ea41d685c77ba53495b3c92cd094c006dc48de4b3f0b9d11be1e1e784b2b",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V017",
+      "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+      "sha256": "40d9bf96b7be94de0552f1b44baa627a8bb59f0eff6c2c7805d175c877a1fcfd",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V018",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+      "sha256": "30ed74f6a1ad4d9343eb450ccd325c2a586d9968d356f6163badc99b981e3052",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V019",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+      "sha256": "fe6c68b1dc9123c64e49302d9f1481119b9209b3a9a4e7d3af0c2c5990221b7e",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V020",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+      "sha256": "30ed74f6a1ad4d9343eb450ccd325c2a586d9968d356f6163badc99b981e3052",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V021",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+      "sha256": "fe6c68b1dc9123c64e49302d9f1481119b9209b3a9a4e7d3af0c2c5990221b7e",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V022",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+      "sha256": "6867327e45f627a43cdc11948b927341f513dc8fd563045e6e912542c8dd85d6",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V023",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+      "sha256": "58083d08991a7762257ad0ba03fb22122b838e1497d804f7c853061d87463b02",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V024",
+      "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+      "sha256": "8f2f634239040859c87ae7205c3ab38c515b39f27a196a1900f6fea60eb0f13a",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-02.jpg"
+    },
+    {
+      "key": "V025",
+      "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+      "sha256": "f94926f0ae77d3870245322625fc2e7807d2ef6d14d5c10159dc0ff504c86106",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V026",
+      "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+      "sha256": "2c480cafdab7ea60ca7c401c1f66158da7a61d91e2d3bd4abc6aa483da0369de",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V027",
+      "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+      "sha256": "039811b7354f99e17078ceeb74c0daebff593dd2820661e11e737a8e3f629f4b",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V028",
+      "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png",
+      "sha256": "87e877cda19ee1b0f5d2cacd0e626519c14a0aec97c93b63aa98aec4f6238f56",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Interior reference shared with the container by April; classification does not change that narrow permission.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V029",
+      "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-stainless-steel-interior.png",
+      "sha256": "b5666e7c4ab955192cd524b086ec8d802c6679bb63c03077d8897f6049c81870",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V030",
+      "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/portable-refrigeration-trailer-exterior.png",
+      "sha256": "e9c8eac1a713a04ea72fb8016595e6394545dba575eb4cd0c19269c0427dd9c0",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V031",
+      "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-exterior.png",
+      "sha256": "6620814f30241303945e00f3a07e81affe47fd5f2d956506f973e76b197d56aa",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V032",
+      "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-fleet.png",
+      "sha256": "e6fafa4c81cad96b3682cef7854e1814bf9044ff5b2b29c5c28d6dcbc560d428",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V033",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/commercial-dish-trailer-stainless-workstation.png",
+      "sha256": "39da30a1422bb09192fd5f1f3dfc9751be9c4d8adafdd41c7e5c4a5cac9164e1",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V034",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-commercial-dishwasher.png",
+      "sha256": "c1a1858704083016552ddec7b10c16cc1dbd42d69a7deafe63676113fb1db637",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V035",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-handwashing-station.png",
+      "sha256": "f7bb29a4ce27d1d8e0209816d8a30938d029e0e30500ac35905970adf9f864a5",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V036",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-three-compartment-sink.png",
+      "sha256": "06a2358b959cba278011112fb69071b95fc817a349712120dcd57cc6734f7de2",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-03.jpg"
+    },
+    {
+      "key": "V037",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-utility-sink-storage-racks.png",
+      "sha256": "224f845e1e70d21eb73410b89b0f9e4e36b2d64b52ac3b12eeb04dd534ec1572",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V038",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dishwashing-trailer-wash-rinse-sanitize-sink.png",
+      "sha256": "98d052a0b070d3ddbd7f1532e4366f99c7f0ca1a97fc2146334d4b2a0d142e28",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V039",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/mobile-dish-trailer-interior.png",
+      "sha256": "1ea6f29f897bc6856d85bd5b8a8fda1cf4b09843c4a51c1265f5c88dd9cea633",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V040",
+      "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-rental-exterior.png",
+      "sha256": "8a3b778dc9d47a4d49bff92ea3c3454908524ac09670740bd7b0a4357287b03f",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V041",
+      "src": "/media/4b67ae2ec507c379fdf9a7e3.png",
+      "sha256": "66b284b0b2d2cbe2024bf757d9591b8cd19bd05cf8215aca083e0d368aec0650",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V042",
+      "src": "/media/599283a9ef6bf5d260ca0648.png",
+      "sha256": "eb7878505cbc80dc0891d970062233b0787ce63fde2f8f1257a0fa7dc25de3dd",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V043",
+      "src": "/media/16e1edca80af2743a382280b.png",
+      "sha256": "6cd01f0d794caa2b4c4c82b7f4ae4cf524827b3c62eb796423ee97f0032fb4a1",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V044",
+      "src": "/media/d4284cb63385949087e03ee9.png",
+      "sha256": "55591cc02b14c89b6c06a462e98cb3f6827ff22a36458a217def0b17329aaacf",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V045",
+      "src": "/media/9b8c1d6a8e92cd55cd909891.png",
+      "sha256": "30a2b994645e016a107c4dcfe0e81eee7ca5705c2e1c484061bec09f18be6a1c",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V046",
+      "src": "/media/6ec88e391d22b5c6ce13ebb3.png",
+      "sha256": "f6ae362cc4699e2b612d4115da7ce29a09b6be5a747e0f30facbdc41dfb71b7a",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V047",
+      "src": "/images/service-heroes/handwashing-sink-trailer/01-960.webp",
+      "sha256": "9d146ed0afbf2787c69f775bb33457a58d2fddbf90700f5984e5d4bea4ba8f7c",
+      "visualView": "exterior",
+      "previousDeclaredView": "detail",
+      "basis": "External handwashing trailer under an awning; prior detail label incorrectly implied an interior. View corrected to exterior only.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V048",
+      "src": "/images/service-heroes/handwashing-sink-trailer/02-960.webp",
+      "sha256": "06f0716512a430a8e7b941d53be57ec7439d257325bf3ed309a8a45f492f67c8",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-04.jpg"
+    },
+    {
+      "key": "V049",
+      "src": "/images/service-heroes/handwashing-sink-trailer/03-960.webp",
+      "sha256": "15bf28da165ff5389335dcf7e819bee3b7c13a7d36be91212a8fcef2f69c48e1",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V050",
+      "src": "/images/catalog/refrigerated-containers-960.webp",
+      "sha256": "a881a4293bdbc0e51fa804da866c5981b6091be532948a88afc34619e370cdd0",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V051",
+      "src": "/images/service-heroes/24ft-mobile-kitchen/01-960.webp",
+      "sha256": "c4e8cb544ee51d26165b4fb0746189daa8b0645938378ba1e8beb1e8bee41247",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V052",
+      "src": "/images/service-heroes/24ft-mobile-kitchen/03-960.webp",
+      "sha256": "a7e7ae570e7c1dbd054a1786fb57f053331f1b02819f17814214546ef1d9f3e1",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V053",
+      "src": "/images/service-heroes/24ft-mobile-kitchen/04-960.webp",
+      "sha256": "e3b313c56a060b9db3e91c49b483902c7e92ba0c6f9e74097721cadc91cf2089",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V054",
+      "src": "/images/service-heroes/24ft-mobile-kitchen/05-960.webp",
+      "sha256": "f496ef29a0e7191c52fc0081f9c9143c50da03a80c7ba504924dadc269bba866",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V055",
+      "src": "/images/service-heroes/24ft-mobile-kitchen/02-960.webp",
+      "sha256": "43580649687d344acaba318d6062e5b5986d988c9718d7943ffe23d927cb19a2",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V056",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/01-960.webp",
+      "sha256": "414d76f9b596f69b1bc6904110f28ce70355271902acfc15db65b85c2d454522",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V057",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/02-960.webp",
+      "sha256": "e582f6d43771bfc8012420430a4d409816090c6431d1fb1d51e91a0de8013f14",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V058",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/03-960.webp",
+      "sha256": "1e9f968e22d64c92c47c63bf72e4c2faf4e70e8c5ffb2da849859839c40c0fbc",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V059",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/05-960.webp",
+      "sha256": "de83cade87c7e7e0be42c9cba457936c1c30d08b318ffa946b6350ecfd777700",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V060",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/04-960.webp",
+      "sha256": "d8343e865b0162761dba44200a4d3cbd0e5218e558ecb15dcbc9bb0c3ede9b0e",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-05.jpg"
+    },
+    {
+      "key": "V061",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/06-960.webp",
+      "sha256": "8ac3b3a3f7bc44f9f263ff491de8f2f7184e4339aa78569dce0bc5c5199897fa",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V062",
+      "src": "/images/service-heroes/28ft-mobile-kitchen/07-960.webp",
+      "sha256": "0bfbb57f937298c1d41270ad874ae026fd12709ef8ca289ea5aeca206df0cad8",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V063",
+      "src": "/images/service-heroes/38ft-mobile-kitchen/01-960.webp",
+      "sha256": "f8ecdd84958f3ef366555bd62bfe72c2bd89236947efa78b5c76015e70491913",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V064",
+      "src": "/images/service-heroes/38ft-mobile-kitchen/02-960.webp",
+      "sha256": "96733cbe03e9ba350cb6be763263be392ddc1c7d2226820ed32cb4b994bb5495",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V065",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/01-960.webp",
+      "sha256": "696f170a01186beb28a00d5926d2a42810815c0e11f5f78a81f40f6861c38141",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V066",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/02-960.webp",
+      "sha256": "e326adca34fe9610ee4158a01c7421798b35582f92d0392af1399161a0f63e2a",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V067",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/03-960.webp",
+      "sha256": "1e9d269a4987f6601888050d77e42b267f4b6c0f609ccbad95f5f7fa7e84b084",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V068",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/04-960.webp",
+      "sha256": "24f2275527634ae7e86eeff12d0b445d503383074378545722cc0a088f301ba0",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V069",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/05-960.webp",
+      "sha256": "84db966966229dedc91d69e5fcd9e56b08e7451c5500d0ed049f588fe760880e",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V070",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/06-960.webp",
+      "sha256": "8eb7424a348cd66f489611be730a7152075c1c8795740497681292a980a12bca",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V071",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/07-960.webp",
+      "sha256": "e79da5e86b9b9bc71751ae374e8dcb3f44e698a415e974686da0b38cf4b1ef7b",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V072",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/08-960.webp",
+      "sha256": "b526ec0281b8327f1f0c5c1f54cf5facf5224c11af4973e89cdf1ec608e3985c",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-06.jpg"
+    },
+    {
+      "key": "V073",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/09-960.webp",
+      "sha256": "635ffed871045e2428c39733a0771b4cdac447467e5a32685e83cfa16af405d1",
+      "visualView": "plan",
+      "previousDeclaredView": "plan",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V074",
+      "src": "/images/service-heroes/40ft-mobile-kitchen/10-960.webp",
+      "sha256": "1bb3b756d68c55448ebc013039c71dca9720ac4f34da36e693e07e24a7389119",
+      "visualView": "plan",
+      "previousDeclaredView": "plan",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V075",
+      "src": "/images/service-heroes/40ft-combination-kitchen/01-960.webp",
+      "sha256": "5e71b0407fade42f071de1a1aebd6c9e4dc913eee3b408b75d4db0568a18dc6f",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V076",
+      "src": "/images/service-heroes/40ft-combination-kitchen/03-960.webp",
+      "sha256": "812d1326f66eaba8997888efe6feb758c76139e1abf3c4b924b23b75aadaaf93",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V077",
+      "src": "/images/service-heroes/40ft-combination-kitchen/04-960.webp",
+      "sha256": "f6f77a1f5fe3f72a7e9d030d6e54bb5d29eb9374a5d68be8d621863e231226ca",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V078",
+      "src": "/images/service-heroes/40ft-combination-kitchen/05-960.webp",
+      "sha256": "4c2897691db50c845fcefdde4e732b2a26ae02be385463a0609dc608fdf03950",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V079",
+      "src": "/images/service-heroes/40ft-combination-kitchen/06-960.webp",
+      "sha256": "b32d4278b2631f1819314d536626ebc45adf48ef872d4958c72f653778d8a15d",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V080",
+      "src": "/images/service-heroes/40ft-combination-kitchen/07-960.webp",
+      "sha256": "033fc713af0d291070f062b01650d678e11616ff29b7b637a54a5d9bc29a485c",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V081",
+      "src": "/images/service-heroes/40ft-combination-kitchen/08-960.webp",
+      "sha256": "c4df6c683e47f2d78b9c0e8ecb478fe231ee186549c6eeee4bbb70af04c69e80",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V082",
+      "src": "/images/service-heroes/40ft-combination-kitchen/09-960.webp",
+      "sha256": "a3a31cbeb0e23813bcd8465a5f1c727e370bb0c0a4df88e7462f3ae8bf299ae9",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V083",
+      "src": "/images/service-heroes/40ft-combination-kitchen/02-960.webp",
+      "sha256": "f04330e5ab0f6fea45906f9971d7b8ff1f1454803b71fc9f0a92bf0ef1969597",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V084",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/01-960.webp",
+      "sha256": "56e29830ec0c8a31fc05d7657de8a5410f041c5ca7b4838295c5c37f3d525f96",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-07.jpg"
+    },
+    {
+      "key": "V085",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/02-960.webp",
+      "sha256": "5e2c5e1cc430205ddb32f121a99fed80aa77bc447cf391eb47a36e5c592d4cea",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V086",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/03-960.webp",
+      "sha256": "3df0cbaab752687b0a59ab38198ee1eda4bbd1d8acba24fe6935d286b4742a76",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V087",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/04-960.webp",
+      "sha256": "c11dcbfb20857a27e3e7644b7da60826626aa16a36dd8b04e7a65ae722041f3b",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V088",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/05-960.webp",
+      "sha256": "1c42f1f1abd57446169a63411027e2c3f19df8c8127598a659fb188ba61a9c9c",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V089",
+      "src": "/images/service-heroes/40ft-bulk-combination-kitchen/06-960.webp",
+      "sha256": "eb2795038b2435f1f5f2133035474479c4013e5f25241b3fc165aa5815ab9c96",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V090",
+      "src": "/images/service-heroes/38ft-high-temp-dish/01-960.webp",
+      "sha256": "2ea9c91fe3075d62a7358f374fb4761a91e568a4d3926857ca8d4d158c1879ce",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V091",
+      "src": "/images/service-heroes/38ft-high-temp-dish/02-960.webp",
+      "sha256": "17189ad2a35b841fd414b76db7225ad6395b4baa5e246ec91e75a661e7e4b09d",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V092",
+      "src": "/images/service-heroes/38ft-high-temp-dish/03-960.webp",
+      "sha256": "2699bb8685650192b3d82b95eca3e98999fa6de7b9a870f5533c1ad10c1d6c7f",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V093",
+      "src": "/images/service-heroes/38ft-high-temp-dish/04-960.webp",
+      "sha256": "2f9c6a8491ea28b6b97b64b9024d4a1c7b1d190b0601e5888b673ee1a8eb7a2d",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V094",
+      "src": "/images/service-heroes/38ft-high-temp-dish/05-960.webp",
+      "sha256": "8afe8140134c340296ef0b6878c9248c18c73556fbcaab6c530c82c9b3b5789f",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V095",
+      "src": "/images/service-heroes/38ft-high-temp-dish/06-960.webp",
+      "sha256": "31fd43dc30f3c4129b1e506238d5c7eef2d7de2964e5545784fd528776a2d9c2",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V096",
+      "src": "/images/service-heroes/38ft-high-temp-dish/07-960.webp",
+      "sha256": "7797c02ad5aca68dabf2efeeb185710db7dfa754800b314a9bab08c85870a772",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-08.jpg"
+    },
+    {
+      "key": "V097",
+      "src": "/images/service-heroes/38ft-high-temp-dish/08-960.webp",
+      "sha256": "afe46d1ad8b2a37b14a08a546d44f257f44857b6b4b4c8255dfe8a896065b77d",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V098",
+      "src": "/images/service-heroes/38ft-high-temp-dish/09-960.webp",
+      "sha256": "c0b3c73390834a7fc84bcf63229562662ecc88e58b84f7a442dc98de38d58e47",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V099",
+      "src": "/images/service-heroes/38ft-high-temp-dish/10-960.webp",
+      "sha256": "18207539e8e86e7f00cccf2d5dee5124cc0400bce47f8157914a146ed1193255",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V100",
+      "src": "/images/service-heroes/20ft-shower-container/01-960.webp",
+      "sha256": "7537772dd50f1eb9261ab6ea8fc3b0761a8da0d77b721be43d321bbf8947d15b",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V101",
+      "src": "/images/service-heroes/20ft-shower-container/02-960.webp",
+      "sha256": "209bbe9d912b8d5bb3367baf2a307129c91e18cfccd4b9e90a482aed753b169a",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V102",
+      "src": "/images/service-heroes/20ft-shower-container/03-960.webp",
+      "sha256": "4caa95971c2f1aeaf9fa8d3e5d53e60fc6cb4f26073b2462a9b002e8bbf326a5",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V103",
+      "src": "/images/service-heroes/20ft-shower-container/04-960.webp",
+      "sha256": "046fe760e129a8efe853633456c0254477ef3e95a4276c688080b45b41d40a61",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V104",
+      "src": "/images/service-heroes/13ft-shower-restroom-combination/01-960.webp",
+      "sha256": "ee51ac5462c066ad3850f911d4a30edb3da27a8f9db0932d5a5e5c26d3051076",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V105",
+      "src": "/images/service-heroes/13ft-shower-restroom-combination/02-960.webp",
+      "sha256": "c95dacf7afd847e41765e1954f868190f62a1a13386f1198b2f77781a216f118",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V106",
+      "src": "/images/service-heroes/22ft-shower-restroom-combination/01-960.webp",
+      "sha256": "c4dcce1cd34f4f1a7855b9a43494a4e505b1a1e2a8c5ff061cd3654dcdb1f2c4",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V107",
+      "src": "/images/service-heroes/22ft-shower-restroom-combination/04-960.webp",
+      "sha256": "68dba6f854b637cf7adefab6e2cdccd5d0ddae012a0c8c7f17589fadc7e4971d",
+      "visualView": "interior",
+      "previousDeclaredView": "detail",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V108",
+      "src": "/images/service-heroes/22ft-shower-restroom-combination/02-960.webp",
+      "sha256": "39e4eaec59844302725bdbc238feb73e837aa7f0b64473264ca444b38aad7770",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-09.jpg"
+    },
+    {
+      "key": "V109",
+      "src": "/images/service-heroes/22ft-shower-restroom-combination/03-960.webp",
+      "sha256": "034e9196e75acb7b6e1d71b2acc80de8e311139149ebd42ad12dba816f82a173",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-10.jpg"
+    },
+    {
+      "key": "V110",
+      "src": "/images/service-heroes/22ft-shower-restroom-combination/05-960.webp",
+      "sha256": "572d25f6190725d2e3a2dcd0d1965e0a078d18ac96520aab96c43a3cf046adfc",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-10.jpg"
+    },
+    {
+      "key": "V111",
+      "src": "/images/service-heroes/30ft-shower-restroom-combination/01-960.webp",
+      "sha256": "e0ebd0ea30f539c2ddefdb734a6842ecd12a78e9f49269d1c5042e672b531c0a",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-10.jpg"
+    },
+    {
+      "key": "V112",
+      "src": "/media/1ac07501887589e4f0c3060e.png",
+      "sha256": "e25f268b05e06bcff1c2ab174a93f1aad7d406ccea8b52a9635940abd878e3e1",
+      "visualView": "exterior",
+      "previousDeclaredView": "exterior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-10.jpg"
+    },
+    {
+      "key": "V113",
+      "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-private-room.png",
+      "sha256": "1be33879c903b5341e6b25d4a6e675389587b151d16f41f6cd28980f221c3711",
+      "visualView": "interior",
+      "previousDeclaredView": "interior",
+      "basis": "Visually inspected full assigned photo in the numbered contact sheet.",
+      "sheet": "assigned-10.jpg"
+    }
+  ]
+}

@@ -2,8 +2,9 @@ import states from "./usStates.json" with { type: "json" };
 import { reviewedCityPages } from "./cityDirectory";
 import { StateGuideCards } from "./StateGuideCards";
 import { MapLocationDirectory } from "./MapLocationDirectory";
-import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { locationCarouselImages } from "./locationCarouselImages";
+import { LocationImageCarousel } from "./LocationImageCarousel";
+import { stateGuides } from "./stateGuides";
+import { stateRentalHeadline } from "./rentalHeadlines";
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 const callouts = [
@@ -168,6 +169,12 @@ export function CoverageMap({
   return (
     <>
       <figure className="coverage-map" aria-labelledby="coverage-map-title">
+        <script src="/service-hero-carousel.js" defer />
+        {Object.keys(stateGuides).map((name) => (
+          <template data-state-gallery-template={name} key={name}>
+            <LocationImageCarousel headline={stateRentalHeadline(name)} inert />
+          </template>
+        ))}
         <template id="map-state-guides">
           <StateGuideCards />
         </template>
@@ -263,6 +270,7 @@ export function CoverageMap({
             <p id="state-services-intro">
               Confirm rental availability for your project location.
             </p>
+            <div data-state-gallery-host />
             <a className="button" data-state-page href="/service-areas/">
               View state rental services ↗
             </a>
@@ -395,14 +403,7 @@ export function CoverageMap({
                     US
                   </span>
                 </div>
-                <ServiceHeroCarousel
-                  images={locationCarouselImages(
-                    "the selected state",
-                    "Commercial basecamp temporary facility rental",
-                  )}
-                  label="Temporary123 commercial basecamp equipment"
-                  caption="Verified Temporary123 equipment references for statewide commercial and institutional project planning. Availability and the assigned unit must be confirmed before booking."
-                />
+                <div data-state-gallery-host />
               </section>
 
               <section

@@ -1,5 +1,6 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { load } from "cheerio";
 import { StateDetail } from "../src/StateDetail";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
@@ -49,9 +50,13 @@ describe("state and regional planning content", () => {
         guide.fact,
         seasonalCopy(guide.seasonal),
       ].join(" ");
-      const visibleCopy = renderToStaticMarkup(
-        createElement(StateDetail, { name: state }),
-      ).replace(/<[^>]*>/g, " ");
+      const $ = load(
+        renderToStaticMarkup(createElement(StateDetail, { name: state })),
+      );
+      // The editorial reading-length limit must not count image navigation UI,
+      // repeated view labels or the required photography-pending message.
+      $("[data-location-gallery], [data-service-carousel]").remove();
+      const visibleCopy = ($("body").html() || "").replace(/<[^>]*>/g, " ");
       expect(words(visibleCopy), state).toBeGreaterThanOrEqual(250);
       expect(words(visibleCopy), state).toBeLessThanOrEqual(500);
       expect(guide.seasonal.code, state).toBeGreaterThanOrEqual(1);

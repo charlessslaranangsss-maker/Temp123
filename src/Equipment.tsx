@@ -1,3 +1,6 @@
+import { resolveLocationGallery } from "./locationCarouselImages";
+import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
 import site from "../site.json" with { type: "json" };
 
 type EquipmentCard = {
@@ -29,7 +32,9 @@ export const equipment: EquipmentCard[] = [
   {
     name: "Dishwashing",
     path: "/portable-dishwashing-trailer-rental/",
-    image: "/media/4723f18940a45f69bd1c8483.webp",
+    image: "/images/service-heroes/38ft-high-temp-dish/01-960.webp",
+    smallImage: "/images/service-heroes/38ft-high-temp-dish/01-480.webp",
+    imageAlt: "Commercial dishwashing machine inside a mobile dishwashing trailer",
     category: "Food sanitation",
     text: "Rent a dishwashing trailer and keep high-volume food service sanitary, organized and moving.",
     detail:
@@ -50,8 +55,9 @@ export const equipment: EquipmentCard[] = [
   {
     name: "Shower",
     path: "/equipment-rental/shower-trailer/",
-    image: "/images/catalog/temporary-shower-trailers-960.webp",
-    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
+    image: "/images/catalog/shower-trailer-960.webp",
+    smallImage: "/images/catalog/shower-trailer-480.webp",
+    imageAlt: "Private shower-only stall inside a shower trailer",
     category: "Hygiene facilities",
     text: "Rent a 22 ft shower trailer with 10 stalls or a 20 ft shower container with 5 stalls for construction crews, man camps and emergency base camps.",
     detail:
@@ -63,17 +69,19 @@ export const equipment: EquipmentCard[] = [
     path: "/equipment-rental/restroom-trailers/",
     image: "/images/catalog/restroom-trailers-960.webp",
     smallImage: "/images/catalog/restroom-trailers-480.webp",
+    imageAlt: "Shower and restroom combination unit shown as a reference; restroom-only configuration not pictured",
     category: "Site amenities",
-    text: "Rent clean temporary restrooms for crews, guests and active field operations.",
+    text: "Plan temporary restroom facilities for crews, guests and active field operations. Confirm the available restroom-only configuration before booking.",
     detail:
-      "Restroom rental configurations match our shower and restroom combination trailers: 13 ft with 3 stalls, 22 ft with 6 stalls, and 30 ft with 8 stalls. Accessible options include 3 stalls plus 1 ADA stall and 8 stalls plus 1 ADA stall. Confirm the available floor plan with the rental team.",
+      "For a restroom-only request, confirm the available unit, stall count, accessibility and floor plan with the rental team. Matching restroom-only photography is pending; separate shower/restroom combination trailers are listed in their own equipment category.",
     tags: ["Restrooms", "Accessibility", "Site support"],
   },
   {
     name: "Shower and Restroom Combination Trailers",
     path: "/services/shower-restroom-combination-trailers/",
-    image: "/images/catalog/temporary-shower-trailers-960.webp",
-    smallImage: "/images/catalog/temporary-shower-trailers-480.webp",
+    image: "/images/catalog/restroom-trailers-960.webp",
+    smallImage: "/images/catalog/restroom-trailers-480.webp",
+    imageAlt: "Shower and restroom combination trailer reference, not a shower-only unit",
     category: "Combined hygiene facilities",
     text: "Rent luxury shower and restroom combination trailers with clearly listed stall capacities for temporary sites and crew accommodation.",
     detail:
@@ -94,8 +102,9 @@ export const equipment: EquipmentCard[] = [
   {
     name: "Laundry",
     path: "/equipment-rental/laundry-trailers/",
-    image: "/images/catalog/laundry-trailers-960.webp",
-    smallImage: "/images/catalog/laundry-trailers-480.webp",
+    image: "/images/service-heroes/30ft-laundry-trailer/01-960.webp",
+    smallImage: "/images/service-heroes/30ft-laundry-trailer/01-480.webp",
+    imageAlt: "Rows of washers and dryers inside a mobile laundry trailer",
     category: "Workforce support",
     text: "Rent mobile laundry capacity for base camps, response teams and extended projects.",
     detail:
@@ -105,8 +114,9 @@ export const equipment: EquipmentCard[] = [
   {
     name: "Handwashing Trailers",
     path: "/equipment-rental/handwashing-stations/",
-    image: "/images/catalog/handwashing-stations-960.webp",
-    smallImage: "/images/catalog/handwashing-stations-480.webp",
+    image: "/images/service-heroes/handwashing-sink-trailer/01-960.webp",
+    smallImage: "/images/service-heroes/handwashing-sink-trailer/01-480.webp",
+    imageAlt: "Portable handwashing trailer with multiple sinks under an open service canopy",
     category: "Hygiene facilities",
     text: "Rent handwashing trailers that put convenient hygiene access where people need it most.",
     detail:
@@ -114,6 +124,24 @@ export const equipment: EquipmentCard[] = [
     tags: ["Hand hygiene", "Site safety", "Portable facilities"],
   },
 ];
+
+const cardTitles: Record<string, string> = {
+  "Mobile Kitchens": "24 ft Mobile Kitchen Trailer", "Dishwashing": "Dishwashing Trailer",
+  "Refrigeration": "20 ft Refrigerated Trailer", "Shower": "20 ft Shower Trailer",
+  "Restroom": "Restroom Trailer", "Shower and Restroom Combination Trailers": "Shower and Restroom Combination Trailer",
+  "Sleeper": "Two-Stall Sleeper Trailer", "Laundry": "30 ft Laundry Trailer", "Handwashing Trailers": "Handwashing Sink Trailer"
+};
+function cardGallery(name: string) { return resolveLocationGallery(cardTitles[name] || name); }
+export function equipmentGalleryForPath(path: string) {
+  const item = equipment.find((entry) => entry.path === path);
+  return cardGallery(item?.name || "Unknown equipment");
+}
+for (const item of equipment) {
+  const photo = cardGallery(item.name).images[0];
+  item.image = photo?.src || "";
+  item.smallImage = photo?.thumbnail;
+  item.imageAlt = photo?.alt || "Verified restroom-only photography coming soon";
+}
 
 export function EquipmentImage({
   image,
@@ -197,14 +225,26 @@ const homepagePhotos = [
 const homepageEquipment: EquipmentCard[] = equipment.map((item, index) => ({
   ...item,
   name: homepagePhotos[index][0],
-  image: homepagePhotos[index][1],
+  // Preserve Charles's explicitly approved shower thumbnail; other cards use
+  // the same current category mapping as Services, never a legacy mixed unit.
+  image:
+    index === 3
+      ? homepagePhotos[index][1]
+      : index === 4
+        ? "/images/location-verified/5ecedc2b7190aeb0b3f7-960.webp"
+        : item.image,
   smallImage:
     index === 3
       ? "/images/catalog/shower-trailer-480.webp"
       : index === 4
-        ? "/images/catalog/restroom-trailers-480.webp"
-        : undefined,
-  imageAlt: homepagePhotos[index][2],
+        ? "/images/location-verified/5ecedc2b7190aeb0b3f7-480.webp"
+        : item.smallImage,
+  imageAlt:
+    index === 3
+      ? homepagePhotos[index][2]
+      : index === 4
+        ? "Toilet interior in a shower and restroom combination trailer; restroom-only unit not pictured"
+        : item.imageAlt,
 }));
 
 export function Cards({
@@ -269,11 +309,7 @@ export function Cards({
             <h3>
               <a href={e.path}>{e.name}</a>
             </h3>
-            {homepage && i === 4 && (
-              <span className="representative-photo-note">
-                Representative shower + restroom configuration
-              </span>
-            )}
+            {homepage && i === 4 && <span className="representative-photo-note">Photo shows a shower + restroom combination unit</span>}
             <p>{e.text}</p>
             {e.secondaryName && e.secondaryPath && (
               <a className="related-card-service" href={e.secondaryPath}>
@@ -320,13 +356,7 @@ export function Cards({
               Close <span aria-hidden="true">×</span>
             </button>
             <div className="dialog-grid">
-              {!homepage && (
-                <EquipmentImage
-                  image={e.image}
-                  smallImage={e.smallImage}
-                  alt={e.name}
-                />
-              )}
+              {equipmentGalleryForPath(e.path).images.length ? <ServiceHeroCarousel images={equipmentGalleryForPath(e.path).images} label={e.name} lightboxLabel={equipmentGalleryForPath(e.path).groups[0]?.headline || e.name} caption={referenceCaptionForModel(equipmentGalleryForPath(e.path).modelId)} deferLoading /> : <div className="verified-photo-pending"><strong>Verified photography coming soon</strong><p>Matching equipment photographs are not yet verified.</p></div>}
               <div className="dialog-copy">
                 <span className="eyebrow">{e.category}</span>
                 <h2 id={`equipment-title-${i}`}>{e.name}</h2>
@@ -349,11 +379,11 @@ export function Cards({
                 <a
                   className="button dialog-call-now"
                   href={`tel:${site.phoneE164}`}
-                  aria-label={`Call now, kitchen specialist available 24/7 at ${site.phoneDisplay}`}
+                  aria-label={`Call now, rental specialist available 24/7 at ${site.phoneDisplay}`}
                 >
                   <span className="dialog-call-label">
                     <strong>Call Now</strong>
-                    <small>Kitchen specialist · 24/7</small>
+                    <small>Rental specialist · 24/7</small>
                   </span>
                   <span className="dialog-call-number">
                     {site.phoneDisplay}

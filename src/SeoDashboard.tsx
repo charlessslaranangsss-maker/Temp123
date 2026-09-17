@@ -12,12 +12,50 @@ type LivePageCheck = {
   error: string | null;
 };
 
+type ProviderState = "connected" | "not_configured" | "error";
+
+type AuthorityProviderResult = {
+  state: ProviderState;
+  checkedAt: string | null;
+  domain: string;
+  metric: "Ahrefs DR" | "Moz DA";
+  score: number | null;
+  pageAuthority?: number | null;
+  source: string;
+  error?: string;
+};
+
+type GoogleInspectionResult = {
+  url: string;
+  indexed: boolean | null;
+  verdict: string;
+  coverageState: string;
+  indexingState: string;
+  lastCrawlTime: string | null;
+  pageFetchState: string;
+  googleCanonical: string | null;
+  userCanonical: string | null;
+  inspectionResultLink: string | null;
+  error: string | null;
+};
+
 type LiveSnapshot = {
   generatedAt: string;
   refreshSeconds: number;
   production: { homepage: LivePageCheck; robots: { status: number | null }; sitemap: { status: number | null; entries: number; url: string } };
   preview: { homepage: LivePageCheck; robots: { status: number | null }; sitemap: { status: number | null; entries: number; url: string } };
   priorityUrls: Array<{ rank: number; production: LivePageCheck; preview: LivePageCheck }>;
+  providers: {
+    ahrefs: AuthorityProviderResult;
+    moz: AuthorityProviderResult;
+    searchConsole: {
+      state: ProviderState;
+      checkedAt: string | null;
+      siteUrl: string | null;
+      urls: GoogleInspectionResult[];
+      error?: string;
+    };
+  };
 };
 
 type DomainAuthoritySite = {
@@ -31,6 +69,57 @@ type DomainAuthoritySite = {
   source: string;
   checkedAt: string;
   searchConsole: string;
+};
+
+type DiagnosticState = "healthy" | "warning" | "error" | "not_configured";
+type DiagnosticPoint = { at: string; value: number };
+type DiagnosticSnapshot = {
+  generatedAt: string;
+  frequencyHours: 12;
+  origin: string;
+  locationHealth: {
+    state: DiagnosticState;
+    truncated?: boolean;
+    checked: number;
+    errors: number;
+    notFound: number;
+    serverErrors: number;
+    samples: string[];
+    history: DiagnosticPoint[];
+  };
+  contentCompleteness: {
+    state: DiagnosticState;
+    checked: number;
+    incomplete: number;
+    requiredFields: string[];
+    source: string;
+    error?: string;
+    history: DiagnosticPoint[];
+  };
+  firestoreHealth?: {
+    state: DiagnosticState; connected: boolean; latencyMs: number | null; checked: number; broken: number;
+    missingStateId: number; emptyContent: number; collection: string; error?: string; history: DiagnosticPoint[];
+  };
+  hosting404s?: {
+    state: DiagnosticState; total: number | null; source: string;
+    urls: Array<{ url: string; count: number; lastSeen: string | null }>;
+    error?: string; history: DiagnosticPoint[];
+  };
+  googleIndexing: {
+    state: DiagnosticState;
+    submitted: number | null;
+    indexed: number | null;
+    nonIndexed: number | null;
+    source: string;
+    error?: string;
+    history: DiagnosticPoint[];
+  };
+};
+
+type DiagnosticsEnvelope = {
+  latest: DiagnosticSnapshot | null;
+  schedule: string;
+  configured: boolean;
 };
 
 export const domainAuthoritySites: DomainAuthoritySite[] = [
@@ -58,14 +147,64 @@ function evidenceClass(kind: EvidenceKind) {
   return kind.toLowerCase();
 }
 
+function providerLabel(state: ProviderState | undefined) {
+  if (state === "connected") return "Live provider data";
+  if (state === "error") return "Provider check failed";
+  return "Not connected";
+}
+
+function providerEvidenceClass(state: ProviderState | undefined) {
+  if (state === "connected") return "live";
+  if (state === "error") return "unknown";
+  return "manual";
+}
+
+function formatProviderDate(value: string | null | undefined) {
+  return value ? new Date(value).toLocaleString("en-US") : "Not checked";
+}
+
 function checkerUrl(provider: "Ahrefs" | "Moz", domain: string) {
   return provider === "Ahrefs"
     ? `https://ahrefs.com/website-authority-checker?target=${encodeURIComponent(domain)}`
     : "https://moz.com/domain-analysis";
 }
 
+function TrendChart({ points, label }: { points: DiagnosticPoint[]; label: string }) {
+  const recent = points.slice(-12);
+  if (recent.length < 2) {
+    return <div className="diagnostic-empty-chart">Trend begins after two scheduled runs</div>;
+  }
+  const values = recent.map((point) => point.value);
+  const max = Math.max(...values, 1);
+  const min = Math.min(...values, 0);
+  const range = Math.max(max - min, 1);
+  const polyline = recent.map((point, index) => {
+    const x = 8 + (index / (recent.length - 1)) * 304;
+    const y = 84 - ((point.value - min) / range) * 72;
+    return `${x},${y}`;
+  }).join(" ");
+  return (
+    <svg className="diagnostic-chart" viewBox="0 0 320 92" role="img" aria-label={label}>
+      <line x1="8" y1="84" x2="312" y2="84" />
+      <line x1="8" y1="12" x2="312" y2="12" />
+      <polyline points={polyline} />
+    </svg>
+  );
+}
+
 export function SeoDashboard() {
+  const tabs = ["diagnostics", "indexing", "domain-authority", "overview", "portfolio", "authority", "workflow"] as const;
+  type DashboardTab = typeof tabs[number];
+  const [activeTab, setActiveTab] = useState<DashboardTab>(() => {
+    const hash = typeof window === "undefined" ? "" : window.location.hash.slice(1);
+    return tabs.find((tab) => tab === hash) ?? "diagnostics";
+  });
+  const selectTab = (tab: DashboardTab) => {
+    setActiveTab(tab);
+    window.history.replaceState(null, "", `#${tab}`);
+  };
   const [live, setLive] = useState<LiveSnapshot | null>(null);
+  const [diagnostics, setDiagnostics] = useState<DiagnosticsEnvelope | null>(null);
   const [liveError, setLiveError] = useState<string | null>(null);
   // This route is prerendered. Keep the server HTML recoverable until the
   // dashboard-only hydration in main.tsx attaches the live controls.
@@ -73,13 +212,14 @@ export function SeoDashboard() {
   const refreshLiveData = useCallback(async () => {
     setRefreshing(true);
     try {
-      const response = await fetch("/api/seo-live", {
-        cache: "no-store",
-        signal: AbortSignal.timeout(25_000),
-      });
-      if (!response.ok) throw new Error(`Live endpoint returned ${response.status}`);
-      setLive((await response.json()) as LiveSnapshot);
-      setLiveError(null);
+      const results = await Promise.allSettled([
+        fetch("/api/seo-live", { cache: "no-store", signal: AbortSignal.timeout(25_000) }).then(async (response) => { if (!response.ok) throw new Error(`Live endpoint returned ${response.status}`); return response.json() as Promise<LiveSnapshot>; }),
+        fetch("/api/seo-diagnostics", { cache: "no-store", signal: AbortSignal.timeout(25_000) }).then(async (response) => { if (!response.ok) throw new Error(`Diagnostics endpoint returned ${response.status}`); return response.json() as Promise<DiagnosticsEnvelope>; }),
+      ]);
+      if (results[0].status === "fulfilled") setLive(results[0].value);
+      if (results[1].status === "fulfilled") setDiagnostics(results[1].value);
+      const errors = results.filter((result): result is PromiseRejectedResult => result.status === "rejected").map((result) => result.reason instanceof Error ? result.reason.message : "A live check failed");
+      setLiveError(errors.length ? errors.join("; ") : null);
     } catch (error) {
       setLiveError(error instanceof Error ? error.message : "Live checks failed");
     } finally {
@@ -97,6 +237,10 @@ export function SeoDashboard() {
     () => new Map(live?.priorityUrls.map((row) => [row.rank, row]) || []),
     [live],
   );
+  const googleByUrl = useMemo(
+    () => new Map(live?.providers?.searchConsole.urls.map((row) => [row.url, row]) || []),
+    [live],
+  );
   const staticMissingExactUrls = authorityTop25.filter(
     (row) => row.exactSlugStatus === "Missing",
   ).length;
@@ -106,9 +250,48 @@ export function SeoDashboard() {
   const missingExactUrls = livePreserved == null
     ? staticMissingExactUrls
     : authorityTop25.length - livePreserved;
-  const googleVerified = authorityTop25.filter(
-    (row) => row.googleIndexStatus !== "Unknown",
-  ).length;
+  const googleVerified = live?.providers?.searchConsole.urls.filter(
+    (row) => row.indexed === true,
+  ).length ?? 0;
+  const googleNotIndexed = live?.providers?.searchConsole.urls.filter(
+    (row) => row.indexed === false,
+  ).length ?? 0;
+  const googleUnknown = authorityTop25.length - googleVerified - googleNotIndexed;
+  const authorityRows = [
+    {
+      key: "ahrefs",
+      domain: "temporary123.com",
+      siteType: "Multi-service temporary facilities",
+      metric: "Ahrefs DR",
+      score: live?.providers?.ahrefs.score ?? null,
+      evidence: providerLabel(live?.providers?.ahrefs.state),
+      evidenceClass: providerEvidenceClass(live?.providers?.ahrefs.state),
+      source: live?.providers?.ahrefs.error || live?.providers?.ahrefs.source || "Server-side Ahrefs API adapter",
+      checkedAt: formatProviderDate(live?.providers?.ahrefs.checkedAt),
+    },
+    {
+      key: "moz",
+      domain: "temporary123.com",
+      siteType: "Multi-service temporary facilities",
+      metric: "Moz DA",
+      score: live?.providers?.moz.score ?? null,
+      evidence: providerLabel(live?.providers?.moz.state),
+      evidenceClass: providerEvidenceClass(live?.providers?.moz.state),
+      source: live?.providers?.moz.error || live?.providers?.moz.source || "Server-side Moz API adapter",
+      checkedAt: formatProviderDate(live?.providers?.moz.checkedAt),
+    },
+    {
+      key: "manual",
+      domain: "temporary123.com",
+      siteType: "Multi-service temporary facilities",
+      metric: "Owner-provided DA baseline",
+      score: 32,
+      evidence: "Manual, unverified",
+      evidenceClass: "manual",
+      source: "Owner-provided baseline; retained separately from live provider metrics",
+      checkedAt: "Unknown",
+    },
+  ];
   const checks = live ? [
     {
       label: "Preview homepage availability",
@@ -159,13 +342,18 @@ export function SeoDashboard() {
           Temporary<span>123</span>
         </a>
         <p>SEO evidence center</p>
-        <nav aria-label="Dashboard sections">
-          <a href="#indexing">Google status</a>
-          <a href="#domain-authority">Authority metrics</a>
-          <a href="#overview">Overview</a>
-          <a href="#portfolio">Portfolio readiness</a>
-          <a href="#authority">Protected URLs</a>
-          <a href="#workflow">Next checks</a>
+        <nav role="tablist" aria-label="Dashboard sections">
+          {([[
+            "diagnostics", "12-hour diagnostics"],
+            ["indexing", "Google status"],
+            ["domain-authority", "Authority metrics"],
+            ["overview", "Overview"],
+            ["portfolio", "Portfolio readiness"],
+            ["authority", "Protected URLs"],
+            ["workflow", "Next checks"],
+          ] as const).map(([id, label]) => (
+            <button key={id} id={`seo-tab-${id}`} type="button" role="tab" aria-selected={activeTab === id} aria-controls={id} tabIndex={0} onClick={() => selectTab(id)}>{label}</button>
+          ))}
         </nav>
         <a className="seo-back" href="/">
           ← Return to website
@@ -179,11 +367,14 @@ export function SeoDashboard() {
               OWNER-VISIBLE · EVIDENCE LABELED
             </span>
             <h1>SEO Migration Dashboard</h1>
-            <p>
-              Temporary123 · Top-25 authority pilot and preview crawl status
+            <p data-h1-intro>
+              Review Temporary123 migration evidence, protected URLs and preview
+              crawl checks. Indexing and authority values remain unknown until
+              supported by their connected providers; a successful HTTP check is
+              not proof of Google indexing.
             </p>
           </div>
-          <span className="seo-mode">LIVE HTTP · AUTO REFRESH 5 MIN</span>
+          <span className="seo-mode">LIVE HTTP · PROVIDERS CACHED 6 HOURS</span>
         </header>
 
         <div className="seo-live-controls" role="status" aria-live="polite">
@@ -208,7 +399,93 @@ export function SeoDashboard() {
           confidential exports or credentials until an owner access gate exists.
         </div>
 
-        <section id="overview" className="seo-section seo-order-overview">
+        <section id="diagnostics" role="tabpanel" aria-labelledby="seo-tab-diagnostics" hidden={activeTab !== "diagnostics"} className="seo-section seo-order-diagnostics">
+          <div className="diagnostic-heading">
+            <div>
+              <span className="seo-eyebrow">BOSS PRIORITY · AUTOMATED EVERY 12 HOURS</span>
+              <h2>Programmatic SEO diagnostics</h2>
+              <p>Three decision-ready signals first. Detailed URL evidence remains below.</p>
+            </div>
+            <span className="diagnostic-run-time">
+              {diagnostics?.latest
+                ? `Last run ${new Date(diagnostics.latest.generatedAt).toLocaleString("en-US")}`
+                : "Awaiting first scheduled run"}
+            </span>
+          </div>
+          <div className="diagnostic-grid">
+            <article className={`diagnostic-card ${diagnostics?.latest?.firestoreHealth?.state ?? "not_configured"}`}>
+              <div className="diagnostic-card-top"><span>Firestore city data health</span><b>{diagnostics?.latest?.firestoreHealth?.connected ? diagnostics.latest.firestoreHealth.broken : "—"}</b></div>
+              <p>Unique cities missing stateId or content</p>
+              <TrendChart points={diagnostics?.latest?.firestoreHealth?.history ?? []} label="Broken Firestore city trend" />
+              <div className="diagnostic-details">
+                <span>Checked <strong>{diagnostics?.latest?.firestoreHealth?.connected ? diagnostics.latest.firestoreHealth.checked : "—"}</strong></span>
+                <span>Missing state <strong>{diagnostics?.latest?.firestoreHealth?.connected ? diagnostics.latest.firestoreHealth.missingStateId : "—"}</strong></span>
+                <span>Empty content <strong>{diagnostics?.latest?.firestoreHealth?.connected ? diagnostics.latest.firestoreHealth.emptyContent : "—"}</strong></span>
+                <span className="diagnostic-wide">{diagnostics?.latest?.firestoreHealth?.connected ? `Connected · Firestore fetch ${diagnostics.latest.firestoreHealth.latencyMs} ms` : diagnostics?.latest?.firestoreHealth?.error || "Awaiting first run"}</span>
+              </div>
+            </article>
+            <article className={`diagnostic-card ${diagnostics?.latest?.hosting404s?.state ?? "not_configured"}`}>
+              <div className="diagnostic-card-top"><span>Firebase Hosting 404 requests</span><b>{diagnostics?.latest?.hosting404s?.total ?? "—"}</b></div>
+              <p>Top paths in recent Cloud Logging entries; Vercel traffic is not included</p>
+              <TrendChart points={diagnostics?.latest?.hosting404s?.history ?? []} label="Firebase Hosting 404 trend" />
+              <div className="diagnostic-details">
+                {diagnostics?.latest?.hosting404s?.urls.map((row) => <span className="diagnostic-wide" key={row.url}>{row.url} <strong>×{row.count}</strong></span>)}
+                <span className="diagnostic-wide">{diagnostics?.latest?.hosting404s?.error || diagnostics?.latest?.hosting404s?.source || "Awaiting first run"}</span>
+              </div>
+            </article>
+            <article className={`diagnostic-card ${diagnostics?.latest?.locationHealth.state ?? "not_configured"}`}>
+              <div className="diagnostic-card-top">
+                <span>Location URL failures</span>
+                <b>{diagnostics?.latest?.locationHealth.errors ?? "—"}</b>
+              </div>
+              <p>Non-2xx responses across sampled sitemap location URLs</p>
+              <TrendChart points={diagnostics?.latest?.locationHealth.history ?? []} label="Location URL error trend" />
+              <div className="diagnostic-details">
+                <span>Checked <strong>{diagnostics?.latest?.locationHealth.checked ?? "—"}</strong></span>
+                <span>404 <strong>{diagnostics?.latest?.locationHealth.notFound ?? "—"}</strong></span>
+                <span>5xx <strong>{diagnostics?.latest?.locationHealth.serverErrors ?? "—"}</strong></span>
+                {diagnostics?.latest?.locationHealth.truncated && <span className="diagnostic-wide">First 500 URLs only; this is not a full-site audit</span>}
+              </div>
+            </article>
+
+            <article className={`diagnostic-card ${diagnostics?.latest?.contentCompleteness.state ?? "not_configured"}`}>
+              <div className="diagnostic-card-top">
+                <span>Incomplete content rows</span>
+                <b>{diagnostics?.latest?.contentCompleteness.incomplete ?? "—"}</b>
+              </div>
+              <p>Null or empty required fields in the configured content database</p>
+              <TrendChart points={diagnostics?.latest?.contentCompleteness.history ?? []} label="Incomplete content row trend" />
+              <div className="diagnostic-details">
+                <span>Rows checked <strong>{diagnostics?.latest?.contentCompleteness.checked ?? "—"}</strong></span>
+                <span className="diagnostic-wide">
+                  {diagnostics?.latest?.contentCompleteness.state === "not_configured"
+                    ? "Connect SEO_CONTENT_DATABASE_PATH"
+                    : diagnostics?.latest?.contentCompleteness.requiredFields.join(", ") || "Awaiting run"}
+                </span>
+              </div>
+            </article>
+
+            <article className={`diagnostic-card ${diagnostics?.latest?.googleIndexing.state ?? "not_configured"}`}>
+              <div className="diagnostic-card-top">
+                <span>GSC sitemap submissions</span>
+                <b>{diagnostics?.latest?.googleIndexing.submitted ?? "—"}</b>
+              </div>
+              <p>Submission is not proof of indexing; site-wide indexed count is unavailable here</p>
+              <div className="diagnostic-details">
+                <span className="diagnostic-wide">
+                  {diagnostics?.latest?.googleIndexing.state === "not_configured"
+                    ? "Connect Google Search Console"
+                    : diagnostics?.latest?.googleIndexing.source || "Awaiting run"}
+                </span>
+              </div>
+            </article>
+          </div>
+          <p className="diagnostic-footnote">
+            Schedule: {diagnostics?.schedule ?? "every 12 hours"}. Missing credentials or data sources are shown as not connected—not replaced with sample values.
+          </p>
+        </section>
+
+        <section id="overview" role="tabpanel" aria-labelledby="seo-tab-overview" hidden={activeTab !== "overview"} className="seo-section seo-order-overview">
           <div className="seo-kpis">
             <article>
               <span>Protected URLs</span>
@@ -233,7 +510,7 @@ export function SeoDashboard() {
             <article>
               <span>Google-verified URLs</span>
               <strong>{googleVerified}</strong>
-              <small>Search Console not connected</small>
+              <small>{providerLabel(live?.providers?.searchConsole.state)}</small>
             </article>
             <article>
               <span>Current generated pages</span>
@@ -320,7 +597,7 @@ export function SeoDashboard() {
           </div>
         </section>
 
-        <section id="portfolio" className="seo-section seo-order-portfolio">
+        <section id="portfolio" role="tabpanel" aria-labelledby="seo-tab-portfolio" hidden={activeTab !== "portfolio"} className="seo-section seo-order-portfolio">
           <div className="section-heading">
             <div>
               <span className="seo-eyebrow">
@@ -400,7 +677,7 @@ export function SeoDashboard() {
           </p>
         </section>
 
-        <section id="authority" className="seo-section seo-order-protected">
+        <section id="authority" role="tabpanel" aria-labelledby="seo-tab-authority" hidden={activeTab !== "authority"} className="seo-section seo-order-protected">
           <div className="section-heading">
             <div>
               <span className="seo-eyebrow">
@@ -506,20 +783,23 @@ export function SeoDashboard() {
           </div>
         </section>
 
-        <section id="indexing" className="seo-section seo-order-indexing">
+        <section id="indexing" role="tabpanel" aria-labelledby="seo-tab-indexing" hidden={activeTab !== "indexing"} className="seo-section seo-order-indexing">
           <div className="section-heading">
             <div>
               <span className="seo-eyebrow">GOOGLE VERIFICATION REGISTER</span>
               <h2>Priority URL indexing status</h2>
             </div>
-            <span className="data-chip">0 VERIFIED · 25 UNKNOWN</span>
+            <span className="data-chip">
+              {googleVerified} INDEXED · {googleNotIndexed} NOT INDEXED · {googleUnknown} UNKNOWN
+            </span>
           </div>
           <article className="seo-panel seo-index-boundary">
             <div>
-              <strong>Google-verified indexed: 0</strong>
+              <strong>Google-verified indexed: {googleVerified}</strong>
               <p>
-                No Search Console property, URL Inspection export, or API result
-                is connected. Zero verified is not the same as zero indexed.
+                {live?.providers?.searchConsole.state === "connected"
+                  ? `${googleNotIndexed} verified not indexed and ${googleUnknown} unknown. Results are from the authorized URL Inspection API.`
+                  : "No successful Search Console URL Inspection result is connected. Zero verified is not the same as zero indexed."}
               </p>
             </div>
             <div>
@@ -554,8 +834,14 @@ export function SeoDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {authorityTop25.map((row) => (
-                  <tr key={`index-${row.rank}`}>
+                {authorityTop25.map((row) => {
+                  const inspection = googleByUrl.get(row.exactUrl);
+                  const status = inspection?.indexed === true
+                    ? "Indexed"
+                    : inspection?.indexed === false
+                      ? "Not indexed"
+                      : "Unknown";
+                  return <tr key={`index-${row.rank}`}>
                     <td>{row.rank}</td>
                     <td>
                       <a href={row.exactUrl} target="_blank" rel="noreferrer">
@@ -563,28 +849,30 @@ export function SeoDashboard() {
                       </a>
                     </td>
                     <td>
-                      <span className="status unknown">
-                        {row.googleIndexStatus}
+                      <span className={`status ${inspection?.indexed === true ? "preserved" : inspection?.indexed === false ? "missing" : "unknown"}`}>
+                        {status}
                       </span>
                     </td>
                     <td>
-                      <span className="evidence unknown">
-                        {row.googleVerificationStatus}
+                      <span className={`evidence ${inspection && !inspection.error ? "live" : "unknown"}`}>
+                        {inspection && !inspection.error ? "Google URL Inspection API" : providerLabel(live?.providers?.searchConsole.state)}
                       </span>
                     </td>
-                    <td>{row.searchConsoleSubmission}</td>
+                    <td>Not submitted by this dashboard</td>
                     <td>
-                      URL Inspection result, Google-selected canonical, last
-                      crawl, and evidence date
+                      {inspection?.error
+                        || (inspection
+                          ? `${inspection.coverageState}; crawl ${formatProviderDate(inspection.lastCrawlTime)}; Google canonical ${inspection.googleCanonical || "Unknown"}`
+                          : "URL Inspection result, Google-selected canonical, last crawl, and evidence date")}
                     </td>
-                  </tr>
-                ))}
+                  </tr>;
+                })}
               </tbody>
             </table>
           </div>
         </section>
 
-        <section id="domain-authority" className="seo-section seo-order-domain-authority">
+        <section id="domain-authority" role="tabpanel" aria-labelledby="seo-tab-domain-authority" hidden={activeTab !== "domain-authority"} className="seo-section seo-order-domain-authority">
           <div className="section-heading">
             <div>
               <span className="seo-eyebrow">DOMAIN AUTHORITY WORKFLOW</span>
@@ -624,19 +912,19 @@ export function SeoDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {domainAuthoritySites.map((site) => (
-                  <tr key={`authority-${site.domain}`}>
+                {authorityRows.map((site) => (
+                  <tr key={`authority-${site.key}`}>
                     <td>{site.domain}</td>
                     <td>{site.siteType}</td>
                     <td>{site.metric}</td>
                     <td>
-                      <span className="authority-score">{site.score}</span>
+                      <span className="authority-score">{site.score ?? "—"}</span>
                     </td>
                     <td>
                       <span
-                        className={`evidence ${evidenceClass(site.scoreEvidence)}`}
+                        className={`evidence ${site.evidenceClass}`}
                       >
-                        {site.scoreEvidence}
+                        {site.evidence}
                       </span>
                     </td>
                     <td>{site.source}</td>
@@ -671,7 +959,7 @@ export function SeoDashboard() {
           </p>
         </section>
 
-        <section id="workflow" className="seo-section seo-release seo-order-workflow">
+        <section id="workflow" role="tabpanel" aria-labelledby="seo-tab-workflow" hidden={activeTab !== "workflow"} className="seo-section seo-release seo-order-workflow">
           <span className="seo-eyebrow">NEXT EVIDENCE CHECKS</span>
           <h2>Owner workflow</h2>
           <div className="release-steps">

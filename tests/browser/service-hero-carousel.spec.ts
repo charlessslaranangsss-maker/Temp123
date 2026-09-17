@@ -69,6 +69,11 @@ test("manual navigation persistently pauses until Play is chosen", async ({
 
   await carousel.locator("[data-carousel-toggle]").click();
   await expect(carousel.locator("[data-carousel-toggle]")).toHaveText("Pause");
+  // Autoplay resumes only after pointer and keyboard interaction ends.
+  await carousel.evaluate(() =>
+    (document.activeElement as HTMLElement)?.blur(),
+  );
+  await page.mouse.move(0, 0);
   await expect(carousel.locator("[data-carousel-position]")).not.toHaveText(
     "2",
     { timeout: 1000 },
@@ -151,7 +156,7 @@ test("opens the complete image in a centered modal and restores focus on close",
   await trigger.click();
 
   const lightbox = page.locator("[data-service-image-lightbox]");
-  const dialog = lightbox.getByRole("dialog");
+  const dialog = lightbox.locator(".service-image-lightbox-dialog");
   const image = lightbox.locator("[data-lightbox-image]");
   await expect(lightbox).toBeVisible();
   await expect(dialog).toBeFocused();
@@ -162,8 +167,12 @@ test("opens the complete image in a centered modal and restores focus on close",
   const box = await dialog.boundingBox();
   expect(viewport).not.toBeNull();
   expect(box).not.toBeNull();
-  expect(Math.abs(box!.x + box!.width / 2 - viewport!.width / 2)).toBeLessThan(8);
-  expect(Math.abs(box!.y + box!.height / 2 - viewport!.height / 2)).toBeLessThan(8);
+  expect(Math.abs(box!.x + box!.width / 2 - viewport!.width / 2)).toBeLessThan(
+    8,
+  );
+  expect(
+    Math.abs(box!.y + box!.height / 2 - viewport!.height / 2),
+  ).toBeLessThan(8);
 
   await page.keyboard.press("Escape");
   await expect(lightbox).toBeHidden();
@@ -295,14 +304,14 @@ test("uses the approved shower photo and truthfully labels the restroom preview"
   await expect(restroomImage).toBeVisible();
   await expect(restroomImage).toHaveAttribute(
     "src",
-    "/images/catalog/restroom-trailers-960.webp",
+    "/images/location-verified/5ecedc2b7190aeb0b3f7-960.webp",
   );
   await expect(restroomImage).toHaveAttribute(
     "alt",
-    /representative ADA shower and restroom combination trailer/i,
+    /toilet interior in a shower and restroom combination trailer; restroom-only unit not pictured/i,
   );
   await expect(restroomCard.locator(".representative-photo-note")).toHaveText(
-    "Representative shower + restroom configuration",
+    "Photo shows a shower + restroom combination unit",
   );
   await expect
     .poll(() =>

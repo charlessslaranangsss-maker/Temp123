@@ -1,239 +1,446 @@
+/* Shared, idempotent gallery controller. State changes explicitly destroy and remount it. */
 (() => {
-  const carousels = document.querySelectorAll("[data-service-carousel]");
+  "use strict";
+  const namespace = "__temporary123ServiceGalleries";
+  if (window[namespace]) {
+    window[namespace].scan(document);
+    return;
+  }
+  const controllers = new Map();
+  const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let lightbox,
+    lightboxController = null,
+    lightboxTrigger = null;
 
-  const getLightbox = () => {
-    let lightbox = document.querySelector("[data-service-image-lightbox]");
-    if (lightbox) return lightbox;
-
-    lightbox = document.createElement("div");
+  function closeLightbox() {
+    if (!lightbox || !lightbox.open) return;
+    lightbox.close();
+  }
+  function renderLightbox() {
+    const controller = lightboxController;
+    if (!controller || !lightbox) return;
+    const source = controller.slides[controller.index].querySelector("img");
+    const image = lightbox.querySelector("[data-lightbox-image]");
+    // Opt-in group identity stays with the full image, even above a state modal.
+    const productLabel = controller.root.dataset.carouselLightboxLabel || "";
+    const title = lightbox.querySelector("[data-lightbox-title]");
+    title.textContent = productLabel;
+    title.hidden = !productLabel;
+    lightbox.setAttribute(
+      "aria-label",
+      productLabel ? productLabel + " full image" : "Full equipment image",
+    );
+    const reference = lightbox.querySelector("[data-lightbox-reference]");
+    reference.textContent = productLabel
+      ? controller.root.querySelector("[data-carousel-caption]")?.textContent ||
+        ""
+      : "";
+    reference.hidden = !reference.textContent;
+    const url =
+      source.dataset.carouselFullSrc || source.currentSrc || source.src;
+    image.style.visibility = "hidden";
+    image.alt = source.dataset.carouselAlt || source.alt;
+    image.onload = () => {
+      image.style.visibility = "visible";
+    };
+    image.onerror = () => {
+      lightbox.querySelector("[data-lightbox-caption]").textContent =
+        "The full image could not be loaded. Close and retry.";
+    };
+    image.src = url;
+    if (image.complete && image.naturalWidth)
+      image.style.visibility = "visible";
+    lightbox.querySelector("[data-lightbox-caption]").textContent = image.alt;
+    lightbox.querySelector("[data-lightbox-position]").textContent =
+      controller.index + 1 + " of " + controller.slides.length;
+    lightbox
+      .querySelectorAll("[data-lightbox-previous], [data-lightbox-next]")
+      .forEach((button) => {
+        button.hidden = controller.slides.length < 2;
+      });
+  }
+  function lightboxNavigate(delta) {
+    if (!lightboxController) return;
+    lightboxController.navigate(lightboxController.index + delta);
+    renderLightbox();
+  }
+  function getLightbox() {
+    if (lightbox && lightbox.isConnected) return lightbox;
+    lightbox = document.createElement("dialog");
     lightbox.className = "service-image-lightbox";
-    lightbox.dataset.serviceImageLightbox = "true";
-    lightbox.hidden = true;
-    lightbox.innerHTML = `
-      <div class="service-image-lightbox__backdrop" data-lightbox-close></div>
-      <div class="service-image-lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="service-image-lightbox-caption" tabindex="-1">
-        <button type="button" class="service-image-lightbox__close" data-lightbox-close aria-label="Close full image">×</button>
-        <img class="service-image-lightbox__image" data-lightbox-image alt="">
-        <p class="service-image-lightbox__caption" id="service-image-lightbox-caption" data-lightbox-caption></p>
-      </div>`;
+    lightbox.setAttribute("data-service-image-lightbox", "");
+    lightbox.setAttribute("aria-label", "Full equipment image");
+    lightbox.innerHTML =
+      '<div class="service-image-lightbox-backdrop" data-lightbox-outside></div><div class="service-image-lightbox-dialog" tabindex="-1"><button type="button" class="service-image-lightbox-close" data-lightbox-close aria-label="Close full image">Close ×</button><h2 data-lightbox-title hidden></h2><div class="service-image-lightbox-stage"><button type="button" class="service-image-lightbox-prev" data-lightbox-previous aria-label="Previous full image">←</button><img data-lightbox-image alt=""><button type="button" class="service-image-lightbox-next" data-lightbox-next aria-label="Next full image">→</button></div><div class="service-image-lightbox-footer"><div><p data-lightbox-caption></p><p data-lightbox-reference hidden></p></div><span data-lightbox-position aria-live="polite"></span></div></div>';
     document.body.append(lightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) return;
+      if (
+        event.target === lightbox ||
+        event.target.closest("[data-lightbox-outside], [data-lightbox-close]")
+      )
+        closeLightbox();
+      else if (event.target.closest("[data-lightbox-previous]"))
+        lightboxNavigate(-1);
+      else if (event.target.closest("[data-lightbox-next]"))
+        lightboxNavigate(1);
+    });
+    lightbox.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeLightbox();
+    });
+    lightbox.addEventListener("keydown", (event) => {
+      if (event.key === "Tab") {
+        const controls = Array.from(
+          lightbox.querySelectorAll("button:not([disabled]):not([hidden])"),
+        ).filter((control) => control.getClientRects().length > 0);
+        if (controls.length) {
+          event.preventDefault();
+          event.stopPropagation();
+          const current = controls.indexOf(document.activeElement);
+          const next =
+            current < 0
+              ? event.shiftKey
+                ? controls.length - 1
+                : 0
+              : (current + (event.shiftKey ? -1 : 1) + controls.length) %
+                controls.length;
+          controls[next].focus({ preventScroll: true });
+        }
+        return;
+      }
+      if (event.key === "Escape") {
+        event.preventDefault();
+        event.stopPropagation();
+        closeLightbox();
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        event.stopPropagation();
+        lightboxNavigate(event.key === "ArrowLeft" ? -1 : 1);
+      } else if (event.key === "Home" || event.key === "End") {
+        event.preventDefault();
+        event.stopPropagation();
+        if (lightboxController) {
+          lightboxController.navigate(
+            event.key === "Home" ? 0 : lightboxController.slides.length - 1,
+          );
+          renderLightbox();
+        }
+      }
+    });
+    lightbox.addEventListener("close", () => {
+      const trigger = lightboxTrigger;
+      lightboxController = null;
+      lightboxTrigger = null;
+      const image = lightbox.querySelector("[data-lightbox-image]");
+      image.onload = null;
+      image.onerror = null;
+      image.removeAttribute("src");
+      image.alt = "";
+      for (const selector of [
+        "[data-lightbox-title]",
+        "[data-lightbox-reference]",
+      ]) {
+        const element = lightbox.querySelector(selector);
+        element.textContent = "";
+        element.hidden = true;
+      }
+      lightbox.setAttribute("aria-label", "Full equipment image");
+      if (
+        trigger &&
+        trigger.isConnected &&
+        (!trigger.closest("dialog") || trigger.closest("dialog").open)
+      )
+        trigger.focus({ preventScroll: true });
+    });
     return lightbox;
-  };
+  }
+  function openLightbox(controller, trigger) {
+    controller.pause();
+    const box = getLightbox();
+    lightboxController = controller;
+    lightboxTrigger = trigger;
+    renderLightbox();
+    if (!box.open) box.showModal();
+    box
+      .querySelector(".service-image-lightbox-dialog")
+      .focus({ preventScroll: true });
+  }
 
-  const lightbox = getLightbox();
-  const lightboxDialog = lightbox.querySelector("[role='dialog']");
-  const lightboxImage = lightbox.querySelector("[data-lightbox-image]");
-  const lightboxCaption = lightbox.querySelector("[data-lightbox-caption]");
-  let returnFocus = null;
-
-  const closeLightbox = () => {
-    if (lightbox.hidden) return;
-    lightbox.hidden = true;
-    document.body.classList.remove("service-lightbox-open");
-    returnFocus?.focus?.();
-    returnFocus = null;
-  };
-
-  const openLightbox = (trigger) => {
-    const image = trigger.querySelector("img");
-    if (!image || !lightboxImage || !lightboxCaption) return;
-    const alt = image.dataset.carouselAlt || image.alt || "Equipment image";
-    returnFocus = trigger;
-    lightboxImage.src = image.currentSrc || image.src;
-    lightboxImage.alt = alt;
-    lightboxCaption.textContent = alt;
-    lightbox.hidden = false;
-    document.body.classList.add("service-lightbox-open");
-    lightboxDialog?.focus();
-  };
-
-  lightbox.querySelectorAll("[data-lightbox-close]").forEach((control) =>
-    control.addEventListener("click", closeLightbox),
-  );
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
-  });
-
-  for (const carousel of carousels) {
-    if (carousel.dataset.carouselReady === "true") continue;
-
-    const viewport = carousel.querySelector(".service-carousel-viewport");
-    const slides = [...carousel.querySelectorAll("[data-carousel-slide]")];
-    const selectors = [...carousel.querySelectorAll("[data-carousel-select]")];
-    const position = carousel.querySelector("[data-carousel-position]");
-    const overlayPosition = carousel.querySelector(
-      "[data-carousel-position-overlay]",
-    );
-    const activeView = carousel.querySelector("[data-carousel-view]");
-    const toggle = carousel.querySelector("[data-carousel-toggle]");
-    const behavior = carousel.querySelector("[data-carousel-behavior]");
-    const status = carousel.querySelector(".service-carousel-status");
-    if (!viewport || slides.length === 0) continue;
-
-    carousel.dataset.carouselReady = "true";
-    let activeIndex = 0;
-    let pointerStartX = null;
-    let pointerStartY = null;
-    let autoplayTimer = null;
-    let userPaused = false;
-    const autoplayInterval = Math.max(
-      100,
-      Number.parseInt(carousel.dataset.carouselInterval || "5500", 10) || 5500,
-    );
-    const motionPreference = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    );
-
-    const show = (nextIndex, announce = false) => {
-      if (status) status.setAttribute("aria-live", announce ? "polite" : "off");
-      activeIndex = (nextIndex + slides.length) % slides.length;
-      slides.forEach((slide, index) => {
-        const active = index === activeIndex;
+  function destroy(root) {
+    const controller = controllers.get(root);
+    if (!controller) return;
+    if (lightboxController === controller) closeLightbox();
+    controller.stop();
+    controller.abort.abort();
+    controllers.delete(root);
+    delete root.dataset.carouselReady;
+  }
+  function mount(root) {
+    if (!(root instanceof HTMLElement)) return;
+    if (controllers.has(root) && root.dataset.carouselReady === "true") return;
+    destroy(root);
+    const slides = [...root.querySelectorAll("[data-carousel-slide]")];
+    if (!slides.length) return;
+    const abort = new AbortController();
+    const options = { signal: abort.signal };
+    const thumbnails = [...root.querySelectorAll("[data-carousel-select]")];
+    const toggle = root.querySelector("[data-carousel-toggle]");
+    const behavior = root.querySelector("[data-carousel-behavior]");
+    let index = 0,
+      timer = null,
+      userPaused = false,
+      hover = false,
+      pointer = null,
+      suppressClickUntil = 0;
+    const controller = {
+      root,
+      slides,
+      abort,
+      get index() {
+        return index;
+      },
+      stop,
+      pause,
+      navigate,
+      start,
+    };
+    controllers.set(root, controller);
+    root.dataset.carouselReady = "true";
+    function stop() {
+      if (timer !== null) clearInterval(timer);
+      timer = null;
+      root.dataset.carouselRunning = "false";
+    }
+    function eligible() {
+      const dialog = root.closest("dialog");
+      return (
+        slides.length > 1 &&
+        root.dataset.carouselAutoplay === "true" &&
+        !userPaused &&
+        !motion.matches &&
+        !document.hidden &&
+        root.isConnected &&
+        root.getClientRects().length > 0 &&
+        (!dialog || dialog.open) &&
+        !hover &&
+        !pointer &&
+        !root.contains(document.activeElement) &&
+        lightboxController !== controller
+      );
+    }
+    function updateControls() {
+      root
+        .querySelector(".service-carousel-status")
+        ?.setAttribute(
+          "aria-live",
+          userPaused || motion.matches ? "polite" : "off",
+        );
+      if (toggle) {
+        toggle.disabled = motion.matches;
+        toggle.textContent = motion.matches
+          ? "Motion off"
+          : userPaused
+            ? "Play"
+            : "Pause";
+        toggle.setAttribute(
+          "aria-label",
+          motion.matches
+            ? "Autoplay disabled for reduced motion"
+            : (userPaused ? "Play" : "Pause") + " equipment slideshow",
+        );
+      }
+      if (behavior)
+        behavior.textContent = motion.matches
+          ? "Reduced motion: use the image controls to navigate."
+          : userPaused
+            ? "Slideshow paused. Choose Play to resume after interaction."
+            : "Auto-advances when you are not interacting with the gallery.";
+    }
+    function start() {
+      stop();
+      updateControls();
+      if (!eligible()) return;
+      timer = setInterval(
+        () => {
+          if (!eligible()) {
+            stop();
+            return;
+          }
+          show(index + 1);
+        },
+        Math.max(100, Number(root.dataset.carouselInterval) || 5500),
+      );
+      root.dataset.carouselRunning = "true";
+    }
+    function pause() {
+      userPaused = true;
+      stop();
+      updateControls();
+    }
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      root.dataset.carouselIndex = String(index);
+      slides.forEach((slide, i) => {
+        const active = i === index;
         slide.dataset.active = String(active);
-        slide.toggleAttribute("aria-hidden", !active);
+        slide.hidden = !active;
+        if (active) slide.removeAttribute("aria-hidden");
+        else slide.setAttribute("aria-hidden", "true");
         const image = slide.querySelector("img");
         if (image) image.alt = active ? image.dataset.carouselAlt || "" : "";
+        const button = slide.querySelector("[data-carousel-zoom]");
+        if (button) button.tabIndex = active ? 0 : -1;
       });
-      selectors.forEach((button, index) =>
-        button.setAttribute("aria-pressed", String(index === activeIndex)),
+      thumbnails.forEach((thumb, i) =>
+        thumb.setAttribute("aria-pressed", String(i === index)),
       );
-      if (position) position.textContent = String(activeIndex + 1);
-      if (overlayPosition)
-        overlayPosition.textContent = String(activeIndex + 1);
-      if (activeView)
-        activeView.textContent =
-          selectors[activeIndex]?.dataset.carouselViewLabel || "";
-    };
-
-    const stopAutoplay = () => {
-      if (autoplayTimer !== null) window.clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    };
-    const updateToggle = () => {
-      if (!toggle) return;
-      const reduced = motionPreference.matches;
-      toggle.disabled = reduced;
-      toggle.textContent = reduced
-        ? "Motion off"
-        : userPaused
-          ? "Play"
-          : "Pause";
-      toggle.setAttribute(
-        "aria-label",
-        reduced
-          ? "Slideshow paused because reduced motion is enabled"
-          : userPaused
-            ? "Play slideshow"
-            : "Pause slideshow",
+      root
+        .querySelectorAll(
+          "[data-carousel-position], [data-carousel-position-overlay]",
+        )
+        .forEach((el) => {
+          el.textContent = String(index + 1);
+        });
+      const label = root.querySelector(
+        ".service-carousel-overlay [data-carousel-view]",
       );
-      if (behavior) {
-        behavior.textContent = reduced
-          ? "Automatic motion is off for your reduced-motion preference."
-          : userPaused
-            ? "Slideshow paused. Choose Play to resume."
-            : "Auto-advances. Choosing an image pauses the slideshow.";
-      }
-    };
-    const startAutoplay = () => {
-      stopAutoplay();
-      if (
-        carousel.dataset.carouselAutoplay !== "true" ||
-        userPaused ||
-        motionPreference.matches ||
-        document.hidden
-      )
-        return;
-      autoplayTimer = window.setInterval(
-        () => show(activeIndex + 1),
-        autoplayInterval,
-      );
-    };
-    const showFromInteraction = (nextIndex) => {
-      userPaused = true;
-      stopAutoplay();
-      updateToggle();
-      show(nextIndex, true);
-    };
-
-    carousel.querySelectorAll("[data-carousel-zoom]").forEach((trigger) =>
-      trigger.addEventListener("click", () => openLightbox(trigger)),
+      if (label)
+        label.textContent =
+          thumbnails[index]?.dataset.carouselViewLabel ||
+          {
+            interior: "Interior",
+            exterior: "Exterior",
+            detail: "Interior detail",
+            plan: "Floor plan",
+          }[slides[index].dataset.imageView] ||
+          "Equipment view";
+    }
+    function navigate(next) {
+      pause();
+      show(next);
+    }
+    root.addEventListener(
+      "click",
+      (event) => {
+        if (performance.now() < suppressClickUntil) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          return;
+        }
+        if (!(event.target instanceof Element)) return;
+        const target = event.target;
+        const thumb = target.closest("[data-carousel-select]");
+        if (thumb) navigate(Number(thumb.dataset.carouselSelect));
+        else if (target.closest("[data-carousel-previous]"))
+          navigate(index - 1);
+        else if (target.closest("[data-carousel-next]")) navigate(index + 1);
+        else if (target.closest("[data-carousel-toggle]")) {
+          userPaused = !userPaused;
+          start();
+        } else if (target.closest("[data-carousel-zoom]"))
+          openLightbox(controller, target.closest("[data-carousel-zoom]"));
+      },
+      options,
     );
-
-    if (slides.length < 2) continue;
-
-    toggle?.addEventListener("click", () => {
-      if (motionPreference.matches) return;
-      userPaused = !userPaused;
-      updateToggle();
-      if (userPaused) stopAutoplay();
-      else startAutoplay();
-    });
-
-    carousel
-      .querySelector("[data-carousel-previous]")
-      ?.addEventListener("click", () => showFromInteraction(activeIndex - 1));
-    carousel
-      .querySelector("[data-carousel-next]")
-      ?.addEventListener("click", () => showFromInteraction(activeIndex + 1));
-    selectors.forEach((button, index) =>
-      button.addEventListener("click", () => showFromInteraction(index)),
+    root.addEventListener(
+      "keydown",
+      (event) => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key))
+          return;
+        event.preventDefault();
+        navigate(
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? slides.length - 1
+              : index + (event.key === "ArrowLeft" ? -1 : 1),
+        );
+      },
+      options,
     );
-
-    carousel.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        showFromInteraction(activeIndex - 1);
-      } else if (event.key === "ArrowRight") {
-        event.preventDefault();
-        showFromInteraction(activeIndex + 1);
-      } else if (event.key === "Home") {
-        event.preventDefault();
-        showFromInteraction(0);
-      } else if (event.key === "End") {
-        event.preventDefault();
-        showFromInteraction(slides.length - 1);
-      }
-    });
-
-    viewport.addEventListener("pointerdown", (event) => {
-      if (!event.isPrimary) return;
-      pointerStartX = event.clientX;
-      pointerStartY = event.clientY;
-    });
-    viewport.addEventListener("pointerup", (event) => {
-      if (pointerStartX === null || pointerStartY === null) return;
-      const horizontal = event.clientX - pointerStartX;
-      const vertical = event.clientY - pointerStartY;
-      pointerStartX = null;
-      pointerStartY = null;
-      if (
-        Math.abs(horizontal) < 40 ||
-        Math.abs(horizontal) <= Math.abs(vertical)
-      )
-        return;
-      showFromInteraction(activeIndex + (horizontal < 0 ? 1 : -1));
-    });
-    viewport.addEventListener("pointercancel", () => {
-      pointerStartX = null;
-      pointerStartY = null;
-    });
-
-    carousel.addEventListener("pointerenter", stopAutoplay);
-    carousel.addEventListener("pointerleave", startAutoplay);
-    carousel.addEventListener("focusin", stopAutoplay);
-    carousel.addEventListener("focusout", (event) => {
-      if (!carousel.contains(event.relatedTarget)) startAutoplay();
-    });
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) stopAutoplay();
-      else startAutoplay();
-    });
-    motionPreference.addEventListener?.("change", () => {
-      updateToggle();
-      if (motionPreference.matches) stopAutoplay();
-      else startAutoplay();
-    });
-    updateToggle();
-    startAutoplay();
+    root.addEventListener(
+      "pointerenter",
+      (event) => {
+        if (event.pointerType !== "touch") {
+          hover = true;
+          stop();
+        }
+      },
+      options,
+    );
+    root.addEventListener(
+      "pointerleave",
+      () => {
+        hover = false;
+        start();
+      },
+      options,
+    );
+    root.addEventListener("focusin", stop, options);
+    root.addEventListener("focusout", () => queueMicrotask(start), options);
+    root.addEventListener(
+      "pointerdown",
+      (event) => {
+        if (!event.target.closest(".service-carousel-viewport")) return;
+        pointer = { x: event.clientX, y: event.clientY };
+        stop();
+      },
+      options,
+    );
+    window.addEventListener(
+      "pointerup",
+      (event) => {
+        if (!pointer) return;
+        const dx = event.clientX - pointer.x,
+          dy = event.clientY - pointer.y;
+        pointer = null;
+        if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+          suppressClickUntil = performance.now() + 450;
+          navigate(index + (dx < 0 ? 1 : -1));
+        } else start();
+      },
+      options,
+    );
+    root.addEventListener(
+      "pointercancel",
+      () => {
+        pointer = null;
+        start();
+      },
+      options,
+    );
+    show(0);
+    start();
   }
+  function scan(scope) {
+    if (scope instanceof Element && scope.matches("[data-service-carousel]"))
+      mount(scope);
+    scope.querySelectorAll?.("[data-service-carousel]").forEach(mount);
+  }
+  document.addEventListener("service-carousel:destroy", (event) => {
+    const scope = event.target;
+    for (const root of controllers.keys())
+      if (scope === root || scope.contains?.(root)) destroy(root);
+  });
+  document.addEventListener("service-carousel:mount", (event) =>
+    scan(event.target),
+  );
+  document.addEventListener("service-carousel:pause", (event) => {
+    const scope = event.target;
+    for (const [root, controller] of controllers)
+      if (scope === root || scope.contains?.(root)) controller.pause();
+  });
+  document.addEventListener("visibilitychange", () =>
+    controllers.forEach((c) => c.start()),
+  );
+  motion.addEventListener("change", () =>
+    controllers.forEach((c) => c.start()),
+  );
+  new MutationObserver(() => {
+    for (const root of controllers.keys()) if (!root.isConnected) destroy(root);
+  }).observe(document.documentElement, { childList: true, subtree: true });
+  window[namespace] = { scan };
+  scan(document);
 })();

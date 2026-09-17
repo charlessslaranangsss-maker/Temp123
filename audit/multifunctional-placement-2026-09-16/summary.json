@@ -1,0 +1,97 @@
+{
+  "at": "2026-09-16T10:59:21.516Z",
+  "repo": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123",
+  "branch": "main",
+  "baseCommit": "8ad98dba33ef6d9b7b1e64028da3fc639bd7fd9a",
+  "newCommit": false,
+  "deployed": false,
+  "preview": "http://127.0.0.1:4209",
+  "frozenBuild": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\multifunctional-placement-20260916\\dist",
+  "sourceFingerprint": "f25c4a3cd33efe24fdd8ebc44e0df4ff0b50a6b63dd35807d4cfeeeed8fd15ca",
+  "manifestSha256": "3d520c6bf327e3f6bfb6f96bc03665cfddac0b9953dea4e0d472a22f885ba567",
+  "manifestUnchanged": true,
+  "sourceFiles": [
+    {
+      "file": "content/equipment-photo-policy.json",
+      "sha256": "95eb4ab2d0bbbeab277cc92730d380f933c15857009e68cce21d37cf72527afd"
+    },
+    {
+      "file": "content/equipment-photo-additions.json",
+      "sha256": "d7903a4264ae61e33e5fef2c3254a08ebc6347bfff8a5e506b8cd2300a009ca2"
+    },
+    {
+      "file": "src/LocationImageCarousel.tsx",
+      "sha256": "4955bb504de5218557c34b9549965942ad074039e29d211f73e24b87f9a5fe4d"
+    },
+    {
+      "file": "tests/multifunctionalPlacement.test.tsx",
+      "sha256": "90b3c6337af1071caddd4b69147689e8efa1c8b397010daeccaabd5198be3ebb"
+    },
+    {
+      "file": "tests/browser/multifunctional-placement.spec.ts",
+      "sha256": "a4e032bffba9586661102e8a82e35e48c515572e093d9f0060ecbeeef31cf95e"
+    }
+  ],
+  "concurrentEdits": [
+    {
+      "file": "src/Equipment.tsx",
+      "currentSha256": "16a1a38c8094c358c3eaf55b646dacec1fd8c1d9a6abb39169357e126675dab2",
+      "testedSha256": "4c4501d83b052c9830d970f268a78b27a00c8a32db279427c0f4e7b099362101",
+      "note": "Separate equipment-card copy, alt and combination-image corrections. Preserved; combined runtime is outside this frozen placement candidate."
+    },
+    {
+      "file": "src/main.tsx",
+      "currentSha256": "3e22ce133e42e3d5bfce22d863ea34f508ec5e538c394f38053ed015dc5c5718",
+      "testedSha256": "bcd578e02d6c692881ba5fd3caae31c83cc2ccca5c5523878819676d8dd981e5",
+      "note": "Separate removal of the Iowa-only planning heading exception; gallery code unchanged. Preserved; combined runtime is outside this frozen placement candidate."
+    },
+    {
+      "file": "src/stateGuides.ts",
+      "currentSha256": "6d6698e8e2e7f8f2bbed2b549b6e9de917d17b665ef26f98a21d9f2aca446093",
+      "testedSha256": "c3c8faa693cc415ccf2c4ab1060b3fe0a3485bdd41009e7b22aa7eeddfb80e9b",
+      "note": "Separate legacy restroom-reference alt clarification. Preserved; combined runtime is outside this frozen placement candidate."
+    },
+    {
+      "file": "content/service-details.json",
+      "fields": [
+        "/services/shower-restroom-combination-trailers/3-stall-1-ada/ intro",
+        "/services/shower-restroom-combination-trailers/8-stall-1-ada/ intro"
+      ],
+      "currentSha256": "4f82f39b642ef196daf752431beee88f1fe289a70a619297c898250ca909bc31",
+      "testedSha256": "de0304377120577d05611e6137b62f475b2d3e12627d335486ebc5c0acbc6654",
+      "note": "Separate task corrected ADA intro wording. Preserved; combined runtime not included in this frozen placement candidate."
+    }
+  ],
+  "unexpectedSourceDrift": [],
+  "tests": {
+    "focused": 227,
+    "application": 44,
+    "browser": 36
+  },
+  "environment": "Local frozen production build, not deployed",
+  "baseURL": "http://127.0.0.1:4209",
+  "registeredPages": 651,
+  "serviceAreaPages": 548,
+  "modalPresentations": 100,
+  "changedPages": 42,
+  "changedModalPresentations": 14,
+  "affectedStates": [
+    "Georgia",
+    "Iowa",
+    "Massachusetts",
+    "New Jersey",
+    "Texas",
+    "Washington",
+    "West Virginia"
+  ],
+  "pagesWithoutImageSection": 247,
+  "pagesWithPhotos": 263,
+  "pagesMissingPhotography": 38,
+  "browserPresentations": 112,
+  "fullImageDisplays": 224,
+  "servedAssetsChecked": 75,
+  "newAssetResponsesByteMatched": 6,
+  "pass": 648,
+  "fail": 0,
+  "problems": []
+}

@@ -1,3 +1,4 @@
+import { alignedLocationIntro, locationRentalPlanningAnswer } from "./alignedIntroductions";
 import { equipmentSet } from "./equipmentPhotos";
 import { statePath } from "./statePaths";
 import site from "../site.json" with { type: "json" };
@@ -8,10 +9,9 @@ import {
   buildRegionSeasonalDemand,
   type SeasonalDemand,
 } from "./seasonalDemand";
-import { regionRentalHeadline } from "./rentalHeadlines";
+import { regionLocationLabel, regionRentalHeadline } from "./rentalHeadlines";
 import { capitalizeLinkLabel } from "./linkLabels";
-import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { locationCarouselImages } from "./locationCarouselImages";
+import { LocationImageCarousel } from "./LocationImageCarousel";
 
 export const regionSlug = (value: string) =>
   value
@@ -102,7 +102,10 @@ const buildCityLinks = (
         cityGuide && hasCityGuide(cityGuide)
           ? cityGuide.path
           : `${service.href}?location=${encodeURIComponent(`${city}, ${state}`)}`,
-      label: capitalizeLinkLabel(`${label} in ${city}`),
+      label:
+        cityGuide && hasCityGuide(cityGuide)
+          ? `${city}, ${state} rental guide`
+          : capitalizeLinkLabel(`${label} in ${city}`),
       context:
         cityContexts[(globalIndex * 3 + cityIndex) % cityContexts.length],
     };
@@ -299,8 +302,7 @@ export const relatedRegionPages = (guide: RegionGuide): RegionGuide[] => {
 export function RegionDetail({ guide }: { guide: RegionGuide }) {
   const nearby = relatedRegionPages(guide);
   const headline = regionRentalHeadline(guide.region, guide.state, guide.index);
-  const location = `${guide.region}, ${guide.state}`;
-  const carouselImages = locationCarouselImages(location, headline);
+  const location = regionLocationLabel(guide.region, guide.state);
   const query = encodeURIComponent(
     `${guide.cities[0]}, ${guide.state}, United States`,
   );
@@ -320,18 +322,14 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
             </nav>
             <p className="eyebrow">REGIONAL RENTAL GUIDE</p>
             <h1>{headline}</h1>
-            <p className="region-intro">{guide.intro}</p>
+            <p className="region-intro" data-h1-intro>{alignedLocationIntro(headline, location, guide.cities)}</p>
             <p className="region-emergency">Emergency 24/7</p>
             <a className="button" href={`tel:${site.phoneE164}`}>
               Call now {site.phoneDisplay}
             </a>
           </div>
           <div className="region-hero-visual region-hero-carousel">
-            <ServiceHeroCarousel
-              images={carouselImages}
-              label={`${location} temporary facility rental equipment`}
-              caption={`Verified commercial equipment references for rental planning in ${location}. Confirm the available unit and configuration before booking.`}
-            />
+            <LocationImageCarousel headline={headline} />
           </div>
         </div>
       </section>
@@ -340,13 +338,13 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
           <div className="region-answer-heading">
             <span className="eyebrow">QUICK ANSWER</span>
             <h2 id="region-faq-title">What can you rent in {guide.region}?</h2>
-            <p>
-              Rent or lease Temporary Facilities for construction, man camps,
-              renovations and emergency base camps. Confirm availability,
-              occupancy and utilities with our rental team.
+            <p data-rental-planning>
+              {locationRentalPlanningAnswer(headline) ||
+                "Rent or lease Temporary Facilities for construction, man camps, renovations and emergency base camps. Confirm availability, occupancy and utilities with our rental team."}
             </p>
           </div>
           <div className="region-answer-body">
+            {locationRentalPlanningAnswer(headline) && <p>Related rental options:</p>}
             <ul className="region-service-links">
               {guide.serviceLinks.map((service) => (
                 <li key={service.href}>
@@ -355,8 +353,9 @@ export function RegionDetail({ guide }: { guide: RegionGuide }) {
               ))}
             </ul>
             <p className="supporting-rentals">
-              Supporting rentals: dishwashing, refrigeration, restrooms, laundry
-              and handwashing trailers.
+              {/\blaundry\b/i.test(headline)
+                ? "Other supporting rentals: dishwashing, refrigeration, restrooms and handwashing trailers."
+                : "Supporting rentals: dishwashing, refrigeration, restrooms, laundry and handwashing trailers."}
             </p>
           </div>
         </div>

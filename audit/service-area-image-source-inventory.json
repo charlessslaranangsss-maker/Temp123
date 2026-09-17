@@ -1,0 +1,1343 @@
+[
+  {
+    "id": "01.01",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/commercial-dish-trailer-stainless-workstation.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2078530,
+    "sha256": "39da30a1422bb09192fd5f1f3dfc9751be9c4d8adafdd41c7e5c4a5cac9164e1"
+  },
+  {
+    "id": "01.02",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-commercial-dishwasher.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2376470,
+    "sha256": "c1a1858704083016552ddec7b10c16cc1dbd42d69a7deafe63676113fb1db637"
+  },
+  {
+    "id": "01.03",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-handwashing-station.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2571524,
+    "sha256": "f7bb29a4ce27d1d8e0209816d8a30938d029e0e30500ac35905970adf9f864a5"
+  },
+  {
+    "id": "01.04",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-rental-exterior.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2240679,
+    "sha256": "8a3b778dc9d47a4d49bff92ea3c3454908524ac09670740bd7b0a4357287b03f"
+  },
+  {
+    "id": "01.05",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-three-compartment-sink.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1411,
+    "height": 1115,
+    "bytes": 2424284,
+    "sha256": "06a2358b959cba278011112fb69071b95fc817a349712120dcd57cc6734f7de2"
+  },
+  {
+    "id": "01.06",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dish-trailer-utility-sink-storage-racks.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2670054,
+    "sha256": "224f845e1e70d21eb73410b89b0f9e4e36b2d64b52ac3b12eeb04dd534ec1572"
+  },
+  {
+    "id": "01.07",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/dishwashing-trailer-wash-rinse-sanitize-sink.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 1960032,
+    "sha256": "98d052a0b070d3ddbd7f1532e4366f99c7f0ca1a97fc2146334d4b2a0d142e28"
+  },
+  {
+    "id": "01.08",
+    "src": "/media/equipment-drive/dishwashing-trailers/22-26ft-low-temp-dish-trailer-tier-1-4/mobile-dish-trailer-interior.png",
+    "group": "22-26ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2074012,
+    "sha256": "1ea6f29f897bc6856d85bd5b8a8fda1cf4b09843c4a51c1265f5c88dd9cea633"
+  },
+  {
+    "id": "02.01",
+    "src": "/media/equipment-drive/dishwashing-trailers/30ft-conveyor-dishwashing-trailer/commercial-conveyor-trailer-rental.png",
+    "group": "30ft-conveyor-dishwashing-trailer",
+    "width": 1323,
+    "height": 1189,
+    "bytes": 2186978,
+    "sha256": "9c0830b68351aa78c71beaa24cd548933301d151c05c5f1fc36f6948e46b480b"
+  },
+  {
+    "id": "02.02",
+    "src": "/media/equipment-drive/dishwashing-trailers/30ft-conveyor-dishwashing-trailer/mobile-conveyor-trailer-rental.png",
+    "group": "30ft-conveyor-dishwashing-trailer",
+    "width": 1268,
+    "height": 1241,
+    "bytes": 2142685,
+    "sha256": "6e3bd998904467ff8f93ad2a6ea9d7dff1b04fc9fae322bca34fbea3a9f8d532"
+  },
+  {
+    "id": "03.01",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/commercial-dish-trailer-dishwasher-loading-station.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1157,
+    "height": 1360,
+    "bytes": 2452898,
+    "sha256": "0f1d564951c5b37701a8e9eaedfac6b28574e9d258791e86d2b4067b7a7cc907"
+  },
+  {
+    "id": "03.02",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/commercial-dish-trailer-three-compartment-sink.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2524287,
+    "sha256": "4d05ba810d3fe5ef9ce538ac9ccf036aa5d9b9bc416a42dcd2147c31db79a75b"
+  },
+  {
+    "id": "03.03",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dish-trailer-commercial-dishwashing-machine.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2289819,
+    "sha256": "52fecd0683fc54a866b640199b9e4e48ce972560405c76ea0b3fe6cb3a87867f"
+  },
+  {
+    "id": "03.04",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dish-trailer-commercial-utility-sink.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1444,
+    "height": 1089,
+    "bytes": 2264870,
+    "sha256": "057f4dffc865aebbef95af8a74f5d6b9518968b7a9855fc9f62a959b7fcad68f"
+  },
+  {
+    "id": "03.05",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dish-trailer-rental-complete-interior.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2455921,
+    "sha256": "aaedfa8b6f439599ca2fa39772690c1adf730107ec6cde1614686beac3922606"
+  },
+  {
+    "id": "03.06",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dish-trailer-sink-and-stainless-work-tables.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2410125,
+    "sha256": "082790dc4edd17524f1827d67861e951fb9779c2380d172e2fb066ca00dd95e1"
+  },
+  {
+    "id": "03.07",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dish-trailer-stainless-work-tables-and-sink.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1378,
+    "height": 1141,
+    "bytes": 2337857,
+    "sha256": "acce57879fc2e6a9b150cab5a9c604dc8d2314bd694e29e2367bd842c5ac5fc0"
+  },
+  {
+    "id": "03.08",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/dishwashing-trailer-wash-rinse-sanitize-station.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2616243,
+    "sha256": "1f562965c60534af09ec428d7991a5bed056715de854dcd72a67ea1024c66627"
+  },
+  {
+    "id": "03.09",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/mobile-dish-trailer-sink-prep-station.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2490930,
+    "sha256": "82816261b87d2f037f26911cd334460fdecc7b1e946764275a2420f4d4a63e5d"
+  },
+  {
+    "id": "03.10",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-high-temp-conveyor-dishwashing-trailer/mobile-dishwashing-trailer-dishwasher-work-area.png",
+    "group": "38ft-high-temp-conveyor-dishwashing-trailer",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2567714,
+    "sha256": "537b8ad7d09638ac72ed6d748627829293332d132189b91e19253d1ba7e8e2a2"
+  },
+  {
+    "id": "04.01",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-low-temp-dish-trailer-tier-1-4/commercial-dish-trailer-interior.png",
+    "group": "38ft-low-temp-dish-trailer-tier-1-4",
+    "width": 958,
+    "height": 1642,
+    "bytes": 2802597,
+    "sha256": "4f27dfdbd7c13e732d24a3762d7188c758d73dd5f7912494827153ba6c39081e"
+  },
+  {
+    "id": "04.02",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-low-temp-dish-trailer-tier-1-4/dish-trailer-commercial-storage-shelving.png",
+    "group": "38ft-low-temp-dish-trailer-tier-1-4",
+    "width": 1183,
+    "height": 1329,
+    "bytes": 2507361,
+    "sha256": "64c9ac5346ed969e56bc037f8abfe5f470db80cabc998aa8f35373fe3632893f"
+  },
+  {
+    "id": "04.03",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-low-temp-dish-trailer-tier-1-4/dish-trailer-sink-and-pre-rinse-station.png",
+    "group": "38ft-low-temp-dish-trailer-tier-1-4",
+    "width": 980,
+    "height": 1605,
+    "bytes": 2487286,
+    "sha256": "adfc79ec326735fa06c3957836f990ed9561b2507470db01a9d623d47bf9aa17"
+  },
+  {
+    "id": "04.04",
+    "src": "/media/equipment-drive/dishwashing-trailers/38ft-low-temp-dish-trailer-tier-1-4/dish-trailer-stainless-steel-work-table.png",
+    "group": "38ft-low-temp-dish-trailer-tier-1-4",
+    "width": 951,
+    "height": 1654,
+    "bytes": 2243932,
+    "sha256": "a5bd3e2f8365c8298a3c9fecb2f631e68b38965055ef8f1706bbc0480e124575"
+  },
+  {
+    "id": "05.01",
+    "src": "/media/equipment-drive/handwashing-sink-trailers/handwashing-sink-trailer/hand-washing-sink-trailer-six-station.png",
+    "group": "handwashing-sink-trailer",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2114215,
+    "sha256": "e153ec9a8ea77bdaa9596351eb05722803b05447878e169426bd63c544c19082"
+  },
+  {
+    "id": "05.02",
+    "src": "/media/equipment-drive/handwashing-sink-trailers/handwashing-sink-trailer/mobile-hand-washing-station-trailer.png",
+    "group": "handwashing-sink-trailer",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1988287,
+    "sha256": "009fbde78d1a8d2342bef458c0b8455566f798925c50e67e01ef6a677d1ff47e"
+  },
+  {
+    "id": "05.03",
+    "src": "/media/equipment-drive/handwashing-sink-trailers/handwashing-sink-trailer/portable-hand-washing-sink-trailer.png",
+    "group": "handwashing-sink-trailer",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2112835,
+    "sha256": "4ca17dc09f02b389ab20e670c3ab26ef6bfa60bff4b4c74cd03bc16edb23a985"
+  },
+  {
+    "id": "06.01",
+    "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 1.png",
+    "group": "20ft-laundry-container",
+    "width": 669,
+    "height": 887,
+    "bytes": 970176,
+    "sha256": "f94926f0ae77d3870245322625fc2e7807d2ef6d14d5c10159dc0ff504c86106"
+  },
+  {
+    "id": "06.02",
+    "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7 units 2.png",
+    "group": "20ft-laundry-container",
+    "width": 665,
+    "height": 889,
+    "bytes": 1040358,
+    "sha256": "2c480cafdab7ea60ca7c401c1f66158da7a61d91e2d3bd4abc6aa483da0369de"
+  },
+  {
+    "id": "06.03",
+    "src": "/media/equipment-drive/laundry-trailers-and-containers/20ft-laundry-container/Laundry Container 7units.png",
+    "group": "20ft-laundry-container",
+    "width": 666,
+    "height": 884,
+    "bytes": 934452,
+    "sha256": "039811b7354f99e17078ceeb74c0daebff593dd2820661e11e737a8e3f629f4b"
+  },
+  {
+    "id": "07.01",
+    "src": "/media/equipment-drive/laundry-trailers-and-containers/26ft-27ft-laundry-trailer-8-washer-dryer/mobile-laundry-trailer-washer-dryer-interior.png",
+    "group": "26ft-27ft-laundry-trailer-8-washer-dryer",
+    "width": 939,
+    "height": 1675,
+    "bytes": 2234001,
+    "sha256": "5acafab86de115f1768584b158d06383d18adbc3c6a8c896d8c5c4e09938f64a"
+  },
+  {
+    "id": "08.01",
+    "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png",
+    "group": "30ft-laundry-trailer-10-washer-dryer",
+    "width": 939,
+    "height": 1675,
+    "bytes": 2246406,
+    "sha256": "8f2f634239040859c87ae7205c3ab38c515b39f27a196a1900f6fea60eb0f13a"
+  },
+  {
+    "id": "09.01",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/luxury-shower-restroom-trailer-double-door-exterior.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2155591,
+    "sha256": "8aab887be36b24d21f6b72e6f1851ca33fdff43ba1f7ecf36577c2dfccbe3370"
+  },
+  {
+    "id": "09.02",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/luxury-shower-restroom-trailer-exterior.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2106486,
+    "sha256": "900be11a38be919486d3b9274c00e59e77851c65c94adc27bb6586e1b8f3e199"
+  },
+  {
+    "id": "09.03",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/luxury-shower-restroom-trailer-interior.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1089,
+    "height": 1444,
+    "bytes": 1861201,
+    "sha256": "5ecedc2b7190aeb0b3f7201f45d581e74381c366a8f0d7d0f07a8c9be400f9de"
+  },
+  {
+    "id": "09.04",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/luxury-shower-restroom-trailer-rear-exterior.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1054,
+    "height": 1492,
+    "bytes": 2461533,
+    "sha256": "865ae632624cb231d14a1a6d6dc7a8144b4b3354cacc29e94f69c4f2bbef8c2b"
+  },
+  {
+    "id": "09.05",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/luxury-shower-restroom-trailer-side-view.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1382,
+    "height": 1138,
+    "bytes": 2126478,
+    "sha256": "630aa27585ab81542f63817b1c5a0d72b56f6449b457121edf104ce1d0af3e81"
+  },
+  {
+    "id": "09.06",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/mobile-luxury-shower-restroom-trailer-bathroom-interior.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1942348,
+    "sha256": "9aa5bd4db5d4461daa4e471c1427cb3b1f4d9b879f314d29b484a713e73a185f"
+  },
+  {
+    "id": "09.07",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/13ft-luxury-shower-restroom-combination-trailer-3-stalls/portable-luxury-shower-restroom-trailer-entrance.png",
+    "group": "13ft-luxury-shower-restroom-combination-trailer-3-stalls",
+    "width": 1011,
+    "height": 1556,
+    "bytes": 2222863,
+    "sha256": "f9197e949a28b52d3c7c9d4e9b0f3edcee059e05069a5a9859650189e1fe18b3"
+  },
+  {
+    "id": "10.01",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-6-stall-shower-restroom-trailer-exterior.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2193033,
+    "sha256": "7db24ad2139ec43e362befc5a46d484a7e69f851b1d6cafe4a414c0a04af0925"
+  },
+  {
+    "id": "10.02",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-luxury-shower-restroom-combination-trailer-6-stall-exterior.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2276320,
+    "sha256": "a1fd0e0d53b4d489ef53ad5af54f3571e9f298fa37dc79888a83351ba9e4563f"
+  },
+  {
+    "id": "10.03",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/22ft-shower-restroom-combination-trailer-multiple-entrances.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 939,
+    "height": 1675,
+    "bytes": 2416789,
+    "sha256": "a3ca882ebf524a6d643931c9b60d4a122bb473e6cf197c8d28504e20b5680f52"
+  },
+  {
+    "id": "10.04",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/6-stall-luxury-shower-restroom-trailer-side-view.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 928,
+    "height": 1694,
+    "bytes": 2381646,
+    "sha256": "b8bccf76417d47c25724aa30d60ddf2cfb3394cb3a334bb016d441ab31504ea4"
+  },
+  {
+    "id": "10.05",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-6-stall-shower-restroom-trailer-entry-steps.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 937,
+    "height": 1678,
+    "bytes": 1570947,
+    "sha256": "ee85c5176470af5e87fc10a0918d2a0e24be5a73eb645573733c80a5c89d969b"
+  },
+  {
+    "id": "10.06",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-private-shower-stall.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2379803,
+    "sha256": "e9df604dc15c6e80be25da73ae492955b09fc556aaf6f0e3d306085d5e82d441"
+  },
+  {
+    "id": "10.07",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/22ft-luxury-shower-restroom-combination-trailer-6-stalls/luxury-shower-restroom-trailer-sink-vanity-interior.png",
+    "group": "22ft-luxury-shower-restroom-combination-trailer-6-stalls",
+    "width": 942,
+    "height": 1669,
+    "bytes": 1559481,
+    "sha256": "5c01e444dc88f976bfa395f817338fdca4765cf8be18394fa029cc8daf3e8a6c"
+  },
+  {
+    "id": "11.01",
+    "src": "/media/equipment-drive/luxury-shower-restroom-combination-trailers/30ft-luxury-shower-restroom-combination-trailer-8-stalls/30ft-luxury-shower-restroom-combination-trailer-exterior-side-view.png",
+    "group": "30ft-luxury-shower-restroom-combination-trailer-8-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2579282,
+    "sha256": "027975496404aaf6491833cfc04faa47faf6049f84ee434dd8ca3b0ce9820164"
+  },
+  {
+    "id": "12.01",
+    "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png",
+    "group": "24ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2369713,
+    "sha256": "98a5ea41d685c77ba53495b3c92cd094c006dc48de4b3f0b9d11be1e1e784b2b"
+  },
+  {
+    "id": "12.02",
+    "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png",
+    "group": "24ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2441253,
+    "sha256": "39709c2b240b98d0ebca67ac208726f2bc05acdb9957a523305dfc959ef75141"
+  },
+  {
+    "id": "12.03",
+    "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png",
+    "group": "24ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2232258,
+    "sha256": "40d9bf96b7be94de0552f1b44baa627a8bb59f0eff6c2c7805d175c877a1fcfd"
+  },
+  {
+    "id": "12.04",
+    "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png",
+    "group": "24ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2303137,
+    "sha256": "dff88e39d64f5bc3f9bf9560c905bf0ced088cc41ba3cab3a596d40a8e4c56ba"
+  },
+  {
+    "id": "12.05",
+    "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png",
+    "group": "24ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2625113,
+    "sha256": "d845978efea5edbfc3d78e4b0e9c1cf0069fb4454fb26a6d7e39bddd118dd57c"
+  },
+  {
+    "id": "13.01",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/commercial-kitchen-trailer-range-oven-hood.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2677923,
+    "sha256": "53e88b14d8da01f920b66c7d28cbd64872b5585720c277a9bbc4cb51264e4e7e"
+  },
+  {
+    "id": "13.02",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/commercial-mobile-kitchen-cooking-line.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2417683,
+    "sha256": "e1d80f86bf100e9b714df2e74d75d8aade0f4f4d20f47a155f9a3dcb0bd0a04d"
+  },
+  {
+    "id": "13.03",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/mobile-kitchen-trailer-commercial-sink-station.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2201073,
+    "sha256": "1f6306721cff84cec160a5349b45a457aca5bcf1f71fe8b4457b7658637e02d5"
+  },
+  {
+    "id": "13.04",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/mobile-kitchen-trailer-cooking-equipment.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2677923,
+    "sha256": "53e88b14d8da01f920b66c7d28cbd64872b5585720c277a9bbc4cb51264e4e7e"
+  },
+  {
+    "id": "13.05",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/mobile-kitchen-trailer-full-equipment-interior.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2661900,
+    "sha256": "c1ddc04a3a5cd80eed9f0698fcc297009dec61886386b33fc27306b1303f5800"
+  },
+  {
+    "id": "13.06",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/mobile-kitchen-trailer-prep-area-service-window.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1093,
+    "height": 1438,
+    "bytes": 2567040,
+    "sha256": "b11ba8553649ccf1dffc1cffaffb8d52c34120b9721b1dc54df2024b3d8a970a"
+  },
+  {
+    "id": "13.07",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/portable-commercial-kitchen-interior-layout.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2833243,
+    "sha256": "5bdc42c245d270659b07589685444222ba3171b315d09e8a784ff18641ddba5a"
+  },
+  {
+    "id": "13.08",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/temporary-commercial-kitchen-trailer-exterior.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2701558,
+    "sha256": "527289f873f9103c014a137b4e72212e00a2a2d248bc2b86b71233b3f3aba176"
+  },
+  {
+    "id": "13.09",
+    "src": "/media/equipment-drive/mobile-kitchens/28ft-mobile-kitchen/temporary-kitchen-trailer-prep-and-wash-area.png",
+    "group": "28ft-mobile-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2709111,
+    "sha256": "57a4d74e5d9921b13b026c2778887a47fd3fd81677c5f3a440047373a98ae8c7"
+  },
+  {
+    "id": "14.01",
+    "src": "/media/equipment-drive/mobile-kitchens/38ft-mobile-kitchen/commercial-kitchen-trailer-refrigeration-wash-station.png",
+    "group": "38ft-mobile-kitchen",
+    "width": 975,
+    "height": 1613,
+    "bytes": 2553839,
+    "sha256": "933101559f8dbe81240b8ff4f1e521b33268bbf181b61666100a039d7c89522a"
+  },
+  {
+    "id": "14.02",
+    "src": "/media/equipment-drive/mobile-kitchens/38ft-mobile-kitchen/mobile-kitchen-trailer-range-griddle-fryer.png",
+    "group": "38ft-mobile-kitchen",
+    "width": 1113,
+    "height": 1414,
+    "bytes": 2493880,
+    "sha256": "84c67e243203e097a45706518df538f48780e0b0b4cbfe71f8d412727bcc5e88"
+  },
+  {
+    "id": "15.01",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/mobile-commercial-kitchen-steam-kettle-stainless-prep-table.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2358318,
+    "sha256": "387fd0f4ec0ec377ea4982e83d57179103233131102360cac95df3f58813444c"
+  },
+  {
+    "id": "15.02",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/mobile-commercial-kitchen-trailer-ovens-wash-station-prep-area.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2645309,
+    "sha256": "4eac55914fa9b2e7969da0a9a4853d3da0923cec7a6f67da8da29ff6add6da93"
+  },
+  {
+    "id": "15.03",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/portable-commercial-kitchen-trailer-sinks-stacked-ovens.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2358318,
+    "sha256": "387fd0f4ec0ec377ea4982e83d57179103233131102360cac95df3f58813444c"
+  },
+  {
+    "id": "15.04",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/portable-kitchen-trailer-stacked-commercial-convection-ovens.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2727169,
+    "sha256": "78ef0a848ff52cecc6d78afbce1c9b1c0c0f1bf9612df11ed1b94d4c9f9d5805"
+  },
+  {
+    "id": "15.05",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/temporary-commercial-kitchen-trailer-sinks-convection-ovens.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2675167,
+    "sha256": "83be43dd37e3aa8e53de0aae4378ae025d0b09b16020ce6aeb1b4200adcb33bd"
+  },
+  {
+    "id": "15.06",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/temporary-kitchen-trailer-deep-fryer-tilting-skillet.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2577737,
+    "sha256": "69a116d5423afb6d3ce41d11ffc95fa56017600e1757dfaa82bec63eda80ce40"
+  },
+  {
+    "id": "15.07",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-combo-kitchen/temporary-kitchen-trailer-stainless-steel-cooking-facility.png",
+    "group": "40ft-bulk-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2800932,
+    "sha256": "b6c8fca1b2cc590e95310257db1ca16910929b2b3cbb77638270c67c0774a9ca"
+  },
+  {
+    "id": "16.01",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/commercial-kitchen-trailer-deep-fryer-gas-range-double-ovens.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1466,
+    "height": 1073,
+    "bytes": 2633875,
+    "sha256": "247870dc290daeebcc64d3bb6a3a575a162f87b25fb5127531a0fcca686d9fea"
+  },
+  {
+    "id": "16.02",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout1 (1).jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 834,
+    "height": 554,
+    "bytes": 94921,
+    "sha256": "d424c8699b12c3b6083d4739d8e0591f6189fec6f71f9c68c659a69905271fd3"
+  },
+  {
+    "id": "16.03",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout1.jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 848,
+    "height": 555,
+    "bytes": 85953,
+    "sha256": "90900600e0a747423a3fd75f83c96016edb668af7f614de5d68eeab703b9adfa"
+  },
+  {
+    "id": "16.04",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout2 (1).jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 842,
+    "height": 555,
+    "bytes": 109930,
+    "sha256": "bee0fbf7102feb57024b9a474e2b028c63f30da26cb472efe6669a34ebfe14a6"
+  },
+  {
+    "id": "16.05",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout2.jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 849,
+    "height": 555,
+    "bytes": 120429,
+    "sha256": "7546242b05f149629321304efb53db4d45c4577cc9bb322a5008e298e22f135c"
+  },
+  {
+    "id": "16.06",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout3 (1).jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 844,
+    "height": 560,
+    "bytes": 93935,
+    "sha256": "80d4aa72c8c6e9143f398f5b5c3a9c325f1bd23fb8d8c79c018ccfa575888682"
+  },
+  {
+    "id": "16.07",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/Layout3.jpg",
+    "group": "40ft-bulk-kitchen",
+    "width": 844,
+    "height": 554,
+    "bytes": 85783,
+    "sha256": "04ae4b2c7295c9e16ac5475c930a2fef9814b2db47f4566ab36600a29f12034e"
+  },
+  {
+    "id": "16.08",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/mobile-commercial-kitchen-steam-jacketed-kettle-tilting-skillet.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1472,
+    "height": 1069,
+    "bytes": 2410580,
+    "sha256": "144454cab902cdb84210898469681b5a2a4604bd85267d78947e1c2e77f9de9f"
+  },
+  {
+    "id": "16.09",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/mobile-commercial-kitchen-trailer-wash-sinks-convection-ovens.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2867562,
+    "sha256": "8e48d94649d5b0de551a81709d5366b3e5c73f2b1bb198230ffd7167efe41ecd"
+  },
+  {
+    "id": "16.10",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/mobile-kitchen-trailer-stainless-steel-pot-wash-sink.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2375752,
+    "sha256": "1aff87e522e132e4fa22d7cf20f06095c66798a29e6065262c9f7f3167a5e6cd"
+  },
+  {
+    "id": "16.11",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/portable-commercial-kitchen-range-griddle-fryer-cooking-line.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2539027,
+    "sha256": "121defb132b73786492ad8868926308e937062bffce342d4ff4b2222b05c2f20"
+  },
+  {
+    "id": "16.12",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/portable-kitchen-trailer-range-convection-ovens-cooking-line.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1477,
+    "height": 1065,
+    "bytes": 2683572,
+    "sha256": "36b587b523be6b5f83d186751447ec3f2414de90e4b90d0afbc871d398e3b695"
+  },
+  {
+    "id": "16.13",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/temporary-commercial-kitchen-trailer-tilting-skillets-prep-area.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2653206,
+    "sha256": "c8902a3b08ae2c4a1ae274366f5e648e1bba1591413d04429268a34a56ea6cb2"
+  },
+  {
+    "id": "16.14",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-bulk-kitchen/temporary-kitchen-trailer-refrigeration-and-wash-station.png",
+    "group": "40ft-bulk-kitchen",
+    "width": 1476,
+    "height": 1066,
+    "bytes": 2488835,
+    "sha256": "f2f0b2e7d6ed9d61b316c0488065095554700e87cd90ae83b18fa232a22b8d7b"
+  },
+  {
+    "id": "17.01",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/commercial-kitchen-trailer-cooking-line-ventilation.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2528982,
+    "sha256": "6ecd50f2f25599efdaf85b3afc88faa74db86696b46fa3a85fef08356a12383a"
+  },
+  {
+    "id": "17.02",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/commercial-kitchen-trailer-range-griddle-exhaust-hood.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2521463,
+    "sha256": "42894e190ad36707ac7aba765de65da9f257152140d7dd6d39f17ac62b93672f"
+  },
+  {
+    "id": "17.03",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/mobile-commercial-kitchen-trailer-cooking-wash-area.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 939,
+    "height": 1675,
+    "bytes": 2484774,
+    "sha256": "e1444ac381a0b07b0d946a9f34a01bb379b9b239d9362147e06f3f583df8e163"
+  },
+  {
+    "id": "17.04",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/mobile-commercial-kitchen-trailer-exterior-entrance.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2612164,
+    "sha256": "38a92936c298ce27e32c2c2c91900cd415cc9b2f9c47ef244056d2bacf916c5b"
+  },
+  {
+    "id": "17.05",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/mobile-commercial-kitchen-trailer-exterior-hvac.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2622042,
+    "sha256": "de42f3e2bf87040f479d58da5c4f407af0720e7ad27ae8113d9f129148dc5fb1"
+  },
+  {
+    "id": "17.06",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/mobile-kitchen-trailer-stacked-convection-ovens.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2134626,
+    "sha256": "ec5e30e3edd4eb422584e7f0923ed5cae1f1577b752eb258a1d562446911d427"
+  },
+  {
+    "id": "17.07",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/mobile-kitchen-trailer-stainless-steel-prep-area.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2366728,
+    "sha256": "ff68a6de9727dd3c2219044515053ff5bc39d20d3c6776cc889786186da7f7e5"
+  },
+  {
+    "id": "17.08",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/portable-commercial-kitchen-trailer-three-compartment-sink.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2499074,
+    "sha256": "23c567085fa8049b0cc4711ee22bc4ceecf9419bec39443221b3a7a1bbc58e0b"
+  },
+  {
+    "id": "17.09",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/portable-kitchen-trailer-stainless-prep-table-shelving.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2404491,
+    "sha256": "c593b221c48972456d5f2bcac7a3a8fe20f6d663dc79858793c8e3611fc0cff6"
+  },
+  {
+    "id": "17.10",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-combo-kitchen/temporary-kitchen-trailer-range-griddle-work-table.png",
+    "group": "40ft-mobile-combo-kitchen",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2626222,
+    "sha256": "92b205c7fccb11c0cbaf1b571b4e1dc18f57ba457a2a3583f82250936ee2bb9f"
+  },
+  {
+    "id": "18.01",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/commercial-kitchen-trailer-flat-top-griddle-range.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 1089,
+    "height": 1445,
+    "bytes": 2327043,
+    "sha256": "861d6fc010c679e4c8e1dd3c55c6f8478c27eeec458b9d05ad524e288b44f08a"
+  },
+  {
+    "id": "18.02",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/commercial-kitchen-trailer-griddle-range-deep-fryer.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 948,
+    "height": 1659,
+    "bytes": 2309288,
+    "sha256": "903dee775321df6185e39e1b164eb096515c1df6b0f02555f866c53cc26b320e"
+  },
+  {
+    "id": "18.03",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/commercial-kitchen-trailer-three-compartment-wash-sink.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 933,
+    "height": 1686,
+    "bytes": 2506829,
+    "sha256": "f0e7a900ffe4057c569f5af535219a3b5e3d1feb704850bf48cf6f8d6f6d95c8"
+  },
+  {
+    "id": "18.04",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/Layout1.jpg",
+    "group": "40ft-mobile-kitchen",
+    "width": 697,
+    "height": 459,
+    "bytes": 68450,
+    "sha256": "9418f53401a9edade76c71d701cb0fe5e5ce1b8d3c6b232c28f381a84be33391"
+  },
+  {
+    "id": "18.05",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/Layout2 (1).jpg",
+    "group": "40ft-mobile-kitchen",
+    "width": 693,
+    "height": 456,
+    "bytes": 76559,
+    "sha256": "e8a3eaf28c15444a8f8e4e929ece067c102c0d14874b099c1b5cc75e04dc177a"
+  },
+  {
+    "id": "18.06",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/mobile-commercial-kitchen-trailer-refrigeration-units.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 1092,
+    "height": 1440,
+    "bytes": 2193464,
+    "sha256": "de3e025e831c22e742d78bbe7be22d44f29d6f7d4d93d902ae0ce6176a881ba2"
+  },
+  {
+    "id": "18.07",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/mobile-kitchen-trailer-hand-wash-sink-sanitation-station.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 960,
+    "height": 1638,
+    "bytes": 2127856,
+    "sha256": "f20a681c19cf0f1fbcdb28ff206eb6757747391e17b33724754a3abac03f8411"
+  },
+  {
+    "id": "18.08",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/mobile-kitchen-trailer-stacked-commercial-convection-ovens.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 1074,
+    "height": 1464,
+    "bytes": 2360270,
+    "sha256": "e9a857fb018e1df1057cc75b14701bdd7b4f6d9ed5e176e16a118c9fffae2b5f"
+  },
+  {
+    "id": "18.09",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/portable-kitchen-trailer-stainless-steel-prep-table.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 1084,
+    "height": 1451,
+    "bytes": 2484522,
+    "sha256": "8952733b3cbb5efef0fb0dcfaf0aecb854c824721d38765cea4e8f5361180d5f"
+  },
+  {
+    "id": "18.10",
+    "src": "/media/equipment-drive/mobile-kitchens/40ft-mobile-kitchen/temporary-commercial-kitchen-trailer-cooking-prep-area.png",
+    "group": "40ft-mobile-kitchen",
+    "width": 947,
+    "height": 1661,
+    "bytes": 2452593,
+    "sha256": "8f7af7c1f5c75e77317e52889a53cd65e87993440b3598f2ae0cd09591da020e"
+  },
+  {
+    "id": "19.01",
+    "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/portable-refrigeration-trailer-exterior.png",
+    "group": "20ft-refrigerated-trailer-tier-1-4",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2317834,
+    "sha256": "e9c8eac1a713a04ea72fb8016595e6394545dba575eb4cd0c19269c0427dd9c0"
+  },
+  {
+    "id": "19.02",
+    "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png",
+    "group": "20ft-refrigerated-trailer-tier-1-4",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2670123,
+    "sha256": "87e877cda19ee1b0f5d2cacd0e626519c14a0aec97c93b63aa98aec4f6238f56"
+  },
+  {
+    "id": "19.03",
+    "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-exterior.png",
+    "group": "20ft-refrigerated-trailer-tier-1-4",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1884294,
+    "sha256": "6620814f30241303945e00f3a07e81affe47fd5f2d956506f973e76b197d56aa"
+  },
+  {
+    "id": "19.04",
+    "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-fleet.png",
+    "group": "20ft-refrigerated-trailer-tier-1-4",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 2210365,
+    "sha256": "e6fafa4c81cad96b3682cef7854e1814bf9044ff5b2b29c5c28d6dcbc560d428"
+  },
+  {
+    "id": "19.05",
+    "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-stainless-steel-interior.png",
+    "group": "20ft-refrigerated-trailer-tier-1-4",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2660362,
+    "sha256": "b5666e7c4ab955192cd524b086ec8d802c6679bb63c03077d8897f6049c81870"
+  },
+  {
+    "id": "20.01",
+    "src": "/media/equipment-drive/shower-containers/20ft-shower-container-5-stalls/mobile-shower-container-interior.png",
+    "group": "20ft-shower-container-5-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1296371,
+    "sha256": "83c24254285f174db90e8c3ccea9f055dbaff87ecbf5840c03b72dbe80d28e1e"
+  },
+  {
+    "id": "20.02",
+    "src": "/media/equipment-drive/shower-containers/20ft-shower-container-5-stalls/portable-shower-container-multiple-stalls.png",
+    "group": "20ft-shower-container-5-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1807853,
+    "sha256": "93ef3ac53c258e47bc8ba5547f2cbced49a9be783c53733a749dfe0a68c5bf8b"
+  },
+  {
+    "id": "20.03",
+    "src": "/media/equipment-drive/shower-containers/20ft-shower-container-5-stalls/shower-container-private-shower-stall.png",
+    "group": "20ft-shower-container-5-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1374545,
+    "sha256": "6c64202e8de399996c85f6ebfe476aa973cf687d7e49e91068dba43e43ce0fad"
+  },
+  {
+    "id": "20.04",
+    "src": "/media/equipment-drive/shower-containers/20ft-shower-container-5-stalls/shower-container-rental-private-stalls.png",
+    "group": "20ft-shower-container-5-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1662103,
+    "sha256": "ef8d9f471c0d9edadbfc38abbfe441cabc4177f26526f1a242258b39647470e0"
+  },
+  {
+    "id": "21.01",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1563375,
+    "sha256": "dabab6914d03a327f753ae7074f3355b156e5325cbff71fa3dca2823299cdd46"
+  },
+  {
+    "id": "21.02",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1114,
+    "height": 1412,
+    "bytes": 2122772,
+    "sha256": "c8e61016692cc24ed87e1535eb1d0bdab31df836eed8301a227f2805021d8ab8"
+  },
+  {
+    "id": "21.03",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/portable-shower-trailer-multiple-private-stalls.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1430,
+    "height": 1100,
+    "bytes": 1920979,
+    "sha256": "083420763a287d5d2fa7b177b3415f18bd59d9e840617c86944ed2c478711fe2"
+  },
+  {
+    "id": "21.04",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1114,
+    "height": 1412,
+    "bytes": 2059252,
+    "sha256": "13d11fc194e658fa5c5be33c3852191cec58b21c55db2108cd78c9949335c703"
+  },
+  {
+    "id": "21.05",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2376939,
+    "sha256": "7891e17e60628430980fd835fc4690a6d189017a7d86e7aad7840960bc1ad55a"
+  },
+  {
+    "id": "21.06",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-sink-area.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1430,
+    "height": 1100,
+    "bytes": 2031931,
+    "sha256": "26607de2ca9441ffa5533c2789ed79a04505093f0bde63cfb71ee5c0b8c52925"
+  },
+  {
+    "id": "21.07",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1430,
+    "height": 1100,
+    "bytes": 2060374,
+    "sha256": "ea9f8d1cea1ede56e56f5ac0e706547f4decfd5b5a75076ea08db176377910da"
+  },
+  {
+    "id": "21.08",
+    "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png",
+    "group": "20-ft-shower-trailer-5-stalls-with-handwashing-sink",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 1906432,
+    "sha256": "45b677c4b981464953cc49dbbfcec39c5ad82a23b6094f2b547fb4b3889da98e"
+  },
+  {
+    "id": "22.01",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png",
+    "group": "20ft-accommodation-contractor",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1876163,
+    "sha256": "30ed74f6a1ad4d9343eb450ccd325c2a586d9968d356f6163badc99b981e3052"
+  },
+  {
+    "id": "22.02",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png",
+    "group": "20ft-accommodation-contractor",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 3065571,
+    "sha256": "6867327e45f627a43cdc11948b927341f513dc8fd563045e6e912542c8dd85d6"
+  },
+  {
+    "id": "22.03",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-four-bed-interior.png",
+    "group": "20ft-accommodation-contractor",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2218303,
+    "sha256": "c989739fac6a9997d3fb89a9d66ba89d2789ed59709e9fd8a30103e7d1796db7"
+  },
+  {
+    "id": "22.04",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png",
+    "group": "20ft-accommodation-contractor",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1833975,
+    "sha256": "fe6c68b1dc9123c64e49302d9f1481119b9209b3a9a4e7d3af0c2c5990221b7e"
+  },
+  {
+    "id": "22.05",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png",
+    "group": "20ft-accommodation-contractor",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 3157983,
+    "sha256": "58083d08991a7762257ad0ba03fb22122b838e1497d804f7c853061d87463b02"
+  },
+  {
+    "id": "23.01",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-bunk-bed-dimensions.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1736028,
+    "sha256": "585010fbbb6d8b9a0bdf526123a1d05867e4bf57bffe6b57d46931d149dd9a9a"
+  },
+  {
+    "id": "23.02",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-bunk-bed-frame.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1269803,
+    "sha256": "84da6047eba73ee816cf5079dfa15d7ca34d7f6ec610f802dfd91484c010c4ed"
+  },
+  {
+    "id": "23.03",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-bunk-room-interior.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1876163,
+    "sha256": "30ed74f6a1ad4d9343eb450ccd325c2a586d9968d356f6163badc99b981e3052"
+  },
+  {
+    "id": "23.04",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-bunk-room-side-view.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1833975,
+    "sha256": "fe6c68b1dc9123c64e49302d9f1481119b9209b3a9a4e7d3af0c2c5990221b7e"
+  },
+  {
+    "id": "23.05",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-four-bed-interior.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2218303,
+    "sha256": "c989739fac6a9997d3fb89a9d66ba89d2789ed59709e9fd8a30103e7d1796db7"
+  },
+  {
+    "id": "23.06",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-multiple-bunk-beds.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2240520,
+    "sha256": "9786901c66bdbd05831623601d1b248e31582a382020db4f3e4f4d02bf8407d9"
+  },
+  {
+    "id": "23.07",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-private-room.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1806010,
+    "sha256": "1be33879c903b5341e6b25d4a6e675389587b151d16f41f6cd28980f221c3711"
+  },
+  {
+    "id": "23.08",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-trailer-bunk-bed.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2149974,
+    "sha256": "f6359bec74d31dc3a48fbcbc51ce86f75a55a125371ec6fb46a4e1414c66aff2"
+  },
+  {
+    "id": "23.09",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-vip/20ft-vip-accommodation-trailer-exterior.png",
+    "group": "20ft-accommodation-vip",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2382693,
+    "sha256": "279c06dccb23f329d53fd69a939533083a8b2de65bcadb1b8d76371d79e54f2d"
+  },
+  {
+    "id": "24.01",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1876163,
+    "sha256": "30ed74f6a1ad4d9343eb450ccd325c2a586d9968d356f6163badc99b981e3052"
+  },
+  {
+    "id": "24.02",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-delivery-view.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2549033,
+    "sha256": "3313fb77704525a5f4b15df6678931d563a3d5bf8c87b49023402b9bb85606f3"
+  },
+  {
+    "id": "24.03",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-exterior-with-bunk-room.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1430,
+    "height": 1100,
+    "bytes": 2298278,
+    "sha256": "fc4b32cd779dd45a7d6b0a391a3a7ccee17a665168ed6ecac31e69855295d089"
+  },
+  {
+    "id": "24.04",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-flatbed-transport.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2350614,
+    "sha256": "5ad676b7c43b352d507b272f30a53fbd3d162c0353179814e1ab46540478c7ee"
+  },
+  {
+    "id": "24.05",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-four-bunk-interior.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2218303,
+    "sha256": "c989739fac6a9997d3fb89a9d66ba89d2789ed59709e9fd8a30103e7d1796db7"
+  },
+  {
+    "id": "24.06",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-front-exterior.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2601765,
+    "sha256": "7b5d1b57a82ab1148a233eb1520d975eda45b664e0325ca54c46ed90f8853c00"
+  },
+  {
+    "id": "24.07",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-side-exterior.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2521736,
+    "sha256": "ac425f6999407d3125ef2c4b7caeef4d196873425538b00bedde405c0aab3544"
+  },
+  {
+    "id": "24.08",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 1833975,
+    "sha256": "fe6c68b1dc9123c64e49302d9f1481119b9209b3a9a4e7d3af0c2c5990221b7e"
+  },
+  {
+    "id": "24.09",
+    "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-transport-delivery.png",
+    "group": "sleeper-trailer-2-stalls",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2532616,
+    "sha256": "76084bd597c9b6e8d7b9c5c96417b8a2761b300d9a2dd94f535b786352d19d94"
+  },
+  {
+    "id": "25.01",
+    "src": "/media/equipment-drive/water-tanks/water-tank/mobile-water-storage-tank-trailer-setup.png",
+    "group": "water-tank",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2566615,
+    "sha256": "fbf47ad8e542028d93648b72a22ba23604386b7a593895f0bc49ad7e95be575f"
+  },
+  {
+    "id": "25.02",
+    "src": "/media/equipment-drive/water-tanks/water-tank/mobile-water-trailer-with-portable-water-tanks.png",
+    "group": "water-tank",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2584238,
+    "sha256": "27b4c112b1842ddd2490d487d7ea86f126c7b801a57d807576372a7b3f5f6ec8"
+  },
+  {
+    "id": "25.03",
+    "src": "/media/equipment-drive/water-tanks/water-tank/portable-water-tanks-with-pump-and-hoses.png",
+    "group": "water-tank",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2443632,
+    "sha256": "5822903b748c3c1e8647241c030f2fae2f232ca95e3f3a4f5efc81bb7a465c98"
+  },
+  {
+    "id": "25.04",
+    "src": "/media/equipment-drive/water-tanks/water-tank/temporary-water-storage-tanks-mobile-water-trailer.png",
+    "group": "water-tank",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2508345,
+    "sha256": "86202093680a9a2cac3e2892e48d1f3c691c5a87f622122f0f4b45298c282572"
+  },
+  {
+    "id": "25.05",
+    "src": "/media/equipment-drive/water-tanks/water-tank/temporary-water-storage-tanks-rental-system.png",
+    "group": "water-tank",
+    "width": 1434,
+    "height": 1097,
+    "bytes": 2613875,
+    "sha256": "495740570251d1ed4ebb9b13d0770702b004277e5a9a2abaea6c31990f62a96a"
+  }
+]

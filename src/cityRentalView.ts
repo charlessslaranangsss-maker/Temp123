@@ -1,75 +1,66 @@
-import { equipmentPhotos } from "./equipmentPhotos";
-import { cityRentalHeadline } from "./rentalHeadlines";
+/** A selected city adds project context; it must never change the product. */
+export function localizedServiceCopy(
+  location: string,
+  heading: string,
+  introduction: string,
+): { heading: string; introduction: string } {
+  const place = location.replace(/\s+/g, " ").trim().slice(0, 120);
+  const originalHeading = heading.trim();
+  const originalIntroduction = introduction.trim();
+  if (!place) return { heading: originalHeading, introduction: originalIntroduction };
+  return {
+    heading: originalHeading + " in " + place,
+    introduction: originalIntroduction + (originalIntroduction ? " " : "") +
+      "For your project in " + place +
+      ", confirm rental dates, site access and utility connections with the rental team.",
+  };
+}
 
-// City selections retain the existing service URL and query. They are not new indexable city pages.
+// These are contextual views of existing service URLs, not new city landing pages.
 export function applyCityRentalView(location: string) {
   const main = document.querySelector<HTMLElement>("main");
   const title = main?.querySelector("h1");
-  if (
-    !main ||
-    !title ||
-    !/\/(equipment-rental|services)\//.test(window.location.pathname)
-  )
-    return;
-  const originalTitle = title.textContent || "Temporary123 equipment";
-  main.dataset.cityView = "true";
-  const headline = cityRentalHeadline(location, originalTitle);
-  title.replaceChildren(document.createTextNode(headline));
-  const description = document.createElement("p");
-  description.className = "model-intro";
-  description.textContent = `Rent or lease Temporary Facilities for your ${location} project. Explore ${originalTitle} and discuss rental availability with Temporary123. Emergency 24/7.`;
-  title.after(description);
-  main.querySelectorAll("figure").forEach((figure) => (figure.hidden = true));
-  main.querySelectorAll("img").forEach((image) => (image.hidden = true));
-  const photoType = /kitchen/i.test(originalTitle)
-    ? "kitchen"
-    : /sleep|bunk/i.test(originalTitle)
-      ? "Sleeper"
-      : /shower|restroom/i.test(originalTitle)
-        ? "Shower"
-        : "equipment";
-  const pool = equipmentPhotos.filter((photo) =>
-    photo.imageAlt.toLowerCase().includes(photoType.toLowerCase()),
-  );
-  const index =
-    [...location].reduce(
-      (total, letter) => (total * 31 + letter.charCodeAt(0)) >>> 0,
-      0,
-    ) % pool.length;
-  const gallery = document.createElement("div");
-  gallery.className = "city-rental-gallery";
-  gallery.setAttribute(
-    "aria-label",
-    `Rental equipment for ${location} project planning`,
-  );
-  for (let i = 0; i < 3; i++) {
-    const photo = pool[(index + i) % pool.length];
-    const figure = document.createElement("figure");
-    const image = document.createElement("img");
-    image.src = photo.image;
-    image.alt = photo.imageAlt;
-    image.width = 850;
-    image.height = 650;
-    const caption = document.createElement("figcaption");
-    caption.textContent = photo.caption;
-    figure.append(image, caption);
-    gallery.append(figure);
+  if (!main || !title || !location.trim() ||
+      (!/\/(equipment-rental|services)\//.test(window.location.pathname) &&
+       window.location.pathname !== "/remote-containerized-military-berthing-solution-for-rent/")) return;
+
+  let description = main.querySelector<HTMLElement>("[data-h1-intro]");
+  if (!description) {
+    description = document.createElement("p");
+    description.className = "model-intro";
+    description.setAttribute("data-h1-intro", "");
+    title.after(description);
   }
-  description.after(gallery);
-  document.title = `${headline}: Temporary Facilities to Rent or Lease | Temporary123`;
-  document
-    .querySelector('meta[name="description"]')
-    ?.setAttribute("content", description.textContent);
-  document
-    .querySelectorAll('script[type="application/ld+json"]')
-    .forEach((script) => {
+  // Keep the original values for a second selection without accumulating locations.
+  const originalTitle = main.dataset.cityOriginalHeading || title.textContent || "Equipment Rental";
+  const originalIntroduction = main.dataset.cityOriginalIntroduction ?? description.textContent ?? "";
+  main.dataset.cityOriginalHeading = originalTitle;
+  main.dataset.cityOriginalIntroduction = originalIntroduction;
+  const copy = localizedServiceCopy(location, originalTitle, originalIntroduction);
+  title.textContent = copy.heading;
+  description.textContent = copy.introduction;
+  // Category pages have a separate location note here; the equipment lead must come first.
+  title.after(description);
+  main.dataset.cityView = "true";
+
+  // All reviewed galleries, specifications, product tabs and supporting copy stay intact.
+  // In particular, never substitute a modular kitchen for a trailer or ADA for non-ADA.
+  document.title = copy.heading + " | Temporary123";
+  document.querySelector('meta[name="description"]')?.setAttribute("content", copy.introduction);
+  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+    try {
       const schema = JSON.parse(script.textContent || "{}");
-      for (const node of schema["@graph"] || []) {
-        if (["WebPage", "Service"].includes(node["@type"])) {
-          node.name = title.textContent;
-          node.description = description.textContent;
+      for (const node of Array.isArray(schema["@graph"]) ? schema["@graph"] : []) {
+        const types = Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]];
+        if (types.some((type: string) => type === "WebPage" || type === "Service")) {
+          node.name = copy.heading;
+          node.description = copy.introduction;
         }
       }
       script.textContent = JSON.stringify(schema).replace(/</g, "\\u003c");
-    });
+    } catch {
+      // A malformed, unrelated schema block must not break city context or the page.
+    }
+  }
+  // Canonical links, robots directives, URLs, redirects and the base page remain unchanged.
 }

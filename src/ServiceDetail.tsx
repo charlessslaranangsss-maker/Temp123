@@ -1,9 +1,11 @@
+import { alignedPageIntro } from "./alignedIntroductions";
 import details from "../content/service-details.json" with { type: "json" };
 import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
 import { imagesForServicePath } from "./serviceHeroImages";
+import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
 export const modelDetails = details;
 export function ServiceDetail({ path }: { path: keyof typeof details }) {
   const item = details[path];
@@ -26,7 +28,7 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
             <div>
               <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
               <h1>{rentalProductHeadline(item.name)}</h1>
-              <p className="model-intro">{item.intro}</p>
+              <p className="model-intro" data-h1-intro>{alignedPageIntro(path, item.name, item.intro)}</p>
               <div className="model-actions">
                 <a className="button" href={"tel:" + site.phoneE164}>
                   Call Now, {item.category} Specialist 24/7{" "}
@@ -41,7 +43,12 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
               <ServiceHeroCarousel
                 images={verifiedImages}
                 label={item.name}
-                caption={`Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`}
+                lightboxLabel={item.name}
+                caption={
+                  verifiedImages[0].model
+                    ? referenceCaptionForModel(verifiedImages[0].model)
+                    : `Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`
+                }
               />
             ) : (
               <figure className="service-hero-unverified">

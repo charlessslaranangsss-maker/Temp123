@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-16T10:59:21.516Z",
+  "environment": "Local frozen production build, not deployed",
+  "baseURL": "http://127.0.0.1:4209",
+  "registeredPages": 651,
+  "serviceAreaPages": 548,
+  "modalPresentations": 100,
+  "changedPages": 42,
+  "changedModalPresentations": 14,
+  "affectedStates": [
+    "Georgia",
+    "Iowa",
+    "Massachusetts",
+    "New Jersey",
+    "Texas",
+    "Washington",
+    "West Virginia"
+  ],
+  "pagesWithoutImageSection": 247,
+  "pagesWithPhotos": 263,
+  "pagesMissingPhotography": 38,
+  "browserPresentations": 112,
+  "fullImageDisplays": 224,
+  "servedAssetsChecked": 75,
+  "newAssetResponsesByteMatched": 6,
+  "pass": 648,
+  "fail": 0,
+  "problems": []
+}

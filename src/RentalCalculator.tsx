@@ -1,4 +1,4 @@
-import { cityPages } from "./cityDirectory";
+import calculatorCities from "./calculatorCities.json" with { type: "json" };
 import {
   deliveryStartingPrice,
   equipmentPrices,
@@ -13,15 +13,7 @@ const money = (value: number) =>
     maximumFractionDigits: 0,
   }).format(value);
 
-const citiesByState = new Map<string, typeof cityPages>();
-for (const city of cityPages) {
-  const stateCities = citiesByState.get(city.state) || [];
-  stateCities.push(city);
-  citiesByState.set(city.state, stateCities);
-}
-const states = [...citiesByState].sort(([a], [b]) => a.localeCompare(b));
-for (const [, cities] of states)
-  cities.sort((a, b) => a.name.localeCompare(b.name) || a.geoid.localeCompare(b.geoid));
+const states = Object.entries(calculatorCities).sort(([a], [b]) => a.localeCompare(b));
 
 export function RentalCalculator() {
   return (
@@ -34,9 +26,11 @@ export function RentalCalculator() {
             </nav>
             <span className="eyebrow">NATIONWIDE PROJECT PLANNING</span>
             <h1>Nationwide Temporary Facility Rental and Delivery Calculator</h1>
-            <p>
-              Build a preliminary starting estimate for a temporary facility,
-              trailer delivery and base-camp support anywhere in the United States.
+            <p data-h1-intro>
+              Calculate a preliminary equipment and delivery starting estimate
+              for your selected temporary facility and trailer length. Enter the
+              project state, city and dates for planning; final rental-period
+              pricing, transport charges and availability require a separate quote.
             </p>
           </div>
           <aside className="calculator-callout" aria-label="Estimate notice">
@@ -97,7 +91,7 @@ export function RentalCalculator() {
               <p>
                 Temporary facility rental, trailer leasing and delivery planning in {state}:{" "}
                 {cities.map((city, index) => (
-                  <span key={city.geoid}>{index ? ", " : ""}{city.name}</span>
+                  <span key={city}>{index ? ", " : ""}{city}</span>
                 ))}.
               </p>
             </details>
@@ -134,20 +128,22 @@ export function CalculatorWorkspace({ homepage = false }: { homepage?: boolean }
                 State
                 <select name="state" autoComplete="address-level1" required defaultValue="">
                   <option value="" disabled>Choose a state</option>
-                  {states.map(([state]) => (
+                  {Object.keys(calculatorCities).map((state) => (
                     <option value={state} key={state}>{state}</option>
                   ))}
                 </select>
               </label>
               <label>
                 City
-                <input
+                <select
                   name="city"
                   autoComplete="address-level2"
                   required
-                  maxLength={100}
-                  placeholder="Enter a city"
-                />
+                  defaultValue=""
+                  disabled
+                >
+                  <option value="" disabled>Choose a state first</option>
+                </select>
               </label>
               <label>
                 ZIP code <span className="field-optional">(optional)</span>

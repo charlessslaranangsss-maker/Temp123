@@ -1,9 +1,13 @@
 import type { ServiceHeroImage } from "./serviceHeroImages";
+import { orderGalleryImages } from "./galleryImageOrder";
+import { useId } from "react";
 
 type ServiceHeroCarouselProps = {
   images: readonly ServiceHeroImage[];
   label: string;
   caption?: string;
+  lightboxLabel?: string;
+  deferLoading?: boolean;
 };
 
 const viewLabels: Record<ServiceHeroImage["view"], string> = {
@@ -14,13 +18,18 @@ const viewLabels: Record<ServiceHeroImage["view"], string> = {
 };
 
 export function ServiceHeroCarousel({
-  images,
+  images: suppliedImages,
   label,
   caption,
+  lightboxLabel,
+  deferLoading = false,
 }: ServiceHeroCarouselProps) {
+  const instanceId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
+  // Slides, thumbnails and lightbox indices share this enforced sequence.
+  const images = orderGalleryImages(suppliedImages);
   if (images.length === 0) return null;
 
-  const carouselId = `service-carousel-${images[0].id.replace(/[^a-z0-9_-]/gi, "-")}`;
+  const carouselId = `service-carousel-${images[0].id.replace(/[^a-z0-9_-]/gi, "-")}-${instanceId}`;
   const hasMultipleImages = images.length > 1;
 
   return (
@@ -29,6 +38,7 @@ export function ServiceHeroCarousel({
       data-service-carousel
       data-carousel-autoplay="true"
       data-carousel-interval="5500"
+      data-carousel-lightbox-label={lightboxLabel}
       aria-label={`${label} images`}
       aria-roledescription="carousel"
       tabIndex={hasMultipleImages ? 0 : undefined}
@@ -38,6 +48,11 @@ export function ServiceHeroCarousel({
           <div
             className="service-carousel-slide"
             data-carousel-slide
+            data-image-review-id={image.reviewId}
+            data-image-family={image.family}
+            data-image-model={image.model}
+            data-image-hash={image.sha256}
+            data-image-view={image.view}
             data-active={index === 0 ? "true" : "false"}
             aria-hidden={index === 0 ? undefined : "true"}
             key={image.id}
@@ -57,8 +72,9 @@ export function ServiceHeroCarousel({
                 height={image.height}
                 alt={index === 0 ? image.alt : ""}
                 data-carousel-alt={image.alt}
-                loading={index === 0 ? "eager" : "lazy"}
-                fetchPriority={index === 0 ? "high" : "low"}
+                data-carousel-full-src={image.fullSrc || image.src}
+                loading={index === 0 && !deferLoading ? "eager" : "lazy"}
+                fetchPriority={index === 0 && !deferLoading ? "high" : "low"}
                 decoding="async"
               />
               <span className="service-carousel-zoom-hint" aria-hidden="true">
@@ -99,7 +115,7 @@ export function ServiceHeroCarousel({
       {hasMultipleImages && (
         <div className="service-carousel-controls">
           <div>
-            <strong>Explore the trailer</strong>
+            <strong>Explore the equipment</strong>
             <small data-carousel-behavior>
               Auto-advances. Choosing an image pauses the slideshow.
             </small>

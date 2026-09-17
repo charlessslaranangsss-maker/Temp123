@@ -1,3 +1,5 @@
+import { alignedPageIntro } from "./alignedIntroductions";
+import { ApprovedEquipmentPhotoOptions } from './ApprovedEquipmentPhotoOptions';
 import { IndustryDetail, industryGuideByPath } from "./IndustryDetail";
 import { rentalCategoryHeadline, rentalHubHeadline } from "./rentalHeadlines";
 import { StateDetail, statePageByPath } from "./StateDetail";
@@ -90,20 +92,20 @@ export function Header({ path }: { path: string }) {
                   path.startsWith("/equipment-rental/") ? "page" : undefined
                 }
               >
-                Services <span aria-hidden="true">⌄</span>
+                Inventory <span aria-hidden="true">⌄</span>
               </summary>
               <div
                 id="services-panel"
                 className="services-panel"
                 role="group"
-                aria-label="Services menu"
+                aria-label="Equipment rental inventory menu"
               >
                 <div className="services-panel-heading">
                   <div>
                     <span>Temporary facility rentals</span>
-                    <strong>Services for every stage of your project</strong>
+                    <strong>Equipment for every stage of your project</strong>
                   </div>
-                  <a href="/equipment-rental/">View All Services ↗</a>
+                  <a href="/equipment-rental/">View All Equipment ↗</a>
                 </div>
                 <div className="services-panel-body">
                   <div className="service-category-list">
@@ -186,10 +188,10 @@ export function Header({ path }: { path: string }) {
               </a>
               <details className="mobile-services">
                 <summary>
-                  Services <span aria-hidden="true">+</span>
+                  Inventory <span aria-hidden="true">+</span>
                 </summary>
                 <div>
-                  <a href="/equipment-rental/">View All Rental Services</a>
+                  <a href="/equipment-rental/">View All Equipment</a>
                   {serviceCategories.map((category) => (
                     <details
                       className="mobile-service-category"
@@ -259,55 +261,82 @@ export function Header({ path }: { path: string }) {
           aria-expanded="false"
           aria-controls="emergency-dispatch-panel"
         >
-          <span className="emergency-dispatch-signal" aria-hidden="true"><i /></span>
-          <span><small>24/7</small><strong>Emergency</strong></span>
+          <span className="emergency-dispatch-signal" aria-hidden="true">
+            <i />
+          </span>
+          <span>
+            <small>24/7 support</small>
+            <strong>Call now</strong>
+          </span>
         </button>
         <section
           id="emergency-dispatch-panel"
           className="emergency-dispatch-panel"
           data-emergency-panel
-          aria-live="polite"
           aria-hidden="true"
+          aria-labelledby="emergency-dispatch-title"
+          aria-modal="false"
+          role="dialog"
         >
           <button
             className="emergency-dispatch-close"
             type="button"
             data-emergency-close
-            aria-label="Dismiss emergency support message"
-          >×</button>
-          <span className="emergency-dispatch-kicker">24/7 dispatch line</span>
-          <h2>Emergency rental support</h2>
+            aria-label="Minimize emergency dispatch"
+          >
+            ×
+          </button>
+          <span className="emergency-dispatch-kicker">
+            Urgent rental support
+          </span>
+          <h2 id="emergency-dispatch-title">Need equipment urgently?</h2>
           <p>
-            Need a temporary facility urgently? Call our team for availability
-            and next-step coordination.
+            Call our 24/7 rental line or send your site details so our team can
+            check equipment and delivery availability.
           </p>
-          <a className="emergency-dispatch-call" href={"tel:" + site.phoneE164}>
-            Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
-          </a>
-          <small>For urgent rental support only</small>
+          <div className="emergency-dispatch-actions">
+            <a
+              className="emergency-dispatch-call"
+              href={"tel:" + site.phoneE164}
+            >
+              Call {site.phoneDisplay} <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              className="emergency-dispatch-request"
+              href="/contact-us/?priority=urgent"
+              data-emergency-request
+            >
+              Check urgent availability
+            </a>
+          </div>
+          <small>
+            Final availability and arrival timing require team confirmation.
+          </small>
         </section>
       </aside>
       <a
         className="contact-rail contact-rail-refresh"
         href="/contact-us/"
-        aria-label="Contact Us at Temporary123"
+        aria-label="Contact Temporary123 rental support now"
+        aria-controls="contact-drawer"
+        aria-expanded="false"
         aria-current={path === "/contact-us/" ? "page" : undefined}
       >
-        <span className="contact-rail-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-          <path
-            d="M5 5h14v11H9l-4 3V5Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinejoin="round"
-          />
-        </svg></span>
-        <span className="contact-rail-copy">
-          <small>Project desk</small>
-          <strong>Plan a rental</strong>
-          <em>Open project brief</em>
+        <span className="contact-rail-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path
+              d="M5 5h14v11H9l-4 3V5Z"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinejoin="round"
+            />
+          </svg>
         </span>
-        <span className="contact-rail-arrow" aria-hidden="true">↗</span>
+        <span className="contact-rail-copy">
+          <small>Need a rental?</small>
+          <strong>Contact now</strong>
+        </span>
       </a>
     </>
   );
@@ -322,7 +351,7 @@ function ContactDrawer() {
     >
       <div className="contact-drawer-shell">
         <div className="contact-drawer-call">
-          <a href={"tel:" + site.phoneE164}>Call: {site.phoneDisplay}</a>
+          <span>Temporary123 project desk</span>
           <button
             type="button"
             data-close-contact
@@ -332,16 +361,26 @@ function ContactDrawer() {
           </button>
         </div>
         <header className="contact-drawer-header">
-          <span aria-hidden="true">☰</span>
-          <h2 id="contact-drawer-title">Contact Us</h2>
-          <span aria-hidden="true" />
+          <span className="contact-drawer-kicker">Project coordination</span>
+          <h2 id="contact-drawer-title">Request availability</h2>
+          <p>
+            Share the equipment, location, and timing your operation needs. We
+            will review the request without promising inventory or arrival time.
+          </p>
+          <div
+            className="contact-drawer-actions"
+            aria-label="Project desk options"
+          >
+            <button type="button" data-focus-availability>
+              Request availability
+            </button>
+            <a href={"tel:" + site.phoneE164}>
+              Call now <span>{site.phoneDisplay}</span>
+            </a>
+          </div>
         </header>
         <div className="contact-drawer-scroll">
-          <p className="contact-drawer-intro">
-            Tell us about your project. Our team is available 24 hours a day,
-            seven days a week.
-          </p>
-          <div id="quote-island">
+          <div id="quote-island" aria-label="Availability request form">
             <QuoteForm />
           </div>
         </div>
@@ -429,6 +468,7 @@ export function Site({
     <div id="top">
       <Header path={path} />
       <ContactDrawer />
+      <script src="/location-product-tabs.js" defer />
       <main id="main" tabIndex={-1}>
         {path === "/" ? (
           <Home />
@@ -443,7 +483,7 @@ export function Site({
                 <br />
                 start here.
               </h1>
-              <p>Share your site, dates and requirements with Temporary123.</p>
+              <p data-h1-intro>Start your facility rental request with the equipment you need, project address, rental dates and expected users. Share available utilities and delivery restrictions so the team can review the correct configuration and availability.</p>
               <a className="phone-link" href={"tel:" + site.phoneE164}>
                 {site.phoneDisplay} ↗
               </a>
@@ -492,11 +532,7 @@ export function Site({
                   </nav>
                   <span className="eyebrow">NATIONWIDE SERVICE AREAS</span>
                   <h1>USA Temporary Facilities Rental Service Areas</h1>
-                  <p>
-                    Rent or lease Temporary Facilities with Temporary123. Rental
-                    services include mobile kitchens, hygiene facilities and
-                    workforce support in all 50 states. Emergency 24/7.
-                  </p>
+                  <p data-h1-intro>{alignedPageIntro(path, "USA Temporary Facilities Rental Service Areas")}</p>
                   <div className="location-stats" aria-label="Coverage summary">
                     <div>
                       <strong>50</strong>
@@ -609,14 +645,7 @@ export function Site({
                       inquiry so we can confirm the correct destination.
                     </p>
                   )}
-                  <p>{serviceCategory.description}</p>
-                  <p>
-                    {
-                      Object.values(modelDetails).find(
-                        (item) => item.category === serviceCategory.name,
-                      )?.use
-                    }
-                  </p>
+                  <p data-h1-intro>{alignedPageIntro(path, rentalCategoryHeadline(serviceCategory.name), serviceCategory.description)}</p>
                 </div>
                 <div className="service-category-actions">
                   <Button>Check availability</Button>
@@ -625,6 +654,7 @@ export function Site({
                   </a>
                 </div>
               </div>
+              <ApprovedEquipmentPhotoOptions category={serviceCategory.name} />
               <div className="service-category-cards">
                 {serviceCategory.links.map((link, index) => (
                   <a href={link.href} key={link.href}>
@@ -696,13 +726,7 @@ export function Site({
           <section className="wrap section">
             <span className="eyebrow">EQUIPMENT & PROJECT SOLUTIONS</span>
             <h1>{rentalHubHeadline(path)}</h1>
-            <p className="directory-intro">
-              {path === "/equipment-rental/"
-                ? "Compare equipment layouts and explore the facilities your operation needs. Confirm availability, access and connections with our team before selecting a unit."
-                : path === "/industries/"
-                  ? "Start with the work your team needs to keep doing. Each setting brings different requirements for food service, staff welfare and site access."
-                  : "Bring food service, hygiene and crew facilities into one site plan. Explore the services below, then discuss how they need to work together."}
-            </p>
+            <p className="directory-intro" data-h1-intro>{alignedPageIntro(path, rentalHubHeadline(path) || "")}</p>
             {path === "/industries/" ? (
               <div className="industry-briefs">
                 {[
@@ -798,6 +822,7 @@ export function Site({
               <br />
               We’ll take it from there.
             </h1>
+            <p data-h1-intro>Prepare your temporary-facility project brief with the intended use, site address, available utilities, delivery access and rental dates. Review the details below before contacting the rental team.</p>
             {[
               [
                 "Your operation",
@@ -828,10 +853,11 @@ export function Site({
                   <h1 id="about-title">
                     Temporary facilities built around the work.
                   </h1>
-                  <p>
-                    Temporary123 supports construction, emergency response,
-                    government, food service and remote workforce operations
-                    with coordinated temporary facility rentals.
+                  <p data-h1-intro>
+                    Temporary123 helps project teams plan temporary facilities
+                    around the operation that must continue. Equipment selection,
+                    site access, utilities and rental timing are reviewed together
+                    for construction, food service, public-service and remote-workforce projects.
                   </p>
                   <Button href="/contact-us/">Plan your project</Button>
                   <div className="about-intro-topics" aria-label="Our approach">
@@ -949,10 +975,11 @@ export function Site({
                   <h1 id="articles-title">
                     Field notes for better site planning.
                   </h1>
-                  <p>
-                    Practical guidance for mobile kitchen rentals, restroom and
-                    shower trailers, workforce housing and temporary site
-                    support.
+                  <p data-h1-intro>
+                    Use these planning guides to prepare a facility rental brief.
+                    Each guide covers a specific subject: kitchen workflow,
+                    temporary hygiene access or workforce accommodation, with
+                    the capacity, utility and delivery questions to resolve before booking.
                   </p>
                   <a className="secondary-inline-link" href="#planning-guides">
                     Browse planning guides <span aria-hidden="true">↓</span>
@@ -1110,6 +1137,7 @@ export function Site({
                 </a>
               </nav>
               <h1 className="page-title">{page.title}</h1>
+              {alignedPageIntro(path, page.title) && <p className="source-lead" data-h1-intro>{alignedPageIntro(path, page.title)}</p>}
               {path === "/gsa-schedule/" && (
                 <aside
                   className="procurement-documents"
@@ -1156,10 +1184,11 @@ export function Site({
         ) : path === "/privacy/" ? (
           <section className="wrap section narrow">
             <h1>Privacy</h1>
-            <p>
-              This website provides information about Temporary123 services.
-              Calling the published telephone number connects you directly with
-              the business.
+            <p data-h1-intro>
+              Review the information on this page about using the Temporary123
+              website and contacting the business. For questions about information
+              you provide during a rental inquiry, contact the team using the
+              published telephone number.
             </p>
             <p>
               This version does not load advertising or analytics scripts. To

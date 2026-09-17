@@ -1,0 +1,727 @@
+{
+  "checkedAt": "2026-09-16T08:43:36.108Z",
+  "origin": "https://temp123-nine.vercel.app",
+  "build": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\.temp\\owner-image-rollout-20260916\\dist",
+  "deploymentPerformedByHandoff": false,
+  "deploymentRevision": null,
+  "note": "HTTP presentation comparison only; not browser acceptance or a Vercel deployment ID. x-vercel-id is a request trace ID.",
+  "rows": [
+    {
+      "route": "/service-areas/",
+      "checkedAt": "2026-09-16T08:43:32.583Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "e8ccda677d48241f4c7d75c8e8b5c0d2914d79b2b7dbd0062397e2e64ace0da2",
+      "cache": "HIT",
+      "requestId": "sin1::shnfd-1789548213102-18628d6f6ac2",
+      "local": {
+        "h1": "USA Temporary Facilities Rental Service Areas",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "USA Temporary Facilities Rental Service Areas",
+            "presentation": "separate-options",
+            "groups": [
+              {
+                "title": "24 ft Mobile Kitchen Trailer",
+                "model": "model-12",
+                "reviewIds": [
+                  "12.05",
+                  "12.02",
+                  "12.04",
+                  "12.01",
+                  "12.03"
+                ]
+              },
+              {
+                "title": "20 ft Shower Trailer",
+                "model": "model-21",
+                "reviewIds": [
+                  "21.01",
+                  "21.02",
+                  "21.04",
+                  "21.05",
+                  "21.07",
+                  "21.08"
+                ]
+              },
+              {
+                "title": "Two-Stall Sleeper Trailer",
+                "model": "april-two-stall-sleeper",
+                "reviewIds": [
+                  "24.01",
+                  "24.08"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "12.05",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png"
+          },
+          {
+            "id": "12.02",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png"
+          },
+          {
+            "id": "12.04",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png"
+          },
+          {
+            "id": "12.01",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png"
+          },
+          {
+            "id": "12.03",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png"
+          },
+          {
+            "id": "21.01",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png"
+          },
+          {
+            "id": "21.02",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png"
+          },
+          {
+            "id": "21.04",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png"
+          },
+          {
+            "id": "21.05",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png"
+          },
+          {
+            "id": "21.07",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png"
+          },
+          {
+            "id": "21.08",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png"
+          },
+          {
+            "id": "24.01",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-bunk-bed-interior.png"
+          },
+          {
+            "id": "24.08",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/sleeper-trailer-2-stalls/sleeper-trailer-2-stall-sleeping-room.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "USA Temporary Facilities Rental Service Areas",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "USA Temporary Facilities Rental Service Areas",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/service-areas/alaska/",
+      "checkedAt": "2026-09-16T08:43:32.947Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "7d9df38e4b18970a69d89f7e615eb7b0a8c831d7e8a5b8190cb51c4b4b3810fb",
+      "cache": "MISS",
+      "requestId": "sin1::9zlcx-1789548213596-7d13d95b4a70",
+      "local": {
+        "h1": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+            "presentation": "single-model",
+            "groups": [
+              {
+                "title": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+                "model": "client-labelled-ada-reference",
+                "reviewIds": [
+                  "catalog-restroom"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "catalog-restroom",
+            "src": "/images/catalog/restroom-trailers-960.webp"
+          }
+        ]
+      },
+      "live": {
+        "h1": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Alaska Accessible Commercial Site ADA Shower and Restroom Combination Trailer Leasing",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/service-areas/texas/",
+      "checkedAt": "2026-09-16T08:43:33.296Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "29ec039e3523fcb9155c24c1d89d16124b6ae681cabf923c90a0168fad2296f0",
+      "cache": "MISS",
+      "requestId": "sin1::bgw2c-1789548213955-42feaa5e702c",
+      "local": {
+        "h1": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+            "presentation": "separate-options",
+            "groups": [
+              {
+                "title": "20 ft Contractor Accommodation",
+                "model": "model-22",
+                "reviewIds": [
+                  "22.01",
+                  "22.04",
+                  "22.02",
+                  "22.05"
+                ]
+              },
+              {
+                "title": "24 ft Mobile Kitchen Trailer",
+                "model": "model-12",
+                "reviewIds": [
+                  "12.05",
+                  "12.02",
+                  "12.04",
+                  "12.01",
+                  "12.03"
+                ]
+              },
+              {
+                "title": "20 ft Shower Trailer",
+                "model": "model-21",
+                "reviewIds": [
+                  "21.01",
+                  "21.02",
+                  "21.04",
+                  "21.05",
+                  "21.07",
+                  "21.08"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "22.01",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png"
+          },
+          {
+            "id": "22.04",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png"
+          },
+          {
+            "id": "22.02",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png"
+          },
+          {
+            "id": "22.05",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png"
+          },
+          {
+            "id": "12.05",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png"
+          },
+          {
+            "id": "12.02",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png"
+          },
+          {
+            "id": "12.04",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png"
+          },
+          {
+            "id": "12.01",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png"
+          },
+          {
+            "id": "12.03",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png"
+          },
+          {
+            "id": "21.01",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png"
+          },
+          {
+            "id": "21.02",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png"
+          },
+          {
+            "id": "21.04",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png"
+          },
+          {
+            "id": "21.05",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png"
+          },
+          {
+            "id": "21.07",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png"
+          },
+          {
+            "id": "21.08",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/service-areas/iowa/",
+      "checkedAt": "2026-09-16T08:43:34.180Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "ae995ee0d420fb0308a9bb33a51a6d9958b93a7ecd55a445641fedea29e19a9f",
+      "cache": "MISS",
+      "requestId": "sin1::kpf4z-1789548214304-5d18708011d2",
+      "local": {
+        "h1": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+            "presentation": "separate-options",
+            "groups": [
+              {
+                "title": "20 ft Contractor Accommodation",
+                "model": "model-22",
+                "reviewIds": [
+                  "22.01",
+                  "22.04",
+                  "22.02",
+                  "22.05"
+                ]
+              },
+              {
+                "title": "24 ft Mobile Kitchen Trailer",
+                "model": "model-12",
+                "reviewIds": [
+                  "12.05",
+                  "12.02",
+                  "12.04",
+                  "12.01",
+                  "12.03"
+                ]
+              },
+              {
+                "title": "20 ft Shower Trailer",
+                "model": "model-21",
+                "reviewIds": [
+                  "21.01",
+                  "21.02",
+                  "21.04",
+                  "21.05",
+                  "21.07",
+                  "21.08"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "22.01",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-bunk-bed-interior.png"
+          },
+          {
+            "id": "22.04",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-mobile-accommodation-bunk-room-interior.png"
+          },
+          {
+            "id": "22.02",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-accommodation-unit-exterior-side-view.png"
+          },
+          {
+            "id": "22.05",
+            "src": "/media/equipment-drive/sleeper-and-accommodation/20ft-accommodation-contractor/20ft-portable-accommodation-unit-base-camp.png"
+          },
+          {
+            "id": "12.05",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png"
+          },
+          {
+            "id": "12.02",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png"
+          },
+          {
+            "id": "12.04",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png"
+          },
+          {
+            "id": "12.01",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png"
+          },
+          {
+            "id": "12.03",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png"
+          },
+          {
+            "id": "21.01",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/mobile-shower-trailer-wash-station.png"
+          },
+          {
+            "id": "21.02",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/multi-station-shower-trailer-exterior.png"
+          },
+          {
+            "id": "21.04",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/private-shower-trailer-stall-interior.png"
+          },
+          {
+            "id": "21.05",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-exterior-with-private-shower-stall.png"
+          },
+          {
+            "id": "21.07",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-rear-exterior-view.png"
+          },
+          {
+            "id": "21.08",
+            "src": "/media/equipment-drive/shower-trailers/20-ft-shower-trailer-5-stalls-with-handwashing-sink/shower-trailer-sink-and-mirror-area.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/service-areas/arkansas/",
+      "checkedAt": "2026-09-16T08:43:34.519Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "b60a6d5009c1bcef65163d8dfe059ba4fdd5baa9671b4867d673b494b3ddc6f8",
+      "cache": "MISS",
+      "requestId": "sin1::kpf4z-1789548215189-b641c266d02b",
+      "local": {
+        "h1": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+            "presentation": "single-model",
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "live": {
+        "h1": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Arkansas Commercial Food Service Commercial Kitchen Modular Building For Rent",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/service-areas/washington/olympic-peninsula/port-angeles/",
+      "checkedAt": "2026-09-16T08:43:34.605Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "aa40fcfac624f58f858a34111d8fa1d0b40e4109ed9f041d1e320747eebe2482",
+      "cache": "HIT",
+      "requestId": "sin1::7kl9m-1789548215530-7e1ea7659439",
+      "local": {
+        "h1": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+            "presentation": "single-model",
+            "groups": [
+              {
+                "title": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+                "model": "model-12",
+                "reviewIds": [
+                  "12.05",
+                  "12.02",
+                  "12.04",
+                  "12.01",
+                  "12.03"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "12.05",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png"
+          },
+          {
+            "id": "12.02",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png"
+          },
+          {
+            "id": "12.04",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png"
+          },
+          {
+            "id": "12.01",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png"
+          },
+          {
+            "id": "12.03",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "Port Angeles, Washington Industrial Basecamp Commercial Kitchen Trailer Rental",
+            "presentation": null,
+            "groups": []
+          }
+        ],
+        "slides": [
+          {
+            "id": "12.01",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/commercial-six-burner-gas-range.png"
+          },
+          {
+            "id": "12.02",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-commercial-kitchen-entry-view.png"
+          },
+          {
+            "id": "12.04",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-prep-counter.png"
+          },
+          {
+            "id": "12.05",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/portable-commercial-kitchen-trailer-interior.png"
+          },
+          {
+            "id": "12.03",
+            "src": "/media/equipment-drive/mobile-kitchens/24ft-mobile-kitchen/mobile-kitchen-trailer-exterior-service-window.png"
+          }
+        ]
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/20ft-refrigeration-trailers/",
+      "checkedAt": "2026-09-16T08:43:34.997Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "851e14dbaab19fb7d4d8ebbc61e0a6b2f1cfff627211d6baabdaa09d4e6baaea",
+      "cache": "MISS",
+      "requestId": "sin1::shnfd-1789548215612-1e8de26acf65",
+      "local": {
+        "h1": "20ft Refrigeration Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": [
+          {
+            "id": "19.02",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png"
+          },
+          {
+            "id": "19.05",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-stainless-steel-interior.png"
+          },
+          {
+            "id": "19.01",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/portable-refrigeration-trailer-exterior.png"
+          },
+          {
+            "id": "19.03",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-exterior.png"
+          },
+          {
+            "id": "19.04",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigeration-trailer-rental-fleet.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "20ft Refrigeration Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": [
+          {
+            "src": "/images/service-heroes/20ft-refrigerated-trailer/01-960.webp"
+          },
+          {
+            "src": "/images/service-heroes/20ft-refrigerated-trailer/02-960.webp"
+          },
+          {
+            "src": "/images/service-heroes/20ft-refrigerated-trailer/03-960.webp"
+          },
+          {
+            "src": "/images/service-heroes/20ft-refrigerated-trailer/04-960.webp"
+          }
+        ]
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/equipment-rental/refrigeration/",
+      "checkedAt": "2026-09-16T08:43:35.427Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "9929a4e24aaeb204a633ee22266e6d11b59e615072730f9011fd9c6d7d98f714",
+      "cache": "MISS",
+      "requestId": "sin1::shnfd-1789548216005-e666e390b620",
+      "local": {
+        "h1": "Refrigerated Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [
+          {
+            "title": "20 ft Refrigerated Container",
+            "presentation": "single-model",
+            "groups": [
+              {
+                "title": "20 ft Refrigerated Container",
+                "model": "april-20ft-refrigerated-container",
+                "reviewIds": [
+                  "april-container-19-02"
+                ]
+              }
+            ]
+          }
+        ],
+        "slides": [
+          {
+            "id": "april-container-19-02",
+            "src": "/media/equipment-drive/refrigerated-trailers-and-containers/20ft-refrigerated-trailer-tier-1-4/refrigerated-trailer-interior-cooling-system.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "Refrigerated Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/equipment-rental/refrigerated-containers/",
+      "checkedAt": "2026-09-16T08:43:35.761Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "6afaa53813bbb76d1fdd6855e2459e064db09e82e1ad067036eee70d855254c5",
+      "cache": "MISS",
+      "requestId": "sin1::kpf4z-1789548216436-ebe582e5ab20",
+      "local": {
+        "h1": "40ft Refrigerated Container Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": [
+          {
+            "id": "catalog-reefer",
+            "src": "/images/catalog/refrigerated-containers-960.webp"
+          }
+        ]
+      },
+      "live": {
+        "h1": "40ft Refrigerated Container Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    },
+    {
+      "route": "/services/laundry-trailers/30ft/",
+      "checkedAt": "2026-09-16T08:43:36.108Z",
+      "status": 200,
+      "location": null,
+      "responseSha256": "80cfa9fbb05f7ec9ab52f8d7c416a78faeefc76a03112532cd76802bb3c14bd7",
+      "cache": "MISS",
+      "requestId": "sin1::w6knp-1789548216769-7ef4217b0860",
+      "local": {
+        "h1": "30ft Mobile Laundry Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": [
+          {
+            "id": "08.01",
+            "src": "/media/equipment-drive/laundry-trailers-and-containers/30ft-laundry-trailer-10-washer-dryer/mobile-laundry-trailer-commercial-washers-dryers.png"
+          }
+        ]
+      },
+      "live": {
+        "h1": "30ft Mobile Laundry Trailer Rental",
+        "robots": "noindex,follow",
+        "canonical": null,
+        "galleries": [],
+        "slides": []
+      },
+      "matchesLocalImagePresentation": false
+    }
+  ]
+}

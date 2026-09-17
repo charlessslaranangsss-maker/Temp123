@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "at": "2026-09-16T10:20:00.651922+00:00",
+    "suppliedFolders": 2,
+    "enumeratedFolders": 2,
+    "imagesFound": 2,
+    "downloaded": 2,
+    "bytes": 4693898,
+    "errors": [],
+    "imageErrors": [],
+    "skippedNonImages": 0
+  },
+  "folders": [
+    {
+      "id": "1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT",
+      "title": "Multifunctional Trailer (38ft All Electric Kitchen)",
+      "group": "38ft-all-electric-kitchen",
+      "items": [
+        {
+          "fileId": "13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2",
+          "name": "ce28e4b3-9a06-4862-ba58-95bfc7376211.png",
+          "mime": "image/png",
+          "expectedBytes": 2352800,
+          "folderId": "1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT",
+          "folderName": "Multifunctional Trailer (38ft All Electric Kitchen)",
+          "group": "38ft-all-electric-kitchen",
+          "relativeFolder": ""
+        }
+      ],
+      "complete": true,
+      "checkedAt": "2026-09-16T10:19:57.584878+00:00"
+    },
+    {
+      "id": "1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm",
+      "title": "Office, Sleeper and Shower & Restroom Trailer",
+      "group": "office-sleeper-shower-restroom-trailer",
+      "items": [
+        {
+          "fileId": "141iOYBwJVarSKqChnAWTrF33tIXv0oD4",
+          "name": "ce293976-43af-4f97-a737-add56e980a47.png",
+          "mime": "image/png",
+          "expectedBytes": 2341098,
+          "folderId": "1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm",
+          "folderName": "Office, Sleeper and Shower & Restroom Trailer",
+          "group": "office-sleeper-shower-restroom-trailer",
+          "relativeFolder": ""
+        }
+      ],
+      "complete": true,
+      "checkedAt": "2026-09-16T10:19:58.366780+00:00"
+    }
+  ],
+  "images": [
+    {
+      "fileId": "13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2",
+      "name": "ce28e4b3-9a06-4862-ba58-95bfc7376211.png",
+      "mime": "image/png",
+      "expectedBytes": 2352800,
+      "folderId": "1oG0nbW0LmVSAA3dIpITr_Xv6w9OJnZCT",
+      "folderName": "Multifunctional Trailer (38ft All Electric Kitchen)",
+      "group": "38ft-all-electric-kitchen",
+      "relativeFolder": "",
+      "originalWidth": 1434,
+      "originalHeight": 1097,
+      "format": "PNG",
+      "localPath": "work/drive-assets-new-2026-09-16/38ft-all-electric-kitchen/13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2__ce28e4b3-9a06-4862-ba58-95bfc7376211.png",
+      "sha256": "94548d625b33f94d5ea3c5db645b49bb7f2a911ec382743404846a04765a444a",
+      "actualBytes": 2352800,
+      "result": "DOWNLOADED_AND_DECODED",
+      "downloadedAt": "2026-09-16T10:20:00.464104+00:00",
+      "sourceUrl": "https://drive.google.com/file/d/13giMgZMFrZSFOtsOwDEKtE9Z9LYSc4w2/view",
+      "reviewId": "26.01"
+    },
+    {
+      "fileId": "141iOYBwJVarSKqChnAWTrF33tIXv0oD4",
+      "name": "ce293976-43af-4f97-a737-add56e980a47.png",
+      "mime": "image/png",
+      "expectedBytes": 2341098,
+      "folderId": "1LHSk7akYhOYAr4hODK6JhaPpBGkAwuEm",
+      "folderName": "Office, Sleeper and Shower & Restroom Trailer",
+      "group": "office-sleeper-shower-restroom-trailer",
+      "relativeFolder": "",
+      "originalWidth": 1434,
+      "originalHeight": 1097,
+      "format": "PNG",
+      "localPath": "work/drive-assets-new-2026-09-16/office-sleeper-shower-restroom-trailer/141iOYBwJVarSKqChnAWTrF33tIXv0oD4__ce293976-43af-4f97-a737-add56e980a47.png",
+      "sha256": "ecf9eb40caa93e8c39176be6194faa7e3ab0a2548089e486cfc20c1101ac2106",
+      "actualBytes": 2341098,
+      "result": "DOWNLOADED_AND_DECODED",
+      "downloadedAt": "2026-09-16T10:20:00.465115+00:00",
+      "sourceUrl": "https://drive.google.com/file/d/141iOYBwJVarSKqChnAWTrF33tIXv0oD4/view",
+      "reviewId": "27.01"
+    }
+  ],
+  "skipped": []
+}

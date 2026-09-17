@@ -1,0 +1,5494 @@
+{
+  "records": [
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/delta/",
+      "title": "Delta, Arkansas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "2adcedc5c456a6d75d6c791782622ece76fe63bea91ab4823e15610a5f7a1429",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/north-coast/",
+      "title": "North Coast, California Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "c4e4a3cebdd5a46850737f5ac4ab25e132a955982e2c9eb81ea3c04beda1fdf8",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-shoreline/",
+      "title": "Connecticut Shoreline, Connecticut Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "c0935581ffc4b8a0e988885f4415341aa22ec425cde44d06212e199d113329e5",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/north-florida/",
+      "title": "North Florida, Florida Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d1ff3802a2dfd3851cf8849c2b3bdd6b82e8cc861c98fca60a294d863a359425",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/north-georgia/",
+      "title": "North Georgia, Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b23071d1b0c72988d0946c7331683d7f46e749b4fc5b6bb5898be87edf0cfdef",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/southwest-idaho/",
+      "title": "Southwest Idaho, Idaho Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "450961a68db2d569128454ab5c3f0471f385a11cabd3e1da1b9eecff887da428",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northwest-iowa/",
+      "title": "Northwest Iowa, Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "704a11f597f42e1e5a5de9781035b1b024082374699c2dfaa125ff5ac84c3d70",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/south-central-kansas/",
+      "title": "South Central Kansas, Kansas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e7d468dcfe230fa2adafffeac7ff4bb97ea748031c5bade095338aeec9ccc2f7",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/western-lakes-and-mountains/",
+      "title": "Western Lakes and Mountains, Maine Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "de0346a52b7e01078e4800471f9ee97f14b2b067c1da42168e4e4f8826e5b6d4",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/central-maryland/",
+      "title": "Central Maryland, Maryland Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "00466091c3b69a35651e55192b9994fa476d453134743deae469cfa375e01402",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/berkshires/",
+      "title": "Berkshires, Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bc855e82589ff17dc317e64cc73d19a88b40f44184fe26f8841502b2a515cf14",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/southeast-michigan/",
+      "title": "Southeast Michigan, Michigan Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "97eea88ff9e51d9bad2143262b8eeebe462dc1fa7df76fe4f2fc731c541ea0e6",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/southern-minnesota/",
+      "title": "Southern Minnesota, Minnesota Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "1116c7250f254730029b71f58b6032484ef07a5ae6e358380c979ddfebbffd6a",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/hills/",
+      "title": "Hills, Mississippi Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bce2dfb8735cd1e9214b7fdb2bd8b45919e15033354bad7ae8e1d891aed337c0",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/yellowstone-country/",
+      "title": "Yellowstone Country, Montana Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "93693b30c0a4338299ee5e277f50e8202f12cd131f5744f65af6b4ef4defe497",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/sandhills/",
+      "title": "Sandhills, Nebraska Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b9c72ba6c3dda56498e79d313b9f28755fac3e5ff5600ce48c59cf146944f364",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/reno-tahoe/",
+      "title": "Reno Tahoe, Nevada Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "0c06d8ee3932bf4c8016e7bc920931d2cb0e5134353ff491201e5420a1b929cb",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/dartmouth-lake-sunapee/",
+      "title": "Dartmouth Lake Sunapee, New Hampshire Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "7a5d06c94909b54aa0569eb545456b76d452d204bf2c4da06832bc5d2c2e2bd1",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/skylands/",
+      "title": "Skylands, New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "155df53149c8eb48aec687295c36fcf0e1a2cda63a14b145b2f4c2e92e82471e",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southeast-new-mexico/",
+      "title": "Southeast New Mexico, New Mexico Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "af8e48689d578dc6c1c1fae28135c891cb36c022da9f3db674ac71d252da8522",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/capital-region/",
+      "title": "Capital Region, New York Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "2e945ee15dd89f72b421730ac060a0eaa54ddd2aa578458d11b6a0026bffb2ec",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/charlotte-region/",
+      "title": "Charlotte region, North Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e46b209d60fd76b1eccc89edcb5f534fca09ddd19e24c7900d9bef4c6f5f9d86",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northwest-ohio/",
+      "title": "Northwest Ohio, Ohio Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "24f4b5d1f4d3edf38a3da50ec8ed49f1a2aac58dfc79609cfbe8858fdbbf49e7",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/kiamichi-country/",
+      "title": "Kiamichi Country, Oklahoma Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "abd203074cda5bd1c342695fdca779e7a4b05a2727065c27b0f9e8a7ebecf7bf",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/eastern-oregon/",
+      "title": "Eastern Oregon, Oregon Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e3fae65a3ace529390ac8465aa949f4632654e9216d659bb3197f652aad66747",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/pee-dee/",
+      "title": "Pee Dee, South Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "dbcf062925d2f857fdaecd1cd9cdfcbc7cba037502ea134a3cbabc4b3cf1dac3",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/cumberland-plateau/",
+      "title": "Cumberland Plateau, Tennessee Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b878ebb5097681ffce912b8df0d85b7bc4464398e2cedab6ce6c66fca05b7623",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/gulf-coast/",
+      "title": "Gulf Coast, Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e151a19b88c142f435c800c355026647939b371e5dba8239e15fde98a1d674c7",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/central-utah/",
+      "title": "Central Utah, Utah Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "55f3e5e958cdaebcc45e1ee8369a8f6919154ab23543c7fa81b1575e370d8044",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/southern-vermont/",
+      "title": "Southern Vermont, Vermont Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "80672131faf6a590f6762bd38ba46d014e3ced36ac896afa2257850455528514",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/hampton-roads/",
+      "title": "Hampton Roads, Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "9cad0e93dfd3b83e6ea65beced0fbdffb2d6d79b59d9e551640077d8156fcaff",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/",
+      "title": "Olympic Peninsula, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bb3e361a684e1863e3d42feca90aa720ac1beed83307a959d5f4fabf56fcfcbb",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/northern-panhandle/",
+      "title": "Northern Panhandle, West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "30dbf8ea7cf193cde1dffdf52d48f58f6be4a2dd8ecc07e6bd37eebccd386ea8",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southeast-wyoming/",
+      "title": "Southeast Wyoming, Wyoming Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "aa049c1a61671c92e9d7831cfe8f163c56133064ee3caf391f66a82f99cfe85b",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/sequim/",
+      "title": "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e39df1cbcf5a2ff97bc3873db15f41ba69219db12ef83d98e76e5ec53e53e1da",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "f33836b6709593d902cc360f9f09bfc3ea50e8be1dcd32ab00ca32b43863da5c",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "76b0e2b08e4c160acb3f074162464fa707a78185633272b9641b350b7513c928",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "61b5b97821fbb242f4eb847652ead6600fbd42a5c5164f63421ee6304be4b9f9",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d0f9c7ebc1fa8991ea0cf02b5e3fc4386ad78c5ae2257be1c61edbdeee46ae86",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "37127d01b72653bed6a61deaf891306d297b56a41d6fb7c6cc92340e06ea7131",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "f24eec8a8d144eff7130a5c9e6734e83a79449aac275c8ee71390319915839ed",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d41c930358f8b71d6da83f0d0ed3e86491cf152b12702bc9351c7385ae051f93",
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Georgia",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Iowa",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Massachusetts",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New Jersey",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Texas",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Washington",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "West Virginia",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Georgia",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Iowa",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Massachusetts",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New Jersey",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Texas",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Washington",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "West Virginia",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 1440,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/arkansas/delta/",
+      "title": "Delta, Arkansas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "2adcedc5c456a6d75d6c791782622ece76fe63bea91ab4823e15610a5f7a1429",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/california/north-coast/",
+      "title": "North Coast, California Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "c4e4a3cebdd5a46850737f5ac4ab25e132a955982e2c9eb81ea3c04beda1fdf8",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/connecticut/connecticut-shoreline/",
+      "title": "Connecticut Shoreline, Connecticut Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "c0935581ffc4b8a0e988885f4415341aa22ec425cde44d06212e199d113329e5",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/florida/north-florida/",
+      "title": "North Florida, Florida Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d1ff3802a2dfd3851cf8849c2b3bdd6b82e8cc861c98fca60a294d863a359425",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/north-georgia/",
+      "title": "North Georgia, Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b23071d1b0c72988d0946c7331683d7f46e749b4fc5b6bb5898be87edf0cfdef",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/idaho/southwest-idaho/",
+      "title": "Southwest Idaho, Idaho Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "450961a68db2d569128454ab5c3f0471f385a11cabd3e1da1b9eecff887da428",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/northwest-iowa/",
+      "title": "Northwest Iowa, Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "704a11f597f42e1e5a5de9781035b1b024082374699c2dfaa125ff5ac84c3d70",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/kansas/south-central-kansas/",
+      "title": "South Central Kansas, Kansas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e7d468dcfe230fa2adafffeac7ff4bb97ea748031c5bade095338aeec9ccc2f7",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maine/western-lakes-and-mountains/",
+      "title": "Western Lakes and Mountains, Maine Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "de0346a52b7e01078e4800471f9ee97f14b2b067c1da42168e4e4f8826e5b6d4",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/maryland/central-maryland/",
+      "title": "Central Maryland, Maryland Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "00466091c3b69a35651e55192b9994fa476d453134743deae469cfa375e01402",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/berkshires/",
+      "title": "Berkshires, Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bc855e82589ff17dc317e64cc73d19a88b40f44184fe26f8841502b2a515cf14",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/michigan/southeast-michigan/",
+      "title": "Southeast Michigan, Michigan Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "97eea88ff9e51d9bad2143262b8eeebe462dc1fa7df76fe4f2fc731c541ea0e6",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/minnesota/southern-minnesota/",
+      "title": "Southern Minnesota, Minnesota Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "1116c7250f254730029b71f58b6032484ef07a5ae6e358380c979ddfebbffd6a",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/mississippi/hills/",
+      "title": "Hills, Mississippi Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bce2dfb8735cd1e9214b7fdb2bd8b45919e15033354bad7ae8e1d891aed337c0",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/montana/yellowstone-country/",
+      "title": "Yellowstone Country, Montana Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "93693b30c0a4338299ee5e277f50e8202f12cd131f5744f65af6b4ef4defe497",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nebraska/sandhills/",
+      "title": "Sandhills, Nebraska Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b9c72ba6c3dda56498e79d313b9f28755fac3e5ff5600ce48c59cf146944f364",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/nevada/reno-tahoe/",
+      "title": "Reno Tahoe, Nevada Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "0c06d8ee3932bf4c8016e7bc920931d2cb0e5134353ff491201e5420a1b929cb",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-hampshire/dartmouth-lake-sunapee/",
+      "title": "Dartmouth Lake Sunapee, New Hampshire Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "7a5d06c94909b54aa0569eb545456b76d452d204bf2c4da06832bc5d2c2e2bd1",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/skylands/",
+      "title": "Skylands, New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "155df53149c8eb48aec687295c36fcf0e1a2cda63a14b145b2f4c2e92e82471e",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-mexico/southeast-new-mexico/",
+      "title": "Southeast New Mexico, New Mexico Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "af8e48689d578dc6c1c1fae28135c891cb36c022da9f3db674ac71d252da8522",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-york/capital-region/",
+      "title": "Capital Region, New York Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "2e945ee15dd89f72b421730ac060a0eaa54ddd2aa578458d11b6a0026bffb2ec",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/north-carolina/charlotte-region/",
+      "title": "Charlotte region, North Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e46b209d60fd76b1eccc89edcb5f534fca09ddd19e24c7900d9bef4c6f5f9d86",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/ohio/northwest-ohio/",
+      "title": "Northwest Ohio, Ohio Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "24f4b5d1f4d3edf38a3da50ec8ed49f1a2aac58dfc79609cfbe8858fdbbf49e7",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oklahoma/kiamichi-country/",
+      "title": "Kiamichi Country, Oklahoma Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "abd203074cda5bd1c342695fdca779e7a4b05a2727065c27b0f9e8a7ebecf7bf",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/oregon/eastern-oregon/",
+      "title": "Eastern Oregon, Oregon Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e3fae65a3ace529390ac8465aa949f4632654e9216d659bb3197f652aad66747",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/south-carolina/pee-dee/",
+      "title": "Pee Dee, South Carolina Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "dbcf062925d2f857fdaecd1cd9cdfcbc7cba037502ea134a3cbabc4b3cf1dac3",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/tennessee/cumberland-plateau/",
+      "title": "Cumberland Plateau, Tennessee Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "b878ebb5097681ffce912b8df0d85b7bc4464398e2cedab6ce6c66fca05b7623",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/gulf-coast/",
+      "title": "Gulf Coast, Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e151a19b88c142f435c800c355026647939b371e5dba8239e15fde98a1d674c7",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/utah/central-utah/",
+      "title": "Central Utah, Utah Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "55f3e5e958cdaebcc45e1ee8369a8f6919154ab23543c7fa81b1575e370d8044",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/vermont/southern-vermont/",
+      "title": "Southern Vermont, Vermont Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "80672131faf6a590f6762bd38ba46d014e3ced36ac896afa2257850455528514",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/virginia/hampton-roads/",
+      "title": "Hampton Roads, Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "9cad0e93dfd3b83e6ea65beced0fbdffb2d6d79b59d9e551640077d8156fcaff",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/",
+      "title": "Olympic Peninsula, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "bb3e361a684e1863e3d42feca90aa720ac1beed83307a959d5f4fabf56fcfcbb",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/northern-panhandle/",
+      "title": "Northern Panhandle, West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "30dbf8ea7cf193cde1dffdf52d48f58f6be4a2dd8ecc07e6bd37eebccd386ea8",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/wyoming/southeast-wyoming/",
+      "title": "Southeast Wyoming, Wyoming Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "aa049c1a61671c92e9d7831cfe8f163c56133064ee3caf391f66a82f99cfe85b",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/olympic-peninsula/sequim/",
+      "title": "Sequim, Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "e39df1cbcf5a2ff97bc3873db15f41ba69219db12ef83d98e76e5ec53e53e1da",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/georgia/",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "f33836b6709593d902cc360f9f09bfc3ea50e8be1dcd32ab00ca32b43863da5c",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/iowa/",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "76b0e2b08e4c160acb3f074162464fa707a78185633272b9641b350b7513c928",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/massachusetts/",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "61b5b97821fbb242f4eb847652ead6600fbd42a5c5164f63421ee6304be4b9f9",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/new-jersey/",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d0f9c7ebc1fa8991ea0cf02b5e3fc4386ad78c5ae2257be1c61edbdeee46ae86",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/texas/",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "37127d01b72653bed6a61deaf891306d297b56a41d6fb7c6cc92340e06ea7131",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/washington/",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "f24eec8a8d144eff7130a5c9e6734e83a79449aac275c8ee71390319915839ed",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "page",
+      "url": "/service-areas/west-virginia/",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "outerContentHash": "d41c930358f8b71d6da83f0d0ed3e86491cf152b12702bc9351c7385ae051f93",
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Georgia",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Iowa",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Massachusetts",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "New Jersey",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Texas",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "Washington",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "full-map",
+      "url": "/service-areas/",
+      "state": "West Virginia",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Georgia",
+      "title": "Georgia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Iowa",
+      "title": "Iowa Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Massachusetts",
+      "title": "Massachusetts Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "New Jersey",
+      "title": "New Jersey Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Texas",
+      "title": "Texas Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "Washington",
+      "title": "Washington Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    },
+    {
+      "kind": "compact-map",
+      "url": "/",
+      "state": "West Virginia",
+      "title": "West Virginia Remote Operations Man Camp Temporary Facilities Rental",
+      "intended": true,
+      "context": "man-camp",
+      "groups": [
+        {
+          "title": "20 ft Contractor Accommodation",
+          "model": "model-22",
+          "family": "contractor-accommodation",
+          "ids": [
+            "22.01",
+            "22.04",
+            "22.02",
+            "22.05"
+          ]
+        },
+        {
+          "title": "24 ft Mobile Kitchen Trailer",
+          "model": "model-12",
+          "family": "mobile-kitchen",
+          "ids": [
+            "12.05",
+            "12.02",
+            "12.04",
+            "12.01",
+            "12.03"
+          ]
+        },
+        {
+          "title": "20 ft Shower Trailer",
+          "model": "model-21",
+          "family": "shower-trailer",
+          "ids": [
+            "21.01",
+            "21.02",
+            "21.04",
+            "21.05",
+            "21.07",
+            "21.08"
+          ]
+        }
+      ],
+      "width": 390,
+      "fullImagesChecked": 2,
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}
