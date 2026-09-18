@@ -21,7 +21,7 @@
     {
       "path": "/emergency-container-modular-remote-executive-hotel-suites/",
       "title": "Emergency Modular Executive Hotel Suite Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan temporary modular executive hotel suites around occupancy, privacy, utility connections, site access, servicing and the required rental term.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -29,7 +29,7 @@
     {
       "path": "/emergency-migrant-containerized-living-spaces/",
       "title": "Emergency Containerized Living Space Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan emergency containerized living spaces around resident count, sleeping and hygiene needs, utilities, site access, servicing and duration.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -37,7 +37,7 @@
     {
       "path": "/emergency-modular-shelters-contained-for-rental/",
       "title": "Emergency Modular Shelter Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan emergency modular shelter rentals around occupant capacity, sleeping and hygiene needs, utilities, delivery access, servicing and duration.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -53,7 +53,7 @@
     {
       "path": "/equipment-rental/command-center-trailers/",
       "title": "Command Center Trailer Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a command center trailer rental around workspace capacity, communications, power, climate control, site access and delivery schedule.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/modular-command-center-trailers/"
@@ -61,7 +61,7 @@
     {
       "path": "/equipment-rental/decontamination-trailers/",
       "title": "Decontamination Trailer Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a decontamination trailer rental around personnel flow, clean and dirty zones, water, wastewater, power, site access and servicing.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/"
@@ -69,7 +69,7 @@
     {
       "path": "/equipment-rental/dump-rental/",
       "title": "Dump Container Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a dump container rental around waste type, container capacity, placement access, pickup schedule, site rules and rental duration.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/fencing-barricades-trash-receptacles/"
@@ -77,7 +77,7 @@
     {
       "path": "/equipment-rental/multi-trailer/",
       "title": "Multi-Purpose Trailer Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a multi-purpose trailer rental around intended use, occupancy, layout, utilities, site access, delivery schedule and rental duration.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/"
@@ -93,7 +93,7 @@
     {
       "path": "/equipment-rental/ramp-rental/",
       "title": "Ramp Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a rental ramp around trailer entry height, load and accessibility needs, placement clearance, surface conditions and delivery access.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/ramp-rentals/"
@@ -524,8 +524,8 @@
     },
     {
       "path": "/equipment-rental/sleeper-trailers/",
-      "title": "Sleeper Trailer Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "title": "Sleeper Trailers for Workforce Housing",
+      "description": "Plan a sleeper trailer rental around bed capacity, crew shifts, length of stay, power, water or wastewater needs, delivery access and servicing.",
       "family": "workforce",
       "location": null,
       "parentPath": "/equipment-rental/mobile-sleep-trailers/"
@@ -533,7 +533,7 @@
     {
       "path": "/equipment-rental/stair-rental/",
       "title": "Stair Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan rental stairs around trailer entry height, expected users, handrail and landing needs, surface conditions, placement clearance and delivery access.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/stair-rentals/"
@@ -541,7 +541,7 @@
     {
       "path": "/equipment-rental/waste-container/",
       "title": "Waste Container Rental",
-      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "description": "Plan a waste container rental around waste stream, required capacity, secure placement, service frequency, delivery access and rental duration.",
       "family": "equipment",
       "location": null,
       "parentPath": "/equipment-rental/fencing-barricades-trash-receptacles/"
@@ -565,7 +565,7 @@
     {
       "path": "/modular-temporary-camp-facilities/",
       "title": "Modular Temporary Camp Facility Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan modular temporary camp facilities around workforce size, sleeping, dining and hygiene needs, utilities, access and phased delivery.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -573,7 +573,7 @@
     {
       "path": "/modular-temporary-workforce-housing-facilities/",
       "title": "Modular Temporary Workforce Housing Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan modular temporary workforce housing around crew size, room layout, hygiene, utilities, site access, servicing and rental duration.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -581,7 +581,7 @@
     {
       "path": "/remote-basecamp-housing-service-company/",
       "title": "Remote Base Camp Housing Services",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Coordinate remote base camp housing around crew rotations, sleeping, dining and hygiene needs, utilities, site logistics and service schedules.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -589,7 +589,7 @@
     {
       "path": "/remote-containerized-military-berthing-solution/",
       "title": "Remote Containerized Military Berthing Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan remote containerized military berthing around personnel count, sleeping layout, hygiene support, utilities, site access and deployment duration.",
       "family": "workforce",
       "location": null,
       "parentPath": "/remote-containerized-military-berthing-solution-for-rent/"
@@ -597,7 +597,7 @@
     {
       "path": "/remote-housing-facilities/",
       "title": "Remote Housing Facility Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan a remote housing facility around workforce size, room mix, dining and hygiene support, utilities, access, servicing and length of stay.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
@@ -605,15 +605,15 @@
     {
       "path": "/remote-temporary-workforce-housing-facilities-rental/",
       "title": "Remote Temporary Workforce Housing Facility Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan remote temporary workforce housing facilities around crew size, shift patterns, sleeping and hygiene needs, utilities, access and rental term.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
     },
     {
       "path": "/remote-workforce-house-company-in-alabama/",
-      "title": "Remote Workforce Housing Rental in Alabama",
-      "description": "Plan temporary workforce housing in Alabama around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "title": "Remote Workforce Housing Company in Alabama",
+      "description": "Plan with a remote workforce housing company in Alabama around crew size, room needs, utilities, site access, servicing and project duration.",
       "family": "workforce",
       "location": "Alabama",
       "parentPath": "/man-camps-for-rent/"
@@ -629,15 +629,15 @@
     {
       "path": "/remote-workforce-housing-facilities/",
       "title": "Remote Workforce Housing Facility Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan remote workforce housing facility rentals around crew rotations, room needs, utilities, site logistics, servicing and project duration.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"
     },
     {
       "path": "/remote-workforce-housing-in-alabama/",
-      "title": "Remote Workforce Housing Rental in Alabama",
-      "description": "Plan temporary workforce housing in Alabama around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "title": "Remote Workforce Housing Rentals in Alabama",
+      "description": "Plan remote workforce housing rentals in Alabama around crew size, sleeping and hygiene needs, utilities, access, servicing and rental duration.",
       "family": "workforce",
       "location": "Alabama",
       "parentPath": "/man-camps-for-rent/"
@@ -709,7 +709,7 @@
     {
       "path": "/temporary-workforce-housing-facilities/",
       "title": "Temporary Workforce Housing Facilities Rental",
-      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "description": "Plan temporary workforce housing facilities around crew size, length of stay, sleeping and hygiene needs, utilities, site access, security and phased delivery.",
       "family": "workforce",
       "location": null,
       "parentPath": "/man-camps-for-rent/"

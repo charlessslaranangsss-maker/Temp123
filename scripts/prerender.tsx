@@ -42,6 +42,7 @@ import {
 } from "../src/rentalHeadlines";
 import { stateGuides } from "../src/stateGuides";
 import vercel from "../vercel.json" with { type: "json" };
+import { readableFragmentText } from "./prerender-text";
 // Vercel preview builds must never inherit production indexing settings.
 const domainReady =
   site.domainRoutingReady || process.env.PUBLIC_DOMAIN_READY === "true";
@@ -423,11 +424,12 @@ for (const path of [...allRoutes, "/404/"]) {
   // Match schema to final, visible HTML rather than constructing a parallel breadcrumb tree.
   if (path !== "/404/") {
     const h1 = $("h1").first();
+    const h1Text = readableFragmentText(h1.html() || h1.text());
     if (path !== "/" && !$("nav.breadcrumb").length) {
       const nav = $(
         '<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page"></span></nav>',
       );
-      nav.find('[aria-current="page"]').text(h1.text().trim());
+      nav.find('[aria-current="page"]').text(h1Text);
       h1.before(nav);
     }
     const breadcrumb = $("nav.breadcrumb").first();
@@ -435,7 +437,7 @@ for (const path of [...allRoutes, "/404/"]) {
       breadcrumb.append("<span>/</span>");
       breadcrumb.append(
         $('<span aria-current="page"></span>').text(
-          region?.region || stateName || h1.text().trim(),
+          region?.region || stateName || h1Text,
         ),
       );
     }

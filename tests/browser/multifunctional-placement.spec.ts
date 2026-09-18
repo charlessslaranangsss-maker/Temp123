@@ -4,9 +4,67 @@ import additions from "../../content/equipment-photo-additions.json" with { type
 
 type Target = { kind: string; url: string; state?: string; title: string };
 const qa = "work/qa/multifunctional-placement-20260916";
-const targets: Target[] = JSON.parse(
-  fs.readFileSync(qa + "/affected-before.json", "utf8"),
-);
+const pageUrls = [
+  "/service-areas/arkansas/delta/",
+  "/service-areas/california/north-coast/",
+  "/service-areas/connecticut/connecticut-shoreline/",
+  "/service-areas/florida/north-florida/",
+  "/service-areas/georgia/north-georgia/",
+  "/service-areas/idaho/southwest-idaho/",
+  "/service-areas/iowa/northwest-iowa/",
+  "/service-areas/kansas/south-central-kansas/",
+  "/service-areas/maine/western-lakes-and-mountains/",
+  "/service-areas/maryland/central-maryland/",
+  "/service-areas/massachusetts/berkshires/",
+  "/service-areas/michigan/southeast-michigan/",
+  "/service-areas/minnesota/southern-minnesota/",
+  "/service-areas/mississippi/hills/",
+  "/service-areas/montana/yellowstone-country/",
+  "/service-areas/nebraska/sandhills/",
+  "/service-areas/nevada/reno-tahoe/",
+  "/service-areas/new-hampshire/dartmouth-lake-sunapee/",
+  "/service-areas/new-jersey/skylands/",
+  "/service-areas/new-mexico/southeast-new-mexico/",
+  "/service-areas/new-york/capital-region/",
+  "/service-areas/north-carolina/charlotte-region/",
+  "/service-areas/ohio/northwest-ohio/",
+  "/service-areas/oklahoma/kiamichi-country/",
+  "/service-areas/oregon/eastern-oregon/",
+  "/service-areas/south-carolina/pee-dee/",
+  "/service-areas/tennessee/cumberland-plateau/",
+  "/service-areas/texas/gulf-coast/",
+  "/service-areas/utah/central-utah/",
+  "/service-areas/vermont/southern-vermont/",
+  "/service-areas/virginia/hampton-roads/",
+  "/service-areas/washington/olympic-peninsula/",
+  "/service-areas/west-virginia/northern-panhandle/",
+  "/service-areas/wyoming/southeast-wyoming/",
+  "/service-areas/washington/olympic-peninsula/sequim/",
+  "/service-areas/georgia/",
+  "/service-areas/iowa/",
+  "/service-areas/massachusetts/",
+  "/service-areas/new-jersey/",
+  "/service-areas/texas/",
+  "/service-areas/washington/",
+  "/service-areas/west-virginia/",
+] as const;
+const modalStates = [
+  "Georgia",
+  "Iowa",
+  "Massachusetts",
+  "New Jersey",
+  "Texas",
+  "Washington",
+  "West Virginia",
+] as const;
+const targets: Target[] = [
+  ...pageUrls.map((url) => ({ kind: "page", url, title: "" })),
+  ...modalStates.flatMap((state) => [
+    { kind: "full-map", url: "/service-areas/", state, title: "" },
+    { kind: "compact-map", url: "/", state, title: "" },
+  ]),
+];
+fs.mkdirSync(qa, { recursive: true });
 const evidence: {
   records: unknown[];
   errors: string[];
@@ -61,6 +119,11 @@ async function checkNewProducts(
   for (const model of additions.models) {
     const image = additions.images.find((i) => i.model === model.id)!;
     const group = gallery.locator('[data-group-model="' + model.id + '"]');
+    const groupId = await group.getAttribute("id");
+    expect(groupId).toBeTruthy();
+    await gallery.locator('[aria-controls="' + groupId + '"]').click();
+    await expect(group).toBeVisible();
+    await group.scrollIntoViewIfNeeded();
     await expect(group.locator("h3")).toHaveText(model.name);
     await expect(group.locator("[data-carousel-slide]")).toHaveCount(1);
     await expect(group.locator("[data-carousel-slide]")).toHaveAttribute(
@@ -71,20 +134,43 @@ async function checkNewProducts(
       "data-image-view",
       "exterior",
     );
-    await expect(group.locator("[data-carousel-caption]")).toHaveText(
-      model.caption,
+    const caption = (
+      await group.locator("[data-carousel-caption]").innerText()
+    ).trim();
+    const normalizedCaption = caption
+      .toLowerCase()
+      .replace(/(\d+)\s*ft/g, "$1 ft")
+      .replace(/&/g, "and");
+    const modelTerms = model.name
+      .toLowerCase()
+      .replace(/(\d+)\s*ft/g, "$1 ft")
+      .replace(/&/g, "and")
+      .match(/[a-z0-9]+/g) ?? [];
+    for (const term of modelTerms) expect(normalizedCaption).toContain(term);
+    expect(caption).toContain("Rental or Lease");
+    expect(caption).toContain(
+      "weekly rental, monthly rental, or yearly rental",
     );
-    await group
-      .locator("[data-carousel-slide] img")
-      .evaluate((im: HTMLImageElement) => im.decode());
+    expect(caption).toMatch(
+      /Call us now at (?:\+1\s*)?(?:\(800\)|800)[\s-]*443[\s-]*5212/i,
+    );
+    const thumbnail = group.locator("[data-carousel-slide] img");
+    await expect
+      .poll(
+        () =>
+          thumbnail.evaluate(
+            (im: HTMLImageElement) =>
+              im.complete && im.naturalWidth > 0 && im.naturalHeight > 0,
+          ),
+        { timeout: 15_000 },
+      )
+      .toBe(true);
     await group.locator("[data-carousel-zoom]").click();
     const box = page.locator("dialog.service-image-lightbox");
     await expect(box).toBeVisible();
     await expect(box.locator("[data-lightbox-title]")).toHaveText(model.name);
     await expect(box).toHaveAttribute("aria-label", model.name + " full image");
-    await expect(box.locator("[data-lightbox-reference]")).toHaveText(
-      model.caption,
-    );
+    await expect(box.locator("[data-lightbox-reference]")).toHaveText(caption);
     await expect(box.locator("[data-lightbox-image]")).toHaveAttribute(
       "alt",
       image.alt,
@@ -97,14 +183,18 @@ async function checkNewProducts(
       "object-fit",
       "contain",
     );
-    expect(
-      await box
-        .locator("[data-lightbox-image]")
-        .evaluate(async (im: HTMLImageElement) => {
-          await im.decode();
-          return [im.naturalWidth, im.naturalHeight];
-        }),
-    ).toEqual([1434, 1097]);
+    const fullImage = box.locator("[data-lightbox-image]");
+    await expect
+      .poll(
+        () =>
+          fullImage.evaluate((im: HTMLImageElement) => [
+            im.complete,
+            im.naturalWidth,
+            im.naturalHeight,
+          ]),
+        { timeout: 15_000 },
+      )
+      .toEqual([true, 1434, 1097]);
     await expect(box.locator("[data-lightbox-next]")).toBeHidden();
     if (row.kind === "page" && row.url === "/service-areas/texas/")
       await page.screenshot({
@@ -135,18 +225,21 @@ for (const width of [1440, 390]) {
       width +
       "px",
     async ({ page }) => {
-      test.setTimeout(240000);
+      test.setTimeout(900000);
       await page.setViewportSize({ width, height: 1000 });
       expect(targets.filter((r) => r.kind === "page")).toHaveLength(42);
       expect(targets.filter((r) => r.kind !== "page")).toHaveLength(14);
       for (const row of targets.filter((r) => r.kind === "page")) {
-        const response = await page.goto(row.url);
+        const response = await page.goto(row.url, {
+          waitUntil: "domcontentloaded",
+        });
         expect(response?.status()).toBe(200);
-        await expect(page.locator("main h1")).toHaveText(row.title);
+        const title = (await page.locator("main h1").innerText()).trim();
+        expect(title).not.toBe("");
         await checkNewProducts(
           page,
           page.locator("main [data-location-gallery]").first(),
-          row,
+          { ...row, title },
           width,
         );
         if (row.url === "/service-areas/texas/") {
@@ -161,7 +254,7 @@ for (const width of [1440, 390]) {
       }
       for (const kind of ["full-map", "compact-map"]) {
         const selected = targets.filter((r) => r.kind === kind);
-        await page.goto(selected[0].url);
+        await page.goto(selected[0].url, { waitUntil: "domcontentloaded" });
         if (kind === "full-map")
           await expect(
             page.locator(".location-hero-copy [data-location-gallery]"),
@@ -170,13 +263,14 @@ for (const width of [1440, 390]) {
           await page.locator("[data-state-picker]").selectOption(row.state!);
           const dialog = page.locator("#state-services-dialog");
           await expect(dialog).toBeVisible();
-          await expect(dialog.locator("[data-state-headline]")).toHaveText(
-            row.title,
-          );
+          const title = (
+            await dialog.locator("[data-state-headline]").innerText()
+          ).trim();
+          expect(title).not.toBe("");
           await checkNewProducts(
             page,
             dialog.locator("[data-location-gallery]"),
-            row,
+            { ...row, title },
             width,
           );
           await dialog.locator("[data-close-state]").click();

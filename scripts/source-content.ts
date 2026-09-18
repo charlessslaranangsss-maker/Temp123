@@ -12,6 +12,18 @@ type Options = {
 };
 
 const verifiedAltByLocalMedia: Record<string, string> = {
+  "/media/ea84f33b3717d1b8918f930c.png": "United States Air Force seal",
+  "/media/73b5f4165b762f9b5864ad12.png": "United States Army seal",
+  "/media/2092584ed5842c755cee4670.png": "United States Coast Guard seal",
+  "/media/eded316f3d11e80e55e9b459.png":
+    "United States Department of Veterans Affairs seal",
+  "/media/191f3fd3c38ca7ba0af28c54.png": "United States Marine Corps seal",
+  "/media/c6578f14258acbe4780c3793.png":
+    "United States Department of the Navy seal",
+  "/media/3ce3bc9f066f86f54836e1b3.webp":
+    "Large shower and restroom trailer with open private stalls and an ADA access ramp",
+  "/media/b295f33efea88dc4497a26c2.webp":
+    "Large shower and restroom trailer at dusk with illuminated open private stalls",
   "/media/ce6614a557c75682ffc570f2.png":
     "Emergency base camp CAD site plan with temporary sleeper, shower, restroom, laundry, dining and support units",
   "/media/1ac075338bb250b85779f3e2.png":

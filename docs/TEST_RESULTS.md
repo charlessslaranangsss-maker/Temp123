@@ -1,5 +1,18 @@
 # Temporary123 Test Results
 
+## Whole-site QA continuation — 2026-09-19 (LOCAL PASS; DEPLOYMENT PENDING)
+
+- Isolation: all source changes and builds used `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its unfinished 1,000-city draft were not changed or published.
+- Runtime inventory: the independent browser pass covered 13 representative templates at three viewports, 39/39 presentations, plus one safe interaction flow. The dedicated equipment test covered 42 routes and 14 modal/gallery presentations at both desktop and 390 px mobile with decoded images, current captions, phone contract and zero same-origin resource errors.
+- Source fixes: Contact Us breadcrumb extraction now preserves spaces across JSX line breaks; six military seals across 36 appearances and two restroom references have truthful nonempty alternatives; nine equipment pages and 12 overlapping workforce pages have route-specific metadata; the gallery browser fixture is embedded rather than depending on an absent local QA file.
+- Contact selector: generated `/contact-us/` contains `Mobile Kitchen Trailers`, `Dishwashing Trailers`, `Refrigeration Trailers`, `Restroom & Shower Trailers`, `Sleeper Trailers`, `Laundry Trailers`, and `Sink Trailers`. The three broad choices and every submitted value remain unchanged.
+- Automated checks: `npm test` passed **62/62**; `npm run test:rules` passed **7/7** against the isolated Firebase RTDB emulator; `npm run typecheck` passed; `npm run build` generated **745 pages plus 404**.
+- SEO gate: `npm run check:seo` checked 746 HTML files, 96,715 local links and 12,342 local images with **746 unique titles, 746 unique descriptions and zero problems**. The orphan rule remains strict for indexable routes and intentionally excludes nonindex utilities/staged content. The controlled rollout remains 25 indexable routes; historical recovery reports 625 of 98,253 source records and is not claimed complete.
+- Crawl/content gates: `npm run check:links` passed 745 pages with zero capitalization or missing-target findings; `npm run check:headlines` passed 548/548 unique location H1s; `npm run check:cities` passed 19,702 census places, 246 region directories and five reviewed city pages; `npm run check:secrets` scanned 1,141 files with zero findings.
+- Vercel domain routing: after changing `www.temporary123.com` to redirect to `temporary123.com`, a live audit passed **745/745** first-hop 308 redirects to the exact apex path, **745/745** final HTTP 200 responses, exact query preservation, and zero chains, loops or failures. All 25 indexable URLs passed. `/sitemap-review.xml` remains an owner-review artifact that must not be submitted, and Oklahoma Panhandle remains an intentional noindex staged exception.
+- Security boundary: production dependency audit has no high/critical findings and two moderate transitive findings through Firebase Admin (`@google-cloud/storage` → `gaxios` → `uuid`). `AUTHZ`, `CORS_HEADERS`, `APP_CHECK`, `INTEGRATIONS`, `SECRETS`, `DEPLOY`, `OBSERVE`, and `RECOVERY` remain blocked until their required staging/provider evidence is collected; the security checker was not weakened.
+- External-action boundary: no production form submission was made during this continuation. Prior form/Resend acceptance evidence remains valid, but inbox receipt was not rechecked.
+
 ## Contact Us trailer labels — 2026-09-19 (LIVE PASS)
 
 - Source scope: only the Contact Us selector's visible labels changed; submitted values, `server/schema.ts`, inquiry behavior, shared service names outside the form, URLs, and indexing were preserved.

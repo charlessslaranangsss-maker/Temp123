@@ -234,7 +234,11 @@ for (const [description, routes] of descriptions)
     });
 for (const file of htmlFiles) {
   const route = routeForFile(file);
-  if (route !== "/" && route !== "/404/" && !incoming.get(route))
+  // A noindex utility or staged page does not need to be part of the public
+  // crawl graph. Keep the orphan gate strict for every indexable route.
+  const indexable =
+    registry.mode === "production" && registeredPages.get(route)?.indexable;
+  if (route !== "/" && route !== "/404/" && indexable && !incoming.get(route))
     problems.push({ file, issue: "orphan-page", route });
 }
 

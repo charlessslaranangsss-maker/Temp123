@@ -1,5 +1,21 @@
 # Temporary123 Decision Log
 
+## 2026-09-19 — Require crawl links only for indexable pages
+
+Treat a page as an SEO orphan only when it is approved for indexing and has no incoming internal link. Intentionally `noindex` utilities such as `/seo-dashboard/` and staged content may remain outside the public crawl graph. This does not suppress missing-link findings for any `index,follow` route.
+
+## 2026-09-19 — Keep browser regression inventories self-contained
+
+Store the 42 affected equipment routes and modal targets in the browser regression rather than reading an untracked local QA artifact. Select the relevant product tab before asserting images, bound image-load waits, and compare semantic model terms so the test verifies customer behavior without depending on workstation-only files or punctuation formatting.
+
+## 2026-09-19 — Preserve readable text across prerender fragments
+
+Convert React fragments to plain metadata/breadcrumb text with explicit spacing between sibling nodes. A visual line break in the Contact Us H1 must serialize as `The right facilities start here.`, not a collapsed word boundary. This affects derived text only and does not change the visible H1.
+
+## 2026-09-19 — Keep unresolved security evidence blocked
+
+Do not convert security controls to passed from source tests or HTTP availability alone. Keep authorization, browser-origin, App Check enforcement, integration delivery, secret scope, deployment mapping, observability and recovery controls blocked until their required staging or provider-console artifacts exist inside the security evidence bundle. Do not weaken the evidence path boundary to accept documentation outside `security/`.
+
 ## 2026-09-19 — Clarify trailer equipment only in the Contact Us selector
 
 Use explicit `Trailers` wording for the seven trailer-equipment choices in the Contact Us selector, including the requested `Mobile Kitchen Trailers` example. Keep the underlying form values unchanged so server validation, stored inquiries, and downstream integrations remain compatible. Do not append `Trailers` to `Workforce housing`, `Temporary facilities`, or `Several facilities / help deciding`; those are broad planning choices and the suffix would make an inaccurate or awkward equipment claim. Keep the shared `services` labels unchanged because this request concerns the Contact Us selector, not navigation or page headings.
