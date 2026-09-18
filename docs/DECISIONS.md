@@ -1,5 +1,13 @@
 # Temporary123 Decision Log
 
+## 2026-09-19 — Keep the 1,000-city draft out of the production repair
+
+The active public baseline contains five reviewed city-detail pages and a controlled 25-URL indexing batch. The primary checkout also contains an unfinished deterministic 1,000-city draft, but publishing that draft during an unrelated production QA release would bypass the controlled SEO rollout and content review. Build and release this repair from the clean `origin/main` worktree only. Preserve the draft for a later reviewed batch; do not expand canonicals, sitemap membership or `index,follow` scope here.
+
+## 2026-09-19 — Validate complete keys and mount the dashboard safely
+
+The source must be allowed to contain private-key delimiter strings because server-side validation checks for both markers. Secret scanning therefore detects only a complete key-shaped block rather than a standalone `BEGIN` literal. This does not validate Vercel credential correctness. On `/seo-dashboard/`, retain prerendered fallback HTML but mount the interactive dashboard over it; browser-normalized legacy table markup made hydration unreliable and produced React error 418 on hash-linked tabs.
+
 ## 2026-09-18 — Dedicated service captions use the approved customer-facing format
 
 Charles identified the generic `Reviewed equipment reference images` caption on dedicated equipment pages and directed that every occurrence be fixed using the service-area caption standard. Replace only that generic fallback with an equipment-specific Commercial Project and Base Camp Rental or Lease caption, weekly/monthly/yearly inquiry terms, one verified operational benefit/detail, and the approved 24/7 phone-assistance CTA. Keep existing image-specific model or source disclosures because they communicate real photo limitations. Caption changes do not alter image identity, alt text, H1s, URLs, canonicals, or indexing settings.

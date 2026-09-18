@@ -11,6 +11,29 @@ type Options = {
   replacedLead?: string;
 };
 
+const verifiedAltByLocalMedia: Record<string, string> = {
+  "/media/ce6614a557c75682ffc570f2.png":
+    "Emergency base camp CAD site plan with temporary sleeper, shower, restroom, laundry, dining and support units",
+  "/media/1ac075338bb250b85779f3e2.png":
+    "Four-room deluxe sleeper trailer exterior with entry steps and bunk rooms",
+  "/media/0565a9898f04382d02ea17f6.png":
+    "Mobile command center office trailer exterior with desks and monitors visible through the open door",
+  "/media/2e9e8064f1d689d4bf02d975.png":
+    "Mobile command center office trailer exterior with workstations and display screens",
+  "/media/cabdb3d7102cfc907e29b9c2.png":
+    "Temporary sleeper, office, laundry, shower, restroom and hand-sanitation support facilities",
+  "/media/03efc139cc08fb12416ec9f7.png":
+    "Temporary mobile kitchen, refrigeration, dishwashing, water, ramp and generator support facilities",
+  "/media/42cd0eec786d86ea67fa4fde.png":
+    "Mobile kitchen trailer equipment elevation with ovens, skillets, sinks, preparation tables and refrigeration",
+  "/media/83eb76b43d26ae91bc2b9c11.png":
+    "Forty-foot mobile kitchen trailer equipment elevation with walk-in refrigerator and freezer",
+  "/media/ee5ce479c966af021cd6b78b.png":
+    "Forty-foot mobile kitchen trailer floor plan with cooking, preparation, sink and refrigeration equipment",
+  "/media/30edc5b4ac0956615e579ab5.png":
+    "Commercial mobile kitchen trailer interior with stainless-steel ventilation hoods and cooking equipment",
+};
+
 export function renderSourceContent(html: string, options: Options) {
   const $ = load(html, undefined, false);
   if (options.removeLeadParagraph) {
@@ -58,6 +81,8 @@ export function renderSourceContent(html: string, options: Options) {
       return;
     }
     const src = image.attr("src") || "";
+    const verifiedAlt = verifiedAltByLocalMedia[src];
+    if (verifiedAlt) image.attr("alt", verifiedAlt);
     const size = options.dimensions?.[src];
     if (size)
       image.attr({ width: String(size.width), height: String(size.height) });
@@ -130,7 +155,12 @@ export function renderSourceContent(html: string, options: Options) {
     }
     // Keep unresolved valuable links visible and explicitly tracked. Never
     // silently turn them into a homepage redirect or claim migration success.
-    a.attr("href", new URL(path + suffix, options.origin).href);
+    // Unavailable routes remain readable but are not emitted as broken links.
+    const unavailable = $("<span></span>")
+      .addClass("migration-link-unavailable")
+      .attr("data-unavailable-path", path);
+    unavailable.append(a.contents());
+    a.replaceWith(unavailable);
   });
   $("a").each((_, el) => {
     if (!$(el).text().trim() && !$(el).find("img").length) $(el).remove();
@@ -139,6 +169,14 @@ export function renderSourceContent(html: string, options: Options) {
     const previous = $(el).prevAll("h2,h3,h4,h5,h6").first();
     const max = previous.length ? Number(previous[0].tagName.slice(1)) + 1 : 2;
     if (Number(el.tagName.slice(1)) > max) el.tagName = `h${max}`;
+  });
+  $("figure").each((_, el) => {
+    const figure = $(el);
+    if (
+      !figure.find("img,picture,iframe,video,figcaption").length &&
+      !figure.text().trim()
+    )
+      figure.remove();
   });
   return $.html();
 }

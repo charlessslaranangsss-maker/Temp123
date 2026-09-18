@@ -1,5 +1,16 @@
 # Temporary123 Test Results
 
+## Whole-site production-baseline QA — 2026-09-19 (LOCAL PASS; RELEASE GATE PARTIAL)
+
+- Isolation: audited `origin/main` in `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its separate 1,000-city draft were not used or overwritten.
+- Build and unit checks: `npm test -- --run` passed 56/56; `npm run typecheck` passed; `npm run build` generated 745 pages plus 404.
+- Crawl checks: `npm run check:links` scanned 745 pages with 0 capitalization issues and 0 missing internal targets. `npm run check:headlines` found 548 location pages and 548 unique headlines. `npm run check:cities` found 19,702 census places, 246 regional directories, five reviewed city pages and zero issues.
+- Content repairs: `/temporary-facilities-2/` now permanently resolves to `/planning/`; two stale handwashing image references use an existing asset; ten migrated placeholder/file-name alts use visually verified descriptions; duplicate ADA-combination titles now include their 3-stall or 8-stall configuration.
+- Dashboard runtime: headless Chromium loaded `http://127.0.0.1:4174/seo-dashboard/#workflow`, selected `Next checks`, and recorded zero console or page errors after replacing mismatched hydration with an interactive mount over the prerendered fallback.
+- Secret scan: 1,107 source/built text files scanned with zero complete credential findings. A BEGIN marker alone is no longer treated as an exposed key; the scanner still requires a complete key-shaped block.
+- Known release boundary: `npm run check:security` and therefore `npm run check:release` remain blocked by unresolved pre-existing security-evidence controls. The SEO report also retains legacy duplicate-title/description findings, the intentionally unlinked noindex dashboard, and an incomplete historical migration count. These results are documented, not suppressed.
+- Deployment and live browser/crawl verification: pending.
+
 ## Service-area gallery review-banner removal — 2026-09-18 (LIVE PASS)
 
 - Exact scope: 648 service-area and modal presentations inventoried; 557 contained one of seven internal review context variants and were changed (477 public route presentations, 40 full-map modals, 40 compact-map modals). The remaining 91 presentations were unaffected.

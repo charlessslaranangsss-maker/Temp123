@@ -1,314 +1,75 @@
 {
-  "checkedAt": "2026-09-17T02:42:20.061Z",
-  "htmlPages": 652,
-  "localLinks": 83942,
-  "localImages": 4392,
-  "uniqueTitles": 651,
-  "uniqueDescriptions": 652,
-  "linkedRoutes": 675,
+  "checkedAt": "2026-09-18T17:22:03.569Z",
+  "htmlPages": 746,
+  "localLinks": 96715,
+  "localImages": 12342,
+  "uniqueTitles": 744,
+  "uniqueDescriptions": 727,
+  "linkedRoutes": 774,
   "problems": [
     {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/houston-texas-mobile-kitchen-rental/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/houston-texas-mobile-kitchen-rental/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/temporary-workforce-housing-facilities/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/temporary-workforce-housing-facilities/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/sleeper-trailers/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/equipment-rental/sleeper-trailers/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/houston-texas-mobile-kitchen-rental/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/houston-texas-mobile-kitchen-rental/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/temporary-workforce-housing-facilities/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/temporary-workforce-housing-facilities/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/sleeper-trailers/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "internal-link-to-redirect",
-      "value": "https://temporary123.com/equipment-rental/sleeper-trailers/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/"
-    },
-    {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
-      "issue": "missing-local-destination",
-      "value": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/"
-    },
-    {
       "issue": "duplicate-title",
-      "value": "ADA Shower and Restroom Combination Trailer Rental | Temporary123",
+      "value": "Sleeper Trailer Rental | Temporary123",
       "routes": [
-        "/services/shower-restroom-combination-trailers/3-stall-1-ada/",
-        "/services/shower-restroom-combination-trailers/8-stall-1-ada/"
+        "/equipment-rental/sleeper-trailers/",
+        "/sleeper-trailer-rental/"
       ]
     },
     {
-      "file": "C:\\Users\\Charles\\Documents\\New project\\Temporary 123\\dist\\seo-dashboard\\index.html",
+      "issue": "duplicate-title",
+      "value": "Remote Workforce Housing Rental in Alabama | Temporary123",
+      "routes": [
+        "/remote-workforce-house-company-in-alabama/",
+        "/remote-workforce-housing-in-alabama/"
+      ]
+    },
+    {
+      "issue": "duplicate-description",
+      "value": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "routes": [
+        "/emergency-container-modular-remote-executive-hotel-suites/",
+        "/emergency-migrant-containerized-living-spaces/",
+        "/emergency-modular-shelters-contained-for-rental/",
+        "/equipment-rental/sleeper-trailers/",
+        "/modular-temporary-camp-facilities/",
+        "/modular-temporary-workforce-housing-facilities/",
+        "/remote-basecamp-housing-service-company/",
+        "/remote-containerized-military-berthing-solution/",
+        "/remote-housing-facilities/",
+        "/remote-temporary-workforce-housing-facilities-rental/",
+        "/remote-workforce-housing-facilities/",
+        "/temporary-workforce-housing-facilities/"
+      ]
+    },
+    {
+      "issue": "duplicate-description",
+      "value": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "routes": [
+        "/equipment-rental/command-center-trailers/",
+        "/equipment-rental/decontamination-trailers/",
+        "/equipment-rental/dump-rental/",
+        "/equipment-rental/multi-trailer/",
+        "/equipment-rental/ramp-rental/",
+        "/equipment-rental/stair-rental/",
+        "/equipment-rental/waste-container/",
+        "/shop/"
+      ]
+    },
+    {
+      "issue": "duplicate-description",
+      "value": "Plan temporary workforce housing in Alabama around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "routes": [
+        "/remote-workforce-house-company-in-alabama/",
+        "/remote-workforce-housing-in-alabama/"
+      ]
+    },
+    {
+      "file": "C:\\Users\\Charles\\.codex\\worktrees\\whole-site-qa-origin\\Temporary 123\\dist\\seo-dashboard\\index.html",
       "issue": "orphan-page",
       "route": "/seo-dashboard/"
     }
   ],
-  "pendingMigrationLinks": [
-    {
-      "path": "/government/education/",
-      "links": 3
-    },
-    {
-      "path": "/government/emergency-services/",
-      "links": 3
-    },
-    {
-      "path": "/wp-content/uploads/2021/11/HAND-WASHING-STATION-1-web.jpg",
-      "links": 2
-    },
-    {
-      "path": "/testimonials/",
-      "links": 1
-    }
-  ],
+  "pendingMigrationLinks": [],
   "restoredAssets": 186,
   "migration": {
     "source": "https://temporary123.com",
@@ -318,5 +79,5 @@
     "checkedAt": "2026-09-11T16:39:23.031Z"
   },
   "launchReady": false,
-  "indexing": "This build remains excluded from indexing."
+  "indexing": "25 approved routes emit index,follow, self-canonicals and sitemap entries. Other routes remain noindex."
 }

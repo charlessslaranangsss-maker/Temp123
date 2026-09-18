@@ -98,7 +98,7 @@ describe("Boss-approved Temporary123 H1 plan", () => {
       rentalProductHeadline(
         "Luxury Shower and Restroom Combination Trailer, 3 Stalls + 1 ADA",
       ),
-    ).toBe("ADA Shower and Restroom Combination Trailer Rental");
+    ).toBe("3-Stall + 1 ADA Shower and Restroom Combination Trailer Rental");
     expect(
       rentalProductHeadline(
         "22 ft Luxury Shower and Restroom Combination Trailer, 6 Stalls",

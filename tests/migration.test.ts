@@ -156,7 +156,39 @@ describe("preserve source meaning while repairing navigation", () => {
       settings,
     );
     expect(result).toContain("/equipment-rental/?type=long#rent");
-    expect(result).toContain("https://temporary123.com/testimonials/");
+    expect(result).toContain("Testimonials");
+    expect(result).toContain('data-unavailable-path="/testimonials/"');
+    expect(result).not.toContain('href="/testimonials/"');
     expect(settings.unresolved.has("/testimonials/")).toBe(true);
+  });
+  it("removes empty figures left by unavailable remote media", () => {
+    const settings = options();
+    const result = renderSourceContent(
+      '<figure><img src="https://remote.example/missing.jpg"></figure><figure><figcaption>Preserved caption</figcaption></figure>',
+      settings,
+    );
+    expect(result).not.toContain("<figure></figure>");
+    expect(result).toContain("Preserved caption");
+    expect(settings.unresolved.has("https://remote.example/missing.jpg")).toBe(
+      true,
+    );
+  });
+  it("replaces migrated placeholder image labels with verified descriptions", () => {
+    const settings = {
+      ...options(),
+      media: {
+        "https://legacy.example/kitchen.png": {
+          local: "/media/30edc5b4ac0956615e579ab5.png",
+        },
+      },
+    };
+    const result = renderSourceContent(
+      '<img src="https://legacy.example/kitchen.png" alt="Your paragraph text">',
+      settings,
+    );
+    expect(result).toContain(
+      'alt="Commercial mobile kitchen trailer interior with stainless-steel ventilation hoods and cooking equipment"',
+    );
+    expect(result).not.toContain("Your paragraph text");
   });
 });

@@ -232,8 +232,12 @@ export const cityRentalHeadline = (location: string, service: string) => {
 
 export const rentalProductHeadline = (name: string) => {
   if (/Combination Trailer/i.test(name)) {
-    if (/ADA/i.test(name))
+    if (/ADA/i.test(name)) {
+      const stalls = name.match(/(\d+) Stalls?/i)?.[1];
+      if (stalls)
+        return `${stalls}-Stall + 1 ADA Shower and Restroom Combination Trailer Rental`;
       return "ADA Shower and Restroom Combination Trailer Rental";
+    }
     const size = name.match(/^(\d+)\s*ft/i)?.[1];
     const stalls = name.match(/(\d+) Stalls?/i)?.[1];
     if (size && stalls)

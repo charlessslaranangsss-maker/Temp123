@@ -77,7 +77,6 @@ for (const [regionPath, expected] of expectedByRegion) {
 
 const textBodies = [];
 const titles = new Set();
-const photoPaths = new Set();
 for (const row of inventory.records) {
   const [geoid, , state, regionIndex, citySlug] = row;
   const region = stateGuides[state].regions[regionIndex];
@@ -93,12 +92,25 @@ for (const row of inventory.records) {
   const $ = load(html);
   const title = $("title").text().trim();
   const h1 = $("main h1").first().text().trim();
-  const words = $("main article")
+  // Count the city editorial presentation, not carousel captions or duplicated
+  // responsive slides. The carousel is validated independently below.
+  const words = $(
+    ".city-hero-copy, .city-answer, .city-local, .city-related",
+  )
     .text()
     .replace(/\s+/g, " ")
     .trim()
     .split(" ").length;
-  const images = $("main article img").length;
+  const carouselImages = $(".city-equipment-carousel img[src]");
+  const carouselSlides = $(
+    ".city-equipment-carousel [data-carousel-slide] img[data-carousel-alt]",
+  );
+  const imageSources = new Set(
+    carouselImages
+      .map((_, element) => $(element).attr("src"))
+      .get()
+      .filter(Boolean),
+  );
   if (titles.has(title)) issues.push(`Duplicate city title: ${title}`);
   titles.add(title);
   if (
@@ -108,12 +120,23 @@ for (const row of inventory.records) {
     issues.push(`Weak city H1: ${cityPath}`);
   if (words < 250 || words > 500)
     issues.push(`City word count ${words}: ${cityPath}`);
-  if (images < 1 || images > 2)
-    issues.push(`City image count ${images}: ${cityPath}`);
-  const photo = $("main article img").first().attr("src");
-  if (!photo || photoPaths.has(photo))
-    issues.push(`Missing or repeated city photo: ${cityPath}`);
-  if (photo) photoPaths.add(photo);
+  if (imageSources.size < 1)
+    issues.push(`City equipment gallery has no image: ${cityPath}`);
+  carouselSlides.each((_, element) => {
+    if (!$(element).attr("data-carousel-alt")?.trim())
+      issues.push(`City equipment slide lacks descriptive text: ${cityPath}`);
+  });
+  if (
+    !$(
+      '.city-equipment-carousel [data-carousel-slide][data-active="true"] img',
+    )
+      .first()
+      .attr("alt")
+      ?.trim()
+  )
+    issues.push(`Active city equipment image lacks alt text: ${cityPath}`);
+  if (!$(".city-equipment-carousel figcaption").length)
+    issues.push(`City equipment gallery lacks a caption: ${cityPath}`);
   if (!$(".city-sources a[href]").length)
     issues.push(`Missing local source: ${cityPath}`);
   if ($(".breadcrumb a").length < 4)

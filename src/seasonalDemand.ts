@@ -567,7 +567,7 @@ const federalSources = (climate: string) => [
   },
   {
     label: "Temporary123 delivery and logistics",
-    href: "https://temporary123.com/temporary-facilities-2/",
+    href: "https://temporary123.com/planning/",
   },
   {
     label: "2024 Census Gazetteer place data",

@@ -195,10 +195,15 @@ function TrendChart({ points, label }: { points: DiagnosticPoint[]; label: strin
 export function SeoDashboard() {
   const tabs = ["diagnostics", "indexing", "domain-authority", "overview", "portfolio", "authority", "workflow"] as const;
   type DashboardTab = typeof tabs[number];
-  const [activeTab, setActiveTab] = useState<DashboardTab>(() => {
-    const hash = typeof window === "undefined" ? "" : window.location.hash.slice(1);
-    return tabs.find((tab) => tab === hash) ?? "diagnostics";
-  });
+  // Match the prerendered server tree during hydration. Apply a bookmarked tab
+  // only after React has attached; reading location.hash in the initializer
+  // makes /seo-dashboard/#workflow differ from the server HTML.
+  const [activeTab, setActiveTab] = useState<DashboardTab>("diagnostics");
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    const bookmarked = tabs.find((tab) => tab === hash);
+    if (bookmarked) setActiveTab(bookmarked);
+  }, []);
   const selectTab = (tab: DashboardTab) => {
     setActiveTab(tab);
     window.history.replaceState(null, "", `#${tab}`);

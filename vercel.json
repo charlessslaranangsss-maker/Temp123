@@ -1182,6 +1182,11 @@
       "permanent": true
     },
     {
+      "source": "/temporary-facilities-2/",
+      "destination": "/planning/",
+      "permanent": true
+    },
+    {
       "source": "/inventory/laundry-trailers/",
       "destination": "/equipment-rental/laundry-trailers/",
       "permanent": true

@@ -30,8 +30,12 @@ if (location.pathname === "/seo-dashboard/") {
     void Promise.all([
       import("react-dom/client"),
       import("./SeoDashboard"),
-    ]).then(([{ hydrateRoot }, { SeoDashboard }]) => {
-      hydrateRoot(root, <SeoDashboard />);
+    ]).then(([{ createRoot }, { SeoDashboard }]) => {
+      // The dashboard contains legacy table markup whose browser-normalized DOM
+      // is not byte-for-byte identical to the prerendered React tree. Mount the
+      // interactive dashboard over the static fallback instead of attempting a
+      // hydration that raises React error #418 on production deep links.
+      createRoot(root).render(<SeoDashboard />);
     });
   }
 }

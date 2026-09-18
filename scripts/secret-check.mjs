@@ -10,7 +10,9 @@ const excluded = new Set([
   "playwright-report",
 ]);
 const patterns = [
-  /-----BEGIN (?:RSA |EC )?PRIVATE KEY-----/,
+  // Require a complete key-shaped block. Source code legitimately contains the
+  // BEGIN/END marker strings when validating environment variables.
+  /-----BEGIN (?:RSA |EC )?PRIVATE KEY-----\s+[A-Za-z0-9+/=\r\n]{100,}-----END (?:RSA |EC )?PRIVATE KEY-----/,
   /(?:ghp_|github_pat_)[A-Za-z0-9_]{30,}/,
   /(?:AKIA|ASIA)[A-Z0-9]{16}/,
   /\b(?:sk_live_|sk-proj-)[A-Za-z0-9_-]{24,}/,

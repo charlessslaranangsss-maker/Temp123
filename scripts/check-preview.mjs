@@ -5,7 +5,13 @@ import { load } from "cheerio";
 const root = resolve("dist");
 const vercel = JSON.parse(await readFile("vercel.json", "utf8"));
 const site = JSON.parse(await readFile("site.json", "utf8"));
-const redirectSources = new Set(vercel.redirects.map((rule) => rule.source));
+// Host-conditional redirects (for example www -> apex) are not path redirects.
+// Counting them here makes every internal link to the same path look indirect.
+const redirectSources = new Set(
+  vercel.redirects
+    .filter((rule) => !("has" in rule) && !("missing" in rule))
+    .map((rule) => rule.source),
+);
 const registry = JSON.parse(
   await readFile("audit/build-registry.json", "utf8"),
 );
