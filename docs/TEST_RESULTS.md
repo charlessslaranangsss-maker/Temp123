@@ -25,6 +25,14 @@
 
 ## Urgent Olympic caption and skill refinement — 2026-09-17
 
+## Service-area gallery review-banner removal — local verification, 2026-09-18
+
+- Exact resolver inventory: 648 service-area and map-modal presentations; 557 affected (477 public routes, 40 full-map modals, 40 compact-map modals) and 91 without the review paragraph. Context counts: directory 247, ADA reference 45, kitchen alternatives 54, laundry 50, man camp 56, shower reference 52, sleeper options 53.
+- `npx vitest run ...`: 241/241 focused tests passed, including all 648 server-rendered presentations with zero remaining `.location-gallery-context` elements or banned review phrases. `npm test`: 45/45 passed.
+- `npm run check:links`: 655 pages, zero issues. `npm run check:release`: pass. `npm run build`: 655 pages plus 404. Scan of all 656 generated HTML files found zero banner classes and zero cited review phrases.
+- Playwright: 12/12 representative service-area presentations passed at 1440 px and 390 px; the full-map and compact-map suites passed all 50 states each (100/100 modal presentations). Product headings and individual captions remained present.
+- Local evidence only at this entry; production deployment and live checks are pending.
+
 - `npm run typecheck`: pass. `npx vitest run tests/olympicPeninsulaGalleryCopy.test.ts tests/serviceAreaGalleryCopy.test.ts`: 7/7 pass.
 - Exact-route `olympic-peninsula-ssr.mjs`: three current captions with unchanged H1; pass. Local browser `olympic-peninsula-browser.mjs`: 6/6 desktop/mobile gallery checks, images loaded and no page errors.
 - Repacked the same `LOCAL SKILL CHARLES_IMPORTANT.zip`: seven entries preserved, ZIP integrity and updated content byte comparison passed.

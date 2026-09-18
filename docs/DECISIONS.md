@@ -10,6 +10,10 @@ Use the synced restroom-only interiors for Restroom trailers and the homepage Re
 
 ## 2026-09-17 — Both approved Panhandle captions set the quality bar
 
+## 2026-09-18 — Remove internal gallery review paragraphs from customer pages
+
+The seven context summaries above grouped service-area galleries were written like internal review notes and made live pages look unfinished. Remove that shared paragraph from every route and both map-modal presentations. Keep the equipment option headings and the individual customer-facing captions, which continue to identify actual photographed equipment and relevant model distinctions. Preserve images, alt text, H1s, URLs, canonicals and indexing. The separate verified-image policy content below the equipment section is outside this top-banner decision.
+
 Charles confirmed the boss approved and was impressed by both the 20 ft laundry-container and 30 ft laundry-trailer captions. For a new gallery caption, use their shared direct structure: exact location/use/equipment/rental opening, specific rental benefit, one useful third sentence, and the approved phone CTA. The third sentence may clarify a genuinely confusing photo identity, as with the container, or help plan around the customer's actual need, as with the trailer. Do not force the same sentence type across every product or copy Panhandle facts into other pages. The Olympic office and kitchen samples were revised accordingly; the shower sample retains its relevant model distinction. The local preview awaits Charles's acceptance.
 
 ## 2026-09-17 — Olympic Peninsula final caption sample

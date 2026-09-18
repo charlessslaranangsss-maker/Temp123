@@ -87,6 +87,7 @@ async function fullImage(page: Page, carousel: Locator, expected?: any) {
 async function checkGallery(page: Page, root: Locator, title: string) {
   const expected = resolveLocationGallery(title);
   await expect(root).toHaveAttribute("data-gallery-title", title);
+  await expect(root.locator(".location-gallery-context")).toHaveCount(0);
   await expect(root.locator("[data-gallery-group]")).toHaveCount(
     expected.groups.length,
   );
@@ -147,7 +148,7 @@ async function checkGallery(page: Page, root: Locator, title: string) {
 
 for (const [kind, route, width] of [
   ["full-map", "/service-areas/", 1440],
-  ["compact-map", "/", 390],
+  ["compact-map", process.env.PLAYWRIGHT_BASE_URL ? "/" : "/index.html", 390],
 ] as const) {
   test(
     "all 50 state modals: aligned introductions, product tabs and full images in " +

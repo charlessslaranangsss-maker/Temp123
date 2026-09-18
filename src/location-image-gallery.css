@@ -65,12 +65,6 @@
     padding: 0.65rem;
   }
 }
-.location-gallery-context {
-  margin: 0 0 1rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #405a63;
-}
 .location-gallery-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));

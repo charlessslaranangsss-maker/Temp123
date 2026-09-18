@@ -34,25 +34,6 @@ export function LocationImageCarousel({
     >
       {gallery.images.length ? (
         <>
-          {gallery.context && (
-            <p className="location-gallery-context">
-              {gallery.context === "laundry"
-                ? "Two separate laundry product options: a 30 ft trailer and a 20 ft container. Each has its own labelled gallery; these images do not show one combined unit."
-                : gallery.context === "kitchen-alternatives"
-                  ? "These photos show the actual cooking and preparation interiors of mobile kitchen trailers offered as separate rental alternatives. They do not show a modular kitchen building; ask our team about the modular configuration for your site."
-                : gallery.context === "ada-reference"
-                  ? "The first gallery is an ADA-labelled catalogue reference. The second shows a standard shower-restroom combination trailer; its photos do not verify an ADA access arrangement. Confirm the required accessible layout with our team."
-                : gallery.context === "sleeper-options"
-                  ? "The two-stall sleeper interior and four-room sleeper trailer exterior are separate equipment references. The interior does not depict the four-room trailer. Confirm the available room layout with our team."
-                : gallery.context === "shower-reference"
-                  ? "These photos show a 20 ft five-stall shower trailer reference. They do not verify the separately described 22 ft ten-stall shower trailer; confirm the required layout with our team."
-                : gallery.context === "man-camp"
-                  ? "Multifunctional accommodation, an all-electric kitchen option and a shower-only trailer are shown as separate products. Each labelled gallery describes its own unit."
-                  : "Equipment options for temporary-facility planning are shown separately below."}{" "}
-              These are equipment references, not photographs of a deployment in
-              this location.
-            </p>
-          )}
           {gallery.groups.length > 1 && (
             <div
               className="location-product-tabs"
@@ -116,7 +97,11 @@ export function LocationImageCarousel({
                   caption={
                     panhandleGalleryCopy(headline, group.modelId)?.caption ??
                     olympicPeninsulaGalleryCaption(headline, group.modelId) ??
-                    serviceAreaGalleryCaption(headline, group.headline, group.modelId) ??
+                    serviceAreaGalleryCaption(
+                      headline,
+                      group.headline,
+                      group.modelId,
+                    ) ??
                     referenceCaptionForModel(group.modelId)
                   }
                 />

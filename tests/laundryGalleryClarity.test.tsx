@@ -7,6 +7,8 @@ import { LocationImageCarousel } from "../src/LocationImageCarousel";
 import { describeGalleryAudit } from "../scripts/gallery-audit-description";
 import { referenceCaptionForModel } from "../src/equipmentPhotoPolicy";
 import { panhandleGalleryCopy } from "../src/panhandleGalleryCopy";
+import { olympicPeninsulaGalleryCaption } from "../src/olympicPeninsulaGalleryCopy";
+import { serviceAreaGalleryCaption } from "../src/serviceAreaGalleryCopy";
 
 const baseline = JSON.parse(
   fs.readFileSync(
@@ -68,9 +70,7 @@ describe("broad laundry galleries and audit language", () => {
       row.exactTitle,
     );
     expect($("h1")).toHaveLength(0);
-    expect($(".location-gallery-context").text()).toContain(
-      "do not show one combined unit",
-    );
+    expect($(".location-gallery-context")).toHaveLength(0);
     const groups = $("[data-gallery-group]");
     expect(groups).toHaveLength(2);
     gallery.groups.forEach((group, index) => {
@@ -81,7 +81,14 @@ describe("broad laundry galleries and audit language", () => {
         group.headline,
       );
       expect(el.find("[data-carousel-caption]").text()).toBe(
-        panhandleGalleryCopy(row.exactTitle, group.modelId)?.caption ?? referenceCaptionForModel(group.modelId),
+        panhandleGalleryCopy(row.exactTitle, group.modelId)?.caption ??
+          olympicPeninsulaGalleryCaption(row.exactTitle, group.modelId) ??
+          serviceAreaGalleryCaption(
+            row.exactTitle,
+            group.headline,
+            group.modelId,
+          ) ??
+          referenceCaptionForModel(group.modelId),
       );
       const token = index === 0 ? "trailer" : "container";
       group.images.forEach((image) =>

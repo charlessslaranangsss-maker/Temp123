@@ -31,9 +31,7 @@ async function checkProducts(
     "data-gallery-presentation",
     "separate-options",
   );
-  await expect(gallery.locator(".location-gallery-context")).toContainText(
-    "do not show one combined unit",
-  );
+  await expect(gallery.locator(".location-gallery-context")).toHaveCount(0);
   const expected = [
     {
       title: "30 ft Laundry Trailer",

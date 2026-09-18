@@ -15,6 +15,9 @@ import {
   stateRentalHeadline,
   regionRentalHeadline,
 } from "../src/rentalHeadlines";
+import { panhandleGalleryCopy } from "../src/panhandleGalleryCopy";
+import { olympicPeninsulaGalleryCaption } from "../src/olympicPeninsulaGalleryCopy";
+import { serviceAreaGalleryCaption } from "../src/serviceAreaGalleryCopy";
 
 const titles = [
   ...Object.keys(stateGuides).map(stateRentalHeadline),
@@ -47,9 +50,7 @@ describe("Authorized multifunctional placements in existing man-camp photo group
       expect(gallery.groups).toHaveLength(3);
       expect($("[data-gallery-group]")).toHaveLength(3);
       expect($("h1")).toHaveLength(0);
-      expect($(".location-gallery-context").text()).toContain(
-        "separate products",
-      );
+      expect($(".location-gallery-context")).toHaveLength(0);
       for (const model of additions.models) {
         const image = additions.images.find((i) => i.model === model.id)!;
         const group = gallery.groups.find((g) => g.modelId === model.id)!;
@@ -71,7 +72,12 @@ describe("Authorized multifunctional placements in existing man-camp photo group
             .find("[data-service-carousel]")
             .attr("data-carousel-lightbox-label"),
         ).toBe(model.name);
-        expect(node.find("[data-carousel-caption]").text()).toBe(model.caption);
+        expect(node.find("[data-carousel-caption]").text()).toBe(
+          panhandleGalleryCopy(title, model.id)?.caption ??
+            olympicPeninsulaGalleryCaption(title, model.id) ??
+            serviceAreaGalleryCaption(title, model.name, model.id) ??
+            model.caption,
+        );
       }
       expect(gallery.groups[2].modelId).toBe("model-21");
       const report = describeGalleryAudit(gallery);

@@ -57,9 +57,7 @@ async function checkNewProducts(
     "separate-options",
   );
   await expect(gallery.locator("[data-gallery-group]")).toHaveCount(3);
-  await expect(gallery.locator(".location-gallery-context")).toContainText(
-    "separate products",
-  );
+  await expect(gallery.locator(".location-gallery-context")).toHaveCount(0);
   for (const model of additions.models) {
     const image = additions.images.find((i) => i.model === model.id)!;
     const group = gallery.locator('[data-group-model="' + model.id + '"]');
