@@ -493,7 +493,7 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Production browser: `PLAYWRIGHT_BASE_URL=https://temporary123.com npx playwright test tests/browser/contact-facilities.spec.ts`: **1/1 passed**; Chromium opened the live drawer and selected all five choices.
 - Boundary: no synthetic inquiry was submitted because the reported defect concerned option visibility and selection, not downstream message delivery.
 
-## 2026-09-18 — Inventory Restroom/Laundry correction (local)
+## 2026-09-18 — Inventory Restroom/Laundry correction
 
 - Live pre-change audit of the 13 owner-reported product routes: **26/26 desktop/mobile presentations passed**. Each returned HTTP 200, rendered one visible service carousel with a decoded lead image, contained zero pending-photo phrases and produced zero console errors.
 - Confirmed shared-menu defects: Restroom listed five shower/restroom combination models; Laundry listed only the 24 ft and 30 ft trailers.
@@ -503,4 +503,6 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - `npm run build`: **passed**; 651 pages plus the draft/noindex 404 prerendered.
 - Local Chromium audit at 1440x1000 and 390x844: **2/2 menu presentations**, **4/4 family-list checks**, **4/4 gallery presentations**, and **4/4 lead images** passed with zero console errors. Restroom contains four restroom-only routes; Laundry contains all four requested choices. Both new Laundry anchors resolve on the existing category URL.
 - Broader `tests/aprilPhotoPolicy.test.tsx` run: **6/7 passed**; its unrelated `Commercial Modular Kitchen` hold assertion expects zero images although the current registry returns seven. No modular-kitchen source was changed by this task.
-- Production deployment and live post-change checks remain pending.
+- Production: commit `29ecf4b` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel deployment `dpl_Dop5EkVtcSjgRgoDqj7pXMXGdXkP` reached READY and the production project aliases updated.
+- Live Chromium on `https://temporary123.com`: **2/2 desktop/mobile menu presentations**, **4/4 family-list checks**, **4/4 new Laundry gallery presentations**, and **4/4 decoded lead images** passed with zero console errors.
+- Live post-release recheck of all 13 reported product routes: **26/26 desktop/mobile presentations passed**, with HTTP 200, one visible carousel, a decoded lead image, zero pending-photo panels and zero console errors.
