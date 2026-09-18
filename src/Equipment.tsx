@@ -128,7 +128,7 @@ export const equipment: EquipmentCard[] = [
 const cardTitles: Record<string, string> = {
   "Mobile Kitchens": "24 ft Mobile Kitchen Trailer", "Dishwashing": "Dishwashing Trailer",
   "Refrigeration": "20 ft Refrigerated Trailer", "Shower": "20 ft Shower Trailer",
-  "Restroom": "Restroom Trailer", "Shower and Restroom Combination Trailers": "Shower and Restroom Combination Trailer",
+  "Restroom": "ADA Shower and Restroom Combination Trailer", "Shower and Restroom Combination Trailers": "Shower and Restroom Combination Trailer",
   "Sleeper": "Two-Stall Sleeper Trailer", "Laundry": "30 ft Laundry Trailer", "Handwashing Trailers": "Handwashing Sink Trailer"
 };
 function cardGallery(name: string) { return resolveLocationGallery(cardTitles[name] || name); }

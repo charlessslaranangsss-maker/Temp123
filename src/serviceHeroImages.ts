@@ -495,6 +495,85 @@ export function orderedServiceHeroImages(
   return orderGalleryImages(images);
 }
 
+type ServicePhotoReference = {
+  sourcePath?: string;
+  sourceTitle?: string;
+  caption: string;
+};
+
+/**
+ * Reviewed references for published service models whose exact photography is
+ * not available. The visible caption identifies every size or configuration
+ * difference so these images are useful without presenting them as exact.
+ */
+const servicePhotoReferences: Readonly<Record<string, ServicePhotoReference>> = {
+  "/equipment-rental-refrigeration-12ft-refrigerated-trailer/": {
+    sourceTitle: "20 ft Refrigerated Trailer",
+    caption:
+      "Representative refrigerated-trailer photography from a reviewed 20 ft unit. It does not establish the separate 12 ft trailer's dimensions or interior configuration; confirm the available 12 ft unit with your quote.",
+  },
+  "/services/mobile-kitchen-trailers/26ft-bulk/": {
+    sourcePath: "/media-library/40ft-bulk-kitchen/",
+    caption:
+      "Representative 40 ft bulk-kitchen interior photography. The published option is the separate 26 ft bulk mobile kitchen; confirm its equipment list, floor plan and available unit with your quote.",
+  },
+  "/services/dishwashing-trailers/22ft/": {
+    sourcePath: "/media-library/22-26ft-low-temp-dish/",
+    caption:
+      "Reviewed low-temperature dishwashing-trailer photography from the shared 22–26 ft collection. The photographs are not assigned to one exact length; confirm the 22 ft unit and layout with your quote.",
+  },
+  "/services/dishwashing-trailers/24ft/": {
+    sourcePath: "/media-library/22-26ft-low-temp-dish/",
+    caption:
+      "Reviewed low-temperature dishwashing-trailer photography from the shared 22–26 ft collection. The photographs are not assigned to one exact length; confirm the 24 ft unit and layout with your quote.",
+  },
+  "/services/dishwashing-trailers/26ft/": {
+    sourcePath: "/media-library/22-26ft-low-temp-dish/",
+    caption:
+      "Reviewed low-temperature dishwashing-trailer photography from the shared 22–26 ft collection. The photographs are not assigned to one exact length; confirm the 26 ft unit and layout with your quote.",
+  },
+  "/services/shower-trailers/22ft-10-stall/": {
+    sourceTitle: "20 ft Shower Trailer",
+    caption:
+      "Representative shower-only photography from a 20 ft five-stall trailer with exterior handwashing sinks. It does not depict the separate 22 ft ten-stall option; confirm that unit's floor plan with your quote.",
+  },
+  "/services/shower-restroom-combination-trailers/30ft-8-stall/": {
+    sourcePath:
+      "/services/shower-restroom-combination-trailers/30ft-8-stall/",
+    caption:
+      "Reviewed exterior reference for the 30 ft eight-stall shower and restroom combination trailer. Interior layout and current availability are confirmed with your quote.",
+  },
+  "/services/shower-restroom-combination-trailers/3-stall-1-ada/": {
+    sourceTitle: "ADA Shower and Restroom Combination Trailer",
+    caption:
+      "Reviewed ADA shower and restroom combination reference photography. The images do not establish the separate three-stall-plus-one-ADA floor plan; confirm its access layout and available unit with your quote.",
+  },
+  "/services/shower-restroom-combination-trailers/8-stall-1-ada/": {
+    sourceTitle: "ADA Shower and Restroom Combination Trailer",
+    caption:
+      "Reviewed ADA shower and restroom combination reference photography. The images do not establish the separate eight-stall-plus-one-ADA floor plan; confirm its access layout and available unit with your quote.",
+  },
+  "/services/mobile-sleeper-trailers/20ft-shared/": {
+    sourcePath: "/services/mobile-sleeper-trailers/20ft-shared/",
+    caption:
+      "Reviewed interior and exterior references for the 20 ft shared mobile sleeper trailer. Confirm the available bed layout and unit with your quote.",
+  },
+  "/services/laundry-trailers/24ft/": {
+    sourcePath: "/media-library/26-27ft-laundry-trailer/",
+    caption:
+      "Representative commercial laundry-trailer interior from the reviewed 26–27 ft collection. It does not establish the separate 24 ft layout; confirm its machines and available unit with your quote.",
+  },
+  "/services/handwashing-trailers/hands-free/": {
+    sourceTitle: "Handwashing Sink Trailer",
+    caption:
+      "Representative handwashing-trailer photography. The visible sinks do not establish hands-free controls; confirm the operating method and available hands-free equipment with your quote.",
+  },
+};
+
+export function servicePhotoCaption(path: string): string | undefined {
+  return servicePhotoReferences[path]?.caption;
+}
+
 export function imagesForServicePath(
   path: string,
 ): readonly ServiceHeroImage[] | undefined {
@@ -502,9 +581,18 @@ export function imagesForServicePath(
   // the same reviewed manifest as location pages, including its explicit holds.
   const detail = serviceDetails[path as keyof typeof serviceDetails];
   if (detail) {
-    if (path === '/services/handwashing-trailers/hands-free/') return undefined;
     const selection = resolveLocationGallery(detail.name).images;
-    return selection.length ? selection : undefined;
+    if (selection.length) return selection;
+    const reference = servicePhotoReferences[path];
+    if (reference?.sourceTitle) {
+      const referenced = resolveLocationGallery(reference.sourceTitle).images;
+      if (referenced.length) return referenced;
+    }
+    if (reference?.sourcePath) {
+      const referenced = serviceHeroImages[reference.sourcePath];
+      if (referenced?.length) return orderedServiceHeroImages(referenced);
+    }
+    return undefined;
   }
   const approvedNamedTitles: Record<string, string> = {
     "/services/laundry-trailers/30ft/": "30 ft Laundry Trailer",

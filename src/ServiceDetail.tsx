@@ -4,7 +4,10 @@ import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
-import { imagesForServicePath } from "./serviceHeroImages";
+import {
+  imagesForServicePath,
+  servicePhotoCaption,
+} from "./serviceHeroImages";
 import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
 export const modelDetails = details;
 export function ServiceDetail({ path }: { path: keyof typeof details }) {
@@ -45,9 +48,10 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
                 label={item.name}
                 lightboxLabel={item.name}
                 caption={
-                  verifiedImages[0].model
+                  servicePhotoCaption(path) ?? (verifiedImages[0].model
                     ? referenceCaptionForModel(verifiedImages[0].model)
                     : `Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`
+                  )
                 }
               />
             ) : (

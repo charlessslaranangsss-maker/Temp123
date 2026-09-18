@@ -1,5 +1,7 @@
 # Page and File Assignments
 
+**2026-09-18 production photo-placeholder removal — COMPLETE LOCALLY; RELEASE PENDING, root:** Replaced every rendered equipment-photo placeholder with reviewed equipment imagery. The 24 published service-model routes and all 25 equipment-catalogue entries now have images; 12 service/detail routes and 5 catalogue entries use visibly disclosed representative references where exact configuration photography is unavailable. The Services, equipment-directory and homepage quick views are covered. Preserved URLs, H1s, canonicals and indexing. Local verification: 77 focused Vitest assertions, 5 targeted Playwright checks, a 651-page plus 404 production build, and zero placeholder phrases in generated HTML. Release verification remains pending.
+
 **2026-09-17 homepage Restroom card photo — COMPLETE LOCALLY; OWNER REVIEW PENDING, root:** Owned only the homepage Restroom card image override and disclosure in `src/Equipment.tsx`, focused verification, and coordination records. Used an existing verified toilet interior photo from a shower/restroom combination unit, identified that unit truthfully, and preserved the restroom-only route and product distinction. Local review only.
 
 **2026-09-17 four urgent equipment-photo improvements — COMPLETE LOCALLY; OWNER REVIEW PENDING, root:** Own only shared service-area image resolver, gallery context, focused tests, and QA for modular-kitchen alternatives, ADA combination references, sleeper options, and shower trailer references. No asset invention, no deployment.

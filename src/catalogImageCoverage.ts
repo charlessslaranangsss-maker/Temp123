@@ -13,20 +13,45 @@ const titles: Record<string, string> = {
   "refrigerated-containers": "40 ft Refrigerated Container",
 };
 const held: Record<string, string> = {
-  "restroom-trailers":
-    "The previous image showed a shower/restroom combination, not a restroom-only trailer. Matching restroom-only photography is pending.",
-  "temporary-shower-trailers":
-    "The catalogue names the 22 ft, ten-stall model. Existing five-stall or combination-unit photographs do not verify that exact configuration.",
-  "shower-trailer":
-    "The catalogue names the 22 ft, ten-stall model. Its exact photography is pending; a generic shower interior does not establish the model.",
-  "stair-rentals":
-    "The previous image showed a ramp and deck rather than a clearly identified stair rental. Matching stair photography is pending.",
-  "dining-structure-rental":
-    "The previous image showed a kitchen fleet, not a dining structure. Matching dining-space photography is pending.",
+};
+const disclosedTitleReferences: Record<
+  string,
+  { title: string; caption: string }
+> = {
+  "restroom-trailers": {
+    title: "ADA Shower and Restroom Combination Trailer",
+    caption:
+      "Representative shower and restroom combination-trailer photography. It does not establish a restroom-only trailer; confirm the required fixtures, access layout and available unit with your quote.",
+  },
+  "temporary-shower-trailers": {
+    title: "20 ft Shower Trailer",
+    caption:
+      "Representative shower-only photography from a 20 ft five-stall trailer with exterior handwashing sinks. It does not depict the separate 22 ft ten-stall option; confirm that unit's floor plan with your quote.",
+  },
+  "shower-trailer": {
+    title: "20 ft Shower Trailer",
+    caption:
+      "Representative shower-only photography from a 20 ft five-stall trailer with exterior handwashing sinks. It does not depict the separate 22 ft ten-stall option; confirm that unit's floor plan with your quote.",
+  },
 };
 const reviewed: Record<
   string,
-  { alt: string; caption: string; view: ServiceHeroImage["view"] }
+  {
+    alt: string;
+    caption: string;
+    view: ServiceHeroImage["view"];
+    source?: Pick<
+      CatalogItem,
+      | "image"
+      | "small"
+      | "large"
+      | "width"
+      | "height"
+      | "smallWidth"
+      | "largeWidth"
+      | "source"
+    >;
+  }
 > = {
   "classroom-trailers": {
     alt: "Classroom trailer floor-plan reference showing desks and a teaching area",
@@ -106,6 +131,29 @@ const reviewed: Record<
       "Breakroom layout reference, not a photograph. Confirm the available seating, furnishings and dimensions.",
     view: "plan",
   },
+  "stair-rentals": {
+    alt: "Raised access ramp and deck with railings beside temporary units",
+    caption:
+      "Representative temporary-facility access system showing a ramp and deck. Stairs are not pictured; confirm the required stair height, landing, railings and available system with your quote.",
+    view: "exterior",
+  },
+  "dining-structure-rental": {
+    alt: "Interior of an empty temporary framed tent structure suitable for a planned dining layout",
+    caption:
+      "Representative empty temporary-structure interior before dining furniture or food-service equipment is installed. Confirm the dining structure, seating plan, utilities and available system with your quote.",
+    view: "interior",
+    source: {
+      image: "/media/655fb7048f20d305203873c3.jpg",
+      small: "/images/catalog/tent-rentals-480.webp",
+      large: "/images/catalog/tent-rentals-960.webp",
+      width: 1900,
+      height: 1000,
+      smallWidth: 480,
+      largeWidth: 960,
+      source:
+        "https://temporary123.com/wp-content/uploads/2021/11/SLIDER-1.jpg",
+    },
+  },
 };
 
 export function catalogPhotoCoverage(item: CatalogItem): {
@@ -123,6 +171,15 @@ export function catalogPhotoCoverage(item: CatalogItem): {
       status: gallery.images.length ? "verified-reference" : "held",
     };
   }
+  const disclosedReference = disclosedTitleReferences[item.id];
+  if (disclosedReference) {
+    const gallery = resolveLocationGallery(disclosedReference.title);
+    return {
+      images: gallery.images,
+      caption: disclosedReference.caption,
+      status: "reviewed-representative",
+    };
+  }
   const review = reviewed[item.id];
   if (!review)
     return {
@@ -130,24 +187,25 @@ export function catalogPhotoCoverage(item: CatalogItem): {
       caption: "Matching equipment imagery awaits review.",
       status: "unreviewed",
     };
+  const source = review.source ?? item;
   return {
     images: [
       {
         id: "catalog-reviewed-" + item.id,
-        src: item.large,
+        src: source.large,
         srcSet:
-          item.small +
+          source.small +
           " " +
-          item.smallWidth +
+          source.smallWidth +
           "w" +
-          (item.largeWidth > item.smallWidth
-            ? ", " + item.large + " " + item.largeWidth + "w"
+          (source.largeWidth > source.smallWidth
+            ? ", " + source.large + " " + source.largeWidth + "w"
             : ""),
         sizes: "(max-width: 700px) calc(100vw - 40px), 680px",
-        width: item.width,
-        height: item.height,
-        fullSrc: item.image,
-        sourceUrl: item.source,
+        width: source.width,
+        height: source.height,
+        fullSrc: source.image,
+        sourceUrl: source.source,
         alt: review.alt,
         view: review.view,
         sortOrder: 1,

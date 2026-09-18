@@ -274,3 +274,8 @@ Use the approved 38 ft mobile-kitchen interior before the 24 ft kitchen gallery 
 ## 2026-09-17 — Homepage Restroom photo disclosure
 
 Use the approved toilet-interior photo from a shower and restroom combination trailer for the homepage Restroom preview, with an explicit combination-unit label and alt text. Do not represent it as a restroom-only trailer. No verified restroom-only photo was found in the current local asset inventory; the product distinction remains visible.
+
+
+## 2026-09-18 — Use disclosed reviewed references instead of production photo placeholders
+
+When exact model photography is unavailable, show the closest reviewed commercial equipment reference only with a visible caption that names the pictured equipment and states the size, layout, controls or product-type difference. Alt text describes the visible image itself. Do not infer an exact configuration from a representative image. This rule covers current service-detail and equipment-catalogue gaps and removes customer-facing pending-photo panels from production routes.

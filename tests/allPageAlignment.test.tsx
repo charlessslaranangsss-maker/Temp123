@@ -61,9 +61,10 @@ describe("H1, introduction and equipment consistency", () => {
       );
       const approved = imagesForServicePath(path) || [];
       expect($("[data-carousel-slide]").length, path).toBe(approved.length);
-      expect(new Set(approved.map((i) => i.fullSrc)).size, path).toBe(
-        approved.length,
+      const originalSources = approved.flatMap((image) =>
+        image.fullSrc ? [image.fullSrc] : [],
       );
+      expect(new Set(originalSources).size, path).toBe(originalSources.length);
     }
   });
   it("audits every catalogue card and forbids the known false substitutes", () => {
@@ -75,16 +76,7 @@ describe("H1, introduction and equipment consistency", () => {
         expect(fs.existsSync("public" + im.src), im.src).toBe(true);
         expect(fs.existsSync("public" + im.fullSrc), im.fullSrc).toBe(true);
       }
-      if (
-        [
-          "restroom-trailers",
-          "temporary-shower-trailers",
-          "shower-trailer",
-          "stair-rentals",
-          "dining-structure-rental",
-        ].includes(item.id)
-      )
-        expect(selection.images).toHaveLength(0);
+      expect(selection.images.length, item.id).toBeGreaterThan(0);
       if (item.id === "laundry-trailers")
         expect(selection.images[0].reviewId).toBe("08.01");
       if (item.id === "bunkhouse-trailers")

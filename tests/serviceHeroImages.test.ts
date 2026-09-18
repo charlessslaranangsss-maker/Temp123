@@ -1,9 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  imagesForServicePath,
   orderedServiceHeroImages,
+  servicePhotoCaption,
   serviceHeroImages,
   type ServiceHeroImage,
 } from "../src/serviceHeroImages";
+import { serviceOptions } from "../src/serviceMenu";
 
 const image = (
   id: string,
@@ -109,5 +112,35 @@ describe("service hero image ordering", () => {
     containerized.forEach(({ alt }) =>
       expect(alt.toLowerCase()).toMatch(/containerized|berthing|modular/),
     );
+  });
+
+  it("provides reviewed imagery for every published service-model route", () => {
+    const routes = [...new Set(serviceOptions.map(({ href }) => href))];
+    expect(routes).toHaveLength(24);
+    routes.forEach((path) => {
+      expect(imagesForServicePath(path)?.length, path).toBeGreaterThan(0);
+    });
+  });
+
+  it("labels non-exact reference galleries with their material difference", () => {
+    expect(
+      imagesForServicePath(
+        "/equipment-rental-refrigeration-12ft-refrigerated-trailer/",
+      )?.length,
+    ).toBeGreaterThan(0);
+    expect(
+      servicePhotoCaption(
+        "/equipment-rental-refrigeration-12ft-refrigerated-trailer/",
+      ),
+    ).toContain("separate 12 ft trailer");
+    expect(
+      servicePhotoCaption("/services/mobile-kitchen-trailers/26ft-bulk/"),
+    ).toContain("40 ft");
+    expect(
+      servicePhotoCaption("/services/shower-trailers/22ft-10-stall/"),
+    ).toContain("does not depict");
+    expect(
+      servicePhotoCaption("/services/handwashing-trailers/hands-free/"),
+    ).toContain("do not establish hands-free controls");
   });
 });

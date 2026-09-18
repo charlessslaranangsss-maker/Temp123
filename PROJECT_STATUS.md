@@ -147,3 +147,12 @@ The Oklahoma Panhandle 30 ft laundry trailer and 20 ft laundry container caption
 
 **All service-area gallery captions — 2026-09-17, local review:** Updated the shared gallery caption composer with verified details for 35 image models. Existing non-Panhandle/non-Olympic galleries now lead with location, commercial use, and actual equipment, discuss weekly/monthly/yearly rental and lease options, add product-specific planning information, and end with the published 24/7 phone-assistance CTA. Approved Panhandle and Olympic captions retain priority. All 548 service-area routes and 100 map presentations passed a source-rendered caption/alt audit (572 group appearances, 1,755 images, zero issues). Fifteen focused tests and typecheck passed. Browser Vite request timed out; build/browser verification is recorded separately below when completed. No commit, push, or deployment. Review remains subject to owner acceptance.
 Build finished: 651 pages + 404 prerendered. Static localhost preview at http://127.0.0.1:4315/service-areas/alabama/; 10 desktop/mobile browser checks across Alabama, Texas, Panhandle, and full/compact map presentations passed with zero image-load, caption-presence, or page-error failures. The earlier Vite dev server timed out, so review should use port 4315 while its local server runs.
+
+
+## 2026-09-18 — Production equipment-photo placeholder removal (local release candidate)
+
+- Replaced all rendered equipment-photo placeholders with reviewed equipment imagery across the 24 published service-model routes, the 25 equipment-catalogue entries, and Services/homepage/equipment-directory quick views.
+- Added truthful visible captions for representative references. These captions identify material differences for 12 ft refrigeration, 26 ft bulk kitchen, shared 22–26 ft dishwashing, 22 ft ten-stall shower, ADA combinations, 24 ft laundry, hands-free washing, restroom-only, stairs and dining structure presentations.
+- Preserved route URLs, H1s, canonicals, indexing settings and existing equipment specifications.
+- Local evidence: 77 focused Vitest assertions passed; 5 targeted Playwright checks passed; TypeScript and the production build passed with 651 pages plus 404; generated HTML contained 0 instances of the four pending-photo phrases.
+- Deployment state: release candidate ready; live deployment and production browser verification pending.

@@ -226,7 +226,7 @@ test("renders verified route images in deterministic order and keeps controls us
   await expect(carousel.locator("[data-carousel-position]")).toHaveText("1");
   await expect(carousel.locator("img").first()).toHaveAttribute(
     "alt",
-    /interior/i,
+    /mobile kitchen aisle/i,
   );
   await expect(carousel).toHaveAttribute("data-carousel-autoplay", "true");
   expect(
@@ -248,7 +248,7 @@ test("renders verified route images in deterministic order and keeps controls us
   await expect(carousel.locator("[data-carousel-position]")).toHaveText("2");
   await expect(carousel.locator("img").nth(1)).toHaveAttribute(
     "alt",
-    /interior/i,
+    /mobile kitchen/i,
   );
 
   const views = await carousel
@@ -259,21 +259,30 @@ test("renders verified route images in deterministic order and keeps controls us
   expect(views).toEqual([
     "interior",
     "interior",
-    "detail",
-    "detail",
+    "interior",
+    "interior",
     "exterior",
   ]);
 });
 
-test("uses the truthful non-photo fallback when an exact model is not verified", async ({
+test("uses a disclosed reviewed reference when exact model photography is unavailable", async ({
   page,
 }) => {
   await page.goto("/services/mobile-kitchen-trailers/26ft-bulk/");
 
-  await expect(page.locator(".service-hero-unverified")).toContainText(
-    "Exact equipment photography is pending verification.",
+  const carousel = page.locator("main [data-service-carousel]").first();
+  await expect(carousel).toBeVisible();
+  await expect(page.locator(".service-hero-unverified")).toHaveCount(0);
+  await expect(carousel.locator("[data-carousel-caption]").first()).toContainText(
+    "Representative 40 ft bulk-kitchen",
   );
-  await expect(page.locator("[data-service-carousel]")).toHaveCount(0);
+  await expect(carousel.locator("[data-carousel-caption]").first()).toContainText(
+    "separate 26 ft bulk mobile kitchen",
+  );
+  await expect(carousel.locator("img").first()).toHaveAttribute(
+    "alt",
+    /40 ft bulk kitchen/i,
+  );
 });
 
 test("uses the approved shower photo and truthfully labels the restroom preview", async ({

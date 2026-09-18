@@ -4,7 +4,10 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { load } from "cheerio";
 import { resolveLocationGallery } from "../src/locationCarouselImages";
 import { LocationImageCarousel } from "../src/LocationImageCarousel";
-import { imagesForServicePath } from "../src/serviceHeroImages";
+import {
+  imagesForServicePath,
+  servicePhotoCaption,
+} from "../src/serviceHeroImages";
 import { referenceCaptionForModel } from "../src/equipmentPhotoPolicy";
 
 describe("Charles delegated photo selection", () => {
@@ -78,15 +81,22 @@ describe("Charles delegated photo selection", () => {
     ])
       expect(resolveLocationGallery(title).images).toHaveLength(0);
   });
-  it("uses the named laundry interior and keeps the incorrect 24ft substitution blocked", () => {
+  it("uses the named laundry interior and discloses the 24ft reference difference", () => {
     expect(
       imagesForServicePath("/services/laundry-trailers/30ft/")?.map(
         (i) => i.reviewId,
       ),
     ).toEqual(["08.01"]);
+    const reference = imagesForServicePath(
+      "/services/laundry-trailers/24ft/",
+    );
+    expect(reference).toHaveLength(1);
+    expect(reference?.[0].alt).toContain(
+      "26 to 27 ft commercial laundry trailer",
+    );
     expect(
-      imagesForServicePath("/services/laundry-trailers/24ft/"),
-    ).toBeUndefined();
+      servicePhotoCaption("/services/laundry-trailers/24ft/"),
+    ).toContain("does not establish the separate 24 ft layout");
   });
   it("keeps contractor and VIP interior references separate and does not infer a chassis", () => {
     const contractor = imagesForServicePath(

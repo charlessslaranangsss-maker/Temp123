@@ -460,3 +460,13 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - `npx playwright test tests/browser/service-hero-carousel.spec.ts --grep "uses the approved shower photo" --reporter=line`: 1 passed. Checks the homepage shower and Restroom cards, truthful image label, and decoded image width.
 - Local preview at `http://127.0.0.1:4315/` refreshed and showed the Restroom card photo and combination-unit disclosure.
 - Separate targeted Vitest command encountered an archived duplicate test under `work/qa/.../before/` with a missing import; the current homepage browser test passed.
+
+
+## 2026-09-18 — Equipment-photo placeholder removal (local)
+
+- `npx vitest run --exclude "work/**" tests/serviceHeroImages.test.ts tests/ServiceHeroCarousel.test.tsx tests/servicesCardPhotos.test.tsx tests/ownerImageRollout.test.tsx tests/allPageAlignment.test.tsx`: **77/77 passed**. This includes all 24 service-model routes and all 25 catalogue entries having at least one reviewed image.
+- `npm run typecheck`: **passed**.
+- `npm run build`: **passed**; 651 pages plus the draft/noindex 404 prerendered.
+- Generated HTML scan for `PHOTO REVIEW IN PROGRESS`, `Exact equipment photography is pending verification`, `Verified photography coming soon`, and `Verified equipment photo pending`: **0 files failed / 652 generated pages checked**.
+- Targeted Playwright checks: **5/5 passed**. The checks opened every registered model/catalogue gallery and full-image view, exercised all Services/equipment-directory/homepage quick views and reset behavior, and verified the disclosed 26 ft bulk and ADA representative galleries.
+- Deployment/live boundary: not yet verified in this release-candidate record.
