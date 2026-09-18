@@ -49,6 +49,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/services/shower-trailers/12ft/",
       "destination": "/services/shower-trailers/22ft-10-stall/",
       "permanent": true
@@ -141,6 +152,21 @@
     {
       "source": "/temporary-workforce-housing-facilities/",
       "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-modular-shelters-contained-for-rental/",
+      "destination": "/man-camps-for-rent/",
+      "permanent": true
+    },
+    {
+      "source": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "destination": "/equipment-rental/restroom-trailers/",
       "permanent": true
     },
     {

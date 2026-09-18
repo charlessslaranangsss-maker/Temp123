@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-17T04:56:31.214Z",
-  "mode": "preview",
+  "generatedAt": "2026-09-18T10:34:11.387Z",
+  "mode": "production",
   "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
-  "eligibleIndexingRoutes": 309,
-  "activeIndexingRoutes": 0,
-  "domainRoutingReady": false,
+  "eligibleIndexingRoutes": 326,
+  "activeIndexingRoutes": 25,
+  "domainRoutingReady": true,
   "pages": [
     {
       "path": "/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/services/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/industries/",
@@ -22,7 +22,7 @@
     },
     {
       "path": "/service-areas/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/seo-dashboard/",
@@ -54,7 +54,7 @@
     },
     {
       "path": "/equipment-rental/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/20ft-refrigeration-trailers/",
@@ -126,7 +126,7 @@
     },
     {
       "path": "/equipment-rental/breakroom-trailer/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-03-19T17:04:17"
     },
     {
@@ -136,12 +136,12 @@
     },
     {
       "path": "/equipment-rental/fencing-barricades-trash-receptacles/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2021-11-18T15:53:02"
     },
     {
       "path": "/equipment-rental/generator-trailers/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-02-18T19:19:09"
     },
     {
@@ -151,12 +151,12 @@
     },
     {
       "path": "/equipment-rental/mobile-kitchen-trailers/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2025-10-04T12:38:47"
     },
     {
       "path": "/equipment-rental/mobile-office-trailers/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-03-19T17:01:48"
     },
     {
@@ -166,12 +166,12 @@
     },
     {
       "path": "/equipment-rental/modular-command-center-trailers/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2023-03-30T19:21:03"
     },
     {
       "path": "/equipment-rental/ramp-rentals/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2023-04-14T16:48:35"
     },
     {
@@ -181,7 +181,7 @@
     },
     {
       "path": "/equipment-rental/restroom-trailers/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-03-19T17:21:43"
     },
     {
@@ -191,12 +191,12 @@
     },
     {
       "path": "/equipment-rental/shower-trailer/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-03-19T17:13:17"
     },
     {
       "path": "/equipment-rental/stair-rentals/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2021-11-18T16:30:14"
     },
     {
@@ -206,7 +206,7 @@
     },
     {
       "path": "/equipment-rental/wastewater-and-freshwater-container/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2025-11-04T11:19:15"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "path": "/food-services-2/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2025-11-04T07:41:28"
     },
     {
@@ -231,7 +231,7 @@
     },
     {
       "path": "/government/correctional-facilities/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2023-05-24T16:37:34"
     },
     {
@@ -261,7 +261,7 @@
     },
     {
       "path": "/man-camps-for-rent/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-03-19T17:34:30"
     },
     {
@@ -271,7 +271,7 @@
     },
     {
       "path": "/mobile-kitchen-trailer-rental/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-08-10T17:58:11"
     },
     {
@@ -301,7 +301,7 @@
     },
     {
       "path": "/portable-dishwashing-trailer-rental/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-08-10T18:33:54"
     },
     {
@@ -316,7 +316,7 @@
     },
     {
       "path": "/remote-containerized-military-berthing-solution-for-rent/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/remote-man-camp-for-rent/",
@@ -330,17 +330,17 @@
     },
     {
       "path": "/restroom-trailer-rental/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-08-10T18:28:38"
     },
     {
       "path": "/shower-trailer-rental/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-08-10T18:17:08"
     },
     {
       "path": "/sleeper-trailer-rental/",
-      "indexable": false,
+      "indexable": true,
       "modified": "2026-08-10T18:24:36"
     },
     {
@@ -364,7 +364,7 @@
     },
     {
       "path": "/equipment-rental/mobile-sleep-trailers/",
-      "indexable": false
+      "indexable": true
     },
     {
       "path": "/equipment-rental/mobile-crew-camps/",

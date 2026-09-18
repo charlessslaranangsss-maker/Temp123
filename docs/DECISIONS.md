@@ -290,3 +290,12 @@ When exact model photography is unavailable, show the closest reviewed commercia
 - Reason: The current site has reviewed assets but no approved dedicated routes for these two products. Anchors make both choices and galleries reachable from desktop/mobile Inventory menus without inventing URLs or changing canonicals and indexing settings.
 - Truthfulness boundary: The 20 ft container has three reviewed interiors and the 26–27 ft trailer has one reviewed interior; neither has an exterior in the supplied collection. The requested washer/dryer count remains in the owner-provided product label, while visible copy asks customers to confirm machine count, exact length, floor plan and available unit with the quote.
 - Restroom correction: Restroom now links only to the four existing restroom-trailer detail routes. Shower and restroom combination models remain in their separate category.
+
+## 2026-09-18 — Preserve old-site authority with exact sources and canonical replacements
+
+- Source: Charles's 153-row old-site backlink export and request to preserve those links during Google indexing.
+- Decision: Keep every historical path reachable. Retain a direct page where the current site has a real matching page; otherwise use a permanent redirect to the closest verified replacement. Consolidate `www.temporary123.com` onto `temporary123.com`. Do not recreate duplicate or thin legacy pages solely to return HTTP 200.
+- Indexing: Activate only the controlled 25-page first batch. It contains the 23 canonical destinations receiving the supplied legacy links plus the Services and Service Areas hubs. Other generated routes remain `noindex,follow` until a later approved batch.
+- Reason: Permanent redirects consolidate signals for replaced URLs, while self-canonicals and sitemap membership identify the preferred destination. This preserves exact inbound paths without introducing competing copies.
+- Affected areas: Vercel redirects, production-domain gate, indexing order/scope, sitemap, canonical output, migration tests, and backlink audit evidence.
+- Replaces an earlier decision: Yes; the production domain is now verified as the active public site, so the earlier `domainRoutingReady:false` hold is released for this controlled batch.

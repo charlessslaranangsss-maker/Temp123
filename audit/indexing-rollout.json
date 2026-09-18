@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-17T04:56:31.258Z",
+  "generatedAt": "2026-09-18T10:34:11.388Z",
   "origin": "https://temporary123.com",
   "indexingScope": "locations-and-priority-services",
   "batchSize": 25,
   "activeBatch": 1,
-  "totalRoutes": 309,
-  "totalBatches": 13,
+  "totalRoutes": 326,
+  "totalBatches": 14,
   "batches": [
     {
       "batch": 1,
@@ -13,13 +13,37 @@
       "active": true,
       "routes": [
         "/",
-        "/service-areas/",
-        "/equipment-rental/",
-        "/equipment-rental/mobile-kitchen-trailers/",
+        "/equipment-rental/restroom-trailers/",
+        "/man-camps-for-rent/",
         "/equipment-rental/shower-trailer/",
+        "/equipment-rental/",
+        "/equipment-rental/fencing-barricades-trash-receptacles/",
+        "/equipment-rental/mobile-kitchen-trailers/",
+        "/remote-containerized-military-berthing-solution-for-rent/",
+        "/equipment-rental/breakroom-trailer/",
+        "/government/correctional-facilities/",
+        "/food-services-2/",
+        "/equipment-rental/generator-trailers/",
+        "/equipment-rental/wastewater-and-freshwater-container/",
+        "/equipment-rental/ramp-rentals/",
+        "/equipment-rental/modular-command-center-trailers/",
+        "/equipment-rental/mobile-office-trailers/",
+        "/equipment-rental/stair-rentals/",
+        "/shower-trailer-rental/",
         "/equipment-rental/mobile-sleep-trailers/",
-        "/services/shower-restroom-combination-trailers/",
-        "/services/shower-trailers/22ft-10-stall/",
+        "/mobile-kitchen-trailer-rental/",
+        "/portable-dishwashing-trailer-rental/",
+        "/restroom-trailer-rental/",
+        "/sleeper-trailer-rental/",
+        "/services/",
+        "/service-areas/"
+      ]
+    },
+    {
+      "batch": 2,
+      "plannedDate": "2026-09-15",
+      "active": false,
+      "routes": [
         "/service-areas/alabama/",
         "/service-areas/alabama/north-alabama/",
         "/service-areas/alabama/central-alabama/",
@@ -36,14 +60,7 @@
         "/service-areas/arizona/phoenix-area/",
         "/service-areas/arizona/southern-arizona/",
         "/service-areas/arkansas/",
-        "/service-areas/arkansas/ozarks/"
-      ]
-    },
-    {
-      "batch": 2,
-      "plannedDate": "2026-09-15",
-      "active": false,
-      "routes": [
+        "/service-areas/arkansas/ozarks/",
         "/service-areas/arkansas/arkansas-river-valley/",
         "/service-areas/arkansas/delta/",
         "/service-areas/arkansas/southwest-arkansas/",
@@ -51,7 +68,14 @@
         "/service-areas/california/north-coast/",
         "/service-areas/california/bay-area/",
         "/service-areas/california/central-valley/",
-        "/service-areas/california/los-angeles-basin/",
+        "/service-areas/california/los-angeles-basin/"
+      ]
+    },
+    {
+      "batch": 3,
+      "plannedDate": "2026-09-16",
+      "active": false,
+      "routes": [
         "/service-areas/california/inland-empire/",
         "/service-areas/california/san-diego/",
         "/service-areas/colorado/",
@@ -68,14 +92,7 @@
         "/service-areas/delaware/northern-delaware/",
         "/service-areas/delaware/central-delaware/",
         "/service-areas/delaware/delaware-beaches/",
-        "/service-areas/florida/"
-      ]
-    },
-    {
-      "batch": 3,
-      "plannedDate": "2026-09-16",
-      "active": false,
-      "routes": [
+        "/service-areas/florida/",
         "/service-areas/florida/panhandle/",
         "/service-areas/florida/north-florida/",
         "/service-areas/florida/central-florida/",
@@ -83,7 +100,14 @@
         "/service-areas/florida/florida-keys/",
         "/service-areas/georgia/",
         "/service-areas/georgia/north-georgia/",
-        "/service-areas/georgia/metro-atlanta/",
+        "/service-areas/georgia/metro-atlanta/"
+      ]
+    },
+    {
+      "batch": 4,
+      "plannedDate": "2026-09-17",
+      "active": false,
+      "routes": [
         "/service-areas/georgia/central-georgia/",
         "/service-areas/georgia/coastal-georgia/",
         "/service-areas/georgia/south-georgia/",
@@ -100,14 +124,7 @@
         "/service-areas/illinois/",
         "/service-areas/illinois/chicago-area/",
         "/service-areas/illinois/northern-illinois/",
-        "/service-areas/illinois/central-illinois/"
-      ]
-    },
-    {
-      "batch": 4,
-      "plannedDate": "2026-09-17",
-      "active": false,
-      "routes": [
+        "/service-areas/illinois/central-illinois/",
         "/service-areas/illinois/southern-illinois/",
         "/service-areas/indiana/",
         "/service-areas/indiana/northern-indiana/",
@@ -115,7 +132,14 @@
         "/service-areas/indiana/southern-indiana/",
         "/service-areas/iowa/",
         "/service-areas/iowa/northwest-iowa/",
-        "/service-areas/iowa/central-iowa/",
+        "/service-areas/iowa/central-iowa/"
+      ]
+    },
+    {
+      "batch": 5,
+      "plannedDate": "2026-09-18",
+      "active": false,
+      "routes": [
         "/service-areas/iowa/northeast-iowa/",
         "/service-areas/iowa/southern-iowa/",
         "/service-areas/kansas/",
@@ -132,14 +156,7 @@
         "/service-areas/louisiana/",
         "/service-areas/louisiana/north-louisiana/",
         "/service-areas/louisiana/acadiana/",
-        "/service-areas/louisiana/capital-region/"
-      ]
-    },
-    {
-      "batch": 5,
-      "plannedDate": "2026-09-18",
-      "active": false,
-      "routes": [
+        "/service-areas/louisiana/capital-region/",
         "/service-areas/louisiana/greater-new-orleans/",
         "/service-areas/louisiana/river-parishes/",
         "/service-areas/maine/",
@@ -147,7 +164,14 @@
         "/service-areas/maine/highlands/",
         "/service-areas/maine/western-lakes-and-mountains/",
         "/service-areas/maine/midcoast/",
-        "/service-areas/maine/downeast-and-acadia/",
+        "/service-areas/maine/downeast-and-acadia/"
+      ]
+    },
+    {
+      "batch": 6,
+      "plannedDate": "2026-09-19",
+      "active": false,
+      "routes": [
         "/service-areas/maine/southern-coast/",
         "/service-areas/maryland/",
         "/service-areas/maryland/western-maryland/",
@@ -164,14 +188,7 @@
         "/service-areas/michigan/",
         "/service-areas/michigan/upper-peninsula/",
         "/service-areas/michigan/northern-lower-peninsula/",
-        "/service-areas/michigan/west-michigan/"
-      ]
-    },
-    {
-      "batch": 6,
-      "plannedDate": "2026-09-19",
-      "active": false,
-      "routes": [
+        "/service-areas/michigan/west-michigan/",
         "/service-areas/michigan/mid-michigan/",
         "/service-areas/michigan/southeast-michigan/",
         "/service-areas/minnesota/",
@@ -179,7 +196,14 @@
         "/service-areas/minnesota/northeast-minnesota/",
         "/service-areas/minnesota/central-minnesota/",
         "/service-areas/minnesota/twin-cities/",
-        "/service-areas/minnesota/southern-minnesota/",
+        "/service-areas/minnesota/southern-minnesota/"
+      ]
+    },
+    {
+      "batch": 7,
+      "plannedDate": "2026-09-20",
+      "active": false,
+      "routes": [
         "/service-areas/mississippi/",
         "/service-areas/mississippi/delta/",
         "/service-areas/mississippi/hills/",
@@ -196,14 +220,7 @@
         "/service-areas/montana/",
         "/service-areas/montana/glacier-country/",
         "/service-areas/montana/central-montana/",
-        "/service-areas/montana/yellowstone-country/"
-      ]
-    },
-    {
-      "batch": 7,
-      "plannedDate": "2026-09-20",
-      "active": false,
-      "routes": [
+        "/service-areas/montana/yellowstone-country/",
         "/service-areas/montana/missouri-river-country/",
         "/service-areas/montana/southeast-montana/",
         "/service-areas/nebraska/",
@@ -211,7 +228,14 @@
         "/service-areas/nebraska/sandhills/",
         "/service-areas/nebraska/central-nebraska/",
         "/service-areas/nebraska/northeast-nebraska/",
-        "/service-areas/nebraska/lincoln-and-omaha-corridor/",
+        "/service-areas/nebraska/lincoln-and-omaha-corridor/"
+      ]
+    },
+    {
+      "batch": 8,
+      "plannedDate": "2026-09-21",
+      "active": false,
+      "routes": [
         "/service-areas/nevada/",
         "/service-areas/nevada/northern-nevada/",
         "/service-areas/nevada/reno-tahoe/",
@@ -228,14 +252,7 @@
         "/service-areas/new-jersey/",
         "/service-areas/new-jersey/skylands/",
         "/service-areas/new-jersey/gateway-region/",
-        "/service-areas/new-jersey/central-jersey/"
-      ]
-    },
-    {
-      "batch": 8,
-      "plannedDate": "2026-09-21",
-      "active": false,
-      "routes": [
+        "/service-areas/new-jersey/central-jersey/",
         "/service-areas/new-jersey/shore-region/",
         "/service-areas/new-jersey/delaware-river-region/",
         "/service-areas/new-jersey/southern-shore/",
@@ -243,7 +260,14 @@
         "/service-areas/new-mexico/north-central-new-mexico/",
         "/service-areas/new-mexico/northeast-new-mexico/",
         "/service-areas/new-mexico/albuquerque-area/",
-        "/service-areas/new-mexico/southeast-new-mexico/",
+        "/service-areas/new-mexico/southeast-new-mexico/"
+      ]
+    },
+    {
+      "batch": 9,
+      "plannedDate": "2026-09-22",
+      "active": false,
+      "routes": [
         "/service-areas/new-mexico/southwest-new-mexico/",
         "/service-areas/new-york/",
         "/service-areas/new-york/north-country/",
@@ -260,14 +284,7 @@
         "/service-areas/north-carolina/research-triangle/",
         "/service-areas/north-carolina/coastal-plain/",
         "/service-areas/north-carolina/outer-banks/",
-        "/service-areas/north-dakota/"
-      ]
-    },
-    {
-      "batch": 9,
-      "plannedDate": "2026-09-22",
-      "active": false,
-      "routes": [
+        "/service-areas/north-dakota/",
         "/service-areas/north-dakota/western-north-dakota/",
         "/service-areas/north-dakota/north-central-north-dakota/",
         "/service-areas/north-dakota/red-river-valley/",
@@ -275,7 +292,14 @@
         "/service-areas/ohio/",
         "/service-areas/ohio/northeast-ohio/",
         "/service-areas/ohio/northwest-ohio/",
-        "/service-areas/ohio/central-ohio/",
+        "/service-areas/ohio/central-ohio/"
+      ]
+    },
+    {
+      "batch": 10,
+      "plannedDate": "2026-09-23",
+      "active": false,
+      "routes": [
         "/service-areas/ohio/southwest-ohio/",
         "/service-areas/ohio/southeast-ohio/",
         "/service-areas/oklahoma/",
@@ -292,14 +316,7 @@
         "/service-areas/oregon/central-oregon/",
         "/service-areas/oregon/eastern-oregon/",
         "/service-areas/pennsylvania/",
-        "/service-areas/pennsylvania/erie-region/"
-      ]
-    },
-    {
-      "batch": 10,
-      "plannedDate": "2026-09-23",
-      "active": false,
-      "routes": [
+        "/service-areas/pennsylvania/erie-region/",
         "/service-areas/pennsylvania/pittsburgh-and-southwest/",
         "/service-areas/pennsylvania/pennsylvania-wilds/",
         "/service-areas/pennsylvania/central-pennsylvania/",
@@ -307,7 +324,14 @@
         "/service-areas/pennsylvania/philadelphia-and-southeast/",
         "/service-areas/rhode-island/",
         "/service-areas/rhode-island/providence-area/",
-        "/service-areas/rhode-island/blackstone-valley/",
+        "/service-areas/rhode-island/blackstone-valley/"
+      ]
+    },
+    {
+      "batch": 11,
+      "plannedDate": "2026-09-24",
+      "active": false,
+      "routes": [
         "/service-areas/rhode-island/newport-county/",
         "/service-areas/rhode-island/south-county/",
         "/service-areas/south-carolina/",
@@ -324,14 +348,7 @@
         "/service-areas/tennessee/west-tennessee/",
         "/service-areas/tennessee/middle-tennessee/",
         "/service-areas/tennessee/cumberland-plateau/",
-        "/service-areas/tennessee/east-tennessee/"
-      ]
-    },
-    {
-      "batch": 11,
-      "plannedDate": "2026-09-24",
-      "active": false,
-      "routes": [
+        "/service-areas/tennessee/east-tennessee/",
         "/service-areas/texas/",
         "/service-areas/texas/panhandle/",
         "/service-areas/texas/north-texas/",
@@ -339,7 +356,14 @@
         "/service-areas/texas/central-texas/",
         "/service-areas/texas/west-texas/",
         "/service-areas/texas/gulf-coast/",
-        "/service-areas/texas/south-texas/",
+        "/service-areas/texas/south-texas/"
+      ]
+    },
+    {
+      "batch": 12,
+      "plannedDate": "2026-09-25",
+      "active": false,
+      "routes": [
         "/service-areas/utah/",
         "/service-areas/utah/northern-utah/",
         "/service-areas/utah/wasatch-front/",
@@ -356,14 +380,7 @@
         "/service-areas/virginia/shenandoah-valley/",
         "/service-areas/virginia/central-virginia/",
         "/service-areas/virginia/hampton-roads/",
-        "/service-areas/virginia/eastern-shore/"
-      ]
-    },
-    {
-      "batch": 12,
-      "plannedDate": "2026-09-25",
-      "active": false,
-      "routes": [
+        "/service-areas/virginia/eastern-shore/",
         "/service-areas/virginia/southwest-virginia/",
         "/service-areas/washington/",
         "/service-areas/washington/olympic-peninsula/",
@@ -371,7 +388,14 @@
         "/service-areas/washington/olympic-peninsula/sequim/",
         "/service-areas/washington/puget-sound/",
         "/service-areas/washington/puget-sound/olympia/",
-        "/service-areas/washington/puget-sound/seattle/",
+        "/service-areas/washington/puget-sound/seattle/"
+      ]
+    },
+    {
+      "batch": 13,
+      "plannedDate": "2026-09-26",
+      "active": false,
+      "routes": [
         "/service-areas/washington/puget-sound/tacoma/",
         "/service-areas/washington/north-cascades/",
         "/service-areas/washington/central-washington/",
@@ -388,14 +412,7 @@
         "/service-areas/wisconsin/northwoods/",
         "/service-areas/wisconsin/lake-superior-region/",
         "/service-areas/wisconsin/central-wisconsin/",
-        "/service-areas/wisconsin/fox-valley/"
-      ]
-    },
-    {
-      "batch": 13,
-      "plannedDate": "2026-09-26",
-      "active": false,
-      "routes": [
+        "/service-areas/wisconsin/fox-valley/",
         "/service-areas/wisconsin/madison-area/",
         "/service-areas/wisconsin/milwaukee-and-southeast/",
         "/service-areas/wisconsin/driftless-area/",
@@ -403,7 +420,14 @@
         "/service-areas/wyoming/northwest-wyoming/",
         "/service-areas/wyoming/northeast-wyoming/",
         "/service-areas/wyoming/central-wyoming/",
-        "/service-areas/wyoming/southwest-wyoming/",
+        "/service-areas/wyoming/southwest-wyoming/"
+      ]
+    },
+    {
+      "batch": 14,
+      "plannedDate": "2026-09-27",
+      "active": false,
+      "routes": [
         "/service-areas/wyoming/southeast-wyoming/"
       ]
     }

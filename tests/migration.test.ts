@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  authorityReleaseRoutes,
   canonicalFor,
   modificationDate,
   productionBuild,
@@ -67,7 +68,7 @@ describe("migration indexing separation", () => {
     expect(canonicalFor("/video/", false, true)).toBeUndefined();
     expect(() => canonicalFor("//evil.example/", true, true)).toThrow();
   });
-  it("limits this release to the homepage and service-area routes", () => {
+  it("limits this release to authority destinations and service-area routes", () => {
     const scope = "homepage-and-service-areas";
     expect(routeInIndexingScope("/", scope)).toBe(true);
     expect(routeInIndexingScope("/service-areas/", scope)).toBe(true);
@@ -78,6 +79,12 @@ describe("migration indexing separation", () => {
       ),
     ).toBe(true);
     expect(routeInIndexingScope("/equipment-rental/", scope)).toBe(false);
+    const authorityScope = "locations-and-priority-services";
+    expect(authorityReleaseRoutes).toHaveLength(25);
+    expect(new Set(authorityReleaseRoutes).size).toBe(25);
+    for (const path of authorityReleaseRoutes)
+      expect(routeInIndexingScope(path, authorityScope), path).toBe(true);
+    expect(routeInIndexingScope("/contact-us/", authorityScope)).toBe(false);
   });
   it("activates cumulative groups of 25 routes", () => {
     const routes = Array.from({ length: 63 }, (_, index) => `/route-${index}/`);
@@ -91,6 +98,14 @@ describe("migration indexing separation", () => {
       source: "/(.*)",
       missing: [{ type: "host", value: "temporary123\\.com" }],
       headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+    });
+  });
+  it("permanently consolidates www requests onto the canonical host", () => {
+    expect(vercel.redirects[0]).toMatchObject({
+      source: "/:path*",
+      has: [{ type: "host", value: "www.temporary123.com" }],
+      destination: "https://temporary123.com/:path*",
+      permanent: true,
     });
   });
   it("only emits canonical indexable production URLs and truthful modification dates", () => {

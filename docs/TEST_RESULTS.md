@@ -506,3 +506,18 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Production: commit `29ecf4b` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel deployment `dpl_Dop5EkVtcSjgRgoDqj7pXMXGdXkP` reached READY and the production project aliases updated.
 - Live Chromium on `https://temporary123.com`: **2/2 desktop/mobile menu presentations**, **4/4 family-list checks**, **4/4 new Laundry gallery presentations**, and **4/4 decoded lead images** passed with zero console errors.
 - Live post-release recheck of all 13 reported product routes: **26/26 desktop/mobile presentations passed**, with HTTP 200, one visible carousel, a decoded lead image, zero pending-photo panels and zero console errors.
+
+## 2026-09-18 — Legacy backlink URL parity and indexing release candidate
+
+- Input inventory: **153/153 unique absolute URLs**, **105 unique paths**, **48 duplicate host/protocol rows**, from the supplied old-site backlink export.
+- Live pre-change crawl: **148/153** rows ended at HTTP 200 and **5/153** ended at HTTP 404. The five failures represented three unique paths. Every successful final page returned `noindex,follow` and no canonical.
+- Local parity audit after repair: **153/153 passed**, **0 failed**. This covers exact source-path recognition, permanent path mapping where applicable, built final HTML, `index,follow`, apex self-canonical, and production sitemap membership.
+- Route result: **24 direct rows**, **129 redirected rows**, **23 unique canonical destinations**. The controlled release contains exactly **25 indexable pages**: those authority destinations plus the Services and Service Areas hubs.
+- `npm test`: **45/45 passed** across six files.
+- `npm run build`: passed; **651 pages plus 404** prerendered in production mode.
+- `npm run check:release`: passed.
+- `npm run check:links`: **651 pages / 0 casing issues**.
+- `npm run typecheck`: passed.
+- `npm run check:seo`: completed and confirmed **25 approved routes** with index/follow, self-canonicals, and sitemap entries. Its broader `launchReady:false` status remains because unrelated inherited migration-link and orphan-page findings are outside this backlink-parity repair.
+- `npx vercel build --yes --target production`: Vercel settings and production environment metadata were retrieved, then the local CLI build stopped with `spawn cmd.exe ENOENT`. The ordinary production build passed; Vercel deployment and live verification remain the platform-level gate.
+- Evidence: `audit/legacy-backlink-parity-2026-09-18/` and generated indexing registries under `audit/`.

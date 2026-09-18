@@ -13,6 +13,7 @@ import { pageInfo } from "../src/content";
 import site from "../site.json" with { type: "json" };
 import { releaseErrors } from "./release";
 import {
+  authorityReleaseRoutes,
   canonicalFor,
   productionBuild,
   routeInIndexingScope,
@@ -112,8 +113,7 @@ const editorialNoindex = new Set([
 // Publish parents before their regions and include the priority service destinations.
 const orderedIndexingRoutes = [
   ...new Set([
-    "/",
-    "/service-areas/",
+    ...authorityReleaseRoutes,
     ...allRoutes.filter(
       (path) =>
         !path.startsWith("/service-areas/") &&
@@ -188,7 +188,9 @@ const renderContent = (page: SourcePage) =>
     media,
     unresolved: unresolvedSourceLinks,
     dimensions,
-    removeLeadParagraph: Boolean(introOverrides[page.path as keyof typeof introOverrides]),
+    removeLeadParagraph: Boolean(
+      introOverrides[page.path as keyof typeof introOverrides],
+    ),
     replacedLead: replacedLeads[page.path as keyof typeof replacedLeads],
   });
 const esc = (s: string) =>
@@ -226,66 +228,91 @@ for (const path of [...allRoutes, "/404/"]) {
       : city
         ? {
             title: `${cityHeadline(city)} | Temporary123`,
-            description: compact(alignedLocationIntro(cityHeadline(city), `${city.name}, ${city.state}`).split(/(?<!\bSt)\. /)[0] + ".", 155),
+            description: compact(
+              alignedLocationIntro(
+                cityHeadline(city),
+                `${city.name}, ${city.state}`,
+              ).split(/(?<!\bSt)\. /)[0] + ".",
+              155,
+            ),
           }
-      : directoryRegion
+        : directoryRegion
           ? {
               title: `${regionLocationLabel(directoryRegion.region, directoryRegion.state)} Facility Rental Locations | Temporary123`,
               description: `Browse ${regionLocationLabel(directoryRegion.region, directoryRegion.state)} cities and communities for Temporary Facilities Rental planning. Find reviewed city guides and regional services.`,
             }
-      : region
-        ? {
-            title: `${regionRentalHeadline(region.region, region.state, region.index)} | Temporary123`,
-            description: compact(alignedLocationIntro(regionRentalHeadline(region.region, region.state, region.index), regionLocationLabel(region.region, region.state)).split(/(?<!\bSt)\. /)[0] + ".", 155),
-          }
-        : stateName
-          ? {
-              title: `${stateRentalHeadline(stateName)} | Temporary123`,
-              description: compact(alignedLocationIntro(stateRentalHeadline(stateName), stateName).split(/(?<!\bSt)\. /)[0] + ".", 155),
-            }
-          : hubHeadline
+          : region
             ? {
-                title: `${hubHeadline} | Temporary123`,
-                description:
-                  pageInfo(path).description,
+                title: `${regionRentalHeadline(region.region, region.state, region.index)} | Temporary123`,
+                description: compact(
+                  alignedLocationIntro(
+                    regionRentalHeadline(
+                      region.region,
+                      region.state,
+                      region.index,
+                    ),
+                    regionLocationLabel(region.region, region.state),
+                  ).split(/(?<!\bSt)\. /)[0] + ".",
+                  155,
+                ),
               }
-          : coreRoutes.includes(path)
-            ? pageInfo(path)
-            : page
+            : stateName
               ? {
-                  title: page.title + " | Temporary123",
-                  description: sourceDescription(page),
+                  title: `${stateRentalHeadline(stateName)} | Temporary123`,
+                  description: compact(
+                    alignedLocationIntro(
+                      stateRentalHeadline(stateName),
+                      stateName,
+                    ).split(/(?<!\bSt)\. /)[0] + ".",
+                    155,
+                  ),
                 }
-              : path === "/contact-us/"
+              : hubHeadline
                 ? {
-                    title: "Contact Temporary123 | Talk to a Specialist",
-                    description: `Call Temporary123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
+                    title: `${hubHeadline} | Temporary123`,
+                    description: pageInfo(path).description,
                   }
-                : path === "/equipment-rental/"
-                  ? {
-                      title: "Equipment Rental | Temporary123",
-                      description:
-                        "Explore Temporary123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
-                    }
-                  : catalogItem
+                : coreRoutes.includes(path)
+                  ? pageInfo(path)
+                  : page
                     ? {
-                        title: `${rentalProductHeadline(catalogItem.name)} | Temporary123`,
-                        description: catalogItem.summary,
+                        title: page.title + " | Temporary123",
+                        description: sourceDescription(page),
                       }
-                    : serviceOption
+                    : path === "/contact-us/"
                       ? {
-                          title: `${rentalProductHeadline(serviceOption.name)} | Temporary123`,
-                          description: serviceOption.description,
+                          title: "Contact Temporary123 | Talk to a Specialist",
+                          description: `Call Temporary123 at ${site.phoneDisplay} for mobile kitchens, temporary facilities and project support.`,
                         }
-                      : serviceCategory
+                      : path === "/equipment-rental/"
                         ? {
-                            title: `${rentalCategoryHeadline(serviceCategory.name)} | Temporary123`,
-                            description: serviceCategory.description,
+                            title: "Equipment Rental | Temporary123",
+                            description:
+                              "Explore Temporary123 mobile kitchens, restroom and shower trailers, workforce and site facilities.",
                           }
-                        : pageInfo(path);
+                        : catalogItem
+                          ? {
+                              title: `${rentalProductHeadline(catalogItem.name)} | Temporary123`,
+                              description: catalogItem.summary,
+                            }
+                          : serviceOption
+                            ? {
+                                title: `${rentalProductHeadline(serviceOption.name)} | Temporary123`,
+                                description: serviceOption.description,
+                              }
+                            : serviceCategory
+                              ? {
+                                  title: `${rentalCategoryHeadline(serviceCategory.name)} | Temporary123`,
+                                  description: serviceCategory.description,
+                                }
+                              : pageInfo(path);
   const indexableCanonical =
     canonicalFor(path, indexableRoutes.includes(path), release) || "";
-  const canonical = indexableCanonical || (path === "/service-areas/oklahoma/panhandle/" ? new URL(path, site.origin).href : "");
+  const canonical =
+    indexableCanonical ||
+    (path === "/service-areas/oklahoma/panhandle/"
+      ? new URL(path, site.origin).href
+      : "");
   if (!info.description.trim()) {
     info.description = `Explore ${page?.title || "Temporary123 facilities"}. Call Temporary123 at ${site.phoneDisplay} to discuss your site, rental dates and equipment requirements.`;
   }
@@ -434,7 +461,10 @@ for (const path of [...allRoutes, "/404/"]) {
       path,
       title: h1.text().trim(),
       description: cleanCopy(info.description),
-      serviceType: path === "/service-areas/oklahoma/panhandle/" ? "Laundry trailer and laundry container rental" : undefined,
+      serviceType:
+        path === "/service-areas/oklahoma/panhandle/"
+          ? "Laundry trailer and laundry container rental"
+          : undefined,
       crumbs,
       service: Boolean(
         industry ||
@@ -449,10 +479,10 @@ for (const path of [...allRoutes, "/404/"]) {
       area: city
         ? { name: city.name, state: city.state }
         : region
-        ? { name: region.region, state: region.state }
-        : stateName
-          ? { name: stateName }
-          : undefined,
+          ? { name: region.region, state: region.state }
+          : stateName
+            ? { name: stateName }
+            : undefined,
       image: hero.length
         ? {
             src: hero.attr("src")!,

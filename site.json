@@ -9,5 +9,5 @@
   "activeIndexingBatch": 1,
   "indexingStartDate": "2026-09-14",
   "inquiriesEnabled": false,
-  "domainRoutingReady": false
+  "domainRoutingReady": true
 }

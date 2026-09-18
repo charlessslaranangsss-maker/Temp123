@@ -3,18 +3,42 @@ export const publicOrigin = "https://temporary123.com";
 export type IndexingScope =
   "full" | "homepage-and-service-areas" | "locations-and-priority-services";
 
+// The first controlled production batch protects the canonical destinations
+// behind the 153 externally linked URLs in the 2026-09-18 backlink export.
+// Keep this ordered list aligned with the legacy URL parity audit.
+export const authorityReleaseRoutes = [
+  "/",
+  "/equipment-rental/restroom-trailers/",
+  "/man-camps-for-rent/",
+  "/equipment-rental/shower-trailer/",
+  "/equipment-rental/",
+  "/equipment-rental/fencing-barricades-trash-receptacles/",
+  "/equipment-rental/mobile-kitchen-trailers/",
+  "/remote-containerized-military-berthing-solution-for-rent/",
+  "/equipment-rental/breakroom-trailer/",
+  "/government/correctional-facilities/",
+  "/food-services-2/",
+  "/equipment-rental/generator-trailers/",
+  "/equipment-rental/wastewater-and-freshwater-container/",
+  "/equipment-rental/ramp-rentals/",
+  "/equipment-rental/modular-command-center-trailers/",
+  "/equipment-rental/mobile-office-trailers/",
+  "/equipment-rental/stair-rentals/",
+  "/shower-trailer-rental/",
+  "/equipment-rental/mobile-sleep-trailers/",
+  "/mobile-kitchen-trailer-rental/",
+  "/portable-dishwashing-trailer-rental/",
+  "/restroom-trailer-rental/",
+  "/sleeper-trailer-rental/",
+  "/services/",
+  "/service-areas/",
+] as const;
+
 export function routeInIndexingScope(path: string, scope: IndexingScope) {
   if (scope === "full") return true;
   if (
     scope === "locations-and-priority-services" &&
-    [
-      "/equipment-rental/",
-      "/equipment-rental/mobile-kitchen-trailers/",
-      "/services/shower-restroom-combination-trailers/",
-      "/equipment-rental/shower-trailer/",
-      "/services/shower-trailers/22ft-10-stall/",
-      "/equipment-rental/mobile-sleep-trailers/",
-    ].includes(path)
+    (authorityReleaseRoutes as readonly string[]).includes(path)
   )
     return true;
   return (
