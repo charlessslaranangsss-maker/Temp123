@@ -18,6 +18,7 @@ import {
   calculatorService,
   equipmentPrices,
 } from "./calculatorData";
+import { appCheckToken } from "./appCheck";
 
 // Most routes use prerendered HTML plus targeted DOM enhancements. The SEO
 // dashboard is the exception because its live evidence table is stateful.
@@ -32,39 +33,6 @@ if (location.pathname === "/seo-dashboard/") {
     ]).then(([{ hydrateRoot }, { SeoDashboard }]) => {
       hydrateRoot(root, <SeoDashboard />);
     });
-  }
-}
-
-let calculatorAppCheck: import("firebase/app-check").AppCheck | undefined;
-async function calculatorAppCheckToken() {
-  if (!import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY)
-    throw new Error(
-      "Online quote requests are not enabled yet. Your details have not been sent.",
-    );
-  const [
-    { initializeApp, getApps },
-    { initializeAppCheck, ReCaptchaEnterpriseProvider, getToken },
-  ] = await Promise.all([import("firebase/app"), import("firebase/app-check")]);
-  const app =
-    getApps()[0] ||
-    initializeApp({
-      apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-      appId: import.meta.env.VITE_FIREBASE_APP_ID,
-    });
-  calculatorAppCheck ||= initializeAppCheck(app, {
-    provider: new ReCaptchaEnterpriseProvider(
-      import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY,
-    ),
-    isTokenAutoRefreshEnabled: false,
-  });
-  try {
-    return (await getToken(calculatorAppCheck)).token;
-  } catch {
-    throw new Error(
-      "We could not verify the form. Please check your connection and try again.",
-    );
   }
 }
 
@@ -250,8 +218,8 @@ if (calculatorForm) {
           "Your estimate is ready. Securely saving your quote request…";
       }
       try {
-        const token = await calculatorAppCheckToken();
-        const response = await fetch("/api/contact", {
+        const token = await appCheckToken();
+        const response = await fetch("/api/contact.json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -5,7 +5,7 @@
   "trailingSlash": true,
   "crons": [
     {
-      "path": "/api/seo-diagnostics?run=1",
+      "path": "/api/seo-diagnostics.json?run=1",
       "schedule": "0 */12 * * *"
     }
   ],

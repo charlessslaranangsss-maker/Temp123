@@ -2,38 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import site from "../site.json" with { type: "json" };
 import { services } from "./content";
 import { leadSchema } from "../server/schema";
-let check: import("firebase/app-check").AppCheck | undefined;
-async function appCheckToken() {
-  if (!import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY)
-    throw new Error(
-      "Online inquiries are not enabled yet. Your details have not been sent.",
-    );
-  const [
-    { initializeApp, getApps },
-    { initializeAppCheck, ReCaptchaEnterpriseProvider, getToken },
-  ] = await Promise.all([import("firebase/app"), import("firebase/app-check")]);
-  const app =
-    getApps()[0] ||
-    initializeApp({
-      apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-      appId: import.meta.env.VITE_FIREBASE_APP_ID,
-    });
-  check ||= initializeAppCheck(app, {
-    provider: new ReCaptchaEnterpriseProvider(
-      import.meta.env.VITE_RECAPTCHA_ENTERPRISE_SITE_KEY,
-    ),
-    isTokenAutoRefreshEnabled: false,
-  });
-  try {
-    return (await getToken(check)).token;
-  } catch {
-    throw new Error(
-      "We could not verify the form. Please check your connection and try again.",
-    );
-  }
-}
+import { appCheckToken } from "./appCheck";
 export function QuoteForm() {
   const formRef = useRef<HTMLFormElement>(null);
   useEffect(() => {
@@ -117,7 +86,7 @@ export function QuoteForm() {
         setMessage("");
         try {
           const token = await appCheckToken();
-          const res = await fetch("/api/contact", {
+          const res = await fetch("/api/contact.json", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

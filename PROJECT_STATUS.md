@@ -177,3 +177,11 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Updated the server request schema so submissions using each new value are accepted.
 - Local evidence: 29/29 focused assertions passed; the Contact Us drawer browser test passed 1/1 and selected every new value; typecheck passed; production build passed with 651 pages plus 404.
 - Deployment state: commit `566b495` pushed to `Temporary-123-Inc/Temporary-123` main and verified on `https://temporary123.com/contact-us/`. Production HTML contained all five values and the live drawer browser test passed 1/1. Separate uncommitted inquiry-recovery work in the shared checkout was excluded.
+
+## 2026-09-18 — Production inquiry recovery
+
+- Enabled the existing Contact Us and rental-calculator inquiry forms in production.
+- Replaced build-time `VITE_*` Firebase/App Check configuration with a same-origin public runtime configuration endpoint, while keeping all private Firebase and Resend credentials server-only.
+- Added physical `.json` API function routes so the global trailing-slash policy cannot redirect form POST requests.
+- Firebase Admin now accepts either a complete PEM private key or its full base64 encoding and rejects missing PEM boundaries with an actionable configuration error.
+- Automated tests and a production build are required before release. Prior live acceptance on the same repair confirmed saved Contact Us and calculator quote inquiries and Resend provider acceptance; final Git-backed deployment verification is recorded in `docs/TEST_RESULTS.md`.

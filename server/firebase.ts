@@ -13,6 +13,25 @@ export function requiredSecret(name: string) {
     throw new Error(`Server setting ${name} must contain at least 32 bytes`);
   return value;
 }
+function firebasePrivateKey() {
+  const encoded = process.env.FIREBASE_PRIVATE_KEY_BASE64?.trim();
+  if (encoded) {
+    const decoded = Buffer.from(encoded, "base64").toString("utf8");
+    if (
+      !decoded.includes("-----BEGIN PRIVATE KEY-----") ||
+      !decoded.includes("-----END PRIVATE KEY-----")
+    )
+      throw new Error("FIREBASE_PRIVATE_KEY_BASE64 is not a complete PEM key.");
+    return decoded;
+  }
+  const value = required("FIREBASE_PRIVATE_KEY").replace(/\\n/g, "\n");
+  if (
+    !value.includes("-----BEGIN PRIVATE KEY-----") ||
+    !value.includes("-----END PRIVATE KEY-----")
+  )
+    throw new Error("FIREBASE_PRIVATE_KEY is not a complete PEM key.");
+  return value;
+}
 export function firebase() {
   if (
     process.env.FIREBASE_DATABASE_EMULATOR_HOST ||
@@ -28,7 +47,7 @@ export function firebase() {
         credential: cert({
           projectId: required("FIREBASE_PROJECT_ID"),
           clientEmail: required("FIREBASE_CLIENT_EMAIL"),
-          privateKey: required("FIREBASE_PRIVATE_KEY").replace(/\\n/g, "\n"),
+          privateKey: firebasePrivateKey(),
         }),
       },
       "temporary123-server",

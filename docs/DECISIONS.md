@@ -327,3 +327,10 @@ The supplied restroom-only interior set may appear on the registered 12 ft, 14 f
 - Decision: Keep the general `www` to apex redirect and also declare an exact permanent same-path host redirect for every HTML path in the backlink migration map.
 - Reason: Live evidence showed that Vercel did not apply the catch-all host rule consistently to these trailing-slash paths. Exact rules produced a direct HTTP 308 to the identical apex path and prevent duplicate-host copies.
 - Affected areas: `vercel.json`, migration-map regression coverage, live URL audit and production-domain behavior.
+
+## 2026-09-18 — Use runtime public configuration and physical JSON API routes for inquiries
+
+- Decision: Serve only the non-secret Firebase web identifiers and App Check site key from `/api/public-config.json`; keep Firebase Admin and Resend credentials exclusively in server environment variables.
+- Decision: Use physical `.json` Vercel functions for browser POST and scheduled API traffic. Do not depend on extensionless API routes while the site-wide trailing-slash rule is enabled.
+- Decision: Accept `FIREBASE_PRIVATE_KEY_BASE64` only when it decodes to a complete PEM, including both boundary lines. A missing closing boundary is invalid and must fail with an actionable server configuration error.
+- Reason: This removes the production dependency on unavailable `VITE_*` build variables, prevents POST redirects, and avoids exposing private credentials in the browser bundle.

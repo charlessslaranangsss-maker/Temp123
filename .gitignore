@@ -13,6 +13,7 @@ security/archive/
 content/catalog/
 content/priority/
 .codex-tmp/
+.codex-vercel-audit/
 dist-da-dashboard/
 dist-index-dashboard/
 outputs/

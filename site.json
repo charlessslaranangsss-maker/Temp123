@@ -8,6 +8,6 @@
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
   "indexingStartDate": "2026-09-14",
-  "inquiriesEnabled": false,
+  "inquiriesEnabled": true,
   "domainRoutingReady": true
 }

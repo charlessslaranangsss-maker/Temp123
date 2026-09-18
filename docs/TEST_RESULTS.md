@@ -590,3 +590,13 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Production browser QA: four representative legacy routes at desktop 1440x900 and mobile 390x844 passed **8/8**. Every presentation returned HTTP 200 at its exact route, rendered a non-empty H1 and title, matched the expected robots/canonical policy, had no horizontal overflow, and emitted zero console or page errors.
 - Evidence: `audit/legacy-url-restoration-2026-09-18/migration-map.csv`, `build-verification.json`, `live-verification.json`, `live-results.csv`, and `browser-verification.json`.
 - Boundary: Google recrawl and index inclusion are external and were not claimed. The 79 later-batch pages intentionally remain `noindex,follow` until a separately approved controlled release.
+
+## 2026-09-18 — Production Contact Us and calculator inquiry recovery
+
+- Root cause: inquiries were disabled in production; the browser integration depended on build-time `VITE_*` values not present in the owner environment; and the global trailing-slash rule redirected extensionless serverless POST routes before their handlers ran.
+- Repair: enabled inquiries, moved the non-secret Firebase/App Check browser settings behind `/api/public-config.json`, and submitted inquiries to `/api/contact.json`. Added physical `.json` functions for contact, delivery and SEO endpoints so Vercel does not redirect these requests.
+- Credential handling: Firebase Admin accepts a full PEM private key or the full PEM encoded as base64. It rejects a truncated key or a value missing the BEGIN/END boundaries. Resend and Firebase private credentials remain server-only.
+- Prior live acceptance on deployment `dpl_9WBaMyKsM9n5iUBDz7Qm8rCq19mM`: Contact Us displayed the saved-success state and reset; the rental calculator produced the expected `$5,990` result without sending during calculation, then displayed saved-success after the explicit quote request. Production logs recorded HTTP 201 for both `/api/contact.json` requests with no `delivery_pending`; this proves provider acceptance, not recipient inbox receipt.
+- Durability issue found during acceptance: newer Vercel Git deployments from organization `main` omitted the uncommitted repair and overtook the verified deployment. This branch persists the repair in the organization repository so later automatic deployments retain it.
+- Automated verification on the clean branch: `npm test` passed **54/54** across eight files; `npm run build` passed TypeScript, Vite bundling and prerendering of **745 pages plus 404**.
+- Final live Git-backed deployment results are appended after release.
