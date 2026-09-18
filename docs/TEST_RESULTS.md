@@ -539,4 +539,5 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Automated checks: 118/118 focused assertions passed; the wider application run passed 119/119; TypeScript passed.
 - Build: production prerender generated 655 pages plus 404, adding the four restroom detail pages.
 - Local browser audit: 60/60 presentations passed at 1440x1000 and 390x844. Results: zero placeholder occurrences, zero pending-photo elements, zero broken images and zero console errors.
-- Production deployment and final live repeat: pending.
+- Production: commit `9cbbb23` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel deployment `dpl_6zdBW8NDmn74u7ednjnu9vSWSwgq` reached READY on the linked `cc-devs/temp123` project.
+- Final `https://temporary123.com` browser repeat: 60/60 presentations passed at 1440x1000 and 390x844. All 30 routes returned HTTP 200 after navigation; zero placeholder occurrences, pending-photo elements, broken images or console errors were observed. The four repaired restroom pages each rendered the reviewed three-image set as one active image plus five carousel thumbnails.
