@@ -58,6 +58,43 @@ describe("equipment-page missing photo follow-up", () => {
     }
   });
 
+  it.each(["12ft", "14ft", "20ft", "30ft"])(
+    "renders reviewed restroom-only photos with a truthful %s disclosure",
+    (length) => {
+      const path = `/services/restroom-trailers/${length}/`;
+      const $ = load(renderToStaticMarkup(createElement(Site, { path })));
+      const carousel = $(".service-hero-carousel");
+      expect(carousel).toHaveLength(1);
+      const uniqueSources = new Set(
+        carousel
+          .find("img")
+          .toArray()
+          .map((image) => $(image).attr("src")),
+      );
+      expect(uniqueSources).toHaveLength(3);
+      expect(carousel.text()).toMatch(
+        new RegExp(`do not establish the separate ${length.replace("ft", " ft")} model`, "i"),
+      );
+      expect(carousel.text()).toMatch(/rental or lease configuration/i);
+      expect($(".service-hero-unverified")).toHaveLength(0);
+      const descriptiveImages = carousel
+        .find("img")
+        .filter((_, image) => Boolean($(image).attr("alt")));
+      expect(descriptiveImages).toHaveLength(1);
+      expect(
+        carousel.find("img").filter((_, image) => !$(image).attr("alt")),
+      ).toHaveLength(5);
+      descriptiveImages.each((_, image) => {
+        expect($(image).attr("alt")).toMatch(/restroom trailer/i);
+      });
+      carousel.find("img").each((_, image) => {
+        expect($(image).attr("src")).toContain(
+          "/images/catalog-supplied/restroom-trailers/",
+        );
+      });
+    },
+  );
+
   it("renders all five requested catalogue entries without pending photos", () => {
     const $ = load(
       renderToStaticMarkup(createElement(Site, { path: "/equipment-rental/" })),

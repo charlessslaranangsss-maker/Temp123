@@ -6,7 +6,6 @@ import {load} from 'cheerio';
 import {ServiceDetail} from '../src/ServiceDetail';
 import {alignedPageIntro,alignedLocationIntro} from '../src/alignedIntroductions';
 import details from '../content/service-details.json';
-import redirects from '../vercel.json';
 const before=fixture;
 const manifest=fixture;
 const n=(s:string)=>s.replace(/\s+/g,' ').trim(), rental=/\brent(?:al|als|ed|ing)?\b|\bleas(?:e|ing|ed)\b/i;
@@ -23,6 +22,10 @@ describe('Description-only corrections preserve approved H1s',()=>{
   });
   for(const row of manifest.exactOverrides)it('uses the reviewed rental description: '+row.url,()=>expect(alignedPageIntro(row.url,'Heading remains outside description helper')).toBe(row.after));
   for(const row of before.modals.filter((r:{kind:string})=>r.kind==='full-map'))it('leaves '+row.state+' map introduction unchanged',()=>expect(alignedLocationIntro(row.h1,row.state)).toBe(row.intro));
-  for(const [url] of Object.entries(details).filter(([url])=>!before.rows.some((r:{url:string})=>r.url===url)))it('identifies redirected model rather than inventing a page: '+url,()=>expect(redirects.redirects.some(r=>r.source===url)).toBe(true));
+  for(const [url,item] of Object.entries(details).filter(([url])=>!before.rows.some((r:{url:string})=>r.url===url)))it('renders the registered model as its own page: '+url,()=>{
+    const doc=load(renderToStaticMarkup(createElement(ServiceDetail,{path:url as keyof typeof details})));
+    expect(doc('h1')).toHaveLength(1);expect(n(doc('h1').text())).toContain(item.name);
+    expect(n(doc('[data-h1-intro]').text())).toMatch(rental);
+  });
   it('preserves unknown-family fallback copy',()=>expect(alignedPageIntro('/not-registered/','General Information','Original description')).toBe('Original description'));
 });

@@ -1,5 +1,6 @@
 import { resolveLocationGallery } from "./locationCarouselImages";
 import { orderGalleryImages } from "./galleryImageOrder";
+import { catalogPhotoAdditions } from "./equipmentCatalogPhotoAdditions";
 export type ServiceHeroImageView = "interior" | "exterior" | "plan" | "detail";
 
 export type ServiceHeroImage = {
@@ -498,6 +499,7 @@ export function orderedServiceHeroImages(
 type ServicePhotoReference = {
   sourcePath?: string;
   sourceTitle?: string;
+  sourceCatalogId?: string;
   caption: string;
 };
 
@@ -507,6 +509,26 @@ type ServicePhotoReference = {
  * difference so these images are useful without presenting them as exact.
  */
 const servicePhotoReferences: Readonly<Record<string, ServicePhotoReference>> = {
+  "/services/restroom-trailers/12ft/": {
+    sourceCatalogId: "restroom-trailers",
+    caption:
+      "Supplied restroom-only trailer interior photos. They do not establish the separate 12 ft model's stall count or floor plan; confirm dimensions, accessibility, utilities and the available rental or lease configuration with your quote.",
+  },
+  "/services/restroom-trailers/14ft/": {
+    sourceCatalogId: "restroom-trailers",
+    caption:
+      "Supplied restroom-only trailer interior photos. They do not establish the separate 14 ft model's stall count or floor plan; confirm dimensions, accessibility, utilities and the available rental or lease configuration with your quote.",
+  },
+  "/services/restroom-trailers/20ft/": {
+    sourceCatalogId: "restroom-trailers",
+    caption:
+      "Supplied restroom-only trailer interior photos. They do not establish the separate 20 ft model's stall count or floor plan; confirm dimensions, accessibility, utilities and the available rental or lease configuration with your quote.",
+  },
+  "/services/restroom-trailers/30ft/": {
+    sourceCatalogId: "restroom-trailers",
+    caption:
+      "Supplied restroom-only trailer interior photos. They do not establish the separate 30 ft model's stall count or floor plan; confirm dimensions, accessibility, utilities and the available rental or lease configuration with your quote.",
+  },
   "/equipment-rental-refrigeration-12ft-refrigerated-trailer/": {
     sourceTitle: "20 ft Refrigerated Trailer",
     caption:
@@ -591,6 +613,10 @@ export function imagesForServicePath(
     if (reference?.sourcePath) {
       const referenced = serviceHeroImages[reference.sourcePath];
       if (referenced?.length) return orderedServiceHeroImages(referenced);
+    }
+    if (reference?.sourceCatalogId) {
+      const referenced = catalogPhotoAdditions(reference.sourceCatalogId);
+      if (referenced.length) return orderedServiceHeroImages(referenced);
     }
     return undefined;
   }

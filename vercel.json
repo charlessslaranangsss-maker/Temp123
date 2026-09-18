@@ -3286,26 +3286,6 @@
       "source": "/equipment-rental/mobile-kitchen-trailers/arroyo-hondo-mobile-kitchen-rental/",
       "destination": "/equipment-rental/mobile-kitchen-trailers/?location=Arroyo%20Hondo",
       "permanent": true
-    },
-    {
-      "source": "/services/restroom-trailers/12ft/",
-      "destination": "/equipment-rental/restroom-trailers/",
-      "permanent": true
-    },
-    {
-      "source": "/services/restroom-trailers/14ft/",
-      "destination": "/equipment-rental/restroom-trailers/",
-      "permanent": true
-    },
-    {
-      "source": "/services/restroom-trailers/20ft/",
-      "destination": "/equipment-rental/restroom-trailers/",
-      "permanent": true
-    },
-    {
-      "source": "/services/restroom-trailers/30ft/",
-      "destination": "/equipment-rental/restroom-trailers/",
-      "permanent": true
     }
   ]
 }

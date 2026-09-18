@@ -299,3 +299,7 @@ When exact model photography is unavailable, show the closest reviewed commercia
 - Reason: Permanent redirects consolidate signals for replaced URLs, while self-canonicals and sitemap membership identify the preferred destination. This preserves exact inbound paths without introducing competing copies.
 - Affected areas: Vercel redirects, production-domain gate, indexing order/scope, sitemap, canonical output, migration tests, and backlink audit evidence.
 - Replaces an earlier decision: Yes; the production domain is now verified as the active public site, so the earlier `domainRoutingReady:false` hold is released for this controlled batch.
+
+## 2026-09-18 — Reviewed restroom-only images on length-specific restroom pages
+
+The supplied restroom-only interior set may appear on the registered 12 ft, 14 ft, 20 ft and 30 ft restroom detail pages because it truthfully establishes the facility type and installed equipment. Each presentation must visibly disclose that the photos do not establish the separate model's length, stall count or floor plan and must direct the customer to confirm dimensions, accessibility, utilities and the available rental or lease configuration. Decorative carousel thumbnails keep empty alt text; the active image carries truthful equipment-specific alt text. These registered detail URLs remain direct pages rather than redirects to the category page.

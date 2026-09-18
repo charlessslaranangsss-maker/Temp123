@@ -116,7 +116,7 @@ describe("service hero image ordering", () => {
 
   it("provides reviewed imagery for every published service-model route", () => {
     const routes = [...new Set(serviceOptions.map(({ href }) => href))];
-    expect(routes).toHaveLength(24);
+    expect(routes).toHaveLength(28);
     routes.forEach((path) => {
       expect(imagesForServicePath(path)?.length, path).toBeGreaterThan(0);
     });

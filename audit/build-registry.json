@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T10:34:11.387Z",
+  "generatedAt": "2026-09-18T11:19:50.932Z",
   "mode": "production",
   "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
@@ -436,6 +436,22 @@
     },
     {
       "path": "/services/shower-containers/20ft-5-stall/",
+      "indexable": false
+    },
+    {
+      "path": "/services/restroom-trailers/12ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/restroom-trailers/14ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/restroom-trailers/20ft/",
+      "indexable": false
+    },
+    {
+      "path": "/services/restroom-trailers/30ft/",
       "indexable": false
     },
     {
