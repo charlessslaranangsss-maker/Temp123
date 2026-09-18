@@ -3,6 +3,19 @@ import site from "../site.json" with { type: "json" };
 import { services } from "./content";
 import { leadSchema } from "../server/schema";
 import { appCheckToken } from "./appCheck";
+
+const contactServiceLabels: Partial<
+  Record<(typeof services)[number]["slug"], string>
+> = {
+  "mobile-kitchens": "Mobile Kitchen Trailers",
+  dishwashing: "Dishwashing Trailers",
+  refrigeration: "Refrigeration Trailers",
+  "restroom-shower-trailers": "Restroom & Shower Trailers",
+  sleeper: "Sleeper Trailers",
+  laundry: "Laundry Trailers",
+  sink: "Sink Trailers",
+};
+
 export function QuoteForm() {
   const formRef = useRef<HTMLFormElement>(null);
   useEffect(() => {
@@ -210,7 +223,7 @@ export function QuoteForm() {
             </option>
             {services.map((s) => (
               <option key={s.slug} value={s.slug}>
-                {s.name}
+                {contactServiceLabels[s.slug] ?? s.name}
               </option>
             ))}
             <option value="multiple">Several facilities / help deciding</option>

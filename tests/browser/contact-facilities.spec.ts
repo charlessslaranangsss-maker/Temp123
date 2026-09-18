@@ -1,11 +1,16 @@
 import { expect, test } from "@playwright/test";
 
 const requestedFacilities = [
-  ["dishwashing", "Dishwashing"],
-  ["refrigeration", "Refrigeration"],
-  ["sleeper", "Sleeper"],
-  ["laundry", "Laundry"],
-  ["sink", "Sink"],
+  ["mobile-kitchens", "Mobile Kitchen Trailers"],
+  ["dishwashing", "Dishwashing Trailers"],
+  ["refrigeration", "Refrigeration Trailers"],
+  ["restroom-shower-trailers", "Restroom & Shower Trailers"],
+  ["sleeper", "Sleeper Trailers"],
+  ["laundry", "Laundry Trailers"],
+  ["sink", "Sink Trailers"],
+  ["workforce-housing", "Workforce housing"],
+  ["temporary-facilities", "Temporary facilities"],
+  ["multiple", "Several facilities / help deciding"],
 ] as const;
 
 test("Contact Us offers every requested facility", async ({ page }) => {

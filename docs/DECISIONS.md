@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-19 — Clarify trailer equipment only in the Contact Us selector
+
+Use explicit `Trailers` wording for the seven trailer-equipment choices in the Contact Us selector, including the requested `Mobile Kitchen Trailers` example. Keep the underlying form values unchanged so server validation, stored inquiries, and downstream integrations remain compatible. Do not append `Trailers` to `Workforce housing`, `Temporary facilities`, or `Several facilities / help deciding`; those are broad planning choices and the suffix would make an inaccurate or awkward equipment claim. Keep the shared `services` labels unchanged because this request concerns the Contact Us selector, not navigation or page headings.
+
 ## 2026-09-19 — Track crawl readiness separately from Google indexing
 
 The indexing workbook may label a URL `Ready for Google` only when the live page returns HTTP 200, uses its exact self-canonical, permits indexing and appears in the production sitemap. This does not prove Google has indexed it. Keep Search Console status as `Not verified in Search Console` until direct inspection evidence is recorded. Preserve the controlled rollout: Batch 1 has 25 active pages, while the remaining 302 registry URLs stay `noindex,follow` and outside the sitemap until reviewed and approved. The unfinished 1,000-city draft is not part of this production tracker.

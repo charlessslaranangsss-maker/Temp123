@@ -6,11 +6,16 @@ import { leadSchema } from "../server/schema";
 import { QuoteForm } from "../src/QuoteForm";
 
 const requestedFacilities = [
-  ["dishwashing", "Dishwashing"],
-  ["refrigeration", "Refrigeration"],
-  ["sleeper", "Sleeper"],
-  ["laundry", "Laundry"],
-  ["sink", "Sink"],
+  ["mobile-kitchens", "Mobile Kitchen Trailers"],
+  ["dishwashing", "Dishwashing Trailers"],
+  ["refrigeration", "Refrigeration Trailers"],
+  ["restroom-shower-trailers", "Restroom & Shower Trailers"],
+  ["sleeper", "Sleeper Trailers"],
+  ["laundry", "Laundry Trailers"],
+  ["sink", "Sink Trailers"],
+  ["workforce-housing", "Workforce housing"],
+  ["temporary-facilities", "Temporary facilities"],
+  ["multiple", "Several facilities / help deciding"],
 ] as const;
 
 const validLead = {
@@ -39,7 +44,12 @@ describe("Contact Us facility options", () => {
     }
   });
 
-  it.each(requestedFacilities)("accepts %s at the server boundary", (service) => {
-    expect(leadSchema.safeParse({ ...validLead, service }).success).toBe(true);
-  });
+  it.each(requestedFacilities)(
+    "accepts %s at the server boundary",
+    (service) => {
+      expect(leadSchema.safeParse({ ...validLead, service }).success).toBe(
+        true,
+      );
+    },
+  );
 });

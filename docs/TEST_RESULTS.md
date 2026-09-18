@@ -1,5 +1,14 @@
 # Temporary123 Test Results
 
+## Contact Us trailer labels — 2026-09-19 (LOCAL PASS)
+
+- Source scope: only the Contact Us selector's visible labels changed; submitted values, `server/schema.ts`, inquiry behavior, shared service names outside the form, URLs, and indexing were preserved.
+- `npx vitest run tests/contactFacilities.test.tsx`: **11/11 passed**, covering every selector label and every unchanged server-accepted value.
+- `npm run typecheck`: passed.
+- `npm run build`: passed and generated **745 pages plus 404**.
+- Browser: the first Playwright attempt reused an unrelated stale server already listening on port 4173 and correctly failed on the old `Mobile kitchens` label. A fresh preview of this build on isolated port 4327 then passed `tests/browser/contact-facilities.spec.ts` **1/1**, opening the actual Contact Us drawer, verifying all ten visible options, and selecting each unchanged value.
+- Boundary: local verification only. No commit, push, deployment, production form submission, or live-site verification was performed.
+
 ## Whole-site production-baseline QA — 2026-09-19 (LIVE PASS; RELEASE GATE PARTIAL)
 
 - Isolation: audited `origin/main` in `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its separate 1,000-city draft were not used or overwritten.
