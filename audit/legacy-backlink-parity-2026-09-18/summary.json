@@ -6,6 +6,7 @@
   "direct_rows": 24,
   "redirect_rows": 129,
   "unique_canonical_targets": 23,
+  "apex_host_configured_rows": 153,
   "passing_rows": 153,
   "failing_rows": 0,
   "target_row_counts": {

@@ -61,6 +61,30 @@ def resolve_path(path: str, redirects: list[dict]) -> tuple[str, list[str]]:
     raise ValueError(f"Redirect chain exceeds 12 hops: {' -> '.join(chain)}")
 
 
+def apex_host_configured(
+    source_host: str, source_path: str, path_hops: int, redirects: list[dict]
+) -> bool:
+    """Confirm www URLs cannot finish on the duplicate hostname."""
+    if source_host.lower() != "www.temporary123.com":
+        return True
+    if path_hops:
+        for rule in redirects:
+            if rule.get("has") or rule.get("missing"):
+                continue
+            if route_pattern(rule["source"]).match(source_path):
+                return urlparse(rule["destination"]).hostname == "temporary123.com"
+        return False
+    return any(
+        rule.get("destination", "").startswith("https://temporary123.com/")
+        and any(
+            condition.get("type") == "host"
+            and condition.get("value") == "www.temporary123.com"
+            for condition in rule.get("has", [])
+        )
+        for rule in redirects
+    )
+
+
 def html_file(dist: Path, path: str) -> Path:
     if path == "/":
         return dist / "index.html"
@@ -110,11 +134,15 @@ def main() -> int:
         expected = f"https://temporary123.com{final_path}"
         robots = meta_value(html, "robots")
         sitemap_member = f"<loc>{expected}</loc>" in sitemap
+        host_configured = apex_host_configured(
+            parsed.hostname or "", source_path, len(chain) - 1, redirects
+        )
         passed = (
             exists
             and robots.lower() == "index,follow"
             and canonical == expected
             and sitemap_member
+            and host_configured
             and len(chain) <= 2
         )
         results.append(
@@ -132,6 +160,7 @@ def main() -> int:
                 "robots": robots,
                 "canonical": canonical,
                 "sitemap_member": sitemap_member,
+                "apex_host_configured": host_configured,
                 "pass": passed,
             }
         )
@@ -147,6 +176,9 @@ def main() -> int:
         "direct_rows": sum(row["route_kind"] == "direct" for row in results),
         "redirect_rows": sum(row["route_kind"] == "redirect" for row in results),
         "unique_canonical_targets": len(targets),
+        "apex_host_configured_rows": sum(
+            bool(row["apex_host_configured"]) for row in results
+        ),
         "passing_rows": len(results) - len(failed),
         "failing_rows": len(failed),
         "target_row_counts": dict(targets.most_common()),
