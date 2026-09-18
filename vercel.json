@@ -71,6 +71,72 @@
       "permanent": true
     },
     {
+      "source": "/catering/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/catering/",
+      "permanent": true
+    },
+    {
+      "source": "/containerized-shower-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/containerized-shower-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-migrant-containerized-living-spaces/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/emergency-migrant-containerized-living-spaces/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-modular-shelters-contained-for-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/emergency-modular-shelters-contained-for-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-workforce-housing-in-california/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/emergency-workforce-housing-in-california/",
+      "permanent": true
+    },
+    {
       "source": "/equipment-rental/breakroom-trailer/",
       "has": [
         {
@@ -79,6 +145,39 @@
         }
       ],
       "destination": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/command-center-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/decontamination-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/dump-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/dump-rental/",
       "permanent": true
     },
     {
@@ -104,6 +203,39 @@
       "permanent": true
     },
     {
+      "source": "/equipment-rental/multi-trailer/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/port-potties-and-port-johns/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/ramp-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "permanent": true
+    },
+    {
       "source": "/equipment-rental/restroom-trailers/",
       "has": [
         {
@@ -115,6 +247,578 @@
       "permanent": true
     },
     {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "permanent": true
+    },
+    {
       "source": "/equipment-rental/shower-trailer/",
       "has": [
         {
@@ -123,6 +827,50 @@
         }
       ],
       "destination": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/sleeper-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/sleeper-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/stair-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/stair-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/waste-container/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/waste-container/",
       "permanent": true
     },
     {
@@ -145,6 +893,237 @@
         }
       ],
       "destination": "https://temporary123.com/government/correctional-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/houston-texas-mobile-kitchen-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/modular-temporary-camp-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/modular-temporary-camp-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/modular-temporary-workforce-housing-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/modular-temporary-workforce-housing-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-basecamp-housing-service-company/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-basecamp-housing-service-company/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-containerized-military-berthing-solution/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-containerized-military-berthing-solution/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-housing-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-housing-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-temporary-workforce-housing-facilities-rental/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-temporary-workforce-housing-facilities-rental/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-house-company-in-alabama/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-house-company-in-hawaii/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-house-company-in-hawaii/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-housing-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-in-alabama/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-housing-in-alabama/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-rentals-in-arizona/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-services-in-alaska/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-housing-services-in-alaska/",
+      "permanent": true
+    },
+    {
+      "source": "/remote-workforce-housing-services-in-idaho/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/remote-workforce-housing-services-in-idaho/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-remote-workforce-housing-services-in-arkansas/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/temporary-remote-workforce-housing-services-in-arkansas/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-remote-workforce-housing-services-in-illinois/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/temporary-remote-workforce-housing-services-in-illinois/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-remote-workforce-housing-services-in-michigan/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/temporary-remote-workforce-housing-services-in-michigan/",
+      "permanent": true
+    },
+    {
+      "source": "/temporary-workforce-housing-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "permanent": true
+    },
+    {
+      "source": "/workforce-housing-shelters-in-colorado/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
       "permanent": true
     },
     {
