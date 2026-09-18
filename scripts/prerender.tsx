@@ -86,7 +86,9 @@ const coreRoutes = [
   "/equipment-rental/",
 ];
 const redirectDestinations = new Map(
-  vercel.redirects.map((rule) => [rule.source, rule.destination]),
+  vercel.redirects
+    .filter((rule) => !("has" in rule) && !("missing" in rule))
+    .map((rule) => [rule.source, rule.destination]),
 );
 const redirectedRoutes = new Set(redirectDestinations.keys());
 const allRoutes = [
