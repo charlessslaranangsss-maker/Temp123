@@ -1,6 +1,10 @@
 import { resolveLocationGallery } from "./locationCarouselImages";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
 import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
+import {
+  catalogPhotoAdditionCaption,
+  catalogPhotoAdditions,
+} from "./equipmentCatalogPhotoAdditions";
 import site from "../site.json" with { type: "json" };
 
 type EquipmentCard = {
@@ -73,7 +77,7 @@ export const equipment: EquipmentCard[] = [
     category: "Site amenities",
     text: "Plan temporary restroom facilities for crews, guests and active field operations. Confirm the available restroom-only configuration before booking.",
     detail:
-      "For a restroom-only request, confirm the available unit, stall count, accessibility and floor plan with the rental team. Matching restroom-only photography is pending; separate shower/restroom combination trailers are listed in their own equipment category.",
+      "The photos show restroom-only trailer interiors. Confirm the available unit, stall count, accessibility, utilities and floor plan with the rental team; separate shower/restroom combination trailers are listed in their own equipment category.",
     tags: ["Restrooms", "Accessibility", "Site support"],
   },
   {
@@ -131,10 +135,28 @@ const cardTitles: Record<string, string> = {
   "Restroom": "ADA Shower and Restroom Combination Trailer", "Shower and Restroom Combination Trailers": "Shower and Restroom Combination Trailer",
   "Sleeper": "Two-Stall Sleeper Trailer", "Laundry": "30 ft Laundry Trailer", "Handwashing Trailers": "Handwashing Sink Trailer"
 };
-function cardGallery(name: string) { return resolveLocationGallery(cardTitles[name] || name); }
+function cardGallery(name: string) {
+  if (name === "Restroom") {
+    const images = [...catalogPhotoAdditions("restroom-trailers")];
+    const group = {
+      headline: "Restroom Trailer",
+      family: "restroom-trailer" as const,
+      modelId: null,
+      images,
+      reason: "",
+    };
+    return { ...group, context: null, groups: [group] };
+  }
+  return resolveLocationGallery(cardTitles[name] || name);
+}
 export function equipmentGalleryForPath(path: string) {
   const item = equipment.find((entry) => entry.path === path);
   return cardGallery(item?.name || "Unknown equipment");
+}
+function equipmentGalleryCaption(path: string) {
+  if (path === "/equipment-rental/restroom-trailers/")
+    return catalogPhotoAdditionCaption("restroom-trailers");
+  return referenceCaptionForModel(equipmentGalleryForPath(path).modelId);
 }
 for (const item of equipment) {
   const photo = cardGallery(item.name).images[0];
@@ -226,25 +248,19 @@ const homepageEquipment: EquipmentCard[] = equipment.map((item, index) => ({
   ...item,
   name: homepagePhotos[index][0],
   // Preserve Charles's explicitly approved shower thumbnail; other cards use
-  // the same current category mapping as Services, never a legacy mixed unit.
+  // the same current category mapping as Services.
   image:
     index === 3
       ? homepagePhotos[index][1]
-      : index === 4
-        ? "/images/location-verified/5ecedc2b7190aeb0b3f7-960.webp"
-        : item.image,
+      : item.image,
   smallImage:
     index === 3
       ? "/images/catalog/shower-trailer-480.webp"
-      : index === 4
-        ? "/images/location-verified/5ecedc2b7190aeb0b3f7-480.webp"
-        : item.smallImage,
+      : item.smallImage,
   imageAlt:
     index === 3
       ? homepagePhotos[index][2]
-      : index === 4
-        ? "Toilet interior in a shower and restroom combination trailer; restroom-only unit not pictured"
-        : item.imageAlt,
+      : item.imageAlt,
 }));
 
 export function Cards({
@@ -309,7 +325,6 @@ export function Cards({
             <h3>
               <a href={e.path}>{e.name}</a>
             </h3>
-            {homepage && i === 4 && <span className="representative-photo-note">Photo shows a shower + restroom combination unit</span>}
             <p>{e.text}</p>
             {e.secondaryName && e.secondaryPath && (
               <a className="related-card-service" href={e.secondaryPath}>
@@ -356,7 +371,7 @@ export function Cards({
               Close <span aria-hidden="true">×</span>
             </button>
             <div className="dialog-grid">
-              {equipmentGalleryForPath(e.path).images.length ? <ServiceHeroCarousel images={equipmentGalleryForPath(e.path).images} label={e.name} lightboxLabel={equipmentGalleryForPath(e.path).groups[0]?.headline || e.name} caption={referenceCaptionForModel(equipmentGalleryForPath(e.path).modelId)} deferLoading /> : <div className="verified-photo-pending"><strong>Verified photography coming soon</strong><p>Matching equipment photographs are not yet verified.</p></div>}
+              {equipmentGalleryForPath(e.path).images.length ? <ServiceHeroCarousel images={equipmentGalleryForPath(e.path).images} label={e.name} lightboxLabel={equipmentGalleryForPath(e.path).groups[0]?.headline || e.name} caption={equipmentGalleryCaption(e.path)} deferLoading /> : <div className="verified-photo-pending"><strong>Verified photography coming soon</strong><p>Matching equipment photographs are not yet verified.</p></div>}
               <div className="dialog-copy">
                 <span className="eyebrow">{e.category}</span>
                 <h2 id={`equipment-title-${i}`}>{e.name}</h2>

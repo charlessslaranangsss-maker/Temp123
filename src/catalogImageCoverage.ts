@@ -2,6 +2,10 @@ import type { CatalogItem } from "./EquipmentCatalog";
 import type { ServiceHeroImage } from "./serviceHeroImages";
 import { resolveLocationGallery } from "./locationCarouselImages";
 import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
+import {
+  catalogPhotoAdditionCaption,
+  catalogPhotoAdditions,
+} from "./equipmentCatalogPhotoAdditions";
 
 const titles: Record<string, string> = {
   "laundry-trailers": "30 ft Laundry Trailer",
@@ -163,6 +167,13 @@ export function catalogPhotoCoverage(item: CatalogItem): {
 } {
   if (held[item.id])
     return { images: [], caption: held[item.id], status: "held" };
+  const supplied = catalogPhotoAdditions(item.id);
+  if (supplied.length)
+    return {
+      images: [...supplied],
+      caption: catalogPhotoAdditionCaption(item.id),
+      status: "reviewed-supplied",
+    };
   if (titles[item.id]) {
     const gallery = resolveLocationGallery(titles[item.id]);
     return {
