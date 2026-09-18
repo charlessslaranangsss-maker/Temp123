@@ -1,0 +1,726 @@
+{
+  "source": "2026-09-18 backlink export; exact legacy HTML paths formerly redirected",
+  "count": 90,
+  "pages": [
+    {
+      "path": "/catering/",
+      "title": "Temporary Catering Facility Rental",
+      "description": "Plan temporary catering facilities around meal volume, food preparation, utilities, sanitation and delivery access.",
+      "family": "food",
+      "location": null,
+      "parentPath": "/food-services-2/"
+    },
+    {
+      "path": "/containerized-shower-trailers/",
+      "title": "Containerized Shower Trailer Rental",
+      "description": "Plan a temporary shower trailer rental around users, stall requirements, utilities, wastewater and delivery access.",
+      "family": "shower",
+      "location": null,
+      "parentPath": "/equipment-rental/shower-trailer/"
+    },
+    {
+      "path": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "title": "Emergency Modular Executive Hotel Suite Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/emergency-migrant-containerized-living-spaces/",
+      "title": "Emergency Containerized Living Space Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/emergency-modular-shelters-contained-for-rental/",
+      "title": "Emergency Modular Shelter Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/emergency-workforce-housing-in-california/",
+      "title": "Remote Workforce Housing Rental in California",
+      "description": "Plan temporary workforce housing in California around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "California",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/equipment-rental/command-center-trailers/",
+      "title": "Command Center Trailer Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/modular-command-center-trailers/"
+    },
+    {
+      "path": "/equipment-rental/decontamination-trailers/",
+      "title": "Decontamination Trailer Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/"
+    },
+    {
+      "path": "/equipment-rental/dump-rental/",
+      "title": "Dump Container Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/fencing-barricades-trash-receptacles/"
+    },
+    {
+      "path": "/equipment-rental/multi-trailer/",
+      "title": "Multi-Purpose Trailer Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/"
+    },
+    {
+      "path": "/equipment-rental/port-potties-and-port-johns/",
+      "title": "Portable Toilet Rental",
+      "description": "Plan a temporary restroom rental with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": null,
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/ramp-rental/",
+      "title": "Ramp Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/ramp-rentals/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "title": "Portable Restroom Trailer Rental in Alabama",
+      "description": "Plan a temporary restroom rental in Alabama with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Alabama",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "title": "Portable Restroom Trailer Rental in Alaska",
+      "description": "Plan a temporary restroom rental in Alaska with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Alaska",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "title": "Portable Restroom Trailer Rental in Alberta, Canada",
+      "description": "Plan a temporary restroom rental in Alberta, Canada with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Alberta, Canada",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "title": "Portable Restroom Trailer Rental in Arizona",
+      "description": "Plan a temporary restroom rental in Arizona with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Arizona",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "title": "Portable Restroom Trailer Rental in Arkansas",
+      "description": "Plan a temporary restroom rental in Arkansas with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Arkansas",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "title": "Portable Restroom Trailer Rental in California",
+      "description": "Plan a temporary restroom rental in California with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "California",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "title": "Portable Restroom Trailer Rental in Colorado",
+      "description": "Plan a temporary restroom rental in Colorado with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Colorado",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "title": "Portable Restroom Trailer Rental in Connecticut",
+      "description": "Plan a temporary restroom rental in Connecticut with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Connecticut",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "title": "Portable Restroom Trailer Rental in Delaware",
+      "description": "Plan a temporary restroom rental in Delaware with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Delaware",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "title": "Portable Restroom Trailer Rental in District of Columbia",
+      "description": "Plan a temporary restroom rental in District of Columbia with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "District of Columbia",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "title": "Portable Restroom Trailer Rental in Florida",
+      "description": "Plan a temporary restroom rental in Florida with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Florida",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "title": "Portable Restroom Trailer Rental in Georgia",
+      "description": "Plan a temporary restroom rental in Georgia with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Georgia",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "title": "Portable Restroom Trailer Rental in Hawaii",
+      "description": "Plan a temporary restroom rental in Hawaii with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Hawaii",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "title": "Portable Restroom Trailer Rental in Idaho",
+      "description": "Plan a temporary restroom rental in Idaho with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Idaho",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "title": "Portable Restroom Trailer Rental in Illinois",
+      "description": "Plan a temporary restroom rental in Illinois with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Illinois",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "title": "Portable Restroom Trailer Rental in Indiana",
+      "description": "Plan a temporary restroom rental in Indiana with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Indiana",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "title": "Portable Restroom Trailer Rental in Iowa",
+      "description": "Plan a temporary restroom rental in Iowa with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Iowa",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "title": "Portable Restroom Trailer Rental in Kansas",
+      "description": "Plan a temporary restroom rental in Kansas with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Kansas",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "title": "Portable Restroom Trailer Rental in Kentucky",
+      "description": "Plan a temporary restroom rental in Kentucky with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Kentucky",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "title": "Portable Restroom Trailer Rental in Louisiana",
+      "description": "Plan a temporary restroom rental in Louisiana with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Louisiana",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "title": "Portable Restroom Trailer Rental in Maine",
+      "description": "Plan a temporary restroom rental in Maine with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Maine",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "title": "Portable Restroom Trailer Rental in Maryland",
+      "description": "Plan a temporary restroom rental in Maryland with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Maryland",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "title": "Portable Restroom Trailer Rental in Massachusetts",
+      "description": "Plan a temporary restroom rental in Massachusetts with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Massachusetts",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "title": "Portable Restroom Trailer Rental in Michigan",
+      "description": "Plan a temporary restroom rental in Michigan with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Michigan",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "title": "Portable Restroom Trailer Rental in Minnesota",
+      "description": "Plan a temporary restroom rental in Minnesota with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Minnesota",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "title": "Portable Restroom Trailer Rental in Mississippi",
+      "description": "Plan a temporary restroom rental in Mississippi with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Mississippi",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "title": "Portable Restroom Trailer Rental in Missouri",
+      "description": "Plan a temporary restroom rental in Missouri with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Missouri",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "title": "Portable Restroom Trailer Rental in Montana",
+      "description": "Plan a temporary restroom rental in Montana with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Montana",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "title": "Portable Restroom Trailer Rental in Nebraska",
+      "description": "Plan a temporary restroom rental in Nebraska with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Nebraska",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "title": "Portable Restroom Trailer Rental in Nevada",
+      "description": "Plan a temporary restroom rental in Nevada with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Nevada",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "title": "Portable Restroom Trailer Rental in New Hampshire",
+      "description": "Plan a temporary restroom rental in New Hampshire with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "New Hampshire",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "title": "Portable Restroom Trailer Rental in New Jersey",
+      "description": "Plan a temporary restroom rental in New Jersey with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "New Jersey",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "title": "Portable Restroom Trailer Rental in New Mexico",
+      "description": "Plan a temporary restroom rental in New Mexico with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "New Mexico",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "title": "Portable Restroom Trailer Rental in New York",
+      "description": "Plan a temporary restroom rental in New York with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "New York",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "title": "Portable Restroom Trailer Rental in North Carolina",
+      "description": "Plan a temporary restroom rental in North Carolina with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "North Carolina",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "title": "Portable Restroom Trailer Rental in North Dakota",
+      "description": "Plan a temporary restroom rental in North Dakota with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "North Dakota",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "title": "Portable Restroom Trailer Rental in Ohio",
+      "description": "Plan a temporary restroom rental in Ohio with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Ohio",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "title": "Portable Restroom Trailer Rental in Oklahoma",
+      "description": "Plan a temporary restroom rental in Oklahoma with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Oklahoma",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "title": "Portable Restroom Trailer Rental in Oregon",
+      "description": "Plan a temporary restroom rental in Oregon with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Oregon",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "title": "Portable Restroom Trailer Rental in Pennsylvania",
+      "description": "Plan a temporary restroom rental in Pennsylvania with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Pennsylvania",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "title": "Portable Restroom Trailer Rental in Rhode Island",
+      "description": "Plan a temporary restroom rental in Rhode Island with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Rhode Island",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "title": "Portable Restroom Trailer Rental in South Carolina",
+      "description": "Plan a temporary restroom rental in South Carolina with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "South Carolina",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "title": "Portable Restroom Trailer Rental in South Dakota",
+      "description": "Plan a temporary restroom rental in South Dakota with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "South Dakota",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "title": "Portable Restroom Trailer Rental in Tennessee",
+      "description": "Plan a temporary restroom rental in Tennessee with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Tennessee",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "title": "Portable Restroom Trailer Rental in Texas",
+      "description": "Plan a temporary restroom rental in Texas with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Texas",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "title": "Portable Restroom Trailer Rental in Utah",
+      "description": "Plan a temporary restroom rental in Utah with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Utah",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "title": "Portable Restroom Trailer Rental in Vermont",
+      "description": "Plan a temporary restroom rental in Vermont with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Vermont",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "title": "Portable Restroom Trailer Rental in Virginia",
+      "description": "Plan a temporary restroom rental in Virginia with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Virginia",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "title": "Portable Restroom Trailer Rental in Washington",
+      "description": "Plan a temporary restroom rental in Washington with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Washington",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "title": "Portable Restroom Trailer Rental in West Virginia",
+      "description": "Plan a temporary restroom rental in West Virginia with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "West Virginia",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "title": "Portable Restroom Trailer Rental in Wisconsin",
+      "description": "Plan a temporary restroom rental in Wisconsin with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Wisconsin",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "title": "Portable Restroom Trailer Rental in Wyoming",
+      "description": "Plan a temporary restroom rental in Wyoming with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Wyoming",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "title": "Portable Shower Trailer Rental in New Jersey",
+      "description": "Plan a temporary shower trailer rental in New Jersey around users, stall requirements, utilities, wastewater and delivery access.",
+      "family": "shower",
+      "location": "New Jersey",
+      "parentPath": "/equipment-rental/shower-trailer/"
+    },
+    {
+      "path": "/equipment-rental/sleeper-trailers/",
+      "title": "Sleeper Trailer Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/equipment-rental/mobile-sleep-trailers/"
+    },
+    {
+      "path": "/equipment-rental/stair-rental/",
+      "title": "Stair Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/stair-rentals/"
+    },
+    {
+      "path": "/equipment-rental/waste-container/",
+      "title": "Waste Container Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/fencing-barricades-trash-receptacles/"
+    },
+    {
+      "path": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "title": "Greensboro, North Carolina Temporary Restroom Building Rental",
+      "description": "Plan a temporary restroom rental in Greensboro, North Carolina with occupancy, accessibility, utilities, servicing and site access in view.",
+      "family": "restroom",
+      "location": "Greensboro, North Carolina",
+      "parentPath": "/equipment-rental/restroom-trailers/"
+    },
+    {
+      "path": "/houston-texas-mobile-kitchen-rental/",
+      "title": "Houston, Texas Mobile Kitchen Rental",
+      "description": "Plan a mobile kitchen rental in Houston, Texas around meal volume, equipment, utilities, ventilation and delivery access.",
+      "family": "kitchen",
+      "location": "Houston, Texas",
+      "parentPath": "/equipment-rental/mobile-kitchen-trailers/"
+    },
+    {
+      "path": "/modular-temporary-camp-facilities/",
+      "title": "Modular Temporary Camp Facility Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/modular-temporary-workforce-housing-facilities/",
+      "title": "Modular Temporary Workforce Housing Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-basecamp-housing-service-company/",
+      "title": "Remote Base Camp Housing Services",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-containerized-military-berthing-solution/",
+      "title": "Remote Containerized Military Berthing Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/remote-containerized-military-berthing-solution-for-rent/"
+    },
+    {
+      "path": "/remote-housing-facilities/",
+      "title": "Remote Housing Facility Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-temporary-workforce-housing-facilities-rental/",
+      "title": "Remote Temporary Workforce Housing Facility Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-house-company-in-alabama/",
+      "title": "Remote Workforce Housing Rental in Alabama",
+      "description": "Plan temporary workforce housing in Alabama around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Alabama",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-house-company-in-hawaii/",
+      "title": "Remote Workforce Housing Rental in Hawaii",
+      "description": "Plan temporary workforce housing in Hawaii around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Hawaii",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-housing-facilities/",
+      "title": "Remote Workforce Housing Facility Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-housing-in-alabama/",
+      "title": "Remote Workforce Housing Rental in Alabama",
+      "description": "Plan temporary workforce housing in Alabama around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Alabama",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-housing-rentals-in-arizona/",
+      "title": "Remote Workforce Housing Rental in Arizona",
+      "description": "Plan temporary workforce housing in Arizona around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Arizona",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-housing-services-in-alaska/",
+      "title": "Remote Workforce Housing Rental in Alaska",
+      "description": "Plan temporary workforce housing in Alaska around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Alaska",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/remote-workforce-housing-services-in-idaho/",
+      "title": "Remote Workforce Housing Rental in Idaho",
+      "description": "Plan temporary workforce housing in Idaho around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Idaho",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/shop/",
+      "title": "Temporary Facility and Equipment Rental",
+      "description": "Review temporary facility and equipment rental planning requirements, including capacity, utilities, access, schedule and servicing.",
+      "family": "equipment",
+      "location": null,
+      "parentPath": "/equipment-rental/"
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-arkansas/",
+      "title": "Remote Workforce Housing Rental in Arkansas",
+      "description": "Plan temporary workforce housing in Arkansas around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Arkansas",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-illinois/",
+      "title": "Remote Workforce Housing Rental in Illinois",
+      "description": "Plan temporary workforce housing in Illinois around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Illinois",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "title": "Remote Workforce Housing Rental in Massachusetts",
+      "description": "Plan temporary workforce housing in Massachusetts around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Massachusetts",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-michigan/",
+      "title": "Remote Workforce Housing Rental in Michigan",
+      "description": "Plan temporary workforce housing in Michigan around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Michigan",
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/temporary-workforce-housing-facilities/",
+      "title": "Temporary Workforce Housing Facilities Rental",
+      "description": "Plan temporary workforce housing around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": null,
+      "parentPath": "/man-camps-for-rent/"
+    },
+    {
+      "path": "/workforce-housing-shelters-in-colorado/",
+      "title": "Remote Workforce Housing Rental in Colorado",
+      "description": "Plan temporary workforce housing in Colorado around crew size, shift patterns, sleeping, dining, hygiene, utilities and site logistics.",
+      "family": "workforce",
+      "location": "Colorado",
+      "parentPath": "/man-camps-for-rent/"
+    }
+  ]
+}

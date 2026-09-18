@@ -311,3 +311,12 @@ When exact model photography is unavailable, show the closest reviewed commercia
 ## 2026-09-18 — Reviewed restroom-only images on length-specific restroom pages
 
 The supplied restroom-only interior set may appear on the registered 12 ft, 14 ft, 20 ft and 30 ft restroom detail pages because it truthfully establishes the facility type and installed equipment. Each presentation must visibly disclose that the photos do not establish the separate model's length, stall count or floor plan and must direct the customer to confirm dimensions, accessibility, utilities and the available rental or lease configuration. Decorative carousel thumbnails keep empty alt text; the active image carries truthful equipment-specific alt text. These registered detail URLs remain direct pages rather than redirects to the category page.
+
+
+## 2026-09-18 — Restore backlink-backed legacy HTML paths before releasing them in controlled batches
+
+- Source: Charles's repeated instruction to preserve the old production URL architecture and the supplied 153-row backlink export.
+- Decision: Serve each of the export's 104 unique HTML paths directly at the same path. Restore the 90 paths that were previously redirected as concise, useful facility or equipment planning pages and link them from a related parent page. Keep the single historical PNG as a permanent redirect because it is an asset URL rather than an HTML document.
+- Indexing: Release only the first 25 backlink-ranked paths with self-canonicals and sitemap membership. Keep the other 79 exact HTML paths at `noindex,follow` until their controlled release batch.
+- Reason: Exact HTML URLs retain the requested architecture and their external-link destinations while useful page content and internal links avoid soft 404 behavior. The staged index controls honor the project's approved rollout limit.
+- Replaces an earlier decision: Yes. This supersedes the 2026-09-18 redirect-first treatment for these 90 backlink-backed HTML paths; it does not change unrelated redirects or the controlled indexing limit.

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-18T11:19:50.932Z",
+  "generatedAt": "2026-09-18T13:33:48.540Z",
   "mode": "production",
   "indexingScope": "locations-and-priority-services",
   "indexingBatchSize": 25,
   "activeIndexingBatch": 1,
-  "eligibleIndexingRoutes": 326,
+  "eligibleIndexingRoutes": 327,
   "activeIndexingRoutes": 25,
   "domainRoutingReady": true,
   "pages": [
@@ -14,7 +14,7 @@
     },
     {
       "path": "/services/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/industries/",
@@ -22,7 +22,7 @@
     },
     {
       "path": "/service-areas/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/seo-dashboard/",
@@ -54,7 +54,7 @@
     },
     {
       "path": "/equipment-rental/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/20ft-refrigeration-trailers/",
@@ -136,7 +136,7 @@
     },
     {
       "path": "/equipment-rental/fencing-barricades-trash-receptacles/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T15:53:02"
     },
     {
@@ -151,7 +151,7 @@
     },
     {
       "path": "/equipment-rental/mobile-kitchen-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-10-04T12:38:47"
     },
     {
@@ -166,12 +166,12 @@
     },
     {
       "path": "/equipment-rental/modular-command-center-trailers/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-03-30T19:21:03"
     },
     {
       "path": "/equipment-rental/ramp-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-04-14T16:48:35"
     },
     {
@@ -196,7 +196,7 @@
     },
     {
       "path": "/equipment-rental/stair-rentals/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2021-11-18T16:30:14"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "path": "/food-services-2/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2025-11-04T07:41:28"
     },
     {
@@ -231,7 +231,7 @@
     },
     {
       "path": "/government/correctional-facilities/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2023-05-24T16:37:34"
     },
     {
@@ -261,7 +261,7 @@
     },
     {
       "path": "/man-camps-for-rent/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-03-19T17:34:30"
     },
     {
@@ -271,7 +271,7 @@
     },
     {
       "path": "/mobile-kitchen-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T17:58:11"
     },
     {
@@ -301,7 +301,7 @@
     },
     {
       "path": "/portable-dishwashing-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:33:54"
     },
     {
@@ -316,7 +316,7 @@
     },
     {
       "path": "/remote-containerized-military-berthing-solution-for-rent/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/remote-man-camp-for-rent/",
@@ -330,17 +330,22 @@
     },
     {
       "path": "/restroom-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:28:38"
     },
     {
+      "path": "/shop/",
+      "indexable": false,
+      "modified": "2026-07-23T21:51:53"
+    },
+    {
       "path": "/shower-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:17:08"
     },
     {
       "path": "/sleeper-trailer-rental/",
-      "indexable": true,
+      "indexable": false,
       "modified": "2026-08-10T18:24:36"
     },
     {
@@ -364,7 +369,7 @@
     },
     {
       "path": "/equipment-rental/mobile-sleep-trailers/",
-      "indexable": true
+      "indexable": false
     },
     {
       "path": "/equipment-rental/mobile-crew-camps/",
@@ -2685,6 +2690,362 @@
     {
       "path": "/service-areas/wyoming/",
       "indexable": false
+    },
+    {
+      "path": "/catering/",
+      "indexable": false
+    },
+    {
+      "path": "/containerized-shower-trailers/",
+      "indexable": false
+    },
+    {
+      "path": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "indexable": false
+    },
+    {
+      "path": "/emergency-migrant-containerized-living-spaces/",
+      "indexable": false
+    },
+    {
+      "path": "/emergency-modular-shelters-contained-for-rental/",
+      "indexable": false
+    },
+    {
+      "path": "/emergency-workforce-housing-in-california/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/command-center-trailers/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/decontamination-trailers/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/dump-rental/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/multi-trailer/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/port-potties-and-port-johns/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/ramp-rental/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "indexable": false
+    },
+    {
+      "path": "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/sleeper-trailers/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/stair-rental/",
+      "indexable": true
+    },
+    {
+      "path": "/equipment-rental/waste-container/",
+      "indexable": true
+    },
+    {
+      "path": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "indexable": false
+    },
+    {
+      "path": "/houston-texas-mobile-kitchen-rental/",
+      "indexable": true
+    },
+    {
+      "path": "/modular-temporary-camp-facilities/",
+      "indexable": false
+    },
+    {
+      "path": "/modular-temporary-workforce-housing-facilities/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-basecamp-housing-service-company/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-containerized-military-berthing-solution/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-housing-facilities/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-temporary-workforce-housing-facilities-rental/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-workforce-house-company-in-alabama/",
+      "indexable": true
+    },
+    {
+      "path": "/remote-workforce-house-company-in-hawaii/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-workforce-housing-facilities/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-workforce-housing-in-alabama/",
+      "indexable": false
+    },
+    {
+      "path": "/remote-workforce-housing-rentals-in-arizona/",
+      "indexable": true
+    },
+    {
+      "path": "/remote-workforce-housing-services-in-alaska/",
+      "indexable": true
+    },
+    {
+      "path": "/remote-workforce-housing-services-in-idaho/",
+      "indexable": false
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-arkansas/",
+      "indexable": false
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-illinois/",
+      "indexable": false
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "indexable": false
+    },
+    {
+      "path": "/temporary-remote-workforce-housing-services-in-michigan/",
+      "indexable": false
+    },
+    {
+      "path": "/temporary-workforce-housing-facilities/",
+      "indexable": true
+    },
+    {
+      "path": "/workforce-housing-shelters-in-colorado/",
+      "indexable": true
     }
   ],
   "unresolvedSourceLinks": [
@@ -2698,58 +3059,6 @@
     "/equipment-rental/mobile-kitchen-trailers/40ft-bulk-kitchen/",
     "/equipment-rental/mobile-kitchen-trailers/40ft-combo-kitchen/",
     "/equipment-rental/mobile-kitchen-trailers/40ft-mobile-kitchen/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
-    "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
     "/equipment-rental/shower-trailer/portable-shower-trailers-in-alabama/",
     "/equipment-rental/shower-trailer/portable-shower-trailers-in-alaska/",
     "/equipment-rental/shower-trailer/portable-shower-trailers-in-arizona/",

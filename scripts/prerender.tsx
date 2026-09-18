@@ -7,6 +7,7 @@ import imageDimensions from "../content/image-dimensions.json";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { Site, isLocationPagePath, type SourcePage } from "../src/Site";
+import { legacyAuthorityPageByPath, legacyAuthorityPages } from "../src/LegacyAuthorityPage";
 import { readdir } from "node:fs/promises";
 import { gunzipSync } from "node:zlib";
 import { pageInfo } from "../src/content";
@@ -102,6 +103,7 @@ const allRoutes = [
     ...regionPages.map((item) => `${item.path}cities/`),
     ...reviewedCityPages.map((item) => item.path),
     ...Object.keys(statePageByPath),
+    ...legacyAuthorityPages.map((page) => page.path),
   ]),
 ].filter((path) => !redirectedRoutes.has(path));
 const editorialNoindex = new Set([
@@ -216,8 +218,14 @@ for (const path of [...allRoutes, "/404/"]) {
     : undefined;
   const stateName = statePageByPath[path];
   const industry = industryGuideByPath[path];
+  const legacyAuthorityPage = legacyAuthorityPageByPath[path];
   const hubHeadline = rentalHubHeadline(path);
-  const info = industry
+  const info = legacyAuthorityPage
+    ? {
+        title: `${legacyAuthorityPage.title} | Temporary123`,
+        description: legacyAuthorityPage.description,
+      }
+    : industry
     ? {
         title: `${industry.title}: Temporary Facilities to Rent or Lease | Temporary123`,
         description: industry.description,

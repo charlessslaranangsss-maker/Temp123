@@ -573,3 +573,15 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Final `https://temporary123.com` browser repeat: 60/60 presentations passed at 1440x1000 and 390x844. All 30 routes returned HTTP 200 after navigation; zero placeholder occurrences, pending-photo elements, broken images or console errors were observed. The four repaired restroom pages each rendered the reviewed three-image set as one active image plus five carousel thumbnails.
 - Final wording follow-up: replaced the remaining 12 ft restroom `pending specification` planning bullet with a direct request to confirm the available unit's equipment list and floor plan. The focused suite passed **109/109**, TypeScript passed, and the production build generated **655 pages plus 404**.
 - Expanded final audits now reject `pending specification` in addition to the existing photo-placeholder phrases. Local static preview passed **60/60** desktop/mobile presentations. Production deployment `dpl_D26jRZbUsCLLp5nDGFjpPSZDG5st` reached READY from commit `0b59eac`; `https://temporary123.com` then passed **60/60**, with **0** placeholder occurrences, **0** pending elements, **0** broken images and **0** console errors at `2026-09-18T12:21:22.909Z`.
+
+
+## 2026-09-18 — Exact legacy backlink-path restoration, local release candidate
+
+- Scope: 153 backlink-export rows, 105 unique paths, 104 HTML paths and one legacy image asset path.
+- Restoration: all 104 HTML paths generate exact-path HTML; 90 were restored from redirects as useful planning pages and all 90 have a crawlable link from their related parent page. The image asset retains a permanent redirect to `https://temporary123.com/food-services-2/`.
+- Indexing: 25 backlink-ranked HTML paths passed `index,follow`, exact self-canonical and sitemap checks. The other 79 exact HTML paths passed `noindex,follow`, absent-canonical and absent-sitemap checks for the controlled rollout.
+- Automated tests: `npm test` passed 48/48 across seven files.
+- Build: `npm run build` passed and generated 745 pages plus 404. The existing mixed JSON import-attribute and Rollup annotation warnings remain non-fatal.
+- Generated-output audit: `python scripts/audit-legacy-url-restoration.py` passed all 153 source rows with `errors: []`.
+- Mobile browser QA: three restored exact URLs returned HTTP 200 without redirect, displayed the expected H1, emitted the expected canonical and robots values, and had no horizontal overflow. The workforce parent page exposed 22 restored internal links including the Alaska URL.
+- Evidence: `audit/legacy-url-restoration-2026-09-18/migration-map.csv` and `build-verification.json`. Deployment and live-domain verification remain pending.

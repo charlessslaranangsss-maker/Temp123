@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-18T11:19:50.933Z",
+  "generatedAt": "2026-09-18T13:33:48.543Z",
   "origin": "https://temporary123.com",
   "indexingScope": "locations-and-priority-services",
   "batchSize": 25,
   "activeBatch": 1,
-  "totalRoutes": 326,
+  "totalRoutes": 327,
   "totalBatches": 14,
   "batches": [
     {
@@ -13,30 +13,30 @@
       "active": true,
       "routes": [
         "/",
-        "/equipment-rental/restroom-trailers/",
-        "/man-camps-for-rent/",
-        "/equipment-rental/shower-trailer/",
-        "/equipment-rental/",
-        "/equipment-rental/fencing-barricades-trash-receptacles/",
-        "/equipment-rental/mobile-kitchen-trailers/",
-        "/remote-containerized-military-berthing-solution-for-rent/",
+        "/houston-texas-mobile-kitchen-rental/",
+        "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+        "/temporary-workforce-housing-facilities/",
+        "/equipment-rental/sleeper-trailers/",
+        "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+        "/remote-workforce-house-company-in-alabama/",
+        "/remote-workforce-housing-rentals-in-arizona/",
+        "/remote-workforce-housing-services-in-alaska/",
+        "/equipment-rental/decontamination-trailers/",
         "/equipment-rental/breakroom-trailer/",
-        "/government/correctional-facilities/",
-        "/food-services-2/",
-        "/equipment-rental/generator-trailers/",
-        "/equipment-rental/wastewater-and-freshwater-container/",
-        "/equipment-rental/ramp-rentals/",
-        "/equipment-rental/modular-command-center-trailers/",
+        "/equipment-rental/command-center-trailers/",
+        "/equipment-rental/multi-trailer/",
+        "/equipment-rental/restroom-trailers/",
+        "/equipment-rental/shower-trailer/",
         "/equipment-rental/mobile-office-trailers/",
-        "/equipment-rental/stair-rentals/",
-        "/shower-trailer-rental/",
-        "/equipment-rental/mobile-sleep-trailers/",
-        "/mobile-kitchen-trailer-rental/",
-        "/portable-dishwashing-trailer-rental/",
-        "/restroom-trailer-rental/",
-        "/sleeper-trailer-rental/",
-        "/services/",
-        "/service-areas/"
+        "/equipment-rental/ramp-rental/",
+        "/equipment-rental/generator-trailers/",
+        "/equipment-rental/port-potties-and-port-johns/",
+        "/equipment-rental/stair-rental/",
+        "/equipment-rental/wastewater-and-freshwater-container/",
+        "/equipment-rental/dump-rental/",
+        "/equipment-rental/waste-container/",
+        "/workforce-housing-shelters-in-colorado/",
+        "/emergency-workforce-housing-in-california/"
       ]
     },
     {
@@ -428,7 +428,8 @@
       "plannedDate": "2026-09-27",
       "active": false,
       "routes": [
-        "/service-areas/wyoming/southeast-wyoming/"
+        "/service-areas/wyoming/southeast-wyoming/",
+        "/service-areas/"
       ]
     }
   ]

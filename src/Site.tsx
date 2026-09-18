@@ -24,6 +24,11 @@ import { ServiceDetail, modelDetails } from "./ServiceDetail";
 import { RegionDetail, regionPageByPath, regionSlug } from "./regionGuides";
 import { RentalCalculator } from "./RentalCalculator";
 import { SeoDashboard } from "./SeoDashboard";
+import {
+  LegacyAuthorityDirectory,
+  LegacyAuthorityPage,
+  legacyAuthorityPageByPath,
+} from "./LegacyAuthorityPage";
 export type SourcePage = {
   id: number;
   modified?: string;
@@ -463,6 +468,7 @@ export function Site({
     (item) => item.path === path,
   );
   const serviceCategory = serviceCategories.find((item) => item.href === path);
+  const legacyAuthorityPage = legacyAuthorityPageByPath[path];
   const directoryParent = path.endsWith("/cities/") ? path.slice(0, -7) : "";
   return (
     <div id="top">
@@ -1120,6 +1126,8 @@ export function Site({
               </div>
             </section>
           </div>
+        ) : legacyAuthorityPage ? (
+          <LegacyAuthorityPage page={legacyAuthorityPage} />
         ) : page ? (
           <section className="wrap section source-layout">
             <div>
@@ -1213,6 +1221,7 @@ export function Site({
             <Button href="/equipment-rental/">Explore equipment</Button>
           </section>
         )}
+        <LegacyAuthorityDirectory path={path} />
       </main>
       <Footer
         showClosing={

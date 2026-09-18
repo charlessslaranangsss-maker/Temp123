@@ -68,7 +68,7 @@ describe("migration indexing separation", () => {
     expect(canonicalFor("/video/", false, true)).toBeUndefined();
     expect(() => canonicalFor("//evil.example/", true, true)).toThrow();
   });
-  it("limits this release to authority destinations and service-area routes", () => {
+  it("limits this release to backlink-ranked exact paths and service-area routes", () => {
     const scope = "homepage-and-service-areas";
     expect(routeInIndexingScope("/", scope)).toBe(true);
     expect(routeInIndexingScope("/service-areas/", scope)).toBe(true);
