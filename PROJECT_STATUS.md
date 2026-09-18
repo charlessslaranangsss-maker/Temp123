@@ -157,9 +157,9 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Local evidence: 77 focused Vitest assertions passed; 5 targeted Playwright checks passed; TypeScript and the production build passed with 651 pages plus 404; generated HTML contained 0 instances of the four pending-photo phrases.
 - Deployment state: commit `970a287` deployed from `main`. Six production route samples returned HTTP 200 with zero pending-photo phrases, and all 5 production Playwright checks passed, including every registered model/catalogue gallery and all Services/equipment-directory/homepage quick views.
 
-## 2026-09-18 — Contact Us facility options (release candidate)
+## 2026-09-18 — Contact Us facility options (live)
 
 - Added Dishwashing, Refrigeration, Sleeper, Laundry, and Sink to the existing “What facilities do you need?” selector without removing the existing options.
 - Updated the server request schema so submissions using each new value are accepted.
 - Local evidence: 29/29 focused assertions passed; the Contact Us drawer browser test passed 1/1 and selected every new value; typecheck passed; production build passed with 651 pages plus 404.
-- Deployment state: release pending to `Temporary-123-Inc/Temporary-123` and `temporary123.com`. Separate uncommitted inquiry-recovery work in the shared checkout is excluded.
+- Deployment state: commit `566b495` pushed to `Temporary-123-Inc/Temporary-123` main and verified on `https://temporary123.com/contact-us/`. Production HTML contained all five values and the live drawer browser test passed 1/1. Separate uncommitted inquiry-recovery work in the shared checkout was excluded.
