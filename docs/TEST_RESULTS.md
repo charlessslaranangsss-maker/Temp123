@@ -472,3 +472,11 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Production deployment: commit `970a287` deployed from `main` to `https://temporary123.com`.
 - Live HTML checks: `/services/`, the 26 ft bulk kitchen route, 12 ft refrigeration route, stair-rental route, dining-structure route and `/equipment-rental/` returned HTTP 200 with **0 pending-photo phrases**. Route-specific disclosure markers were present on the five directly rendered samples; the equipment-directory disclosure was verified after opening its modal.
 - Production Playwright checks: **5/5 passed** against `https://temporary123.com`. They opened every registered model/catalogue gallery and full-image view, exercised all 27 Services/equipment-directory/homepage quick-view openings and reset behavior, and rechecked the 26 ft bulk and ADA representative galleries.
+
+## 2026-09-18 — Contact Us facility options (local)
+
+- `npx vitest run tests/contactFacilities.test.tsx tests/contact.test.ts tests/calculator.test.ts`: **29/29 passed**. The new option labels/values render and the request schema accepts all five values.
+- `npx playwright test tests/browser/contact-facilities.spec.ts`: **1/1 passed**. Chromium opened the actual Contact Us drawer and selected Dishwashing, Refrigeration, Sleeper, Laundry, and Sink in turn.
+- `npm run typecheck`: **passed**.
+- `npm run build`: **passed**; 651 pages plus the draft/noindex 404 prerendered.
+- Boundary: production verification is pending deployment of this isolated release candidate.

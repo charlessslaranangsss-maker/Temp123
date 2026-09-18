@@ -15,7 +15,12 @@ export const leadSchema = z
     location: z.string().trim().min(2, "Enter your project location.").max(160),
     service: z.enum([
       "mobile-kitchens",
+      "dishwashing",
+      "refrigeration",
       "restroom-shower-trailers",
+      "sleeper",
+      "laundry",
+      "sink",
       "workforce-housing",
       "temporary-facilities",
       "multiple",

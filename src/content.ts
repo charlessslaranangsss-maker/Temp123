@@ -1,7 +1,12 @@
 import site from "../site.json" with { type: "json" };
 export const services = [
   { slug: "mobile-kitchens", name: "Mobile kitchens" },
+  { slug: "dishwashing", name: "Dishwashing" },
+  { slug: "refrigeration", name: "Refrigeration" },
   { slug: "restroom-shower-trailers", name: "Restroom & shower trailers" },
+  { slug: "sleeper", name: "Sleeper" },
+  { slug: "laundry", name: "Laundry" },
+  { slug: "sink", name: "Sink" },
   { slug: "workforce-housing", name: "Workforce housing" },
   { slug: "temporary-facilities", name: "Temporary facilities" },
 ];
