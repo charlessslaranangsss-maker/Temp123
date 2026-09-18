@@ -248,15 +248,31 @@ describe("location media and shower inventory", () => {
     }
   });
 
-  it("uses the same verified configurations under Restroom and Combination", () => {
-    expect(
-      serviceCategories.find((category) => category.name === "Restroom")?.links,
-    ).toEqual(
-      serviceCategories.find(
-        (category) =>
-          category.name === "Shower and Restroom Combination Trailers",
-      )?.links,
+  it("keeps restroom models separate from shower-restroom combinations", () => {
+    const restroom = serviceCategories.find(
+      (category) => category.name === "Restroom",
     );
+    expect(restroom?.links.map(({ name, href }) => ({ name, href }))).toEqual([
+      {
+        name: "12ft Restroom Trailer",
+        href: "/services/restroom-trailers/12ft/",
+      },
+      {
+        name: "14ft Restroom Trailer",
+        href: "/services/restroom-trailers/14ft/",
+      },
+      {
+        name: "20ft Restroom Trailer",
+        href: "/services/restroom-trailers/20ft/",
+      },
+      {
+        name: "30ft Restroom Trailer",
+        href: "/services/restroom-trailers/30ft/",
+      },
+    ]);
+    expect(
+      restroom?.links.every((link) => !link.href.includes("combination")),
+    ).toBe(true);
   });
 
   it("shows verified stall counts for every combination subcategory and page", () => {

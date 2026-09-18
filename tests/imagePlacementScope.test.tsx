@@ -48,7 +48,6 @@ describe("Charles scope correction: change existing imagery, not the page layout
     "Restroom",
     "Shower and Restroom Combination Trailers",
     "Sleeper",
-    "Laundry",
     "Handwashing Trailers",
   ])("does not inject an unrequested photo section for %s", (category) => {
     expect(
@@ -56,6 +55,24 @@ describe("Charles scope correction: change existing imagery, not the page layout
         createElement(ApprovedEquipmentPhotoOptions, { category }),
       ),
     ).toBe("");
+  });
+  it("places the two requested laundry options on the existing laundry hub", () => {
+    const $ = load(
+      renderToStaticMarkup(
+        createElement(ApprovedEquipmentPhotoOptions, { category: "Laundry" }),
+      ),
+    );
+    expect($("#20ft-laundry-container [data-carousel-slide]")).toHaveLength(3);
+    expect($("#26ft-27ft-laundry-trailer [data-carousel-slide]")).toHaveLength(
+      1,
+    );
+    expect(
+      $("#20ft-laundry-container [data-image-view='exterior']"),
+    ).toHaveLength(0);
+    expect(
+      $("#26ft-27ft-laundry-trailer [data-image-view='exterior']"),
+    ).toHaveLength(0);
+    expect($.text()).toContain("Confirm the washer and dryer count");
   });
   it("preserves April's specifically requested 20ft container inside-only reference", () => {
     const $ = load(

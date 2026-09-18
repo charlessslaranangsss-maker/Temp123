@@ -2,6 +2,8 @@ import modelDetails from "../content/service-details.json" with { type: "json" }
 export type ServiceLink = {
   name: string;
   href: string;
+  description?: string;
+  menuOnly?: boolean;
 };
 
 export type ServiceCategory = {
@@ -135,8 +137,25 @@ export const serviceCategories: ServiceCategory[] = [
     name: "Restroom",
     href: "/equipment-rental/restroom-trailers/",
     description:
-      "Restroom rental options use our shower and restroom combination trailers: 13 ft with 3 stalls, 22 ft with 6 stalls, 30 ft with 8 stalls, and accessible configurations.",
-    links: combinationOptions,
+      "Commercial restroom trailer rentals for temporary facilities, planned projects and emergency operations.",
+    links: [
+      {
+        name: "12ft Restroom Trailer",
+        href: "/services/restroom-trailers/12ft/",
+      },
+      {
+        name: "14ft Restroom Trailer",
+        href: "/services/restroom-trailers/14ft/",
+      },
+      {
+        name: "20ft Restroom Trailer",
+        href: "/services/restroom-trailers/20ft/",
+      },
+      {
+        name: "30ft Restroom Trailer",
+        href: "/services/restroom-trailers/30ft/",
+      },
+    ],
   },
   {
     name: "Shower and Restroom Combination Trailers",
@@ -176,8 +195,22 @@ export const serviceCategories: ServiceCategory[] = [
       "Mobile laundry facilities for workforce camps, emergency operations and long-duration projects.",
     links: [
       {
+        name: "20ft Laundry Container",
+        href: "/equipment-rental/laundry-trailers/#20ft-laundry-container",
+        description:
+          "A reviewed 20 ft laundry container option for temporary commercial and institutional facilities.",
+        menuOnly: true,
+      },
+      {
         name: "24ft Mobile Laundry Trailer",
         href: "/services/laundry-trailers/24ft/",
+      },
+      {
+        name: "26ft-27ft Laundry Trailer (8 Washer/Dryer)",
+        href: "/equipment-rental/laundry-trailers/#26ft-27ft-laundry-trailer",
+        description:
+          "A reviewed 26–27 ft commercial laundry trailer option; confirm machine count and the available unit with your quote.",
+        menuOnly: true,
       },
       {
         name: "30ft Mobile Laundry Trailer",
@@ -213,10 +246,7 @@ const establishedPaths = new Set([
 
 export const serviceOptions = serviceCategories.flatMap((category) =>
   category.links
-    .filter(
-      (link) =>
-        !establishedPaths.has(link.href) && category.name !== "Restroom",
-    )
+    .filter((link) => !establishedPaths.has(link.href) && !link.menuOnly)
     .map((link) => ({
       ...link,
       category: category.name,

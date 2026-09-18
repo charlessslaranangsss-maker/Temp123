@@ -283,3 +283,10 @@ Use the approved toilet-interior photo from a shower and restroom combination tr
 ## 2026-09-18 — Use disclosed reviewed references instead of production photo placeholders
 
 When exact model photography is unavailable, show the closest reviewed commercial equipment reference only with a visible caption that names the pictured equipment and states the size, layout, controls or product-type difference. Alt text describes the visible image itself. Do not infer an exact configuration from a representative image. This rule covers current service-detail and equipment-catalogue gaps and removes customer-facing pending-photo panels from production routes.
+
+## 2026-09-18 — Keep missing Laundry options on the existing category URL
+
+- Decision: Add the owner-requested 20 ft Laundry Container and 26–27 ft Laundry Trailer entries as anchored sections on `/equipment-rental/laundry-trailers/`, using their reviewed client photo collections. Keep those anchors out of `serviceOptions`, prerender route generation and indexing artifacts.
+- Reason: The current site has reviewed assets but no approved dedicated routes for these two products. Anchors make both choices and galleries reachable from desktop/mobile Inventory menus without inventing URLs or changing canonicals and indexing settings.
+- Truthfulness boundary: The 20 ft container has three reviewed interiors and the 26–27 ft trailer has one reviewed interior; neither has an exterior in the supplied collection. The requested washer/dryer count remains in the owner-provided product label, while visible copy asks customers to confirm machine count, exact length, floor plan and available unit with the quote.
+- Restroom correction: Restroom now links only to the four existing restroom-trailer detail routes. Shower and restroom combination models remain in their separate category.

@@ -661,10 +661,8 @@ export function Site({
                     <span>{String(index + 1).padStart(2, "0")}</span>
                     <strong>{link.name}</strong>
                     <p>
-                      {
-                        modelDetails[link.href as keyof typeof modelDetails]
-                          ?.intro
-                      }
+                      {modelDetails[link.href as keyof typeof modelDetails]
+                        ?.intro ?? link.description}
                     </p>
                     <b aria-hidden="true">↗</b>
                   </a>
