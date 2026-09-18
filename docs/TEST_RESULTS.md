@@ -469,4 +469,6 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - `npm run build`: **passed**; 651 pages plus the draft/noindex 404 prerendered.
 - Generated HTML scan for `PHOTO REVIEW IN PROGRESS`, `Exact equipment photography is pending verification`, `Verified photography coming soon`, and `Verified equipment photo pending`: **0 files failed / 652 generated pages checked**.
 - Targeted Playwright checks: **5/5 passed**. The checks opened every registered model/catalogue gallery and full-image view, exercised all Services/equipment-directory/homepage quick views and reset behavior, and verified the disclosed 26 ft bulk and ADA representative galleries.
-- Deployment/live boundary: not yet verified in this release-candidate record.
+- Production deployment: commit `970a287` deployed from `main` to `https://temporary123.com`.
+- Live HTML checks: `/services/`, the 26 ft bulk kitchen route, 12 ft refrigeration route, stair-rental route, dining-structure route and `/equipment-rental/` returned HTTP 200 with **0 pending-photo phrases**. Route-specific disclosure markers were present on the five directly rendered samples; the equipment-directory disclosure was verified after opening its modal.
+- Production Playwright checks: **5/5 passed** against `https://temporary123.com`. They opened every registered model/catalogue gallery and full-image view, exercised all 27 Services/equipment-directory/homepage quick-view openings and reset behavior, and rechecked the 26 ft bulk and ADA representative galleries.
