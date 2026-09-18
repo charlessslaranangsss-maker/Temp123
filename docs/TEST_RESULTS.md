@@ -1,16 +1,17 @@
 # Temporary123 Test Results
 
-## Dedicated service gallery-caption correction — 2026-09-18 (LOCAL PASS)
+## Dedicated service gallery-caption correction — 2026-09-18 (LIVE PASS)
 
-- Scope inventory: 31 dedicated service-detail routes; 13 used the generic reviewed-photo fallback and 18 already used image-specific disclosures.
-- SSR regression: 31/31 routes contain neither `Reviewed equipment reference images` nor `Photos do not establish availability or a deployment in this location`.
+- Scope inventory: 33 dedicated service-detail routes; 13 used the generic reviewed-photo fallback and 20 already used image-specific disclosures.
+- SSR and production regression: 33/33 routes contain neither `Reviewed equipment reference images` nor `Photos do not establish availability or a deployment in this location`.
 - Caption acceptance: 13/13 replacements contain Commercial Project and Base Camp context, the exact page equipment name, Rental or Lease, weekly/monthly/yearly inquiry terms, a model-specific benefit/detail, and `Call us now at +1 (800) 443-5212, available 24/7.`
 - Focused tests: 42/42 passed across `dedicatedServiceGalleryCopy`, `serviceHeroImages`, `ownerImageRollout`, and `equipmentMissingPhotos`.
 - Application tests: 45/45 passed with `npm test`.
 - Production build: passed TypeScript, Vite, and prerender; 655 pages plus 404 generated.
 - Local browser QA: 26/26 desktop/mobile presentations passed across the 13 changed routes; every response was HTTP 200, each lead image decoded with truthful nonempty alt text, each caption met the acceptance checks, and zero console/page errors occurred. Evidence: `work/qa/dedicated-service-captions-20260918/browser-results.json`.
+- Production browser QA: 26/26 desktop/mobile presentations passed on `temporary123.com` with the same status, caption, decoded-image, alt-text, and console checks. The complete live route scan passed 33/33. Evidence: `work/qa/dedicated-service-captions-20260918/live-browser-results.json` and `live-route-results.json`.
+- Release: commit `349f011` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel production deployment `dpl_HfjDn5HnFEpGvdfs81EtZWJjiBdn` is READY and verified on `temporary123.com`.
 - Preservation: no H1, URL, canonical, indexing directive, gallery image, or alt-text source changed.
-- Boundary: production deployment and live browser verification remain pending.
 
 ## Equipment Rental missing-photo production release — 2026-09-18
 
