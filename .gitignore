@@ -18,3 +18,5 @@ dist-index-dashboard/
 outputs/
 work/
 .temp/
+.vercel
+.env*

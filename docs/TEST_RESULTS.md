@@ -1,5 +1,14 @@
 # Temporary123 Test Results
 
+## Service-area gallery review-banner removal — 2026-09-18 (LIVE PASS)
+
+- Exact scope: 648 service-area and modal presentations inventoried; 557 contained one of seven internal review context variants and were changed (477 public route presentations, 40 full-map modals, 40 compact-map modals). The remaining 91 presentations were unaffected.
+- Source and generated output: exhaustive SSR passed 648/648; all 656 generated HTML files contained zero `.location-gallery-context` elements and zero cited review phrases.
+- Local verification: 241/241 focused assertions, 45/45 application tests, 655-page link check, release check, and the 655-page plus 404 build passed. Browser QA passed all 12 representative desktop/mobile route presentations and all 100 state-modal presentations.
+- Release: commit `68d2f6b` was pushed only to `Temporary-123-Inc/Temporary-123` main. Temporary 123 team project `temporary-123` deployment `dpl_7TvgbnRjjsVReBkmD55kzrm7dXkb` reached READY and was aliased to `temporary123.com`.
+- Production verification: the live representative page source contained zero removed banner classes and zero review phrases. Playwright repeated all 12 route presentations plus all 50 full-map and 50 compact-map modals; 3/3 suites passed.
+- Preservation: customer-facing product headings and individual captions remain, as do images, truthful alt text, H1s, URLs, canonicals and indexing settings.
+
 ## Dedicated service gallery-caption correction — 2026-09-18 (LIVE PASS)
 
 - Scope inventory: 33 dedicated service-detail routes; 13 used the generic reviewed-photo fallback and 20 already used image-specific disclosures.
