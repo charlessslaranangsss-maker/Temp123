@@ -320,3 +320,10 @@ The supplied restroom-only interior set may appear on the registered 12 ft, 14 f
 - Indexing: Release only the first 25 backlink-ranked paths with self-canonicals and sitemap membership. Keep the other 79 exact HTML paths at `noindex,follow` until their controlled release batch.
 - Reason: Exact HTML URLs retain the requested architecture and their external-link destinations while useful page content and internal links avoid soft 404 behavior. The staged index controls honor the project's approved rollout limit.
 - Replaces an earlier decision: Yes. This supersedes the 2026-09-18 redirect-first treatment for these 90 backlink-backed HTML paths; it does not change unrelated redirects or the controlled indexing limit.
+
+## 2026-09-18 — Declare exact www redirects for backlink paths
+
+- Source: Post-deployment live audit of the restored legacy paths on Vercel.
+- Decision: Keep the general `www` to apex redirect and also declare an exact permanent same-path host redirect for every HTML path in the backlink migration map.
+- Reason: Live evidence showed that Vercel did not apply the catch-all host rule consistently to these trailing-slash paths. Exact rules produced a direct HTTP 308 to the identical apex path and prevent duplicate-host copies.
+- Affected areas: `vercel.json`, migration-map regression coverage, live URL audit and production-domain behavior.

@@ -1,0 +1,3708 @@
+{
+  "summary": {
+    "baseUrl": "https://temporary123.com",
+    "sourceRows": 153,
+    "sourceRowsPassed": 153,
+    "uniquePaths": 105,
+    "preservedHtmlUniquePaths": 104,
+    "preservedHtmlUniquePathsPassed": 104,
+    "pilotIndexablePaths": 25,
+    "pilotIndexablePathsPassed": 25,
+    "stagedNoindexHtmlPaths": 79,
+    "stagedNoindexHtmlPathsPassed": 79,
+    "assetRedirectUniquePaths": 1,
+    "assetRedirectRowsPassed": 1,
+    "parentLinks": 90,
+    "parentLinksPassed": 90,
+    "sitemapStatus": 200,
+    "errors": []
+  },
+  "rows": [
+    {
+      "row": 1,
+      "source_url": "https://www.temporary123.com/temporary-workforce-housing-facilities/",
+      "source_path": "/temporary-workforce-housing-facilities/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/temporary-workforce-housing-facilities/",
+          "location": "https://temporary123.com/temporary-workforce-housing-facilities/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 2,
+      "source_url": "https://www.temporary123.com/remote-workforce-house-company-in-alabama/",
+      "source_path": "/remote-workforce-house-company-in-alabama/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-house-company-in-alabama/",
+          "location": "https://temporary123.com/remote-workforce-house-company-in-alabama/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 3,
+      "source_url": "https://www.temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "source_path": "/remote-workforce-housing-rentals-in-arizona/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+          "location": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 4,
+      "source_url": "https://www.temporary123.com/remote-workforce-housing-services-in-alaska/",
+      "source_path": "/remote-workforce-housing-services-in-alaska/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-services-in-alaska/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-housing-services-in-alaska/",
+          "location": "https://temporary123.com/remote-workforce-housing-services-in-alaska/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/remote-workforce-housing-services-in-alaska/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 5,
+      "source_url": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "source_path": "/temporary-workforce-housing-facilities/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/temporary-workforce-housing-facilities/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 6,
+      "source_url": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "source_path": "/remote-workforce-house-company-in-alabama/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/remote-workforce-house-company-in-alabama/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 7,
+      "source_url": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "source_path": "/remote-workforce-housing-rentals-in-arizona/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/remote-workforce-housing-rentals-in-arizona/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 8,
+      "source_url": "https://www.temporary123.com/equipment-rental/sleeper-trailers/",
+      "source_path": "/equipment-rental/sleeper-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/sleeper-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/sleeper-trailers/",
+          "location": "https://temporary123.com/equipment-rental/sleeper-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/sleeper-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 9,
+      "source_url": "https://www.temporary123.com/equipment-rental/breakroom-trailer/",
+      "source_path": "/equipment-rental/breakroom-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/breakroom-trailer/",
+          "location": "https://temporary123.com/equipment-rental/breakroom-trailer/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 10,
+      "source_url": "https://www.temporary123.com/equipment-rental/command-center-trailers/",
+      "source_path": "/equipment-rental/command-center-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/command-center-trailers/",
+          "location": "https://temporary123.com/equipment-rental/command-center-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 11,
+      "source_url": "https://www.temporary123.com/equipment-rental/decontamination-trailers/",
+      "source_path": "/equipment-rental/decontamination-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/decontamination-trailers/",
+          "location": "https://temporary123.com/equipment-rental/decontamination-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 12,
+      "source_url": "https://www.temporary123.com/equipment-rental/mobile-office-trailers/",
+      "source_path": "/equipment-rental/mobile-office-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/mobile-office-trailers/",
+          "location": "https://temporary123.com/equipment-rental/mobile-office-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 13,
+      "source_url": "https://www.temporary123.com/equipment-rental/multi-trailer/",
+      "source_path": "/equipment-rental/multi-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/multi-trailer/",
+          "location": "https://temporary123.com/equipment-rental/multi-trailer/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 14,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/",
+      "source_path": "/equipment-rental/restroom-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 15,
+      "source_url": "https://www.temporary123.com/equipment-rental/shower-trailer/",
+      "source_path": "/equipment-rental/shower-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/shower-trailer/",
+          "location": "https://temporary123.com/equipment-rental/shower-trailer/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 16,
+      "source_url": "https://www.temporary123.com/equipment-rental/dump-rental/",
+      "source_path": "/equipment-rental/dump-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/dump-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/dump-rental/",
+          "location": "https://temporary123.com/equipment-rental/dump-rental/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/dump-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 17,
+      "source_url": "https://www.temporary123.com/equipment-rental/generator-trailers/",
+      "source_path": "/equipment-rental/generator-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/generator-trailers/",
+          "location": "https://temporary123.com/equipment-rental/generator-trailers/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 18,
+      "source_url": "https://www.temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "source_path": "/equipment-rental/port-potties-and-port-johns/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/port-potties-and-port-johns/",
+          "location": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 19,
+      "source_url": "https://www.temporary123.com/equipment-rental/ramp-rental/",
+      "source_path": "/equipment-rental/ramp-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/ramp-rental/",
+          "location": "https://temporary123.com/equipment-rental/ramp-rental/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 20,
+      "source_url": "https://www.temporary123.com/equipment-rental/stair-rental/",
+      "source_path": "/equipment-rental/stair-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/stair-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/stair-rental/",
+          "location": "https://temporary123.com/equipment-rental/stair-rental/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/stair-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 21,
+      "source_url": "https://www.temporary123.com/equipment-rental/waste-container/",
+      "source_path": "/equipment-rental/waste-container/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/waste-container/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/waste-container/",
+          "location": "https://temporary123.com/equipment-rental/waste-container/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/waste-container/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 22,
+      "source_url": "https://www.temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "source_path": "/equipment-rental/wastewater-and-freshwater-container/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+          "location": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 23,
+      "source_url": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "source_path": "/equipment-rental/decontamination-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/decontamination-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 24,
+      "source_url": "https://temporary123.com/",
+      "source_path": "/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 25,
+      "source_url": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "source_path": "/equipment-rental/breakroom-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 26,
+      "source_url": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "source_path": "/equipment-rental/command-center-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/command-center-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 27,
+      "source_url": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "source_path": "/equipment-rental/multi-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/multi-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 28,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "source_path": "/equipment-rental/restroom-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 29,
+      "source_url": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "source_path": "/equipment-rental/shower-trailer/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 30,
+      "source_url": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "source_path": "/equipment-rental/mobile-office-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 31,
+      "source_url": "https://www.temporary123.com/",
+      "source_path": "/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/",
+          "location": "https://temporary123.com/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 32,
+      "source_url": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "source_path": "/equipment-rental/ramp-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/ramp-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 33,
+      "source_url": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "source_path": "/equipment-rental/generator-trailers/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 34,
+      "source_url": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "source_path": "/equipment-rental/port-potties-and-port-johns/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/port-potties-and-port-johns/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 35,
+      "source_url": "https://temporary123.com/equipment-rental/stair-rental/",
+      "source_path": "/equipment-rental/stair-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/stair-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/stair-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 36,
+      "source_url": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "source_path": "/equipment-rental/wastewater-and-freshwater-container/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 37,
+      "source_url": "https://temporary123.com/equipment-rental/dump-rental/",
+      "source_path": "/equipment-rental/dump-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/dump-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/dump-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 38,
+      "source_url": "https://temporary123.com/equipment-rental/waste-container/",
+      "source_path": "/equipment-rental/waste-container/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/waste-container/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/waste-container/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 39,
+      "source_url": "https://www.temporary123.com/emergency-workforce-housing-in-california/",
+      "source_path": "/emergency-workforce-housing-in-california/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-workforce-housing-in-california/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/emergency-workforce-housing-in-california/",
+          "location": "https://temporary123.com/emergency-workforce-housing-in-california/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/emergency-workforce-housing-in-california/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 40,
+      "source_url": "https://www.temporary123.com/remote-workforce-house-company-in-hawaii/",
+      "source_path": "/remote-workforce-house-company-in-hawaii/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-house-company-in-hawaii/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-house-company-in-hawaii/",
+          "location": "https://temporary123.com/remote-workforce-house-company-in-hawaii/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 41,
+      "source_url": "https://www.temporary123.com/remote-workforce-housing-services-in-idaho/",
+      "source_path": "/remote-workforce-housing-services-in-idaho/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-services-in-idaho/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-housing-services-in-idaho/",
+          "location": "https://temporary123.com/remote-workforce-housing-services-in-idaho/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 42,
+      "source_url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-arkansas/",
+      "source_path": "/temporary-remote-workforce-housing-services-in-arkansas/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-remote-workforce-housing-services-in-arkansas/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-arkansas/",
+          "location": "https://temporary123.com/temporary-remote-workforce-housing-services-in-arkansas/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 43,
+      "source_url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-illinois/",
+      "source_path": "/temporary-remote-workforce-housing-services-in-illinois/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-remote-workforce-housing-services-in-illinois/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-illinois/",
+          "location": "https://temporary123.com/temporary-remote-workforce-housing-services-in-illinois/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 44,
+      "source_url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "source_path": "/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-massachusetts/",
+          "location": "https://temporary123.com/temporary-remote-workforce-housing-services-in-massachusetts/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 45,
+      "source_url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-michigan/",
+      "source_path": "/temporary-remote-workforce-housing-services-in-michigan/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/temporary-remote-workforce-housing-services-in-michigan/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/temporary-remote-workforce-housing-services-in-michigan/",
+          "location": "https://temporary123.com/temporary-remote-workforce-housing-services-in-michigan/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 46,
+      "source_url": "https://www.temporary123.com/workforce-housing-shelters-in-colorado/",
+      "source_path": "/workforce-housing-shelters-in-colorado/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/workforce-housing-shelters-in-colorado/",
+          "location": "https://temporary123.com/workforce-housing-shelters-in-colorado/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 47,
+      "source_url": "http://www.temporary123.com/",
+      "source_path": "/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/",
+      "redirect_count": 2,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "http://www.temporary123.com/",
+          "location": "https://www.temporary123.com/"
+        },
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/",
+          "location": "https://temporary123.com/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 48,
+      "source_url": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
+      "source_path": "/workforce-housing-shelters-in-colorado/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/workforce-housing-shelters-in-colorado/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 49,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 50,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 51,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 52,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 53,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 54,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 55,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 56,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 57,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 58,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 59,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 60,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 61,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 62,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 63,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 64,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 65,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 66,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 67,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 68,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 69,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 70,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 71,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 72,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 73,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 74,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 75,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 76,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 77,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 78,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 79,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 80,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 81,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 82,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 83,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 84,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 85,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 86,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 87,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 88,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 89,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 90,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 91,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 92,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 93,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 94,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 95,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 96,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 97,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 98,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 99,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 100,
+      "source_url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+          "location": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 101,
+      "source_url": "http://temporary123.com/",
+      "source_path": "/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "http://temporary123.com/",
+          "location": "https://temporary123.com/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 102,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 103,
+      "source_url": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "source_path": "/houston-texas-mobile-kitchen-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 104,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 105,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 106,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 107,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 108,
+      "source_url": "https://www.temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "source_path": "/houston-texas-mobile-kitchen-rental/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/houston-texas-mobile-kitchen-rental/",
+          "location": "https://temporary123.com/houston-texas-mobile-kitchen-rental/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/houston-texas-mobile-kitchen-rental/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 109,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 110,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 111,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 112,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 113,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 114,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 115,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 116,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 117,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 118,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 119,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 120,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 121,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 122,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 123,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 124,
+      "source_url": "https://temporary123.com/containerized-shower-trailers/",
+      "source_path": "/containerized-shower-trailers/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/containerized-shower-trailers/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 125,
+      "source_url": "https://temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+      "source_path": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 126,
+      "source_url": "https://temporary123.com/emergency-migrant-containerized-living-spaces/",
+      "source_path": "/emergency-migrant-containerized-living-spaces/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-migrant-containerized-living-spaces/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 127,
+      "source_url": "https://temporary123.com/emergency-modular-shelters-contained-for-rental/",
+      "source_path": "/emergency-modular-shelters-contained-for-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-modular-shelters-contained-for-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 128,
+      "source_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "source_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 129,
+      "source_url": "https://temporary123.com/government/correctional-facilities/",
+      "source_path": "/government/correctional-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/government/correctional-facilities/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 130,
+      "source_url": "https://temporary123.com/mobile-kitchen-trailer-rental/",
+      "source_path": "/mobile-kitchen-trailer-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/mobile-kitchen-trailer-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 131,
+      "source_url": "https://temporary123.com/portable-dishwashing-trailer-rental/",
+      "source_path": "/portable-dishwashing-trailer-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/portable-dishwashing-trailer-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 132,
+      "source_url": "https://temporary123.com/remote-containerized-military-berthing-solution-for-rent/",
+      "source_path": "/remote-containerized-military-berthing-solution-for-rent/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-containerized-military-berthing-solution-for-rent/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 133,
+      "source_url": "https://temporary123.com/restroom-trailer-rental/",
+      "source_path": "/restroom-trailer-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/restroom-trailer-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 134,
+      "source_url": "https://temporary123.com/shower-trailer-rental/",
+      "source_path": "/shower-trailer-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/shower-trailer-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 135,
+      "source_url": "https://temporary123.com/sleeper-trailer-rental/",
+      "source_path": "/sleeper-trailer-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/sleeper-trailer-rental/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 136,
+      "source_url": "https://www.temporary123.com/containerized-shower-trailers/",
+      "source_path": "/containerized-shower-trailers/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/containerized-shower-trailers/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/containerized-shower-trailers/",
+          "location": "https://temporary123.com/containerized-shower-trailers/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 137,
+      "source_url": "https://www.temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+      "source_path": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/emergency-container-modular-remote-executive-hotel-suites/",
+          "location": "https://temporary123.com/emergency-container-modular-remote-executive-hotel-suites/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 138,
+      "source_url": "https://www.temporary123.com/emergency-migrant-containerized-living-spaces/",
+      "source_path": "/emergency-migrant-containerized-living-spaces/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-migrant-containerized-living-spaces/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/emergency-migrant-containerized-living-spaces/",
+          "location": "https://temporary123.com/emergency-migrant-containerized-living-spaces/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 139,
+      "source_url": "https://www.temporary123.com/emergency-modular-shelters-contained-for-rental/",
+      "source_path": "/emergency-modular-shelters-contained-for-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/emergency-modular-shelters-contained-for-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/emergency-modular-shelters-contained-for-rental/",
+          "location": "https://temporary123.com/emergency-modular-shelters-contained-for-rental/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 140,
+      "source_url": "https://www.temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "source_path": "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "release_state": "index",
+      "status": 200,
+      "final_url": "https://temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+          "location": "https://temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/"
+        }
+      ],
+      "robots": "index,follow",
+      "canonical": "https://temporary123.com/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "in_sitemap": true,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 141,
+      "source_url": "https://www.temporary123.com/government/correctional-facilities/",
+      "source_path": "/government/correctional-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/government/correctional-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/government/correctional-facilities/",
+          "location": "https://temporary123.com/government/correctional-facilities/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 142,
+      "source_url": "https://www.temporary123.com/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "source_path": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+          "location": "https://temporary123.com/greensboro-north-carolina-usa-temporary-restroom-building-rental/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 143,
+      "source_url": "https://www.temporary123.com/modular-temporary-camp-facilities/",
+      "source_path": "/modular-temporary-camp-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/modular-temporary-camp-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/modular-temporary-camp-facilities/",
+          "location": "https://temporary123.com/modular-temporary-camp-facilities/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 144,
+      "source_url": "https://www.temporary123.com/modular-temporary-workforce-housing-facilities/",
+      "source_path": "/modular-temporary-workforce-housing-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/modular-temporary-workforce-housing-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/modular-temporary-workforce-housing-facilities/",
+          "location": "https://temporary123.com/modular-temporary-workforce-housing-facilities/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 145,
+      "source_url": "https://www.temporary123.com/remote-basecamp-housing-service-company/",
+      "source_path": "/remote-basecamp-housing-service-company/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-basecamp-housing-service-company/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-basecamp-housing-service-company/",
+          "location": "https://temporary123.com/remote-basecamp-housing-service-company/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 146,
+      "source_url": "https://www.temporary123.com/remote-containerized-military-berthing-solution/",
+      "source_path": "/remote-containerized-military-berthing-solution/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-containerized-military-berthing-solution/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-containerized-military-berthing-solution/",
+          "location": "https://temporary123.com/remote-containerized-military-berthing-solution/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 147,
+      "source_url": "https://www.temporary123.com/remote-housing-facilities/",
+      "source_path": "/remote-housing-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-housing-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-housing-facilities/",
+          "location": "https://temporary123.com/remote-housing-facilities/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 148,
+      "source_url": "https://www.temporary123.com/remote-temporary-workforce-housing-facilities-rental/",
+      "source_path": "/remote-temporary-workforce-housing-facilities-rental/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-temporary-workforce-housing-facilities-rental/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-temporary-workforce-housing-facilities-rental/",
+          "location": "https://temporary123.com/remote-temporary-workforce-housing-facilities-rental/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 149,
+      "source_url": "https://www.temporary123.com/remote-workforce-housing-facilities/",
+      "source_path": "/remote-workforce-housing-facilities/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-facilities/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-housing-facilities/",
+          "location": "https://temporary123.com/remote-workforce-housing-facilities/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 150,
+      "source_url": "https://www.temporary123.com/remote-workforce-housing-in-alabama/",
+      "source_path": "/remote-workforce-housing-in-alabama/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/remote-workforce-housing-in-alabama/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/remote-workforce-housing-in-alabama/",
+          "location": "https://temporary123.com/remote-workforce-housing-in-alabama/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 151,
+      "source_url": "https://www.temporary123.com/wp-content/uploads/2023/04/2-Food-Service-Design.png",
+      "source_path": "/wp-content/uploads/2023/04/2-Food-Service-Design.png",
+      "release_state": "redirect",
+      "status": 200,
+      "final_url": "https://temporary123.com/food-services-2/",
+      "redirect_count": 2,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/wp-content/uploads/2023/04/2-Food-Service-Design.png",
+          "location": "https://temporary123.com/wp-content/uploads/2023/04/2-Food-Service-Design.png"
+        },
+        {
+          "status": 308,
+          "url": "https://temporary123.com/wp-content/uploads/2023/04/2-Food-Service-Design.png",
+          "location": "https://temporary123.com/food-services-2/"
+        }
+      ],
+      "expected_final": "https://temporary123.com/food-services-2/",
+      "passed": true
+    },
+    {
+      "row": 152,
+      "source_url": "https://temporary123.com/shop/",
+      "source_path": "/shop/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/shop/",
+      "redirect_count": 0,
+      "redirect_chain": [],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    },
+    {
+      "row": 153,
+      "source_url": "https://www.temporary123.com/catering/",
+      "source_path": "/catering/",
+      "release_state": "staged_noindex",
+      "status": 200,
+      "final_url": "https://temporary123.com/catering/",
+      "redirect_count": 1,
+      "redirect_chain": [
+        {
+          "status": 308,
+          "url": "https://www.temporary123.com/catering/",
+          "location": "https://temporary123.com/catering/"
+        }
+      ],
+      "robots": "noindex,follow",
+      "canonical": "",
+      "in_sitemap": false,
+      "exact_path_passed": true,
+      "metadata_passed": true,
+      "passed": true
+    }
+  ],
+  "parentLinks": [
+    {
+      "parent_path": "/equipment-rental/",
+      "child_path": "/equipment-rental/decontamination-trailers/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/",
+      "child_path": "/equipment-rental/multi-trailer/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/",
+      "child_path": "/shop/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "child_path": "/equipment-rental/dump-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/fencing-barricades-trash-receptacles/",
+      "child_path": "/equipment-rental/waste-container/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/mobile-kitchen-trailers/",
+      "child_path": "/houston-texas-mobile-kitchen-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/mobile-sleep-trailers/",
+      "child_path": "/equipment-rental/sleeper-trailers/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/modular-command-center-trailers/",
+      "child_path": "/equipment-rental/command-center-trailers/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/ramp-rentals/",
+      "child_path": "/equipment-rental/ramp-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/port-potties-and-port-johns/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alabama/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alaska/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-alberta-ca/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arizona/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-arkansas/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-california/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-colorado/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-connecticut/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-delaware/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-district-of-columbia/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-florida/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-georgia/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-hawaii/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-idaho/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-illinois/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-indiana/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-iowa/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kansas/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-kentucky/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-louisiana/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maine/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-maryland/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-massachusetts/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-michigan/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-minnesota/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-mississippi/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-missouri/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-montana/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nebraska/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-nevada/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-hampshire/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-jersey/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-mexico/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-new-york/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-carolina/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-north-dakota/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-ohio/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oklahoma/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-oregon/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-pennsylvania/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-rhode-island/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-carolina/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-south-dakota/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-tennessee/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-texas/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-utah/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-vermont/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-virginia/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-washington/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-west-virginia/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-winconsin/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/equipment-rental/restroom-trailers/portable-restroom-trailers-in-wyoming/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/restroom-trailers/",
+      "child_path": "/greensboro-north-carolina-usa-temporary-restroom-building-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/shower-trailer/",
+      "child_path": "/containerized-shower-trailers/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/shower-trailer/",
+      "child_path": "/equipment-rental/shower-trailer/portable-shower-trailers-in-new-jersey-usa/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/equipment-rental/stair-rentals/",
+      "child_path": "/equipment-rental/stair-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/food-services-2/",
+      "child_path": "/catering/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/emergency-container-modular-remote-executive-hotel-suites/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/emergency-migrant-containerized-living-spaces/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/emergency-modular-shelters-contained-for-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/emergency-workforce-housing-in-california/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/modular-temporary-camp-facilities/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/modular-temporary-workforce-housing-facilities/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-basecamp-housing-service-company/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-housing-facilities/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-temporary-workforce-housing-facilities-rental/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-house-company-in-alabama/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-house-company-in-hawaii/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-housing-facilities/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-housing-in-alabama/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-housing-rentals-in-arizona/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-housing-services-in-alaska/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/remote-workforce-housing-services-in-idaho/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/temporary-remote-workforce-housing-services-in-arkansas/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/temporary-remote-workforce-housing-services-in-illinois/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/temporary-remote-workforce-housing-services-in-massachusetts/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/temporary-remote-workforce-housing-services-in-michigan/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/temporary-workforce-housing-facilities/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/man-camps-for-rent/",
+      "child_path": "/workforce-housing-shelters-in-colorado/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    },
+    {
+      "parent_path": "/remote-containerized-military-berthing-solution-for-rent/",
+      "child_path": "/remote-containerized-military-berthing-solution/",
+      "status": 200,
+      "linked": true,
+      "passed": true
+    }
+  ]
+}

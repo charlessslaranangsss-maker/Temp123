@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://temporary123.com",
+  "sourceRows": 153,
+  "sourceRowsPassed": 153,
+  "uniquePaths": 105,
+  "preservedHtmlUniquePaths": 104,
+  "preservedHtmlUniquePathsPassed": 104,
+  "pilotIndexablePaths": 25,
+  "pilotIndexablePathsPassed": 25,
+  "stagedNoindexHtmlPaths": 79,
+  "stagedNoindexHtmlPathsPassed": 79,
+  "assetRedirectUniquePaths": 1,
+  "assetRedirectRowsPassed": 1,
+  "parentLinks": 90,
+  "parentLinksPassed": 90,
+  "sitemapStatus": 200,
+  "errors": []
+}

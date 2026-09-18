@@ -575,13 +575,18 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Expanded final audits now reject `pending specification` in addition to the existing photo-placeholder phrases. Local static preview passed **60/60** desktop/mobile presentations. Production deployment `dpl_D26jRZbUsCLLp5nDGFjpPSZDG5st` reached READY from commit `0b59eac`; `https://temporary123.com` then passed **60/60**, with **0** placeholder occurrences, **0** pending elements, **0** broken images and **0** console errors at `2026-09-18T12:21:22.909Z`.
 
 
-## 2026-09-18 — Exact legacy backlink-path restoration, local release candidate
+## 2026-09-18 — Exact legacy backlink-path restoration, live verified
 
 - Scope: 153 backlink-export rows, 105 unique paths, 104 HTML paths and one legacy image asset path.
 - Restoration: all 104 HTML paths generate exact-path HTML; 90 were restored from redirects as useful planning pages and all 90 have a crawlable link from their related parent page. The image asset retains a permanent redirect to `https://temporary123.com/food-services-2/`.
 - Indexing: 25 backlink-ranked HTML paths passed `index,follow`, exact self-canonical and sitemap checks. The other 79 exact HTML paths passed `noindex,follow`, absent-canonical and absent-sitemap checks for the controlled rollout.
-- Automated tests: `npm test` passed 48/48 across seven files.
+- Automated tests: `npm test` passed 49/49 across seven files, including exact same-path `www` to apex coverage for every HTML backlink path.
 - Build: `npm run build` passed and generated 745 pages plus 404. The existing mixed JSON import-attribute and Rollup annotation warnings remain non-fatal.
 - Generated-output audit: `python scripts/audit-legacy-url-restoration.py` passed all 153 source rows with `errors: []`.
-- Mobile browser QA: three restored exact URLs returned HTTP 200 without redirect, displayed the expected H1, emitted the expected canonical and robots values, and had no horizontal overflow. The workforce parent page exposed 22 restored internal links including the Alaska URL.
-- Evidence: `audit/legacy-url-restoration-2026-09-18/migration-map.csv` and `build-verification.json`. Deployment and live-domain verification remain pending.
+- Local mobile browser QA: three restored exact URLs returned HTTP 200 without redirect, displayed the expected H1, emitted the expected canonical and robots values, and had no horizontal overflow. The workforce parent page exposed 22 restored internal links including the Alaska URL.
+- Production deployment: commit `b0b1c01` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel project `temporary-124/temporary-123` deployed it as READY production deployment `dpl_2miCSP8VjRzEegTukoQ99iTQDTu4` and aliased `temporary123.com` plus `www.temporary123.com`.
+- Live URL audit: **153/153** source rows passed; **104/104** unique HTML paths returned the exact HTTPS apex path with HTTP 200; **25/25** pilot pages had `index,follow`, self-canonical and sitemap membership; **79/79** staged pages had `noindex,follow` with no canonical or sitemap entry; **1/1** legacy asset redirected permanently; and **90/90** related parent links were present. `errors: []`.
+- Host redirect evidence: `https://www.temporary123.com/remote-workforce-housing-services-in-alaska/` returned HTTP **308** directly to the identical apex path.
+- Production browser QA: four representative legacy routes at desktop 1440x900 and mobile 390x844 passed **8/8**. Every presentation returned HTTP 200 at its exact route, rendered a non-empty H1 and title, matched the expected robots/canonical policy, had no horizontal overflow, and emitted zero console or page errors.
+- Evidence: `audit/legacy-url-restoration-2026-09-18/migration-map.csv`, `build-verification.json`, `live-verification.json`, `live-results.csv`, and `browser-verification.json`.
+- Boundary: Google recrawl and index inclusion are external and were not claimed. The 79 later-batch pages intentionally remain `noindex,follow` until a separately approved controlled release.
