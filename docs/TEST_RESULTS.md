@@ -1,6 +1,6 @@
 # Temporary123 Test Results
 
-## Whole-site QA continuation — 2026-09-19 (LOCAL PASS; DEPLOYMENT PENDING)
+## Whole-site QA continuation — 2026-09-19 (LIVE PASS; SECURITY EVIDENCE PARTIAL)
 
 - Isolation: all source changes and builds used `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its unfinished 1,000-city draft were not changed or published.
 - Runtime inventory: the independent browser pass covered 13 representative templates at three viewports, 39/39 presentations, plus one safe interaction flow. The dedicated equipment test covered 42 routes and 14 modal/gallery presentations at both desktop and 390 px mobile with decoded images, current captions, phone contract and zero same-origin resource errors.
@@ -12,6 +12,10 @@
 - Vercel domain routing: after changing `www.temporary123.com` to redirect to `temporary123.com`, a live audit passed **745/745** first-hop 308 redirects to the exact apex path, **745/745** final HTTP 200 responses, exact query preservation, and zero chains, loops or failures. All 25 indexable URLs passed. `/sitemap-review.xml` remains an owner-review artifact that must not be submitted, and Oklahoma Panhandle remains an intentional noindex staged exception.
 - Security boundary: production dependency audit has no high/critical findings and two moderate transitive findings through Firebase Admin (`@google-cloud/storage` → `gaxios` → `uuid`). `AUTHZ`, `CORS_HEADERS`, `APP_CHECK`, `INTEGRATIONS`, `SECRETS`, `DEPLOY`, `OBSERVE`, and `RECOVERY` remain blocked until their required staging/provider evidence is collected; the security checker was not weakened.
 - External-action boundary: no production form submission was made during this continuation. Prior form/Resend acceptance evidence remains valid, but inbox receipt was not rechecked.
+- Release: commit `93a2a49` was pushed only to `Temporary-123-Inc/Temporary-123` main. Vercel production deployment `dpl_G2ABdYFMKHF8R57gkoJztjD3pf9s` reached READY after a 2m 5s build.
+- Live Contact Us: `PLAYWRIGHT_BASE_URL=https://temporary123.com npx playwright test tests/browser/contact-facilities.spec.ts --workers=1` passed **1/1**, opening the production drawer, verifying all seven trailer labels plus the three broad choices, and selecting every unchanged submitted value.
+- Live galleries: the production 42-route plus 14-modal equipment regression passed **2/2** at 1440 px and 390 px, including decoded images, current captions, phone contract and modal/lightbox behavior.
+- Live metadata/routing: `/equipment-rental/sleeper-trailers/` and `/remote-workforce-house-company-in-alabama/` returned HTTP 200 with their corrected unique titles and self-canonicals. `www.temporary123.com/contact-us/?qa=redirect` returned a direct 308 to the exact apex path and query.
 
 ## Contact Us trailer labels — 2026-09-19 (LIVE PASS)
 
