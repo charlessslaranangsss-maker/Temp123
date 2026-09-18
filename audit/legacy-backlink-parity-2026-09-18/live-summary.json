@@ -1,0 +1,23 @@
+{
+  "audited_at_utc": "2026-09-18T10:54:55Z",
+  "deployment_id": "dpl_CLEabVTivoctpYLbKg23TV39QURD",
+  "commit": "4df32c3",
+  "source_rows": 153,
+  "passing_rows": 153,
+  "failing_rows": 0,
+  "unique_source_paths": 105,
+  "unique_final_urls": 23,
+  "max_redirect_hops": 2,
+  "all_final_https_apex_200": true,
+  "all_redirects_permanent": true,
+  "all_index_follow": true,
+  "all_self_canonical": true,
+  "all_sitemap_members": true,
+  "sitemap_status": 200,
+  "sitemap_url_count": 25,
+  "robots_status": 200,
+  "robots_declares_sitemap": true,
+  "non_batch_contact_meta_robots": "noindex,follow",
+  "non_batch_contact_canonical": "",
+  "preview_alias_x_robots_tag": "noindex, follow"
+}

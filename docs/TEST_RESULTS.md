@@ -507,7 +507,7 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - Live Chromium on `https://temporary123.com`: **2/2 desktop/mobile menu presentations**, **4/4 family-list checks**, **4/4 new Laundry gallery presentations**, and **4/4 decoded lead images** passed with zero console errors.
 - Live post-release recheck of all 13 reported product routes: **26/26 desktop/mobile presentations passed**, with HTTP 200, one visible carousel, a decoded lead image, zero pending-photo panels and zero console errors.
 
-## 2026-09-18 — Legacy backlink URL parity and indexing release candidate
+## 2026-09-18 — Legacy backlink URL parity and controlled indexing release
 
 - Input inventory: **153/153 unique absolute URLs**, **105 unique paths**, **48 duplicate host/protocol rows**, from the supplied old-site backlink export.
 - Live pre-change crawl: **148/153** rows ended at HTTP 200 and **5/153** ended at HTTP 404. The five failures represented three unique paths. Every successful final page returned `noindex,follow` and no canonical.
@@ -519,5 +519,10 @@ Build finished: 651 pages + 404 prerendered. Static localhost preview at http://
 - `npm run check:links`: **651 pages / 0 casing issues**.
 - `npm run typecheck`: passed.
 - `npm run check:seo`: completed and confirmed **25 approved routes** with index/follow, self-canonicals, and sitemap entries. Its broader `launchReady:false` status remains because unrelated inherited migration-link and orphan-page findings are outside this backlink-parity repair.
-- `npx vercel build --yes --target production`: Vercel settings and production environment metadata were retrieved, then the local CLI build stopped with `spawn cmd.exe ENOENT`. The ordinary production build passed; Vercel deployment and live verification remain the platform-level gate.
-- Evidence: `audit/legacy-backlink-parity-2026-09-18/` and generated indexing registries under `audit/`.
+- Local `npx vercel build --yes --target production` retrieved Vercel settings and production environment metadata, then stopped with `spawn cmd.exe ENOENT`. The actual remote Vercel build completed successfully and produced READY deployment `dpl_CLEabVTivoctpYLbKg23TV39QURD` from commit `4df32c3`.
+- Repository boundary: the implementation revisions through `4df32c3` were pushed only to `https://github.com/Temporary-123-Inc/Temporary-123.git` on `main`.
+- Live post-release crawl of all **153/153** supplied source URLs: **153 passed / 0 failed**, covering 105 unique paths and 23 unique final URLs. Every final response was HTTPS apex HTTP 200, every redirect hop was permanent, the longest chain was two hops, and no loop was found.
+- Live destination metadata: **23/23** emitted `index,follow`, an exact apex self-canonical, and membership in the production sitemap. `https://temporary123.com/sitemap.xml` returned HTTP 200 with exactly **25 URLs**, and `robots.txt` returned HTTP 200 and declared that sitemap.
+- Indexing controls: non-batch `/contact-us/` remained `noindex,follow` without a canonical; the Vercel preview alias returned `X-Robots-Tag: noindex, follow`.
+- Boundary: these checks prove the production routing and indexability state observed at `2026-09-18T10:54:55Z`. They do not prove that Google has recrawled or indexed the URLs. The broader inherited migration-link and orphan-page findings reported by `check:seo` remain outside this scoped 153-URL repair.
+- Evidence: `audit/legacy-backlink-parity-2026-09-18/live-postchange.csv`, `live-postchange.json`, `live-summary.json`, and the generated indexing registries under `audit/`.

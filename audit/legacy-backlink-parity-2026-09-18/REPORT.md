@@ -39,6 +39,28 @@ Permanent mappings were added for:
 
 Per-row evidence is in `results.csv`. Aggregate counts are in `summary.json`. `live-prechange.json` preserves the response chains observed before release.
 
+## Production acceptance
+
+- Repository: `Temporary-123-Inc/Temporary-123`, branch `main`
+- Deployed commit: `4df32c3`
+- READY Vercel deployment: `dpl_CLEabVTivoctpYLbKg23TV39QURD`
+- Audit timestamp: `2026-09-18T10:54:55Z`
+- Source URL results: 153 passed, 0 failed
+- Unique source paths: 105
+- Unique final URLs: 23
+- Maximum redirect hops: 2
+- All redirect hops permanent: yes
+- All final responses HTTPS apex HTTP 200: yes
+- All final pages `index,follow`: yes
+- All final pages exact apex self-canonical: yes
+- All final pages in the production sitemap: yes
+- Production sitemap: HTTP 200, exactly 25 URLs
+- Production robots.txt: HTTP 200 and declares the sitemap
+- Non-batch control `/contact-us/`: `noindex,follow`, no canonical
+- Vercel preview alias: `X-Robots-Tag: noindex, follow`
+
+The complete response chains and metadata are recorded in `live-postchange.csv` and `live-postchange.json`; aggregate production assertions are in `live-summary.json`.
+
 ## Validation boundary
 
-This report proves route coverage and release-candidate output. Google recrawling and index inclusion are external outcomes and require later Search Console or search-result evidence.
+This report proves route coverage and the production response, redirect, canonical, robots and sitemap state observed at the audit timestamp. Google recrawling and index inclusion are external outcomes and require later Search Console or search-result evidence.
