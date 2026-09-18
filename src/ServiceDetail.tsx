@@ -4,15 +4,26 @@ import { serviceCategories } from "./serviceMenu";
 import site from "../site.json" with { type: "json" };
 import { rentalProductHeadline } from "./rentalHeadlines";
 import { ServiceHeroCarousel } from "./ServiceHeroCarousel";
+import { imagesForServicePath, servicePhotoCaption } from "./serviceHeroImages";
 import {
-  imagesForServicePath,
-  servicePhotoCaption,
-} from "./serviceHeroImages";
-import { referenceCaptionForModel } from "./equipmentPhotoPolicy";
+  genericEquipmentReferenceCaption,
+  referenceCaptionForModel,
+} from "./equipmentPhotoPolicy";
+import { dedicatedServiceGalleryCaption } from "./dedicatedServiceGalleryCopy";
 export const modelDetails = details;
 export function ServiceDetail({ path }: { path: keyof typeof details }) {
   const item = details[path];
   const verifiedImages = imagesForServicePath(path);
+  const modelId = verifiedImages?.[0].model ?? null;
+  const referenceCaption = modelId
+    ? referenceCaptionForModel(modelId)
+    : undefined;
+  const galleryCaption =
+    servicePhotoCaption(path) ??
+    (referenceCaption === genericEquipmentReferenceCaption
+      ? dedicatedServiceGalleryCaption(item.name, modelId)
+      : referenceCaption) ??
+    `Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`;
   const related = serviceCategories
     .find((c) => c.name === item.category)!
     .links.filter((l) => l.href !== path);
@@ -31,7 +42,9 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
             <div>
               <span className="eyebrow">EXPLORE THE CONFIGURATION</span>
               <h1>{rentalProductHeadline(item.name)}</h1>
-              <p className="model-intro" data-h1-intro>{alignedPageIntro(path, item.name, item.intro)}</p>
+              <p className="model-intro" data-h1-intro>
+                {alignedPageIntro(path, item.name, item.intro)}
+              </p>
               <div className="model-actions">
                 <a className="button" href={"tel:" + site.phoneE164}>
                   Call Now, {item.category} Specialist 24/7{" "}
@@ -47,12 +60,7 @@ export function ServiceDetail({ path }: { path: keyof typeof details }) {
                 images={verifiedImages}
                 label={item.name}
                 lightboxLabel={item.name}
-                caption={
-                  servicePhotoCaption(path) ?? (verifiedImages[0].model
-                    ? referenceCaptionForModel(verifiedImages[0].model)
-                    : `Verified ${item.name} equipment photography. Confirm the available unit's floor plan before booking.`
-                  )
-                }
+                caption={galleryCaption}
               />
             ) : (
               <figure className="service-hero-unverified">

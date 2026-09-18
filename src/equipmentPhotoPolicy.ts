@@ -3,6 +3,9 @@ import additions from "../content/equipment-photo-additions.json" with { type: "
 
 export const equipmentPhotoPolicy = policy;
 
+export const genericEquipmentReferenceCaption =
+  "Reviewed equipment reference images. Photos do not establish availability or a deployment in this location.";
+
 /** A missing second angle is an optional improvement, not a no-photo condition. */
 export function photoCoverage(images: readonly { view: string }[]) {
   const interiorCount = images.filter(
@@ -43,5 +46,5 @@ export function referenceCaptionForModel(modelId: string | null) {
     return "Reference photos for the 20 ft refrigerated trailer option. Exterior and fleet reference views do not establish one physical unit; confirm the supplied unit with your quote.";
   if (modelId === "april-two-stall-sleeper")
     return "Interior reference photos for the two-stall sleeper option. Overall length and exterior configuration are not established by these interior views.";
-  return "Reviewed equipment reference images. Photos do not establish availability or a deployment in this location.";
+  return genericEquipmentReferenceCaption;
 }

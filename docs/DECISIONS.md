@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-18 — Dedicated service captions use the approved customer-facing format
+
+Charles identified the generic `Reviewed equipment reference images` caption on dedicated equipment pages and directed that every occurrence be fixed using the service-area caption standard. Replace only that generic fallback with an equipment-specific Commercial Project and Base Camp Rental or Lease caption, weekly/monthly/yearly inquiry terms, one verified operational benefit/detail, and the approved 24/7 phone-assistance CTA. Keep existing image-specific model or source disclosures because they communicate real photo limitations. Caption changes do not alter image identity, alt text, H1s, URLs, canonicals, or indexing settings.
+
 ## 2026-09-18 — Use supplied catalogue imagery and disclose the shower-model difference
 
 Use the synced restroom-only interiors for Restroom trailers and the homepage Restroom card. Use the supplied dining-hall layouts as illustrative dining-structure images and the supplied stair/step images as representative stair-rental images, with truthful alt text and visible captions that preserve those distinctions. No exact 22 ft ten-stall shower photograph exists in the reviewed repository or Drive assets, so keep the verified 20 ft five-stall shower-only reference for both 22 ft catalogue entries and show the model-difference disclosure directly on each card. Do not describe the reference as the ten-stall unit.

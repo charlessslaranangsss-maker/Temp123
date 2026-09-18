@@ -1,5 +1,17 @@
 # Temporary123 Test Results
 
+## Dedicated service gallery-caption correction — 2026-09-18 (LOCAL PASS)
+
+- Scope inventory: 31 dedicated service-detail routes; 13 used the generic reviewed-photo fallback and 18 already used image-specific disclosures.
+- SSR regression: 31/31 routes contain neither `Reviewed equipment reference images` nor `Photos do not establish availability or a deployment in this location`.
+- Caption acceptance: 13/13 replacements contain Commercial Project and Base Camp context, the exact page equipment name, Rental or Lease, weekly/monthly/yearly inquiry terms, a model-specific benefit/detail, and `Call us now at +1 (800) 443-5212, available 24/7.`
+- Focused tests: 42/42 passed across `dedicatedServiceGalleryCopy`, `serviceHeroImages`, `ownerImageRollout`, and `equipmentMissingPhotos`.
+- Application tests: 45/45 passed with `npm test`.
+- Production build: passed TypeScript, Vite, and prerender; 655 pages plus 404 generated.
+- Local browser QA: 26/26 desktop/mobile presentations passed across the 13 changed routes; every response was HTTP 200, each lead image decoded with truthful nonempty alt text, each caption met the acceptance checks, and zero console/page errors occurred. Evidence: `work/qa/dedicated-service-captions-20260918/browser-results.json`.
+- Preservation: no H1, URL, canonical, indexing directive, gallery image, or alt-text source changed.
+- Boundary: production deployment and live browser verification remain pending.
+
 ## Equipment Rental missing-photo production release — 2026-09-18
 
 - Scope: homepage Restroom card and the `/equipment-rental/` catalogue entries for Restroom trailers, Dining structures, both 22 ft shower trailer ten-stall entries, and Stair rentals.
