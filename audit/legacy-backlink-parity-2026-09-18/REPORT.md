@@ -61,6 +61,8 @@ Per-row evidence is in `results.csv`. Aggregate counts are in `summary.json`. `l
 
 The complete response chains and metadata are recorded in `live-postchange.csv` and `live-postchange.json`; aggregate production assertions are in `live-summary.json`.
 
+After the audit evidence was committed, the owner requested an explicit final production deployment. Revision `57826de` was deployed to the existing Vercel `cc-devs/temp123` project as READY deployment `dpl_5Ab6Vrj2byjT59y3iAKXqdy2PCTJ`. The custom domain returned the deployment's generated production asset hashes, representative legacy routes plus the sitemap and robots file returned HTTP 200, and the final Contact Us/equipment production browser suite passed 7/7.
+
 ## Validation boundary
 
 This report proves route coverage and the production response, redirect, canonical, robots and sitemap state observed at the audit timestamp. Google recrawling and index inclusion are external outcomes and require later Search Console or search-result evidence.
