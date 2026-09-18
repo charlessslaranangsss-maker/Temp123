@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-18 — Use supplied catalogue imagery and disclose the shower-model difference
+
+Use the synced restroom-only interiors for Restroom trailers and the homepage Restroom card. Use the supplied dining-hall layouts as illustrative dining-structure images and the supplied stair/step images as representative stair-rental images, with truthful alt text and visible captions that preserve those distinctions. No exact 22 ft ten-stall shower photograph exists in the reviewed repository or Drive assets, so keep the verified 20 ft five-stall shower-only reference for both 22 ft catalogue entries and show the model-difference disclosure directly on each card. Do not describe the reference as the ten-stall unit.
+
 ## 2026-09-17 — Both approved Panhandle captions set the quality bar
 
 Charles confirmed the boss approved and was impressed by both the 20 ft laundry-container and 30 ft laundry-trailer captions. For a new gallery caption, use their shared direct structure: exact location/use/equipment/rental opening, specific rental benefit, one useful third sentence, and the approved phone CTA. The third sentence may clarify a genuinely confusing photo identity, as with the container, or help plan around the customer's actual need, as with the trailer. Do not force the same sentence type across every product or copy Panhandle facts into other pages. The Olympic office and kitchen samples were revised accordingly; the shower sample retains its relevant model distinction. The local preview awaits Charles's acceptance.

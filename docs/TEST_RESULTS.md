@@ -1,5 +1,15 @@
 # Temporary123 Test Results
 
+## Equipment Rental missing-photo production release — 2026-09-18
+
+- Scope: homepage Restroom card and the `/equipment-rental/` catalogue entries for Restroom trailers, Dining structures, both 22 ft shower trailer ten-stall entries, and Stair rentals.
+- `npx vitest run tests/equipmentMissingPhotos.test.tsx tests/servicesCardPhotos.test.tsx tests/allPageAlignment.test.tsx`: 3 files passed, 65/65 tests passed. `npm run typecheck`: pass.
+- `npm run build`: pass; Vite build and static generation completed for 651 pages plus the draft/noindex 404. Existing nonfatal JSON import-attribute and Rollup annotation warnings remain.
+- Local Chromium at 1440x900 and 390x844: 22/22 checks passed, including decoded images and no console or page errors.
+- Production deployment `dpl_HLZTgejPHmhNHUTu3xGUqWqYi29H`: READY. Live Chromium at 1440x900 and 390x844: 26/26 checks passed across all requested catalogue cards and the homepage Restroom card, including the visible 20 ft versus 22 ft disclosure and no console or page errors.
+- Live asset verification: 16/16 new responsive WebP URLs returned HTTP 200. `/equipment-rental/` returned HTTP 200 with H1 `Nationwide Temporary Facility and Equipment Rental` and the existing `noindex,follow` robots setting.
+- Remaining boundary: no exact 22 ft ten-stall shower photograph exists in the repository or supplied Drive assets. The two catalogue entries therefore use the verified 20 ft five-stall shower-only reference with a visible disclosure; exact configuration and floor plan still require quote confirmation.
+
 ## Urgent Olympic caption and skill refinement — 2026-09-17
 
 - `npm run typecheck`: pass. `npx vitest run tests/olympicPeninsulaGalleryCopy.test.ts tests/serviceAreaGalleryCopy.test.ts`: 7/7 pass.
