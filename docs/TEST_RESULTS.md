@@ -1,6 +1,6 @@
 # Temporary123 Test Results
 
-## Whole-site production-baseline QA — 2026-09-19 (LOCAL PASS; RELEASE GATE PARTIAL)
+## Whole-site production-baseline QA — 2026-09-19 (LIVE PASS; RELEASE GATE PARTIAL)
 
 - Isolation: audited `origin/main` in `C:\Users\Charles\.codex\worktrees\whole-site-qa-origin\Temporary 123`; the dirty primary checkout and its separate 1,000-city draft were not used or overwritten.
 - Build and unit checks: `npm test -- --run` passed 56/56; `npm run typecheck` passed; `npm run build` generated 745 pages plus 404.
@@ -9,7 +9,10 @@
 - Dashboard runtime: headless Chromium loaded `http://127.0.0.1:4174/seo-dashboard/#workflow`, selected `Next checks`, and recorded zero console or page errors after replacing mismatched hydration with an interactive mount over the prerendered fallback.
 - Secret scan: 1,107 source/built text files scanned with zero complete credential findings. A BEGIN marker alone is no longer treated as an exposed key; the scanner still requires a complete key-shaped block.
 - Known release boundary: `npm run check:security` and therefore `npm run check:release` remain blocked by unresolved pre-existing security-evidence controls. The SEO report also retains legacy duplicate-title/description findings, the intentionally unlinked noindex dashboard, and an incomplete historical migration count. These results are documented, not suppressed.
-- Deployment and live browser/crawl verification: pending.
+- Release: commit `4f7bf1c` was pushed to `Temporary-123-Inc/Temporary-123` main. Vercel deployment `dpl_HJTTMT5Ys7DHxukf5Y1zUYy3oiVV` reached READY and serves `temporary123.com`.
+- Production runtime: `/temporary-facilities-2/` returns a permanent redirect to `/planning/`; `/seo-dashboard/#workflow` loaded with the expected heading/tab state and zero browser console/page errors; `/sitemap.xml` returned HTTP 200.
+- Indexing workbook crawl: all 327 controlled-rollout URLs returned HTTP 200. Batch 1 contains 25/25 pages with matching self-canonicals, `index,follow`, and sitemap membership. The remaining 302/302 URLs are intentionally staged with `noindex,follow` outside the sitemap. Classification issues: zero; formula-error scan: zero.
+- External boundaries: Google index inclusion was not inferred from crawlability and remains `Not verified in Search Console`. Deep `www` paths can return HTTP 200 with `noindex,follow` rather than consistently redirecting to apex. Contact and quote forms were not resubmitted during this SEO verification because downstream messages are external actions and require action-time confirmation.
 
 ## Service-area gallery review-banner removal — 2026-09-18 (LIVE PASS)
 

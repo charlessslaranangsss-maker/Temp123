@@ -1,5 +1,9 @@
 # Temporary123 Decision Log
 
+## 2026-09-19 — Track crawl readiness separately from Google indexing
+
+The indexing workbook may label a URL `Ready for Google` only when the live page returns HTTP 200, uses its exact self-canonical, permits indexing and appears in the production sitemap. This does not prove Google has indexed it. Keep Search Console status as `Not verified in Search Console` until direct inspection evidence is recorded. Preserve the controlled rollout: Batch 1 has 25 active pages, while the remaining 302 registry URLs stay `noindex,follow` and outside the sitemap until reviewed and approved. The unfinished 1,000-city draft is not part of this production tracker.
+
 ## 2026-09-19 — Keep the 1,000-city draft out of the production repair
 
 The active public baseline contains five reviewed city-detail pages and a controlled 25-URL indexing batch. The primary checkout also contains an unfinished deterministic 1,000-city draft, but publishing that draft during an unrelated production QA release would bypass the controlled SEO rollout and content review. Build and release this repair from the clean `origin/main` worktree only. Preserve the draft for a later reviewed batch; do not expand canonicals, sitemap membership or `index,follow` scope here.
