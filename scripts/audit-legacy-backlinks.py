@@ -76,6 +76,7 @@ def apex_host_configured(
         return False
     return any(
         rule.get("destination", "").startswith("https://temporary123.com/")
+        and rule.get("source") == source_path
         and any(
             condition.get("type") == "host"
             and condition.get("value") == "www.temporary123.com"

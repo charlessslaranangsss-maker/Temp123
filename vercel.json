@@ -60,6 +60,94 @@
       "permanent": true
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/breakroom-trailer/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/breakroom-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/generator-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/generator-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/mobile-office-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/mobile-office-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/restroom-trailers/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/restroom-trailers/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/shower-trailer/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/shower-trailer/",
+      "permanent": true
+    },
+    {
+      "source": "/equipment-rental/wastewater-and-freshwater-container/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/equipment-rental/wastewater-and-freshwater-container/",
+      "permanent": true
+    },
+    {
+      "source": "/government/correctional-facilities/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.temporary123.com"
+        }
+      ],
+      "destination": "https://temporary123.com/government/correctional-facilities/",
+      "permanent": true
+    },
+    {
       "source": "/services/shower-trailers/12ft/",
       "destination": "/services/shower-trailers/22ft-10-stall/",
       "permanent": true
