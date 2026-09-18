@@ -76,6 +76,11 @@ describe("equipment-page missing photo follow-up", () => {
       cards.each((_, card) => {
         expect($(card).find("img")).toHaveLength(1);
         expect($(card).find("[data-catalog-photo-pending]")).toHaveLength(0);
+        if (name.startsWith("22 ft")) {
+          expect($(card).text()).toMatch(
+            /does not depict the separate 22 ft ten-stall/i,
+          );
+        }
       });
     }
   });

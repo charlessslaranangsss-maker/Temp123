@@ -93,6 +93,12 @@ export function EquipmentCatalog() {
                       <a href={item.path}>{item.name}</a>
                     </h4>
                     <p>{item.summary}</p>
+                    {catalogPhotoCoverage(item).status ===
+                      "reviewed-representative" && (
+                      <p className="catalog-photo-disclosure">
+                        {catalogPhotoCoverage(item).caption}
+                      </p>
+                    )}
                     <a className="catalog-detail-link" href={item.path}>
                       View equipment <span aria-hidden="true">↗</span>
                     </a>
