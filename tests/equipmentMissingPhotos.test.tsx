@@ -77,6 +77,9 @@ describe("equipment-page missing photo follow-up", () => {
       );
       expect(carousel.text()).toMatch(/rental or lease configuration/i);
       expect($(".service-hero-unverified")).toHaveLength(0);
+      expect($("main").text()).not.toMatch(
+        /photo review in progress|photography (?:is )?pending|verified photography coming soon|pending specification/i,
+      );
       const descriptiveImages = carousel
         .find("img")
         .filter((_, image) => Boolean($(image).attr("alt")));
